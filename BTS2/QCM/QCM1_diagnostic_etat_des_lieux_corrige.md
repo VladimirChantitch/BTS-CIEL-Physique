@@ -1,0 +1,165 @@
+# QCM diagnostique : état des lieux
+
+BTS CIEL 2 · Physique · Séance 1 : consolidation des fondamentaux
+
+> Durée : 45 min · 20 questions · une seule réponse par question · 
+
+## Grille de correction
+
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|---|---|
+| **b** | **a** | **b** | **b** | **b** | **b** | **b** | **c** | **b** | **b** |
+
+| 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
+|---|---|---|---|---|---|---|---|---|---|
+| **b** | **b** | **b** | **a** | **b** | **b** | **b** | **a** | **b** | **b** |
+
+*Barème conseillé : 1 point par bonne réponse, pas de point négatif.*
+
+## A. Électricité de base
+
+**1.** Un conducteur ohmique R = 100 Ω est traversé par I = 50 mA. U = ?
+
+- [ ] a) 2 V
+- [x] **b) 5 V**
+- [ ] c) 0,5 V
+- [ ] d) 20 V
+
+**2.** R1 = 10 Ω et R2 = 20 Ω en série. R_éq = ?
+
+- [x] **a) 30 Ω**
+- [ ] b) 6,7 Ω
+- [ ] c) 10 Ω
+- [ ] d) 200 Ω
+
+**3.** R1 = 10 Ω et R2 = 10 Ω en parallèle. R_éq = ?
+
+- [ ] a) 20 Ω
+- [x] **b) 5 Ω**
+- [ ] c) 10 Ω
+- [ ] d) 100 Ω
+
+**4.** La loi des nœuds traduit :
+
+- [ ] a) la conservation de l'énergie
+- [x] **b) la conservation de la charge**
+- [ ] c) la conservation de la puissance
+- [ ] d) la loi d'Ohm
+
+**5.** Puissance dissipée sous 12 V, 0,5 A :
+
+- [ ] a) 24 W
+- [x] **b) 6 W**
+- [ ] c) 0,04 W
+- [ ] d) 12,5 W
+
+**6.** Diviseur de tension R1 (haut) / R2 (bas), alimentation E : U(R2) = ?
+
+- [ ] a) E·R1/(R1+R2)
+- [x] **b) E·R2/(R1+R2)**
+- [ ] c) E·(R1+R2)
+- [ ] d) E/(R1·R2)
+
+## B. Mesures et incertitudes
+
+**7.** L'incertitude-type traduit :
+
+- [ ] a) l'erreur exacte
+- [x] **b) le doute raisonnable sur la valeur vraie**
+- [ ] c) la précision de l'appareil seule
+- [ ] d) la moyenne des mesures
+
+**8.** Multimètre affichant 4,52 V, résolution 0,01 V :
+
+- [ ] a) U = 4,52 V
+- [ ] b) U = 4,520000 V
+- [x] **c) U = (4,52 ± 0,01) V**
+- [ ] d) U = 4,5 V
+
+**9.** L'incertitude-type de type A se calcule à partir de :
+
+- [ ] a) la notice constructeur
+- [x] **b) l'écart-type de la série et n**
+- [ ] c) la moyenne seule
+- [ ] d) la résolution de l'appareil
+
+**10.** x = (5,0 ± 0,3), x_réf = 5,6 : compatible ?
+
+- [ ] a) oui
+- [x] **b) non**
+- [ ] c) impossible à dire
+- [ ] d) dépend de l'appareil
+
+**11.** Nombre de chiffres significatifs à garder pour une incertitude :
+
+- [ ] a) 4-5
+- [x] **b) 1-2**
+- [ ] c) autant que la calculatrice affiche
+- [ ] d) aucun
+
+## C. Ondes
+
+**12.** Fréquence d'un signal T = 2 ms :
+
+- [ ] a) 2 kHz
+- [x] **b) 500 Hz**
+- [ ] c) 0,5 Hz
+- [ ] d) 5 kHz
+
+**13.** Relation entre v, λ, f :
+
+- [ ] a) v = λ/f
+- [x] **b) v = λ·f**
+- [ ] c) v = f/λ
+- [ ] d) v = λ+f
+
+**14.** Oscillo : période = 4 div, balayage 0,5 ms/div. f = ?
+
+- [x] **a) 500 Hz**
+- [ ] b) 2 kHz
+- [ ] c) 250 Hz
+- [ ] d) 0,5 kHz
+
+**15.** Célérité du son dans l'air :
+
+- [ ] a) 3.10⁸ m/s
+- [x] **b) 340 m/s**
+- [ ] c) 1500 m/s
+- [ ] d) 3.10⁵ m/s
+
+**16.** Deux signaux "en phase" quand :
+
+- [ ] a) même amplitude
+- [x] **b) maximums simultanés**
+- [ ] c) fréquences multiples
+- [ ] d) signes opposés
+
+## D. Bonus : acquis de première année (facultatif)
+
+**17.** Tension de seuil d'une diode au silicium en sens passant :
+
+- [ ] a) 0,1 V
+- [x] **b) 0,6-0,7 V**
+- [ ] c) 5 V
+- [ ] d) 12 V
+
+**18.** Dans une boucle fermée, l'écart est :
+
+- [x] **a) consigne − mesure retournée**
+- [ ] b) la sortie seule
+- [ ] c) le gain
+- [ ] d) une constante
+
+**19.** Un système en boucle ouverte, contrairement au bouclé :
+
+- [ ] a) corrige automatiquement
+- [x] **b) ne tient pas compte de la sortie réelle**
+- [ ] c) est toujours plus précis
+- [ ] d) n'a pas d'entrée
+
+**20.** Le spectre électromagnétique classe les ondes selon :
+
+- [ ] a) l'amplitude
+- [x] **b) la fréquence-longueur d'onde**
+- [ ] c) l'origine géographique
+- [ ] d) la puissance
