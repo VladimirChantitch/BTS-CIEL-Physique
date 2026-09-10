@@ -14,6 +14,10 @@ BTS CIEL 2 · Physique · Séance 1 : consolidation des fondamentaux
 |---|---|---|---|---|---|---|---|---|---|
 | **b** | **b** | **b** | **a** | **b** | **b** | **b** | **a** | **b** | **b** |
 
+| 21 | 22 | 23 | 24 | 25 |
+|---|---|---|---|---|
+| **b** | **b** | **a** | **a** | **a** |
+
 *Barème conseillé : 1 point par bonne réponse, pas de point négatif.*
 
 ## A. Électricité de base
@@ -163,3 +167,40 @@ BTS CIEL 2 · Physique · Séance 1 : consolidation des fondamentaux
 - [x] **b) la fréquence-longueur d'onde**
 - [ ] c) l'origine géographique
 - [ ] d) la puissance
+
+## E. Décibels, gain et atténuation (bonus)
+
+**21.** La formule du décibel pour un rapport de tensions (à impédances égales) est :
+
+- [ ] a) A(dB) = 10 log₁₀(U2/U1)
+- [x] **b) A(dB) = 20 log₁₀(U2/U1)**
+- [ ] c) A(dB) = log₁₀(U2/U1)
+- [ ] d) A(dB) = 20 (U2/U1)
+
+**22.** Un amplificateur affiche un gain de +6 dB. Le facteur d'amplification en puissance correspondant est environ :
+
+- [ ] a) ×2
+- [x] **b) ×4**
+- [ ] c) ×6
+- [ ] d) ×0,5
+
+**23.** Une atténuation de −3 dB correspond à :
+
+- [x] **a) diviser la puissance par 2**
+- [ ] b) multiplier la puissance par 2
+- [ ] c) diviser la puissance par 3
+- [ ] d) multiplier la puissance par 3
+
+**24.** 0 dBm correspond à une puissance de :
+
+- [x] **a) 1 mW**
+- [ ] b) 1 W
+- [ ] c) 0 W
+- [ ] d) 1 µW
+
+**25.** Une chaîne comporte un amplificateur de +18 dB suivi d'un câble de −6 dB. Le gain total de la chaîne est :
+
+- [x] **a) +12 dB**
+- [ ] b) +24 dB
+- [ ] c) −12 dB
+- [ ] d) +108 dB
