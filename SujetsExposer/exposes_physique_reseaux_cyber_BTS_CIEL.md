@@ -304,8 +304,8 @@
 | Contrainte | BTS 1 | BTS 2 |
 |---|---|---|
 | Durée de l'exposé | 10 minutes | 15 minutes |
-| Nombre de diapositives | 5 maximum | 7 maximum |
-| Questions du jury | 5 minutes | 5 minutes |
+| Nombre de diapositives | 5 minimum | 7 minimum |
+| Questions du jury | 5 minutes | 10 minutes |
 
 ### Format obligatoire de l'exposé
 
@@ -323,6 +323,12 @@ L'exposé se déroule en **deux temps**, à respecter dans cet ordre :
 - Quelles contre-mesures existent, et à quel coût ?
 - Ce que l'article ne démontre pas, ou ce que l'étudiant n'a pas compris.
 
+**Conseil**
+- Pensez a reprendre les figures des articles
+- Avant de lire regardez toutes les figures et essayer déjà de comprendre de quoi elles parlent : parfois dans ces articles le text est inutile pour comprendre l'essence du propos.
+- Lisez attentivement le text
+- N'hésitez pas de demander à claud de vous expliquer ce que vous ne comprenez pas : on est en 2026 et il faut que vous vous familiarisez avec cette outils qui vous suivera toute votre carrière.
+
 ### Grille d'évaluation (sur 20)
 
 | Critère | BTS 1 | BTS 2 |
@@ -333,8 +339,6 @@ L'exposé se déroule en **deux temps**, à respecter dans cet ordre :
 | Critique et impact en situation réelle, contre-mesures | 3 | 5 |
 | Respect du format (durée, nombre de diapositives, sources citées) | 2 | 2 |
 | Qualité de l'oral et du support | 2 | 1 |
-
-Pénalité conseillée : **1 point par tranche de 2 minutes de dépassement** et **1 point par diapositive en trop**.
 
 ### Sources récurrentes utiles et gratuites
 
