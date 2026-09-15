@@ -1,11 +1,53 @@
-# BTS CIEL 2 — Physique
+# BTS CIEL 2 : Physique
 ## Recueil de TD (exercices et annales)
 
-Document vivant, à compléter au fil de l'année. Chaque partie correspond à un grand thème du programme. Le Partie 1 est déjà renseigné (issu de la séance de rentrée : QCM, exercices d'application, exercices d'approfondissement, exercice type BTS, devoir maison).
+## Table des matières
+
+- [0. Aide-mémoire : unités et équivalences](#sec-0-aide-memoire-unites-et-equivalences)
+    - [Préfixes multiplicateurs (à connaître par cœur)](#sec-prefixes-multiplicateurs-a-connaitre-par-cur)
+    - [Grandeurs, symboles et unités SI utilisées dans ce dossier](#sec-grandeurs-symboles-et-unites-si-utilisees-dans-ce-dossier)
+    - [Conversions rapides fréquemment nécessaires](#sec-conversions-rapides-frequemment-necessaires)
+- [Séance de rentrée : QCM d'état des lieux et de validation](#sec-seance-de-rentree-qcm-d-etat-des-lieux-et-de-validation)
+    - [QCM diagnostique (état des lieux)](#sec-qcm-diagnostique-etat-des-lieux)
+    - [QCM de validation (après les rappels)](#sec-qcm-de-validation-apres-les-rappels)
+- [Chapitre 1 : Électricité et optoélectronique](#sec-chapitre-1-electricite-et-optoelectronique)
+    - [1.1 Exercices d'application](#sec-1-1-exercices-d-application)
+    - [1.2 Exercices d'approfondissement](#sec-1-2-exercices-d-approfondissement)
+    - [1.3 QCM : puissances, décibels, atténuation et gains](#sec-1-3-qcm-puissances-decibels-attenuation-et-gains)
+    - [1.4 Exercices : décibels, gains et bilans de liaison](#sec-1-4-exercices-decibels-gains-et-bilans-de-liaison)
+    - [Corrigés du chapitre 1](#sec-corriges-du-chapitre-1)
+- [Chapitre 2 : Mesures et incertitudes](#sec-chapitre-2-mesures-et-incertitudes)
+    - [2.1 Exercices d'application](#sec-2-1-exercices-d-application)
+    - [2.2 Exercices d'approfondissement](#sec-2-2-exercices-d-approfondissement)
+    - [Corrigés du chapitre 2](#sec-corriges-du-chapitre-2)
+- [Chapitre 3 : Ondes et propagation](#sec-chapitre-3-ondes-et-propagation)
+    - [3.1 Exercices d'application](#sec-3-1-exercices-d-application)
+    - [3.2 Exercices d'approfondissement](#sec-3-2-exercices-d-approfondissement)
+    - [3.3 Devoir maison : électromagnétisme](#sec-3-3-devoir-maison-electromagnetisme)
+    - [Corrigés du chapitre 3](#sec-corriges-du-chapitre-3)
+- [Chapitre 4 : Systèmes bouclés et asservissement](#sec-chapitre-4-systemes-boucles-et-asservissement)
+    - [4.1 Exercices d'application](#sec-4-1-exercices-d-application)
+    - [Corrigés du chapitre 4](#sec-corriges-du-chapitre-4)
+- [Chapitre 5 : Traitement du signal](#sec-chapitre-5-traitement-du-signal)
+    - [5.1 Exercices d'approfondissement](#sec-5-1-exercices-d-approfondissement)
+    - [Corrigés du chapitre 5](#sec-corriges-du-chapitre-5)
+- [Chapitre 6 : Optique](#sec-chapitre-6-optique)
+- [Chapitre 7 : Préparation à l'épreuve](#sec-chapitre-7-preparation-a-l-epreuve)
+    - [7.1 Exercice type BTS : contrôle d'une liaison de mesure](#sec-7-1-exercice-type-bts-controle-d-une-liaison-de-mesure)
+    - [7.2 Annales officielles](#sec-7-2-annales-officielles)
+    - [Annale : Session 2026 (sujet blanc), domaine de la physique (1h30, 4 parties indépendantes)](#sec-annale-session-2026-sujet-blanc-domaine-de-la-physique-1h30-)
+    - [Annale : Session 2025 (officielle), domaine de la physique (1h30, 3 parties indépendantes)](#sec-annale-session-2025-officielle-domaine-de-la-physique-1h30-3)
+    - [Corrigés du chapitre 7](#sec-corriges-du-chapitre-7)
+
+---
+
+<a id="sec-0-aide-memoire-unites-et-equivalences"></a>
 
 ## 0. Aide-mémoire : unités et équivalences
 
-À distribuer ou projeter en permanence pendant la séance — beaucoup d'erreurs de calcul viennent d'une conversion d'unité oubliée (mA ↔ A, kΩ ↔ Ω, ms ↔ s…).
+À distribuer ou projeter en permanence pendant la séance : beaucoup d'erreurs de calcul viennent d'une conversion d'unité oubliée (mA ↔ A, kΩ ↔ Ω, ms ↔ s…).
+
+<a id="sec-prefixes-multiplicateurs-a-connaitre-par-cur"></a>
 
 ### Préfixes multiplicateurs (à connaître par cœur)
 
@@ -14,13 +56,15 @@ Document vivant, à compléter au fil de l'année. Chaque partie correspond à u
 | giga | G | ×10⁹ | GHz (fréquence radio) |
 | méga | M | ×10⁶ | MΩ, MHz |
 | kilo | k | ×10³ | kΩ, kHz |
-| — | (unité) | ×10⁰ | V, A, Ω, s, Hz |
+| : | (unité) | ×10⁰ | V, A, Ω, s, Hz |
 | déci | d | ×10⁻¹ | dB (échelle log, à part) |
 | centi | c | ×10⁻² | cm |
 | milli | m | ×10⁻³ | mV, mA, ms |
 | micro | µ | ×10⁻⁶ | µV, µA, µF |
 | nano | n | ×10⁻⁹ | ns, nF |
 | pico | p | ×10⁻¹² | pF |
+
+<a id="sec-grandeurs-symboles-et-unites-si-utilisees-dans-ce-dossier"></a>
 
 ### Grandeurs, symboles et unités SI utilisées dans ce dossier
 
@@ -36,10 +80,12 @@ Document vivant, à compléter au fil de l'année. Chaque partie correspond à u
 | Longueur, longueur d'onde | l, λ | mètre | m | 1 cm = 10⁻² m ; 1 mm = 10⁻³ m |
 | Vitesse, célérité | v, c | mètre par seconde | m/s | 1 km/h ≈ 0,278 m/s |
 | Capacité électrique | C | farad | F | 1 µF = 10⁻⁶ F ; 1 nF = 10⁻⁹ F ; 1 pF = 10⁻¹² F |
-| Charge électrique | Q | coulomb | C | — |
+| Charge électrique | Q | coulomb | C | : |
 | Angle, déphasage | φ, θ | radian | rad | 2π rad = 360° ; 1 rad ≈ 57,3° |
 | Température | θ, T | degré Celsius / kelvin | °C / K | T(K) = θ(°C) + 273,15 |
 | Rapport de puissance (atténuation, gain) | A, G | décibel (sans dimension) | dB | A(dB) = 10·log₁₀(P_s/P_e) |
+
+<a id="sec-conversions-rapides-frequemment-necessaires"></a>
 
 ### Conversions rapides fréquemment nécessaires
 
@@ -57,7 +103,15 @@ Document vivant, à compléter au fil de l'année. Chaque partie correspond à u
 
 <div style="page-break-after: always;"></div>
 
-## Partie 1 — Consolidation des fondamentaux
+---
+
+<a id="sec-seance-de-rentree-qcm-d-etat-des-lieux-et-de-validation"></a>
+
+## Séance de rentrée : QCM d'état des lieux et de validation
+
+*Ces deux QCM couvrent transversalement les chapitres 1, 2, 3 et 4 : ils servent à positionner le groupe en début d'année, puis à valider les rappels. Leurs corrigés commentés figurent dans le poly de correction des QCM (version prof).*
+
+<a id="sec-qcm-diagnostique-etat-des-lieux"></a>
 
 ### QCM diagnostique (état des lieux)
 
@@ -88,7 +142,7 @@ Durée : 45 min. Objectif : positionner chaque étudiant sur 3 domaines priorita
 15. Célérité du son dans l'air : *(3.10⁸ m/s / 340 m/s / 1500 m/s / 3.10⁵ m/s)*
 16. Deux signaux "en phase" quand : *(même amplitude / maximums simultanés / fréquences multiples / signes opposés)*
 
-### D. Bonus — acquis de 1ʳᵉ année (4 questions, facultatif mais informatif)
+### D. Bonus : acquis de 1ʳᵉ année (4 questions, facultatif mais informatif)
 
 17. Tension de seuil d'une diode au silicium en sens passant : *(0,1 V / 0,6-0,7 V / 5 V / 12 V)*
 18. Dans une boucle fermée, l'écart est : *(consigne − mesure retournée / la sortie seule / le gain / une constante)*
@@ -97,7 +151,7 @@ Durée : 45 min. Objectif : positionner chaque étudiant sur 3 domaines priorita
 
 **Utilisation :** reporter le score de chaque étudiant sur la fiche de suivi (partie 8). Constituer, si besoin, des groupes de besoin pour les rappels et pour la répartition en TP : les étudiants "avancés" sur A+B+C peuvent démarrer directement sur l'atelier bonus pendant que les autres consolident.
 
----
+<a id="sec-qcm-de-validation-apres-les-rappels"></a>
 
 ### QCM de validation (après les rappels)
 
@@ -119,273 +173,151 @@ Durée : 20 min. 15 questions, correction immédiate en collectif.
 14. Opposition de phase = déphasage de… *(0° / 90° / 180° / 360°)*
 15. Célérité de la lumière dans le vide ≈ *(3.10⁵ m/s / 3.10⁸ m/s / 3.10⁸ km/s / 340 m/s)*
 
-
 ---
 
-### Exercices d'application, d'approfondissement, exercice type BTS et DM
+<div style="page-break-after: always;"></div>
 
-À proposer en différenciation : les exercices 1 à 3 sont à faire par tous ; les exercices 4 et 5 sont réservés aux étudiants ayant terminé en avance ou identifiés "avancés".
+&nbsp;
 
-**Exercice 1 — Bases de l'électricité**
+<div style="page-break-after: always;"></div>
 
-Un pont diviseur de tension est réalisé avec R1 = 2,2 kΩ (en haut) et R2 = 1 kΩ (en bas), alimenté sous E = 12 V.
-1) Calculer la tension aux bornes de R2. 2) Calculer le courant circulant dans le pont. 3) Calculer la puissance totale dissipée.
+<a id="sec-chapitre-1-electricite-et-optoelectronique"></a>
 
-> **Corrigé.** U(R2) = 12 × 1000/(2200+1000) = 3,75 V. I = E/(R1+R2) = 12/3200 = 3,75 mA. P = E×I = 12 × 3,75.10⁻³ = 45 mW.
+## Chapitre 1 : Électricité et optoélectronique
 
-**Exercice 2 — Mesures et incertitudes**
+<a id="sec-1-1-exercices-d-application"></a>
 
-Une série de 8 mesures d'une tension donne x̄ = 5,08 V et s = 0,06 V. Le multimètre a une incertitude constructeur de type B estimée à u_B = 0,02 V.
-1) Calculer u_A. 2) En déduire u composée (u = √(u_A² + u_B²)). 3) Donner le résultat avec U (k=2), correctement écrit.
+### 1.1 Exercices d'application
 
-> **Corrigé.** u_A = 0,06/√8 ≈ 0,021 V. u = √(0,021² + 0,02²) ≈ 0,029 V. U ≈ 0,058 V ≈ 0,06 V. Résultat : U_mesurée = (5,08 ± 0,06) V.
+**Exercice 1.1 : Pont diviseur de tension**
 
-**Exercice 3 — Ondes**
+Un pont diviseur de tension est réalisé avec $R_1 = 2{,}2$ kΩ (en haut) et $R_2 = 1$ kΩ (en bas), alimenté sous $E = 12$ V.
 
-Base de temps 0,2 ms/div, une période occupe 3,5 divisions.
-1) Calculer T. 2) En déduire f. 3) Ce signal est une onde sonore (v = 340 m/s) : calculer λ.
+1) Calculer la tension aux bornes de $R_2$.
+2) Calculer le courant circulant dans le pont.
+3) Calculer la puissance totale dissipée.
 
-> **Corrigé.** T = 3,5 × 0,2.10⁻³ = 0,7 ms. f = 1/T ≈ 1429 Hz. λ = v/f ≈ 0,238 m ≈ 24 cm.
+**Exercice 1.2 : Caractéristique d'une diode**
 
-**Exercice 4 (bonus) — Semi-conducteurs**
+Sur une diode silicium on relève : $V = 0{,}5$ V → $I \approx 0$ mA ; $V = 0{,}65$ V → $I \approx 2$ mA ; $V = 0{,}7$ V → $I \approx 8$ mA.
 
-Sur une diode silicium : V=0,5 V → I≈0 mA ; V=0,65 V → I≈2 mA ; V=0,7 V → I≈8 mA.
-1) Que dire de la tension de seuil ? 2) Pourquoi le courant croît-il aussi vite entre 0,65 et 0,7 V ?
+1) Que dire de la tension de seuil ?
+2) Pourquoi le courant croît-il aussi vite entre 0,65 V et 0,7 V ?
 
-> **Corrigé.** Seuil ≈ 0,6-0,65 V, cohérent avec le silicium. Au-delà du seuil, la caractéristique I(V) est fortement non linéaire (croissance quasi exponentielle), typique d'une jonction PN passante.
+<a id="sec-1-2-exercices-d-approfondissement"></a>
 
-**Exercice 5 (bonus) — Systèmes bouclés**
+### 1.2 Exercices d'approfondissement
 
-Un radiateur électrique est piloté par un thermostat qui compare la température mesurée à une consigne, et coupe/remet le chauffage selon l'écart.
-1) Boucle ouverte ou fermée ? Justifier. 2) Identifier consigne, grandeur mesurée, écart, actionneur.
+**Exercice 1.3 : Diviseur de tension en charge**
 
-> **Corrigé.** Boucle fermée : la sortie (température) est renvoyée et comparée à la consigne. Consigne = température souhaitée ; mesure = température ambiante (capteur) ; écart = consigne − mesure ; actionneur = résistance chauffante.
+Un pont diviseur $R_1 = 4{,}7$ kΩ / $R_2 = 2{,}2$ kΩ est alimenté sous $E = 10$ V. On y branche un appareil de mesure (charge) modélisé par une résistance $R_{ch} = 2{,}2$ kΩ en parallèle sur $R_2$.
 
-### Exercices d'approfondissement (niveau avancé)
-
-À réserver aux étudiants les plus à l'aise, en autonomie, ou comme base de la correction collective en fin de journée. Ils combinent plusieurs notions et introduisent des idées qui seront reprises plus tard dans l'année.
-
-**Exercice A1 — Diviseur de tension en charge**
-
-Un pont diviseur R1 = 4,7 kΩ / R2 = 2,2 kΩ est alimenté sous E = 10 V. On y branche un appareil de mesure (charge) modélisé par une résistance R_ch = 2,2 kΩ en parallèle sur R2.
-
-1) Calculer la tension aux bornes de R2 **à vide** (sans charge).
-2) Calculer la nouvelle résistance équivalente (R2 // R_ch) puis la tension aux bornes de R2 **en charge**.
+1) Calculer la tension aux bornes de $R_2$ **à vide** (sans charge).
+2) Calculer la nouvelle résistance équivalente ($R_2 \, /\!/ \, R_{ch}$) puis la tension aux bornes de $R_2$ **en charge**.
 3) Comparer les deux résultats et expliquer, en une phrase, pourquoi un appareil de mesure doit avoir une résistance d'entrée la plus grande possible.
 
-> **Corrigé.**
-> 1) U(R2) à vide = 10 × 2200/(4700+2200) = 3,19 V.
-> 2) R2 // R_ch = (2200×2200)/(2200+2200) = 1100 Ω. U(R2) en charge = 10 × 1100/(4700+1100) = 1,90 V.
-> 3) L'écart est important (3,19 V → 1,90 V) : brancher un appareil de mesure modifie le circuit qu'il mesure ("effet de charge"). Un voltmètre idéal doit avoir une résistance d'entrée très grande devant celle du circuit pour ne pas le perturber.
+**Exercice 1.4 : Atténuation en décibels sur une liaison**
 
-**Exercice A2 — Incertitude sur une grandeur avec exposant**
+Un signal de puissance $P_e = 2{,}0$ mW est injecté dans un câble ; en sortie, on mesure $P_s = 0{,}5$ mW.
 
-On veut déterminer la puissance dissipée P = U²/R à partir de U = (6,00 ± 0,05) V et R = (100 ± 2) Ω.
-
-1) Rappeler la règle de propagation pour z = xⁿ : u(z)/z = n × u(x)/x. Justifier qualitativement pourquoi l'exposant "amplifie" l'incertitude relative.
-2) Calculer l'incertitude relative sur U², puis sur R.
-3) En déduire l'incertitude relative sur P, puis P avec son incertitude élargie (k=2), correctement écrite.
-
-> **Corrigé.**
-> 1) Une petite variation relative sur x se répercute n fois sur xⁿ (dérivée logarithmique : d(ln z) = n·d(ln x)) : plus l'exposant est élevé, plus l'incertitude relative se dégrade.
-> 2) u(U²)/U² = 2 × (0,05/6,00) = 1,67 %. u(R)/R = 2/100 = 2,00 %.
-> 3) u(P)/P = √(1,67² + 2,00²) % ≈ 2,60 %. P = 6,00²/100 = 0,360 W. u(P) ≈ 0,0094 W. U(P) = 2×0,0094 ≈ 0,019 W ≈ 0,02 W. Résultat : **P = (0,36 ± 0,02) W**.
-
-**Exercice A3 — Battement de deux signaux**
-
-Deux émetteurs radio proches émettent respectivement à f1 = 100,000 kHz et f2 = 100,003 kHz. Superposés, ils produisent un phénomène de battement.
-
-1) Rappeler (ou admettre) que la fréquence de battement perçue vaut f_bat = |f1 − f2|. Calculer f_bat.
-2) En déduire la période du battement.
-3) Pourquoi ce phénomène est-il un problème pratique en télécommunications (deux canaux trop proches en fréquence) ? Donner une conséquence concrète.
-
-> **Corrigé.**
-> 1) f_bat = |100,003 − 100,000| kHz = 3 Hz.
-> 2) T_bat = 1/f_bat ≈ 0,33 s.
-> 3) Deux porteuses trop proches créent une interférence audible/mesurable (battement, brouillage) : c'est pourquoi les canaux radio sont espacés d'un écart minimal normalisé (canalisation) pour éviter le recouvrement spectral.
-
-**Exercice A4 — Filtre RC passe-bas et fréquence de coupure**
-
-Un filtre RC passe-bas est réalisé avec R = 1,0 kΩ et C = 100 nF.
-
-1) Donner (ou admettre) la formule de la fréquence de coupure : f_c = 1/(2πRC). Calculer f_c.
-2) Un signal utile à 200 Hz et un bruit parasite à 50 kHz traversent ce filtre. Lequel est fortement atténué ? Justifier sans calcul détaillé, juste par comparaison à f_c.
-3) On veut abaisser f_c d'un facteur 10 sans changer R : quelle nouvelle valeur de C faut-il choisir ?
-
-> **Corrigé.**
-> 1) f_c = 1/(2π × 1000 × 100.10⁻⁹) ≈ 1592 Hz ≈ 1,6 kHz.
-> 2) Le signal à 200 Hz est bien en dessous de f_c : il passe presque sans atténuation. Le parasite à 50 kHz est très au-dessus de f_c : il est fortement atténué par le filtre passe-bas.
-> 3) f_c ∝ 1/C, donc pour diviser f_c par 10 il faut multiplier C par 10 : C = 1 µF.
-
-**Exercice A5 (mixte, difficile) — Atténuation en décibels sur une liaison**
-
-Un signal de puissance P_e = 2,0 mW est injecté dans un câble ; en sortie, on mesure P_s = 0,5 mW.
-
-1) Calculer l'atténuation en dB : A(dB) = 10 × log₁₀(P_e/P_s).
+1) Calculer l'atténuation en dB : $A_{(dB)} = 10 \times \log_{10}\!\left(\dfrac{P_e}{P_s}\right)$.
 2) Si le câble atténue de façon linéaire (en dB par mètre) et mesure 25 m, calculer l'atténuation linéique en dB/m.
 3) Quelle longueur maximale de câble peut-on utiliser si l'atténuation totale ne doit pas dépasser 10 dB ?
 
-> **Corrigé.**
-> 1) A = 10 × log₁₀(2,0/0,5) = 10 × log₁₀(4) ≈ 6,02 dB.
-> 2) 6,02/25 ≈ 0,241 dB/m.
-> 3) L_max = 10/0,241 ≈ 41,5 m.
+<a id="sec-1-3-qcm-puissances-decibels-attenuation-et-gains"></a>
 
----
+### 1.3 QCM : puissances, décibels, atténuation et gains
 
-#### Exercice type BTS ("annale") et devoir maison
-
-L'exercice ci-dessous est construit dans l'esprit d'un sujet d'examen BTS (mise en situation professionnelle, plusieurs parties indépendantes, données réalistes) et couvre les trois priorités de la séance. Il peut être démarré en classe en fin de séance et terminé en autonomie.
-
-### Contrôle d'une liaison de mesure
-
-*Contexte : dans le cadre de la maintenance d'une installation, un technicien doit caractériser un signal transmis sur une liaison filaire avant de le raccorder à une carte d'acquisition.*
-
-**Partie A — Mesures et incertitudes (8 points)**
-
-Le technicien relève 10 fois l'amplitude crête d'un signal avec un oscilloscope de résolution 0,02 V : 2,14 ; 2,16 ; 2,12 ; 2,15 ; 2,18 ; 2,13 ; 2,17 ; 2,14 ; 2,16 ; 2,15 (en V).
-
-1) Calculer x̄ et s (formules attendues, résultat à 3 chiffres significatifs).
-2) Calculer u_A.
-3) Calculer u_B = résolution/√12.
-4) Calculer u composée puis U (k=2). Écrire le résultat final.
-
-**Partie B — Ondes (7 points)**
-
-Le signal a une fréquence de 1,2 kHz et se propage sur le câble à 2.10⁸ m/s.
-
-1) Calculer T. 2) Calculer λ. 3) Le câble mesure 15 m. Exprimer sa longueur en fraction de λ et commenter l'intérêt pour une liaison de mesure.
-
-**Partie C — Électricité (5 points)**
-
-En sortie de câble, le signal attaque une résistance d'adaptation R = 50 Ω, tension efficace mesurée 1,5 V.
-
-1) Calculer le courant efficace. 2) Calculer la puissance moyenne dissipée.
-
-### Corrigé de l'exercice type BTS
-
-> **Partie A.** x̄ = 2,150 V. s ≈ 0,0184 V. u_A = s/√10 ≈ 0,0058 V. u_B = 0,02/√12 ≈ 0,0058 V. u = √(u_A²+u_B²) ≈ 0,0082 V. U = 2u ≈ 0,016 V ≈ 0,02 V. Résultat : U_signal = (2,15 ± 0,02) V.
-
-> **Partie B.** T = 1/1200 ≈ 0,833 ms. λ = v/f = 2.10⁸/1200 ≈ 1,67.10⁵ m. Longueur/λ = 15/1,67.10⁵ ≈ 9.10⁻⁵ : le câble est très court devant λ, les effets de propagation sont négligeables ici.
-
-> **Partie C.** I = U/R = 1,5/50 = 30 mA. P = U×I = 45 mW (ou U²/R = 1,5²/50 = 45 mW).
-
-### Devoir maison — Électromagnétisme
-
-À proposer si le thème n'a pas pu être abordé en séance.
-
-1. Une antenne émet à 433 MHz (liaisons courte-portée). Calculer sa longueur d'onde dans le vide (c ≈ 3.10⁸ m/s).
-2. Expliquer, en quelques lignes, pourquoi E et B sont perpendiculaires entre eux et à la direction de propagation.
-3. Une onde radio passe de l'air à un matériau plus dense : citer deux phénomènes possibles à l'interface et une situation professionnelle CIEL où cela compte (pose d'antenne, câblage, blindage…).
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-## Partie 2 — Semi-conducteurs et composants optoélectroniques
-
-*(À compléter au fil de l'année.)*
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-## Partie 3 — Systèmes bouclés et asservissement
-
-*(À compléter au fil de l'année.)*
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-## Partie 4 — Ondes, propagation et transmission
-
-*(À compléter au fil de l'année.)*
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-## Partie 5 — Étude des signaux, circuits linéaires et filtres
-
-### 5.1 Puissances, décibels, atténuation et gains
-
-#### QCM
-
-1. La formule du décibel pour un rapport de puissances est : *(A = 20 log₁₀(P₂/P₁) / A = 10 log₁₀(P₂/P₁) / A = log₁₀(P₂/P₁) / A = 10 (P₂/P₁))*
+1. La formule du décibel pour un rapport de puissances est : *($A = 20\log_{10}(P_2/P_1)$ / $A = 10\log_{10}(P_2/P_1)$ / $A = \log_{10}(P_2/P_1)$ / $A = 10\,(P_2/P_1)$)*
 2. Un rapport de puissance ×2 correspond à : *(+2 dB / +3 dB / +6 dB / +10 dB)*
 3. Une perte de −3 dB correspond à un facteur : *(÷2 / ÷3 / ×2 / ÷1,5)*
 4. Un rapport de puissance ×100 correspond à : *(+2 dB / +20 dB / +100 dB / +40 dB)*
-5. Pour des tensions à impédances égales, la formule correcte est : *(A = 10 log₁₀(U₂/U₁) / A = 20 log₁₀(U₂/U₁) / A = 10 log₁₀(U₂/U₁)² / A = log₁₀(U₂/U₁))*
+5. Pour des tensions à impédances égales, la formule correcte est : *($A = 10\log_{10}(U_2/U_1)$ / $A = 20\log_{10}(U_2/U_1)$ / $A = 10\log_{10}(U_2/U_1)^2$ / $A = \log_{10}(U_2/U_1)$)*
 6. Deux étages en cascade de +6 dB et −2 dB ont un gain total de : *(+4 dB / +8 dB / −12 dB / +3 dB)*
 7. 0 dBm correspond à une puissance de : *(0 W / 1 mW / 1 W / 1 µW)*
 8. +10 dBm correspond à une puissance de : *(1 mW / 10 mW / 100 mW / 0,1 mW)*
 9. −20 dBm correspond à une puissance de : *(0,1 mW / 0,01 mW / 10 mW / 1 mW)*
 10. Vrai ou faux : le dB est une unité absolue de puissance. *(Vrai / Faux)*
 11. Un signal à −5 dBm traverse un amplificateur de +15 dB puis un câble de −3 dB. Le niveau de sortie est : *(+7 dBm / +17 dBm / −13 dBm / +23 dBm)*
-12. La valeur efficace d'un signal sinusoïdal d'amplitude U_max est : *(U_max / U_max/2 / U_max/√2 / U_max×√2)*
+12. La valeur efficace d'un signal sinusoïdal d'amplitude $U_{max}$ est : *($U_{max}$ / $U_{max}/2$ / $U_{max}/\sqrt{2}$ / $U_{max}\times\sqrt{2}$)*
 
+<a id="sec-1-4-exercices-decibels-gains-et-bilans-de-liaison"></a>
 
-#### Exercices
+### 1.4 Exercices : décibels, gains et bilans de liaison
 
-**Exercice 1 — Conversion simple**
+**Exercice 1.5 : Conversion simple**
 
-Un amplificateur reçoit P_e = 4 mW en entrée et délivre P_s = 200 mW en sortie.
-1) Calculer le gain en dB. 2) Ce gain vous semble-t-il réaliste pour un amplificateur audio courant ?
+Un amplificateur reçoit $P_e = 4$ mW en entrée et délivre $P_s = 200$ mW en sortie.
 
-> **Corrigé.** A = 10×log₁₀(200/4) = 10×log₁₀(50) ≈ 17,0 dB. C'est un ordre de grandeur tout à fait réaliste pour un étage amplificateur.
+1) Calculer le gain en dB.
+2) Ce gain vous semble-t-il réaliste pour un amplificateur audio courant ?
 
-**Exercice 2 — Formule inverse (tension)**
+**Exercice 1.6 : Formule inverse (tension)**
 
-Un quadripôle présente une atténuation de −12 dB en tension. La tension d'entrée est U₁ = 2,0 V.
-1) Calculer le rapport U₂/U₁ correspondant à −12 dB. 2) En déduire U₂.
+Un quadripôle présente une atténuation de −12 dB en tension. La tension d'entrée est $U_1 = 2{,}0$ V.
 
-> **Corrigé.** −12 = 20×log₁₀(U₂/U₁) ⇒ log₁₀(U₂/U₁) = −0,6 ⇒ U₂/U₁ = 10^(−0,6) ≈ 0,251. U₂ = 0,251 × 2,0 ≈ 0,50 V.
+1) Calculer le rapport $U_2/U_1$ correspondant à −12 dB.
+2) En déduire $U_2$.
 
-**Exercice 3 — Chaîne en cascade**
+**Exercice 1.7 : Chaîne en cascade**
 
 Une chaîne de transmission comprend : un préamplificateur (+8 dB), un câble (−5 dB), un amplificateur de puissance (+25 dB), un connecteur (−0,5 dB).
-1) Calculer le gain total de la chaîne en dB. 2) Convertir ce gain total en facteur linéaire (rapport de puissance).
 
-> **Corrigé.** G_total = 8 − 5 + 25 − 0,5 = 27,5 dB. Facteur linéaire : G = 10^(27,5/10) ≈ 562.
+1) Calculer le gain total de la chaîne en dB.
+2) Convertir ce gain total en facteur linéaire (rapport de puissance).
 
-**Exercice 4 — Bilan de liaison Wi-Fi**
+**Exercice 1.8 : Bilan de liaison Wi-Fi**
 
-Une borne Wi-Fi émet à P_e = +18 dBm. Le signal traverse un câble (−1,5 dB), une antenne d'émission de gain +6 dB, un trajet en espace libre qui atténue de 70 dB, puis une antenne de réception de gain +3 dB.
-1) Calculer la puissance reçue en dBm. 2) Convertir cette puissance en mW puis en W.
+Une borne Wi-Fi émet à $P_e = +18$ dBm. Le signal traverse un câble (−1,5 dB), une antenne d'émission de gain +6 dB, un trajet en espace libre qui atténue de 70 dB, puis une antenne de réception de gain +3 dB.
 
-> **Corrigé.** P_reçue = 18 − 1,5 + 6 − 70 + 3 = −44,5 dBm. En mW : P = 10^(−44,5/10) ≈ 3,55.10⁻⁵ mW ≈ 3,55.10⁻⁸ W.
+1) Calculer la puissance reçue en dBm.
+2) Convertir cette puissance en mW puis en W.
 
-**Exercice 5 (avancé) — Portée maximale d'une liaison**
+**Exercice 1.9 (avancé) : Portée maximale d'une liaison**
 
-Une liaison radio dispose d'un budget de liaison de 100 dB (différence entre puissance émise et sensibilité minimale du récepteur). L'atténuation en espace libre suit une loi qui augmente d'environ 6 dB à chaque doublement de distance (approximation usuelle en propagation libre).
+Une liaison radio dispose d'un budget de liaison de 100 dB (différence entre puissance émise et sensibilité minimale du récepteur). L'atténuation en espace libre augmente d'environ 6 dB à chaque doublement de distance (approximation usuelle en propagation libre).
+
 1) Si le budget est déjà consommé à 70 dB pour une distance de 100 m, combien reste-t-il de marge en dB ?
 2) En doublant la distance à chaque fois (200 m, 400 m, 800 m...), combien de doublements supplémentaires la marge restante permet-elle avant d'atteindre la limite du budget ?
 3) En déduire une estimation grossière de la portée maximale de cette liaison.
 
-> **Corrigé.** 1) Marge restante = 100 − 70 = 30 dB. 2) Avec 6 dB par doublement, 30/6 = 5 doublements supplémentaires possibles. 3) Portée ≈ 100 × 2⁵ = 100 × 32 = 3200 m (estimation grossière, propagation idéalisée en espace libre).
-
-**Exercice 6 (avancé) — Équivalence linéaire/dB**
+**Exercice 1.10 (avancé) : Équivalence linéaire/dB**
 
 Un système A présente un gain de 40 dB. Un système B présente un gain linéaire de 8000.
-1) Convertir le gain du système A en gain linéaire. 2) Convertir le gain du système B en dB. 3) Lequel des deux systèmes amplifie le plus ?
 
-> **Corrigé.** 1) G_A = 10^(40/10) = 10⁴ = 10 000. 2) G_B(dB) = 10×log₁₀(8000) ≈ 39,0 dB. 3) Le système A (gain 10 000, soit 40 dB) amplifie légèrement plus que le système B (gain 8000, soit 39 dB).
+1) Convertir le gain du système A en gain linéaire.
+2) Convertir le gain du système B en dB.
+3) Lequel des deux systèmes amplifie le plus ?
+
+<a id="sec-corriges-du-chapitre-1"></a>
+
+### Corrigés du chapitre 1
+
+**Exercice 1.1.** $U(R_2) = 12 \times \dfrac{1000}{2200 + 1000} = 3{,}75$ V. $I = \dfrac{E}{R_1 + R_2} = \dfrac{12}{3200} = 3{,}75$ mA. $P = E \times I = 12 \times 3{,}75 \times 10^{-3} = 45$ mW.
+
+**Exercice 1.2.** Seuil ≈ 0,6 à 0,65 V, cohérent avec le silicium. Au-delà du seuil, la caractéristique $I(V)$ est fortement non linéaire (croissance quasi exponentielle), typique d'une jonction PN passante.
+
+**Exercice 1.3.**
+1) $U(R_2)_{\text{vide}} = 10 \times \dfrac{2200}{4700 + 2200} = 3{,}19$ V.
+2) $R_2 \, /\!/ \, R_{ch} = \dfrac{2200 \times 2200}{2200 + 2200} = 1100$ Ω. $U(R_2)_{\text{charge}} = 10 \times \dfrac{1100}{4700 + 1100} = 1{,}90$ V.
+3) L'écart est important (3,19 V → 1,90 V) : brancher un appareil de mesure modifie le circuit qu'il mesure (« effet de charge »). Un voltmètre idéal doit avoir une résistance d'entrée très grande devant celle du circuit pour ne pas le perturber.
+
+**Exercice 1.4.**
+1) $A = 10 \times \log_{10}\!\left(\dfrac{2{,}0}{0{,}5}\right) = 10 \times \log_{10}(4) \approx 6{,}02$ dB.
+2) $\dfrac{6{,}02}{25} \approx 0{,}241$ dB/m.
+3) $L_{max} = \dfrac{10}{0{,}241} \approx 41{,}5$ m.
+
+**Exercice 1.5.** $A = 10 \times \log_{10}\!\left(\dfrac{200}{4}\right) = 10 \times \log_{10}(50) \approx 17{,}0$ dB. C'est un ordre de grandeur tout à fait réaliste pour un étage amplificateur.
+
+**Exercice 1.6.** $-12 = 20 \log_{10}(U_2/U_1) \Rightarrow \log_{10}(U_2/U_1) = -0{,}6 \Rightarrow U_2/U_1 = 10^{-0{,}6} \approx 0{,}251$. $U_2 = 0{,}251 \times 2{,}0 \approx 0{,}50$ V.
+
+**Exercice 1.7.** $G_{total} = 8 - 5 + 25 - 0{,}5 = 27{,}5$ dB. Facteur linéaire : $G = 10^{27{,}5/10} \approx 562$.
+
+**Exercice 1.8.** $P_{reçue} = 18 - 1{,}5 + 6 - 70 + 3 = -44{,}5$ dBm. En mW : $P = 10^{-44{,}5/10} \approx 3{,}55 \times 10^{-5}$ mW $\approx 3{,}55 \times 10^{-8}$ W.
+
+**Exercice 1.9.** 1) Marge restante = 100 − 70 = 30 dB. 2) Avec 6 dB par doublement, 30/6 = 5 doublements supplémentaires possibles. 3) Portée ≈ $100 \times 2^5 = 3200$ m (estimation grossière, propagation idéalisée en espace libre).
+
+**Exercice 1.10.** 1) $G_A = 10^{40/10} = 10^4 = 10\,000$. 2) $G_{B(dB)} = 10 \log_{10}(8000) \approx 39{,}0$ dB. 3) Le système A (gain 10 000, soit 40 dB) amplifie légèrement plus que le système B (gain 8000, soit 39 dB).
 
 ---
 
@@ -395,9 +327,44 @@ Un système A présente un gain de 40 dB. Un système B présente un gain linéa
 
 <div style="page-break-after: always;"></div>
 
-## Partie 6 — Composants optoélectroniques et propagation guidée (approfondissement)
+<a id="sec-chapitre-2-mesures-et-incertitudes"></a>
 
-*(À compléter au fil de l'année.)*
+## Chapitre 2 : Mesures et incertitudes
+
+<a id="sec-2-1-exercices-d-application"></a>
+
+### 2.1 Exercices d'application
+
+**Exercice 2.1 : Incertitudes de type A et B**
+
+Une série de 8 mesures d'une tension donne $\bar{x} = 5{,}08$ V et $s = 0{,}06$ V. Le multimètre a une incertitude constructeur de type B estimée à $u_B = 0{,}02$ V.
+
+1) Calculer $u_A$.
+2) En déduire l'incertitude composée $u = \sqrt{u_A^2 + u_B^2}$.
+3) Donner le résultat avec l'incertitude élargie $U$ ($k = 2$), correctement écrit.
+
+<a id="sec-2-2-exercices-d-approfondissement"></a>
+
+### 2.2 Exercices d'approfondissement
+
+**Exercice 2.2 : Incertitude sur une grandeur avec exposant**
+
+On veut déterminer la puissance dissipée $P = U^2/R$ à partir de $U = (6{,}00 \pm 0{,}05)$ V et $R = (100 \pm 2)$ Ω.
+
+1) Rappeler la règle de propagation pour $z = x^n$ : $\dfrac{u(z)}{z} = n \times \dfrac{u(x)}{x}$. Justifier qualitativement pourquoi l'exposant « amplifie » l'incertitude relative.
+2) Calculer l'incertitude relative sur $U^2$, puis sur $R$.
+3) En déduire l'incertitude relative sur $P$, puis $P$ avec son incertitude élargie ($k = 2$), correctement écrite.
+
+<a id="sec-corriges-du-chapitre-2"></a>
+
+### Corrigés du chapitre 2
+
+**Exercice 2.1.** $u_A = \dfrac{0{,}06}{\sqrt{8}} \approx 0{,}021$ V. $u = \sqrt{0{,}021^2 + 0{,}02^2} \approx 0{,}029$ V. $U = 2u \approx 0{,}058$ V $\approx 0{,}06$ V. Résultat : $U_{mesurée} = (5{,}08 \pm 0{,}06)$ V.
+
+**Exercice 2.2.**
+1) Une petite variation relative sur $x$ se répercute $n$ fois sur $x^n$ (dérivée logarithmique : $d(\ln z) = n\, d(\ln x)$) : plus l'exposant est élevé, plus l'incertitude relative se dégrade.
+2) $\dfrac{u(U^2)}{U^2} = 2 \times \dfrac{0{,}05}{6{,}00} = 1{,}67\ \%$. $\dfrac{u(R)}{R} = \dfrac{2}{100} = 2{,}00\ \%$.
+3) $\dfrac{u(P)}{P} = \sqrt{1{,}67^2 + 2{,}00^2}\ \% \approx 2{,}60\ \%$. $P = \dfrac{6{,}00^2}{100} = 0{,}360$ W. $u(P) \approx 0{,}0094$ W. $U(P) = 2 \times 0{,}0094 \approx 0{,}019$ W $\approx 0{,}02$ W. Résultat : $P = (0{,}36 \pm 0{,}02)$ W.
 
 ---
 
@@ -407,13 +374,190 @@ Un système A présente un gain de 40 dB. Un système B présente un gain linéa
 
 <div style="page-break-after: always;"></div>
 
-## Partie 7 — Préparation à l'épreuve
+<a id="sec-chapitre-3-ondes-et-propagation"></a>
+
+## Chapitre 3 : Ondes et propagation
+
+<a id="sec-3-1-exercices-d-application"></a>
+
+### 3.1 Exercices d'application
+
+**Exercice 3.1 : Lecture d'une onde à l'oscilloscope**
+
+Base de temps 0,2 ms/div, une période occupe 3,5 divisions.
+
+1) Calculer $T$.
+2) En déduire $f$.
+3) Ce signal est une onde sonore ($v = 340$ m/s) : calculer $\lambda$.
+
+<a id="sec-3-2-exercices-d-approfondissement"></a>
+
+### 3.2 Exercices d'approfondissement
+
+**Exercice 3.2 : Battement de deux signaux**
+
+Deux émetteurs radio proches émettent respectivement à $f_1 = 100{,}000$ kHz et $f_2 = 100{,}003$ kHz. Superposés, ils produisent un phénomène de battement.
+
+1) Rappeler (ou admettre) que la fréquence de battement perçue vaut $f_{bat} = |f_1 - f_2|$. Calculer $f_{bat}$.
+2) En déduire la période du battement.
+3) Pourquoi ce phénomène est-il un problème pratique en télécommunications (deux canaux trop proches en fréquence) ? Donner une conséquence concrète.
+
+<a id="sec-3-3-devoir-maison-electromagnetisme"></a>
+
+### 3.3 Devoir maison : électromagnétisme
+
+1. Une antenne émet à 433 MHz (liaisons courte-portée). Calculer sa longueur d'onde dans le vide ($c \approx 3 \times 10^8$ m/s).
+2. Expliquer, en quelques lignes, pourquoi $\vec{E}$ et $\vec{B}$ sont perpendiculaires entre eux et à la direction de propagation.
+3. Une onde radio passe de l'air à un matériau plus dense : citer deux phénomènes possibles à l'interface et une situation professionnelle CIEL où cela compte (pose d'antenne, câblage, blindage…).
+
+<a id="sec-corriges-du-chapitre-3"></a>
+
+### Corrigés du chapitre 3
+
+**Exercice 3.1.** $T = 3{,}5 \times 0{,}2 \times 10^{-3} = 0{,}7$ ms. $f = \dfrac{1}{T} \approx 1429$ Hz. $\lambda = \dfrac{v}{f} \approx 0{,}238$ m $\approx 24$ cm.
+
+**Exercice 3.2.**
+1) $f_{bat} = |100{,}003 - 100{,}000|$ kHz $= 3$ Hz.
+2) $T_{bat} = \dfrac{1}{f_{bat}} \approx 0{,}33$ s.
+3) Deux porteuses trop proches créent une interférence audible/mesurable (battement, brouillage) : c'est pourquoi les canaux radio sont espacés d'un écart minimal normalisé (canalisation) pour éviter le recouvrement spectral.
+
+**Devoir maison.**
+1. $\lambda = \dfrac{c}{f} = \dfrac{3 \times 10^8}{433 \times 10^6} \approx 0{,}693$ m $\approx 69$ cm.
+2. Une onde électromagnétique est transversale : les champs $\vec{E}$ et $\vec{B}$ oscillent dans un plan perpendiculaire à la direction de propagation, et sont eux-mêmes perpendiculaires entre eux (leur rapport est constant, $E/B = c$). C'est une conséquence directe des équations de Maxwell dans le vide : la variation d'un champ engendre l'autre, à angle droit, ce qui fait avancer l'onde.
+3. À l'interface, l'onde peut être **réfléchie** (renvoyée vers le premier milieu) et/ou **réfractée** (transmise en changeant de direction, et atténuée). Situations professionnelles : zones d'ombre Wi-Fi derrière un mur porteur (réflexion), choix de l'emplacement d'une antenne, efficacité d'un blindage de câble ou de boîtier (l'onde est réfléchie par le métal).
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-4-systemes-boucles-et-asservissement"></a>
+
+## Chapitre 4 : Systèmes bouclés et asservissement
+
+<a id="sec-4-1-exercices-d-application"></a>
+
+### 4.1 Exercices d'application
+
+**Exercice 4.1 : Régulation d'un radiateur**
+
+Un radiateur électrique est piloté par un thermostat qui compare la température mesurée à une consigne, et coupe/remet le chauffage selon l'écart.
+
+1) Boucle ouverte ou fermée ? Justifier.
+2) Identifier consigne, grandeur mesurée, écart, actionneur.
+
+*(Autres exercices à compléter au fil de l'année : réponse indicielle d'un 1ᵉʳ ordre, identification de τ, dépassement d'un 2ᵉ ordre.)*
+
+<a id="sec-corriges-du-chapitre-4"></a>
+
+### Corrigés du chapitre 4
+
+**Exercice 4.1.** Boucle fermée : la sortie (température) est renvoyée et comparée à la consigne. Consigne = température souhaitée ; mesure = température ambiante (capteur) ; écart = consigne − mesure ; actionneur = résistance chauffante.
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-5-traitement-du-signal"></a>
+
+## Chapitre 5 : Traitement du signal
+
+<a id="sec-5-1-exercices-d-approfondissement"></a>
+
+### 5.1 Exercices d'approfondissement
+
+**Exercice 5.1 : Filtre RC passe-bas et fréquence de coupure**
+
+Un filtre RC passe-bas est réalisé avec $R = 1{,}0$ kΩ et $C = 100$ nF.
+
+1) Donner (ou admettre) la formule de la fréquence de coupure : $f_c = \dfrac{1}{2\pi RC}$. Calculer $f_c$.
+2) Un signal utile à 200 Hz et un bruit parasite à 50 kHz traversent ce filtre. Lequel est fortement atténué ? Justifier sans calcul détaillé, juste par comparaison à $f_c$.
+3) On veut abaisser $f_c$ d'un facteur 10 sans changer $R$ : quelle nouvelle valeur de $C$ faut-il choisir ?
+
+*(Autres exercices à compléter au fil de l'année : spectre d'un signal carré, diagramme de Bode d'un 1ᵉʳ ordre, quantum et SNR d'un CAN.)*
+
+<a id="sec-corriges-du-chapitre-5"></a>
+
+### Corrigés du chapitre 5
+
+**Exercice 5.1.**
+1) $f_c = \dfrac{1}{2\pi \times 1000 \times 100 \times 10^{-9}} \approx 1592$ Hz $\approx 1{,}6$ kHz.
+2) Le signal à 200 Hz est bien en dessous de $f_c$ : il passe presque sans atténuation. Le parasite à 50 kHz est très au-dessus de $f_c$ : il est fortement atténué par le filtre passe-bas.
+3) $f_c \propto 1/C$, donc pour diviser $f_c$ par 10 il faut multiplier $C$ par 10 : $C = 1$ µF.
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-6-optique"></a>
+
+## Chapitre 6 : Optique
+
+*(À compléter au fil de l'année : réfraction et angle limite, ouverture numérique d'une fibre, budget optique d'une liaison, énergie de photon selon la longueur d'onde.)*
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-7-preparation-a-l-epreuve"></a>
+
+## Chapitre 7 : Préparation à l'épreuve
+
+<a id="sec-7-1-exercice-type-bts-controle-d-une-liaison-de-mesure"></a>
+
+### 7.1 Exercice type BTS : contrôle d'une liaison de mesure
+
+L'exercice ci-dessous est construit dans l'esprit d'un sujet d'examen BTS (mise en situation professionnelle, plusieurs parties indépendantes, données réalistes). Il peut être démarré en classe et terminé en autonomie.
+
+*Contexte : dans le cadre de la maintenance d'une installation, un technicien doit caractériser un signal transmis sur une liaison filaire avant de le raccorder à une carte d'acquisition.*
+
+**Partie A : Mesures et incertitudes (8 points)**
+
+Le technicien relève 10 fois l'amplitude crête d'un signal avec un oscilloscope de résolution 0,02 V : 2,14 ; 2,16 ; 2,12 ; 2,15 ; 2,18 ; 2,13 ; 2,17 ; 2,14 ; 2,16 ; 2,15 (en V).
+
+1) Calculer $\bar{x}$ et $s$ (formules attendues, résultat à 3 chiffres significatifs).
+2) Calculer $u_A$.
+3) Calculer $u_B = \text{résolution}/\sqrt{12}$.
+4) Calculer $u$ composée puis $U$ ($k = 2$). Écrire le résultat final.
+
+**Partie B : Ondes (7 points)**
+
+Le signal a une fréquence de 1,2 kHz et se propage sur le câble à $2 \times 10^8$ m/s.
+
+1) Calculer $T$. 2) Calculer $\lambda$. 3) Le câble mesure 15 m. Exprimer sa longueur en fraction de $\lambda$ et commenter l'intérêt pour une liaison de mesure.
+
+**Partie C : Électricité (5 points)**
+
+En sortie de câble, le signal attaque une résistance d'adaptation $R = 50$ Ω, tension efficace mesurée 1,5 V.
+
+1) Calculer le courant efficace. 2) Calculer la puissance moyenne dissipée.
+
+<a id="sec-7-2-annales-officielles"></a>
+
+### 7.2 Annales officielles
 
 Deux annales officielles du domaine de la physique de l'épreuve E4 (BTS CIEL Option A – Informatique et Réseaux), à traiter en conditions d'épreuve (1h30) ou à découper par partie selon l'avancement du programme. Les corrigés officiels ne sont pas repris ici (à corriger en classe ou à partir du corrigé académique). Les figures reproduites ci-dessous sont des pages scannées des sujets originaux.
 
-### Annale — Session 2026 (sujet blanc), domaine de la physique (1h30, 4 parties indépendantes)
+<a id="sec-annale-session-2026-sujet-blanc-domaine-de-la-physique-1h30-"></a>
 
-**Contexte :** la société CISS propose un système de paiement sans contact (bracelets NFC) pour des festivals — *CISS Cashless Online*. Un stand de service autonome de distribution de boissons est ajouté au système ; il comporte un débitmètre à impulsions, un capteur de force (pont de Wheatstone) pour détecter les fûts vides, une communication NFC entre lecteur et bracelet, et des antennes Wi-Fi 5 GHz pour la supervision réseau.
+### Annale : Session 2026 (sujet blanc), domaine de la physique (1h30, 4 parties indépendantes)
+
+**Contexte :** la société CISS propose un système de paiement sans contact (bracelets NFC) pour des festivals : *CISS Cashless Online*. Un stand de service autonome de distribution de boissons est ajouté au système ; il comporte un débitmètre à impulsions, un capteur de force (pont de Wheatstone) pour détecter les fûts vides, une communication NFC entre lecteur et bracelet, et des antennes Wi-Fi 5 GHz pour la supervision réseau.
 
 #### Partie 3 – Validation du choix du débitmètre
 
@@ -443,7 +587,7 @@ Q49. Commenter la validité du débitmètre OF-10 ZZT d'après les deux critère
 
 #### Partie 4 – Détection des fûts de boisson vides
 
-Le capteur de force (4 jauges de contraintes en pont de Wheatstone) mesure la masse du fût. Une alerte doit se déclencher pour une masse de 6,8 kg (2 L restants), soit ΔU_alerte = 6,8 mV. Le montage : E = 5,0 V ; R₁ = R₃ = R₀ − ΔR ; R₂ = R₄ = R₀ + ΔR. La chaîne de mesure est : pont de Wheatstone → amplificateur ×130 → CAN (résolution 24 bits, U_PE = 5,00 V). La relation ΔU = 10⁻³ × Δm relie la variation de tension (V) à la variation de masse (kg).
+Le capteur de force (4 jauges de contraintes en pont de Wheatstone) mesure la masse du fût. Une alerte doit se déclencher pour une masse de 6,8 kg (2 L restants), soit ΔU_alerte = 6,8 mV. Le montage : E = 5,0 V ; R₁ = R₃ = R₀ − ΔR ; R₂ = R₄ = R₀ + ΔR. La chaîne de mesure est : pont de Wheatstone → amplificateur ×130 → CAN (résolution 24 bits, U_PE = 5,00 V). La relation $\Delta U = 10^{-3} \times \Delta m$ relie la variation de tension (V) à la variation de masse (kg).
 
 ![Figures 22 - capteur de force et pont de Wheatstone](figures_annales/2026/fig22_pont_wheatstone.png)
 ![Figures 23 - capteur de force et pont de Wheatstone](figures_annales/2026/fig23_pont_wheatstone.png)
@@ -481,7 +625,7 @@ Q61. Conclure sur la validité des caractéristiques de fréquence et de débit 
 
 Étude de la transmission Wi-Fi 5 GHz en espace libre entre les terminaux et deux points d'accès (AP1, AP2, Cisco Aironet 3702e), distance maximale mesurée : 65,0 m. Fréquences : f_Wi-Fi1 = 5,50 GHz (AP1), f_Wi-Fi2 = 5,54 GHz (AP2).
 
-Bilan de liaison : **Pr = Pe + Ge + Gr − FSL**, avec FSL (formule de Friis) : **FSL = −147,5 + 20×log(f) + 20×log(d)** (f en Hz, d en m).
+Bilan de liaison : $P_r = P_e + G_e + G_r - FSL$, avec FSL (formule de Friis) : $FSL = -147{,}5 + 20\log(f) + 20\log(d)$ (f en Hz, d en m).
 
 Q62. Montrer que les pertes en espace libre FSL, pour d = 65 m et f_Wi-Fi2 = 5,54 GHz, valent environ 84 dB.
 
@@ -514,7 +658,9 @@ Q66. Déterminer, en le(s) justifiant, le(s) choix d'antenne(s) pour AP1 puis po
 
 ---
 
-### Annale — Session 2025 (officielle), domaine de la physique (1h30, 3 parties indépendantes)
+<a id="sec-annale-session-2025-officielle-domaine-de-la-physique-1h30-3"></a>
+
+### Annale : Session 2025 (officielle), domaine de la physique (1h30, 3 parties indépendantes)
 
 **Contexte :** un système de gestion de parking utilise une boucle magnétique pour détecter les véhicules à l'entrée, un bus RS485 pour piloter des panneaux d'affichage de places, et des capteurs LoRaWAN pour localiser les places vides.
 
@@ -532,7 +678,7 @@ Q46. Calculer le périmètre U de la boucle.
 
 Q47. Déterminer le nombre de spires N de la boucle d'après le tableau ci-dessus.
 
-Formule d'estimation de l'inductance : **L (µH) ≈ U × (N×N + N)**, avec U le périmètre en m. Longueur du câble d'alimentation négligée. Plage optimale d'inductance : 80 à 300 µH.
+Formule d'estimation de l'inductance : $L\,(\mu\text{H}) \approx U \times (N^2 + N)$, avec U le périmètre en m. Longueur du câble d'alimentation négligée. Plage optimale d'inductance : 80 à 300 µH.
 
 Q48. Calculer la valeur L₀ de l'inductance à vide.
 
@@ -542,7 +688,7 @@ Q49. Indiquer, en justifiant, si la tension u(t) est périodique.
 Q50. Déterminer la période T₀ de u(t) en la faisant apparaître sur le document réponse.
 Q51. En déduire la fréquence f₀ de u(t).
 
-Fréquence de la sinusoïde : **f = 1/(2π√(LC))**, avec C = 70 µF (capacité interne du capteur). Un véhicule se présente : la fréquence générée vaut alors 1,2 kHz.
+Fréquence de la sinusoïde : $f = \dfrac{1}{2\pi\sqrt{LC}}$, avec C = 70 µF (capacité interne du capteur). Un véhicule se présente : la fréquence générée vaut alors 1,2 kHz.
 
 Q52. Calculer la valeur L₁ de l'inductance de la boucle au passage du véhicule.
 Q53. Vérifier si L₀ et L₁ sont dans la plage optimale (80-300 µH).
@@ -604,7 +750,7 @@ Un capteur de présence LW009-SM (LoRaWAN) est étudié pour équiper des places
 
 Q65. Compléter le tableau (fréquence d'émission en Europe, sensibilité de réception de la passerelle, puissance maximale d'émission du capteur = PIRE, gain de l'antenne de réception).
 
-Bilan de liaison en espace libre : **Pr = PIRE − FSL + Gr**, avec **FSL = 32,45 + 20×log(f) + 20×log(d)** (f en MHz, d en km).
+Bilan de liaison en espace libre : $P_r = PIRE - FSL + G_r$, avec $FSL = 32{,}45 + 20\log(f) + 20\log(d)$ (f en MHz, d en km).
 
 Q66. Montrer que les pertes en espace libre FSL, pour les places les plus éloignées du niveau −1 (d = 100 m), valent environ 71 dB.
 Q67. Calculer le niveau de puissance reçue par la passerelle, noté Pr, exprimé en dBm.
@@ -617,3 +763,14 @@ Le niveau −2 est séparé de la passerelle par une dalle de béton armé, att�
 
 Q69. Valider, en justifiant, si toutes les places du parking peuvent être équipées de ce capteur.
 
+<a id="sec-corriges-du-chapitre-7"></a>
+
+### Corrigés du chapitre 7
+
+**Exercice type BTS : Partie A.** $\bar{x} = 2{,}150$ V. $s \approx 0{,}0184$ V. $u_A = \dfrac{s}{\sqrt{10}} \approx 0{,}0058$ V. $u_B = \dfrac{0{,}02}{\sqrt{12}} \approx 0{,}0058$ V. $u = \sqrt{u_A^2 + u_B^2} \approx 0{,}0082$ V. $U = 2u \approx 0{,}016$ V $\approx 0{,}02$ V. Résultat : $U_{signal} = (2{,}15 \pm 0{,}02)$ V.
+
+**Exercice type BTS : Partie B.** $T = \dfrac{1}{1200} \approx 0{,}833$ ms. $\lambda = \dfrac{v}{f} = \dfrac{2 \times 10^8}{1200} \approx 1{,}67 \times 10^5$ m. $\dfrac{L}{\lambda} = \dfrac{15}{1{,}67 \times 10^5} \approx 9 \times 10^{-5}$ : le câble est très court devant $\lambda$, les effets de propagation sont négligeables ici.
+
+**Exercice type BTS : Partie C.** $I = \dfrac{U}{R} = \dfrac{1{,}5}{50} = 30$ mA. $P = U \times I = 45$ mW (ou $P = \dfrac{U^2}{R} = \dfrac{1{,}5^2}{50} = 45$ mW).
+
+**Annales 2025 et 2026.** Les corrigés officiels ne sont pas reproduits ici : correction en classe ou à partir du corrigé académique.

@@ -202,29 +202,35 @@ P = U × I = R × I² = U² / R (en watt, W)
 
 **Diviseur de tension et diviseur de courant**
 
-- Diviseur de tension (R1 en haut, R2 en bas, alimentation E) :
+- Diviseur de tension (R1 en haut, R2 en bas, alimentation U) :
 
 <a id="eq-2"></a>
 
-$$U(R_2) = E \times \dfrac{R_2}{R_1 + R_2} \tag{2}$$
+$$U(R_2) = U \times \dfrac{R_2}{R_1 + R_2} \tag{2}$$
 
 <p align="center">
-<img src="figures/cours/figure_05_pont_diviseur_de_tension.png" alt="Figure 5 : Pont diviseur de tension"/>
+<img src="figures/cours/figure_05_pont_diviseur_de_tension.png" alt="Figure 5 a : Pont diviseur de tension"/>
 </p>
 
-<p align="center"><em>Figure 5 : Pont diviseur de tension.</em></p>
+<p align="center"><em>Figure 5 a : Pont diviseur de tension.</em></p>
 
 > **Démonstration.** R₁ et R₂ sont en série : elles sont traversées par le **même courant** I.
 >
-> D'après la loi des mailles, la tension d'alimentation se répartit entre les deux résistances : $E = U(R_1) + U(R_2)$.
+> D'après la loi des mailles, la tension d'alimentation se répartit entre les deux résistances : $U = U(R_1) + U(R_2)$.
 >
-> D'après la loi d'Ohm appliquée à chacune : $U(R_1) = R_1 I$ et $U(R_2) = R_2 I$, d'où $E = (R_1 + R_2)\,I$, soit $I = \dfrac{E}{R_1 + R_2}$.
+> D'après la loi d'Ohm appliquée à chacune : $U(R_1) = R_1 I$ et $U(R_2) = R_2 I$, d'où $U = (R_1 + R_2)\,I$, soit $I = \dfrac{U}{R_1 + R_2}$.
 >
-> En réinjectant dans $U(R_2) = R_2 I$ : $U(R_2) = E \times \dfrac{R_2}{R_1 + R_2}$. ∎
+> En réinjectant dans $U(R_2) = R_2 I$ : $U(R_2) = U \times \dfrac{R_2}{R_1 + R_2}$. ∎
 >
 > *Remarque : la tension se répartit proportionnellement aux résistances, la plus grande résistance recevant la plus grande part de la tension.*
 
 - Diviseur de courant (R1 et R2 en parallèle, courant total I) : $I(R_2) = I \times \dfrac{R_1}{R_1 + R_2}$ (le courant se répartit à l'inverse des résistances : plus une branche est résistante, moins elle reçoit de courant)
+
+<p align="center">
+<img src="figures/cours/figure_05_pont_diviseur_de_courant.png" alt="Figure 5 b: Pont diviseur de courant"/>
+</p>
+
+<p align="center"><em>Figure 5 b : Pont diviseur de courant.</em></p>
 
 > **Démonstration.** R₁ et R₂ sont en parallèle : elles sont soumises à la **même tension** U.
 >
