@@ -1,7 +1,41 @@
 # BTS CIEL 2 : Physique
 ## Recueil de TP
 
-Document vivant, à compléter au fil de l'année. Chaque partie correspond à un grand thème du programme. Le Partie 1 est déjà renseigné (issu de la séance de rentrée : 4 ateliers tournants + alternative informatique en cas de manque de matériel).
+## Table des matières
+
+- [0. Aide-mémoire : unités et équivalences](#sec-0-aide-memoire-unites-et-equivalences)
+- [Séance de rentrée : organisation du TP tournant](#sec-seance-de-rentree-organisation-du-tp-tournant)
+- [Chapitre 1 : Électricité et optoélectronique](#sec-chapitre-1-electricite-et-optoelectronique)
+    - [1.1 Atelier 2 : Bases de l'électricité (55 min)](#sec-1-1-atelier-2-bases-de-l-electricite-55-min)
+    - [1.2 Atelier 4, option A : caractéristique d'une diode (55 min)](#sec-1-2-atelier-4-option-a-caracteristique-d-une-diode-55-min)
+- [Chapitre 2 : Mesures et incertitudes](#sec-chapitre-2-mesures-et-incertitudes)
+    - [2.1 Atelier 1 : Mesures et incertitudes (55 min)](#sec-2-1-atelier-1-mesures-et-incertitudes-55-min)
+- [Chapitre 3 : Ondes et propagation](#sec-chapitre-3-ondes-et-propagation)
+    - [3.1 Atelier 3 : Ondes : GBF et oscilloscope (55 min)](#sec-3-1-atelier-3-ondes-gbf-et-oscilloscope-55-min)
+- [Chapitre 4 : Systèmes bouclés et asservissement](#sec-chapitre-4-systemes-boucles-et-asservissement)
+    - [4.1 Atelier 4, option B : boucle ouverte / boucle fermée (55 min)](#sec-4-1-atelier-4-option-b-boucle-ouverte-boucle-fermee-55-min)
+- [Chapitre 5 : Traitement du signal](#sec-chapitre-5-traitement-du-signal)
+    - [5.1 TP : Mesure de gain et d'atténuation d'un quadripôle (2h, sur une ou deux séances)](#sec-5-1-tp-mesure-de-gain-et-d-attenuation-d-un-quadripole-2h-su)
+- [Chapitre 6 : Optique](#sec-chapitre-6-optique)
+- [Chapitre 7 : Préparation à l'épreuve](#sec-chapitre-7-preparation-a-l-epreuve)
+- [Annexe A : alternatives numériques (TP simulés)](#sec-annexe-a-alternatives-numeriques-tp-simules)
+    - [Alternative D, option A : tracer la caractéristique d'une diode](#sec-option-a-tracer-la-caracteristique-d-une-diode)
+    - [Alternative D, option B : boucle ouverte contre boucle fermée](#sec-option-b-boucle-ouverte-contre-boucle-fermee)
+- [TP : Mémoire de 64 bits](#sec-tp-memoire-64-bits)
+    - [Projet de TP : Construire une mémoire de 64 bits](#sec-mem-projet-de-tp-construire-une-memoire-de-64-bits)
+    - [Sommaire](#sec-mem-sommaire)
+    - [1. Présentation du projet](#sec-mem-1-presentation-du-projet)
+    - [2. Matériel général](#sec-mem-2-materiel-general)
+    - [3. TP 1 : Un bit physique](#sec-mem-3-tp-1-un-bit-physique)
+    - [4. TP 2 : Un octet électronique](#sec-mem-4-tp-2-un-octet-electronique)
+    - [5. TP 3 : Une mémoire collective de 64 bits](#sec-mem-5-tp-3-une-memoire-collective-de-64-bits)
+    - [6. Évaluation](#sec-mem-6-evaluation)
+    - [7. Annexes techniques](#sec-mem-7-annexes-techniques)
+    - [Conclusion du projet](#sec-mem-conclusion-du-projet)
+
+---
+
+<a id="sec-0-aide-memoire-unites-et-equivalences"></a>
 
 ## 0. Aide-mémoire : unités et équivalences
 
@@ -55,7 +89,9 @@ Document vivant, à compléter au fil de l'année. Chaque partie correspond à u
 
 ---
 
-## Partie 1 : Consolidation des fondamentaux
+<a id="sec-seance-de-rentree-organisation-du-tp-tournant"></a>
+
+## Séance de rentrée : organisation du TP tournant
 
 **Principe :** la classe est répartie en sous-groupes qui tournent sur des ateliers indépendants d'1h maximum. 3 ateliers "tronc commun" obligatoires ; l'atelier bonus (4ᵉ) est réservé aux groupes identifiés "avancés" lors du diagnostic, ou vient en rotation si le temps le permet.
 
@@ -88,41 +124,33 @@ Document vivant, à compléter au fil de l'année. Chaque partie correspond à u
 | Calculatrice scientifique | 1 par étudiant | Tous |
 | Feuilles de compte-rendu / tableaux de mesures pré-imprimés | 1 par étudiant | Tous |
 
-### Atelier 1 : Mesures et incertitudes (55 min)
+> **Où trouver chaque atelier dans ce recueil ?** Les ateliers sont rangés dans le chapitre correspondant à leur thème, comme dans le recueil de cours :
+>
+> | Atelier | Thème | Chapitre |
+> |---|---|---|
+> | Atelier 1 | Mesures et incertitudes | Chapitre 2 |
+> | Atelier 2 | Bases de l'électricité | Chapitre 1 |
+> | Atelier 3 | Ondes (GBF + oscilloscope) | Chapitre 3 |
+> | Atelier 4, option A | Semi-conducteurs (diode) | Chapitre 1 |
+> | Atelier 4, option B | Boucle ouverte / boucle fermée | Chapitre 4 |
+>
+> Les versions simulées de tous les ateliers sont regroupées en **Annexe A**.
 
-- **Objectifs :** réaliser une série de mesures répétées, calculer une incertitude-type de type A, comparer à la valeur nominale.
-- **Matériel par poste :** 1 alimentation stabilisée, 2 multimètres, 3 résistances de valeurs différentes (avec tolérance affichée sur le corps de la résistance), cordons de connexion, feuille de mesures.
-- **Sécurité :** alimentation réglée à une tension faible (≤ 6 V), pas de risque particulier ; vérifier le calibre du multimètre avant de mesurer (ohmmètre hors tension du circuit).
+---
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTQ4LjAiIHk9IjQxLjAiIHdpZHRoPSI0NCIgaGVpZ2h0PSIxOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMzUuMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5SPC90ZXh0PjxsaW5lIHgxPSIyNzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjI3MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSIzNiIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFsaW08L3RleHQ+PGxpbmUgeDE9IjE0MCIgeTE9IjUwIiB4Mj0iMTQwIiB5Mj0iMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyMDAiIHkxPSI1MCIgeDI9IjIwMCIgeTI9IjIwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMTQwIiB5MT0iMjAiIHgyPSIxNTUiIHkyPSIyMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjE4NSIgeTE9IjIwIiB4Mj0iMjAwIiB5Mj0iMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjE3MCIgY3k9IjIwIiByPSIxNiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMjUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VjwvdGV4dD48dGV4dCB4PSIxNzAiIHk9IjIwMCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NZXN1cmUgZGUgbGEgdGVuc2lvbiBhdXggYm9ybmVzIGRlIFIgKEF0ZWxpZXIgMSk8L3RleHQ+PC9zdmc+" width="320" alt="schema atelier1_mesure_tension"/>
+<div style="page-break-after: always;"></div>
 
-**Déroulé détaillé**
+&nbsp;
 
-1. **(5 min) Consignes et lecture du code couleur.** Chaque poste reçoit une résistance non identifiée par écrit.
-   - ❓ *Q1. Lisez le code couleur de votre résistance : quelle est sa valeur nominale et sa tolérance annoncée (ex. 220 Ω ± 5 %) ?*
-2. **(10 min) Mesure directe à l'ohmmètre.** Mesurer une seule fois la résistance à l'ohmmètre, hors circuit.
-   - Relevé attendu : valeur affichée = ______ Ω.
-   - ❓ *Q2. Cette valeur mesurée est-elle comprise dans l'intervalle [valeur nominale − tolérance ; valeur nominale + tolérance] ? Montrez le calcul de l'intervalle.*
-3. **(15 min) Série de 10 mesures répétées d'une tension.** Monter la résistance sous l'alimentation stabilisée (tension fixée, ex. 5,00 V affichés). Mesurer la tension à ses bornes au voltmètre, **10 fois de suite**, en débranchant/rebranchant légèrement les pointes de touche entre chaque mesure (pour retrouver la variabilité réelle d'une manipulation).
-   - Tableau à compléter :
+<div style="page-break-after: always;"></div>
 
-     | Mesure n° | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-     |---|---|---|---|---|---|---|---|---|---|---|
-     | U (V) | | | | | | | | | | |
+<a id="sec-chapitre-1-electricite-et-optoelectronique"></a>
 
-   - ❓ *Q3. Les 10 valeurs sont-elles rigoureusement identiques ? Proposez au moins deux causes possibles de cette dispersion (contact, résolution de l'appareil, bruit, légère variation de l'alimentation…).*
-4. **(15 min) Traitement statistique.** À l'aide de la calculatrice (mode statistique) ou à la main :
-   - Calculer x̄ (moyenne) et s (écart-type de l'échantillon).
-   - ❓ *Q4. Calculez u_A = s/√n. Notez la valeur.*
-   - ❓ *Q5. À partir de la résolution du voltmètre (relevée sur l'appareil), calculez u_B = résolution/√12.*
-   - ❓ *Q6. Calculez l'incertitude-type composée u = √(u_A² + u_B²), puis l'incertitude élargie U = 2u. Écrivez le résultat final sous la forme U_mesurée = x̄ ± U (unité, bon nombre de chiffres significatifs).*
-5. **(10 min) Conclusion et question de synthèse.**
-   - ❓ *Q7. Le résultat de mesure est-il compatible avec la tension affichée par l'alimentation ? Justifiez par le calcul (comparaison de l'écart à U).*
-   - ❓ *Q8. Si vous aviez réalisé 40 mesures au lieu de 10 (même dispersion s), quel serait l'effet sur u_A ? Vérifiez par le calcul (u_A ∝ 1/√n).*
-- **Livrable :** tableau de mesures rempli + réponses aux questions Q1 à Q8 + résultat final encadré.
-- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (§ 5bis, "Alternative A").
+## Chapitre 1 : Électricité et optoélectronique
 
-### Atelier 2 : Bases de l'électricité (55 min)
+<a id="sec-1-1-atelier-2-bases-de-l-electricite-55-min"></a>
+
+### 1.1 Atelier 2 : Bases de l'électricité (55 min)
 
 - **Objectifs :** vérifier expérimentalement la loi d'Ohm et les lois de Kirchhoff, mesurer une puissance.
 - **Matériel par poste :** 1 plaque d'essai, 3-4 résistances (montage série puis parallèle), 2 multimètres, 1 alimentation stabilisée, cordons.
@@ -131,7 +159,7 @@ Document vivant, à compléter au fil de l'année. Chaque partie correspond à u
 **Déroulé détaillé**
 
 1. **(5 min) Consignes et prévision théorique.** Avant tout branchement, avec E = 9 V, R1 = 220 Ω, R2 = 470 Ω donnés en série :
-   - ❓ *Q1. Calculez la valeur théorique de R_éq, du courant I attendu, et des tensions U(R1) et U(R2) attendues.*
+   - ❓ *Q1. Calculez la valeur théorique de $R_{éq}$, du courant I attendu, et des tensions U(R1) et U(R2) attendues.*
 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIxNTAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iOTMuMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTE1IiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIxPC90ZXh0PjxsaW5lIHgxPSIxNTAiIHkxPSI1MCIgeDI9IjIzMCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48cmVjdCB4PSIxNjguMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTkwIiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIyPC90ZXh0PjxsaW5lIHgxPSIyMzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSIxNzAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjcwIiB5MT0iMTcwIiB4Mj0iNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNzAiIGN5PSIxMTAiIHI9IjIwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNzAiIHk9IjEwNy4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPis8L3RleHQ+PHRleHQgeD0iNzAiIHk9IjEyNS4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPi08L3RleHQ+PHRleHQgeD0iMzYiIHk9IjExMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FPC90ZXh0PjxjaXJjbGUgY3g9IjE1MCIgY3k9IjUwIiByPSIzIiBmaWxsPSJibGFjayIvPjx0ZXh0IHg9IjE1MCIgeT0iMzgiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+cHQuIG1lc3VyZSBJPC90ZXh0Pjx0ZXh0IHg9IjE3MCIgeT0iMjAwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk1vbnRhZ2Ugc8OpcmllIChBdGVsaWVyIDJhKTwvdGV4dD48L3N2Zz4=" width="320" alt="schema atelier2a_serie"/>
 
 2. **(20 min) Montage série.** Réaliser le montage ci-dessus (le reproduire sur le compte-rendu avant de monter). Mesurer :
@@ -159,12 +187,105 @@ Document vivant, à compléter au fil de l'année. Chaque partie correspond à u
    - ❓ *Q5. Calculez I(R1) + I(R2) et comparez à I(total) mesuré. La loi des nœuds est-elle vérifiée ?*
    - ❓ *Q6. La tension est-elle bien identique aux bornes de R1 et de R2 ? Est-ce cohérent avec le montage parallèle ?*
 4. **(10 min) Puissance et bilan.**
-   - ❓ *Q7. Calculez la puissance dissipée dans chaque résistance (P = U×I mesurés) puis la puissance totale débitée par l'alimentation (P = U(alim) × I(total)). Comparez les deux.*
-   - ❓ *Q8. Entre le montage série et le montage parallèle (mêmes R1, R2, même E), lequel consomme le plus de puissance totale ? Expliquez pourquoi en une phrase à partir de R_éq.*
+   - ❓ *Q7. Calculez la puissance dissipée dans chaque résistance ($P = U \times I$ mesurés) puis la puissance totale débitée par l'alimentation ($P = U_{alim} \times I_{total}$). Comparez les deux.*
+   - ❓ *Q8. Entre le montage série et le montage parallèle (mêmes R1, R2, même E), lequel consomme le plus de puissance totale ? Expliquez pourquoi en une phrase à partir de $R_{éq}$.*
 - **Livrable :** schémas des deux montages, tableaux de mesures remplis, réponses Q1 à Q8.
-- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (§ 5bis, "Alternative B").
+- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (Annexe A, Alternative B).
 
-### Atelier 3 : Ondes : GBF et oscilloscope (55 min)
+<a id="sec-1-2-atelier-4-option-a-caracteristique-d-une-diode-55-min"></a>
+
+### 1.2 Atelier 4, option A : caractéristique d'une diode (55 min)
+
+> **⚠ Cette année, cet atelier se fait sous Falstad** (matériel indisponible) : la version détaillée pas à pas, à suivre en séance, se trouve en **Annexe A, Alternative D, option A**. Le déroulé ci-dessous décrit la version sur matériel réel, donnée pour référence.
+
+**Option A : Caractéristique d'une diode**
+
+- **Matériel :** 1 alimentation, 1 diode silicium, 1 résistance de protection (~1 kΩ), 2 multimètres, plaque d'essai.
+- **Sécurité :** ne jamais dépasser le courant maximal de la diode (limité naturellement par la résistance de protection) ; ne pas alimenter directement la diode sans résistance en série.
+
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIxNTAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iOTMuMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTE1IiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIgcHJvdGVjdGlvbjwvdGV4dD48bGluZSB4MT0iMTUwIiB5MT0iNTAiIHgyPSIyMzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBvbHlnb24gcG9pbnRzPSIxOTUsNDAgMTk1LDYwIDIxOCw1MCIgZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyMTgiIHkxPSIzOCIgeDI9IjIxOCIgeTI9IjYyIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyMTAiIHk9IjI4IiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkQ8L3RleHQ+PGxpbmUgeDE9IjIzMCIgeTE9IjUwIiB4Mj0iMjcwIiB5Mj0iNTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjI3MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSIzNiIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFsaW08L3RleHQ+PHRleHQgeD0iMTUwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RGlvZGUgKyByw6lzaXN0YW5jZSBkZSBwcm90ZWN0aW9uIChBdGVsaWVyIDQsIG9wdGlvbiBBKTwvdGV4dD48L3N2Zz4=" width="320" alt="schema atelier4a_diode"/>
+
+**Déroulé détaillé**
+
+1. **(5 min) Montage et consignes.** Monter la diode en série avec la résistance de protection sous l'alimentation réglable.
+   - ❓ *Q1. Pourquoi place-t-on une résistance de protection en série avec la diode ? Que risquerait-il de se passer sans elle ?*
+2. **(10 min) Sens bloqué.** Inverser la diode (sens bloqué), faire varier la tension d'alimentation de 0 à sa valeur maximale par paliers, mesurer le courant à chaque palier.
+   - ❓ *Q2. Le courant mesuré en sens bloqué est-il rigoureusement nul ? Donnez son ordre de grandeur et comparez-le au courant observé en sens passant (étape suivante).*
+3. **(25 min) Sens passant : relevé point par point.** Remettre la diode dans le bon sens. Faire varier la tension d'alimentation par petits paliers, en resserrant les points autour du seuil attendu (0,5 V ; 0,55 V ; 0,6 V ; 0,63 V ; 0,65 V ; 0,68 V ; 0,7 V ; 0,72 V ; 0,75 V), et mesurer à chaque palier la tension $V_{diode}$ et le courant I.
+
+     | $V_{diode}$ (V) | 0,5 | 0,55 | 0,6 | 0,63 | 0,65 | 0,68 | 0,7 | 0,72 | 0,75 |
+     |---|---|---|---|---|---|---|---|---|---|
+     | I (mA) | | | | | | | | | |
+
+   - Tracer le graphe $I = f(V_{diode})$ sur papier millimétré ou tableur.
+   - ❓ *Q3. À partir de quelle tension le courant commence-t-il à croître significativement (au-delà du bruit de mesure) ? Cette valeur est-elle cohérente avec les 0,6-0,7 V annoncés en cours pour le silicium ?*
+   - ❓ *Q4. La progression du courant est-elle linéaire, ou de plus en plus rapide ? Que cela indique-t-il sur la nature de la caractéristique $I(V)$ d'une diode ?*
+4. **(10 min) Bilan.**
+   - ❓ *Q5. Citer une application où la diode est utilisée dans une carte électronique CIEL (redressement, protection, indicateur...).*
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-2-mesures-et-incertitudes"></a>
+
+## Chapitre 2 : Mesures et incertitudes
+
+<a id="sec-2-1-atelier-1-mesures-et-incertitudes-55-min"></a>
+
+### 2.1 Atelier 1 : Mesures et incertitudes (55 min)
+
+- **Objectifs :** réaliser une série de mesures répétées, calculer une incertitude-type de type A, comparer à la valeur nominale.
+- **Matériel par poste :** 1 alimentation stabilisée, 2 multimètres, 3 résistances de valeurs différentes (avec tolérance affichée sur le corps de la résistance), cordons de connexion, feuille de mesures.
+- **Sécurité :** alimentation réglée à une tension faible (≤ 6 V), pas de risque particulier ; vérifier le calibre du multimètre avant de mesurer (ohmmètre hors tension du circuit).
+
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTQ4LjAiIHk9IjQxLjAiIHdpZHRoPSI0NCIgaGVpZ2h0PSIxOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMzUuMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5SPC90ZXh0PjxsaW5lIHgxPSIyNzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjI3MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSIzNiIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFsaW08L3RleHQ+PGxpbmUgeDE9IjE0MCIgeTE9IjUwIiB4Mj0iMTQwIiB5Mj0iMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyMDAiIHkxPSI1MCIgeDI9IjIwMCIgeTI9IjIwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMTQwIiB5MT0iMjAiIHgyPSIxNTUiIHkyPSIyMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjE4NSIgeTE9IjIwIiB4Mj0iMjAwIiB5Mj0iMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjE3MCIgY3k9IjIwIiByPSIxNiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMjUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VjwvdGV4dD48dGV4dCB4PSIxNzAiIHk9IjIwMCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NZXN1cmUgZGUgbGEgdGVuc2lvbiBhdXggYm9ybmVzIGRlIFIgKEF0ZWxpZXIgMSk8L3RleHQ+PC9zdmc+" width="320" alt="schema atelier1_mesure_tension"/>
+
+**Déroulé détaillé**
+
+1. **(5 min) Consignes et lecture du code couleur.** Chaque poste reçoit une résistance non identifiée par écrit.
+   - ❓ *Q1. Lisez le code couleur de votre résistance : quelle est sa valeur nominale et sa tolérance annoncée (ex. 220 Ω ± 5 %) ?*
+2. **(10 min) Mesure directe à l'ohmmètre.** Mesurer une seule fois la résistance à l'ohmmètre, hors circuit.
+   - Relevé attendu : valeur affichée = ______ Ω.
+   - ❓ *Q2. Cette valeur mesurée est-elle comprise dans l'intervalle [valeur nominale − tolérance ; valeur nominale + tolérance] ? Montrez le calcul de l'intervalle.*
+3. **(15 min) Série de 10 mesures répétées d'une tension.** Monter la résistance sous l'alimentation stabilisée (tension fixée, ex. 5,00 V affichés). Mesurer la tension à ses bornes au voltmètre, **10 fois de suite**, en débranchant/rebranchant légèrement les pointes de touche entre chaque mesure (pour retrouver la variabilité réelle d'une manipulation).
+   - Tableau à compléter :
+
+     | Mesure n° | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+     |---|---|---|---|---|---|---|---|---|---|---|
+     | U (V) | | | | | | | | | | |
+
+   - ❓ *Q3. Les 10 valeurs sont-elles rigoureusement identiques ? Proposez au moins deux causes possibles de cette dispersion (contact, résolution de l'appareil, bruit, légère variation de l'alimentation…).*
+4. **(15 min) Traitement statistique.** À l'aide de la calculatrice (mode statistique) ou à la main :
+   - Calculer x̄ (moyenne) et s (écart-type de l'échantillon).
+   - ❓ *Q4. Calculez $u_A = s/\sqrt{n}$. Notez la valeur.*
+   - ❓ *Q5. À partir de la résolution du voltmètre (relevée sur l'appareil), calculez $u_B = \text{résolution}/\sqrt{12}$.*
+   - ❓ *Q6. Calculez l'incertitude-type composée $u = \sqrt{u_A^2 + u_B^2}$, puis l'incertitude élargie $U = 2u$. Écrivez le résultat final sous la forme $U_{mesurée} = \bar{x} \pm U$ (unité, bon nombre de chiffres significatifs).*
+5. **(10 min) Conclusion et question de synthèse.**
+   - ❓ *Q7. Le résultat de mesure est-il compatible avec la tension affichée par l'alimentation ? Justifiez par le calcul (comparaison de l'écart à U).*
+   - ❓ *Q8. Si vous aviez réalisé 40 mesures au lieu de 10 (même dispersion s), quel serait l'effet sur u_A ? Vérifiez par le calcul ($u_A \propto 1/\sqrt{n}$).*
+- **Livrable :** tableau de mesures rempli + réponses aux questions Q1 à Q8 + résultat final encadré.
+- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (Annexe A, Alternative A).
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-3-ondes-et-propagation"></a>
+
+## Chapitre 3 : Ondes et propagation
+
+<a id="sec-3-1-atelier-3-ondes-gbf-et-oscilloscope-55-min"></a>
+
+### 3.1 Atelier 3 : Ondes : GBF et oscilloscope (55 min)
 
 - **Objectifs :** prise en main du GBF et de l'oscilloscope, mesure de période/fréquence/amplitude, observation d'un déphasage.
 - **Matériel par poste :** 1 GBF, 1 oscilloscope 2 voies, 1 résistance + 1 condensateur (circuit RC), cordons BNC et sondes.
@@ -187,46 +308,37 @@ Document vivant, à compléter au fil de l'année. Chaque partie correspond à u
    - ❓ *Q3. Faites de même pour l'amplitude : comparez l'amplitude mesurée sur l'écran à celle affichée par le GBF.*
 3. **(20 min) Circuit RC et déphasage.** Monter en série R et C ; visualiser en voie 1 la tension d'entrée (aux bornes du générateur) et en voie 2 la tension aux bornes de C. Répéter la mesure pour trois fréquences différentes (ex. 100 Hz, 1 kHz, 10 kHz), amplitude d'entrée constante.
 
-     | Fréquence | Décalage temporel Δt entre les 2 courbes | Déphasage φ = 360×Δt/T (°) | Amplitude de U_C (V) |
+     | Fréquence | Décalage temporel Δt entre les 2 courbes | Déphasage $\varphi = 360 \times \Delta t / T$ (°) | Amplitude de $U_C$ (V) |
      |---|---|---|---|
      | 100 Hz | | | |
      | 1 kHz | | | |
      | 10 kHz | | | |
 
-   - ❓ *Q4. Comment évolue l'amplitude de U_C quand la fréquence augmente ? Comment évolue le déphasage ?*
+   - ❓ *Q4. Comment évolue l'amplitude de $U_C$ quand la fréquence augmente ? Comment évolue le déphasage ?*
    - ❓ *Q5. Ce comportement correspond à un filtre passe-bas ou passe-haut ? Justifiez à partir de vos observations (et pas seulement du cours).*
 4. **(15 min) Lien avec la fréquence de coupure.**
-   - ❓ *Q6. À partir des valeurs de R et C de votre montage, calculez la fréquence de coupure théorique f_c = 1/(2πRC).*
+   - ❓ *Q6. À partir des valeurs de R et C de votre montage, calculez la fréquence de coupure théorique $f_c = \dfrac{1}{2\pi RC}$.*
    - ❓ *Q7. Cette fréquence se situe-t-elle entre vos trois points de mesure ? Le comportement observé en Q4/Q5 change-t-il de nature autour de f_c ?*
 - **Livrable :** tableaux de mesures remplis, réponses Q1 à Q7, captures ou schémas d'écran annotés si possible.
-- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (§ 5bis, "Alternative C") : c'est d'ailleurs l'atelier qui se simule le mieux, le simulateur intègre GBF et oscillo virtuels.
+- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (Annexe A, Alternative C) : c'est d'ailleurs l'atelier qui se simule le mieux, le simulateur intègre GBF et oscillo virtuels.
 
-### Atelier 4 (bonus) : Semi-conducteurs ou systèmes bouclés (55 min)
+---
 
-**Option A : Caractéristique d'une diode**
+<div style="page-break-after: always;"></div>
 
-- **Matériel :** 1 alimentation, 1 diode silicium, 1 résistance de protection (~1 kΩ), 2 multimètres, plaque d'essai.
-- **Sécurité :** ne jamais dépasser le courant maximal de la diode (limité naturellement par la résistance de protection) ; ne pas alimenter directement la diode sans résistance en série.
+&nbsp;
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIxNTAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iOTMuMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTE1IiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIgcHJvdGVjdGlvbjwvdGV4dD48bGluZSB4MT0iMTUwIiB5MT0iNTAiIHgyPSIyMzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBvbHlnb24gcG9pbnRzPSIxOTUsNDAgMTk1LDYwIDIxOCw1MCIgZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyMTgiIHkxPSIzOCIgeDI9IjIxOCIgeTI9IjYyIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyMTAiIHk9IjI4IiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkQ8L3RleHQ+PGxpbmUgeDE9IjIzMCIgeTE9IjUwIiB4Mj0iMjcwIiB5Mj0iNTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjI3MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSIzNiIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFsaW08L3RleHQ+PHRleHQgeD0iMTUwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RGlvZGUgKyByw6lzaXN0YW5jZSBkZSBwcm90ZWN0aW9uIChBdGVsaWVyIDQsIG9wdGlvbiBBKTwvdGV4dD48L3N2Zz4=" width="320" alt="schema atelier4a_diode"/>
+<div style="page-break-after: always;"></div>
 
-**Déroulé détaillé**
+<a id="sec-chapitre-4-systemes-boucles-et-asservissement"></a>
 
-1. **(5 min) Montage et consignes.** Monter la diode en série avec la résistance de protection sous l'alimentation réglable.
-   - ❓ *Q1. Pourquoi place-t-on une résistance de protection en série avec la diode ? Que risquerait-il de se passer sans elle ?*
-2. **(10 min) Sens bloqué.** Inverser la diode (sens bloqué), faire varier la tension d'alimentation de 0 à sa valeur maximale par paliers, mesurer le courant à chaque palier.
-   - ❓ *Q2. Le courant mesuré en sens bloqué est-il rigoureusement nul ? Donnez son ordre de grandeur et comparez-le au courant observé en sens passant (étape suivante).*
-3. **(25 min) Sens passant : relevé point par point.** Remettre la diode dans le bon sens. Faire varier la tension d'alimentation par petits paliers, en resserrant les points autour du seuil attendu (0,5 V ; 0,55 V ; 0,6 V ; 0,63 V ; 0,65 V ; 0,68 V ; 0,7 V ; 0,72 V ; 0,75 V), et mesurer à chaque palier la tension V_diode et le courant I.
+## Chapitre 4 : Systèmes bouclés et asservissement
 
-     | V_diode (V) | 0,5 | 0,55 | 0,6 | 0,63 | 0,65 | 0,68 | 0,7 | 0,72 | 0,75 |
-     |---|---|---|---|---|---|---|---|---|---|
-     | I (mA) | | | | | | | | | |
+<a id="sec-4-1-atelier-4-option-b-boucle-ouverte-boucle-fermee-55-min"></a>
 
-   - Tracer le graphe I = f(V_diode) sur papier millimétré ou tableur.
-   - ❓ *Q3. À partir de quelle tension le courant commence-t-il à croître significativement (au-delà du bruit de mesure) ? Cette valeur est-elle cohérente avec les 0,6-0,7 V annoncés en cours pour le silicium ?*
-   - ❓ *Q4. La progression du courant est-elle linéaire, ou de plus en plus rapide ? Que cela indique-t-il sur la nature de la caractéristique I(V) d'une diode ?*
-4. **(10 min) Bilan.**
-   - ❓ *Q5. Citer une application où la diode est utilisée dans une carte électronique CIEL (redressement, protection, indicateur...).*
+### 4.1 Atelier 4, option B : boucle ouverte / boucle fermée (55 min)
+
+> **⚠ Cette année, cet atelier se fait sous Falstad** (matériel indisponible) : la version détaillée pas à pas, à suivre en séance, se trouve en **Annexe A, Alternative D, option B**. Le déroulé ci-dessous décrit la version sur matériel réel, donnée pour référence.
 
 **Option B : Boucle ouverte / boucle fermée**
 
@@ -245,71 +357,21 @@ Document vivant, à compléter au fil de l'année. Chaque partie correspond à u
    - ❓ *Q4. Comparez l'écart final en boucle ouverte (Q1) et en boucle fermée (Q2). Concluez sur l'intérêt d'un asservissement face à une perturbation.*
    - ❓ *Q5. Citer un exemple de système bouclé rencontré dans la vie courante ou dans un équipement CIEL (régulation, servomoteur, alimentation régulée…).*
 
-- **Livrable (les deux options) :** tableaux/graphe remplis, réponses aux questions.
-- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (§ 5bis, "Alternative D").
+- **Livrable :** tableaux/graphe remplis, réponses aux questions.
 
 ---
 
-### Alternative : TP informatique / simulation (en cas de manque de matériel)
+<div style="page-break-after: always;"></div>
 
-Si le matériel de laboratoire ne permet pas d'équiper tous les postes en parallèle (cas fréquent), chaque atelier a un équivalent réalisable sur ordinateur, en salle informatique ou même sur PC portable/tablette personnelle, avec des outils **gratuits et fonctionnant dans le navigateur (aucune installation requise)**. On peut aussi mixer : 1 ou 2 postes en matériel réel + les autres sous-groupes en version simulée, en tournant.
+&nbsp;
 
-**Outils utilisés (tous gratuits, navigateur uniquement)**
+<div style="page-break-after: always;"></div>
 
-| Outil | Usage | Accès |
-|---|---|---|
-| Falstad Circuit Simulator | Circuits élec + oscilloscope + GBF virtuels, diodes | falstad.com/circuit |
-| Tinkercad Circuits | Montage sur breadboard virtuel + multimètre | tinkercad.com/circuits (compte gratuit) |
-| LibreOffice Calc / Excel | Traitement statistique des incertitudes | déjà installé en général |
-| PhET Interactive Simulations (Univ. Colorado) | Ondes, circuits, notions qualitatives | phet.colorado.edu |
+<a id="sec-chapitre-5-traitement-du-signal"></a>
 
-### Alternative A : Mesures et incertitudes (sur tableur)
+## Chapitre 5 : Traitement du signal
 
-- **Principe :** au lieu de mesurer physiquement, les étudiants exploitent une série de mesures déjà fournie (préparée par le professeur, réaliste avec dispersion) ou générée aléatoirement par une formule tableur, pour se concentrer sur le traitement statistique : qui est la vraie compétence visée par cet atelier.
-- **Déroulé :** 5 min prise en main du fichier tableur fourni → 15 min l'étudiant génère ou récupère 10 valeurs de mesure (ex. avec une formule `=NORM.INV(ALEA();220;1,5)` pour simuler des mesures d'une résistance de 220 Ω avec 1,5 Ω d'écart-type réaliste) → 20 min calcul de x̄, s, u_A, u_B, u, U avec les formules du tableur (`MOYENNE`, `ECARTYPE.STANDARD`) → 15 min écriture du résultat final et test de compatibilité avec la valeur nominale.
-- En modifiant l'écart-type simulé ou le nombre de mesures n dans la formule, on observe immédiatement l'effet de n sur u_A (u_A diminue en 1/√n).
-- **Livrable :** fichier tableur avec formules visibles + résultat final rédigé.
-
-### Alternative B : Bases de l'électricité (Falstad ou Tinkercad Circuits)
-
-- **Principe :** construire virtuellement les mêmes montages série/parallèle, avec multimètres virtuels (voltmètre/ampèremètre) à placer sur le circuit.
-- **Déroulé :** 10 min prise en main de l'interface → 20 min montage série (mesure U et I à différents points, vérification loi des mailles) → 20 min montage parallèle (loi des nœuds) → 5 min calcul de puissance à partir des relevés virtuels.
-- **Avantage :** Falstad affiche en temps réel les valeurs de courant (couleur/épaisseur des fils animée) et de tension, ce qui rend la loi des nœuds et des mailles très visuelle.
-- **Livrable :** capture d'écran des montages annotée + tableau de mesures + calculs.
-
-### Alternative C : Ondes (Falstad, GBF et oscilloscope intégrés)
-
-- **Principe :** Falstad propose directement un générateur de signal et un oscilloscope virtuels sur le même circuit, ce qui en fait l'atelier le plus fidèle à sa version physique.
-- **Déroulé :** 10 min prise en main → 20 min réglage d'un générateur sinusoïdal, lecture de période/fréquence/amplitude sur le scope virtuel → 20 min montage d'un circuit RC, observation et mesure du déphasage entrée/sortie → 5 min bilan.
-- **Livrable :** captures d'écran du scope virtuel annotées, calculs de fréquence et de déphasage, comparaison avec les valeurs réglées sur le générateur.
-
-### Alternative D : Semi-conducteurs / boucle fermée (Falstad ou tableur)
-
-- **Option A (diode) :** Falstad permet de tracer directement la caractéristique I(V) d'une diode virtuelle (mode "afficher le graphe I/V" du composant) : encore plus lisible que le relevé point par point en manipulation réelle.
-- **Option B (boucle fermée) :** simulation sur tableur d'un système asservi simplifié : une formule récursive du type `T(n) = T(n-1) + k × (consigne − T(n-1))` (modèle proportionnel simple) permet de tracer l'évolution de la température vers la consigne et de comparer avec un modèle "boucle ouverte" où la commande reste fixe. Les étudiants font varier k et observent l'effet sur la rapidité et la stabilité : bonne introduction qualitative avant le cours d'asservissement.
-- **Livrable :** caractéristique ou graphe d'évolution exporté/imprimé + commentaire.
-
----
-
-## Partie 2 : Semi-conducteurs et composants optoélectroniques
-
-*(À compléter au fil de l'année.)*
-
----
-
-## Partie 3 : Systèmes bouclés et asservissement
-
-*(À compléter au fil de l'année.)*
-
----
-
-## Partie 4 : Ondes, propagation et transmission
-
-*(À compléter au fil de l'année.)*
-
----
-
-## Partie 5 : Étude des signaux, circuits linéaires et filtres
+<a id="sec-5-1-tp-mesure-de-gain-et-d-attenuation-d-un-quadripole-2h-su"></a>
 
 ### 5.1 TP : Mesure de gain et d'atténuation d'un quadripôle (2h, sur une ou deux séances)
 
@@ -320,7 +382,7 @@ Si le matériel de laboratoire ne permet pas d'équiper tous les postes en paral
 **Déroulé détaillé**
 
 1. **(10 min) Prévision théorique.** Avant toute mesure, avec les valeurs de R et C de votre circuit RC :
-   - ❓ *Q1. Rappelez la fréquence de coupure théorique f_c = 1/(2πRC) calculée à l'atelier Ondes.*
+   - ❓ *Q1. Rappelez la fréquence de coupure théorique $f_c = \dfrac{1}{2\pi RC}$ calculée à l'atelier Ondes.*
    - ❓ *Q2. À très basse fréquence (f << f_c), quel gain en tension attendez-vous entre l'entrée et la sortie du circuit ? Exprimez-le en dB.*
 2. **(20 min) Mesure du gain en basse fréquence.** Régler le GBF sur une fréquence nettement inférieure à f_c (par exemple f_c/10). Mesurer à l'oscilloscope l'amplitude d'entrée V_e (voie 1) et de sortie V_s (voie 2).
 
@@ -358,22 +420,276 @@ Si le matériel de laboratoire ne permet pas d'équiper tous les postes en paral
 
 ---
 
-## Partie 6 : Composants optoélectroniques et propagation guidée (approfondissement)
+<div style="page-break-after: always;"></div>
 
-*(À compléter au fil de l'année.)*
+&nbsp;
 
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-6-optique"></a>
+
+## Chapitre 6 : Optique
+
+*(À compléter au fil de l'année : mesure d'atténuation sur une liaison à fibre optique, relevé de l'ouverture numérique, caractérisation d'une LED et d'une photodiode.)*
 
 ---
 
 <div style="page-break-after: always;"></div>
 
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-7-preparation-a-l-epreuve"></a>
+
+## Chapitre 7 : Préparation à l'épreuve
+
+*(À compléter au fil de l'année : exploitation de relevés type annale, analyse de documents techniques, exercices de mesure en temps limité.)*
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-annexe-a-alternatives-numeriques-tp-simules"></a>
+
+## Annexe A : alternatives numériques (TP simulés)
+
+### Alternative : TP informatique / simulation (en cas de manque de matériel)
+
+Si le matériel de laboratoire ne permet pas d'équiper tous les postes en parallèle (cas fréquent), chaque atelier a un équivalent réalisable sur ordinateur, en salle informatique ou même sur PC portable/tablette personnelle, avec des outils **gratuits et fonctionnant dans le navigateur (aucune installation requise)**. On peut aussi mixer : 1 ou 2 postes en matériel réel + les autres sous-groupes en version simulée, en tournant.
+
+**Outils utilisés (tous gratuits, navigateur uniquement)**
+
+| Outil | Usage | Accès |
+|---|---|---|
+| Falstad Circuit Simulator | Circuits élec + oscilloscope + GBF virtuels, diodes | falstad.com/circuit |
+| Tinkercad Circuits | Montage sur breadboard virtuel + multimètre | tinkercad.com/circuits (compte gratuit) |
+| LibreOffice Calc / Excel | Traitement statistique des incertitudes | déjà installé en général |
+| PhET Interactive Simulations (Univ. Colorado) | Ondes, circuits, notions qualitatives | phet.colorado.edu |
+### Alternative A : Mesures et incertitudes (sur tableur)
+
+- **Principe :** au lieu de mesurer physiquement, les étudiants exploitent une série de mesures déjà fournie (préparée par le professeur, réaliste avec dispersion) ou générée aléatoirement par une formule tableur, pour se concentrer sur le traitement statistique : qui est la vraie compétence visée par cet atelier.
+- **Déroulé :** 5 min prise en main du fichier tableur fourni → 15 min l'étudiant génère ou récupère 10 valeurs de mesure (ex. avec une formule `=NORM.INV(ALEA();220;1,5)` pour simuler des mesures d'une résistance de 220 Ω avec 1,5 Ω d'écart-type réaliste) → 20 min calcul de x̄, s, u_A, u_B, u, U avec les formules du tableur (`MOYENNE`, `ECARTYPE.STANDARD`) → 15 min écriture du résultat final et test de compatibilité avec la valeur nominale.
+- En modifiant l'écart-type simulé ou le nombre de mesures n dans la formule, on observe immédiatement l'effet de n sur u_A (u_A diminue en 1/√n).
+- **Livrable :** fichier tableur avec formules visibles + résultat final rédigé.
+### Alternative B : Bases de l'électricité (Falstad ou Tinkercad Circuits)
+
+- **Principe :** construire virtuellement les mêmes montages série/parallèle, avec multimètres virtuels (voltmètre/ampèremètre) à placer sur le circuit.
+- **Déroulé :** 10 min prise en main de l'interface → 20 min montage série (mesure U et I à différents points, vérification loi des mailles) → 20 min montage parallèle (loi des nœuds) → 5 min calcul de puissance à partir des relevés virtuels.
+- **Avantage :** Falstad affiche en temps réel les valeurs de courant (couleur/épaisseur des fils animée) et de tension, ce qui rend la loi des nœuds et des mailles très visuelle.
+- **Livrable :** capture d'écran des montages annotée + tableau de mesures + calculs.
+### Alternative C : Ondes (Falstad, GBF et oscilloscope intégrés)
+
+- **Principe :** Falstad propose directement un générateur de signal et un oscilloscope virtuels sur le même circuit, ce qui en fait l'atelier le plus fidèle à sa version physique.
+- **Déroulé :** 10 min prise en main → 20 min réglage d'un générateur sinusoïdal, lecture de période/fréquence/amplitude sur le scope virtuel → 20 min montage d'un circuit RC, observation et mesure du déphasage entrée/sortie → 5 min bilan.
+- **Livrable :** captures d'écran du scope virtuel annotées, calculs de fréquence et de déphasage, comparaison avec les valeurs réglées sur le générateur.
+### Alternative D (détaillée) : Atelier 4 entièrement sur Falstad
+
+> **Cette alternative est la version de référence de l'atelier 4.** Le matériel de laboratoire n'étant pas disponible pour cet atelier, les étudiants **construisent eux-mêmes les deux circuits** dans le simulateur, composant par composant. Rien n'est fourni pré-câblé : le montage fait partie du travail demandé, exactement comme sur une plaque d'essai réelle.
+
+**Avant de commencer (pour tout le sous-groupe, 5 min)**
+
+1. Ouvrir un navigateur et aller sur **falstad.com/circuit**.
+2. Le simulateur ouvre toujours un circuit d'exemple : le vider entièrement par le menu **Fichier → Nouveau circuit vierge**, ou sélectionner tout et supprimer. L'écran doit être vide.
+3. Repérer les trois zones : la **zone de dessin** (grande grille), le **panneau de droite** (bouton Run/Stop, curseur de vitesse de simulation), et le **menu du haut** (Fichier, Édition, Dessiner, Oscilloscopes, Options).
+4. Deux gestes à connaître :
+   - **Placer un composant** : menu **Dessiner** (*Draw*), choisir le composant, puis **cliquer-glisser** sur la grille pour le tracer (la longueur du glissement donne la taille du composant).
+   - **Modifier une valeur** : **clic droit** sur le composant → **Éditer…**, saisir la valeur, valider.
+   - **Effacer** : clic droit sur le composant → **Supprimer** (*Delete*).
+5. Astuce de lecture : une fois la simulation lancée, Falstad affiche des **points mobiles** sur les fils (le courant) et un **code couleur** de tension (vert = potentiel positif, rouge = négatif, gris = 0 V). Survoler un composant affiche sa tension et son courant dans le bandeau inférieur.
+
+> ⚠ Le simulateur est utilisé **en français** (le choix de la langue se fait dans le menu **Options**).
+
+---
+
+<a id="sec-option-a-tracer-la-caracteristique-d-une-diode"></a>
+
+#### Option A : tracer la caractéristique d'une diode
+
+**Objectif :** construire un circuit diode + résistance de protection, relever point par point le couple $(V_{diode},\, I)$, tracer $I = f(V_{diode})$ et en déduire la tension de seuil.
+
+Vous aurez besoin des racourcie clavier : https://defkey.com/fr/falstad-circuit-simulator-raccourcis-clavier. Si il n'y a pas de raccourcie cherchez dans le menu dessiner en hau à gauche.
+
+**Étape 1 (10 min) : construire le circuit**
+
+Le circuit à reproduire est celui de l'atelier 4 option A : une source de tension continue, une résistance de protection de 1 kΩ et une diode en série, le tout refermé sur la masse.
+
+1. **Placer la source** : menu **Ajouter une source de tension (2 bornes)** (*Draw → Inputs and Sources → Add Voltage Source (2-terminal)*). Tracer un segment **vertical** à gauche de l'écran (glisser du bas vers le haut).
+2. **Régler la source** : clic droit dessus → **Éditer…**. Choisir une source **continue (DC)** et mettre la tension à **0,5 V** pour commencer.
+3. **Placer la résistance** : **Ajouter une résistance** (*Draw → Passive Components → Add Resistor*). La tracer **horizontalement**, à partir de la borne du haut de la source.
+4. **Régler la résistance** : clic droit → **Éditer…** → **1000 Ω** (1 kΩ).
+5. **Placer la diode** : **Ajouter une diode**. La tracer horizontalement, dans le prolongement de la résistance. Vérifier le sens : la barre du symbole (la cathode) doit être **à droite**, côté masse. Si le sens est inversé, clic droit → **Inverser les bornes** , ou refaire le tracé dans l'autre sens.
+6. **Placer la masse** : **Ajouter une masse** . La placer sous la borne du bas de la source, et la relier.
+7. **Fermer le circuit** : **Ajouter un fil**w pour relier la sortie de la diode jusqu'à la masse.
+8. **Vérifier avant de lancer** : le circuit doit former une boucle fermée unique : source → résistance → diode → masse → source. Aucun fil ne doit rester en l'air.
+
+- ❓ *Q1. Reproduisez sur votre compte-rendu le schéma que vous avez construit, avec les valeurs. Pourquoi place-t-on une résistance de protection en série avec la diode ? Que se passerait-il, dans le simulateur comme en réel, si on la supprimait ?*
+
+**Étape 2 (10 min) : observer le sens bloqué**
+
+9. Inverser la diode (clic droit → **Inverser les bornes**) : elle est maintenant montée **en sens bloqué**.
+10. Lancer la simulation (bouton **Marche / Run** dans le panneau de droite s'il est sur Arrêt).
+11. Faire varier la tension de la source de 0 V à 5 V (clic droit → **Éditer…**, ou ajouter un curseur : clic droit → **Curseurs…** (*Sliders…*) pour régler la tension en continu).
+12. Survoler la diode pour lire le courant qui la traverse, à chaque valeur de tension.
+
+- ❓ *Q2. Le courant en sens bloqué est-il rigoureusement nul ? Notez son ordre de grandeur (attention aux unités : le simulateur affiche souvent des nanoampères ou des picoampères). Comparez-le au courant que vous mesurerez en sens passant à l'étape suivante.*
+
+**Étape 3 (25 min) : relevé point par point en sens passant**
+
+13. Remettre la diode dans le **bon sens** (clic droit → **Inverser les bornes**).
+14. Pour chaque valeur de tension de source indiquée dans le tableau, éditer la source, laisser la simulation se stabiliser une seconde, puis **survoler la diode** pour lire $V_{diode}$ et $I$.
+15. Compléter le tableau ci-dessous (les valeurs de source sont resserrées autour du seuil attendu) :
+
+| Tension de la source (V) | 0,50 | 0,60 | 0,70 | 0,80 | 1,00 | 1,50 | 2,00 | 3,00 | 5,00 |
+|---|---|---|---|---|---|---|---|---|---|
+| $V_{diode}$ mesurée (V) | | | | | | | | | |
+| $I$ mesuré (mA) | | | | | | | | | |
+
+16. **Tracer la caractéristique** $I = f(V_{diode})$ : sur papier millimétré, ou dans un tableur en reportant les deux lignes du tableau.
+
+- ❓ *Q3. À partir de quelle tension $V_{diode}$ le courant commence-t-il à croître significativement ? Cette valeur est-elle cohérente avec les 0,6 à 0,7 V annoncés en cours pour le silicium ?*
+- ❓ *Q4. Quand la tension de la source passe de 2 V à 5 V, de combien varie $V_{diode}$ ? Et le courant $I$ ? Qu'en concluez-vous sur le modèle simplifié « la diode passante impose environ 0,7 V à ses bornes » ?*
+- ❓ *Q5. La progression du courant est-elle linéaire, ou de plus en plus rapide ? Que cela indique-t-il sur la nature de la caractéristique $I(V)$ d'une diode ? Une diode obéit-elle à la loi d'Ohm ?*
+
+**Étape 4 (10 min) : vérification par le calcul et bilan**
+
+17. Reprendre trois points du tableau (par exemple sources à 1 V, 2 V et 5 V) et vérifier la cohérence par la loi des mailles : la tension aux bornes de la résistance vaut $U_R = E - V_{diode}$, et le courant doit valoir $I = U_R / R$.
+
+- ❓ *Q6. Pour chacun des trois points, comparez le courant calculé $I = (E - V_{diode})/R$ au courant lu dans le simulateur. Les deux concordent-ils ?*
+- ❓ *Q7. Citez une application où la diode est utilisée dans une carte électronique*
+
+**Livrable option A :** schéma du circuit construit, tableau de mesures complet, graphe $I = f(V_{diode})$ tracé et annoté (seuil repéré), réponses Q1 à Q7, capture d'écran du circuit sous Falstad.
+
+---
+
+<a id="sec-option-b-boucle-ouverte-contre-boucle-fermee"></a>
+
+#### Option B : boucle ouverte contre boucle fermée
+
+**Objectif :** construire deux circuits de régulation de tension, l'un sans retour (boucle ouverte), l'autre avec retour (boucle fermée), puis comparer leur réaction à une même perturbation.
+
+**Étape 1 (10 min) : construire le montage en boucle ouverte**
+
+Un potentiomètre règle « à la main » une tension de sortie, sans jamais vérifier le résultat obtenu.
+
+1. **Placer une source de tension** (**Dessiner → Entrées et sources → Ajouter une source de tension (2 terminaux)**), verticale à gauche, réglée sur **12 V** en continu. Relier sa borne basse à une **masse** (**Dessiner → Sorties et étiquettes → Ajouter une masse**).
+2. **Placer un potentiomètre** : **Dessiner → Composants passifs → Ajouter un potentiomètre**, tracé verticalement à droite de la source. Clic droit → **Éditer…** → résistance totale **10 kΩ**.
+3. Relier la borne haute du potentiomètre au **+12 V** de la source, sa borne basse à la **masse**. Le curseur (la troisième borne, sur le côté) constitue la **sortie**.
+4. **Placer la résistance de charge** de **1 kΩ** entre le curseur et la masse. Ce n'est pas un composant particulier du menu : c'est une **résistance ordinaire** (**Dessiner → Composants passifs → Ajouter une résistance**), appelée « de charge » parce qu'elle représente le « système » alimenté en sortie.
+5. **Afficher la sortie** : clic droit sur la résistance de charge → **Voir dans un nouvel oscilloscope** pour suivre sa tension, ou survoler pour la lire directement.
+6. Lancer la simulation et régler le curseur du potentiomètre (le curseur apparaît dans le panneau de droite) pour obtenir exactement **5,0 V** aux bornes de la charge : c'est la **consigne**.
+
+**Étape 2 (10 min) : appliquer une perturbation**
+
+7. **Sans toucher au potentiomètre**, éditer la source et faire passer la tension de **12 V à 9 V** (chute de l'alimentation : c'est la perturbation).
+8. Relever la nouvelle tension de sortie.
+
+| | Tension d'alimentation | Tension de sortie | Écart avec la consigne 5,0 V |
+|---|---|---|---|
+| Avant perturbation | 12 V | 5,0 V | 0 V |
+| Après perturbation (boucle ouverte) | 9 V | | |
+
+- ❓ *Q1. La sortie a-t-elle suivi la perturbation ? Quel est l'écart obtenu par rapport à la consigne ? Le système s'est-il corrigé tout seul ?*
+
+**Étape 3 (20 min) : construire le montage en boucle fermée**
+
+On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et la compare en permanence à une consigne : un amplificateur opérationnel monté en suiveur/amplificateur non inverseur réalise exactement cette comparaison.
+
+9. Créer un nouveau circuit (**Fichier → Nouveau circuit vierge**), ou travailler à côté du précédent.
+10. **Placer la consigne** : une source de tension continue réglée à **5 V**, reliée à la masse. C'est la valeur que l'on veut obtenir en sortie.
+11. **Placer l'amplificateur opérationnel** : **Dessiner → Blocs Fonctionels actifs → Ajouter un Amplificateur Operationnel Réel**. Le tracer au centre de l'écran. Repérer ses cinq broches : les deux **entrées** (+ et −) à gauche, la **sortie** à droite, et les deux broches d'**alimentation** (**V+** et **V−**).
+12. **Alimenter l'AOP** : placer une seconde source de tension continue réglée à **12 V**, reliée à la masse, puis relier le **+12 V** à la broche **V+** de l'AOP et la broche **V−** à la **masse**. Contrairement à l'AOP idéal (alimenté en interne, sans broche visible), l'**amplificateur opérationnel réel doit être alimenté explicitement** : sans ce câblage, il ne délivrera aucune tension en sortie.
+
+13. **Câbler la consigne sur l'entrée +** : relier la source 5 V à l'entrée **non inverseuse** de l'AOP.
+14. **Câbler le retour sur l'entrée −** : relier directement la **sortie** de l'AOP à son entrée **inverseuse** (montage suiveur). **C'est ce fil qui constitue la boucle de retour** : l'AOP compare en permanence sa sortie à la consigne.
+15. **Placer la résistance de charge** de **1 kΩ** (une résistance ordinaire, comme à l'étape 1) entre la sortie de l'AOP et la masse.
+16. Lancer la simulation et vérifier que la sortie vaut bien **5,0 V**.
+
+<p align="center">
+<img src="figures/Tp/Ampli_D_B.png" alt="Amplificateur opérationnel réel dans Falstad : broches d'alimentation V+ et V−, entrées + et −, sortie"/>
+</p>w
+
+- ❓ *Q2. Repérez et nommez sur votre schéma : la consigne, la grandeur mesurée (le retour), l'écart (la différence entre les deux entrées de l'AOP), et l'actionneur (l'étage de sortie de l'AOP). Reproduisez le schéma-bloc correspondant (consigne → comparateur → correcteur → actionneur → sortie, avec la boucle de retour).*
+
+**Étape 4 (10 min) : même perturbation, comparaison**
+
+1.  Appliquer **exactement la même perturbation** qu'en boucle ouverte : éditer la source qui alimente l'AOP (broche **V+**) et faire passer sa tension de **12 V à 9 V**. Ne pas toucher à la source de consigne, qui reste à 5 V.
+2.  Relever la nouvelle tension de sortie.
+
+| | Tension d'alimentation | Tension de sortie | Écart avec la consigne 5,0 V |
+|---|---|---|---|
+| Avant perturbation | 12 V | 5,0 V | 0 V |
+| Après perturbation (boucle fermée) | 9 V | | |
+
+19. Pousser le test : faire varier la charge (remplacer la résistance de 1 kΩ par 470 Ω) et observer si la sortie bouge.
+
+- ❓ *Q3. Comparez les deux tableaux (boucle ouverte et boucle fermée). Lequel des deux montages tient sa consigne malgré la perturbation ?*
+- ❓ *Q4. Expliquez, avec vos mots, **pourquoi** la boucle fermée corrige automatiquement : que « voit » l'AOP quand la sortie commence à baisser ?*
+- ❓ *Q5. Jusqu'où la correction fonctionne-t-elle ? Baissez progressivement l'alimentation de l'AOP (8 V, 7 V, 6 V, 5 V) : à partir de quelle valeur la sortie ne tient-elle plus les 5 V ? Pourquoi un asservissement ne peut-il pas compenser n'importe quelle perturbation ?*
+- ❓ *Q6. Citez un exemple de système bouclé rencontré dans la vie courante ou dans un équipement CIEL (régulation de température d'un serveur, alimentation régulée, servomoteur, régulateur de vitesse…).*
+
+**Livrable option B :** les deux schémas construits (boucle ouverte et boucle fermée), les deux tableaux de mesures remplis, le schéma-bloc annoté, les réponses Q1 à Q6, et les captures d'écran des deux circuits.
+
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-tp-memoire-64-bits"></a>
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-tp-memoire-64-bits"></a>
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-tp-memoire-64-bits"></a>
+
+# En dessous de ce titre c'est du work in progress : le tp ne marche pas je ne suis pas encore sur pourquoi.
+
 ## TP : Mémoire de 64 bits
 
-*Cette série de TP ne correspond pas à l'une des 7 parties officielles ci-dessus : c'est un projet transversal en 3 séances (environ 10h), qui peut être positionné à un moment pertinent de l'année (par exemple en lien avec la Partie 5, une fois les bases de l'électronique numérique/logique introduites). Il est calibré pour 16 élèves, soit 8 binômes : un point fort du projet étant que 8 octets construits par les 8 binômes s'assemblent naturellement en une mémoire de 64 bits (8×8) au TP3.*
 
-# Projet de TP --- Construire une mémoire de 64 bits
+<a id="sec-mem-projet-de-tp-construire-une-memoire-de-64-bits"></a>
 
-## Physique appliquée à l'informatique --- Bac +1 / Bac +2
+# Projet de TP : Construire une mémoire de 64 bits
+
+## Physique appliquée à l'informatique : Bac +1 / Bac +2
+
+### Journal des modifications (version 2)
+
+Cette version corrige deux défauts de conception de la version initiale et deux erreurs de
+quantité dans les tableaux de matériel. Les sections concernées portent une note encadrée
+expliquant le changement ; ces notes peuvent être supprimées une fois le dossier stabilisé.
+
+| § | Nature | Raison |
+|---|---|---|
+| 1.3, 3.6 | Résistance de limitation obligatoire sur la bobine | Une bobine bobinée à la main est un quasi-court-circuit sous 5 V : fusible d'ampèremètre détruit, échauffement |
+| 2.1 | Carte Arduino : Uno **ou** Mega 2560 | Le Mega convient et offre plus de broches |
+| 2.1, 2.3 | Supports tulipe supprimés, extracteurs ajoutés | Inutiles sur breadboard, où ils ajoutent un point de panne |
+| 2.2 | Références relais élargies | Le SRD-05VDC-SL-C n'est pas distribué partout |
+| 2.3, 2.4, 2.5 | 74HC244/245 → **74HC541**, quantité 3 → **9** | Erreur de quantité rendant le TP3 irréalisable ; brochage plus lisible |
+| 2.4, 5.8 | 74HC138 : 2 → **3** (deux en service) | Architecture à deux décodeurs |
+| 4.9 | Buffer de lecture intégré au bloc du groupe | Cohérence avec l'interface exigée au §5.9 |
+| 5.8 | Validation de l'écriture par l'entrée E3 | Sans cela, un front WRITE écrivait dans les 8 registres |
+| 5.9 | Interface : SELECT dédoublé en SELECT_W / SELECT_R | Conséquence de l'architecture à deux décodeurs |
+| 5.11, 5.12 | Buffers et chronogramme réécrits | Substitution de composant ; la capture a lieu en fin de pulse |
+| 5.19 | Trois pannes et une question ajoutées | Nouveaux modes de défaillance |
+| 7.5 | Trois entrées de vocabulaire | Notions introduites par la nouvelle architecture |
 
 ### Organisation générale
 
@@ -395,18 +711,22 @@ La progression est volontairement concrète :
 
 ------------------------------------------------------------------------
 
+<a id="sec-mem-sommaire"></a>
+
 # Sommaire
 
 -   [1. Présentation du projet](#1-présentation-du-projet)
 -   [2. Matériel général](#2-matériel-général)
--   [3. TP 1 --- Un bit physique](#3-tp-1--un-bit-physique)
--   [4. TP 2 --- Un octet électronique](#4-tp-2--un-octet-électronique)
--   [5. TP 3 --- Une mémoire collective de 64
+-   [3. TP 1 : Un bit physique](#3-tp-1--un-bit-physique)
+-   [4. TP 2 : Un octet électronique](#4-tp-2--un-octet-électronique)
+-   [5. TP 3 : Une mémoire collective de 64
     bits](#5-tp-3--une-mémoire-collective-de-64-bits)
 -   [6. Évaluation](#6-évaluation)
 -   [7. Annexes techniques](#7-annexes-techniques)
 
 ------------------------------------------------------------------------
+
+<a id="sec-mem-1-presentation-du-projet"></a>
 
 # 1. Présentation du projet
 
@@ -461,10 +781,16 @@ La progression est volontairement concrète :
 -   Vérifier le câblage avant la mise sous tension.
 -   Pour les bobines, prévoir une diode de roue libre lorsque la bobine
     est commandée par un transistor ou une sortie électronique.
+-   Ne jamais alimenter une bobine bobinée à la main directement sous
+    5 V : sa résistance de quelques dixièmes d'ohm en ferait un
+    court-circuit. Toujours insérer la résistance de limitation prévue
+    au §3.6.
 -   Ne pas alimenter une bobine directement avec une sortie Arduino sans
     étage de commande.
 
 ------------------------------------------------------------------------
+
+<a id="sec-mem-2-materiel-general"></a>
 
 # 2. Matériel général
 
@@ -474,7 +800,7 @@ La progression est volontairement concrète :
 
 | Matériel | Référence / caractéristique conseillée | Quantité pour 16 élèves | Répartition |
 |---|---|---|---|
-| Arduino Uno (ou Uno R4) | Uno R3 ou compatible ATmega328P | **8** | 1 par binôme, réutilisé aux 3 TP |
+| Carte Arduino | Uno R3, Uno R4 **ou Mega 2560** (ou compatible) | **8** | 1 par binôme, réutilisé aux 3 TP |
 | Breadboard | 830 points, format standard | **9** | 1 par binôme + 1 pour le bus commun du TP3 |
 | Fils de câblage Dupont mâle-mâle | Kit assorti, longueurs variées | **9 lots** (≈ 65 fils/lot) | 1 par binôme + 1 lot pour le bus commun |
 | Alimentation 5 V stabilisée | Module régulateur 5 V/1 A minimum, ou bloc secteur 5 V | **8** (idéal) ou 4 si mutualisées 2 par 2 | 1 par binôme si possible |
@@ -488,6 +814,20 @@ La progression est volontairement concrète :
 | Boutons-poussoirs | Type breadboard 4 pattes | **30** | SET/RESET (TP1), CLOCK/WRITE (TP2) |
 | DIP-switch 8 positions | Pas 2,54 mm (breadboard) | **8** | 1 par binôme, sert d'entrée de données au TP2 puis reste en place au TP3 |
 | Pince à dénuder / pince coupante | : | **8** | 1 par binôme (utile dès le TP1 pour le fil émaillé) |
+| Extracteur de circuits intégrés | Pince en U pour boîtiers DIL | **2** | Mutualisés pour la classe (voir note ci-dessous) |
+
+> **Choix de la carte.** Le Mega 2560 convient parfaitement et offre davantage de broches, ce qui
+> simplifie le TP3. Les codes de ce dossier fonctionnent tels quels sur les deux familles. Sur Mega
+> comme sur Uno, la broche analogique A0 utilisée en sortie numérique s'écrit bien `A0` dans le code
+> (et non `14`). Les binômes peuvent avoir des cartes différentes sans que cela pose problème,
+> chaque registre étant piloté indépendamment avant l'assemblage collectif.
+
+> **Pourquoi pas de supports tulipe.** Les supports de circuit intégré sont utiles sur circuit
+> imprimé soudé, pas sur breadboard : la breadboard *est* déjà un support à contacts. Les ajouter
+> revient à insérer un étage de contacts supplémentaire, donc un point de panne intermittente de
+> plus : exactement ce qu'on cherche à éviter dans un montage qui comporte 5 boîtiers par poste et
+> 8 postes interconnectés. Le seul risque réel est de tordre des broches en extrayant un boîtier
+> d'une breadboard serrée : deux extracteurs partagés par la classe règlent le problème.
 
 ## 2.2 Matériel spécifique au TP 1 (par binôme × 8)
 
@@ -495,39 +835,75 @@ La progression est volontairement concrète :
 |---|---|---|
 | Fil de cuivre émaillé | Diamètre 0,3 à 0,5 mm, bobine de 15-20 m | **8 bobines** |
 | Noyau ferromagnétique | Clou ou vis en fer/acier, 4-6 cm, ou noyau ferrite de récupération | **8 à 16** (2 par binôme conseillé, pour recommencer si besoin) |
-| Relais électromécanique 5 V | Type SRD-05VDC-SL-C ou équivalent, bobine 5 V, contact 1 RT (SPDT) | **16** (2 par binôme : 1 pour le montage manuel, 1 pour la commande Arduino) + 2 de rechange |
+| Relais électromécanique 5 V | Bobine 5 Vcc, contact 1 RT (SPDT), montage sur CI. Références possibles : **Songle SRD-05VDC-SL-C** (bobine 55 Ω), **Finder 36.11-5** (70 Ω), **Omron G5V1-5** (167 Ω) | **16** (2 par binôme : 1 pour le montage manuel, 1 pour la commande Arduino) + 2 de rechange |
 | Diode de roue libre | 1N4001, 1N4004 ou 1N4148 | **20** (2 par binôme + marge) |
 | Transistor NPN | 2N2222 ou BC547, boîtier TO-92 | **16** (2 par binôme + marge) |
 | Résistance 1 kΩ (base transistor) | 1/4 W | **16** |
 | Petites pièces métalliques (test d'attraction) | Trombones ou vis courtes | **40** (5 par binôme) |
 | Fil de connexion souple (relais → breadboard) | Section fine, si le relais n'est pas au pas 2,54 mm | **8 jeux** |
+| **Résistance de puissance** | **10 Ω / 5 W (bobinée ou céramique)** | **10** (1 par binôme + marge) |
+
+> **Choix du relais.** Ces trois références sont interchangeables pour ce TP. Le critère à respecter
+> est la bobine 5 Vcc et un contact inverseur (1 RT / SPDT) donnant accès à COM, NO et NC. Le Finder
+> et le Songle, plus volumineux, produisent un « clac » franchement audible : ce qui a une vraie
+> valeur pédagogique dans un TP dont l'objet est justement de rendre la commutation sensible. Le
+> Omron, plus compact et à bobine plus sensible (30 mA contre 70-90 mA), se pique plus facilement
+> sur breadboard mais reste discret.
+>
+> **Ne pas commander de « module relais Arduino ».** Ces platines intègrent déjà le transistor, la
+> diode et parfois un optocoupleur, et ne donnent pas accès aux broches de la bobine. La boucle de
+> maintien du §3.8 y est impossible à câbler, et tout l'intérêt du TP disparaît.
+
+> **La résistance de puissance n'est pas facultative.** Voir §3.6 : une bobine bricolée présente
+> une résistance de l'ordre de 0,3 à 1 Ω et se comporte quasiment comme un court-circuit sous 5 V.
 
 ## 2.3 Matériel spécifique au TP 2 (par binôme × 8)
 
 | Matériel | Référence / caractéristique conseillée | Quantité pour 8 binômes |
 |---|---|---|
 | Circuit intégré 74HC74 | Double bascule D, boîtier DIP-14 | **36** (4 par binôme + 4 de rechange) |
-| Support de circuit intégré DIP-14 (tulipe) | Recommandé pour éviter d'abîmer les broches en manipulant | **36** |
 | LED (voir tableau général) | : | 64 (8 par binôme) |
 | Résistance LED (voir tableau général) | : | 64 |
 | DIP-switch 8 positions (voir tableau général) | Entrée de données D0-D7 | 8 (1 par binôme) |
 | Bouton-poussoir CLOCK/WRITE | : | 8 (1 par binôme) |
 | Condensateur 100 nF (voir tableau général) | 1 par 74HC74 | 32 |
+| Circuit intégré **74HC541** | Buffer octal 3 états, brochage *flow-through*, DIP-20 | **9** (1 par binôme + 1 de rechange) |
 | Arduino (voir tableau général) | Génération de WRITE, lecture des Q | 8 (réutilisé du TP1) |
+
+> **Le buffer de lecture est construit dès le TP2.** Le §5.9 exige que chaque groupe livre « une
+> sortie de lecture désactivable ». Ce buffer appartient donc au bloc du groupe et non à la
+> breadboard commune : il est monté et testé en même temps que le registre, ce qui allège d'autant
+> la séance d'assemblage collectif. Voir §4.9.
 
 ## 2.4 Matériel supplémentaire au TP 3 (mutualisé pour la classe entière)
 
 | Matériel | Référence / caractéristique conseillée | Quantité pour la classe (8 groupes) |
 |---|---|---|
 | Registres 8 bits (TP2) | Réutilisés tels quels | 8 (1 par groupe, déjà construits) |
-| Circuit intégré 74HC138 | Décodeur 3 vers 8, boîtier DIP-16 | **2** (1 en service + 1 de rechange) |
-| Circuit intégré 74HC244 ou 74HC245 | Buffer de bus, sorties trois états, boîtier DIP-20 | **3** (1 à 2 en service + rechange) |
-| Support DIP-16 et DIP-20 (tulipe) | : | 2 et 3 |
+| Circuit intégré 74HC138 | Décodeur 3 vers 8, boîtier DIP-16 | **3** (décodeur d'écriture + décodeur de lecture + 1 rechange) |
+| Buffers 74HC541 | Déjà montés sur le bloc de chaque groupe au TP2 (§4.9) | : (voir §2.3) |
 | Résistances de rappel 10 kΩ | Selon montage (voir tableau général) | Puisées dans le stock général |
-| Bornier à vis ou barrette de connexion 14 points | Interface standardisée par groupe (VCC, GND, DATA0-7, WRITE, READ_ENABLE, RESET, SELECT) | **8 jeux** |
+| Bornier à vis ou barrette de connexion 13 points | Interface standardisée par groupe (VCC, GND, DATA0-7, SELECT_W, SELECT_R, RESET) | **8 jeux** |
 | Plaque ou breadboard commune | Support du décodeur, des buffers et du bus partagé | **1** (la 9ᵉ breadboard du tableau général) |
-| Fils de bus repérés par couleur | 8 lignes DATA + 8 lignes SELECT (Y0-Y7) + WRITE + READ_ENABLE + RESET communs | **≈ 20 fils**, à prévoir dans un code couleur dédié (cf. §7.1) |
+| Fils de bus repérés par couleur | 8 lignes DATA communes + 8 lignes SELECT_W + 8 lignes SELECT_R + RESET commun | **≈ 25 fils**, à prévoir dans un code couleur dédié (cf. §7.1) |
 | Arduino "contrôleur" | Un des 8 Arduino du binôme désigné pour piloter adresse + bus | 1 (pris sur le stock général) |
+
+> **Pourquoi 9 buffers et non 3.** L'architecture du §5.11 place un buffer par registre : chacun des
+> 8 groupes doit pouvoir isoler sa sortie du bus commun indépendamment des autres. Avec 3 boîtiers,
+> seuls trois groupes peuvent se connecter au bus et la mémoire collective ne peut pas fonctionner.
+>
+> **Pourquoi le 74HC541 plutôt que le 74HC244 ou le 74HC245.** Les trois remplissent la même
+> fonction (buffer octal à sorties trois états). Le 74HC245 est un émetteur-récepteur bidirectionnel :
+> il ajoute une broche DIR dont ce montage n'a pas l'usage, la liaison registre → bus étant
+> unidirectionnelle. Le 74HC244 est unidirectionnel mais alterne entrées et sorties de part et
+> d'autre du boîtier, ce qui produit huit fils croisés sur breadboard. Le 74HC541 a un brochage dit
+> *flow-through* : les huit entrées d'un côté, les huit sorties de l'autre. Les fils vont tout droit
+> du registre vers le bus. Sur un montage 8 bits câblé par des étudiants qui découvrent la notion,
+> c'est un gain de temps de dépannage considérable.
+>
+> **Pourquoi 3 décodeurs et non 2.** L'architecture retenue (§5.8) utilise deux décodeurs en
+> service : l'un valide par WRITE, l'autre par READ. Cette solution rend inutile toute porte
+> logique de validation supplémentaire.
 
 ## 2.5 Synthèse budgétaire des composants actifs à commander
 
@@ -535,13 +911,22 @@ Pour ne rien oublier lors de la commande, voici le total des composants actifs (
 
 | Composant | Référence | Quantité totale à commander |
 |---|---|---|
-| Relais 5 V SPDT | SRD-05VDC-SL-C ou équiv. | 18 (16 + 2 rechange) |
+| Relais 5 V 1 RT | SRD-05VDC-SL-C, Finder 36.11-5 ou Omron G5V1-5 | 18 (16 + 2 rechange) |
 | Diode roue libre | 1N4001/1N4004/1N4148 | 20 |
 | Transistor NPN | 2N2222 ou BC547 | 16 |
+| Résistance de puissance | 10 Ω / 5 W | 10 |
 | Circuit 74HC74 | Double bascule D, DIP-14 | 36 |
-| Circuit 74HC138 | Décodeur 3→8, DIP-16 | 2 |
-| Circuit 74HC244/245 | Buffer 3 états, DIP-20 | 3 |
-| Arduino Uno | Uno R3/R4 ou compatible | 8 |
+| Circuit 74HC138 | Décodeur 3→8, DIP-16 | 3 |
+| Circuit **74HC541** | Buffer 3 états *flow-through*, DIP-20 | 9 |
+| Carte Arduino | Uno R3/R4, Mega 2560 ou compatible | 8 |
+
+> **Où commander.** Ces boîtiers logiques sont des articles de catalogue permanent chez les
+> distributeurs français (Gotronic, TME, Reichelt, RS). Les lots à bas prix vendus par des
+> revendeurs tiers sur les places de marché proviennent souvent de déstockage, sans réassort ni
+> traçabilité : un 74HC74 remarqué produit un défaut intermittent qu'aucun binôme ne saura
+> diagnostiquer, et peut coûter une séance entière. Gotronic accepte par ailleurs le paiement
+> différé par mandat administratif sur bon de commande, ce qui convient à une commande passée par
+> l'intendance.
 
 ## 2.6 Alternative numérique (si le matériel manque ou pour préparer le câblage en amont)
 
@@ -573,7 +958,7 @@ C'est le TP qui se simule le mieux, car Logisim Evolution propose directement le
 3. Dans la bibliothèque "Wiring", ajouter une horloge ("Clock") et la relier à l'entrée CLK de chaque bascule (équivalent de la ligne WRITE commune du §4.9).
 4. Ajouter 8 entrées ("Input Pin") reliées chacune à l'entrée D d'une bascule : elles jouent le rôle du DIP-switch physique.
 5. Ajouter 8 sorties ("Output Pin", ou directement des LED de la bibliothèque "I/O") reliées aux sorties Q : elles jouent le rôle des LED physiques.
-6. Simuler : cliquer sur les entrées pour changer les bits, déclencher un front d'horloge (bouton ou clic sur l'horloge en mode pas-à-pas), vérifier que les sorties ne changent qu'au moment du front — exactement le comportement observé au tableau du §4.7.
+6. Simuler : cliquer sur les entrées pour changer les bits, déclencher un front d'horloge (bouton ou clic sur l'horloge en mode pas-à-pas), vérifier que les sorties ne changent qu'au moment du front : exactement le comportement observé au tableau du §4.7.
 7. Une fois le comportement validé en simulation, le câblage réel avec les 4 boîtiers 74HC74 reproduit exactement ce schéma logique (chaque 74HC74 = 2 bascules D de la simulation).
 
 Logisim permet d'afficher la valeur du registre directement en décimal ou en hexadécimal via un composant "Hex Digit Display", ce qui permet de vérifier très vite qu'un octet écrit correspond bien à la valeur attendue, sans avoir à décoder 8 LED à l'œil.
@@ -584,15 +969,19 @@ Le TP3 est le plus ambitieux à câbler en réel (8 groupes + décodeur + bus), 
 
 1. Reprendre dans Logisim Evolution le registre 8 bits validé au TP2 (on peut le transformer en "sous-circuit" réutilisable 8 fois, via le menu "Project > Add Circuit", pour éviter de tout redessiner).
 2. Ajouter un composant "Decoder" (bibliothèque "Plexers") réglé sur 3 bits de sélection, qui reproduit directement le 74HC138 du §5.8 : chacune de ses 8 sorties active un sous-circuit registre.
-3. Ajouter des composants "Tristate Buffer" (bibliothèque "Wiring") sur la sortie de chaque registre, commandés par la même ligne SELECT que celle qui active son écriture : c'est l'équivalent exact des 74HC244/245 du §5.10, et Logisim affiche explicitement l'état haute impédance (en général en couleur différente sur le fil), ce qui rend le concept de conflit de bus très concret.
-4. Relier les 8 sorties trois états sur un même bus DATA commun, et vérifier en simulation qu'un conflit apparaît (couleur d'erreur) si deux sorties sont activées en même temps par erreur — c'est exactement l'erreur décrite en §5.10, mais sans risquer d'endommager un vrai circuit intégré pour la démonstration.
+3. Ajouter des composants "Tristate Buffer" (bibliothèque "Wiring") sur la sortie de chaque registre, commandés par la ligne SELECT_R issue du second décodeur : c'est l'équivalent exact des 74HC541 du §5.11, et Logisim affiche explicitement l'état haute impédance (en général en couleur différente sur le fil), ce qui rend le concept de conflit de bus très concret.
+
+   Le composant "Decoder" de la bibliothèque *Plexers* possède une entrée `Enable` qui joue exactement le rôle de l'entrée E3 du 74HC138. Placer **deux** décodeurs partageant les mêmes trois bits de sélection, l'un validé par un bouton WRITE, l'autre par un bouton READ, reproduit fidèlement le montage matériel du §5.8 : y compris le fait qu'un conflit de bus devienne impossible par construction.
+4. Relier les 8 sorties trois états sur un même bus DATA commun, et vérifier en simulation qu'un conflit apparaît (couleur d'erreur) si deux sorties sont activées en même temps par erreur : c'est exactement l'erreur décrite en §5.10, mais sans risquer d'endommager un vrai circuit intégré pour la démonstration.
 5. Piloter l'adresse avec 3 entrées "Input Pin", et vérifier qu'on peut écrire puis relire chacun des 8 octets indépendamment, avant de reproduire l'architecture validée avec le matériel réel le jour de l'assemblage collectif (§5.9, montage détaillé pas à pas).
 
 Même si le matériel physique est disponible pour toute la classe, préparer et valider l'architecture en Logisim par binôme avant le jour de l'assemblage collectif permet de gagner du temps : les erreurs de logique (mauvais sens du décodeur, oubli d'un buffer) sont corrigées à l'écran plutôt que découvertes au milieu de 8 breadboards interconnectées.
 
 ------------------------------------------------------------------------
 
-# 3. TP 1 --- Un bit physique
+<a id="sec-mem-3-tp-1-un-bit-physique"></a>
+
+# 3. TP 1 : Un bit physique
 
 ## 3.1 Titre
 
@@ -661,13 +1050,14 @@ conserver cet état sans maintenir le bouton appuyé.
 
 ------------------------------------------------------------------------
 
-## 3.6 Partie A --- Fabriquer un électroaimant
+## 3.6 Partie A : Fabriquer un électroaimant
 
 ### Matériel
 
 -   Fil de cuivre émaillé.
 -   Noyau ferromagnétique.
 -   Alimentation 5 V.
+-   **Résistance de puissance 10 Ω / 5 W** (limitation de courant, obligatoire).
 -   Multimètre.
 -   Quelques trombones.
 
@@ -689,8 +1079,8 @@ conserver cet état sans maintenir le bouton appuyé.
 4.  **Dénuder les deux extrémités.** Le fil de cuivre émaillé est isolé par un vernis, invisible à l'œil nu : il faut le gratter avec un cutter, du papier de verre fin, ou le brûler légèrement à la flamme d'un briquet puis frotter, jusqu'à voir le cuivre brillant sur 1 à 2 cm.
 5.  **Vérifier le contact.** Au multimètre en mode continuité (ou ohmmètre), toucher les deux extrémités dénudées : une valeur de résistance stable et non infinie confirme que le dénudage est correct des deux côtés.
 6.  **Mesurer la résistance à froid.** Relever R₀ avec le multimètre, bobine non alimentée.
-7.  **Câbler l'alimentation.** Brancher une extrémité de la bobine sur le +5 V de l'alimentation, l'autre sur le 0 V, **en intercalant le multimètre en mode ampèremètre en série** pour lire le courant (ou limiter le courant à l'alimentation si celle-ci le permet).
-8.  **Mettre sous tension progressivement** si l'alimentation le permet, sinon allumer directement à 5 V en surveillant que rien ne chauffe anormalement en quelques secondes.
+7.  **Câbler l'alimentation avec sa résistance de limitation.** Monter en série : borne +5 V de l'alimentation → **résistance de puissance 10 Ω / 5 W** → bobine → multimètre en mode ampèremètre (calibre 10 A) → borne 0 V. La résistance n'est pas facultative : sans elle, la bobine se comporte quasiment comme un court-circuit.
+8.  **Mettre sous tension progressivement.** Si l'alimentation dispose d'un réglage de limitation de courant, la régler à 0,5 A avant d'allumer. Sinon, monter la tension par paliers depuis 0 V en surveillant le courant. Couper dès que la résistance de puissance ou la bobine deviennent chaudes au toucher : ces essais se font par séquences de quelques secondes.
 9.  **Tester l'attraction.** Approcher un trombone de l'extrémité du noyau : il doit être attiré et rester collé.
 10. **Compter le nombre de trombones maximum** que le montage peut soutenir en chaîne.
 11. **Recommencer avec un nombre de spires différent** (par exemple 100 spires) et comparer le nombre de trombones tenus, à courant comparable.
@@ -717,10 +1107,23 @@ conserver cet état sans maintenir le bouton appuyé.
 4.  La bobine chauffe-t-elle ? Pourquoi ?
 5.  Vérifier expérimentalement la loi d'Ohm.
 6.  Calculer la puissance dissipée.
+7.  Mesurez la résistance de votre bobine seule. Quel courant circulerait
+    sous 5 V **sans** la résistance de limitation ? Comparez au calibre de
+    votre ampèremètre : que se passerait-il concrètement ?
+8.  Avec la résistance de 10 Ω en série, calculez le courant théorique puis
+    comparez à la mesure. Quelle fraction de la tension totale se retrouve
+    aux bornes de la bobine ? Qu'est-ce que cela dit sur la répartition des
+    tensions dans un diviseur ?
+
+> **Note pour le professeur.** Les questions 7 et 8 transforment une contrainte matérielle en
+> contenu de cours : le diviseur de tension et la lecture d'un calibre d'ampèremètre sont au
+> programme, et l'élève les rencontre ici sur un cas où l'erreur a une conséquence physique
+> visible. La valeur de 10 Ω est un ordre de grandeur : elle est à ajuster après mesure d'un
+> bobinage témoin réalisé en préparation de séance.
 
 ------------------------------------------------------------------------
 
-## 3.7 Partie B --- Utiliser un relais
+## 3.7 Partie B : Utiliser un relais
 
 ### Principe
 
@@ -750,7 +1153,7 @@ Le contact du relais ne doit pas être confondu avec la bobine :
 
 ------------------------------------------------------------------------
 
-## 3.8 Partie C --- Construire une mémoire SET/RESET
+## 3.8 Partie C : Construire une mémoire SET/RESET
 
 ### Principe fonctionnel
 
@@ -806,7 +1209,7 @@ Avant de commencer, identifier les 5 broches du relais avec le multimètre en mo
 
 ------------------------------------------------------------------------
 
-## 3.9 Partie D --- Mesures dynamiques
+## 3.9 Partie D : Mesures dynamiques
 
 ### Mesures possibles
 
@@ -836,7 +1239,7 @@ Observer le décalage entre la commande et le changement de sortie.
 
 ------------------------------------------------------------------------
 
-## 3.10 Partie E --- Commande par Arduino
+## 3.10 Partie E : Commande par Arduino
 
 ### Objectif
 
@@ -909,7 +1312,9 @@ L'étudiant doit être capable de compléter la phrase suivante :
 
 ------------------------------------------------------------------------
 
-# 4. TP 2 --- Un octet électronique
+<a id="sec-mem-4-tp-2-un-octet-electronique"></a>
+
+# 4. TP 2 : Un octet électronique
 
 ## 4.1 Titre
 
@@ -995,7 +1400,7 @@ Pour un 74HC74 classique en boîtier DIP-14 :
 
 ------------------------------------------------------------------------
 
-## 4.7 Partie A --- Tester une bascule D
+## 4.7 Partie A : Tester une bascule D
 
 ### Matériel
 
@@ -1056,7 +1461,7 @@ Pour un 74HC74 classique en boîtier DIP-14 :
 
 ------------------------------------------------------------------------
 
-## 4.8 Partie B --- Construire un registre 8 bits
+## 4.8 Partie B : Construire un registre 8 bits
 
 ### Principe
 
@@ -1144,6 +1549,35 @@ Chaque entrée D est reliée à une entrée indépendante :
 
 Chaque Q commande une LED via une résistance.
 
+### Buffer de lecture (74HC541)
+
+Chaque registre se termine par un buffer octal à sorties trois états, qui l'isole du bus commun.
+Il est monté et testé dès le TP2, en même temps que le registre.
+
+Brochage du 74HC541 (boîtier DIP-20) :
+
+| Broche | Fonction | Broche | Fonction |
+|---|---|---|---|
+| 1 | OE1 (validation, active basse) | 20 | VCC |
+| 2 à 9 | A1 à A8 (entrées) | 19 | OE2 (validation, active basse) |
+| 10 | GND | 18 à 11 | Y1 à Y8 (sorties) |
+
+Câblage :
+
+1.  **Alimenter le boîtier** : broche 20 vers +5 V, broche 10 vers 0 V, condensateur 100 nF entre
+    les deux au plus près.
+2.  **Relier les sorties Q0 à Q7** du registre aux entrées A1 à A8 (broches 2 à 9).
+3.  **Relier les sorties Y1 à Y8** (broches 18 à 11) au connecteur DATA du groupe. **Attention à
+    l'ordre** : A1 (broche 2) ressort en Y1 (broche 18), A2 (broche 3) en Y2 (broche 17), et ainsi
+    de suite. Les sorties sont numérotées à rebours des broches.
+4.  **Relier les deux broches de validation** (1 et 19) ensemble : elles sont combinées par une
+    porte NON-OU interne, et il faut donc les mettre toutes les deux à l'état bas pour que les
+    sorties conduisent.
+
+**Pendant le TP2, en autonomie**, relier ce point commun directement à GND : le buffer est alors
+toujours actif et les LED reflètent en permanence le contenu du registre. **Au TP3**, ce même point
+deviendra l'entrée `SELECT_R` du groupe, pilotée par le décodeur de lecture (§5.8).
+
 ### Montage détaillé pas à pas (construction complète du registre)
 
 On utilise 4 circuits 74HC74, numérotés IC1 à IC4, chacun portant 2 bascules (1 et 2). Convention retenue : IC1 → bits D0-D1, IC2 → D2-D3, IC3 → D4-D5, IC4 → D6-D7.
@@ -1157,10 +1591,11 @@ On utilise 4 circuits 74HC74, numérotés IC1 à IC4, chacun portant 2 bascules 
 7.  **Câbler les 8 sorties.** Chaque sortie Q (broches 5 et 9 de chaque IC) attaque une résistance de 1 kΩ puis une LED vers GND, dans le même ordre D0 à D7 que les entrées, pour que la lecture visuelle corresponde directement à l'octet affiché.
 8.  **Vérifier l'ensemble du câblage** boîtier par boîtier avant la mise sous tension : alimentation, PRE/CLR, WRITE, D, Q pour chacun des 4 IC.
 9.  **Mettre sous tension et tester bit par bit** : positionner le DIP-switch sur une valeur simple (par exemple 00000001), appuyer sur WRITE, vérifier qu'une seule LED s'allume et que c'est la bonne. Répéter avec 2 ou 3 valeurs différentes avant de passer à la suite.
+10. **Monter le 74HC541** conformément au paragraphe « Buffer de lecture » ci-dessus, broches 1 et 19 reliées à GND pour cette phase. Vérifier au multimètre que les 8 sorties Y recopient bien les 8 sorties Q. Le bloc du groupe est alors complet et conforme à l'interface exigée au §5.9.
 
 ------------------------------------------------------------------------
 
-## 4.10 Schéma de câblage Arduino --- écriture d'un octet
+## 4.10 Schéma de câblage Arduino : écriture d'un octet
 
 Dans cette version, l'Arduino fournit les huit bits et le signal WRITE.
 
@@ -1190,7 +1625,7 @@ simultanée.
 
 ------------------------------------------------------------------------
 
-## 4.11 Code Arduino --- écrire un octet
+## 4.11 Code Arduino : écrire un octet
 
 ``` cpp
 const byte DATA_PINS[8] = {
@@ -1247,7 +1682,7 @@ void loop() {
 
 ------------------------------------------------------------------------
 
-## 4.12 Partie C --- Lire les sorties avec l'Arduino
+## 4.12 Partie C : Lire les sorties avec l'Arduino
 
 ### Câblage
 
@@ -1311,7 +1746,7 @@ void loop() {
 
 ------------------------------------------------------------------------
 
-## 4.13 Partie D --- Étudier les boutons et les rebonds
+## 4.13 Partie D : Étudier les boutons et les rebonds
 
 ### Problématique
 
@@ -1368,7 +1803,9 @@ void writeByteDebounced(byte value) {
 
 ------------------------------------------------------------------------
 
-# 5. TP 3 --- Une mémoire collective de 64 bits
+<a id="sec-mem-5-tp-3-une-memoire-collective-de-64-bits"></a>
+
+# 5. TP 3 : Une mémoire collective de 64 bits
 
 ## 5.1 Titre
 
@@ -1473,26 +1910,92 @@ A2 A1 A0 = 111 -> Y7 actif
 
 ### Attention au 74HC138
 
-Les sorties du 74HC138 sont généralement **actives à l'état bas**. Il
-faut donc prévoir une inversion logique ou utiliser directement cette
-logique active-bas pour commander les entrées de sélection des
-registres.
+Les sorties du 74HC138 sont **actives à l'état bas**. Cette convention
+n'est pas une gêne : elle s'accorde directement avec les entrées de
+validation du 74HC541, elles aussi actives à l'état bas. Aucune
+inversion logique n'est nécessaire dans tout le montage.
 
-### Montage détaillé pas à pas (câblage du décodeur, sur la breadboard commune)
+### Deux décodeurs, et non un seul
 
-Brochage utile du 74HC138 (boîtier DIP-16) : broches 1-3 = A0, A1, A2 (adresse) ; broches 4-5 = E1, E2 (validation, actives basses) ; broche 6 = E3 (validation, active haute) ; broches 7 et 9 à 15 = Y7 à Y0 (sorties, actives basses) ; broche 8 = GND ; broche 16 = VCC.
+Une ligne WRITE unique attaquant les entrées CLK des huit registres
+écrirait **dans les huit registres à la fois** : l'adressage en écriture
+ne servirait alors à rien. Il faut donc que le front d'horloge ne
+parvienne qu'au registre adressé.
 
-1.  **Placer le 74HC138** sur la breadboard commune, à cheval sur la rainure centrale.
-2.  **Alimenter le circuit** : broche 16 (VCC) vers +5 V, broche 8 (GND) vers 0 V, condensateur 100 nF entre les deux au plus près du boîtier.
-3.  **Valider le décodeur en permanence** : relier E1 et E2 (broches 4 et 5) à GND, et E3 (broche 6) à +5 V. Sans cela, toutes les sorties restent inactives quelle que soit l'adresse.
-4.  **Câbler les entrées d'adresse A0, A1, A2** (broches 1 à 3) vers les 3 broches Arduino choisies pour porter l'adresse (par exemple D11, D12, D13).
-5.  **Repérer les 8 sorties Y0 à Y7** (attention à l'ordre des broches, qui n'est pas dans l'ordre naturel autour du boîtier : vérifier sur la datasheet du composant utilisé).
-6.  **Câbler chaque sortie Yn vers l'entrée SELECT du groupe n** correspondant, via le fil de bus repéré prévu à cet effet (cf. tableau de répartition des adresses, §5.7).
-7.  **Vérifier avec une LED témoin** avant de connecter les 8 groupes : brancher provisoirement une LED (avec résistance) entre une sortie Yn et le +5 V (puisque la sortie est active à l'état bas, la LED s'allume quand Yn est sélectionnée). Faire varier l'adresse depuis l'Arduino et vérifier qu'une seule LED s'allume à la fois, dans le bon ordre.
+La solution retenue ici n'ajoute **aucune porte logique**. Elle exploite
+l'entrée de validation `E3` du 74HC138, prévue exactement pour cet usage.
+Le montage utilise deux décodeurs partageant les mêmes trois lignes
+d'adresse :
+
+-   **Décodeur d'écriture** : son entrée `E3` reçoit le signal `WRITE`.
+    Ses sorties fournissent les lignes `SELECT_W`.
+-   **Décodeur de lecture** : son entrée `E3` reçoit le signal `READ`.
+    Ses sorties fournissent les lignes `SELECT_R`.
+
+### Comment l'écriture devient sélective
+
+| Instant | WRITE | Sortie Yn du groupe adressé | Sorties des 7 autres |
+|---|---|---|---|
+| Repos | 0 | 1 (haute) | 1 (hautes) |
+| Pendant le pulse | 1 | 0 (basse) : front descendant, sans effet | 1 (inchangées) |
+| Fin du pulse | 0 | 1 : **front montant : capture** | 1 (inchangées) |
+
+La ligne `SELECT_W` du groupe adressé attaque directement les entrées CLK
+de ses huit bascules. Les sept autres groupes ne voient aucune
+transition : leur contenu est intact. La donnée est encore présente sur
+le bus au moment du front montant, puisque l'Arduino ne la modifie
+qu'après avoir relâché WRITE.
+
+Les bascules D du 74HC74 étant sensibles au **front montant**, c'est donc
+la *fin* du pulse WRITE qui mémorise la donnée, et non son début. Ce
+point est repris au chronogramme du §5.12.
+
+### Comment la lecture devient sélective
+
+Les sorties du décodeur de lecture sont actives à l'état bas ; les
+entrées de validation du 74HC541 sont actives à l'état bas. La sortie Yn
+se relie donc **directement** aux broches 1 et 19 du buffer du groupe n,
+sans aucune inversion. Quand READ est bas, les huit sorties Yn sont
+hautes et les huit buffers sont en haute impédance : le bus est libre.
+
+> Cette symétrie est le principal intérêt de l'architecture : l'élève
+> constate que la même logique active-bas se propage du décodeur jusqu'au
+> buffer sans adaptation, et qu'un seul groupe à la fois peut
+> matériellement parler sur le bus.
+
+### Montage détaillé pas à pas (câblage des décodeurs, sur la breadboard commune)
+
+Brochage utile du 74HC138 (boîtier DIP-16) :
+
+| Broche | Fonction | Broche | Fonction |
+|---|---|---|---|
+| 1, 2, 3 | A0, A1, A2 (adresse) | 16 | VCC |
+| 4, 5 | E1, E2 (validation, actives basses) | 15 | Y0 |
+| 6 | E3 (validation, active haute) | 14 à 9 | Y1 à Y6 |
+| 8 | GND | 7 | Y7 |
+
+1.  **Placer les deux 74HC138** sur la breadboard commune, à cheval sur la rainure centrale.
+2.  **Alimenter chacun** : broche 16 (VCC) vers +5 V, broche 8 (GND) vers 0 V, condensateur 100 nF
+    entre les deux au plus près du boîtier.
+3.  **Sur les deux boîtiers, relier E1 et E2** (broches 4 et 5) à GND.
+4.  **Câbler les entrées d'adresse A0, A1, A2** (broches 1 à 3) des **deux** décodeurs en parallèle
+    vers les 3 broches Arduino d'adresse. Les deux décodeurs voient donc toujours la même adresse.
+5.  **Sur le décodeur d'écriture**, relier E3 (broche 6) à la broche Arduino `WRITE`.
+6.  **Sur le décodeur de lecture**, relier E3 (broche 6) à la broche Arduino `READ`.
+7.  **Repérer les 8 sorties Y0 à Y7** (attention : l'ordre des broches n'est pas l'ordre naturel
+    autour du boîtier : vérifier sur la datasheet du composant utilisé).
+8.  **Câbler chaque sortie Yn du décodeur d'écriture** vers l'entrée `SELECT_W` du groupe n
+    correspondant (cf. tableau de répartition des adresses, §5.7).
+9.  **Câbler chaque sortie Yn du décodeur de lecture** vers l'entrée `SELECT_R` du groupe n.
+10. **Vérifier avec une LED témoin** avant de connecter les 8 groupes : brancher provisoirement une
+    LED (avec résistance) entre une sortie Yn et le +5 V : la sortie étant active à l'état bas, la
+    LED s'allume quand Yn est sélectionnée. Forcer E3 à l'état haut, faire varier l'adresse depuis
+    l'Arduino et vérifier qu'une seule LED s'allume à la fois, dans le bon ordre. **Répéter
+    l'opération sur le second décodeur.**
 
 ------------------------------------------------------------------------
 
-## 5.9 Partie A --- Définir l'interface d'un groupe
+## 5.9 Partie A : Définir l'interface d'un groupe
 
 Chaque groupe doit respecter exactement la même interface.
 
@@ -1512,42 +2015,50 @@ Chaque groupe doit respecter exactement la même interface.
 | DATA5                       |
 | DATA6                       |
 | DATA7                       |
-| WRITE                       |
-| READ_ENABLE                 |
+| SELECT_W                    |
+| SELECT_R                    |
 | RESET                       |
-| SELECT                      |
 +-----------------------------+
 ```
+
+`SELECT_W` : horloge d'écriture du groupe, capture sur **front montant**.
+`SELECT_R` : validation de lecture, **active à l'état bas**.
 
 ### Règle d'intégration
 
 Chaque groupe doit fournir :
 
--   Un registre 8 bits.
--   Une entrée WRITE.
--   Une entrée RESET.
--   Une entrée SELECT.
--   Une sortie de lecture désactivable.
--   Une documentation du brochage.
+-   Un registre 8 bits (4 × 74HC74).
+-   Un buffer de sortie 74HC541 câblé conformément au §4.9.
+-   Une entrée SELECT_W attaquant les huit entrées CLK.
+-   Une entrée SELECT_R attaquant les deux broches de validation du buffer.
+-   Une entrée RESET attaquant les huit entrées CLR.
+-   Une documentation du brochage de son connecteur.
+
+> **Ce qui disparaît par rapport à une architecture à ligne WRITE partagée.** Les signaux WRITE et
+> READ ne descendent plus jusqu'aux groupes : ils s'arrêtent aux entrées E3 des deux décodeurs, sur
+> la breadboard commune. Chaque groupe ne reçoit plus que ses deux lignes de sélection dédiées, ce
+> qui réduit le câblage collectif et supprime le mode de panne le plus fréquent : un groupe qui tire
+> une ligne commune à la masse et bloque toute la classe.
 
 ### Montage détaillé pas à pas (intégration collective, jour de l'assemblage)
 
 Cette étape se déroule idéalement en une seule séance, tous les groupes présents, pour limiter le temps où le bus commun est à moitié câblé.
 
-1.  **Chaque binôme apporte son registre déjà testé** (LED, DIP-switch, WRITE fonctionnels, testés en autonomie au TP2).
-2.  **Le décodeur et les buffers de bus sont déjà installés** sur la breadboard commune, avec l'adresse pilotée par l'Arduino contrôleur (cf. §5.8).
+1.  **Chaque binôme apporte son bloc déjà testé** : registre 8 bits **et** buffer 74HC541 (LED, DIP-switch, WRITE fonctionnels, testés en autonomie au TP2).
+2.  **Les deux décodeurs sont déjà installés et validés** sur la breadboard commune, avec l'adresse pilotée par l'Arduino contrôleur (cf. §5.8). Les buffers, eux, sont sur le bloc de chaque groupe depuis le TP2.
 3.  **Poser les 8 breadboards des groupes autour de la breadboard commune**, de préférence dans l'ordre des adresses (groupe 0 à groupe 7) pour limiter la longueur des fils et les croisements.
 4.  **Raccorder en premier les alimentations** : VCC et GND de chaque groupe vers les rails de la breadboard commune (ou vers l'alimentation générale si elle est unique pour toute la classe).
-5.  **Raccorder la ligne WRITE commune** de la breadboard commune vers l'entrée CLK/WRITE de chaque registre (une seule ligne, partagée par les 8 groupes : seul le registre sélectionné par le décodeur doit réellement en tenir compte, cf. §5.10 sur les portes ET de validation si l'architecture retenue l'exige).
-6.  **Raccorder les 8 lignes DATA communes** (D0 à D7) vers les entrées/sorties correspondantes de chaque registre.
-7.  **Raccorder la sortie SELECT (Yn) du décodeur** vers l'entrée SELECT du groupe n correspondant : une ligne différente pour chaque groupe, ce sont les seules lignes qui ne sont *pas* partagées.
-8.  **Ne pas encore activer les sorties en mode lecture.** Avant de mettre le bus DATA en écriture partagée, vérifier qu'un seul registre à la fois a le droit de piloter le bus (via ses buffers 3 états commandés par SELECT), pour éviter le conflit décrit en §5.10.
+5.  **Raccorder les 8 lignes DATA communes** (D0 à D7) vers les entrées/sorties correspondantes de chaque registre.
+6.  **Raccorder la sortie Yn du décodeur d'écriture** vers l'entrée `SELECT_W` du groupe n correspondant : une ligne différente pour chaque groupe.
+7.  **Raccorder la sortie Yn du décodeur de lecture** vers l'entrée `SELECT_R` du groupe n. Vérifier avant mise sous tension qu'aucune ligne SELECT_R ne se retrouve reliée à GND en permanence : c'est le câblage qui provoquerait deux buffers actifs simultanément.
+8.  **Vérifier l'exclusion mutuelle avant d'activer la lecture.** Sonder à l'ohmmètre, hors tension, que les 8 lignes SELECT_R sont bien indépendantes les unes des autres. L'exclusion est ensuite garantie par construction du décodeur (§5.11), mais une erreur de câblage peut toujours la contourner.
 9.  **Tester groupe par groupe, dans l'ordre des adresses** : depuis l'Arduino contrôleur, sélectionner l'adresse 0, écrire un octet de test, vérifier sur les LED du groupe 0 que la bonne valeur apparaît, puis relire cette valeur pour confirmer la cohérence, avant de passer à l'adresse 1.
 10. **Une fois les 8 groupes validés individuellement**, exécuter le programme de test automatique complet (§5.16 ou équivalent) qui parcourt les 8 adresses.
 
 ------------------------------------------------------------------------
 
-## 5.10 Partie B --- Comprendre les conflits de bus
+## 5.10 Partie B : Comprendre les conflits de bus
 
 ### Problème
 
@@ -1582,73 +2093,94 @@ Lorsque le buffer est désactivé, sa sortie est en haute impédance `Z`.
 Q registre ---> [ Buffer 3 états ] ---> Bus DATA
                        ^
                        |
-                  READ_ENABLE
+                   SELECT_R  (active bas)
 ```
 
 ------------------------------------------------------------------------
 
-## 5.11 Partie C --- Ajouter les buffers de lecture
+## 5.11 Partie C : Ajouter les buffers de lecture
 
-Un 74HC244 ou un 74HC245 peut être utilisé pour isoler les sorties des
-registres du bus commun.
+Le buffer de chaque groupe est un **74HC541**, déjà monté et testé au TP2
+(§4.9). Il isole les sorties du registre du bus commun.
 
 ### Principe
 
 ``` text
-Registre 0 Q[7..0] ---> Buffer 0 ---+
-                                    |
-Registre 1 Q[7..0] ---> Buffer 1 ---+---- Bus DATA[7..0]
-                                    |
-Registre 2 Q[7..0] ---> Buffer 2 ---+
-                                    |
-Registre 3 Q[7..0] ---> Buffer 3 ---+
+Registre 0 Q[7..0] ---> 74HC541 (groupe 0) ---+
+                              ^               |
+                          SELECT_R 0          |
+                                              |
+Registre 1 Q[7..0] ---> 74HC541 (groupe 1) ---+---- Bus DATA[7..0]
+                              ^               |
+                          SELECT_R 1          |
+                                              |
+          ...                             ... |
+                                              |
+Registre 7 Q[7..0] ---> 74HC541 (groupe 7) ---+
+                              ^
+                          SELECT_R 7
 ```
 
-Un seul buffer doit être activé à la fois.
+Un seul buffer doit être actif à la fois.
 
 ### Signal de lecture
 
 ``` text
-READ_ENABLE = SELECT du registre sélectionné
+SELECT_R n = sortie Yn du décodeur de lecture (validé par READ)
 ```
 
-Pour une architecture simple, on peut utiliser les sorties du décodeur
-pour activer le buffer du registre sélectionné.
+Cette exclusion est garantie **matériellement** par le décodeur : par
+construction, un 74HC138 n'active jamais deux sorties simultanément.
+
+> **Point à souligner en séance.** C'est une différence de nature entre
+> une garantie logicielle et une garantie matérielle. Un programme peut se
+> tromper d'adresse ; le décodeur, lui, ne *peut pas* activer deux sorties.
+> Faire remarquer aux étudiants que la sécurité du bus ne repose pas sur la
+> correction du code Arduino est un des acquis importants de ce TP.
 
 ------------------------------------------------------------------------
 
-## 5.12 Partie D --- Écriture dans un octet sélectionné
+## 5.12 Partie D : Écriture dans un octet sélectionné
 
 ### Séquence d'écriture
 
 1.  Placer l'adresse sur A2, A1 et A0.
 2.  Placer la donnée sur DATA7 à DATA0.
-3.  Activer WRITE.
-4.  Générer un front d'horloge.
-5.  Désactiver WRITE.
-6.  Modifier éventuellement l'adresse et la donnée.
+3.  Laisser le temps aux lignes de se stabiliser.
+4.  Activer WRITE (état haut) : la ligne SELECT_W du groupe adressé descend.
+5.  Désactiver WRITE (état bas) : SELECT_W remonte, **le front montant capture la donnée**.
+6.  Seulement ensuite, modifier l'adresse ou la donnée.
 
 ### Schéma temporel simplifié
 
 ``` text
-Adresse  : ----[ adresse stable ]----------------
-Donnée    : ----[ donnée stable ]-----------------
-WRITE     : __________/‾‾‾\______________________
-                     ^
-                  capture
+Adresse    : ----[ adresse stable                  ]----------
+Donnée     : ----[ donnée stable                   ]----------
+WRITE      : ________/‾‾‾‾‾‾‾‾‾‾‾‾‾\_______________________
+SELECT_W n : ‾‾‾‾‾‾‾‾\_____________/‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+                                   ^
+                                capture
 ```
+
+Les sept autres lignes SELECT_W restent hautes pendant toute la séquence :
+aucun autre registre ne voit de front.
 
 ### Questions
 
-1.  Pourquoi l'adresse doit-elle être stable pendant l'écriture ?
-2.  Pourquoi la donnée doit-elle être stable avant le front ?
-3.  Que se passe-t-il si deux SELECT sont actifs ?
-4.  Quelle différence entre sélectionner un registre et lire un registre
-    ?
+1.  Pourquoi l'adresse doit-elle être stable pendant toute la durée du
+    pulse WRITE ?
+2.  À quel instant précis la donnée est-elle capturée : au début ou à la
+    fin du pulse ? Justifiez à partir du chronogramme.
+3.  Que se passerait-il si le programme changeait la donnée entre l'étape
+    4 et l'étape 5 ?
+4.  Pourquoi les sept registres non adressés ne voient-ils aucun front
+    d'horloge ?
+5.  Quelle différence entre sélectionner un registre en écriture et le
+    sélectionner en lecture ?
 
 ------------------------------------------------------------------------
 
-## 5.13 Partie E --- Lire un octet sélectionné
+## 5.13 Partie E : Lire un octet sélectionné
 
 ### Séquence de lecture
 
@@ -1702,7 +2234,7 @@ trois lignes d'adresse et des lignes de commande.
 
 ------------------------------------------------------------------------
 
-## 5.15 Code Arduino --- fonctions d'adressage
+## 5.15 Code Arduino : fonctions d'adressage
 
 ``` cpp
 const byte DATA_PINS[8] = {
@@ -1742,7 +2274,7 @@ void writeMemory(byte address, byte value) {
 
 ------------------------------------------------------------------------
 
-## 5.16 Code Arduino --- lecture du bus
+## 5.16 Code Arduino : lecture du bus
 
 ``` cpp
 void setDataBusAsInput() {
@@ -1851,7 +2383,7 @@ void loop() {
 
 ------------------------------------------------------------------------
 
-## 5.18 Partie F --- Défi collectif
+## 5.18 Partie F : Défi collectif
 
 ### Cahier des charges
 
@@ -1920,7 +2452,7 @@ void testMemory() {
 
 ------------------------------------------------------------------------
 
-## 5.19 Partie G --- Diagnostic de pannes
+## 5.19 Partie G : Diagnostic de pannes
 
 Chaque groupe reçoit une panne volontaire.
 
@@ -1935,6 +2467,13 @@ Chaque groupe reçoit une panne volontaire.
 -   Une masse est absente.
 -   Un condensateur de découplage manque.
 -   Deux sorties sont actives en même temps.
+-   L'entrée E3 d'un décodeur est laissée en l'air (symptôme : plus
+    aucune écriture ne fonctionne, ou écritures erratiques).
+-   Une seule des deux broches de validation d'un 74HC541 est reliée à
+    SELECT_R, l'autre est en l'air (symptôme : le groupe ne parle jamais
+    sur le bus, alors que ses LED affichent la bonne valeur).
+-   Les lignes d'adresse ne sont câblées que sur un seul des deux
+    décodeurs (symptôme : on écrit à une adresse et on relit à une autre).
 
 ### Méthode de diagnostic
 
@@ -1957,10 +2496,13 @@ Chaque groupe reçoit une panne volontaire.
 3.  Pourquoi un conflit de bus peut-il endommager un circuit ?
 4.  Pourquoi faut-il tester chaque bloc avant l'intégration ?
 5.  Pourquoi une interface commune est-elle nécessaire ?
+6.  Un groupe affiche la bonne valeur sur ses LED mais ne renvoie rien
+    sur le bus. Où chercher en premier, et pourquoi les LED ne
+    suffisent-elles pas à valider un groupe ?
 
 ------------------------------------------------------------------------
 
-## 5.20 Partie H --- Extension : mémoire de 256 bits
+## 5.20 Partie H : Extension : mémoire de 256 bits
 
 Si le temps le permet, proposer le défi suivant :
 
@@ -2005,6 +2547,8 @@ Réponse :
 
 ------------------------------------------------------------------------
 
+<a id="sec-mem-6-evaluation"></a>
+
 # 6. Évaluation
 
 ## 6.1 Proposition de barème
@@ -2046,6 +2590,8 @@ Réponse :
 -   Le groupe participe au diagnostic collectif.
 
 ------------------------------------------------------------------------
+
+<a id="sec-mem-7-annexes-techniques"></a>
 
 # 7. Annexes techniques
 
@@ -2117,6 +2663,16 @@ Cela permet de faire le lien avec :
 
 ## 7.5 Vocabulaire
 
+### Termes introduits par l'architecture à deux décodeurs
+
+| Terme | Définition |
+|---|---|
+| Entrée de validation (*enable*) | Entrée qui autorise ou inhibe globalement le fonctionnement d'un circuit, indépendamment de ses autres entrées |
+| Logique active basse | Convention où un signal est considéré actif lorsqu'il est à l'état bas (0 V) |
+| Brochage *flow-through* | Disposition d'un boîtier où toutes les entrées sont d'un côté et toutes les sorties de l'autre, facilitant le tracé des liaisons |
+
+### Vocabulaire général
+
   -----------------------------------------------------------------------
   Terme                               Définition
   ----------------------------------- -----------------------------------
@@ -2167,6 +2723,8 @@ Cela permet de faire le lien avec :
 
 ------------------------------------------------------------------------
 
+<a id="sec-mem-conclusion-du-projet"></a>
+
 # Conclusion du projet
 
 Ce projet permet de faire comprendre que la mémoire informatique n'est
@@ -2216,8 +2774,8 @@ La phrase à retenir pour les étudiants est :
 | **Relais électromécanique** | Interrupteur mécanique commandé par une bobine : quand la bobine est alimentée, elle attire une armature qui fait basculer un contact. | Réalise concrètement la fonction mémoire du TP1 : le contact NO (normalement ouvert), une fois fermé, peut "s'auto-alimenter" et maintenir l'état après relâchement de la commande (boucle de maintien SET/RESET). |
 | **Bobine / électroaimant** | Fil de cuivre enroulé qui produit un champ magnétique lorsqu'il est parcouru par un courant. | Construit "à la main" au TP1 pour comprendre le principe physique qui se cache, en version miniaturisée, dans la bobine du relais. |
 | **74HC74** | Circuit intégré numérique contenant 2 bascules D indépendantes. | Chaque bascule mémorise 1 bit sur un front montant d'horloge (CLK) : 4 boîtiers = 8 bascules = 1 registre de 8 bits (1 octet). |
-| **74HC138** | Circuit intégré numérique "décodeur 3 vers 8" : à partir de 3 bits d'adresse, il active une seule sortie parmi 8. | Sélectionne, parmi les 8 groupes/registres de la classe, celui qui doit être lu ou écrit à un instant donné (adressage mémoire). |
-| **74HC244 / 74HC245** | Circuit intégré "buffer" à sorties trois états : chaque sortie peut valoir 0, 1, ou être totalement déconnectée électriquement ("haute impédance"). | Permet à plusieurs registres de partager les mêmes fils de bus DATA sans se marcher dessus : seul le registre sélectionné "prend la parole" sur le bus, les autres se mettent en haute impédance. |
+| **74HC138** | Circuit intégré numérique "décodeur 3 vers 8" : à partir de 3 bits d'adresse, il active une seule sortie parmi 8. Son entrée de validation E3 permet d'inhiber toutes les sorties d'un coup. | Sélectionne, parmi les 8 groupes/registres de la classe, celui qui doit être lu ou écrit à un instant donné. Le montage en utilise **deux** : l'un validé par WRITE, l'autre par READ (§5.8). |
+| **74HC541** | Circuit intégré "buffer" octal à sorties trois états : chaque sortie peut valoir 0, 1, ou être totalement déconnectée électriquement ("haute impédance"). Son brochage *flow-through* place les 8 entrées d'un côté et les 8 sorties de l'autre. | Permet à plusieurs registres de partager les mêmes fils de bus DATA sans se marcher dessus : seul le registre sélectionné "prend la parole" sur le bus, les autres se mettent en haute impédance. Équivalents possibles : 74HC244, 74HC245 (brochage moins commode). |
 | **DIP-switch 8 positions** | Bloc de 8 petits interrupteurs indépendants, au pas standard des breadboards. | Sert à fixer manuellement les 8 bits d'un octet avant de les écrire dans le registre (entrée de données D0 à D7). |
 | **Bouton-poussoir** | Interrupteur momentané : fermé uniquement pendant l'appui. | Génère un front (SET, RESET, CLOCK/WRITE) au moment précis où l'utilisateur appuie. |
 | **Breadboard** (plaque d'essai) | Support de prototypage sans soudure, avec des rangées de trous électriquement reliés par groupes. | Permet de câbler et modifier rapidement tous les montages du projet sans souder. |
