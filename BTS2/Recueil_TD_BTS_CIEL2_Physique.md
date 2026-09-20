@@ -11,10 +11,15 @@
     - [QCM diagnostique (état des lieux)](#sec-qcm-diagnostique-etat-des-lieux)
     - [QCM de validation (après les rappels)](#sec-qcm-de-validation-apres-les-rappels)
 - [Chapitre 1 : Électricité et optoélectronique](#sec-chapitre-1-electricite-et-optoelectronique)
-    - [1.1 Exercices d'application](#sec-1-1-exercices-d-application)
-    - [1.2 Exercices d'approfondissement](#sec-1-2-exercices-d-approfondissement)
-    - [1.3 QCM : puissances, décibels, atténuation et gains](#sec-1-3-qcm-puissances-decibels-attenuation-et-gains)
-    - [1.4 Exercices : décibels, gains et bilans de liaison](#sec-1-4-exercices-decibels-gains-et-bilans-de-liaison)
+    - [1.1 Bases de l'électricité](#sec-1-1-bases-de-l-electricite)
+    - [1.2 Circuits linéaires en régime sinusoïdal](#sec-1-2-circuits-lineaires-en-regime-sinusoidal)
+    - [1.3 Puissances, décibels, atténuation et gains](#sec-1-3-puissances-decibels-attenuation-et-gains)
+    - [1.4 Semi-conducteurs : la jonction PN et la diode](#sec-1-4-semi-conducteurs-la-jonction-pn-et-la-diode)
+    - [1.5 Bandes d'énergie et photons](#sec-1-5-bandes-d-energie-et-photons)
+    - [1.6 La diode électroluminescente (DEL/LED)](#sec-1-6-la-diode-electroluminescente-del-led)
+    - [1.7 La diode laser](#sec-1-7-la-diode-laser)
+    - [1.8 La photodiode](#sec-1-8-la-photodiode)
+    - [1.9 Le capteur CCD (Charge-Coupled Device)](#sec-1-9-le-capteur-ccd-charge-coupled-device)
     - [Corrigés du chapitre 1](#sec-corriges-du-chapitre-1)
 - [Chapitre 2 : Mesures et incertitudes](#sec-chapitre-2-mesures-et-incertitudes)
     - [2.1 Exercices d'application](#sec-2-1-exercices-d-application)
@@ -185,11 +190,13 @@ Durée : 20 min. 15 questions, correction immédiate en collectif.
 
 ## Chapitre 1 : Électricité et optoélectronique
 
-<a id="sec-1-1-exercices-d-application"></a>
+*Les exercices sont classés par sous-partie du cours (1.1 à 1.9). Chaque sous-partie comporte au moins un exercice d'application (à faire en séance, juste après le cours) et un exercice d'approfondissement (à la maison ou en fin de séance). La numérotation des exercices 1.1 à 1.10 est conservée ; les exercices 1.11 à 1.23 sont nouveaux.*
 
-### 1.1 Exercices d'application
+<a id="sec-1-1-bases-de-l-electricite"></a>
 
-**Exercice 1.1 : Pont diviseur de tension**
+### 1.1 Bases de l'électricité
+
+**Exercice 1.1 (application) : Pont diviseur de tension**
 
 Un pont diviseur de tension est réalisé avec $R_1 = 2{,}2$ kΩ (en haut) et $R_2 = 1$ kΩ (en bas), alimenté sous $E = 12$ V.
 
@@ -197,36 +204,54 @@ Un pont diviseur de tension est réalisé avec $R_1 = 2{,}2$ kΩ (en haut) et $R
 2) Calculer le courant circulant dans le pont.
 3) Calculer la puissance totale dissipée.
 
-**Exercice 1.2 : Caractéristique d'une diode**
-
-Sur une diode silicium on relève : $V = 0{,}5$ V → $I \approx 0$ mA ; $V = 0{,}65$ V → $I \approx 2$ mA ; $V = 0{,}7$ V → $I \approx 8$ mA.
-
-1) Que dire de la tension de seuil ?
-2) Pourquoi le courant croît-il aussi vite entre 0,65 V et 0,7 V ?
-
-<a id="sec-1-2-exercices-d-approfondissement"></a>
-
-### 1.2 Exercices d'approfondissement
-
-**Exercice 1.3 : Diviseur de tension en charge**
+**Exercice 1.3 (approfondissement) : Diviseur de tension en charge**
 
 Un pont diviseur $R_1 = 4{,}7$ kΩ / $R_2 = 2{,}2$ kΩ est alimenté sous $E = 10$ V. On y branche un appareil de mesure (charge) modélisé par une résistance $R_{ch} = 2{,}2$ kΩ en parallèle sur $R_2$.
+
+<p align="center">
+<img src="figures/TD/figure_td_01_pont_diviseur_en_charge.svg" alt="Figure TD 1 : Pont diviseur de tension en charge"/>
+</p>
+
+<p align="center"><em>Figure TD 1 : Pont diviseur de tension en charge.</em></p>
 
 1) Calculer la tension aux bornes de $R_2$ **à vide** (sans charge).
 2) Calculer la nouvelle résistance équivalente ($R_2 \, /\!/ \, R_{ch}$) puis la tension aux bornes de $R_2$ **en charge**.
 3) Comparer les deux résultats et expliquer, en une phrase, pourquoi un appareil de mesure doit avoir une résistance d'entrée la plus grande possible.
 
-**Exercice 1.4 : Atténuation en décibels sur une liaison**
+<a id="sec-1-2-circuits-lineaires-en-regime-sinusoidal"></a>
 
-Un signal de puissance $P_e = 2{,}0$ mW est injecté dans un câble ; en sortie, on mesure $P_s = 0{,}5$ mW.
+### 1.2 Circuits linéaires en régime sinusoïdal
 
-1) Calculer l'atténuation en dB : $A_{(dB)} = 10 \times \log_{10}\!\left(\dfrac{P_e}{P_s}\right)$.
-2) Si le câble atténue de façon linéaire (en dB par mètre) et mesure 25 m, calculer l'atténuation linéique en dB/m.
-3) Quelle longueur maximale de câble peut-on utiliser si l'atténuation totale ne doit pas dépasser 10 dB ?
+**Exercice 1.11 (application) : Résonance d'un dipôle RLC série**
 
-<a id="sec-1-3-qcm-puissances-decibels-attenuation-et-gains"></a>
+Un dipôle RLC série est constitué de $R = 15$ Ω, $L = 2{,}2$ mH et $C = 47$ nF. Il est alimenté par un générateur sinusoïdal de valeur efficace $U = 2{,}0$ V.
 
-### 1.3 QCM : puissances, décibels, atténuation et gains
+<p align="center">
+<img src="figures/TD/figure_td_02_dipole_rlc_serie.svg" alt="Figure TD 2 : Dipôle RLC série alimenté en tension sinusoïdale"/>
+</p>
+
+<p align="center"><em>Figure TD 2 : Dipôle RLC série alimenté en tension sinusoïdale.</em></p>
+
+1) Calculer la fréquence de résonance $f_0$.
+2) Calculer le facteur de qualité $Q$ et la bande passante à −3 dB $\Delta f$.
+3) À la résonance, quelle est l'intensité efficace dans le circuit ? Quelle est la tension efficace aux bornes du condensateur ? Commenter.
+4) Le dipôle est-il capacitif ou inductif à 5 kHz ? À 50 kHz ? Justifier sans calcul.
+
+**Exercice 1.12 (approfondissement) : Circuit d'accord d'un lecteur NFC**
+
+L'antenne d'un lecteur NFC est une boucle d'inductance $L = 1{,}5$ µH et de résistance série $R = 1{,}2$ Ω. On lui associe un condensateur $C$ pour former un circuit résonnant à $f_0 = 13{,}56$ MHz.
+
+1) Calculer la valeur de $C$ nécessaire.
+2) Calculer le facteur de qualité $Q$ et la bande passante $\Delta f$ du circuit.
+3) La modulation NFC occupe environ ±424 kHz autour de la porteuse. Le circuit tel quel laisse-t-il passer cette modulation ? Conclure.
+4) On souhaite ramener le facteur de qualité à $Q = 30$. Calculer la nouvelle bande passante et la résistance série totale à obtenir. Quelle résistance faut-il ajouter ?
+5) Expliquer en une phrase le compromis entre sélectivité (rejet du bruit) et bande passante (débit de données).
+
+<a id="sec-1-3-puissances-decibels-attenuation-et-gains"></a>
+
+### 1.3 Puissances, décibels, atténuation et gains
+
+**QCM : puissances, décibels, atténuation et gains**
 
 1. La formule du décibel pour un rapport de puissances est : *($A = 20\log_{10}(P_2/P_1)$ / $A = 10\log_{10}(P_2/P_1)$ / $A = \log_{10}(P_2/P_1)$ / $A = 10\,(P_2/P_1)$)*
 2. Un rapport de puissance ×2 correspond à : *(+2 dB / +3 dB / +6 dB / +10 dB)*
@@ -241,39 +266,43 @@ Un signal de puissance $P_e = 2{,}0$ mW est injecté dans un câble ; en sortie,
 11. Un signal à −5 dBm traverse un amplificateur de +15 dB puis un câble de −3 dB. Le niveau de sortie est : *(+7 dBm / +17 dBm / −13 dBm / +23 dBm)*
 12. La valeur efficace d'un signal sinusoïdal d'amplitude $U_{max}$ est : *($U_{max}$ / $U_{max}/2$ / $U_{max}/\sqrt{2}$ / $U_{max}\times\sqrt{2}$)*
 
-<a id="sec-1-4-exercices-decibels-gains-et-bilans-de-liaison"></a>
-
-### 1.4 Exercices : décibels, gains et bilans de liaison
-
-**Exercice 1.5 : Conversion simple**
+**Exercice 1.5 (application) : Conversion simple**
 
 Un amplificateur reçoit $P_e = 4$ mW en entrée et délivre $P_s = 200$ mW en sortie.
 
 1) Calculer le gain en dB.
 2) Ce gain vous semble-t-il réaliste pour un amplificateur audio courant ?
 
-**Exercice 1.6 : Formule inverse (tension)**
+**Exercice 1.6 (application) : Formule inverse (tension)**
 
 Un quadripôle présente une atténuation de −12 dB en tension. La tension d'entrée est $U_1 = 2{,}0$ V.
 
 1) Calculer le rapport $U_2/U_1$ correspondant à −12 dB.
 2) En déduire $U_2$.
 
-**Exercice 1.7 : Chaîne en cascade**
+**Exercice 1.7 (application) : Chaîne en cascade**
 
 Une chaîne de transmission comprend : un préamplificateur (+8 dB), un câble (−5 dB), un amplificateur de puissance (+25 dB), un connecteur (−0,5 dB).
 
 1) Calculer le gain total de la chaîne en dB.
 2) Convertir ce gain total en facteur linéaire (rapport de puissance).
 
-**Exercice 1.8 : Bilan de liaison Wi-Fi**
+**Exercice 1.8 (application) : Bilan de liaison Wi-Fi**
 
 Une borne Wi-Fi émet à $P_e = +18$ dBm. Le signal traverse un câble (−1,5 dB), une antenne d'émission de gain +6 dB, un trajet en espace libre qui atténue de 70 dB, puis une antenne de réception de gain +3 dB.
 
 1) Calculer la puissance reçue en dBm.
 2) Convertir cette puissance en mW puis en W.
 
-**Exercice 1.9 (avancé) : Portée maximale d'une liaison**
+**Exercice 1.4 (approfondissement) : Atténuation en décibels sur une liaison**
+
+Un signal de puissance $P_e = 2{,}0$ mW est injecté dans un câble ; en sortie, on mesure $P_s = 0{,}5$ mW.
+
+1) Calculer l'atténuation en dB : $A_{(dB)} = 10 \times \log_{10}\!\left(\dfrac{P_e}{P_s}\right)$.
+2) Si le câble atténue de façon linéaire (en dB par mètre) et mesure 25 m, calculer l'atténuation linéique en dB/m.
+3) Quelle longueur maximale de câble peut-on utiliser si l'atténuation totale ne doit pas dépasser 10 dB ?
+
+**Exercice 1.9 (approfondissement) : Portée maximale d'une liaison**
 
 Une liaison radio dispose d'un budget de liaison de 100 dB (différence entre puissance émise et sensibilité minimale du récepteur). L'atténuation en espace libre augmente d'environ 6 dB à chaque doublement de distance (approximation usuelle en propagation libre).
 
@@ -281,13 +310,165 @@ Une liaison radio dispose d'un budget de liaison de 100 dB (différence entre pu
 2) En doublant la distance à chaque fois (200 m, 400 m, 800 m...), combien de doublements supplémentaires la marge restante permet-elle avant d'atteindre la limite du budget ?
 3) En déduire une estimation grossière de la portée maximale de cette liaison.
 
-**Exercice 1.10 (avancé) : Équivalence linéaire/dB**
+**Exercice 1.10 (approfondissement) : Équivalence linéaire/dB**
 
 Un système A présente un gain de 40 dB. Un système B présente un gain linéaire de 8000.
 
 1) Convertir le gain du système A en gain linéaire.
 2) Convertir le gain du système B en dB.
 3) Lequel des deux systèmes amplifie le plus ?
+
+<a id="sec-1-4-semi-conducteurs-la-jonction-pn-et-la-diode"></a>
+
+### 1.4 Semi-conducteurs : la jonction PN et la diode
+
+**Exercice 1.2 (application) : Caractéristique d'une diode**
+
+Sur une diode silicium on relève : $V = 0{,}5$ V → $I \approx 0$ mA ; $V = 0{,}65$ V → $I \approx 2$ mA ; $V = 0{,}7$ V → $I \approx 8$ mA.
+
+1) Que dire de la tension de seuil ?
+2) Pourquoi le courant croît-il aussi vite entre 0,65 V et 0,7 V ?
+
+**Exercice 1.13 (approfondissement) : Résistance de protection et redressement**
+
+Une diode silicium (modèle « diode idéale + seuil », $V_{seuil} = 0{,}7$ V) est montée en série avec une résistance $R$ sous une alimentation continue $E = 9$ V. On souhaite un courant $I = 15$ mA.
+
+<p align="center">
+<img src="figures/TD/figure_td_03_diode_resistance_serie.svg" alt="Figure TD 3 : Diode (ou LED) avec résistance de protection en série"/>
+</p>
+
+<p align="center"><em>Figure TD 3 : Diode (ou LED) avec résistance de protection en série.</em></p>
+
+1) Calculer la valeur théorique de $R$, puis choisir la valeur normalisée la plus proche dans la série E12 (…, 470, 560, 680, …). Recalculer le courant réel.
+2) Calculer la puissance dissipée dans $R$. Une résistance « 1/4 W » convient-elle ?
+3) Calculer la puissance dissipée dans la diode.
+4) La diode est montée à l'envers par erreur. Donner $I$, $U_R$ et la tension aux bornes de la diode.
+5) On remplace l'alimentation continue par un signal sinusoïdal d'amplitude 12 V. Tracer l'allure de la tension aux bornes de $R$ sur une période et donner sa valeur maximale. Comment s'appelle cette fonction ?
+
+<a id="sec-1-5-bandes-d-energie-et-photons"></a>
+
+### 1.5 Bandes d'énergie et photons
+
+*Données : $h = 6{,}63 \times 10^{-34}$ J·s ; $c_0 = 3{,}0 \times 10^8$ m/s ; $1$ eV $= 1{,}6 \times 10^{-19}$ J ; $e = 1{,}6 \times 10^{-19}$ C.*
+
+**Exercice 1.14 (application) : Les trois longueurs d'onde des liaisons fibre**
+
+Les modules SFP émettent à 850 nm (liaisons courtes), 1310 nm et 1550 nm (liaisons longues).
+
+1) Calculer la fréquence $\nu$ de chacun de ces rayonnements.
+2) Calculer l'énergie d'un photon pour chacune, en joule puis en électronvolt.
+3) Le silicium a un gap $\Delta E \approx 1{,}1$ eV. Lesquels de ces photons une photodiode en silicium peut-elle détecter ? Justifier.
+4) Le gap de l'InGaAs vaut environ 0,75 eV. Que peut-on en conclure sur le matériau des récepteurs des liaisons longues ?
+
+**Exercice 1.15 (approfondissement) : Longueur d'onde de coupure et courant photonique**
+
+1) Calculer la longueur d'onde maximale $\lambda_{max}$ qu'un photon peut avoir pour faire franchir le gap du silicium ($\Delta E = 1{,}1$ eV). Dans quel domaine du spectre se situe-t-elle ?
+2) Un récepteur reçoit une puissance optique de −20 dBm à 1310 nm. Convertir cette puissance en watt.
+3) En utilisant l'énergie du photon à 1310 nm (exercice 1.14), calculer le nombre de photons reçus par seconde.
+4) Si chaque photon absorbé libère un électron (rendement quantique de 100 %), calculer le courant électrique correspondant. Commenter l'ordre de grandeur.
+
+<a id="sec-1-6-la-diode-electroluminescente-del-led"></a>
+
+### 1.6 La diode électroluminescente (DEL/LED)
+
+**Exercice 1.16 (application) : Couleur et gap, résistance de protection d'une LED**
+
+Les LED de face avant d'un switch réseau sont rouge ($\lambda = 650$ nm), verte ($\lambda = 525$ nm) et bleue ($\lambda = 470$ nm).
+
+1) Calculer le gap $\Delta E$ (en eV) du matériau de chaque LED.
+2) Classer les trois matériaux par gap croissant. Que remarque-t-on ?
+3) La LED verte a une tension directe $V_F = 2{,}2$ V et doit être parcourue par $I = 10$ mA sous une alimentation de 5 V (montage de la figure TD 3). Calculer la résistance de protection, choisir la valeur E12 immédiatement supérieure et recalculer le courant.
+4) Pourquoi ne peut-on pas obtenir une LED bleue en plaçant un filtre bleu devant une LED rouge ?
+
+**Exercice 1.17 (approfondissement) : LED infrarouge d'un module SFP et budget optique**
+
+Un module SFP « courte distance » utilise une LED en arséniure de gallium (GaAs, gap $\Delta E = 1{,}42$ eV).
+
+1) Calculer la longueur d'onde émise et la comparer aux 850 nm annoncés.
+2) Une LED émet en réalité sur une largeur spectrale d'environ 40 nm autour de sa longueur d'onde centrale, alors qu'une diode laser émet sur moins de 1 nm. Expliquer, à l'aide du mécanisme d'émission (spontanée ou stimulée), l'origine de cette différence.
+3) La LED injecte une puissance optique de 1 mW dans une fibre. Exprimer cette puissance en dBm.
+4) La liaison comporte 300 m de fibre (atténuation 3,5 dB/km à 850 nm) et deux connecteurs de 0,5 dB chacun. Calculer la puissance reçue en dBm.
+5) La photodiode du récepteur a une sensibilité de −17 dBm. Calculer la marge de la liaison. Quelle longueur de fibre maximale cette LED autoriserait-elle avec ces deux connecteurs ?
+
+<a id="sec-1-7-la-diode-laser"></a>
+
+### 1.7 La diode laser
+
+**Exercice 1.18 (application) : Cavité résonnante d'une diode laser**
+
+Une diode laser à 1550 nm possède une cavité de longueur $L_{cav} = 300$ µm dans un semi-conducteur d'indice de réfraction $n = 3{,}5$. Dans le matériau, la longueur d'onde vaut $\lambda = \lambda_0 / n$.
+
+1) Calculer la longueur d'onde $\lambda$ dans le matériau.
+2) La cavité impose $L_{cav} = k \times \lambda / 2$ avec $k$ entier. Calculer $k$.
+3) Deux modes voisins ($k$ et $k+1$) sont séparés de $\Delta\lambda = \dfrac{\lambda_0^2}{2 n L_{cav}}$. Calculer $\Delta\lambda$.
+4) La diode laser délivre +3 dBm. Convertir en mW.
+
+**Exercice 1.19 (approfondissement) : LED ou laser pour une liaison de 20 km ?**
+
+On compare deux émetteurs à 1550 nm pour une liaison fibre de 20 km : une LED (puissance −3 dBm, largeur spectrale 50 nm) et une diode laser (puissance +3 dBm, largeur spectrale 0,1 nm). La fibre atténue de 0,2 dB/km et présente une dispersion chromatique $D = 17$ ps/(nm·km) : une impulsion s'étale de $\Delta t = D \times \Delta\lambda \times L$. Le récepteur a une sensibilité de −20 dBm.
+
+<p align="center">
+<img src="figures/TD/figure_td_04_liaison_fibre_emetteur_recepteur.svg" alt="Figure TD 4 : Chaîne de transmission optique émetteur / fibre / photodiode"/>
+</p>
+
+<p align="center"><em>Figure TD 4 : Chaîne de transmission optique émetteur / fibre / photodiode.</em></p>
+
+1) Calculer l'atténuation totale de la fibre puis la puissance reçue avec chaque émetteur. Le bilan de puissance est-il satisfait dans les deux cas ?
+2) Calculer l'étalement $\Delta t$ d'une impulsion pour chaque émetteur.
+3) À 1 Gbit/s, un bit dure 1 ns ; à 10 Gbit/s, 100 ps. Pour rester lisible, l'étalement doit rester nettement inférieur à la durée d'un bit. Quel(s) débit(s) chaque émetteur permet-il ?
+4) Conclure : pourquoi les liaisons longue distance utilisent-elles une diode laser, alors même que le bilan de puissance de la LED était correct ?
+
+<a id="sec-1-8-la-photodiode"></a>
+
+### 1.8 La photodiode
+
+**Exercice 1.20 (application) : Photodiode en mode photoconducteur**
+
+Une photodiode silicium de sensibilité $S = 0{,}5$ A/W (courant inverse par watt de flux reçu) est polarisée en inverse par une alimentation de 5 V à travers une résistance $R = 10$ kΩ. On mesure la tension $U_R$ aux bornes de $R$.
+
+<p align="center">
+<img src="figures/TD/figure_td_05_photodiode_mode_photoconducteur.svg" alt="Figure TD 5 : Photodiode polarisée en inverse avec résistance de mesure"/>
+</p>
+
+<p align="center"><em>Figure TD 5 : Photodiode polarisée en inverse avec résistance de mesure.</em></p>
+
+1) Le flux reçu vaut 20 µW. Calculer le courant inverse $I$ puis $U_R$.
+2) Même question pour un flux de 100 µW.
+3) Que peut-on dire de la relation entre $U_R$ et le flux lumineux ? Quel est l'intérêt de ce montage ?
+4) Au-delà de quel flux le montage sature-t-il (la tension $U_R$ ne pouvant dépasser 5 V) ?
+
+**Exercice 1.21 (approfondissement) : Récepteur d'une liaison fibre**
+
+Le récepteur d'une liaison à 1310 nm utilise une photodiode InGaAs de sensibilité $S = 0{,}9$ A/W suivie d'un amplificateur transimpédance qui convertit le courant en tension : $U = R_f \times I$ avec $R_f = 10$ kΩ.
+
+1) La puissance reçue vaut −20 dBm. Calculer le courant de la photodiode puis la tension $U$.
+2) Même question pour une puissance reçue de −30 dBm.
+3) Dans l'obscurité, la photodiode débite un courant résiduel de 5 nA (courant d'obscurité). À quelle puissance optique, en W puis en dBm, ce courant correspond-il ?
+4) Expliquer pourquoi le courant d'obscurité limite la sensibilité du récepteur.
+5) La même photodiode, non polarisée, est éclairée par le soleil. Dans quel mode fonctionne-t-elle et à quoi peut-elle alors servir ?
+
+<a id="sec-1-9-le-capteur-ccd-charge-coupled-device"></a>
+
+### 1.9 Le capteur CCD (Charge-Coupled Device)
+
+**Exercice 1.22 (application) : Flux de données d'une caméra IP**
+
+Une caméra IP utilise un capteur de 1920 × 1080 pixels. Chaque pixel est converti par un CAN sur 12 bits.
+
+1) Calculer le nombre de pixels du capteur.
+2) Calculer la quantité de données d'une image brute, en bits puis en octets.
+3) À 25 images par seconde, calculer le débit brut en Mbit/s. Que faut-il en conclure pour la transmission sur le réseau ?
+4) Les charges sont transférées vers le CAN au rythme d'un pixel par coup d'horloge, à 100 MHz. Calculer le temps de lecture d'une image complète et la cadence maximale d'images par seconde.
+
+**Exercice 1.23 (approfondissement) : Saturation d'un pixel**
+
+Un pixel de capteur CCD peut stocker au maximum 20 000 électrons (capacité du puits). Il reçoit une lumière verte ($\lambda = 550$ nm) d'une puissance de 2 pW pendant un temps d'exposition de 10 ms. Le rendement quantique du capteur vaut 40 % (un photon sur 2,5 crée un électron).
+
+1) Calculer l'énergie d'un photon à 550 nm.
+2) Calculer l'énergie lumineuse reçue par le pixel pendant l'exposition, puis le nombre de photons reçus.
+3) Calculer le nombre d'électrons créés. Le pixel est-il saturé ?
+4) Calculer le temps d'exposition maximal pour éviter la saturation.
+5) Le CAN convertit la charge sur 12 bits. À combien d'électrons correspond un niveau de quantification ?
 
 <a id="sec-corriges-du-chapitre-1"></a>
 
@@ -319,6 +500,89 @@ Un système A présente un gain de 40 dB. Un système B présente un gain linéa
 
 **Exercice 1.10.** 1) $G_A = 10^{40/10} = 10^4 = 10\,000$. 2) $G_{B(dB)} = 10 \log_{10}(8000) \approx 39{,}0$ dB. 3) Le système A (gain 10 000, soit 40 dB) amplifie légèrement plus que le système B (gain 8000, soit 39 dB).
 
+**Exercice 1.11.**
+1) $f_0 = \dfrac{1}{2\pi\sqrt{LC}} = \dfrac{1}{2\pi\sqrt{2{,}2 \times 10^{-3} \times 47 \times 10^{-9}}} \approx 15{,}7$ kHz.
+2) $Q = \dfrac{1}{R}\sqrt{\dfrac{L}{C}} = \dfrac{1}{15}\sqrt{\dfrac{2{,}2 \times 10^{-3}}{47 \times 10^{-9}}} \approx 14{,}4$ ; $\Delta f = f_0/Q \approx 1{,}09$ kHz.
+3) À la résonance $\underline{Z} = R$ : $I_{eff} = U/R = 2{,}0/15 \approx 133$ mA. $U_C = Q \times U = 14{,}4 \times 2{,}0 \approx 28{,}8$ V : la tension aux bornes du condensateur est près de 15 fois la tension d'alimentation (surtension) ; le condensateur doit tenir au moins cette tension.
+4) À 5 kHz ($f < f_0$), le terme $1/(C\omega)$ domine : comportement capacitif. À 50 kHz ($f > f_0$), $L\omega$ domine : comportement inductif.
+
+**Exercice 1.12.**
+1) $LC\omega_0^2 = 1 \Rightarrow C = \dfrac{1}{L(2\pi f_0)^2} = \dfrac{1}{1{,}5 \times 10^{-6} \times (2\pi \times 13{,}56 \times 10^6)^2} \approx 91{,}8$ pF.
+2) $Q = \dfrac{L\omega_0}{R} = \dfrac{1{,}5 \times 10^{-6} \times 8{,}52 \times 10^7}{1{,}2} \approx 106$ ; $\Delta f = f_0/Q \approx 128$ kHz.
+3) La modulation occupe environ 850 kHz (±424 kHz) : la bande passante de 128 kHz est très insuffisante, le circuit couperait les bandes latérales et les données ne passeraient pas.
+4) $Q = 30 \Rightarrow \Delta f = 13{,}56 \times 10^6 / 30 \approx 452$ kHz. $R_{tot} = L\omega_0/Q = 127{,}8/30 \approx 4{,}26$ Ω : il faut ajouter environ $4{,}26 - 1{,}2 \approx 3{,}1$ Ω en série. La bande passante (452 kHz) devient compatible avec la modulation (les sous-porteuses à ±424 kHz sont juste à la limite ; en pratique on vise plutôt $Q \approx 20$ à 30).
+5) Un Q élevé rejette mieux le bruit hors bande mais étrangle la bande passante, donc le débit : l'antenne est accordée pour un compromis entre sélectivité et débit de données.
+
+**Exercice 1.13.**
+1) $R = \dfrac{E - V_{seuil}}{I} = \dfrac{9 - 0{,}7}{0{,}015} \approx 553$ Ω → valeur E12 : 560 Ω. $I_{réel} = 8{,}3/560 \approx 14{,}8$ mA.
+2) $P_R = U_R \times I = 8{,}3 \times 0{,}0148 \approx 0{,}123$ W : une résistance 1/4 W (0,25 W) convient, avec une marge d'environ 2.
+3) $P_{diode} = V_{seuil} \times I = 0{,}7 \times 0{,}0148 \approx 10{,}4$ mW.
+4) Diode bloquée : $I = 0$, $U_R = 0$, la diode supporte toute la tension : $U_{diode} = -9$ V (en inverse).
+5) Pendant l'alternance positive (au-delà de 0,7 V), la diode conduit et $U_R = u(t) - 0{,}7$ ; pendant l'alternance négative, $U_R = 0$. Valeur maximale : $12 - 0{,}7 = 11{,}3$ V. C'est un redressement simple alternance.
+
+**Exercice 1.14.**
+1) $\nu = c_0/\lambda$ : 850 nm → $3{,}53 \times 10^{14}$ Hz ; 1310 nm → $2{,}29 \times 10^{14}$ Hz ; 1550 nm → $1{,}94 \times 10^{14}$ Hz.
+2) $E = hc_0/\lambda$ : 850 nm → $2{,}34 \times 10^{-19}$ J ≈ 1,46 eV ; 1310 nm → $1{,}52 \times 10^{-19}$ J ≈ 0,95 eV ; 1550 nm → $1{,}28 \times 10^{-19}$ J ≈ 0,80 eV.
+3) Seul le photon à 850 nm (1,46 eV > 1,1 eV) peut faire franchir le gap du silicium ; à 1310 et 1550 nm, l'énergie du photon est inférieure au gap : le silicium est transparent, la photodiode ne détecte rien.
+4) Les récepteurs des liaisons longues doivent utiliser un matériau à gap plus petit que 0,95 eV : l'InGaAs (0,75 eV) convient pour 1310 et 1550 nm.
+
+**Exercice 1.15.**
+1) $\lambda_{max} = \dfrac{hc_0}{\Delta E} = \dfrac{6{,}63 \times 10^{-34} \times 3{,}0 \times 10^8}{1{,}1 \times 1{,}6 \times 10^{-19}} \approx 1{,}13$ µm = 1130 nm : proche infrarouge.
+2) $-20$ dBm $= 10^{-20/10}$ mW $= 0{,}01$ mW $= 1{,}0 \times 10^{-5}$ W.
+3) $N = \dfrac{P}{E_{photon}} = \dfrac{1{,}0 \times 10^{-5}}{1{,}52 \times 10^{-19}} \approx 6{,}6 \times 10^{13}$ photons par seconde.
+4) $I = N \times e = 6{,}6 \times 10^{13} \times 1{,}6 \times 10^{-19} \approx 1{,}05 \times 10^{-5}$ A ≈ 10,5 µA. Un courant de l'ordre du microampère : il faut l'amplifier avant tout traitement (voir exercice 1.21).
+
+**Exercice 1.16.**
+1) $\Delta E = hc_0/\lambda$ : rouge 650 nm → 1,91 eV ; verte 525 nm → 2,37 eV ; bleue 470 nm → 2,64 eV.
+2) Rouge < verte < bleue : plus le gap est grand, plus la longueur d'onde est courte (photon plus énergétique).
+3) $R = \dfrac{5 - 2{,}2}{0{,}010} = 280$ Ω → E12 immédiatement supérieure : 330 Ω. $I = 2{,}8/330 \approx 8{,}5$ mA.
+4) Un filtre ne peut que retirer de la lumière : les photons rouges (1,91 eV) ne peuvent pas devenir bleus (2,64 eV). La couleur est fixée par le gap du matériau, pas par un filtre.
+
+**Exercice 1.17.**
+1) $\lambda = \dfrac{hc_0}{\Delta E} = \dfrac{6{,}63 \times 10^{-34} \times 3{,}0 \times 10^8}{1{,}42 \times 1{,}6 \times 10^{-19}} \approx 875$ nm, proche des 850 nm annoncés (l'écart vient des valeurs approchées et du dopage du matériau réel).
+2) Dans une LED, l'émission est spontanée : chaque recombinaison produit un photon d'énergie légèrement différente (agitation thermique, largeur des bandes), d'où un spectre large. Dans un laser, l'émission stimulée produit des photons identiques et la cavité ne sélectionne qu'une longueur d'onde : spectre très étroit.
+3) $P = 10 \log_{10}(1/1) = 0$ dBm.
+4) Pertes : $3{,}5 \times 0{,}3 = 1{,}05$ dB (fibre) $+ 2 \times 0{,}5 = 1$ dB (connecteurs) = 2,05 dB. $P_{reçue} = 0 - 2{,}05 = -2{,}05$ dBm.
+5) Marge $= -2{,}05 - (-17) \approx 15$ dB. Longueur maximale : $(17 - 1)/3{,}5 \approx 4{,}6$ km en pur bilan de puissance (en pratique, la dispersion limite bien avant, voir exercice 1.19).
+
+**Exercice 1.18.**
+1) $\lambda = 1550/3{,}5 \approx 443$ nm.
+2) $k = \dfrac{2 L_{cav}}{\lambda} = \dfrac{2 \times 300 \times 10^{-6}}{443 \times 10^{-9}} \approx 1355$.
+3) $\Delta\lambda = \dfrac{(1550 \times 10^{-9})^2}{2 \times 3{,}5 \times 300 \times 10^{-6}} \approx 1{,}14$ nm.
+4) $P = 10^{3/10} \approx 2{,}0$ mW.
+
+**Exercice 1.19.**
+1) Atténuation $= 0{,}2 \times 20 = 4$ dB. LED : $-3 - 4 = -7$ dBm ; laser : $+3 - 4 = -1$ dBm. Les deux sont au-dessus de −20 dBm : le bilan de puissance est satisfait dans les deux cas.
+2) LED : $\Delta t = 17 \times 50 \times 20 = 17\,000$ ps = 17 ns. Laser : $\Delta t = 17 \times 0{,}1 \times 20 = 34$ ps.
+3) LED : 17 ns ≫ 1 ns, aucun des deux débits n'est possible. Laser : 34 ps ≪ 1 ns et reste inférieur à 100 ps : 1 Gbit/s et 10 Gbit/s sont possibles.
+4) La limite n'est pas la puissance mais la dispersion chromatique : le spectre large de la LED étale les impulsions jusqu'à les rendre illisibles. La diode laser, quasi monochromatique, est indispensable pour les liaisons longues à haut débit.
+
+**Exercice 1.20.**
+1) $I = S \times \Phi = 0{,}5 \times 20 \times 10^{-6} = 10$ µA ; $U_R = R \times I = 10^4 \times 10^{-5} = 0{,}10$ V.
+2) $I = 50$ µA ; $U_R = 0{,}50$ V.
+3) $U_R$ est proportionnelle au flux : le montage convertit linéairement un flux lumineux en tension mesurable (capteur de lumière, récepteur optique).
+4) $U_R = 5$ V $\Rightarrow I = 0{,}5$ mA $\Rightarrow \Phi = I/S = 1$ mW. Au-delà, la photodiode n'est plus polarisée en inverse et la tension ne suit plus le flux.
+
+**Exercice 1.21.**
+1) $-20$ dBm $= 10$ µW ; $I = 0{,}9 \times 10 \times 10^{-6} = 9$ µA ; $U = 10^4 \times 9 \times 10^{-6} = 90$ mV.
+2) $-30$ dBm $= 1$ µW ; $I = 0{,}9$ µA ; $U = 9$ mV.
+3) $\Phi = I/S = 5 \times 10^{-9}/0{,}9 \approx 5{,}6$ nW $= 5{,}6 \times 10^{-9}$ W, soit $10\log_{10}(5{,}6 \times 10^{-6}) \approx -52{,}5$ dBm.
+4) Un signal optique dont le courant est comparable au courant d'obscurité ne peut plus en être distingué : le courant d'obscurité fixe un plancher de bruit, donc la puissance minimale détectable.
+5) Non polarisée et éclairée, elle fonctionne en mode photovoltaïque : elle se comporte en générateur, comme une cellule solaire.
+
+**Exercice 1.22.**
+1) $1920 \times 1080 = 2\,073\,600$ pixels.
+2) $2\,073\,600 \times 12 = 24\,883\,200$ bits ≈ 24,9 Mbit ≈ 3,1 Mo.
+3) $24{,}9 \times 25 \approx 622$ Mbit/s brut : un flux impossible à transmettre tel quel sur un lien Fast Ethernet et lourd même en Gigabit, d'où la nécessité d'une compression vidéo (H.264, H.265) avant l'envoi sur le réseau.
+4) $t = 2\,073\,600 / 10^8 \approx 20{,}7$ ms ; cadence maximale $\approx 1/0{,}0207 \approx 48$ images par seconde.
+
+**Exercice 1.23.**
+1) $E = hc_0/\lambda = 3{,}62 \times 10^{-19}$ J (≈ 2,26 eV).
+2) $E_{reçue} = 2 \times 10^{-12} \times 0{,}010 = 2 \times 10^{-14}$ J ; $N = 2 \times 10^{-14} / 3{,}62 \times 10^{-19} \approx 55\,300$ photons.
+3) $N_e = 0{,}40 \times 55\,300 \approx 22\,100$ électrons > 20 000 : le pixel est saturé (blanc).
+4) $t_{max} = 10 \text{ ms} \times 20\,000/22\,100 \approx 9{,}0$ ms.
+5) $2^{12} = 4096$ niveaux ; $20\,000/4096 \approx 4{,}9$ électrons par niveau.
+
 ---
 
 <div style="page-break-after: always;"></div>
@@ -327,6 +591,7 @@ Un système A présente un gain de 40 dB. Un système B présente un gain linéa
 
 <div style="page-break-after: always;"></div>
 
+</file_text>
 <a id="sec-chapitre-2-mesures-et-incertitudes"></a>
 
 ## Chapitre 2 : Mesures et incertitudes
@@ -551,7 +816,7 @@ En sortie de câble, le signal attaque une résistance d'adaptation $R = 50$ Ω,
 
 ### 7.2 Annales officielles
 
-Deux annales officielles du domaine de la physique de l'épreuve E4 (BTS CIEL Option A – Informatique et Réseaux), à traiter en conditions d'épreuve (1h30) ou à découper par partie selon l'avancement du programme. Les corrigés officiels ne sont pas repris ici (à corriger en classe ou à partir du corrigé académique). Les figures reproduites ci-dessous sont des pages scannées des sujets originaux.
+Deux annales officielles du domaine de la physique de l'épreuve E4 (BTS CIEL Option A : Informatique et Réseaux), à traiter en conditions d'épreuve (1h30) ou à découper par partie selon l'avancement du programme. Les corrigés officiels ne sont pas repris ici (à corriger en classe ou à partir du corrigé académique). Les figures reproduites ci-dessous sont des pages scannées des sujets originaux.
 
 <a id="sec-annale-session-2026-sujet-blanc-domaine-de-la-physique-1h30-"></a>
 
@@ -559,7 +824,7 @@ Deux annales officielles du domaine de la physique de l'épreuve E4 (BTS CIEL Op
 
 **Contexte :** la société CISS propose un système de paiement sans contact (bracelets NFC) pour des festivals : *CISS Cashless Online*. Un stand de service autonome de distribution de boissons est ajouté au système ; il comporte un débitmètre à impulsions, un capteur de force (pont de Wheatstone) pour détecter les fûts vides, une communication NFC entre lecteur et bracelet, et des antennes Wi-Fi 5 GHz pour la supervision réseau.
 
-#### Partie 3 – Validation du choix du débitmètre
+#### Partie 3 : Validation du choix du débitmètre
 
 Le débitmètre à impulsions OF-10 ZZT doit être capable de mesurer un débit maximum proche de 300 L/h (300 000 cm³/h), et remplir un verre de 0,25 L (250 cm³) en moins de 11 s.
 
@@ -585,7 +850,7 @@ Q47. Calculer le nombre d'impulsions, noté N_I2, nécessaires en sortie du déb
 Q48. Calculer le temps maximal, noté T_MAX, nécessaire pour remplir un verre de 0,25 L si le temps entre deux impulsions correspond à ΔT_MAX.
 Q49. Commenter la validité du débitmètre OF-10 ZZT d'après les deux critères à vérifier.
 
-#### Partie 4 – Détection des fûts de boisson vides
+#### Partie 4 : Détection des fûts de boisson vides
 
 Le capteur de force (4 jauges de contraintes en pont de Wheatstone) mesure la masse du fût. Une alerte doit se déclencher pour une masse de 6,8 kg (2 L restants), soit ΔU_alerte = 6,8 mV. Le montage : E = 5,0 V ; R₁ = R₃ = R₀ − ΔR ; R₂ = R₄ = R₀ + ΔR. La chaîne de mesure est : pont de Wheatstone → amplificateur ×130 → CAN (résolution 24 bits, U_PE = 5,00 V). La relation $\Delta U = 10^{-3} \times \Delta m$ relie la variation de tension (V) à la variation de masse (kg).
 
@@ -601,7 +866,7 @@ Q53. Calculer la tension U_a,alerte correspondant à ΔU_alerte.
 Q54. En déduire la valeur numérique décimale N_alerte en sortie du CAN correspondant à cette alerte.
 Q55. Calculer la résolution analogique de la chaîne de mesure (sachant qu'elle doit être de 2 kg), et conclure si la résolution de 24 bits est suffisante et judicieuse.
 
-#### Partie 5 – Caractérisation du protocole de communication NFC
+#### Partie 5 : Caractérisation du protocole de communication NFC
 
 La communication NFC (standard ISO/IEC 14443 type A) se fait à f_p = 13,56 MHz, modulation d'amplitude, débit théorique 106 kbits/s, codage de Miller modifié.
 
@@ -621,7 +886,7 @@ Q59. En déduire le nom de la commande transmise au tag.
 Q60. Mesurer la fréquence de la porteuse f_porteuse à l'aide du spectre.
 Q61. Conclure sur la validité des caractéristiques de fréquence et de débit binaire de la communication NFC.
 
-#### Partie 6 – Choix des antennes
+#### Partie 6 : Choix des antennes
 
 Étude de la transmission Wi-Fi 5 GHz en espace libre entre les terminaux et deux points d'accès (AP1, AP2, Cisco Aironet 3702e), distance maximale mesurée : 65,0 m. Fréquences : f_Wi-Fi1 = 5,50 GHz (AP1), f_Wi-Fi2 = 5,54 GHz (AP2).
 
@@ -664,7 +929,7 @@ Q66. Déterminer, en le(s) justifiant, le(s) choix d'antenne(s) pour AP1 puis po
 
 **Contexte :** un système de gestion de parking utilise une boucle magnétique pour détecter les véhicules à l'entrée, un bus RS485 pour piloter des panneaux d'affichage de places, et des capteurs LoRaWAN pour localiser les places vides.
 
-#### Partie 3 – Dimensionnement du détecteur de véhicule
+#### Partie 3 : Dimensionnement du détecteur de véhicule
 
 Une boucle magnétique (bobine d'inductance L, N spires) détecte le passage d'un véhicule par variation de fréquence du signal généré (f₀ à vide, f₁ au passage d'un véhicule). Dimensions de la boucle : rectangle 4,3 m × 1,5 m.
 
@@ -693,7 +958,7 @@ Fréquence de la sinusoïde : $f = \dfrac{1}{2\pi\sqrt{LC}}$, avec C = 70 µF (c
 Q52. Calculer la valeur L₁ de l'inductance de la boucle au passage du véhicule.
 Q53. Vérifier si L₀ et L₁ sont dans la plage optimale (80-300 µH).
 
-#### Partie 4 – Dépannage de la liaison RS485
+#### Partie 4 : Dépannage de la liaison RS485
 
 Un défaut d'affichage est observé sur les panneaux reliés par bus RS485 (9600 bauds ± 5 %) à une SEVEN BOX. Deux hypothèses : (1) erreur de configuration du débit binaire, (2) défaut sur la ligne de transmission. Vitesse des ondes dans la ligne : 2,0×10⁸ m/s.
 
@@ -722,7 +987,7 @@ Q63. Calculer la distance d entre l'entrée de la ligne et le défaut.
 
 Q64. Conclure sur la qualité de la réparation.
 
-#### Partie 5 – Amélioration du système de localisation des places vides grâce aux capteurs LoRa
+#### Partie 5 : Amélioration du système de localisation des places vides grâce aux capteurs LoRa
 
 Un capteur de présence LW009-SM (LoRaWAN) est étudié pour équiper des places de parking sur deux niveaux (−1 et −2), la passerelle étant au niveau −1. Distance maximale capteur-passerelle : 100 m.
 
