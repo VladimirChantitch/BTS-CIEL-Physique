@@ -4,24 +4,34 @@
 ## Table des matières
 
 - [0. Aide-mémoire : unités et équivalences](#sec-0-aide-memoire-unites-et-equivalences)
+- [Index des TP](#sec-index-des-tp)
+- [Fiche outil : prise en main de Falstad](#sec-fiche-outil-prise-en-main-de-falstad)
 - [Séance de rentrée : organisation du TP tournant](#sec-seance-de-rentree-organisation-du-tp-tournant)
 - [Chapitre 1 : Électricité et optoélectronique](#sec-chapitre-1-electricite-et-optoelectronique)
-    - [1.1 Atelier 2 : Bases de l'électricité (55 min)](#sec-1-1-atelier-2-bases-de-l-electricite-55-min)
-    - [1.2 Atelier 4, option A : caractéristique d'une diode (55 min)](#sec-1-2-atelier-4-option-a-caracteristique-d-une-diode-55-min)
+    - [TP 1.1 : Bases de l'électricité](#sec-tp-1-1-bases-de-l-electricite)
+        - [Version simulée du TP 1.1 (Falstad ou Tinkercad Circuits)](#sec-version-simulee-du-tp-1-1-falstad-ou-tinkercad-circuits)
+    - [TP 1.2 : Caractéristique d'une diode](#sec-tp-1-2-caracteristique-d-une-diode)
+        - [Version Falstad du TP 1.2 (version de référence) : tracer la caractéristique d'une diode](#sec-version-falstad-du-tp-1-2-version-de-reference-tracer-la-caracteristiq)
+    - [TP 1.3 : Condensateur et bobine en régime sinusoïdal : impédance et déphasage](#sec-tp-1-3-condensateur-et-bobine-en-regime-sinusoidal-impedance-et-dephas)
+    - [TP 1.4 : Résonance d'un dipôle RLC série](#sec-tp-1-4-resonance-d-un-dipole-rlc-serie)
+    - [TP 1.5 : Théorème de superposition et modèle de Thévenin](#sec-tp-1-5-theoreme-de-superposition-et-modele-de-thevenin)
+    - [TP 1.6 : Décibels et chaîne d'atténuateurs](#sec-tp-1-6-decibels-et-chaine-d-attenuateurs)
+    - [TP 1.7 : LED : tension de seuil, couleur et longueur d'onde](#sec-tp-1-7-led-tension-de-seuil-couleur-et-longueur-d-onde)
+    - [TP 1.8 (pour aller plus loin) : Photodiode : deux modes de fonctionnement](#sec-tp-1-8-pour-aller-plus-loin-photodiode-deux-modes-de-fonctionnement)
 - [Chapitre 2 : Mesures et incertitudes](#sec-chapitre-2-mesures-et-incertitudes)
-    - [2.1 Atelier 1 : Mesures et incertitudes (55 min)](#sec-2-1-atelier-1-mesures-et-incertitudes-55-min)
+    - [TP 2.1 : Mesures et incertitudes](#sec-tp-2-1-mesures-et-incertitudes)
+        - [Version simulée du TP 2.1 (tableur)](#sec-version-simulee-du-tp-2-1-tableur)
 - [Chapitre 3 : Ondes et propagation](#sec-chapitre-3-ondes-et-propagation)
-    - [3.1 Atelier 3 : Ondes : GBF et oscilloscope (55 min)](#sec-3-1-atelier-3-ondes-gbf-et-oscilloscope-55-min)
+    - [TP 3.1 : Ondes : GBF et oscilloscope](#sec-tp-3-1-ondes-gbf-et-oscilloscope)
+        - [Version simulée du TP 3.1 (Falstad, GBF et oscilloscope intégrés)](#sec-version-simulee-du-tp-3-1-falstad-gbf-et-oscilloscope-integres)
 - [Chapitre 4 : Systèmes bouclés et asservissement](#sec-chapitre-4-systemes-boucles-et-asservissement)
-    - [4.1 Atelier 4, option B : boucle ouverte / boucle fermée (55 min)](#sec-4-1-atelier-4-option-b-boucle-ouverte-boucle-fermee-55-min)
+    - [TP 4.1 : Boucle ouverte / boucle fermée](#sec-tp-4-1-boucle-ouverte-boucle-fermee)
+        - [Version Falstad du TP 4.1 (version de référence) : boucle ouverte contre boucle fermée](#sec-version-falstad-du-tp-4-1-version-de-reference-boucle-ouverte-contre-b)
 - [Chapitre 5 : Traitement du signal](#sec-chapitre-5-traitement-du-signal)
-    - [5.1 TP : Mesure de gain et d'atténuation d'un quadripôle (2h, sur une ou deux séances)](#sec-5-1-tp-mesure-de-gain-et-d-attenuation-d-un-quadripole-2h-su)
+    - [TP 5.1 : Mesure de gain et d'atténuation d'un quadripôle](#sec-tp-5-1-mesure-de-gain-et-d-attenuation-d-un-quadripole)
 - [Chapitre 6 : Optique](#sec-chapitre-6-optique)
 - [Chapitre 7 : Préparation à l'épreuve](#sec-chapitre-7-preparation-a-l-epreuve)
-- [Annexe A : alternatives numériques (TP simulés)](#sec-annexe-a-alternatives-numeriques-tp-simules)
-    - [Alternative D, option A : tracer la caractéristique d'une diode](#sec-option-a-tracer-la-caracteristique-d-une-diode)
-    - [Alternative D, option B : boucle ouverte contre boucle fermée](#sec-option-b-boucle-ouverte-contre-boucle-fermee)
-- [TP : Mémoire de 64 bits](#sec-tp-memoire-64-bits)
+- [Projet : Mémoire de 64 bits](#sec-projet-memoire-64-bits)
     - [Projet de TP : Construire une mémoire de 64 bits](#sec-mem-projet-de-tp-construire-une-memoire-de-64-bits)
     - [Sommaire](#sec-mem-sommaire)
     - [1. Présentation du projet](#sec-mem-1-presentation-du-projet)
@@ -32,7 +42,6 @@
     - [6. Évaluation](#sec-mem-6-evaluation)
     - [7. Annexes techniques](#sec-mem-7-annexes-techniques)
     - [Conclusion du projet](#sec-mem-conclusion-du-projet)
-
 ---
 
 <a id="sec-0-aide-memoire-unites-et-equivalences"></a>
@@ -84,8 +93,54 @@
 | ms → s | ÷ 1000 | 0,5 ms = 0,0005 s |
 | kHz → Hz | × 1000 | 100 kHz = 100 000 Hz |
 | nF → F | ÷ 10⁹ | 100 nF = 100.10⁻⁹ F |
-| Fréquence ↔ période | f = 1/T ; T = 1/f | 1 kHz ↔ 1 ms |
+| Fréquence ↔ période | $f = 1/T$ ; $T = 1/f$ | 1 kHz ↔ 1 ms |
 | Puissance ↔ dB | A(dB) = 10·log₁₀(P₂/P₁) | ratio 2 ↔ ≈ 3 dB ; ratio 10 ↔ 10 dB |
+
+---
+
+<a id="sec-index-des-tp"></a>
+
+## Index des TP
+
+Chaque TP porte un numéro **chapitre.rang** (TP 1.3 = troisième TP du chapitre 1), le même que dans le recueil de cours. Chaque fiche commence par un encadré indiquant la durée, le mode (matériel réel ou simulateur Falstad), la section du cours à relire et le livrable attendu. Lorsqu'un TP existe en version matériel **et** en version simulée, la version simulée suit immédiatement la version matériel.
+
+| N° | Titre | Chapitre | Durée | Mode | Séance |
+|---|---|---|---|---|---|
+| TP 1.1 | Bases de l'électricité (série, parallèle, lois de Kirchhoff) | 1 | 55 min | Matériel, ou Falstad/Tinkercad | Rentrée (rotation) |
+| TP 1.2 | Caractéristique d'une diode | 1 | 55 min | **Falstad** (matériel indisponible) | Rentrée (bonus) |
+| TP 1.3 | Condensateur et bobine en régime sinusoïdal : impédance et déphasage | 1 | 55 min | Falstad | Chapitre 1 |
+| TP 1.4 | Résonance d'un dipôle RLC série | 1 | 55 min | Falstad | Chapitre 1 |
+| TP 1.5 | Théorème de superposition et modèle de Thévenin | 1 | 55 min | Falstad | Chapitre 1 |
+| TP 1.6 | Décibels et chaîne d'atténuateurs | 1 | 55 min | Falstad | Chapitre 1 |
+| TP 1.7 | LED : tension de seuil, couleur et longueur d'onde | 1 | 45 min | Falstad | Chapitre 1 |
+| TP 1.8 | Photodiode : deux modes de fonctionnement (pour aller plus loin) | 1 | 45 min | Falstad | Chapitre 1 |
+| TP 2.1 | Mesures et incertitudes | 2 | 55 min | Matériel, ou tableur | Rentrée (rotation) |
+| TP 3.1 | Ondes : GBF et oscilloscope | 3 | 55 min | Matériel, ou Falstad | Rentrée (rotation) |
+| TP 4.1 | Boucle ouverte / boucle fermée | 4 | 55 min | **Falstad** (matériel indisponible) | Rentrée (bonus) |
+| TP 5.1 | Mesure de gain et d'atténuation d'un quadripôle | 5 | 2 h | Matériel, ou Falstad | Chapitre 5 |
+| Projet | Mémoire de 64 bits (3 séances) | Transversal | ≈ 10 h | Matériel (+ Logisim/Falstad) | Fin de document |
+
+---
+
+<a id="sec-fiche-outil-prise-en-main-de-falstad"></a>
+
+## Fiche outil : prise en main de Falstad
+
+Cette fiche est commune à tous les TP réalisés sur le simulateur (TP 1.2 à 1.8, TP 4.1, et les versions simulées des autres). À faire lire une fois, puis à garder sous la main.
+
+**Avant de commencer (pour tout le sous-groupe, 5 min)**
+
+1. Ouvrir un navigateur et aller sur **falstad.com/circuit**.
+2. Le simulateur ouvre toujours un circuit d'exemple : le vider entièrement par le menu **Fichier → Nouveau circuit vierge**, ou sélectionner tout et supprimer. L'écran doit être vide.
+3. Repérer les trois zones : la **zone de dessin** (grande grille), le **panneau de droite** (bouton Run/Stop, curseur de vitesse de simulation), et le **menu du haut** (Fichier, Édition, Dessiner, Oscilloscopes, Options).
+4. Deux gestes à connaître :
+   - **Placer un composant** : menu **Dessiner** (*Draw*), choisir le composant, puis **cliquer-glisser** sur la grille pour le tracer (la longueur du glissement donne la taille du composant).
+   - **Modifier une valeur** : **clic droit** sur le composant → **Éditer…**, saisir la valeur, valider.
+   - **Effacer** : clic droit sur le composant → **Supprimer** (*Delete*).
+5. **Vocabulaire :** certains noms employés dans l'énoncé désignent un **rôle**, pas un composant du menu. Une « résistance de protection », une « résistance de charge » ou une « résistance de rappel » sont toutes de simples **résistances** (*Ajouter une résistance*) : seules leur valeur et leur place dans le circuit changent. De même, la « consigne » de le TP 4.1 est une simple **source de tension continue**.
+6. Astuce de lecture : une fois la simulation lancée, Falstad affiche des **points mobiles** sur les fils (le courant) et un **code couleur** de tension (vert = potentiel positif, rouge = négatif, gris = 0 V). Survoler un composant affiche sa tension et son courant dans le bandeau inférieur.
+
+> ⚠ Le simulateur est utilisé **en français** (le choix de la langue se fait dans le menu **Options**).
 
 ---
 
@@ -93,48 +148,36 @@
 
 ## Séance de rentrée : organisation du TP tournant
 
-**Principe :** la classe est répartie en sous-groupes qui tournent sur des ateliers indépendants d'1h maximum. 3 ateliers "tronc commun" obligatoires ; l'atelier bonus (4ᵉ) est réservé aux groupes identifiés "avancés" lors du diagnostic, ou vient en rotation si le temps le permet.
+**Principe :** la classe est répartie en sous-groupes qui tournent sur des TP indépendants d'1h maximum. 3 TP "tronc commun" obligatoires ; le TP bonus (TP 1.2 ou TP 4.1) est réservé aux groupes identifiés "avancés" lors du diagnostic, ou vient en rotation si le temps le permet.
 
 ### Vue d'ensemble de la rotation
 
-| Atelier | Thème | Durée | Public |
+| TP | Thème | Durée | Public |
 |---|---|---|---|
-| Atelier 1 | Mesures et incertitudes | 55 min | Tous les sous-groupes |
-| Atelier 2 | Bases de l'électricité | 55 min | Tous les sous-groupes |
-| Atelier 3 | Ondes (GBF + oscilloscope) | 55 min | Tous les sous-groupes |
-| Atelier 4 (bonus) | Semi-conducteurs ou boucle fermée | 55 min | Groupes avancés, ou rotation si le temps le permet |
+| TP 2.1 | Mesures et incertitudes | 55 min | Tous les sous-groupes |
+| TP 1.1 | Bases de l'électricité | 55 min | Tous les sous-groupes |
+| TP 3.1 | Ondes (GBF + oscilloscope) | 55 min | Tous les sous-groupes |
+| TP 1.2 / TP 4.1 | Semi-conducteurs ou boucle fermée | 55 min | Groupes avancés, ou rotation si le temps le permet |
 
-> **⚙** Avec 3 sous-groupes : chacun passe sur les 3 ateliers du tronc commun (une rotation par créneau de 55 min). Avec 4 sous-groupes : le 4ᵉ groupe démarre par l'atelier bonus pendant que les autres démarrent le tronc commun, puis tout le monde tourne.
+> **⚙** Avec 3 sous-groupes : chacun passe sur les 3 TP du tronc commun (une rotation par créneau de 55 min). Avec 4 sous-groupes : le 4ᵉ groupe démarre par l'TP bonus pendant que les autres démarrent le tronc commun, puis tout le monde tourne.
 
 ### Matériel global à préparer (pour 4 postes en parallèle)
 
 | Matériel | Quantité | Utilisé pour |
 |---|---|---|
-| Alimentation stabilisée 0-15 V | 4 | Ateliers 1, 2, 4 |
-| Multimètre numérique (voltmètre/ampèremètre/ohmmètre) | 8 (2 par poste) | Ateliers 1, 2, 4 |
-| Générateur basses fréquences (GBF) | 4 | Atelier 3 |
-| Oscilloscope 2 voies | 4 | Atelier 3, 4 |
-| Plaque d'essai (breadboard) | 8 | Ateliers 2, 3, 4 |
+| Alimentation stabilisée 0-15 V | 4 | TP 1, 2, 4 |
+| Multimètre numérique (voltmètre/ampèremètre/ohmmètre) | 8 (2 par poste) | TP 1, 2, 4 |
+| Générateur basses fréquences (GBF) | 4 | TP 3.1 |
+| Oscilloscope 2 voies | 4 | TP 3.1, 4 |
+| Plaque d'essai (breadboard) | 8 | TP 2, 3, 4 |
 | Jeu de fils de raccordement / cordons banane-banane et BNC | 4 lots | Tous |
-| Résistances 100 Ω, 220 Ω, 470 Ω, 1 kΩ, 2,2 kΩ, 10 kΩ (5 %) | 4 lots de 6 valeurs, x3 exemplaires chacune | Ateliers 1, 2 |
-| Condensateur 100 nF ou 1 µF | 4 | Atelier 3 (circuit RC) |
-| Diode silicium (type 1N4148 ou 1N4001) | 4 | Atelier 4 (option A) |
-| Résistance de protection série pour diode (~1 kΩ) | 4 | Atelier 4 (option A) |
-| Potentiomètre 1-10 kΩ | 4 | Atelier 4 (option B) |
+| Résistances 100 Ω, 220 Ω, 470 Ω, 1 kΩ, 2,2 kΩ, 10 kΩ (5 %) | 4 lots de 6 valeurs, x3 exemplaires chacune | TP 1, 2 |
+| Condensateur 100 nF ou 1 µF | 4 | TP 3.1 (circuit RC) |
+| Diode silicium (type 1N4148 ou 1N4001) | 4 | TP 1.2 |
+| Résistance de protection série pour diode (~1 kΩ) | 4 | TP 1.2 |
+| Potentiomètre 1-10 kΩ | 4 | TP 4.1 |
 | Calculatrice scientifique | 1 par étudiant | Tous |
 | Feuilles de compte-rendu / tableaux de mesures pré-imprimés | 1 par étudiant | Tous |
-
-> **Où trouver chaque atelier dans ce recueil ?** Les ateliers sont rangés dans le chapitre correspondant à leur thème, comme dans le recueil de cours :
->
-> | Atelier | Thème | Chapitre |
-> |---|---|---|
-> | Atelier 1 | Mesures et incertitudes | Chapitre 2 |
-> | Atelier 2 | Bases de l'électricité | Chapitre 1 |
-> | Atelier 3 | Ondes (GBF + oscilloscope) | Chapitre 3 |
-> | Atelier 4, option A | Semi-conducteurs (diode) | Chapitre 1 |
-> | Atelier 4, option B | Boucle ouverte / boucle fermée | Chapitre 4 |
->
-> Les versions simulées de tous les ateliers sont regroupées en **Annexe A**.
 
 ---
 
@@ -148,9 +191,12 @@
 
 ## Chapitre 1 : Électricité et optoélectronique
 
-<a id="sec-1-1-atelier-2-bases-de-l-electricite-55-min"></a>
+<a id="sec-tp-1-1-bases-de-l-electricite"></a>
 
-### 1.1 Atelier 2 : Bases de l'électricité (55 min)
+### TP 1.1 : Bases de l'électricité
+
+> **Durée :** 55 min · **Mode :** matériel (version simulée ci-dessous) · **Cours :** Chapitre 1, §1.1 · **Prérequis :** aucun
+> **Objectif :** vérifier expérimentalement la loi d'Ohm, les lois de Kirchhoff et les associations série/parallèle.
 
 - **Objectifs :** vérifier expérimentalement la loi d'Ohm et les lois de Kirchhoff, mesurer une puissance.
 - **Matériel par poste :** 1 plaque d'essai, 3-4 résistances (montage série puis parallèle), 2 multimètres, 1 alimentation stabilisée, cordons.
@@ -160,7 +206,7 @@
 
 1. **(5 min) Consignes et prévision théorique.** Avant tout branchement, avec E = 9 V, R1 = 220 Ω, R2 = 470 Ω donnés en série :
    - ❓ *Q1. Calculez la valeur théorique de $R_{éq}$, du courant I attendu, et des tensions U(R1) et U(R2) attendues.*
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIxNTAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iOTMuMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTE1IiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIxPC90ZXh0PjxsaW5lIHgxPSIxNTAiIHkxPSI1MCIgeDI9IjIzMCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48cmVjdCB4PSIxNjguMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTkwIiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIyPC90ZXh0PjxsaW5lIHgxPSIyMzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSIxNzAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjcwIiB5MT0iMTcwIiB4Mj0iNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNzAiIGN5PSIxMTAiIHI9IjIwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNzAiIHk9IjEwNy4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPis8L3RleHQ+PHRleHQgeD0iNzAiIHk9IjEyNS4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPi08L3RleHQ+PHRleHQgeD0iMzYiIHk9IjExMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FPC90ZXh0PjxjaXJjbGUgY3g9IjE1MCIgY3k9IjUwIiByPSIzIiBmaWxsPSJibGFjayIvPjx0ZXh0IHg9IjE1MCIgeT0iMzgiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+cHQuIG1lc3VyZSBJPC90ZXh0Pjx0ZXh0IHg9IjE3MCIgeT0iMjAwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk1vbnRhZ2Ugc8OpcmllIChBdGVsaWVyIDJhKTwvdGV4dD48L3N2Zz4=" width="320" alt="schema atelier2a_serie"/>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIxNTAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iOTMuMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTE1IiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIxPC90ZXh0PjxsaW5lIHgxPSIxNTAiIHkxPSI1MCIgeDI9IjIzMCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48cmVjdCB4PSIxNjguMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTkwIiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIyPC90ZXh0PjxsaW5lIHgxPSIyMzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSIxNzAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjcwIiB5MT0iMTcwIiB4Mj0iNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNzAiIGN5PSIxMTAiIHI9IjIwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNzAiIHk9IjEwNy4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPis8L3RleHQ+PHRleHQgeD0iNzAiIHk9IjEyNS4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPi08L3RleHQ+PHRleHQgeD0iMzYiIHk9IjExMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FPC90ZXh0PjxjaXJjbGUgY3g9IjE1MCIgY3k9IjUwIiByPSIzIiBmaWxsPSJibGFjayIvPjx0ZXh0IHg9IjE1MCIgeT0iMzgiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+cHQuIG1lc3VyZSBJPC90ZXh0Pjx0ZXh0IHg9IjE3MCIgeT0iMjAwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk1vbnRhZ2Ugc8OpcmllIChBdGVsaWVyIDJhKTwvdGV4dD48L3N2Zz4=" width="320" alt="schema TP2a_serie"/>
 
 2. **(20 min) Montage série.** Réaliser le montage ci-dessus (le reproduire sur le compte-rendu avant de monter). Mesurer :
    - le courant I à trois endroits différents du circuit série (avant R1, entre R1 et R2, après R2) ;
@@ -174,7 +220,7 @@
    - ❓ *Q2. Le courant est-il identique aux trois points de mesure ? Cela confirme-t-il votre cours sur le montage série ?*
    - ❓ *Q3. Calculez U(R1) + U(R2) et comparez à U(alim) mesurée. Calculez l'écart relatif. La loi des mailles est-elle vérifiée aux incertitudes de mesure près ?*
    - ❓ *Q4. Comparez le courant mesuré à la valeur théorique de la Q1 : calculez l'écart relatif.*
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjcwIiB5MT0iMTcwIiB4Mj0iMjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSI1MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI0MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI0MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSI2IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RTwvdGV4dD48bGluZSB4MT0iNDAiIHkxPSI1MCIgeDI9IjcwIiB5Mj0iNTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSI0MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMTUwIiB5MT0iNTAiIHgyPSIxNTAiIHkyPSI5MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTQxLjAiIHk9Ijg4LjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI0NCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3NS4wIiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UjE8L3RleHQ+PGxpbmUgeDE9IjE1MCIgeTE9IjEzMCIgeDI9IjE1MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjIzMCIgeTE9IjUwIiB4Mj0iMjMwIiB5Mj0iOTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjIyMS4wIiB5PSI4OC4wIiB3aWR0aD0iMTgiIGhlaWdodD0iNDQiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIyNTUuMCIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIyPC90ZXh0PjxsaW5lIHgxPSIyMzAiIHkxPSIxMzAiIHgyPSIyMzAiIHkyPSIxNzAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE1MCIgeT0iMjAwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk1vbnRhZ2UgcGFyYWxsw6hsZSAoQXRlbGllciAyYik8L3RleHQ+PC9zdmc+" width="320" alt="schema atelier2b_parallele"/>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjcwIiB5MT0iMTcwIiB4Mj0iMjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSI1MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI0MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI0MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI0MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSI2IiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RTwvdGV4dD48bGluZSB4MT0iNDAiIHkxPSI1MCIgeDI9IjcwIiB5Mj0iNTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSI0MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMTUwIiB5MT0iNTAiIHgyPSIxNTAiIHkyPSI5MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTQxLjAiIHk9Ijg4LjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSI0NCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3NS4wIiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UjE8L3RleHQ+PGxpbmUgeDE9IjE1MCIgeTE9IjEzMCIgeDI9IjE1MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjIzMCIgeTE9IjUwIiB4Mj0iMjMwIiB5Mj0iOTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxyZWN0IHg9IjIyMS4wIiB5PSI4OC4wIiB3aWR0aD0iMTgiIGhlaWdodD0iNDQiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSIyNTUuMCIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIyPC90ZXh0PjxsaW5lIHgxPSIyMzAiIHkxPSIxMzAiIHgyPSIyMzAiIHkyPSIxNzAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE1MCIgeT0iMjAwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPk1vbnRhZ2UgcGFyYWxsw6hsZSAoQXRlbGllciAyYik8L3RleHQ+PC9zdmc+" width="320" alt="schema TP2b_parallele"/>
 
 3. **(20 min) Montage parallèle.** Remonter R1 et R2 en parallèle sous la même alimentation E, comme ci-dessus. Mesurer :
    - le courant dans R1, le courant dans R2, le courant total débité par l'alimentation ;
@@ -190,20 +236,32 @@
    - ❓ *Q7. Calculez la puissance dissipée dans chaque résistance ($P = U \times I$ mesurés) puis la puissance totale débitée par l'alimentation ($P = U_{alim} \times I_{total}$). Comparez les deux.*
    - ❓ *Q8. Entre le montage série et le montage parallèle (mêmes R1, R2, même E), lequel consomme le plus de puissance totale ? Expliquez pourquoi en une phrase à partir de $R_{éq}$.*
 - **Livrable :** schémas des deux montages, tableaux de mesures remplis, réponses Q1 à Q8.
-- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (Annexe A, Alternative B).
+- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet TP (version simulée du TP 1.1).
 
-<a id="sec-1-2-atelier-4-option-a-caracteristique-d-une-diode-55-min"></a>
+<a id="sec-version-simulee-du-tp-1-1-falstad-ou-tinkercad-circuits"></a>
 
-### 1.2 Atelier 4, option A : caractéristique d'une diode (55 min)
+#### Version simulée du TP 1.1 (Falstad ou Tinkercad Circuits)
 
-> **⚠ Cette année, cet atelier se fait sous Falstad** (matériel indisponible) : la version détaillée pas à pas, à suivre en séance, se trouve en **Annexe A, Alternative D, option A**. Le déroulé ci-dessous décrit la version sur matériel réel, donnée pour référence.
+- **Principe :** construire virtuellement les mêmes montages série/parallèle, avec multimètres virtuels (voltmètre/ampèremètre) à placer sur le circuit.
+- **Déroulé :** 10 min prise en main de l'interface → 20 min montage série (mesure U et I à différents points, vérification loi des mailles) → 20 min montage parallèle (loi des nœuds) → 5 min calcul de puissance à partir des relevés virtuels.
+- **Avantage :** Falstad affiche en temps réel les valeurs de courant (couleur/épaisseur des fils animée) et de tension, ce qui rend la loi des nœuds et des mailles très visuelle.
+- **Livrable :** capture d'écran des montages annotée + tableau de mesures + calculs.
 
-**Option A : Caractéristique d'une diode**
+---
+
+<a id="sec-tp-1-2-caracteristique-d-une-diode"></a>
+
+### TP 1.2 : Caractéristique d'une diode
+
+> **Durée :** 55 min · **Mode :** **Falstad** (le matériel n'étant pas disponible, la version simulée ci-dessous est la version de référence) · **Cours :** Chapitre 1, §1.4 · **Prérequis :** TP 1.1, fiche outil Falstad
+> **Objectif :** relever point par point la caractéristique $I(V)$ d'une diode et en déduire sa tension de seuil.
+
+> Le déroulé ci-dessous décrit la version sur **matériel réel**, conservée pour référence. La version **Falstad, à suivre en séance**, est détaillée juste après.
 
 - **Matériel :** 1 alimentation, 1 diode silicium, 1 résistance de protection (~1 kΩ), 2 multimètres, plaque d'essai.
 - **Sécurité :** ne jamais dépasser le courant maximal de la diode (limité naturellement par la résistance de protection) ; ne pas alimenter directement la diode sans résistance en série.
 
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIxNTAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iOTMuMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTE1IiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIgcHJvdGVjdGlvbjwvdGV4dD48bGluZSB4MT0iMTUwIiB5MT0iNTAiIHgyPSIyMzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBvbHlnb24gcG9pbnRzPSIxOTUsNDAgMTk1LDYwIDIxOCw1MCIgZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyMTgiIHkxPSIzOCIgeDI9IjIxOCIgeTI9IjYyIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyMTAiIHk9IjI4IiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkQ8L3RleHQ+PGxpbmUgeDE9IjIzMCIgeTE9IjUwIiB4Mj0iMjcwIiB5Mj0iNTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjI3MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSIzNiIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFsaW08L3RleHQ+PHRleHQgeD0iMTUwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RGlvZGUgKyByw6lzaXN0YW5jZSBkZSBwcm90ZWN0aW9uIChBdGVsaWVyIDQsIG9wdGlvbiBBKTwvdGV4dD48L3N2Zz4=" width="320" alt="schema atelier4a_diode"/>
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIxNTAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iOTMuMCIgeT0iNDEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTE1IiB5PSIzNS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlIgcHJvdGVjdGlvbjwvdGV4dD48bGluZSB4MT0iMTUwIiB5MT0iNTAiIHgyPSIyMzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHBvbHlnb24gcG9pbnRzPSIxOTUsNDAgMTk1LDYwIDIxOCw1MCIgZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyMTgiIHkxPSIzOCIgeDI9IjIxOCIgeTI9IjYyIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyMTAiIHk9IjI4IiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkQ8L3RleHQ+PGxpbmUgeDE9IjIzMCIgeTE9IjUwIiB4Mj0iMjcwIiB5Mj0iNTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjI3MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSIzNiIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFsaW08L3RleHQ+PHRleHQgeD0iMTUwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RGlvZGUgKyByw6lzaXN0YW5jZSBkZSBwcm90ZWN0aW9uIChBdGVsaWVyIDQsIG9wdGlvbiBBKTwvdGV4dD48L3N2Zz4=" width="320" alt="schema TP4a_diode"/>
 
 **Déroulé détaillé**
 
@@ -225,290 +283,9 @@
 
 ---
 
-<div style="page-break-after: always;"></div>
+<a id="sec-version-falstad-du-tp-1-2-version-de-reference-tracer-la-caracteristiq"></a>
 
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-<a id="sec-chapitre-2-mesures-et-incertitudes"></a>
-
-## Chapitre 2 : Mesures et incertitudes
-
-<a id="sec-2-1-atelier-1-mesures-et-incertitudes-55-min"></a>
-
-### 2.1 Atelier 1 : Mesures et incertitudes (55 min)
-
-- **Objectifs :** réaliser une série de mesures répétées, calculer une incertitude-type de type A, comparer à la valeur nominale.
-- **Matériel par poste :** 1 alimentation stabilisée, 2 multimètres, 3 résistances de valeurs différentes (avec tolérance affichée sur le corps de la résistance), cordons de connexion, feuille de mesures.
-- **Sécurité :** alimentation réglée à une tension faible (≤ 6 V), pas de risque particulier ; vérifier le calibre du multimètre avant de mesurer (ohmmètre hors tension du circuit).
-
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTQ4LjAiIHk9IjQxLjAiIHdpZHRoPSI0NCIgaGVpZ2h0PSIxOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMzUuMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5SPC90ZXh0PjxsaW5lIHgxPSIyNzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjI3MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSIzNiIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFsaW08L3RleHQ+PGxpbmUgeDE9IjE0MCIgeTE9IjUwIiB4Mj0iMTQwIiB5Mj0iMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyMDAiIHkxPSI1MCIgeDI9IjIwMCIgeTI9IjIwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMTQwIiB5MT0iMjAiIHgyPSIxNTUiIHkyPSIyMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjE4NSIgeTE9IjIwIiB4Mj0iMjAwIiB5Mj0iMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjE3MCIgY3k9IjIwIiByPSIxNiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMjUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VjwvdGV4dD48dGV4dCB4PSIxNzAiIHk9IjIwMCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NZXN1cmUgZGUgbGEgdGVuc2lvbiBhdXggYm9ybmVzIGRlIFIgKEF0ZWxpZXIgMSk8L3RleHQ+PC9zdmc+" width="320" alt="schema atelier1_mesure_tension"/>
-
-**Déroulé détaillé**
-
-1. **(5 min) Consignes et lecture du code couleur.** Chaque poste reçoit une résistance non identifiée par écrit.
-   - ❓ *Q1. Lisez le code couleur de votre résistance : quelle est sa valeur nominale et sa tolérance annoncée (ex. 220 Ω ± 5 %) ?*
-2. **(10 min) Mesure directe à l'ohmmètre.** Mesurer une seule fois la résistance à l'ohmmètre, hors circuit.
-   - Relevé attendu : valeur affichée = ______ Ω.
-   - ❓ *Q2. Cette valeur mesurée est-elle comprise dans l'intervalle [valeur nominale − tolérance ; valeur nominale + tolérance] ? Montrez le calcul de l'intervalle.*
-3. **(15 min) Série de 10 mesures répétées d'une tension.** Monter la résistance sous l'alimentation stabilisée (tension fixée, ex. 5,00 V affichés). Mesurer la tension à ses bornes au voltmètre, **10 fois de suite**, en débranchant/rebranchant légèrement les pointes de touche entre chaque mesure (pour retrouver la variabilité réelle d'une manipulation).
-   - Tableau à compléter :
-
-     | Mesure n° | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
-     |---|---|---|---|---|---|---|---|---|---|---|
-     | U (V) | | | | | | | | | | |
-
-   - ❓ *Q3. Les 10 valeurs sont-elles rigoureusement identiques ? Proposez au moins deux causes possibles de cette dispersion (contact, résolution de l'appareil, bruit, légère variation de l'alimentation…).*
-4. **(15 min) Traitement statistique.** À l'aide de la calculatrice (mode statistique) ou à la main :
-   - Calculer x̄ (moyenne) et s (écart-type de l'échantillon).
-   - ❓ *Q4. Calculez $u_A = s/\sqrt{n}$. Notez la valeur.*
-   - ❓ *Q5. À partir de la résolution du voltmètre (relevée sur l'appareil), calculez $u_B = \text{résolution}/\sqrt{12}$.*
-   - ❓ *Q6. Calculez l'incertitude-type composée $u = \sqrt{u_A^2 + u_B^2}$, puis l'incertitude élargie $U = 2u$. Écrivez le résultat final sous la forme $U_{mesurée} = \bar{x} \pm U$ (unité, bon nombre de chiffres significatifs).*
-5. **(10 min) Conclusion et question de synthèse.**
-   - ❓ *Q7. Le résultat de mesure est-il compatible avec la tension affichée par l'alimentation ? Justifiez par le calcul (comparaison de l'écart à U).*
-   - ❓ *Q8. Si vous aviez réalisé 40 mesures au lieu de 10 (même dispersion s), quel serait l'effet sur u_A ? Vérifiez par le calcul ($u_A \propto 1/\sqrt{n}$).*
-- **Livrable :** tableau de mesures rempli + réponses aux questions Q1 à Q8 + résultat final encadré.
-- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (Annexe A, Alternative A).
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-<a id="sec-chapitre-3-ondes-et-propagation"></a>
-
-## Chapitre 3 : Ondes et propagation
-
-<a id="sec-3-1-atelier-3-ondes-gbf-et-oscilloscope-55-min"></a>
-
-### 3.1 Atelier 3 : Ondes : GBF et oscilloscope (55 min)
-
-- **Objectifs :** prise en main du GBF et de l'oscilloscope, mesure de période/fréquence/amplitude, observation d'un déphasage.
-- **Matériel par poste :** 1 GBF, 1 oscilloscope 2 voies, 1 résistance + 1 condensateur (circuit RC), cordons BNC et sondes.
-- **Sécurité :** amplitude du GBF limitée à quelques volts, aucun risque particulier.
-
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjYwIiB5MT0iNjAiIHgyPSIxNTAiIHkyPSI2MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iODMuMCIgeT0iNTEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTA1IiB5PSI0NS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+PGxpbmUgeDE9IjE1MCIgeTE9IjYwIiB4Mj0iMjQwIiB5Mj0iNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNDAiIHkxPSI2MCIgeDI9IjI0MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjIyNiIgeTE9IjEzNCIgeDI9IjI1NCIgeTI9IjEzNCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIi8+PGxpbmUgeDE9IjIyNiIgeTE9IjE0NiIgeDI9IjI1NCIgeTI9IjE0NiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIi8+PHRleHQgeD0iMjY2IiB5PSIxNDAiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QzwvdGV4dD48bGluZSB4MT0iMjQwIiB5MT0iMTcwIiB4Mj0iNjAiIHkyPSIxNzAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSI2MCIgeTE9IjE3MCIgeDI9IjYwIiB5Mj0iNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iMTE1IiByPSIyMCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjYwIiB5PSIxMTIuMCIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4rPC90ZXh0Pjx0ZXh0IHg9IjYwIiB5PSIxMzAuMCIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4tPC90ZXh0Pjx0ZXh0IHg9IjI2IiB5PSIxMTUiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+R0JGPC90ZXh0PjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjMiIGZpbGw9ImJsYWNrIi8+PHRleHQgeD0iNDUiIHk9IjQ1IiBmb250LXNpemU9IjExIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNIMTwvdGV4dD48Y2lyY2xlIGN4PSIyNDAiIGN5PSI2MCIgcj0iMyIgZmlsbD0iYmxhY2siLz48dGV4dCB4PSIyNTUiIHk9IjQ1IiBmb250LXNpemU9IjExIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNIMjwvdGV4dD48dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DaXJjdWl0IFJDLCBHQkYgKyBvc2NpbGxvc2NvcGUgKEF0ZWxpZXIgMyk8L3RleHQ+PC9zdmc+" width="320" alt="schema atelier3_rc"/>
-
-**Déroulé détaillé**
-
-1. **(5 min) Repérage des commandes.**
-   - ❓ *Q1. Sur votre oscilloscope, repérez et notez le rôle des réglages TIME/DIV (base de temps) et VOLTS/DIV (sensibilité verticale). Sur le GBF, repérez les réglages fréquence, amplitude et forme du signal.*
-2. **(15 min) Mesure d'un signal sinusoïdal simple.** Régler le GBF sur un signal sinusoïdal, 1 kHz affiché, 2 V crête-à-crête affiché. Visualiser à l'oscilloscope.
-   - Relever : base de temps utilisée, nombre de divisions occupées par une période, sensibilité verticale, nombre de divisions occupées par l'amplitude crête-à-crête.
-
-     | Grandeur | Base de temps (s/div) | Nb div / période | T mesuré | f mesurée = 1/T | f affichée au GBF | Écart relatif |
-     |---|---|---|---|---|---|---|
-     | Valeur | | | | | 1 kHz | |
-
-   - ❓ *Q2. Calculez l'écart relatif entre la fréquence mesurée à l'oscilloscope et celle affichée par le GBF. D'où peut venir cet écart (résolution de lecture, tolérance des appareils) ?*
-   - ❓ *Q3. Faites de même pour l'amplitude : comparez l'amplitude mesurée sur l'écran à celle affichée par le GBF.*
-3. **(20 min) Circuit RC et déphasage.** Monter en série R et C ; visualiser en voie 1 la tension d'entrée (aux bornes du générateur) et en voie 2 la tension aux bornes de C. Répéter la mesure pour trois fréquences différentes (ex. 100 Hz, 1 kHz, 10 kHz), amplitude d'entrée constante.
-
-     | Fréquence | Décalage temporel Δt entre les 2 courbes | Déphasage $\varphi = 360 \times \Delta t / T$ (°) | Amplitude de $U_C$ (V) |
-     |---|---|---|---|
-     | 100 Hz | | | |
-     | 1 kHz | | | |
-     | 10 kHz | | | |
-
-   - ❓ *Q4. Comment évolue l'amplitude de $U_C$ quand la fréquence augmente ? Comment évolue le déphasage ?*
-   - ❓ *Q5. Ce comportement correspond à un filtre passe-bas ou passe-haut ? Justifiez à partir de vos observations (et pas seulement du cours).*
-4. **(15 min) Lien avec la fréquence de coupure.**
-   - ❓ *Q6. À partir des valeurs de R et C de votre montage, calculez la fréquence de coupure théorique $f_c = \dfrac{1}{2\pi RC}$.*
-   - ❓ *Q7. Cette fréquence se situe-t-elle entre vos trois points de mesure ? Le comportement observé en Q4/Q5 change-t-il de nature autour de f_c ?*
-- **Livrable :** tableaux de mesures remplis, réponses Q1 à Q7, captures ou schémas d'écran annotés si possible.
-- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet atelier (Annexe A, Alternative C) : c'est d'ailleurs l'atelier qui se simule le mieux, le simulateur intègre GBF et oscillo virtuels.
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-<a id="sec-chapitre-4-systemes-boucles-et-asservissement"></a>
-
-## Chapitre 4 : Systèmes bouclés et asservissement
-
-<a id="sec-4-1-atelier-4-option-b-boucle-ouverte-boucle-fermee-55-min"></a>
-
-### 4.1 Atelier 4, option B : boucle ouverte / boucle fermée (55 min)
-
-> **⚠ Cette année, cet atelier se fait sous Falstad** (matériel indisponible) : la version détaillée pas à pas, à suivre en séance, se trouve en **Annexe A, Alternative D, option B**. Le déroulé ci-dessous décrit la version sur matériel réel, donnée pour référence.
-
-**Option B : Boucle ouverte / boucle fermée**
-
-- **Matériel :** 1 potentiomètre, 1 alimentation, 2 multimètres (ou logiciel de simulation si pas de maquette disponible).
-
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTM1LjAiIHk9IjQxLjAiIHdpZHRoPSI3MCIgaGVpZ2h0PSIxOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMzUuMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qb3RlbnRpb23DqHRyZTwvdGV4dD48bGluZSB4MT0iMjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSIxNzAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjcwIiB5MT0iMTcwIiB4Mj0iNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNzAiIGN5PSIxMTAiIHI9IjIwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNzAiIHk9IjEwNy4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPis8L3RleHQ+PHRleHQgeD0iNzAiIHk9IjEyNS4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPi08L3RleHQ+PHRleHQgeD0iMzYiIHk9IjExMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FPC90ZXh0PjxsaW5lIHgxPSIxNzAiIHkxPSI1OSIgeDI9IjE3MCIgeTI9IjkwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48cG9seWdvbiBwb2ludHM9IjE2NSw5MCAxNzUsOTAgMTcwLDgwIiBmaWxsPSJibGFjayIvPjxsaW5lIHgxPSIxNzAiIHkxPSI5MCIgeDI9IjE3MCIgeTI9IjEzMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iMTcwIiBjeT0iMTUwIiByPSIxNiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMTU1IiBmb250LXNpemU9IjE1IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlY8L3RleHQ+PHRleHQgeD0iMTUwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UG90ZW50aW9tw6h0cmUgZW4gZGl2aXNldXIgZGUgdGVuc2lvbiAoQXRlbGllciA0LCBvcHRpb24gQik8L3RleHQ+PC9zdmc+" width="320" alt="schema atelier4b_potentiometre"/>
-
-**Déroulé détaillé**
-
-1. **(10 min) Montage en boucle ouverte.** Régler le potentiomètre à une position donnée sans jamais la corriger. Appliquer une "perturbation" simulée (ex. modifier légèrement la tension d'alimentation) et observer la tension de sortie.
-   - ❓ *Q1. La sortie suit-elle la perturbation sans aucune correction ? Notez l'écart obtenu.*
-2. **(20 min) Montage en boucle fermée (ou simulation guidée).** Mettre en place un retour qui compare la sortie à une consigne et ajuste la commande (manuellement si pas de correcteur automatique disponible : l'étudiant joue le rôle du correcteur en réajustant le potentiomètre pour ramener la sortie à la consigne après la perturbation).
-   - ❓ *Q2. Combien d'ajustements/de temps faut-il pour revenir proche de la consigne après la perturbation ?*
-   - ❓ *Q3. Identifiez sur votre montage : la consigne, la grandeur mesurée, l'écart, l'actionneur.*
-3. **(15 min) Comparaison et bilan.**
-   - ❓ *Q4. Comparez l'écart final en boucle ouverte (Q1) et en boucle fermée (Q2). Concluez sur l'intérêt d'un asservissement face à une perturbation.*
-   - ❓ *Q5. Citer un exemple de système bouclé rencontré dans la vie courante ou dans un équipement CIEL (régulation, servomoteur, alimentation régulée…).*
-
-- **Livrable :** tableaux/graphe remplis, réponses aux questions.
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-<a id="sec-chapitre-5-traitement-du-signal"></a>
-
-## Chapitre 5 : Traitement du signal
-
-<a id="sec-5-1-tp-mesure-de-gain-et-d-attenuation-d-un-quadripole-2h-su"></a>
-
-### 5.1 TP : Mesure de gain et d'atténuation d'un quadripôle (2h, sur une ou deux séances)
-
-- **Objectifs :** mesurer expérimentalement le gain d'un quadripôle à partir de tensions d'entrée/sortie, calculer ce gain en dB, observer comment il varie avec la fréquence, et faire le lien avec la fréquence de coupure vue à l'atelier Ondes (§Partie 1).
-- **Matériel par poste :** 1 GBF, 1 oscilloscope 2 voies, le circuit RC déjà utilisé à l'atelier Ondes (réemployé ici comme quadripôle sous test), cordons BNC. *(Variante : un atténuateur résistif fixe simple, R1/R2 en pont diviseur, pour un gain constant indépendant de la fréquence : utile si l'on veut isoler la notion de dB de celle de filtrage.)*
-- **Sécurité :** aucun risque particulier, amplitude GBF limitée à quelques volts.
-
-**Déroulé détaillé**
-
-1. **(10 min) Prévision théorique.** Avant toute mesure, avec les valeurs de R et C de votre circuit RC :
-   - ❓ *Q1. Rappelez la fréquence de coupure théorique $f_c = \dfrac{1}{2\pi RC}$ calculée à l'atelier Ondes.*
-   - ❓ *Q2. À très basse fréquence (f << f_c), quel gain en tension attendez-vous entre l'entrée et la sortie du circuit ? Exprimez-le en dB.*
-2. **(20 min) Mesure du gain en basse fréquence.** Régler le GBF sur une fréquence nettement inférieure à f_c (par exemple f_c/10). Mesurer à l'oscilloscope l'amplitude d'entrée V_e (voie 1) et de sortie V_s (voie 2).
-
-     | Grandeur | Valeur |
-     |---|---|
-     | Fréquence réglée | |
-     | V_e (crête ou crête-à-crête, à préciser) | |
-     | V_s | |
-     | Gain linéaire A_v = V_s/V_e | |
-     | Gain en dB = 20×log₁₀(A_v) | |
-
-   - ❓ *Q3. Ce résultat est-il cohérent avec la prévision de la Q2 ?*
-3. **(40 min) Balayage en fréquence.** Répéter la mesure de V_e et V_s pour une série de fréquences croissantes couvrant largement f_c (par exemple : f_c/10, f_c/3, f_c/2, f_c, 2×f_c, 5×f_c, 10×f_c).
-
-     | Fréquence | V_e | V_s | A_v = V_s/V_e | Gain (dB) |
-     |---|---|---|---|---|
-     | f_c/10 | | | | |
-     | f_c/3 | | | | |
-     | f_c/2 | | | | |
-     | f_c | | | | |
-     | 2×f_c | | | | |
-     | 5×f_c | | | | |
-     | 10×f_c | | | | |
-
-   - Tracer le graphe du gain en dB en fonction de la fréquence (papier semi-log si possible, ou tableur).
-   - ❓ *Q4. À quelle fréquence mesurée le gain vaut-il environ −3 dB ? Comparez cette fréquence à f_c calculée en Q1.*
-   - ❓ *Q5. Que devient le gain (en dB) quand la fréquence est multipliée par 10, au-delà de f_c ? Estimez la pente de la courbe en dB par décade.*
-4. **(20 min, bonus si le temps le permet) Mise en cascade.** Placer en série deux quadripôles RC identiques (le vôtre, plus celui d'un poste voisin, ou remonter un second RC en cascade).
-   - ❓ *Q6. Prévoyez le gain total en dB à la fréquence f_c, en utilisant la propriété d'addition des gains en cascade (cours §5.1). Vérifiez par la mesure.*
-5. **(10 min) Bilan.**
-   - ❓ *Q7. Un tel circuit RC est appelé filtre passe-bas. Pourquoi ce nom est-il cohérent avec la courbe de gain que vous avez tracée ?*
-   - ❓ *Q8. Citer une situation professionnelle CIEL où l'on a besoin de connaître le gain/l'atténuation d'une liaison en dB (Wi-Fi, câblage réseau, fibre optique...).*
-- **Livrable :** tableaux de mesures remplis, graphe du gain en dB en fonction de la fréquence, réponses Q1 à Q8.
-- **⚙ Si matériel insuffisant :** ce TP se transpose bien sur Falstad Circuit Simulator (§ Partie 1, alternative C) : le circuit RC, le GBF et l'oscilloscope y sont déjà virtuels, il suffit de relever V_e et V_s pour chaque fréquence testée et de calculer le gain en dB de la même façon.
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-<a id="sec-chapitre-6-optique"></a>
-
-## Chapitre 6 : Optique
-
-*(À compléter au fil de l'année : mesure d'atténuation sur une liaison à fibre optique, relevé de l'ouverture numérique, caractérisation d'une LED et d'une photodiode.)*
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-<a id="sec-chapitre-7-preparation-a-l-epreuve"></a>
-
-## Chapitre 7 : Préparation à l'épreuve
-
-*(À compléter au fil de l'année : exploitation de relevés type annale, analyse de documents techniques, exercices de mesure en temps limité.)*
-
----
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-<a id="sec-annexe-a-alternatives-numeriques-tp-simules"></a>
-
-## Annexe A : alternatives numériques (TP simulés)
-
-### Alternative : TP informatique / simulation (en cas de manque de matériel)
-
-Si le matériel de laboratoire ne permet pas d'équiper tous les postes en parallèle (cas fréquent), chaque atelier a un équivalent réalisable sur ordinateur, en salle informatique ou même sur PC portable/tablette personnelle, avec des outils **gratuits et fonctionnant dans le navigateur (aucune installation requise)**. On peut aussi mixer : 1 ou 2 postes en matériel réel + les autres sous-groupes en version simulée, en tournant.
-
-**Outils utilisés (tous gratuits, navigateur uniquement)**
-
-| Outil | Usage | Accès |
-|---|---|---|
-| Falstad Circuit Simulator | Circuits élec + oscilloscope + GBF virtuels, diodes | falstad.com/circuit |
-| Tinkercad Circuits | Montage sur breadboard virtuel + multimètre | tinkercad.com/circuits (compte gratuit) |
-| LibreOffice Calc / Excel | Traitement statistique des incertitudes | déjà installé en général |
-| PhET Interactive Simulations (Univ. Colorado) | Ondes, circuits, notions qualitatives | phet.colorado.edu |
-### Alternative A : Mesures et incertitudes (sur tableur)
-
-- **Principe :** au lieu de mesurer physiquement, les étudiants exploitent une série de mesures déjà fournie (préparée par le professeur, réaliste avec dispersion) ou générée aléatoirement par une formule tableur, pour se concentrer sur le traitement statistique : qui est la vraie compétence visée par cet atelier.
-- **Déroulé :** 5 min prise en main du fichier tableur fourni → 15 min l'étudiant génère ou récupère 10 valeurs de mesure (ex. avec une formule `=NORM.INV(ALEA();220;1,5)` pour simuler des mesures d'une résistance de 220 Ω avec 1,5 Ω d'écart-type réaliste) → 20 min calcul de x̄, s, u_A, u_B, u, U avec les formules du tableur (`MOYENNE`, `ECARTYPE.STANDARD`) → 15 min écriture du résultat final et test de compatibilité avec la valeur nominale.
-- En modifiant l'écart-type simulé ou le nombre de mesures n dans la formule, on observe immédiatement l'effet de n sur u_A (u_A diminue en 1/√n).
-- **Livrable :** fichier tableur avec formules visibles + résultat final rédigé.
-### Alternative B : Bases de l'électricité (Falstad ou Tinkercad Circuits)
-
-- **Principe :** construire virtuellement les mêmes montages série/parallèle, avec multimètres virtuels (voltmètre/ampèremètre) à placer sur le circuit.
-- **Déroulé :** 10 min prise en main de l'interface → 20 min montage série (mesure U et I à différents points, vérification loi des mailles) → 20 min montage parallèle (loi des nœuds) → 5 min calcul de puissance à partir des relevés virtuels.
-- **Avantage :** Falstad affiche en temps réel les valeurs de courant (couleur/épaisseur des fils animée) et de tension, ce qui rend la loi des nœuds et des mailles très visuelle.
-- **Livrable :** capture d'écran des montages annotée + tableau de mesures + calculs.
-### Alternative C : Ondes (Falstad, GBF et oscilloscope intégrés)
-
-- **Principe :** Falstad propose directement un générateur de signal et un oscilloscope virtuels sur le même circuit, ce qui en fait l'atelier le plus fidèle à sa version physique.
-- **Déroulé :** 10 min prise en main → 20 min réglage d'un générateur sinusoïdal, lecture de période/fréquence/amplitude sur le scope virtuel → 20 min montage d'un circuit RC, observation et mesure du déphasage entrée/sortie → 5 min bilan.
-- **Livrable :** captures d'écran du scope virtuel annotées, calculs de fréquence et de déphasage, comparaison avec les valeurs réglées sur le générateur.
-### Alternative D (détaillée) : Atelier 4 entièrement sur Falstad
-
-> **Cette alternative est la version de référence de l'atelier 4.** Le matériel de laboratoire n'étant pas disponible pour cet atelier, les étudiants **construisent eux-mêmes les deux circuits** dans le simulateur, composant par composant. Rien n'est fourni pré-câblé : le montage fait partie du travail demandé, exactement comme sur une plaque d'essai réelle.
-
-**Avant de commencer (pour tout le sous-groupe, 5 min)**
-
-1. Ouvrir un navigateur et aller sur **falstad.com/circuit**.
-2. Le simulateur ouvre toujours un circuit d'exemple : le vider entièrement par le menu **Fichier → Nouveau circuit vierge**, ou sélectionner tout et supprimer. L'écran doit être vide.
-3. Repérer les trois zones : la **zone de dessin** (grande grille), le **panneau de droite** (bouton Run/Stop, curseur de vitesse de simulation), et le **menu du haut** (Fichier, Édition, Dessiner, Oscilloscopes, Options).
-4. Deux gestes à connaître :
-   - **Placer un composant** : menu **Dessiner** (*Draw*), choisir le composant, puis **cliquer-glisser** sur la grille pour le tracer (la longueur du glissement donne la taille du composant).
-   - **Modifier une valeur** : **clic droit** sur le composant → **Éditer…**, saisir la valeur, valider.
-   - **Effacer** : clic droit sur le composant → **Supprimer** (*Delete*).
-5. Astuce de lecture : une fois la simulation lancée, Falstad affiche des **points mobiles** sur les fils (le courant) et un **code couleur** de tension (vert = potentiel positif, rouge = négatif, gris = 0 V). Survoler un composant affiche sa tension et son courant dans le bandeau inférieur.
-
-> ⚠ Le simulateur est utilisé **en français** (le choix de la langue se fait dans le menu **Options**).
-
----
-
-<a id="sec-option-a-tracer-la-caracteristique-d-une-diode"></a>
-
-#### Option A : tracer la caractéristique d'une diode
+#### Version Falstad du TP 1.2 (version de référence) : tracer la caractéristique d'une diode
 
 **Objectif :** construire un circuit diode + résistance de protection, relever point par point le couple $(V_{diode},\, I)$, tracer $I = f(V_{diode})$ et en déduire la tension de seuil.
 
@@ -516,7 +293,7 @@ Vous aurez besoin des racourcie clavier : https://defkey.com/fr/falstad-circuit-
 
 **Étape 1 (10 min) : construire le circuit**
 
-Le circuit à reproduire est celui de l'atelier 4 option A : une source de tension continue, une résistance de protection de 1 kΩ et une diode en série, le tout refermé sur la masse.
+Le circuit à reproduire est celui du TP 1.2 (version matériel ci-dessus) : une source de tension continue, une résistance de protection de 1 kΩ et une diode en série, le tout refermé sur la masse.
 
 1. **Placer la source** : menu **Ajouter une source de tension (2 bornes)** (*Draw → Inputs and Sources → Add Voltage Source (2-terminal)*). Tracer un segment **vertical** à gauche de l'écran (glisser du bas vers le haut).
 2. **Régler la source** : clic droit dessus → **Éditer…**. Choisir une source **continue (DC)** et mettre la tension à **0,5 V** pour commencer.
@@ -562,13 +339,444 @@ Le circuit à reproduire est celui de l'atelier 4 option A : une source de tensi
 - ❓ *Q6. Pour chacun des trois points, comparez le courant calculé $I = (E - V_{diode})/R$ au courant lu dans le simulateur. Les deux concordent-ils ?*
 - ❓ *Q7. Citez une application où la diode est utilisée dans une carte électronique*
 
-**Livrable option A :** schéma du circuit construit, tableau de mesures complet, graphe $I = f(V_{diode})$ tracé et annoté (seuil repéré), réponses Q1 à Q7, capture d'écran du circuit sous Falstad.
+**Livrable :** schéma du circuit construit, tableau de mesures complet, graphe $I = f(V_{diode})$ tracé et annoté (seuil repéré), réponses Q1 à Q7, capture d'écran du circuit sous Falstad.
 
 ---
 
-<a id="sec-option-b-boucle-ouverte-contre-boucle-fermee"></a>
+---
 
-#### Option B : boucle ouverte contre boucle fermée
+<a id="sec-tp-1-3-condensateur-et-bobine-en-regime-sinusoidal-impedance-et-dephas"></a>
+
+### TP 1.3 : Condensateur et bobine en régime sinusoïdal : impédance et déphasage
+
+> **Durée :** 55 min · **Mode :** Falstad (les étudiants construisent le circuit) · **Cours :** Chapitre 1, §1.2 · **Prérequis :** fiche outil Falstad, TP 1.1
+> **Objectif :** constater qu'un condensateur et une bobine ne se comportent pas comme une résistance : leur « résistance apparente » (impédance) dépend de la fréquence, et ils déphasent le courant par rapport à la tension.
+
+**Étape 1 (10 min) : construire le circuit RC**
+
+1. Placer une **source de tension sinusoïdale** : **Dessiner → Entrées et sources → Ajouter une source de tension (2 bornes)**, puis clic droit → **Éditer…** : forme d'onde **sinusoïdale**, tension max **5 V**, fréquence **1 kHz**. Relier sa borne basse à une masse.
+2. Placer en série, depuis la borne haute de la source : une **résistance** R = **1 kΩ**, puis un **condensateur** (**Dessiner → Composants passifs → Ajouter un condensateur**) C = **100 nF**, dont la seconde borne revient à la masse.
+3. Afficher les signaux : clic droit sur la **source** → **Voir dans un nouvel oscilloscope** (tension d'entrée $u(t)$), puis clic droit sur la **résistance** → **Voir dans un nouvel oscilloscope**. La tension aux bornes de R est l'image du courant : $i(t) = u_R(t)/R$.
+4. Pour comparer les deux courbes sur le même graphe : clic droit sur l'un des oscilloscopes → **Combiner** (*Combine*) avec l'autre, ou les laisser empilés l'un au-dessus de l'autre.
+
+**Étape 2 (15 min) : mesurer amplitude et déphasage à 1 kHz**
+
+5. Relever l'amplitude de $u_R$ (au survol de l'oscilloscope ou de la résistance), en déduire l'amplitude du courant $I_{max} = U_{R,max}/R$.
+6. Relever le décalage temporel $\Delta t$ entre le passage par zéro de $u(t)$ et celui de $u_R(t)$, et la période $T$. En déduire le déphasage $\varphi = 360 \times \Delta t / T$.
+7. Compléter la première ligne du tableau.
+
+| f | $Z_C = 1/(C\omega)$ calculé | $|Z| = \sqrt{R^2 + Z_C^2}$ calculé | $I_{max}$ calculé | $I_{max}$ mesuré | $\varphi$ mesuré | Le courant est… |
+|---|---|---|---|---|---|---|
+| 1 kHz | | | | | | en avance / en retard |
+| 100 Hz | | | | | | |
+| 10 kHz | | | | | | |
+
+- ❓ *Q1. À 1 kHz, comparez $I_{max}$ mesuré et calculé. Le condensateur se comporte-t-il comme une résistance de 1592 Ω ? Qu'est-ce qui le distingue d'une vraie résistance (regardez le déphasage) ?*
+- ❓ *Q2. Le courant est-il en avance ou en retard sur la tension ? Comparez au signe attendu pour un condensateur.*
+
+**Étape 3 (15 min) : faire varier la fréquence**
+
+8. Éditer la source : fréquence **100 Hz**, refaire les mesures. Puis **10 kHz**.
+
+- ❓ *Q3. Quand la fréquence augmente, l'impédance du condensateur augmente-t-elle ou diminue-t-elle ? Que devient le déphasage ? Vers quel comportement (résistif ou capacitif) le circuit tend-il à haute fréquence ?*
+- ❓ *Q4. Un condensateur « laisse passer » les hautes fréquences et « bloque » les basses fréquences : reformulez cette phrase à partir de vos mesures.*
+
+**Étape 4 (10 min) : remplacer le condensateur par une bobine**
+
+9. Supprimer le condensateur et placer une **bobine** (**Dessiner → Composants passifs → Ajouter une inductance**) L = **100 mH** au même endroit. Refaire les mesures à 1 kHz.
+
+- ❓ *Q5. Calculez $Z_L = L\omega$ à 1 kHz et comparez au courant mesuré. Le courant est-il maintenant en avance ou en retard ? Que constatez-vous par rapport au condensateur ?*
+- ❓ *Q6. Résumez en une phrase le comportement de R, de C et de L vis-à-vis de la fréquence.*
+
+**Livrable :** tableau complet, captures d'écran des oscillogrammes (1 kHz avec C, 1 kHz avec L) avec $\Delta t$ et $T$ repérés, réponses Q1 à Q6.
+
+---
+
+<a id="sec-tp-1-4-resonance-d-un-dipole-rlc-serie"></a>
+
+### TP 1.4 : Résonance d'un dipôle RLC série
+
+> **Durée :** 55 min · **Mode :** Falstad · **Cours :** Chapitre 1, §1.2 (résonance, facteur de qualité, surtension) · **Prérequis :** TP 1.3
+> **Objectif :** mettre en évidence la fréquence de résonance d'un circuit RLC série, mesurer sa bande passante et observer le phénomène de surtension.
+
+**Étape 1 (10 min) : construire le circuit**
+
+1. Source sinusoïdale, tension max **1 V** (attention, 1 V et non 5 V : la surtension à la résonance sera déjà importante), fréquence initiale **1 kHz**, borne basse à la masse.
+2. En série depuis la source : R = **20 Ω**, L = **10 mH**, C = **100 nF**, retour à la masse.
+3. Oscilloscope sur la **résistance** (image du courant) et un second sur le **condensateur**.
+
+- ❓ *Q1. Avant toute mesure, calculez la fréquence de résonance théorique $f_0 = \dfrac{1}{2\pi\sqrt{LC}}$ et le facteur de qualité $Q = \dfrac{1}{R}\sqrt{\dfrac{L}{C}}$.*
+
+**Étape 2 (20 min) : relevé de la courbe de résonance**
+
+4. Pour chaque fréquence du tableau, éditer la source, attendre la stabilisation, relever l'amplitude de $u_R$ (donc $I_{max} = U_{R,max}/R$) et l'amplitude de $u_C$.
+
+| f (kHz) | 1 | 3 | 4 | 4,5 | 4,8 | 5,0 | 5,2 | 5,5 | 6 | 8 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| $U_{R,max}$ (V) | | | | | | | | | | | |
+| $I_{max}$ (mA) | | | | | | | | | | | |
+| $U_{C,max}$ (V) | | | | | | | | | | | |
+
+5. Affiner autour du maximum : tester 4,9 ; 5,0 ; 5,1 kHz pour encadrer précisément $f_0$.
+6. Tracer $I_{max} = f(f)$ (papier ou tableur).
+
+- ❓ *Q2. Quelle fréquence donne le courant maximal ? Comparez à la valeur théorique.*
+- ❓ *Q3. À la résonance, quelle est la tension max aux bornes du condensateur ? Comparez-la à la tension de la source (1 V). Quel est le rapport ? Comparez ce rapport au facteur de qualité Q calculé en Q1. C'est le phénomène de **surtension**.*
+- ❓ *Q4. Pourquoi ce phénomène impose-t-il de choisir des condensateurs avec une tenue en tension supérieure à celle de l'alimentation ?*
+
+**Étape 3 (15 min) : bande passante et sélectivité**
+
+7. Repérer $I_{max}$ à la résonance, calculer $I_{max}/\sqrt{2}$, puis chercher (en affinant la fréquence de part et d'autre de $f_0$) les deux fréquences $f_1$ et $f_2$ pour lesquelles le courant vaut cette valeur. La bande passante vaut $\Delta f = f_2 - f_1$.
+
+- ❓ *Q5. Comparez $\Delta f$ mesurée à la valeur théorique $\Delta f = f_0/Q$.*
+
+8. Remplacer R = 20 Ω par R = **100 Ω** et relever à nouveau $I_{max}$ à 4, 5 et 6 kHz.
+
+- ❓ *Q6. La résonance est-elle plus « pointue » ou plus « plate » avec 100 Ω ? Quel est le nouveau Q ? Lequel des deux circuits est le plus sélectif ?*
+- ❓ *Q7. Application : un lecteur NFC doit capter 13,56 MHz et rejeter les fréquences voisines. Faut-il un Q élevé ou faible ? Justifiez.*
+
+**Livrable :** tableau, courbe de résonance tracée avec $f_0$, $f_1$, $f_2$ et $\Delta f$ repérés, réponses Q1 à Q7.
+
+---
+
+<a id="sec-tp-1-5-theoreme-de-superposition-et-modele-de-thevenin"></a>
+
+### TP 1.5 : Théorème de superposition et modèle de Thévenin
+
+> **Durée :** 55 min · **Mode :** Falstad · **Cours :** Chapitre 1, §1.2 (théorèmes utiles) · **Prérequis :** TP 1.1
+> **Objectif :** vérifier expérimentalement deux théorèmes qui permettent de simplifier l'étude de n'importe quel circuit linéaire.
+
+**Étape 1 (10 min) : construire le réseau à deux sources**
+
+1. Placer deux sources de tension **continues** : $E_1$ = **12 V** (à gauche) et $E_2$ = **5 V** (à droite), chacune avec sa borne basse à la masse.
+2. Placer trois résistances : $R_1$ = **1 kΩ** de la borne haute de $E_1$ vers un nœud central **A** ; $R_2$ = **2,2 kΩ** de la borne haute de $E_2$ vers ce même nœud A ; $R_3$ = **1 kΩ** du nœud A vers la masse.
+3. Vérifier que le nœud A relie bien les trois résistances (un point de jonction apparaît dans Falstad quand trois fils se rejoignent).
+
+**Étape 2 (15 min) : théorème de superposition**
+
+4. Lancer la simulation, survoler le nœud A et relever $V_A$ (tension du nœud par rapport à la masse). Relever aussi le courant dans $R_3$.
+5. **Éteindre $E_2$** : clic droit sur $E_2$ → **Éditer…** → tension **0 V** (une source de tension éteinte équivaut à un fil). Relever $V_{A1}$.
+6. **Rallumer $E_2$ (5 V) et éteindre $E_1$** (0 V). Relever $V_{A2}$.
+
+| Configuration | $V_A$ mesurée | $I_{R_3}$ mesurée |
+|---|---|---|
+| Les deux sources actives | | |
+| $E_1$ seule ($E_2$ = 0 V) | | |
+| $E_2$ seule ($E_1$ = 0 V) | | |
+| Somme des deux contributions | | |
+
+- ❓ *Q1. Comparez $V_{A1} + V_{A2}$ à $V_A$. Le théorème de superposition est-il vérifié ?*
+- ❓ *Q2. Calculez $V_{A1}$ par un pont diviseur (avec $E_2$ éteinte, $R_2$ et $R_3$ sont en parallèle) et comparez à la mesure.*
+- ❓ *Q3. Pourquoi « éteindre » une source de tension revient-il à la remplacer par un fil, et non par un circuit ouvert ?*
+
+**Étape 3 (20 min) : modèle de Thévenin vu par $R_3$**
+
+On considère $R_3$ comme la « charge » : tout le reste du circuit (les deux sources, $R_1$, $R_2$) est le « dipôle actif » que l'on veut remplacer par un modèle de Thévenin (une source $E_{Th}$ en série avec une résistance $R_{Th}$).
+
+7. Remettre les deux sources actives. **Retirer $R_3$** (clic droit → Supprimer) : le nœud A est maintenant « à vide ». Relever la tension $V_A$ à vide : c'est $E_{Th}$.
+8. Remplacer $R_3$ par un **fil** direct entre A et la masse (court-circuit) : relever le courant qui y circule, $I_{CC}$. En déduire $R_{Th} = E_{Th}/I_{CC}$.
+9. Vérification par le calcul : $R_{Th}$ est la résistance vue depuis A quand les sources sont éteintes, soit $R_1$ en parallèle avec $R_2$. Calculer et comparer.
+10. **Construire le modèle de Thévenin** à côté : une source de tension continue réglée sur la valeur $E_{Th}$ mesurée, en série avec une résistance de valeur $R_{Th}$, alimentant une résistance de **1 kΩ** (la charge $R_3$). Relever la tension aux bornes de cette charge.
+
+- ❓ *Q4. Comparez la tension aux bornes de la charge dans le circuit complet (étape 4) et dans le modèle de Thévenin (étape 10). Le modèle est-il équivalent ?*
+- ❓ *Q5. Remplacez la charge par 470 Ω dans les deux circuits : l'équivalence tient-elle toujours ?*
+- ❓ *Q6. Quel est l'intérêt pratique de ce modèle quand on veut brancher un capteur ou un appareil de mesure sur un circuit complexe (pensez à l'effet de charge vu au TP 1.1) ?*
+
+**Livrable :** les deux tableaux, les captures des trois circuits (réseau complet, réseau court-circuité, modèle de Thévenin), réponses Q1 à Q6.
+
+---
+
+<a id="sec-tp-1-6-decibels-et-chaine-d-attenuateurs"></a>
+
+### TP 1.6 : Décibels et chaîne d'atténuateurs
+
+> **Durée :** 55 min · **Mode :** Falstad · **Cours :** Chapitre 1, §1.3 · **Prérequis :** TP 1.1 (pont diviseur)
+> **Objectif :** mesurer des gains en tension, les convertir en dB, et vérifier que les gains en dB s'additionnent en cascade… à condition que les étages ne se chargent pas mutuellement.
+
+**Étape 1 (10 min) : un atténuateur**
+
+1. Source de tension **continue** (ou sinusoïdale à 1 kHz, au choix) $U_e$ = **10 V**, borne basse à la masse.
+2. Pont diviseur : $R_1$ = **1 kΩ** puis $R_2$ = **1 kΩ** vers la masse. La sortie $U_s$ est prise aux bornes de $R_2$.
+3. Relever $U_s$, calculer $A_v = U_s/U_e$ et le gain en dB : $G = 20\log_{10}(U_s/U_e)$.
+
+- ❓ *Q1. Quelle valeur en dB obtenez-vous ? Retrouvez la valeur remarquable correspondante.*
+
+**Étape 2 (15 min) : deux atténuateurs en cascade**
+
+4. Ajouter un second pont diviseur identique ($R_3$ = 1 kΩ, $R_4$ = 1 kΩ) alimenté par la sortie du premier (relier le haut de $R_3$ au point $U_s$ du premier pont). Relever la tension $U_{s2}$ aux bornes de $R_4$.
+5. Calculer le gain total mesuré en dB.
+
+- ❓ *Q2. On attendait −6 dB + (−6 dB) = −12 dB. Obtenez-vous cette valeur ? Si non, calculez la résistance équivalente vue par le premier pont ($R_2$ en parallèle avec $R_3 + R_4$) et expliquez l'écart : c'est l'**effet de charge** entre étages.*
+
+**Étape 3 (15 min) : isoler les étages avec un suiveur**
+
+6. Insérer entre les deux ponts un **AOP monté en suiveur** (voir TP 4.1 pour le câblage : entrée + sur la sortie du premier pont, sortie reliée à l'entrée −, alimentation ±15 V ou 12 V). La sortie du suiveur alimente le second pont.
+7. Relever à nouveau $U_{s2}$ et le gain total en dB.
+
+- ❓ *Q3. Retrouvez-vous maintenant −12 dB ? Pourquoi un suiveur (gain 0 dB) permet-il aux gains de s'additionner correctement ? Quelle propriété du suiveur est en jeu (résistance d'entrée, résistance de sortie) ?*
+
+**Étape 4 (15 min) : ajouter un étage amplificateur**
+
+8. En sortie du second pont, ajouter un **AOP non inverseur** de gain 10 : entrée + sur $U_{s2}$, résistance $R_a$ = **1 kΩ** entre l'entrée − et la masse, résistance $R_b$ = **9 kΩ** entre la sortie et l'entrée − (gain $1 + R_b/R_a = 10$). Relever la tension finale.
+
+- ❓ *Q4. Convertissez le gain de l'amplificateur en dB. Calculez le gain total de la chaîne (atténuateur, atténuateur, amplificateur) en additionnant les dB, puis comparez à la mesure.*
+- ❓ *Q5. Exprimez la tension finale en dBV (référence 1 V) et la tension d'entrée en dBV. Vérifiez que la différence redonne le gain total.*
+- ❓ *Q6. Application : dans un bilan de liaison Wi-Fi ou fibre, on additionne les gains d'antenne et les pertes de câble en dB sans se soucier de l'effet de charge. Quelle hypothèse cela suppose-t-il sur les impédances (rappel : 50 Ω partout) ?*
+
+**Livrable :** tableau des tensions et gains (linéaire et dB) pour chaque configuration, captures des circuits, réponses Q1 à Q6.
+
+---
+
+<a id="sec-tp-1-7-led-tension-de-seuil-couleur-et-longueur-d-onde"></a>
+
+### TP 1.7 : LED : tension de seuil, couleur et longueur d'onde
+
+> **Durée :** 45 min · **Mode :** Falstad · **Cours :** Chapitre 1, §1.5 et §1.6 · **Prérequis :** TP 1.2 (diode)
+> **Objectif :** relier la tension de seuil d'une LED à la couleur qu'elle émet, et retrouver la longueur d'onde à partir de l'énergie des photons.
+
+**Étape 1 (10 min) : construire le circuit**
+
+1. Source de tension continue $E$ = **5 V**, borne basse à la masse.
+2. Résistance de protection R = **330 Ω** en série, puis une **LED** : **Dessiner → Sorties et étiquettes → Ajouter une LED**, cathode (barre) côté masse.
+3. Clic droit sur la LED → **Éditer…** : repérer les réglages de **couleur** et de **tension directe** (*forward voltage*). Régler une LED **rouge** avec une tension directe de **1,8 V**.
+4. Lancer la simulation : la LED doit s'allumer (elle se colore dans le simulateur). Survoler la LED pour lire sa tension et son courant.
+
+**Étape 2 (15 min) : trois couleurs**
+
+5. Compléter le tableau pour trois LED en changeant la couleur et la tension directe : rouge 1,8 V ; verte 2,1 V ; bleue 3,0 V.
+
+| LED | Tension directe réglée $V_F$ (V) | Tension mesurée aux bornes (V) | Courant mesuré (mA) | Énergie du photon $E = eV_F$ (eV) | $\lambda = \dfrac{hc}{E}$ calculée (nm) | Couleur attendue pour cette λ |
+|---|---|---|---|---|---|---|
+| Rouge | 1,8 | | | | | |
+| Verte | 2,1 | | | | | |
+| Bleue | 3,0 | | | | | |
+
+Constantes : $h = 6{,}63 \times 10^{-34}$ J·s, $c = 3{,}0 \times 10^8$ m/s, $e = 1{,}6 \times 10^{-19}$ C. Astuce : $\lambda\,(\text{nm}) \approx 1240 / E\,(\text{eV})$.
+
+- ❓ *Q1. La tension de seuil d'une LED est-elle la même quelle que soit sa couleur ? Dans quel sens varie-t-elle du rouge au bleu ?*
+- ❓ *Q2. Les longueurs d'onde calculées sont-elles cohérentes avec les couleurs (rouge ≈ 620-700 nm, vert ≈ 500-570 nm, bleu ≈ 450-490 nm) ? D'où vient l'écart éventuel (la tension aux bornes n'est pas exactement l'énergie du gap) ?*
+- ❓ *Q3. Expliquez avec le cours (§1.5-1.6) pourquoi une LED bleue a besoin d'une tension plus élevée qu'une LED rouge.*
+
+**Étape 3 (15 min) : dimensionner la résistance de protection**
+
+6. Pour la LED bleue, on veut un courant de **10 mA** exactement. Calculer la résistance nécessaire : $R = (E - V_F)/I$. La régler dans le simulateur et vérifier le courant.
+7. Passer $E$ à **3,3 V** (tension d'un microcontrôleur) : la LED bleue s'allume-t-elle encore correctement ? Et la rouge ?
+
+- ❓ *Q4. Pourquoi ne peut-on pas piloter directement une LED bleue de 3,0 V avec une sortie 3,3 V et une résistance de 330 Ω ? Quel courant obtient-on ?*
+- ❓ *Q5. Application : les LED de face avant d'un switch ou d'une carte réseau sont de couleurs différentes. En quoi cela influence-t-il le choix des résistances de limitation sur la carte ?*
+
+**Livrable :** tableau complet, réponses Q1 à Q5, capture du circuit avec la LED bleue à 10 mA.
+
+---
+
+<a id="sec-tp-1-8-pour-aller-plus-loin-photodiode-deux-modes-de-fonctionnement"></a>
+
+### TP 1.8 (pour aller plus loin) : Photodiode : deux modes de fonctionnement
+
+> **Durée :** 45 min · **Mode :** Falstad (modèle équivalent) · **Cours :** Chapitre 1, §1.8 · **Prérequis :** TP 1.2 et TP 1.7
+> **Objectif :** comprendre les deux modes d'utilisation d'une photodiode (photoconducteur et photovoltaïque) à partir de son modèle électrique équivalent.
+
+Falstad ne propose pas de composant « photodiode » avec une commande d'éclairement. On utilise donc son **modèle électrique** : une **source de courant** (le courant photonique $I_{ph}$, proportionnel à l'éclairement) en parallèle avec une **diode** ordinaire (la jonction PN). Faire varier $I_{ph}$ revient à faire varier la lumière reçue.
+
+**Étape 1 (10 min) : construire le modèle**
+
+1. Placer une **diode** verticale, anode en bas, cathode en haut.
+2. Placer une **source de courant** (**Dessiner → Entrées et sources → Ajouter une source de courant**) en parallèle de la diode, orientée pour que le courant circule **de la cathode vers l'anode à l'extérieur** de la diode (c'est-à-dire dans le sens inverse de la diode). Régler $I_{ph}$ = **50 µA**.
+3. Repérer les deux bornes du modèle : **K** (cathode, en haut) et **A** (anode, en bas). C'est ce dipôle que l'on va utiliser dans les deux modes.
+
+**Étape 2 (15 min) : mode photoconducteur (capteur, récepteur fibre)**
+
+4. Polariser le modèle **en inverse** : source de tension continue **5 V** dont le + est relié à K ; entre A et la masse, placer une **résistance de mesure** R = **10 kΩ**. La tension de sortie est prise aux bornes de R.
+5. Relever $U_s$ pour $I_{ph}$ = 10 µA, 20 µA, 50 µA, 100 µA, 200 µA.
+
+| $I_{ph}$ (µA) | 10 | 20 | 50 | 100 | 200 |
+|---|---|---|---|---|---|
+| $U_s$ mesurée (V) | | | | | |
+| $U_s = R \times I_{ph}$ calculée (V) | | | | | |
+
+- ❓ *Q1. La tension de sortie est-elle proportionnelle à l'éclairement ? Pourquoi ce mode est-il utilisé dans un récepteur de fibre optique ou un capteur de luminosité ?*
+- ❓ *Q2. Que se passe-t-il si l'on passe la tension de polarisation de 5 V à 10 V, à $I_{ph}$ constant ? Que peut-on en conclure sur l'indépendance du courant vis-à-vis de la tension inverse ?*
+
+**Étape 3 (15 min) : mode photovoltaïque (cellule solaire)**
+
+6. Retirer la source 5 V. Relier simplement une résistance de charge R = **10 kΩ** entre K et A. Relever la tension aux bornes de la charge pour les mêmes valeurs de $I_{ph}$.
+7. Refaire la mesure avec R = 100 kΩ, puis en circuit ouvert (supprimer R).
+
+- ❓ *Q3. La tension obtenue est-elle proportionnelle à $I_{ph}$ ? Vers quelle valeur maximale tend-elle en circuit ouvert ? À quoi correspond cette valeur (pensez à la tension de seuil de la diode) ?*
+- ❓ *Q4. Dans ce mode, la photodiode fournit-elle ou consomme-t-elle de l'énergie ? En quoi est-ce le principe d'un panneau solaire ?*
+- ❓ *Q5. Résumez dans un tableau les différences entre les deux modes : polarisation, grandeur de sortie, linéarité, application.*
+
+**Livrable :** les deux tableaux, captures des deux montages, réponses Q1 à Q5.
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-2-mesures-et-incertitudes"></a>
+
+## Chapitre 2 : Mesures et incertitudes
+
+<a id="sec-tp-2-1-mesures-et-incertitudes"></a>
+
+### TP 2.1 : Mesures et incertitudes
+
+> **Durée :** 55 min · **Mode :** matériel (version tableur ci-dessous) · **Cours :** Chapitre 2, §2.1 · **Prérequis :** aucun
+> **Objectif :** réaliser une série de mesures, calculer les incertitudes de type A et B et écrire correctement un résultat.
+
+- **Objectifs :** réaliser une série de mesures répétées, calculer une incertitude-type de type A, comparer à la valeur nominale.
+- **Matériel par poste :** 1 alimentation stabilisée, 2 multimètres, 3 résistances de valeurs différentes (avec tolérance affichée sur le corps de la résistance), cordons de connexion, feuille de mesures.
+- **Sécurité :** alimentation réglée à une tension faible (≤ 6 V), pas de risque particulier ; vérifier le calibre du multimètre avant de mesurer (ohmmètre hors tension du circuit).
+
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTQ4LjAiIHk9IjQxLjAiIHdpZHRoPSI0NCIgaGVpZ2h0PSIxOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMzUuMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5SPC90ZXh0PjxsaW5lIHgxPSIyNzAiIHkxPSI1MCIgeDI9IjI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjI3MCIgeTE9IjE3MCIgeDI9IjcwIiB5Mj0iMTcwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjUwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSI3MCIgY3k9IjExMCIgcj0iMjAiIGZpbGw9IndoaXRlIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI3MCIgeT0iMTA3LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+KzwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTI1LjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+LTwvdGV4dD48dGV4dCB4PSIzNiIgeT0iMTEwIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFsaW08L3RleHQ+PGxpbmUgeDE9IjE0MCIgeTE9IjUwIiB4Mj0iMTQwIiB5Mj0iMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyMDAiIHkxPSI1MCIgeDI9IjIwMCIgeTI9IjIwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iMTQwIiB5MT0iMjAiIHgyPSIxNTUiIHkyPSIyMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjE4NSIgeTE9IjIwIiB4Mj0iMjAwIiB5Mj0iMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjE3MCIgY3k9IjIwIiByPSIxNiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMjUiIGZvbnQtc2l6ZT0iMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VjwvdGV4dD48dGV4dCB4PSIxNzAiIHk9IjIwMCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NZXN1cmUgZGUgbGEgdGVuc2lvbiBhdXggYm9ybmVzIGRlIFIgKEF0ZWxpZXIgMSk8L3RleHQ+PC9zdmc+" width="320" alt="schema TP1_mesure_tension"/>
+
+**Déroulé détaillé**
+
+1. **(5 min) Consignes et lecture du code couleur.** Chaque poste reçoit une résistance non identifiée par écrit.
+   - ❓ *Q1. Lisez le code couleur de votre résistance : quelle est sa valeur nominale et sa tolérance annoncée (ex. 220 Ω ± 5 %) ?*
+2. **(10 min) Mesure directe à l'ohmmètre.** Mesurer une seule fois la résistance à l'ohmmètre, hors circuit.
+   - Relevé attendu : valeur affichée = ______ Ω.
+   - ❓ *Q2. Cette valeur mesurée est-elle comprise dans l'intervalle [valeur nominale − tolérance ; valeur nominale + tolérance] ? Montrez le calcul de l'intervalle.*
+3. **(15 min) Série de 10 mesures répétées d'une tension.** Monter la résistance sous l'alimentation stabilisée (tension fixée, ex. 5,00 V affichés). Mesurer la tension à ses bornes au voltmètre, **10 fois de suite**, en débranchant/rebranchant légèrement les pointes de touche entre chaque mesure (pour retrouver la variabilité réelle d'une manipulation).
+   - Tableau à compléter :
+
+     | Mesure n° | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+     |---|---|---|---|---|---|---|---|---|---|---|
+     | U (V) | | | | | | | | | | |
+
+   - ❓ *Q3. Les 10 valeurs sont-elles rigoureusement identiques ? Proposez au moins deux causes possibles de cette dispersion (contact, résolution de l'appareil, bruit, légère variation de l'alimentation…).*
+4. **(15 min) Traitement statistique.** À l'aide de la calculatrice (mode statistique) ou à la main :
+   - Calculer x̄ (moyenne) et s (écart-type de l'échantillon).
+   - ❓ *Q4. Calculez $u_A = s/\sqrt{n}$. Notez la valeur.*
+   - ❓ *Q5. À partir de la résolution du voltmètre (relevée sur l'appareil), calculez $u_B = \text{résolution}/\sqrt{12}$.*
+   - ❓ *Q6. Calculez l'incertitude-type composée $u = \sqrt{u_A^2 + u_B^2}$, puis l'incertitude élargie $U = 2u$. Écrivez le résultat final sous la forme $U_{mesurée} = \bar{x} \pm U$ (unité, bon nombre de chiffres significatifs).*
+5. **(10 min) Conclusion et question de synthèse.**
+   - ❓ *Q7. Le résultat de mesure est-il compatible avec la tension affichée par l'alimentation ? Justifiez par le calcul (comparaison de l'écart à U).*
+   - ❓ *Q8. Si vous aviez réalisé 40 mesures au lieu de 10 (même dispersion s), quel serait l'effet sur u_A ? Vérifiez par le calcul ($u_A \propto 1/\sqrt{n}$).*
+- **Livrable :** tableau de mesures rempli + réponses aux questions Q1 à Q8 + résultat final encadré.
+- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet TP (version simulée du TP 2.1).
+
+---
+
+<a id="sec-version-simulee-du-tp-2-1-tableur"></a>
+
+#### Version simulée du TP 2.1 (tableur)
+
+- **Principe :** au lieu de mesurer physiquement, les étudiants exploitent une série de mesures déjà fournie (préparée par le professeur, réaliste avec dispersion) ou générée aléatoirement par une formule tableur, pour se concentrer sur le traitement statistique : qui est la vraie compétence visée par cet TP.
+- **Déroulé :** 5 min prise en main du fichier tableur fourni → 15 min l'étudiant génère ou récupère 10 valeurs de mesure (ex. avec une formule `=NORM.INV(ALEA();220;1,5)` pour simuler des mesures d'une résistance de 220 Ω avec 1,5 Ω d'écart-type réaliste) → 20 min calcul de x̄, s, u_A, u_B, u, U avec les formules du tableur (`MOYENNE`, `ECARTYPE.STANDARD`) → 15 min écriture du résultat final et test de compatibilité avec la valeur nominale.
+- En modifiant l'écart-type simulé ou le nombre de mesures n dans la formule, on observe immédiatement l'effet de n sur u_A ($u_A$ diminue en $1/\sqrt{n}$).
+- **Livrable :** fichier tableur avec formules visibles + résultat final rédigé.
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-3-ondes-et-propagation"></a>
+
+## Chapitre 3 : Ondes et propagation
+
+<a id="sec-tp-3-1-ondes-gbf-et-oscilloscope"></a>
+
+### TP 3.1 : Ondes : GBF et oscilloscope
+
+> **Durée :** 55 min · **Mode :** matériel (version Falstad ci-dessous) · **Cours :** Chapitre 3, §3.2-3.3 · **Prérequis :** aucun
+> **Objectif :** régler un GBF, lire période, fréquence et amplitude à l'oscilloscope, mesurer un déphasage.
+
+- **Objectifs :** prise en main du GBF et de l'oscilloscope, mesure de période/fréquence/amplitude, observation d'un déphasage.
+- **Matériel par poste :** 1 GBF, 1 oscilloscope 2 voies, 1 résistance + 1 condensateur (circuit RC), cordons BNC et sondes.
+- **Sécurité :** amplitude du GBF limitée à quelques volts, aucun risque particulier.
+
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjYwIiB5MT0iNjAiIHgyPSIxNTAiIHkyPSI2MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iODMuMCIgeT0iNTEuMCIgd2lkdGg9IjQ0IiBoZWlnaHQ9IjE4IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iMTA1IiB5PSI0NS4wIiBmb250LXNpemU9IjEzIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlI8L3RleHQ+PGxpbmUgeDE9IjE1MCIgeTE9IjYwIiB4Mj0iMjQwIiB5Mj0iNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNDAiIHkxPSI2MCIgeDI9IjI0MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjIyNiIgeTE9IjEzNCIgeDI9IjI1NCIgeTI9IjEzNCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIi8+PGxpbmUgeDE9IjIyNiIgeTE9IjE0NiIgeDI9IjI1NCIgeTI9IjE0NiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIi8+PHRleHQgeD0iMjY2IiB5PSIxNDAiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QzwvdGV4dD48bGluZSB4MT0iMjQwIiB5MT0iMTcwIiB4Mj0iNjAiIHkyPSIxNzAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSI2MCIgeTE9IjE3MCIgeDI9IjYwIiB5Mj0iNjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxjaXJjbGUgY3g9IjYwIiBjeT0iMTE1IiByPSIyMCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjYwIiB5PSIxMTIuMCIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4rPC90ZXh0Pjx0ZXh0IHg9IjYwIiB5PSIxMzAuMCIgZm9udC1zaXplPSIxNCIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4tPC90ZXh0Pjx0ZXh0IHg9IjI2IiB5PSIxMTUiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+R0JGPC90ZXh0PjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjMiIGZpbGw9ImJsYWNrIi8+PHRleHQgeD0iNDUiIHk9IjQ1IiBmb250LXNpemU9IjExIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNIMTwvdGV4dD48Y2lyY2xlIGN4PSIyNDAiIGN5PSI2MCIgcj0iMyIgZmlsbD0iYmxhY2siLz48dGV4dCB4PSIyNTUiIHk9IjQ1IiBmb250LXNpemU9IjExIiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNIMjwvdGV4dD48dGV4dCB4PSIxNTAiIHk9IjIwMCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5DaXJjdWl0IFJDLCBHQkYgKyBvc2NpbGxvc2NvcGUgKEF0ZWxpZXIgMyk8L3RleHQ+PC9zdmc+" width="320" alt="schema TP3_rc"/>
+
+**Déroulé détaillé**
+
+1. **(5 min) Repérage des commandes.**
+   - ❓ *Q1. Sur votre oscilloscope, repérez et notez le rôle des réglages TIME/DIV (base de temps) et VOLTS/DIV (sensibilité verticale). Sur le GBF, repérez les réglages fréquence, amplitude et forme du signal.*
+2. **(15 min) Mesure d'un signal sinusoïdal simple.** Régler le GBF sur un signal sinusoïdal, 1 kHz affiché, 2 V crête-à-crête affiché. Visualiser à l'oscilloscope.
+   - Relever : base de temps utilisée, nombre de divisions occupées par une période, sensibilité verticale, nombre de divisions occupées par l'amplitude crête-à-crête.
+
+     | Grandeur | Base de temps (s/div) | Nb div / période | T mesuré | $f_{mesurée} = 1/T$ | f affichée au GBF | Écart relatif |
+     |---|---|---|---|---|---|---|
+     | Valeur | | | | | 1 kHz | |
+
+   - ❓ *Q2. Calculez l'écart relatif entre la fréquence mesurée à l'oscilloscope et celle affichée par le GBF. D'où peut venir cet écart (résolution de lecture, tolérance des appareils) ?*
+   - ❓ *Q3. Faites de même pour l'amplitude : comparez l'amplitude mesurée sur l'écran à celle affichée par le GBF.*
+3. **(20 min) Circuit RC et déphasage.** Monter en série R et C ; visualiser en voie 1 la tension d'entrée (aux bornes du générateur) et en voie 2 la tension aux bornes de C. Répéter la mesure pour trois fréquences différentes (ex. 100 Hz, 1 kHz, 10 kHz), amplitude d'entrée constante.
+
+     | Fréquence | Décalage temporel Δt entre les 2 courbes | Déphasage $\varphi = 360 \times \Delta t / T$ (°) | Amplitude de $U_C$ (V) |
+     |---|---|---|---|
+     | 100 Hz | | | |
+     | 1 kHz | | | |
+     | 10 kHz | | | |
+
+   - ❓ *Q4. Comment évolue l'amplitude de $U_C$ quand la fréquence augmente ? Comment évolue le déphasage ?*
+   - ❓ *Q5. Ce comportement correspond à un filtre passe-bas ou passe-haut ? Justifiez à partir de vos observations (et pas seulement du cours).*
+4. **(15 min) Lien avec la fréquence de coupure.**
+   - ❓ *Q6. À partir des valeurs de R et C de votre montage, calculez la fréquence de coupure théorique $f_c = \dfrac{1}{2\pi RC}$.*
+   - ❓ *Q7. Cette fréquence se situe-t-elle entre vos trois points de mesure ? Le comportement observé en Q4/Q5 change-t-il de nature autour de f_c ?*
+- **Livrable :** tableaux de mesures remplis, réponses Q1 à Q7, captures ou schémas d'écran annotés si possible.
+- **⚙ Si matériel insuffisant :** basculer sur la version informatique de cet TP (version simulée du TP 3.1) : c'est d'ailleurs l'TP qui se simule le mieux, le simulateur intègre GBF et oscillo virtuels.
+
+---
+
+<a id="sec-version-simulee-du-tp-3-1-falstad-gbf-et-oscilloscope-integres"></a>
+
+#### Version simulée du TP 3.1 (Falstad, GBF et oscilloscope intégrés)
+
+- **Principe :** Falstad propose directement un générateur de signal et un oscilloscope virtuels sur le même circuit, ce qui en fait l'TP le plus fidèle à sa version physique.
+- **Déroulé :** 10 min prise en main → 20 min réglage d'un générateur sinusoïdal, lecture de période/fréquence/amplitude sur le scope virtuel → 20 min montage d'un circuit RC, observation et mesure du déphasage entrée/sortie → 5 min bilan.
+- **Livrable :** captures d'écran du scope virtuel annotées, calculs de fréquence et de déphasage, comparaison avec les valeurs réglées sur le générateur.
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-4-systemes-boucles-et-asservissement"></a>
+
+## Chapitre 4 : Systèmes bouclés et asservissement
+
+<a id="sec-tp-4-1-boucle-ouverte-boucle-fermee"></a>
+
+### TP 4.1 : Boucle ouverte / boucle fermée
+
+> **Durée :** 55 min · **Mode :** **Falstad** (version de référence ci-dessous) · **Cours :** Chapitre 4, §4.1 · **Prérequis :** TP 1.1, fiche outil Falstad
+> **Objectif :** comparer la réaction d'un système sans retour et avec retour à une même perturbation.
+
+> Le déroulé ci-dessous décrit la version sur **matériel réel**, conservée pour référence. La version **Falstad, à suivre en séance**, est détaillée juste après.
+
+- **Matériel :** 1 potentiomètre, 1 alimentation, 2 multimètres (ou logiciel de simulation si pas de maquette disponible).
+
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDAgMjIwIiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjIyMCI+PGxpbmUgeDE9IjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHJlY3QgeD0iMTM1LjAiIHk9IjQxLjAiIHdpZHRoPSI3MCIgaGVpZ2h0PSIxOCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMzUuMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qb3RlbnRpb23DqHRyZTwvdGV4dD48bGluZSB4MT0iMjcwIiB5MT0iNTAiIHgyPSIyNzAiIHkyPSIxNzAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIyNzAiIHkxPSIxNzAiIHgyPSI3MCIgeTI9IjE3MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGxpbmUgeDE9IjcwIiB5MT0iMTcwIiB4Mj0iNzAiIHkyPSI1MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iNzAiIGN5PSIxMTAiIHI9IjIwIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PHRleHQgeD0iNzAiIHk9IjEwNy4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPis8L3RleHQ+PHRleHQgeD0iNzAiIHk9IjEyNS4wIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPi08L3RleHQ+PHRleHQgeD0iMzYiIHk9IjExMCIgZm9udC1zaXplPSIxMyIgZm9udC1mYW1pbHk9IkFyaWFsIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FPC90ZXh0PjxsaW5lIHgxPSIxNzAiIHkxPSI1OSIgeDI9IjE3MCIgeTI9IjkwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjIiLz48cG9seWdvbiBwb2ludHM9IjE2NSw5MCAxNzUsOTAgMTcwLDgwIiBmaWxsPSJibGFjayIvPjxsaW5lIHgxPSIxNzAiIHkxPSI5MCIgeDI9IjE3MCIgeTI9IjEzMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iMTcwIiBjeT0iMTUwIiByPSIxNiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjE3MCIgeT0iMTU1IiBmb250LXNpemU9IjE1IiBmb250LWZhbWlseT0iQXJpYWwiIHRleHQtYW5jaG9yPSJtaWRkbGUiPlY8L3RleHQ+PHRleHQgeD0iMTUwIiB5PSIyMDAiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UG90ZW50aW9tw6h0cmUgZW4gZGl2aXNldXIgZGUgdGVuc2lvbiAoQXRlbGllciA0LCBvcHRpb24gQik8L3RleHQ+PC9zdmc+" width="320" alt="schema TP4b_potentiometre"/>
+
+**Déroulé détaillé**
+
+1. **(10 min) Montage en boucle ouverte.** Régler le potentiomètre à une position donnée sans jamais la corriger. Appliquer une "perturbation" simulée (ex. modifier légèrement la tension d'alimentation) et observer la tension de sortie.
+   - ❓ *Q1. La sortie suit-elle la perturbation sans aucune correction ? Notez l'écart obtenu.*
+2. **(20 min) Montage en boucle fermée (ou simulation guidée).** Mettre en place un retour qui compare la sortie à une consigne et ajuste la commande (manuellement si pas de correcteur automatique disponible : l'étudiant joue le rôle du correcteur en réajustant le potentiomètre pour ramener la sortie à la consigne après la perturbation).
+   - ❓ *Q2. Combien d'ajustements/de temps faut-il pour revenir proche de la consigne après la perturbation ?*
+   - ❓ *Q3. Identifiez sur votre montage : la consigne, la grandeur mesurée, l'écart, l'actionneur.*
+3. **(15 min) Comparaison et bilan.**
+   - ❓ *Q4. Comparez l'écart final en boucle ouverte (Q1) et en boucle fermée (Q2). Concluez sur l'intérêt d'un asservissement face à une perturbation.*
+   - ❓ *Q5. Citer un exemple de système bouclé rencontré dans la vie courante ou dans un équipement CIEL (régulation, servomoteur, alimentation régulée…).*
+
+- **Livrable :** tableaux/graphe remplis, réponses aux questions.
+
+---
+
+<a id="sec-version-falstad-du-tp-4-1-version-de-reference-boucle-ouverte-contre-b"></a>
+
+#### Version Falstad du TP 4.1 (version de référence) : boucle ouverte contre boucle fermée
 
 **Objectif :** construire deux circuits de régulation de tension, l'un sans retour (boucle ouverte), l'autre avec retour (boucle fermée), puis comparer leur réaction à une même perturbation.
 
@@ -604,21 +812,21 @@ On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et
 11. **Placer l'amplificateur opérationnel** : **Dessiner → Blocs Fonctionels actifs → Ajouter un Amplificateur Operationnel Réel**. Le tracer au centre de l'écran. Repérer ses cinq broches : les deux **entrées** (+ et −) à gauche, la **sortie** à droite, et les deux broches d'**alimentation** (**V+** et **V−**).
 12. **Alimenter l'AOP** : placer une seconde source de tension continue réglée à **12 V**, reliée à la masse, puis relier le **+12 V** à la broche **V+** de l'AOP et la broche **V−** à la **masse**. Contrairement à l'AOP idéal (alimenté en interne, sans broche visible), l'**amplificateur opérationnel réel doit être alimenté explicitement** : sans ce câblage, il ne délivrera aucune tension en sortie.
 
+<p align="center">
+<img src="figures/Tp/Ampli_D_B.png" alt="Amplificateur opérationnel réel dans Falstad : broches d'alimentation V+ et V−, entrées + et −, sortie"/>
+</p>
+
 13. **Câbler la consigne sur l'entrée +** : relier la source 5 V à l'entrée **non inverseuse** de l'AOP.
 14. **Câbler le retour sur l'entrée −** : relier directement la **sortie** de l'AOP à son entrée **inverseuse** (montage suiveur). **C'est ce fil qui constitue la boucle de retour** : l'AOP compare en permanence sa sortie à la consigne.
 15. **Placer la résistance de charge** de **1 kΩ** (une résistance ordinaire, comme à l'étape 1) entre la sortie de l'AOP et la masse.
 16. Lancer la simulation et vérifier que la sortie vaut bien **5,0 V**.
 
-<p align="center">
-<img src="figures/Tp/Ampli_D_B.png" alt="Amplificateur opérationnel réel dans Falstad : broches d'alimentation V+ et V−, entrées + et −, sortie"/>
-</p>w
-
 - ❓ *Q2. Repérez et nommez sur votre schéma : la consigne, la grandeur mesurée (le retour), l'écart (la différence entre les deux entrées de l'AOP), et l'actionneur (l'étage de sortie de l'AOP). Reproduisez le schéma-bloc correspondant (consigne → comparateur → correcteur → actionneur → sortie, avec la boucle de retour).*
 
 **Étape 4 (10 min) : même perturbation, comparaison**
 
-1.  Appliquer **exactement la même perturbation** qu'en boucle ouverte : éditer la source qui alimente l'AOP (broche **V+**) et faire passer sa tension de **12 V à 9 V**. Ne pas toucher à la source de consigne, qui reste à 5 V.
-2.  Relever la nouvelle tension de sortie.
+17. Appliquer **exactement la même perturbation** qu'en boucle ouverte : éditer la source qui alimente l'AOP (broche **V+**) et faire passer sa tension de **12 V à 9 V**. Ne pas toucher à la source de consigne, qui reste à 5 V.
+18. Relever la nouvelle tension de sortie.
 
 | | Tension d'alimentation | Tension de sortie | Écart avec la consigne 5,0 V |
 |---|---|---|---|
@@ -632,16 +840,9 @@ On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et
 - ❓ *Q5. Jusqu'où la correction fonctionne-t-elle ? Baissez progressivement l'alimentation de l'AOP (8 V, 7 V, 6 V, 5 V) : à partir de quelle valeur la sortie ne tient-elle plus les 5 V ? Pourquoi un asservissement ne peut-il pas compenser n'importe quelle perturbation ?*
 - ❓ *Q6. Citez un exemple de système bouclé rencontré dans la vie courante ou dans un équipement CIEL (régulation de température d'un serveur, alimentation régulée, servomoteur, régulateur de vitesse…).*
 
-**Livrable option B :** les deux schémas construits (boucle ouverte et boucle fermée), les deux tableaux de mesures remplis, le schéma-bloc annoté, les réponses Q1 à Q6, et les captures d'écran des deux circuits.
+**Livrable TP 4.1 :** les deux schémas construits (boucle ouverte et boucle fermée), les deux tableaux de mesures remplis, le schéma-bloc annoté, les réponses Q1 à Q6, et les captures d'écran des deux circuits.
 
-
-<div style="page-break-after: always;"></div>
-
-&nbsp;
-
-<div style="page-break-after: always;"></div>
-
-<a id="sec-tp-memoire-64-bits"></a>
+---
 
 <div style="page-break-after: always;"></div>
 
@@ -649,7 +850,63 @@ On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et
 
 <div style="page-break-after: always;"></div>
 
-<a id="sec-tp-memoire-64-bits"></a>
+<a id="sec-chapitre-5-traitement-du-signal"></a>
+
+## Chapitre 5 : Traitement du signal
+
+<a id="sec-tp-5-1-mesure-de-gain-et-d-attenuation-d-un-quadripole"></a>
+
+### TP 5.1 : Mesure de gain et d'atténuation d'un quadripôle
+
+> **Durée :** 2 h (une ou deux séances) · **Mode :** matériel, ou Falstad · **Cours :** Chapitre 1 §1.3 et Chapitre 5 §5.3 · **Prérequis :** TP 1.6, TP 3.1
+> **Objectif :** relever le gain d'un filtre RC en fonction de la fréquence et le tracer en dB.
+
+- **Objectifs :** mesurer expérimentalement le gain d'un quadripôle à partir de tensions d'entrée/sortie, calculer ce gain en dB, observer comment il varie avec la fréquence, et faire le lien avec la fréquence de coupure vue à l'TP Ondes (§Partie 1).
+- **Matériel par poste :** 1 GBF, 1 oscilloscope 2 voies, le circuit RC déjà utilisé à l'TP Ondes (réemployé ici comme quadripôle sous test), cordons BNC. *(Variante : un atténuateur résistif fixe simple, R1/R2 en pont diviseur, pour un gain constant indépendant de la fréquence : utile si l'on veut isoler la notion de dB de celle de filtrage.)*
+- **Sécurité :** aucun risque particulier, amplitude GBF limitée à quelques volts.
+
+**Déroulé détaillé**
+
+1. **(10 min) Prévision théorique.** Avant toute mesure, avec les valeurs de R et C de votre circuit RC :
+   - ❓ *Q1. Rappelez la fréquence de coupure théorique $f_c = \dfrac{1}{2\pi RC}$ calculée à l'TP Ondes.*
+   - ❓ *Q2. À très basse fréquence (f << f_c), quel gain en tension attendez-vous entre l'entrée et la sortie du circuit ? Exprimez-le en dB.*
+2. **(20 min) Mesure du gain en basse fréquence.** Régler le GBF sur une fréquence nettement inférieure à f_c (par exemple f_c/10). Mesurer à l'oscilloscope l'amplitude d'entrée V_e (voie 1) et de sortie V_s (voie 2).
+
+     | Grandeur | Valeur |
+     |---|---|
+     | Fréquence réglée | |
+     | V_e (crête ou crête-à-crête, à préciser) | |
+     | V_s | |
+     | Gain linéaire $A_v = V_s/V_e$ | |
+     | Gain en dB $= 20 \times \log_{10}(A_v)$ | |
+
+   - ❓ *Q3. Ce résultat est-il cohérent avec la prévision de la Q2 ?*
+3. **(40 min) Balayage en fréquence.** Répéter la mesure de V_e et V_s pour une série de fréquences croissantes couvrant largement f_c (par exemple : f_c/10, f_c/3, f_c/2, f_c, 2×f_c, 5×f_c, 10×f_c).
+
+     | Fréquence | V_e | V_s | $A_v = V_s/V_e$ | Gain (dB) |
+     |---|---|---|---|---|
+     | f_c/10 | | | | |
+     | f_c/3 | | | | |
+     | f_c/2 | | | | |
+     | f_c | | | | |
+     | 2×f_c | | | | |
+     | 5×f_c | | | | |
+     | 10×f_c | | | | |
+
+   - Tracer le graphe du gain en dB en fonction de la fréquence (papier semi-log si possible, ou tableur).
+   - ❓ *Q4. À quelle fréquence mesurée le gain vaut-il environ −3 dB ? Comparez cette fréquence à f_c calculée en Q1.*
+   - ❓ *Q5. Que devient le gain (en dB) quand la fréquence est multipliée par 10, au-delà de f_c ? Estimez la pente de la courbe en dB par décade.*
+4. **(20 min, bonus si le temps le permet) Mise en cascade.** Placer en série deux quadripôles RC identiques (le vôtre, plus celui d'un poste voisin, ou remonter un second RC en cascade).
+   - ❓ *Q6. Prévoyez le gain total en dB à la fréquence f_c, en utilisant la propriété d'addition des gains en cascade (cours §5.1). Vérifiez par la mesure.*
+5. **(10 min) Bilan.**
+   - ❓ *Q7. Un tel circuit RC est appelé filtre passe-bas. Pourquoi ce nom est-il cohérent avec la courbe de gain que vous avez tracée ?*
+   - ❓ *Q8. Citer une situation professionnelle CIEL où l'on a besoin de connaître le gain/l'atténuation d'une liaison en dB (Wi-Fi, câblage réseau, fibre optique...).*
+- **Livrable :** tableaux de mesures remplis, graphe du gain en dB en fonction de la fréquence, réponses Q1 à Q8.
+- **⚙ Si matériel insuffisant :** ce TP se transpose bien sur Falstad Circuit Simulator (§ Partie 1, alternative C) : le circuit RC, le GBF et l'oscilloscope y sont déjà virtuels, il suffit de relever V_e et V_s pour chaque fréquence testée et de calculer le gain en dB de la même façon.
+
+---
+
+---
 
 <div style="page-break-after: always;"></div>
 
@@ -657,12 +914,37 @@ On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et
 
 <div style="page-break-after: always;"></div>
 
-<a id="sec-tp-memoire-64-bits"></a>
+<a id="sec-chapitre-6-optique"></a>
 
-# En dessous de ce titre c'est du work in progress : le tp ne marche pas je ne suis pas encore sur pourquoi.
+## Chapitre 6 : Optique
+
+*(À compléter au fil de l'année : mesure d'atténuation sur une liaison à fibre optique, relevé de l'ouverture numérique. Voir aussi TP 1.7 et TP 1.8 pour la LED et la photodiode.)*
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-chapitre-7-preparation-a-l-epreuve"></a>
+
+## Chapitre 7 : Préparation à l'épreuve
+
+*(À compléter au fil de l'année : exploitation de relevés type annale, analyse de documents techniques, exercices de mesure en temps limité.)*
+
+---
+
+<div style="page-break-after: always;"></div>
+
+&nbsp;
+
+<div style="page-break-after: always;"></div>
+
+<a id="sec-projet-memoire-64-bits"></a>
 
 ## TP : Mémoire de 64 bits
-
 
 <a id="sec-mem-projet-de-tp-construire-une-memoire-de-64-bits"></a>
 

@@ -144,7 +144,7 @@
 - **Convention générateur** (pile, alimentation) : U et I sont fléchés dans le même sens. Symbole d'un générateur de tension continue :
 
 <p align="center">
-<img src="figures/cours/figure_01_convention_recepteur_vs_convention_generateur.png" alt="Figure 1 : Convention récepteur vs convention générateur"/>
+<img src="figures/cours/figure_01_convention_recepteur_vs_convention_generateur.svg" alt="Figure 1 : Convention récepteur vs convention générateur"/>
 </p>
 
 <p align="center"><em>Figure 1 : Convention récepteur vs convention générateur.</em></p>
@@ -174,7 +174,7 @@ P = U × I = R × I² = U² / R (en watt, W)
   Exemple : si I1 = 3 A et I2 = 2 A arrivent sur un nœud d'où repart I3, alors I3 = I1 + I2 = 5 A.
 
 <p align="center">
-<img src="figures/cours/figure_02_loi_des_noeuds.png" alt="Figure 2 : Loi des nœuds"/>
+<img src="figures/cours/figure_02_loi_des_noeuds.svg" alt="Figure 2 : Loi des nœuds"/>
 </p>
 
 <p align="center"><em>Figure 2 : Loi des nœuds.</em></p>
@@ -183,7 +183,7 @@ P = U × I = R × I² = U² / R (en watt, W)
   Exemple : un générateur E = 9 V alimente en série R1 et R2. En parcourant la maille : E − U(R1) − U(R2) = 0, donc U(R1) + U(R2) = E.
 
 <p align="center">
-<img src="figures/cours/figure_03_loi_des_mailles.png" alt="Figure 3 : Loi des mailles"/>
+<img src="figures/cours/figure_03_loi_des_mailles.svg" alt="Figure 3 : Loi des mailles"/>
 </p>
 
 <p align="center"><em>Figure 3 : Loi des mailles.</em></p>
@@ -195,7 +195,7 @@ P = U × I = R × I² = U² / R (en watt, W)
 - Cas particulier utile : deux résistances égales R en parallèle donnent R_éq = R/2.
 
 <p align="center">
-<img src="figures/cours/figure_04_associations_de_resistances_serie_parallele.png" alt="Figure 4 : Associations de résistances (série/parallèle)"/>
+<img src="figures/cours/figure_04_associations_de_resistances_serie_parallele.svg" alt="Figure 4 : Associations de résistances (série/parallèle)"/>
 </p>
 
 <p align="center"><em>Figure 4 : Associations de résistances (série/parallèle).</em></p>
@@ -209,7 +209,7 @@ P = U × I = R × I² = U² / R (en watt, W)
 $$U(R_2) = U \times \dfrac{R_2}{R_1 + R_2} \tag{2}$$
 
 <p align="center">
-<img src="figures/cours/figure_05_pont_diviseur_de_tension.png" alt="Figure 5 a : Pont diviseur de tension"/>
+<img src="figures/cours/figure_05_pont_diviseur_de_tension.svg" alt="Figure 5 a : Pont diviseur de tension"/>
 </p>
 
 <p align="center"><em>Figure 5 a : Pont diviseur de tension.</em></p>
@@ -227,7 +227,7 @@ $$U(R_2) = U \times \dfrac{R_2}{R_1 + R_2} \tag{2}$$
 - Diviseur de courant (R1 et R2 en parallèle, courant total I) : $I(R_2) = I \times \dfrac{R_1}{R_1 + R_2}$ (le courant se répartit à l'inverse des résistances : plus une branche est résistante, moins elle reçoit de courant)
 
 <p align="center">
-<img src="figures/cours/figure_05_pont_diviseur_de_courant.png" alt="Figure 5 b: Pont diviseur de courant"/>
+<img src="figures/cours/figure_05_pont_diviseur_de_courant.svg" alt="Figure 5 b: Pont diviseur de courant"/>
 </p>
 
 <p align="center"><em>Figure 5 b : Pont diviseur de courant.</em></p>
@@ -276,7 +276,7 @@ Pour un dipôle traversé par i(t) et soumis à u(t), on définit par analogie a
 - Admittances en parallèle : $\underline{Y}_{éq} = \underline{Y}_1 + \underline{Y}_2 + \dots + \underline{Y}_n$. Pour deux dipôles en parallèle : $\underline{Z}_{éq} = \dfrac{\underline{Z}_1 \underline{Z}_2}{\underline{Z}_1 + \underline{Z}_2}$.
 
 <p align="center">
-<img src="figures/cours/figure_07_association_d_impedances_serie_parallele.png" alt="Figure 7 : Association d'impédances (série/parallèle)"/>
+<img src="figures/cours/figure_07_association_d_impedances_serie_parallele.svg" alt="Figure 7 : Association d'impédances (série/parallèle)"/>
 </p>
 
 <p align="center"><em>Figure 7 : Association d'impédances (série/parallèle).</em></p>
@@ -306,7 +306,7 @@ Le module de l'impédance vaut donc $|\underline{Z}| = \sqrt{R^2 + \left(L\omega
 La résonance se produit lorsque les effets de la bobine et du condensateur se compensent exactement ($L\omega_0 = 1/(C\omega_0)$, soit $LC\omega_0^2 = 1$), ce qui donne la **fréquence de résonance** :
 
 <p align="center">
-<img src="figures/cours/figure_06_diagramme_de_bode_d_un_circuit_rlc_resonance.png" alt="Figure 6 : Diagramme de Bode d'un circuit RLC (résonance)"/>
+<img src="figures/cours/figure_06_diagramme_de_bode_d_un_circuit_rlc_resonance.svg" alt="Figure 6 : Diagramme de Bode d'un circuit RLC (résonance)"/>
 </p>
 
 <p align="center"><em>Figure 6 : Diagramme de Bode d'un circuit RLC (résonance).</em></p>
@@ -350,7 +350,7 @@ Lorsque R, L et C sont en parallèle (soumis à la même tension), le raisonneme
 - **Théorème de superposition :** la réponse d'un réseau linéaire contenant plusieurs sources indépendantes est la somme des réponses dues à chaque source agissant seule (les autres étant éteintes).
 
 <p align="center">
-<img src="figures/cours/figure_08_theoreme_de_superposition.png" alt="Figure 8 : Théorème de superposition"/>
+<img src="figures/cours/figure_08_theoreme_de_superposition.svg" alt="Figure 8 : Théorème de superposition"/>
 </p>
 
 <p align="center"><em>Figure 8 : Théorème de superposition.</em></p>
@@ -358,7 +358,7 @@ Lorsque R, L et C sont en parallèle (soumis à la même tension), le raisonneme
 - **Théorèmes de Thévenin et de Norton :** tout dipôle actif linéaire peut être remplacé par un générateur de tension équivalent en série avec une résistance (modèle de Thévenin), ou par un générateur de courant équivalent en parallèle avec une résistance (modèle de Norton) : les deux modèles étant équivalents entre eux.
 
 <p align="center">
-<img src="figures/cours/figure_09_modele_de_thevenin_et_de_norton.png" alt="Figure 9 : Modèle de Thévenin et de Norton"/>
+<img src="figures/cours/figure_09_modele_de_thevenin_et_de_norton.svg" alt="Figure 9 : Modèle de Thévenin et de Norton"/>
 </p>
 
 <p align="center"><em>Figure 9 : Modèle de Thévenin et de Norton.</em></p>
@@ -422,7 +422,7 @@ $$A_{(dB)} = 10 \times \log_{10}\!\left(\dfrac{P_2}{P_1}\right) \tag{7}$$
 | ×1000 | +30 dB |
 
 <p align="center">
-<img src="figures/cours/figure_10_echelle_des_decibels.png" alt="Figure 10 : Échelle des décibels"/>
+<img src="figures/cours/figure_10_echelle_des_decibels.svg" alt="Figure 10 : Échelle des décibels"/>
 </p>
 
 <p align="center"><em>Figure 10 : Échelle des décibels.</em></p>
@@ -441,7 +441,7 @@ $$G_{total(dB)} = G_{1(dB)} + G_{2(dB)} + \dots + G_{n(dB)} \tag{8}$$
 G_total = 12 − 4 − 0,5 = **+7,5 dB**.
 
 <p align="center">
-<img src="figures/cours/figure_11_chaine_de_transmission_en_cascade.png" alt="Figure 11 : Chaîne de transmission en cascade"/>
+<img src="figures/cours/figure_11_chaine_de_transmission_en_cascade.svg" alt="Figure 11 : Chaîne de transmission en cascade"/>
 </p>
 
 <p align="center"><em>Figure 11 : Chaîne de transmission en cascade.</em></p>
@@ -505,7 +505,7 @@ $$P = \dfrac{U_{eff}^2}{Z} \tag{11}$$
 - Caractéristique I(V) fortement non linéaire : croissance quasi exponentielle du courant au-delà du seuil, courant quasi nul en dessous et en sens bloqué.
 
 <p align="center">
-<img src="figures/cours/figure_12_caracteristique_i_v_d_une_diode.png" alt="Figure 12 : Caractéristique I(V) d'une diode"/>
+<img src="figures/cours/figure_12_caracteristique_i_v_d_une_diode.svg" alt="Figure 12 : Caractéristique I(V) d'une diode"/>
 </p>
 
 <p align="center"><em>Figure 12 : Caractéristique I(V) d'une diode.</em></p>
@@ -541,7 +541,7 @@ Avec le modèle simplifié : V_diode ≈ 0,7 V, donc U_R = E − V_diode = 5 −
 - On appelle **gap** (ou bande interdite) l'écart d'énergie ΔE entre ces deux bandes. Il dépend du matériau : pour le silicium, ΔE ≈ 1,1 eV.
 
 <p align="center">
-<img src="figures/cours/figure_13_bandes_d_energie_dans_un_semi_conducteur.png" alt="Figure 13 : Bandes d'énergie dans un semi-conducteur"/>
+<img src="figures/cours/figure_13_bandes_d_energie_dans_un_semi_conducteur.svg" alt="Figure 13 : Bandes d'énergie dans un semi-conducteur"/>
 </p>
 
 <p align="center"><em>Figure 13 : Bandes d'énergie dans un semi-conducteur.</em></p>
@@ -562,7 +562,7 @@ $$E = h\nu = \dfrac{h c_0}{\lambda} \tag{12}$$
 - Un atome peut passer d'un niveau fondamental E₁ à un niveau excité E₂ en **absorbant** un photon d'énergie hν = E₂ − E₁. Inversement, il peut revenir de E₂ à E₁ en **émettant** un photon de cette même énergie. C'est ce second mécanisme qui est à l'œuvre dans une LED ou un laser.
 
 <p align="center">
-<img src="figures/cours/figure_14_absorption_emission_d_un_photon_par_un_atome.png" alt="Figure 14 : Absorption/émission d'un photon par un atome"/>
+<img src="figures/cours/figure_14_absorption_emission_d_un_photon_par_un_atome.svg" alt="Figure 14 : Absorption/émission d'un photon par un atome"/>
 </p>
 
 <p align="center"><em>Figure 14 : Absorption/émission d'un photon par un atome.</em></p>
@@ -580,7 +580,7 @@ E = hc₀/λ = (6,63×10⁻³⁴ × 3,0×10⁸) / (650×10⁻⁹) ≈ 3,06×10�
 - Les électrons qui traversent la jonction se recombinent avec des trous : ils passent de la bande de conduction à la bande de valence et libèrent leur énergie sous forme de photons.
 
 <p align="center">
-<img src="figures/cours/figure_15_structure_d_une_led_et_recombinaison_electron_trou.png" alt="Figure 15 : Structure d'une LED et recombinaison électron-trou"/>
+<img src="figures/cours/figure_15_structure_d_une_led_et_recombinaison_electron_trou.svg" alt="Figure 15 : Structure d'une LED et recombinaison électron-trou"/>
 </p>
 
 <p align="center"><em>Figure 15 : Structure d'une LED et recombinaison électron-trou.</em></p>
@@ -594,7 +594,7 @@ $$\nu = \dfrac{c_0}{\lambda} = \dfrac{\Delta E}{h} \tag{13}$$
   Un gap plus grand donne une lumière plus énergétique (donc plus proche du bleu/UV) ; un gap plus petit donne une lumière moins énergétique (plus proche du rouge/IR). C'est pourquoi on choisit un matériau semi-conducteur différent selon la couleur de LED souhaitée.
 
 <p align="center">
-<img src="figures/cours/figure_16_relation_gap_couleur_emise.png" alt="Figure 16 : Relation gap / couleur émise"/>
+<img src="figures/cours/figure_16_relation_gap_couleur_emise.svg" alt="Figure 16 : Relation gap / couleur émise"/>
 </p>
 
 <p align="center"><em>Figure 16 : Relation gap / couleur émise.</em></p>
@@ -611,7 +611,7 @@ $$\nu = \dfrac{c_0}{\lambda} = \dfrac{\Delta E}{h} \tag{13}$$
 - Chaque photon interagissant avec un atome excité provoque l'émission d'un second photon **identique** (même énergie, même phase) : c'est l'émission stimulée, à l'origine du terme LASER (*Light Amplification by Stimulated Emission of Radiation*).
 
 <p align="center">
-<img src="figures/cours/figure_17_cavite_resonnante_d_une_diode_laser.png" alt="Figure 17 : Cavité résonnante d'une diode laser"/>
+<img src="figures/cours/figure_17_cavite_resonnante_d_une_diode_laser.svg" alt="Figure 17 : Cavité résonnante d'une diode laser"/>
 </p>
 
 <p align="center"><em>Figure 17 : Cavité résonnante d'une diode laser.</em></p>
@@ -630,7 +630,7 @@ $$\nu = \dfrac{c_0}{\lambda} = \dfrac{\Delta E}{h} \tag{13}$$
 - **Mode photovoltaïque :** la diode n'est pas polarisée. Éclairée, elle se comporte comme un générateur : c'est le principe d'une cellule photovoltaïque.
 
 <p align="center">
-<img src="figures/cours/figure_18_photodiode_mode_photoconducteur_vs_photovoltaique.png" alt="Figure 18 : Photodiode : mode photoconducteur vs photovoltaïque"/>
+<img src="figures/cours/figure_18_photodiode_mode_photoconducteur_vs_photovoltaique.svg" alt="Figure 18 : Photodiode : mode photoconducteur vs photovoltaïque"/>
 </p>
 
 <p align="center"><em>Figure 18 : Photodiode : mode photoconducteur vs photovoltaïque.</em></p>
@@ -646,7 +646,7 @@ $$\nu = \dfrac{c_0}{\lambda} = \dfrac{\Delta E}{h} \tag{13}$$
 - Les charges sont transférées ligne par ligne vers un registre, qui les envoie successivement à un convertisseur analogique-numérique (CAN) pour reconstituer l'image numérique.
 
 <p align="center">
-<img src="figures/cours/figure_19_principe_d_un_capteur_ccd.png" alt="Figure 19 : Principe d'un capteur CCD"/>
+<img src="figures/cours/figure_19_principe_d_un_capteur_ccd.svg" alt="Figure 19 : Principe d'un capteur CCD"/>
 </p>
 
 <p align="center"><em>Figure 19 : Principe d'un capteur CCD.</em></p>

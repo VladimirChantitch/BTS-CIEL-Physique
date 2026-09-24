@@ -1,11 +1,11 @@
-# BTS CIEL 2 — Physique
+# BTS CIEL 2 : Physique
 ## Corrigés des QCM (version prof, avec explications)
 
 Ce document rassemble les réponses et explications de tous les QCM du Recueil de TD. Il n'est pas destiné aux étudiants.
 
 ---
 
-## Partie 1 — QCM diagnostique (état des lieux)
+## Partie 1 : QCM diagnostique (état des lieux)
 
 ### A. Électricité de base
 
@@ -61,7 +61,7 @@ Valeur à connaître par cœur ; 3.10⁸ m/s est la célérité de la lumière (
 **16. Deux signaux "en phase" quand : → Réponse : leurs maximums sont simultanés**
 C'est la définition même de deux signaux en phase : ils évoluent de façon synchronisée.
 
-### D. Bonus — acquis de 1ʳᵉ année
+### D. Bonus : acquis de 1ʳᵉ année
 
 **17. Tension de seuil d'une diode au silicium → Réponse : 0,6-0,7 V**
 Valeur à connaître par cœur pour le silicium (le germanium serait plutôt autour de 0,3 V, mais ce n'est pas au programme ici).
@@ -77,7 +77,7 @@ Radio, micro-ondes, infrarouge, visible, UV, rayons X, rayons gamma : ce classem
 
 ---
 
-## Partie 1 — QCM de validation (après les rappels)
+## Partie 1 : QCM de validation (après les rappels)
 
 **1. R = 220 Ω, I = 20 mA → Réponse : 4,4 V**
 U = 220 × 0,020 = 4,4 V.
@@ -104,7 +104,7 @@ u_B = résolution/√12 = 0,1/√12 ≈ 0,029.
 Format standard d'un résultat de mesure, avec l'incertitude déjà correctement arrondie à un chiffre significatif et la moyenne alignée sur la même décimale.
 
 **9. x̄ = 8,0 ± 0,4, x_réf = 9,0 → Réponse : non**
-|8,0 − 9,0| = 1,0. Comme 1,0 > 0,4 (l'incertitude), l'écart dépasse largement l'incertitude : la mesure n'est **pas compatible** avec la valeur de référence. *(Correction : la version précédente du corrigé indiquait par erreur "oui" — la bonne réponse est "non".)*
+|8,0 − 9,0| = 1,0. Comme 1,0 > 0,4 (l'incertitude), l'écart dépasse largement l'incertitude : la mesure n'est **pas compatible** avec la valeur de référence. *(Correction : la version précédente du corrigé indiquait par erreur "oui" : la bonne réponse est "non".)*
 
 **10. Composition quadratique de 3 % et 4 % → Réponse : 5 %**
 √(3² + 4²) = √(9+16) = √25 = 5 %. C'est le classique triplet 3-4-5, pratique à retenir.
@@ -126,7 +126,7 @@ Valeur de référence à connaître par cœur.
 
 ---
 
-## Partie 5 — QCM puissances, décibels, atténuation et gains
+## Partie 5 : QCM puissances, décibels, atténuation et gains
 
 **1. Formule du décibel pour un rapport de puissances → Réponse : A = 10 log₁₀(P₂/P₁)**
 Le facteur 10 s'applique aux puissances ; le facteur 20 (vu en Q5) s'applique aux tensions, car P ∝ U².
@@ -168,4 +168,4 @@ C'est la définition de la valeur efficace (RMS) d'un signal sinusoïdal pur, à
 
 ## Note pédagogique
 
-La question 9 du QCM de validation contenait une erreur dans une version précédente du corrigé (réponse "oui" au lieu de "non") — elle est corrigée ci-dessus. Plus généralement, les questions de compatibilité (« x̄ ± U est-il compatible avec x_réf ? ») sont un point sur lequel les étudiants se trompent facilement de sens : un rappel visuel (intervalle de confiance sur un axe gradué, avec x_réf positionné dedans ou en dehors) est recommandé avant de les traiter en classe.
+La question 9 du QCM de validation contenait une erreur dans une version précédente du corrigé (réponse "oui" au lieu de "non") : elle est corrigée ci-dessus. Plus généralement, les questions de compatibilité (« x̄ ± U est-il compatible avec x_réf ? ») sont un point sur lequel les étudiants se trompent facilement de sens : un rappel visuel (intervalle de confiance sur un axe gradué, avec x_réf positionné dedans ou en dehors) est recommandé avant de les traiter en classe.
