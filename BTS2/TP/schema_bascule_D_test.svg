@@ -14,7 +14,7 @@
   <text x="159" y="194" font-size="12" font-family="Arial" text-anchor="end">CLR</text>
   <line x1="300" y1="130.0" x2="326" y2="130.0" stroke="black" stroke-width="2"/>
   <text x="329" y="122" font-size="12" font-family="Arial" text-anchor="start">Q</text>
-  <line x1="80" y1="62.0" x2="164" y2="62.0" stroke="black" stroke-width="2"/>
+  <line x1="80" y1="62.0" x2="165" y2="80" stroke="black" stroke-width="2" transform="rotate(-24,122,62)"/>
   <rect x="20.0" y="46.0" width="60" height="32" rx="8" fill="white" stroke="black" stroke-width="2"/>
   <text x="50" y="67.0" font-size="12" font-family="Arial" text-anchor="middle">DATA</text>
   <line x1="80" y1="107.33333333333334" x2="164" y2="107.33333333333334" stroke="black" stroke-width="2"/>
