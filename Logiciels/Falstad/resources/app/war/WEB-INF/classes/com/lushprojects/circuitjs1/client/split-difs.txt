@@ -1,0 +1,227 @@
+commit b8f138953f624df20775d50b7cf6b785c1f9908a
+Author: Paul Falstad <paul@falstad.com>
+Date:   Thu May 28 00:00:08 2026 -0700
+
+    split wires automatically
+
+diff --git a/src/com/lushprojects/circuitjs1/client/CommandManager.java b/src/com/lushprojects/circuitjs1/client/CommandManager.java
+index 0b135f3..f5e17c9 100644
+--- a/src/com/lushprojects/circuitjs1/client/CommandManager.java
++++ b/src/com/lushprojects/circuitjs1/client/CommandManager.java
+@@ -119,8 +119,7 @@ public class CommandManager {
+     	}
+     	if (item=="flip")
+     	    app.mouse.doFlip();
+-    	if (item=="split")
+-    	    app.mouse.doSplit(app.mouse.menuElm);
++
+     	if (item=="selectAll")
+     		app.mouse.doSelectAll();
+ 
+diff --git a/src/com/lushprojects/circuitjs1/client/Menus.java b/src/com/lushprojects/circuitjs1/client/Menus.java
+index a32191a..5034605 100644
+--- a/src/com/lushprojects/circuitjs1/client/Menus.java
++++ b/src/com/lushprojects/circuitjs1/client/Menus.java
+@@ -69,7 +69,7 @@ public class Menus {
+     MenuItem elmScopeMenuItem;
+     MenuItem elmFloatScopeMenuItem;
+     MenuItem elmAddScopeMenuItem;
+-    MenuItem elmSplitMenuItem;
++
+     MenuItem elmSliderMenuItem;
+     MenuItem elmFlipXMenuItem, elmFlipYMenuItem, elmFlipXYMenuItem;
+     MenuItem elmSwapMenuItem;
+@@ -265,7 +265,7 @@ public class Menus {
+ 	elmMenuBar.addItem(elmFlipXMenuItem =  new MenuItem(Locale.LS("Flip X"),new MyCommand("elm","flipx")));
+ 	elmMenuBar.addItem(elmFlipYMenuItem =  new MenuItem(Locale.LS("Flip Y"),new MyCommand("elm","flipy")));
+ 	elmMenuBar.addItem(elmFlipXYMenuItem =  new MenuItem(Locale.LS("Flip XY"),new MyCommand("elm","flipxy")));
+-	elmMenuBar.addItem(elmSplitMenuItem = menuItemWithShortcut("", "Split Wire", Locale.LS(ctrlMetaKey + "click"), new MyCommand("elm","split")));
++
+ 	elmMenuBar.addItem(elmSliderMenuItem = new MenuItem(Locale.LS("Sliders..."),new MyCommand("elm","sliders")));
+     }
+ 
+diff --git a/src/com/lushprojects/circuitjs1/client/MouseManager.java b/src/com/lushprojects/circuitjs1/client/MouseManager.java
+index af90cdd..a9ed0cd 100644
+--- a/src/com/lushprojects/circuitjs1/client/MouseManager.java
++++ b/src/com/lushprojects/circuitjs1/client/MouseManager.java
+@@ -464,35 +464,24 @@ public class MouseManager implements MouseDownHandler, MouseMoveHandler, MouseUp
+     	sim.needAnalyze();
+     }
+ 
+-    void doSplit(CircuitElm ce) {
+-	int x = snapGrid(inverseTransformX(menuX));
+-	int y = snapGrid(inverseTransformY(menuY));
+-	if (ce == null || !(ce instanceof WireElm))
+-	    return;
+-
+-	if (ce instanceof RoutedWireElm) {
+-	    RoutedWireElm rw2 = ((RoutedWireElm) ce).split(x, y);
+-	    if (rw2 != null) {
+-		ui.elmList.addElement(rw2);
+-		sim.needAnalyze();
++    // Split any WireElm (including RoutedWireElm) whose interior contains (px, py).
++    // Returns true if any wire was split.
++    boolean splitWireAt(int px, int py) {
++	boolean split = false;
++	for (int i = ui.elmList.size() - 1; i >= 0; i--) {
++	    CircuitElm ce = ui.elmList.get(i);
++	    if (!(ce instanceof WireElm))
++		continue;
++	    WireElm we = (WireElm) ce;
++	    if (!we.pointOnWireInterior(px, py))
++		continue;
++	    WireElm newWire = we.split(px, py);
++	    if (newWire != null) {
++		ui.elmList.addElement(newWire);
++		split = true;
+ 	    }
+-	    return;
+ 	}
+-
+-	if (ce.x == ce.x2)
+-	    x = ce.x;
+-	else
+-	    y = ce.y;
+-
+-	// don't create zero-length wire
+-	if (x == ce.x && y == ce.y || x == ce.x2 && y == ce.y2)
+-	    return;
+-
+-	WireElm newWire = new WireElm(x, y);
+-	newWire.drag(ce.x2, ce.y2);
+-	ce.drag(x, y);
+-	ui.elmList.addElement(newWire);
+-	sim.needAnalyze();
++	return split;
+     }
+ 
+     void selectArea(int x, int y, boolean add) {
+@@ -807,10 +796,7 @@ public class MouseManager implements MouseDownHandler, MouseMoveHandler, MouseUp
+     	    	    	sim.menus.elmAddScopeMenuItem.setEnabled(mouseElm.canViewInScope() );
+     	    	    }
+     	    	    sim.menus.elmEditMenuItem .setEnabled(mouseElm.getEditInfo(0) != null);
+-    	    	    sim.menus.elmSplitMenuItem.setEnabled(canSplit(mouseElm));
+     	    	    sim.menus.elmSliderMenuItem.setEnabled(sliderItemEnabled(mouseElm));
+-		    sim.menus.elmSplitMenuItem.setEnabled(canSplit(mouseElm));
+-
+ 		    boolean canFlipX = mouseElm.canFlipX();
+ 		    boolean canFlipY = mouseElm.canFlipY();
+ 		    boolean canFlipXY = mouseElm.canFlipXY();
+@@ -847,15 +833,6 @@ public class MouseManager implements MouseDownHandler, MouseMoveHandler, MouseUp
+     	}
+     }
+ 
+-    boolean canSplit(CircuitElm ce) {
+-	if (!(ce instanceof WireElm))
+-	    return false;
+-	WireElm we = (WireElm) ce;
+-	if (we.x == we.x2 || we.y == we.y2)
+-	    return true;
+-	return false;
+-    }
+-
+     // check if the user can create sliders for this element
+     boolean sliderItemEnabled(CircuitElm elm) {
+ 	int i;
+@@ -1090,14 +1067,16 @@ public class MouseManager implements MouseDownHandler, MouseMoveHandler, MouseUp
+     	if (tempMouseMode == MODE_SELECT && selectedArea == null)
+     	    clearSelection();
+ 
+-    	// cmd-click = split wire
+-    	if (tempMouseMode == MODE_DRAG_POST && draggingPost == -1)
+-    	    doSplit(mouseElm);
+-
+     	tempMouseMode = mouseMode;
+     	selectedArea = null;
+     	dragging = false;
+     	boolean circuitChanged = false;
++    	// auto-split wires when a post is dragged onto a wire's interior
++    	if (draggingPost >= 0 && mouseElm != null) {
++    	    Point p = mouseElm.getPost(draggingPost);
++    	    if (splitWireAt(p.x, p.y))
++    		circuitChanged = true;
++    	}
+     	if (heldSwitchElm != null) {
+     		heldSwitchElm.mouseUp();
+     		heldSwitchElm = null;
+@@ -1114,6 +1093,9 @@ public class MouseManager implements MouseDownHandler, MouseMoveHandler, MouseUp
+ 			dragElm = null;
+     		}
+     		else {
++    			// auto-split wires at the new element's endpoints before adding it
++    			splitWireAt(dragElm.x, dragElm.y);
++    			splitWireAt(dragElm.x2, dragElm.y2);
+     			ui.elmList.addElement(dragElm);
+     			dragElm.draggingDone();
+     			circuitChanged = true;
+diff --git a/src/com/lushprojects/circuitjs1/client/RoutedWireElm.java b/src/com/lushprojects/circuitjs1/client/RoutedWireElm.java
+index 5670bf6..29c95a9 100644
+--- a/src/com/lushprojects/circuitjs1/client/RoutedWireElm.java
++++ b/src/com/lushprojects/circuitjs1/client/RoutedWireElm.java
+@@ -174,6 +174,13 @@ import com.google.gwt.xml.client.Element;
+ 	    return new RoutedWireElm(rp2);
+ 	}
+ 
++	@Override
++	boolean pointOnWireInterior(int px, int py) {
++	    if (routePoints == null || routePoints.size() < 2)
++		return false;
++	    return WireElm.pointOnWireInteriorForPoints(px, py, routePoints);
++	}
++
+ 	// reroute this wire through an intermediate point
+ 	void rerouteVia(int vx, int vy) {
+ 	    WireRouter router = new WireRouter();
+diff --git a/src/com/lushprojects/circuitjs1/client/WireElm.java b/src/com/lushprojects/circuitjs1/client/WireElm.java
+index a8b2939..c3c470d 100644
+--- a/src/com/lushprojects/circuitjs1/client/WireElm.java
++++ b/src/com/lushprojects/circuitjs1/client/WireElm.java
+@@ -19,6 +19,8 @@
+ 
+ package com.lushprojects.circuitjs1.client;
+ 
++import java.util.ArrayList;
++
+     class WireElm extends CircuitElm {
+ 	int busWidth = 1;
+ 	double[] currents;
+@@ -192,6 +194,39 @@ package com.lushprojects.circuitjs1.client;
+ 	}
+         int getShortcut() { return 'w'; }
+ 
++	static boolean pointOnWireInteriorForPoints(int px, int py, ArrayList<Point> pts) {
++	    for (int i = 0; i < pts.size() - 1; i++) {
++		Point a = pts.get(i);
++		Point b = pts.get(i + 1);
++		if (px == a.x && py == a.y) continue;
++		if (px == b.x && py == b.y) continue;
++		if (a.x == b.x && px == a.x) {
++		    int miny = Math.min(a.y, b.y);
++		    int maxy = Math.max(a.y, b.y);
++		    if (py > miny && py < maxy) return true;
++		} else if (a.y == b.y && py == a.y) {
++		    int minx = Math.min(a.x, b.x);
++		    int maxx = Math.max(a.x, b.x);
++		    if (px > minx && px < maxx) return true;
++		}
++	    }
++	    return false;
++	}
++
++	boolean pointOnWireInterior(int px, int py) {
++	    ArrayList<Point> pts = new ArrayList<Point>();
++	    pts.add(new Point(x, y));
++	    pts.add(new Point(x2, y2));
++	    return pointOnWireInteriorForPoints(px, py, pts);
++	}
++
++	WireElm split(int px, int py) {
++	    WireElm newWire = new WireElm(px, py);
++	    newWire.drag(x2, y2);
++	    drag(px, py);
++	    return newWire;
++	}
++
+ 	int getMouseDistance(int gx, int gy) {
+ 	    int thresh = 10;
+ 	    int d2 = lineDistanceSq(x, y, x2, y2, gx, gy);
