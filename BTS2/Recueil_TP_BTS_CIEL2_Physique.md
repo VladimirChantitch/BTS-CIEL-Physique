@@ -733,33 +733,84 @@ Falstad ne propose pas de composant « photodiode » avec une commande d'éclair
 
 ### TP 4.1 : Boucle ouverte / boucle fermée
 
-> **Durée :** 55 min · **Mode :** **Falstad** (version de référence ci-dessous) · **Cours :** Chapitre 4, §4.1 · **Prérequis :** TP 1.1, fiche outil Falstad
-> **Objectif :** comparer la réaction d'un système sans retour et avec retour à une même perturbation.
+**Avant de commencer (pour tout le sous-groupe, 5 min)**
 
-> Le déroulé ci-dessous décrit la version sur **matériel réel**, conservée pour référence. La version **Falstad, à suivre en séance**, est détaillée juste après.
+1. Ouvrir un navigateur et aller sur **falstad.com/circuit**.
+2. Le simulateur ouvre toujours un circuit d'exemple : le vider entièrement par le menu **Fichier → Nouveau circuit vierge**, ou sélectionner tout et supprimer. L'écran doit être vide.
+3. Repérer les trois zones : la **zone de dessin** (grande grille), le **panneau de droite** (bouton Run/Stop, curseur de vitesse de simulation), et le **menu du haut** (Fichier, Édition, Dessiner, Oscilloscopes, Options).
+4. Deux gestes à connaître :
+   - **Placer un composant** : menu **Dessiner** (*Draw*), choisir le composant, puis **cliquer-glisser** sur la grille pour le tracer (la longueur du glissement donne la taille du composant).
+   - **Modifier une valeur** : **clic droit** sur le composant → **Éditer…**, saisir la valeur, valider.
+   - **Effacer** : clic droit sur le composant → **Supprimer** (*Delete*).
+5. Astuce de lecture : une fois la simulation lancée, Falstad affiche des **points mobiles** sur les fils (le courant) et un **code couleur** de tension (vert = potentiel positif, rouge = négatif, gris = 0 V). Survoler un composant affiche sa tension et son courant dans le bandeau inférieur.
 
-- **Matériel :** 1 potentiomètre, 1 alimentation, 2 multimètres (ou logiciel de simulation si pas de maquette disponible).
-
-<img src="figures/Tp/schema_potentiometre_diviseur.svg" width="320" alt="TP4b_potentiometre"/>
-
-**Déroulé détaillé**
-
-1. **(10 min) Montage en boucle ouverte.** Régler le potentiomètre à une position donnée sans jamais la corriger. Appliquer une "perturbation" simulée (ex. modifier légèrement la tension d'alimentation) et observer la tension de sortie.
-   - ❓ *Q1. La sortie suit-elle la perturbation sans aucune correction ? Notez l'écart obtenu.*
-2. **(20 min) Montage en boucle fermée (ou simulation guidée).** Mettre en place un retour qui compare la sortie à une consigne et ajuste la commande (manuellement si pas de correcteur automatique disponible : l'étudiant joue le rôle du correcteur en réajustant le potentiomètre pour ramener la sortie à la consigne après la perturbation).
-   - ❓ *Q2. Combien d'ajustements/de temps faut-il pour revenir proche de la consigne après la perturbation ?*
-   - ❓ *Q3. Identifiez sur votre montage : la consigne, la grandeur mesurée, l'écart, l'actionneur.*
-3. **(15 min) Comparaison et bilan.**
-   - ❓ *Q4. Comparez l'écart final en boucle ouverte (Q1) et en boucle fermée (Q2). Concluez sur l'intérêt d'un asservissement face à une perturbation.*
-   - ❓ *Q5. Citer un exemple de système bouclé rencontré dans la vie courante ou dans un équipement CIEL (régulation, servomoteur, alimentation régulée…).*
-
-- **Livrable :** tableaux/graphe remplis, réponses aux questions.
+> ⚠ Le simulateur est utilisé **en français** (le choix de la langue se fait dans le menu **Options**).
 
 ---
 
-<a id="sec-version-falstad-du-tp-4-1-version-de-reference-boucle-ouverte-contre-b"></a>
+<a id="sec-option-a-tracer-la-caracteristique-d-une-diode"></a>
 
-#### Version Falstad du TP 4.1 (version de référence) : boucle ouverte contre boucle fermée
+#### Option A : tracer la caractéristique d'une diode
+
+**Objectif :** construire un circuit diode + résistance de protection, relever point par point le couple $(V_{diode},\, I)$, tracer $I = f(V_{diode})$ et en déduire la tension de seuil.
+
+Vous aurez besoin des racourcie clavier : https://defkey.com/fr/falstad-circuit-simulator-raccourcis-clavier. Si il n'y a pas de raccourcie cherchez dans le menu dessiner en hau à gauche.
+
+**Étape 1 (10 min) : construire le circuit**
+
+Le circuit à reproduire est celui de l'atelier 4 option A : une source de tension continue, une résistance de protection de 1 kΩ et une diode en série, le tout refermé sur la masse.
+
+1. **Placer la source** : menu **Ajouter une source de tension (2 bornes)** (*Draw → Inputs and Sources → Add Voltage Source (2-terminal)*). Tracer un segment **vertical** à gauche de l'écran (glisser du bas vers le haut).
+2. **Régler la source** : clic droit dessus → **Éditer…**. Choisir une source **continue (DC)** et mettre la tension à **0,5 V** pour commencer.
+3. **Placer la résistance** : **Ajouter une résistance** (*Draw → Passive Components → Add Resistor*). La tracer **horizontalement**, à partir de la borne du haut de la source.
+4. **Régler la résistance** : clic droit → **Éditer…** → **1000 Ω** (1 kΩ).
+5. **Placer la diode** : **Ajouter une diode**. La tracer horizontalement, dans le prolongement de la résistance. Vérifier le sens : la barre du symbole (la cathode) doit être **à droite**, côté masse. Si le sens est inversé, clic droit → **Inverser les bornes** , ou refaire le tracé dans l'autre sens.
+6. **Placer la masse** : **Ajouter une masse** . La placer sous la borne du bas de la source, et la relier.
+7. **Fermer le circuit** : **Ajouter un fil**w pour relier la sortie de la diode jusqu'à la masse.
+8. **Vérifier avant de lancer** : le circuit doit former une boucle fermée unique : source → résistance → diode → masse → source. Aucun fil ne doit rester en l'air.
+
+- ❓ *Q1. Reproduisez sur votre compte-rendu le schéma que vous avez construit, avec les valeurs. Pourquoi place-t-on une résistance de protection en série avec la diode ? Que se passerait-il, dans le simulateur comme en réel, si on la supprimait ?*
+
+**Étape 2 (10 min) : observer le sens bloqué**
+
+9. Inverser la diode (clic droit → **Inverser les bornes**) : elle est maintenant montée **en sens bloqué**.
+10. Lancer la simulation (bouton **Marche / Run** dans le panneau de droite s'il est sur Arrêt).
+11. Faire varier la tension de la source de 0 V à 5 V (clic droit → **Éditer…**, ou ajouter un curseur : clic droit → **Curseurs…** (*Sliders…*) pour régler la tension en continu).
+12. Survoler la diode pour lire le courant qui la traverse, à chaque valeur de tension.
+
+- ❓ *Q2. Le courant en sens bloqué est-il rigoureusement nul ? Notez son ordre de grandeur (attention aux unités : le simulateur affiche souvent des nanoampères ou des picoampères). Comparez-le au courant que vous mesurerez en sens passant à l'étape suivante.*
+
+**Étape 3 (25 min) : relevé point par point en sens passant**
+
+13. Remettre la diode dans le **bon sens** (clic droit → **Inverser les bornes**).
+14. Pour chaque valeur de tension de source indiquée dans le tableau, éditer la source, laisser la simulation se stabiliser une seconde, puis **survoler la diode** pour lire $V_{diode}$ et $I$.
+15. Compléter le tableau ci-dessous (les valeurs de source sont resserrées autour du seuil attendu) :
+
+| Tension de la source (V) | 0,50 | 0,60 | 0,70 | 0,80 | 1,00 | 1,50 | 2,00 | 3,00 | 5,00 |
+|---|---|---|---|---|---|---|---|---|---|
+| $V_{diode}$ mesurée (V) | | | | | | | | | |
+| $I$ mesuré (mA) | | | | | | | | | |
+
+16. **Tracer la caractéristique** $I = f(V_{diode})$ : sur papier millimétré, ou dans un tableur en reportant les deux lignes du tableau.
+
+- ❓ *Q3. À partir de quelle tension $V_{diode}$ le courant commence-t-il à croître significativement ? Cette valeur est-elle cohérente avec les 0,6 à 0,7 V annoncés en cours pour le silicium ?*
+- ❓ *Q4. Quand la tension de la source passe de 2 V à 5 V, de combien varie $V_{diode}$ ? Et le courant $I$ ? Qu'en concluez-vous sur le modèle simplifié « la diode passante impose environ 0,7 V à ses bornes » ?*
+- ❓ *Q5. La progression du courant est-elle linéaire, ou de plus en plus rapide ? Que cela indique-t-il sur la nature de la caractéristique $I(V)$ d'une diode ? Une diode obéit-elle à la loi d'Ohm ?*
+
+**Étape 4 (10 min) : vérification par le calcul et bilan**
+
+17. Reprendre trois points du tableau (par exemple sources à 1 V, 2 V et 5 V) et vérifier la cohérence par la loi des mailles : la tension aux bornes de la résistance vaut $U_R = E - V_{diode}$, et le courant doit valoir $I = U_R / R$.
+
+- ❓ *Q6. Pour chacun des trois points, comparez le courant calculé $I = (E - V_{diode})/R$ au courant lu dans le simulateur. Les deux concordent-ils ?*
+- ❓ *Q7. Citez une application où la diode est utilisée dans une carte électronique*
+
+**Livrable option A :** schéma du circuit construit, tableau de mesures complet, graphe $I = f(V_{diode})$ tracé et annoté (seuil repéré), réponses Q1 à Q7, capture d'écran du circuit sous Falstad.
+
+---
+
+<a id="sec-option-b-boucle-ouverte-contre-boucle-fermee"></a>
+
+#### Option B : boucle ouverte contre boucle fermée
 
 **Objectif :** construire deux circuits de régulation de tension, l'un sans retour (boucle ouverte), l'autre avec retour (boucle fermée), puis comparer leur réaction à une même perturbation.
 
@@ -795,21 +846,21 @@ On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et
 11. **Placer l'amplificateur opérationnel** : **Dessiner → Blocs Fonctionels actifs → Ajouter un Amplificateur Operationnel Réel**. Le tracer au centre de l'écran. Repérer ses cinq broches : les deux **entrées** (+ et −) à gauche, la **sortie** à droite, et les deux broches d'**alimentation** (**V+** et **V−**).
 12. **Alimenter l'AOP** : placer une seconde source de tension continue réglée à **12 V**, reliée à la masse, puis relier le **+12 V** à la broche **V+** de l'AOP et la broche **V−** à la **masse**. Contrairement à l'AOP idéal (alimenté en interne, sans broche visible), l'**amplificateur opérationnel réel doit être alimenté explicitement** : sans ce câblage, il ne délivrera aucune tension en sortie.
 
-<p align="center">
-<img src="figures/Tp/Ampli_D_B.png" alt="Amplificateur opérationnel réel dans Falstad : broches d'alimentation V+ et V−, entrées + et −, sortie"/>
-</p>
-
 13. **Câbler la consigne sur l'entrée +** : relier la source 5 V à l'entrée **non inverseuse** de l'AOP.
 14. **Câbler le retour sur l'entrée −** : relier directement la **sortie** de l'AOP à son entrée **inverseuse** (montage suiveur). **C'est ce fil qui constitue la boucle de retour** : l'AOP compare en permanence sa sortie à la consigne.
 15. **Placer la résistance de charge** de **1 kΩ** (une résistance ordinaire, comme à l'étape 1) entre la sortie de l'AOP et la masse.
 16. Lancer la simulation et vérifier que la sortie vaut bien **5,0 V**.
 
+<p align="center">
+<img src="figures/Tp/Ampli_D_B.png" alt="Amplificateur opérationnel réel dans Falstad : broches d'alimentation V+ et V−, entrées + et −, sortie"/>
+</p>w
+
 - ❓ *Q2. Repérez et nommez sur votre schéma : la consigne, la grandeur mesurée (le retour), l'écart (la différence entre les deux entrées de l'AOP), et l'actionneur (l'étage de sortie de l'AOP). Reproduisez le schéma-bloc correspondant (consigne → comparateur → correcteur → actionneur → sortie, avec la boucle de retour).*
 
 **Étape 4 (10 min) : même perturbation, comparaison**
 
-17. Appliquer **exactement la même perturbation** qu'en boucle ouverte : éditer la source qui alimente l'AOP (broche **V+**) et faire passer sa tension de **12 V à 9 V**. Ne pas toucher à la source de consigne, qui reste à 5 V.
-18. Relever la nouvelle tension de sortie.
+1.  Appliquer **exactement la même perturbation** qu'en boucle ouverte : éditer la source qui alimente l'AOP (broche **V+**) et faire passer sa tension de **12 V à 9 V**. Ne pas toucher à la source de consigne, qui reste à 5 V.
+2.  Relever la nouvelle tension de sortie.
 
 | | Tension d'alimentation | Tension de sortie | Écart avec la consigne 5,0 V |
 |---|---|---|---|
@@ -823,7 +874,7 @@ On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et
 - ❓ *Q5. Jusqu'où la correction fonctionne-t-elle ? Baissez progressivement l'alimentation de l'AOP (8 V, 7 V, 6 V, 5 V) : à partir de quelle valeur la sortie ne tient-elle plus les 5 V ? Pourquoi un asservissement ne peut-il pas compenser n'importe quelle perturbation ?*
 - ❓ *Q6. Citez un exemple de système bouclé rencontré dans la vie courante ou dans un équipement CIEL (régulation de température d'un serveur, alimentation régulée, servomoteur, régulateur de vitesse…).*
 
-**Livrable TP 4.1 :** les deux schémas construits (boucle ouverte et boucle fermée), les deux tableaux de mesures remplis, le schéma-bloc annoté, les réponses Q1 à Q6, et les captures d'écran des deux circuits.
+**Livrable option B :** les deux schémas construits (boucle ouverte et boucle fermée), les deux tableaux de mesures remplis, le schéma-bloc annoté, les réponses Q1 à Q6, et les captures d'écran des deux circuits.
 
 ---
 
