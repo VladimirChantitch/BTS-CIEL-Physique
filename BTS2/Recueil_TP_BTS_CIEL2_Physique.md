@@ -144,23 +144,6 @@ Cette fiche est commune à tous les TP réalisés sur le simulateur (TP 1.2 à 1
 
 ---
 
-<a id="sec-seance-de-rentree-organisation-du-tp-tournant"></a>
-
-## Séance de rentrée : organisation du TP tournant
-
-**Principe :** la classe est répartie en sous-groupes qui tournent sur des TP indépendants d'1h maximum. 3 TP "tronc commun" obligatoires ; le TP bonus (TP 1.2 ou TP 4.1) est réservé aux groupes identifiés "avancés" lors du diagnostic, ou vient en rotation si le temps le permet.
-
-### Vue d'ensemble de la rotation
-
-| TP | Thème | Durée | Public |
-|---|---|---|---|
-| TP 2.1 | Mesures et incertitudes | 55 min | Tous les sous-groupes |
-| TP 1.1 | Bases de l'électricité | 55 min | Tous les sous-groupes |
-| TP 3.1 | Ondes (GBF + oscilloscope) | 55 min | Tous les sous-groupes |
-| TP 1.2 / TP 4.1 | Semi-conducteurs ou boucle fermée | 55 min | Groupes avancés, ou rotation si le temps le permet |
-
-> **⚙** Avec 3 sous-groupes : chacun passe sur les 3 TP du tronc commun (une rotation par créneau de 55 min). Avec 4 sous-groupes : le 4ᵉ groupe démarre par l'TP bonus pendant que les autres démarrent le tronc commun, puis tout le monde tourne.
-
 ### Matériel global à préparer (pour 4 postes en parallèle)
 
 | Matériel | Quantité | Utilisé pour |
@@ -402,7 +385,7 @@ Le circuit à reproduire est celui du TP 1.2 (version matériel ci-dessus) : une
 **Étape 1 (10 min) : construire le circuit**
 
 1. Source sinusoïdale, tension max **1 V** (attention, 1 V et non 5 V : la surtension à la résonance sera déjà importante), fréquence initiale **1 kHz**, borne basse à la masse.
-2. En série depuis la source : R = **20 Ω**, L = **10 mH**, C = **100 nF**, retour à la masse.
+2. En série depuis la source : R = **20 Ω**, L = **10 mH**, C = **100 nF**, retour à la masse. (RLC : On met une résistance, puis une bobine puis un condensateur).
 3. Oscilloscope sur la **résistance** (image du courant) et un second sur le **condensateur**.
 
 - ❓ *Q1. Avant toute mesure, calculez la fréquence de résonance théorique $f_0 = \dfrac{1}{2\pi\sqrt{LC}}$ et le facteur de qualité $Q = \dfrac{1}{R}\sqrt{\dfrac{L}{C}}$.*
