@@ -335,41 +335,78 @@ Le circuit à reproduire est celui du TP 1.2 (version matériel ci-dessus) : une
 > **Durée :** 55 min · **Mode :** Falstad (les étudiants construisent le circuit) · **Cours :** Chapitre 1, §1.2 · **Prérequis :** fiche outil Falstad, TP 1.1
 > **Objectif :** constater qu'un condensateur et une bobine ne se comportent pas comme une résistance : leur « résistance apparente » (impédance) dépend de la fréquence, et ils déphasent le courant par rapport à la tension.
 
+**Ce qu'il faut savoir avant de commencer**
+
+En régime continu, un condensateur est un circuit ouvert (aucun courant) et une bobine est un fil (aucune tension). En régime sinusoïdal, tout change : le courant qui les traverse existe, mais il est **limité** par une grandeur qui joue le rôle d'une résistance, l'**impédance** $Z$ (en ohms), et il est **décalé dans le temps** par rapport à la tension : c'est le **déphasage** $\varphi$.
+
+| Dipôle | Impédance | Dépend de $f$ ? | Le courant est… |
+|---|---|---|---|
+| Résistance $R$ | $Z_R = R$ | non | en phase avec la tension |
+| Condensateur $C$ | $Z_C = \dfrac{1}{C\omega}$ | oui, **diminue** quand $f$ augmente | **en avance** sur la tension |
+| Bobine $L$ | $Z_L = L\omega$ | oui, **augmente** quand $f$ augmente | **en retard** sur la tension |
+
+avec $\omega = 2\pi f$ la **pulsation** (en rad/s). Ne pas oublier le $2\pi$ : c'est l'erreur la plus fréquente.
+
+Quand R et C (ou R et L) sont en série, les impédances **ne s'additionnent pas** comme des résistances, parce que les tensions ne sont pas en phase. Le module de l'impédance totale se calcule « comme une hypoténuse » :
+
+$$\lvert Z \rvert = \sqrt{R^2 + Z_C^2} \qquad \text{puis} \qquad I_{max} = \frac{U_{max}}{\lvert Z \rvert}$$
+
+**Exemple guidé (à refaire avec vos valeurs) :** pour $R = 2\ \text{k}\Omega$, $C = 50$ nF et $f = 1$ kHz :
+$\omega = 2\pi \times 1000 = 6283$ rad/s ; $Z_C = 1/(50 \times 10^{-9} \times 6283) = 3183\ \Omega$ ; $\lvert Z \rvert = \sqrt{2000^2 + 3183^2} = 3759\ \Omega$ ; avec $U_{max} = 5$ V, $I_{max} = 5/3759 = 1{,}33$ mA. Ces valeurs ne sont **pas** celles du TP : elles servent seulement de modèle de calcul.
+
+**Comment on « voit » le courant sur Falstad :** l'oscilloscope n'affiche que des tensions. On observe donc la tension aux bornes de la résistance $u_R(t)$, qui est proportionnelle au courant ($u_R = R \, i$) : même forme, même déphasage, et $I_{max} = U_{R,max}/R$.
+
 **Étape 1 (10 min) : construire le circuit RC**
 
 1. Placer une **source de tension sinusoïdale** : **Dessiner → Entrées et sources → Ajouter une source de tension (2 bornes)**, puis clic droit → **Éditer…** : forme d'onde **sinusoïdale**, tension max **5 V**, fréquence **1 kHz**. Relier sa borne basse à une masse.
-2. Placer en série, depuis la borne haute de la source : une **résistance** R = **1 kΩ**, puis un **condensateur** (**Dessiner → Composants passifs → Ajouter un condensateur**) C = **100 nF**, dont la seconde borne revient à la masse.
-3. Afficher les signaux : clic droit sur la **source** → **Voir dans un nouvel oscilloscope** (tension d'entrée $u(t)$), puis clic droit sur la **résistance** → **Voir dans un nouvel oscilloscope**. La tension aux bornes de R est l'image du courant : $i(t) = u_R(t)/R$.
+2. Placer en série, depuis la borne haute de la source : une **résistance** R = **1 kΩ**, puis un **condensateur** (**Dessiner → Composants passifs → Ajouter un condensateur**) C = **100 nF**, dont la seconde borne revient à la masse. Ordre important pour la suite : la résistance doit être **du côté de la source**, le condensateur du côté de la masse.
+3. Afficher les signaux : clic droit sur la **source** → **Voir dans un nouvel oscilloscope** (tension d'entrée $u(t)$), puis clic droit sur la **résistance** → **Voir dans un nouvel oscilloscope** (tension $u_R(t)$, image du courant). Attention à bien cliquer sur la résistance et non sur le condensateur.
 4. Pour comparer les deux courbes sur le même graphe : clic droit sur l'un des oscilloscopes → **Combiner** (*Combine*) avec l'autre, ou les laisser empilés l'un au-dessus de l'autre.
+5. Vérification avant de continuer : les deux courbes doivent être des sinusoïdes de même période (1 ms), celle de $u_R$ plus petite que celle de la source et décalée vers la gauche. Si $u_R$ apparaît « à l'envers » (inversée), clic droit sur la résistance → **Inverser les bornes**.
 
 **Étape 2 (15 min) : mesurer amplitude et déphasage à 1 kHz**
 
-5. Relever l'amplitude de $u_R$ (au survol de l'oscilloscope ou de la résistance), en déduire l'amplitude du courant $I_{max} = U_{R,max}/R$.
-6. Relever le décalage temporel $\Delta t$ entre le passage par zéro de $u(t)$ et celui de $u_R(t)$, et la période $T$. En déduire le déphasage $\varphi = 360 \times \Delta t / T$.
-7. Compléter la première ligne du tableau.
+6. **Amplitude.** Survoler l'oscilloscope de la résistance : Falstad affiche la valeur maximale de $u_R$ (« max »). Reporter $U_{R,max}$ puis calculer $I_{max} = U_{R,max}/R$ (en mA si $U_R$ en V et R en kΩ).
+7. **Déphasage.** Repérer sur l'oscilloscope combiné deux passages par zéro **en montée**, l'un pour $u(t)$, l'autre pour $u_R(t)$, les plus proches l'un de l'autre. L'écart horizontal entre eux est $\Delta t$ ; la distance entre deux passages par zéro en montée d'une même courbe est la période $T$. Convertir ce décalage en degrés :
 
-| f | $Z_C = 1/(C\omega)$ calculé | $\lvert Z \rvert = \sqrt{R^2 + Z_C^2}$ calculé | $I_{max}$ calculé | $I_{max}$ mesuré | $\varphi$ mesuré | Le courant est… |
-|---|---|---|---|---|---|---|
-| 1 kHz | | | | | | en avance / en retard |
-| 100 Hz | | | | | | |
-| 10 kHz | | | | | | |
+$$\varphi = 360 \times \frac{\Delta t}{T}$$
 
-- ❓ *Q1. À 1 kHz, comparez $I_{max}$ mesuré et calculé. Le condensateur se comporte-t-il comme une résistance de 1592 Ω ? Qu'est-ce qui le distingue d'une vraie résistance (regardez le déphasage) ?*
-- ❓ *Q2. Le courant est-il en avance ou en retard sur la tension ? Comparez au signe attendu pour un condensateur.*
+   Exemple : si $\Delta t$ vaut un dixième de période, $\varphi = 36°$. Si $u_R$ passe par zéro **avant** $u$, le courant est **en avance**.
+
+8. **Avant de mesurer**, calculer $Z_C$, $\lvert Z \rvert$ et $I_{max}$ attendus à 1 kHz (suivre l'exemple guidé) : la mesure doit ensuite confirmer le calcul à quelques pourcents près. Compléter la première ligne du tableau.
+
+| f | $\omega = 2\pi f$ (rad/s) | $Z_C = 1/(C\omega)$ calculé (Ω) | $\lvert Z \rvert = \sqrt{R^2 + Z_C^2}$ calculé (Ω) | $I_{max}$ calculé (mA) | $U_{R,max}$ lu (V) | $I_{max}$ mesuré (mA) | $\Delta t$ lu | $\varphi$ mesuré (°) | Le courant est… |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 kHz | | | | | | | | | en avance / en retard |
+| 100 Hz | | | | | | | | | en avance / en retard |
+| 10 kHz | | | | | | | | | en avance / en retard |
+
+- ❓ *Q1. À 1 kHz :*
+  *a) Comparez $I_{max}$ mesuré et $I_{max}$ calculé. Sont-ils cohérents ?*
+  *b) Calculez le courant que l'on obtiendrait si le condensateur était remplacé par une vraie résistance de 1592 Ω en série avec R (les résistances s'additionnent alors simplement). Comparez à la valeur mesurée.*
+  *c) Citez deux différences entre le condensateur et cette résistance de 1592 Ω : l'une visible sur l'oscilloscope (pensez au décalage des courbes), l'autre qui apparaîtra à l'étape 3.*
+- ❓ *Q2. Le courant est-il en avance ou en retard sur la tension (c'est-à-dire : $u_R$ passe-t-elle par zéro avant ou après $u$) ? Est-ce cohérent avec le tableau du début du TP ? Expliquez en une phrase pourquoi le courant doit précéder la tension dans un condensateur (indice : que faut-il pour que la tension aux bornes du condensateur monte ?).*
 
 **Étape 3 (15 min) : faire varier la fréquence**
 
-8. Éditer la source : fréquence **100 Hz**, refaire les mesures. Puis **10 kHz**.
+9. Éditer la source : fréquence **100 Hz**. Refaire les calculs puis les mesures (la période vaut maintenant 10 ms, ajuster la base de temps de l'oscilloscope si les courbes sont trop serrées ou trop larges).
+10. Passer à **10 kHz** : la période n'est plus que 0,1 ms et le décalage $\Delta t$ devient très petit ; il faut réduire la base de temps pour le voir. S'il n'est pas mesurable, noter « déphasage quasi nul ».
 
-- ❓ *Q3. Quand la fréquence augmente, l'impédance du condensateur augmente-t-elle ou diminue-t-elle ? Que devient le déphasage ? Vers quel comportement (résistif ou capacitif) le circuit tend-il à haute fréquence ?*
-- ❓ *Q4. Un condensateur « laisse passer » les hautes fréquences et « bloque » les basses fréquences : reformulez cette phrase à partir de vos mesures.*
+- ❓ *Q3. À partir des trois lignes du tableau :*
+  *a) Quand la fréquence est multipliée par 10, par combien $Z_C$ est-il divisé ?*
+  *b) Comment évolue le déphasage $\varphi$ quand $f$ augmente ? Vers quelle valeur tend-il ?*
+  *c) À 10 kHz, comparez $Z_C$ à $R$. Lequel des deux limite le courant ? En déduire si le circuit se comporte plutôt comme une résistance seule (comportement résistif) ou comme un condensateur (comportement capacitif).*
+- ❓ *Q4. On dit qu'un condensateur « laisse passer les hautes fréquences et bloque les basses fréquences ». Reformulez cette phrase à partir de vos mesures, en comparant les courants obtenus à 100 Hz et à 10 kHz pour la même tension d'entrée de 5 V. Que se passerait-il en continu ($f = 0$) ?*
 
 **Étape 4 (10 min) : remplacer le condensateur par une bobine**
 
-9. Supprimer le condensateur et placer une **bobine** (**Dessiner → Composants passifs → Ajouter une inductance**) L = **100 mH** au même endroit. Refaire les mesures à 1 kHz.
+11. Supprimer le condensateur et placer une **bobine** (**Dessiner → Composants passifs → Ajouter une inductance**) L = **100 mH** au même endroit. Remettre la source à **1 kHz**. Refaire les mesures d'amplitude et de déphasage, avec la même méthode (passages par zéro en montée).
 
-- ❓ *Q5. Calculez $Z_L = L\omega$ à 1 kHz et comparez au courant mesuré. Le courant est-il maintenant en avance ou en retard ? Que constatez-vous par rapport au condensateur ?*
-- ❓ *Q6. Résumez en une phrase le comportement de R, de C et de L vis-à-vis de la fréquence.*
+- ❓ *Q5. Bobine à 1 kHz :*
+  *a) Calculez $Z_L = L\omega$, puis $\lvert Z \rvert = \sqrt{R^2 + Z_L^2}$ et $I_{max}$ attendu. Comparez à la mesure.*
+  *b) Le courant est-il maintenant en avance ou en retard sur la tension ?*
+  *c) Qu'est-ce qui change par rapport au condensateur (sens du déphasage, et sens de variation de l'impédance avec la fréquence, d'après le tableau du début) ?*
+- ❓ *Q6. Résumez en une phrase, pour chacun des trois dipôles R, C et L : son impédance dépend-elle de la fréquence, dans quel sens, et le courant est-il en phase, en avance ou en retard sur la tension.*
 
 **Livrable :** tableau complet, captures d'écran des oscillogrammes (1 kHz avec C, 1 kHz avec L) avec $\Delta t$ et $T$ repérés, réponses Q1 à Q6.
 
