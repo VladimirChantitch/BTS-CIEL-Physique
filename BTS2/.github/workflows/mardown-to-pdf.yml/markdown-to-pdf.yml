@@ -1,0 +1,62 @@
+name: Markdown → PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.md"
+  workflow_dispatch: # permet aussi de le lancer à la main depuis l'onglet Actions
+
+permissions:
+  contents: write # nécessaire pour recommiter les PDF
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Pandoc et LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended \
+            texlive-fonts-extra texlive-lang-french lmodern
+
+      - name: Convertir tous les Markdown en PDF
+        run: |
+          set -e
+          find . -name "*.md" \
+            -not -path "./.git/*" \
+            -not -path "./.github/*" \
+            -not -path "./node_modules/*" | while read -r f; do
+              out="${f%.md}.pdf"
+              echo "→ $f  ⇒  $out"
+              pandoc "$f" -o "$out" \
+                --pdf-engine=xelatex \
+                --resource-path="$(dirname "$f")" \
+                -V geometry:margin=2.5cm \
+                -V lang=fr \
+                -V mainfont="DejaVu Serif" \
+                -V monofont="DejaVu Sans Mono"
+          done
+
+      - name: Committer les PDF générés
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -- '*.pdf'
+          if git diff --cached --quiet; then
+            echo "Aucun PDF modifié."
+          else
+            git commit -m "Regénération des PDF [skip ci]"
+            git push
+          fi
+
+      - name: Publier aussi les PDF en artefact téléchargeable
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf
+          path: |
+            **/*.pdf
+            !.git/**
