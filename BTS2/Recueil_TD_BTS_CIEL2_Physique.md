@@ -3,46 +3,60 @@
 
 ## Table des matières
 
-- [0. Aide-mémoire : unités et équivalences](#sec-0-aide-memoire-unites-et-equivalences)
-    - [Préfixes multiplicateurs (à connaître par cœur)](#sec-prefixes-multiplicateurs-a-connaitre-par-cur)
-    - [Grandeurs, symboles et unités SI utilisées dans ce dossier](#sec-grandeurs-symboles-et-unites-si-utilisees-dans-ce-dossier)
-    - [Conversions rapides fréquemment nécessaires](#sec-conversions-rapides-frequemment-necessaires)
-- [Séance de rentrée : QCM d'état des lieux et de validation](#sec-seance-de-rentree-qcm-d-etat-des-lieux-et-de-validation)
-    - [QCM diagnostique (état des lieux)](#sec-qcm-diagnostique-etat-des-lieux)
-    - [QCM de validation (après les rappels)](#sec-qcm-de-validation-apres-les-rappels)
-- [Chapitre 1 : Électricité et optoélectronique](#sec-chapitre-1-electricite-et-optoelectronique)
-    - [1.1 Bases de l'électricité](#sec-1-1-bases-de-l-electricite)
-    - [1.2 Circuits linéaires en régime sinusoïdal](#sec-1-2-circuits-lineaires-en-regime-sinusoidal)
-    - [1.3 Puissances, décibels, atténuation et gains](#sec-1-3-puissances-decibels-attenuation-et-gains)
-    - [1.4 Semi-conducteurs : la jonction PN et la diode](#sec-1-4-semi-conducteurs-la-jonction-pn-et-la-diode)
-    - [1.5 Bandes d'énergie et photons](#sec-1-5-bandes-d-energie-et-photons)
-    - [1.6 La diode électroluminescente (DEL/LED)](#sec-1-6-la-diode-electroluminescente-del-led)
-    - [1.7 La diode laser](#sec-1-7-la-diode-laser)
-    - [1.8 La photodiode](#sec-1-8-la-photodiode)
-    - [1.9 Le capteur CCD (Charge-Coupled Device)](#sec-1-9-le-capteur-ccd-charge-coupled-device)
-    - [Corrigés du chapitre 1](#sec-corriges-du-chapitre-1)
-- [Chapitre 2 : Mesures et incertitudes](#sec-chapitre-2-mesures-et-incertitudes)
-    - [2.1 Exercices d'application](#sec-2-1-exercices-d-application)
-    - [2.2 Exercices d'approfondissement](#sec-2-2-exercices-d-approfondissement)
-    - [Corrigés du chapitre 2](#sec-corriges-du-chapitre-2)
-- [Chapitre 3 : Ondes et propagation](#sec-chapitre-3-ondes-et-propagation)
-    - [3.1 Exercices d'application](#sec-3-1-exercices-d-application)
-    - [3.2 Exercices d'approfondissement](#sec-3-2-exercices-d-approfondissement)
-    - [3.3 Devoir maison : électromagnétisme](#sec-3-3-devoir-maison-electromagnetisme)
-    - [Corrigés du chapitre 3](#sec-corriges-du-chapitre-3)
-- [Chapitre 4 : Systèmes bouclés et asservissement](#sec-chapitre-4-systemes-boucles-et-asservissement)
-    - [4.1 Exercices d'application](#sec-4-1-exercices-d-application)
-    - [Corrigés du chapitre 4](#sec-corriges-du-chapitre-4)
-- [Chapitre 5 : Traitement du signal](#sec-chapitre-5-traitement-du-signal)
-    - [5.1 Exercices d'approfondissement](#sec-5-1-exercices-d-approfondissement)
-    - [Corrigés du chapitre 5](#sec-corriges-du-chapitre-5)
-- [Chapitre 6 : Optique](#sec-chapitre-6-optique)
-- [Chapitre 7 : Préparation à l'épreuve](#sec-chapitre-7-preparation-a-l-epreuve)
-    - [7.1 Exercice type BTS : contrôle d'une liaison de mesure](#sec-7-1-exercice-type-bts-controle-d-une-liaison-de-mesure)
-    - [7.2 Annales officielles](#sec-7-2-annales-officielles)
-    - [Annale : Session 2026 (sujet blanc), domaine de la physique (1h30, 4 parties indépendantes)](#sec-annale-session-2026-sujet-blanc-domaine-de-la-physique-1h30-)
-    - [Annale : Session 2025 (officielle), domaine de la physique (1h30, 3 parties indépendantes)](#sec-annale-session-2025-officielle-domaine-de-la-physique-1h30-3)
-    - [Corrigés du chapitre 7](#sec-corriges-du-chapitre-7)
+- [BTS CIEL 2 : Physique](#bts-ciel-2--physique)
+  - [Recueil de TD (exercices et annales)](#recueil-de-td-exercices-et-annales)
+  - [Table des matières](#table-des-matières)
+  - [0. Aide-mémoire : unités et équivalences](#0-aide-mémoire--unités-et-équivalences)
+    - [Préfixes multiplicateurs (à connaître par cœur)](#préfixes-multiplicateurs-à-connaître-par-cœur)
+    - [Grandeurs, symboles et unités SI utilisées dans ce dossier](#grandeurs-symboles-et-unités-si-utilisées-dans-ce-dossier)
+    - [Conversions rapides fréquemment nécessaires](#conversions-rapides-fréquemment-nécessaires)
+  - [Séance de rentrée : QCM d'état des lieux et de validation](#séance-de-rentrée--qcm-détat-des-lieux-et-de-validation)
+    - [QCM diagnostique (état des lieux)](#qcm-diagnostique-état-des-lieux)
+    - [A. Électricité de base (6 questions)](#a-électricité-de-base-6-questions)
+    - [B. Mesures et incertitudes (5 questions)](#b-mesures-et-incertitudes-5-questions)
+    - [C. Ondes (5 questions)](#c-ondes-5-questions)
+    - [D. Bonus : acquis de 1ʳᵉ année (4 questions, facultatif mais informatif)](#d-bonus--acquis-de-1ʳᵉ-année-4-questions-facultatif-mais-informatif)
+    - [QCM de validation (après les rappels)](#qcm-de-validation-après-les-rappels)
+  - [Chapitre 1 : Électricité et optoélectronique](#chapitre-1--électricité-et-optoélectronique)
+    - [1.1 Bases de l'électricité](#11-bases-de-lélectricité)
+    - [1.2 Circuits linéaires en régime sinusoïdal](#12-circuits-linéaires-en-régime-sinusoïdal)
+    - [1.3 Puissances, décibels, atténuation et gains](#13-puissances-décibels-atténuation-et-gains)
+    - [1.4 Semi-conducteurs : la jonction PN et la diode](#14-semi-conducteurs--la-jonction-pn-et-la-diode)
+    - [1.5 Bandes d'énergie et photons](#15-bandes-dénergie-et-photons)
+    - [1.6 La diode électroluminescente (DEL/LED)](#16-la-diode-électroluminescente-delled)
+    - [1.7 La diode laser](#17-la-diode-laser)
+    - [1.8 La photodiode](#18-la-photodiode)
+    - [1.9 Le capteur CCD (Charge-Coupled Device)](#19-le-capteur-ccd-charge-coupled-device)
+    - [Corrigés du chapitre 1](#corrigés-du-chapitre-1)
+  - [Chapitre 2 : Mesures et incertitudes](#chapitre-2--mesures-et-incertitudes)
+    - [2.1 Exercices d'application](#21-exercices-dapplication)
+    - [2.2 Exercices d'approfondissement](#22-exercices-dapprofondissement)
+    - [Corrigés du chapitre 2](#corrigés-du-chapitre-2)
+  - [Chapitre 3 : Ondes et propagation](#chapitre-3--ondes-et-propagation)
+    - [3.1 Exercices d'application](#31-exercices-dapplication)
+    - [3.2 Exercices d'approfondissement](#32-exercices-dapprofondissement)
+    - [3.3 Devoir maison : électromagnétisme](#33-devoir-maison--électromagnétisme)
+    - [Corrigés du chapitre 3](#corrigés-du-chapitre-3)
+  - [Chapitre 4 : Systèmes bouclés et asservissement](#chapitre-4--systèmes-bouclés-et-asservissement)
+    - [4.1 Exercices d'application](#41-exercices-dapplication)
+    - [Corrigés du chapitre 4](#corrigés-du-chapitre-4)
+  - [Chapitre 5 : Traitement du signal](#chapitre-5--traitement-du-signal)
+    - [5.1 Exercices d'approfondissement](#51-exercices-dapprofondissement)
+    - [Corrigés du chapitre 5](#corrigés-du-chapitre-5)
+  - [Chapitre 6 : Optique](#chapitre-6--optique)
+  - [Chapitre 7 : Préparation à l'épreuve](#chapitre-7--préparation-à-lépreuve)
+    - [7.1 Exercice type BTS : contrôle d'une liaison de mesure](#71-exercice-type-bts--contrôle-dune-liaison-de-mesure)
+    - [7.2 Annales officielles](#72-annales-officielles)
+    - [Annale : Session 2026 (sujet blanc), domaine de la physique (1h30, 4 parties indépendantes)](#annale--session-2026-sujet-blanc-domaine-de-la-physique-1h30-4-parties-indépendantes)
+      - [Partie 3 : Validation du choix du débitmètre](#partie-3--validation-du-choix-du-débitmètre)
+      - [Partie 4 : Détection des fûts de boisson vides](#partie-4--détection-des-fûts-de-boisson-vides)
+      - [Partie 5 : Caractérisation du protocole de communication NFC](#partie-5--caractérisation-du-protocole-de-communication-nfc)
+      - [Partie 6 : Choix des antennes](#partie-6--choix-des-antennes)
+    - [Annale : Session 2025 (officielle), domaine de la physique (1h30, 3 parties indépendantes)](#annale--session-2025-officielle-domaine-de-la-physique-1h30-3-parties-indépendantes)
+      - [Partie 3 : Dimensionnement du détecteur de véhicule](#partie-3--dimensionnement-du-détecteur-de-véhicule)
+      - [Partie 4 : Dépannage de la liaison RS485](#partie-4--dépannage-de-la-liaison-rs485)
+      - [Partie 5 : Amélioration du système de localisation des places vides grâce aux capteurs LoRa](#partie-5--amélioration-du-système-de-localisation-des-places-vides-grâce-aux-capteurs-lora)
+    - [Corrigés du chapitre 7](#corrigés-du-chapitre-7)
 
 ---
 
@@ -620,6 +634,22 @@ On veut déterminer la puissance dissipée $P = U^2/R$ à partir de $U = (6{,}00
 2) Calculer l'incertitude relative sur $U^2$, puis sur $R$.
 3) En déduire l'incertitude relative sur $P$, puis $P$ avec son incertitude élargie ($k = 2$), correctement écrite.
 
+**Exercice 2.3 : Tolérance, incertitude et compatibilité**
+
+Une résistance marquée 4,7 kΩ (tolérance ±5 %) est mesurée à l'ohmmètre numérique : l'affichage indique 4,62 kΩ. La notice donne une précision de ±(0,8 % de la lecture + 2 digits), le digit valant 0,01 kΩ sur ce calibre.
+
+1) Calculer la demi-étendue $a$ de l'intervalle donné par le constructeur.
+2) En déduire l'incertitude-type de type B ($u_B = a/\sqrt{3}$), puis écrire le résultat avec l'incertitude élargie ($k = 2$).
+3) Le résultat est-il compatible avec la valeur nominale 4,7 kΩ ?
+4) Le composant est-il pour autant hors tolérance ? Conclure.
+
+**Exercice 2.4 : Bruit thermique et rapport signal sur bruit**
+
+1) Calculer la valeur efficace du bruit thermique d'une résistance $R = 50$ kΩ à $T = 300$ K, mesurée sur la bande audio $\Delta f = 20$ kHz ($k_B = 1{,}38 \times 10^{-23}$ J/K).
+2) Le signal utile aux bornes de cette résistance a une valeur efficace $S = 10$ mV. Calculer le SNR en dB.
+3) À la sortie d'un récepteur, un analyseur de spectre mesure une densité spectrale de bruit de $-150$ dBm/Hz. Calculer la puissance de bruit dans une bande de 20 kHz, puis le SNR si le signal reçu vaut $-80$ dBm.
+4) On divise la largeur de bande par 4 grâce à un filtre. De combien le SNR s'améliore-t-il ? Pourquoi ne peut-on pas réduire la bande indéfiniment ?
+
 <a id="sec-corriges-du-chapitre-2"></a>
 
 ### Corrigés du chapitre 2
@@ -630,6 +660,18 @@ On veut déterminer la puissance dissipée $P = U^2/R$ à partir de $U = (6{,}00
 1) Une petite variation relative sur $x$ se répercute $n$ fois sur $x^n$ (dérivée logarithmique : $d(\ln z) = n\, d(\ln x)$) : plus l'exposant est élevé, plus l'incertitude relative se dégrade.
 2) $\dfrac{u(U^2)}{U^2} = 2 \times \dfrac{0{,}05}{6{,}00} = 1{,}67\ \%$. $\dfrac{u(R)}{R} = \dfrac{2}{100} = 2{,}00\ \%$.
 3) $\dfrac{u(P)}{P} = \sqrt{1{,}67^2 + 2{,}00^2}\ \% \approx 2{,}60\ \%$. $P = \dfrac{6{,}00^2}{100} = 0{,}360$ W. $u(P) \approx 0{,}0094$ W. $U(P) = 2 \times 0{,}0094 \approx 0{,}019$ W $\approx 0{,}02$ W. Résultat : $P = (0{,}36 \pm 0{,}02)$ W.
+
+**Exercice 2.3.**
+1) $a = 0{,}008 \times 4{,}62 + 2 \times 0{,}01 = 0{,}037 + 0{,}020 \approx 0{,}057$ kΩ.
+2) $u_B = \dfrac{0{,}057}{\sqrt{3}} \approx 0{,}033$ kΩ ; $U = 2u_B \approx 0{,}066$ kΩ $\approx 0{,}07$ kΩ. Résultat : $R = (4{,}62 \pm 0{,}07)$ kΩ.
+3) $|4{,}62 - 4{,}70| = 0{,}08$ kΩ $> 0{,}07$ kΩ : le résultat n'est **pas compatible** avec la valeur nominale, à ce niveau de confiance.
+4) La tolérance ±5 % autorise $[4{,}465 ; 4{,}935]$ kΩ : la mesure est dans cet intervalle, le composant est **conforme**. Sa valeur réelle n'est simplement pas 4,7 kΩ : c'est exactement ce qu'autorise une tolérance de 5 %.
+
+**Exercice 2.4.**
+1) $B_{eff} = \sqrt{4 \times 1{,}38 \times 10^{-23} \times 300 \times 5 \times 10^{4} \times 2 \times 10^{4}} \approx 4{,}1\ \mu$V.
+2) $SNR = 20 \log_{10}\!\left(\dfrac{10 \times 10^{-3}}{4{,}07 \times 10^{-6}}\right) \approx 67{,}8$ dB.
+3) $P_{bruit} = -150 + 10 \log_{10}(2 \times 10^{4}) \approx -150 + 43{,}0 = -107{,}0$ dBm. $SNR = -80 - (-107{,}0) \approx 27$ dB.
+4) La puissance de bruit est proportionnelle à $\Delta f$ : diviser la bande par 4 retire $10 \log_{10}(4) \approx 6$ dB de bruit, donc le SNR gagne environ 6 dB. On ne peut pas descendre sous la bande occupée par le signal utile lui-même : on filtrerait alors une partie de l'information (et le débit possible diminue avec la bande).
 
 ---
 
@@ -667,6 +709,34 @@ Deux émetteurs radio proches émettent respectivement à $f_1 = 100{,}000$ kHz 
 2) En déduire la période du battement.
 3) Pourquoi ce phénomène est-il un problème pratique en télécommunications (deux canaux trop proches en fréquence) ? Donner une conséquence concrète.
 
+**Exercice 3.3 : Capteur à ultrasons et effet Doppler**
+
+Un capteur d'aide au stationnement émet des ultrasons à 40 kHz ; on prend $c = 340$ m/s dans l'air à 15 °C.
+
+1) Calculer la longueur d'onde des ultrasons émis.
+2) L'écho revient 5,0 ms après l'émission. À quelle distance se trouve l'obstacle ?
+3) Par une journée à 30 °C, la célérité vaut 349 m/s, mais le calculateur utilise toujours 340 m/s. Quelle est la distance réelle pour le même écho de 5,0 ms ? Quelle erreur commet le capteur ?
+4) Une sirène de fréquence $f_S = 440$ Hz s'approche d'un piéton immobile à 90 km/h. Calculer le décalage Doppler et la fréquence perçue. Que perçoit le piéton une fois le véhicule passé (même vitesse, source qui s'éloigne) ?
+
+**Exercice 3.4 : Onde électromagnétique d'une passerelle LoRa**
+
+Une passerelle LoRa émet à 868 MHz.
+
+1) Calculer la longueur d'onde dans le vide, puis la longueur d'une antenne quart d'onde.
+2) À quelques mètres de l'antenne, on mesure un champ électrique efficace $E = 0{,}50$ V/m. Calculer le champ magnétique $B$ et la densité surfacique de puissance $p$ ($Z_0 \approx 377$ Ω).
+3) L'onde traverse un isolant d'indice $n = 1{,}5$. Calculer sa célérité et sa longueur d'onde dans ce matériau. Sa fréquence change-t-elle ?
+4) Bilan de liaison : émetteur +14 dBm, câble −1 dB, deux antennes de +2 dBi, atténuation en espace libre de 120 dB. Calculer la puissance reçue. La sensibilité du récepteur est de −120 dBm : la liaison fonctionne-t-elle, et avec quelle marge ?
+
+**Exercice 3.5 : Diagnostic d'un câble coaxial au réflectomètre**
+
+Un câble coaxial d'impédance caractéristique $Z_C = 50$ Ω, de longueur $l = 40$ m, a un coefficient de vélocité $k = 0{,}66$.
+
+1) Calculer la célérité des signaux dans le câble, puis le retard de propagation d'une impulsion sur toute sa longueur.
+2) Sur un autre tronçon du même câble, un réflectomètre reçoit un écho 300 ns après l'impulsion. À quelle distance se trouve le défaut ?
+3) L'écho a le même signe que l'impulsion et presque la même amplitude. Quelle est la nature du défaut ? Qu'aurait indiqué un écho de signe opposé ?
+4) Le câble de 40 m est finalement fermé sur une charge de 75 Ω. Calculer le coefficient de réflexion et le TOS. Commenter.
+5) On mesure 2,0 V en entrée et 1,6 V en sortie de ligne (amplitudes maximales). Calculer l'atténuation linéique en dB/m, puis en dB/100 m.
+
 <a id="sec-3-3-devoir-maison-electromagnetisme"></a>
 
 ### 3.3 Devoir maison : électromagnétisme
@@ -685,6 +755,25 @@ Deux émetteurs radio proches émettent respectivement à $f_1 = 100{,}000$ kHz 
 1) $f_{bat} = |100{,}003 - 100{,}000|$ kHz $= 3$ Hz.
 2) $T_{bat} = \dfrac{1}{f_{bat}} \approx 0{,}33$ s.
 3) Deux porteuses trop proches créent une interférence audible/mesurable (battement, brouillage) : c'est pourquoi les canaux radio sont espacés d'un écart minimal normalisé (canalisation) pour éviter le recouvrement spectral.
+
+**Exercice 3.3.**
+1) $\lambda = \dfrac{c}{f} = \dfrac{340}{40 \times 10^{3}} = 8{,}5$ mm.
+2) L'onde fait l'aller-retour : $d = \dfrac{c \times t}{2} = \dfrac{340 \times 5{,}0 \times 10^{-3}}{2} = 0{,}85$ m.
+3) $d_{réelle} = \dfrac{349 \times 5{,}0 \times 10^{-3}}{2} \approx 0{,}87$ m : le capteur annonce 0,85 m, soit une erreur d'environ 2 cm (≈ 2,6 %). D'où la compensation en température des capteurs précis.
+4) $v_S = 90$ km/h $= 25$ m/s. $\Delta f = 440 \times \dfrac{25}{340 - 25} \approx +34{,}9$ Hz, soit $f_R \approx 475$ Hz (plus aigu). Source qui s'éloigne ($v_S = -25$ m/s) : $\Delta f = 440 \times \dfrac{-25}{340 + 25} \approx -30{,}1$ Hz, soit $f_R \approx 410$ Hz (plus grave).
+
+**Exercice 3.4.**
+1) $\lambda = \dfrac{3 \times 10^{8}}{868 \times 10^{6}} \approx 0{,}346$ m ≈ 35 cm ; antenne quart d'onde : $\lambda/4 \approx 8{,}6$ cm.
+2) $B = \dfrac{E}{c} = \dfrac{0{,}50}{3 \times 10^{8}} \approx 1{,}7 \times 10^{-9}$ T. $p = \dfrac{E^2}{Z_0} = \dfrac{0{,}25}{377} \approx 6{,}6 \times 10^{-4}$ W/m² (0,66 mW/m²).
+3) $c = \dfrac{c_0}{n} = 2{,}0 \times 10^{8}$ m/s ; $\lambda = \dfrac{c}{f} \approx 0{,}23$ m. La fréquence ne change pas : elle est fixée par la source.
+4) $P_r = 14 - 1 + 2 - 120 + 2 = -103$ dBm. $-103$ dBm $> -120$ dBm : la liaison fonctionne avec une marge de 17 dB.
+
+**Exercice 3.5.**
+1) $c = k \times c_0 = 0{,}66 \times 3 \times 10^{8} = 1{,}98 \times 10^{8}$ m/s ; $\Delta t = \dfrac{l}{c} = \dfrac{40}{1{,}98 \times 10^{8}} \approx 202$ ns.
+2) L'écho fait l'aller-retour : $d = \dfrac{c \times t}{2} = \dfrac{1{,}98 \times 10^{8} \times 300 \times 10^{-9}}{2} \approx 29{,}7$ m.
+3) Écho de même signe et d'amplitude presque égale : $\rho \approx +1$, la ligne est **ouverte** (câble coupé). Un écho de signe opposé ($\rho \approx -1$) aurait indiqué un **court-circuit**.
+4) $\rho = \dfrac{75 - 50}{75 + 50} = 0{,}2$ ; $TOS = \dfrac{1 + 0{,}2}{1 - 0{,}2} = 1{,}5$. Désadaptation modérée : 4 % de la puissance ($\rho^2$) est réfléchie. On évite de mélanger câbles 50 Ω et équipements 75 Ω.
+5) $A_l = \dfrac{20}{40} \times \log_{10}\!\left(\dfrac{2{,}0}{1{,}6}\right) \approx 0{,}048$ dB/m, soit environ 4,8 dB/100 m.
 
 **Devoir maison.**
 1. $\lambda = \dfrac{c}{f} = \dfrac{3 \times 10^8}{433 \times 10^6} \approx 0{,}693$ m $\approx 69$ cm.

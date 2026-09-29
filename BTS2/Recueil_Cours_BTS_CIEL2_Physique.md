@@ -676,7 +676,7 @@ $$\nu = \dfrac{c_0}{\lambda} = \dfrac{\Delta E}{h} \tag{13}$$
 - *Fidélité* : capacité à donner des valeurs proches les unes des autres lors de mesures répétées (dispersion faible).
 
 <p align="center">
-<img src="figures/cours/figure_20_justesse_vs_fidelite.png" alt="Figure 20 : Justesse vs fidélité"/>
+<img src="figures/cours/figure_20_justesse_vs_fidelite.svg" alt="Figure 20 : Justesse vs fidélité"/>
 </p>
 
 <p align="center"><em>Figure 20 : Justesse vs fidélité.</em></p>
@@ -686,7 +686,7 @@ $$\nu = \dfrac{c_0}{\lambda} = \dfrac{\Delta E}{h} \tag{13}$$
 - *Erreur aléatoire* : fluctuation imprévisible d'une mesure à l'autre : se réduit statistiquement en répétant les mesures.
 
 <p align="center">
-<img src="figures/cours/figure_21_erreur_systematique_vs_erreur_aleatoire.png" alt="Figure 21 : Erreur systématique vs erreur aléatoire"/>
+<img src="figures/cours/figure_21_erreur_systematique_vs_erreur_aleatoire.svg" alt="Figure 21 : Erreur systématique vs erreur aléatoire"/>
 </p>
 
 <p align="center"><em>Figure 21 : Erreur systématique vs erreur aléatoire.</em></p>
@@ -711,7 +711,7 @@ $$u_A = \dfrac{s}{\sqrt{n}} \tag{14}$$
 x̄ = 220 Ω. s ≈ 1,58 Ω. u_A = 1,58/√5 ≈ 0,71 Ω.
 
 <p align="center">
-<img src="figures/cours/figure_23_distribution_des_mesures_repetees_histogramme.png" alt="Figure 23 : Distribution des mesures répétées (histogramme)"/>
+<img src="figures/cours/figure_23_distribution_des_mesures_repetees_histogramme.svg" alt="Figure 23 : Distribution des mesures répétées (histogramme)"/>
 </p>
 
 <p align="center"><em>Figure 23 : Distribution des mesures répétées (histogramme).</em></p>
@@ -758,7 +758,7 @@ U = R×I = 2,64 V ⇒ u(U) ≈ 0,045 V.
 - Compatibilité avec une valeur de référence x_réf : le résultat est **compatible** si |x̄ − x_réf| ≤ U(x).
 
 <p align="center">
-<img src="figures/cours/figure_22_intervalle_de_confiance_sur_un_axe_gradue.png" alt="Figure 22 : Intervalle de confiance sur un axe gradué"/>
+<img src="figures/cours/figure_22_intervalle_de_confiance_sur_un_axe_gradue.svg" alt="Figure 22 : Intervalle de confiance sur un axe gradué"/>
 </p>
 
 <p align="center"><em>Figure 22 : Intervalle de confiance sur un axe gradué.</em></p>
@@ -789,7 +789,7 @@ $$U_{mesurée} = (2{,}64 \pm 0{,}09)\ \text{V} \tag{18}$$
 Tout signal réel est affecté d'une fluctuation aléatoire appelée bruit : de valeur moyenne nulle mais de valeur efficace B = √⟨b²(t)⟩ non nulle. Il peut être **interne** (composants électroniques) ou **externe** (perturbations électromagnétiques captées par un câble ou une antenne).
 
 <p align="center">
-<img src="figures/cours/figure_24_signal_bruite_vs_signal_propre.png" alt="Figure 24 : Signal bruité vs signal propre"/>
+<img src="figures/cours/figure_24_signal_bruite_vs_signal_propre.svg" alt="Figure 24 : Signal bruité vs signal propre"/>
 </p>
 
 <p align="center"><em>Figure 24 : Signal bruité vs signal propre.</em></p>
@@ -803,7 +803,7 @@ Le bruit étant aléatoire, on le caractérise par la répartition de sa puissan
 $$P_{(dBm)} = DSP + 10 \times \log_{10}(\Delta f) \tag{19}$$
 
 <p align="center">
-<img src="figures/cours/figure_25_densite_spectrale_de_puissance_dsp_d_un_bruit.png" alt="Figure 25 : Densité spectrale de puissance (DSP) d'un bruit"/>
+<img src="figures/cours/figure_25_densite_spectrale_de_puissance_dsp_d_un_bruit.svg" alt="Figure 25 : Densité spectrale de puissance (DSP) d'un bruit"/>
 </p>
 
 <p align="center"><em>Figure 25 : Densité spectrale de puissance (DSP) d'un bruit.</em></p>
@@ -819,7 +819,7 @@ $$P_{(dBm)} = DSP + 10 \times \log_{10}(\Delta f) \tag{19}$$
 | Bruit de quantification | Erreur de codage lors de la conversion analogique-numérique | Voir Chapitre 5, §5.6 |
 
 <p align="center">
-<img src="figures/cours/figure_66_bruit_thermique_dans_une_resistance.png" alt="Figure 66 : Bruit thermique dans une résistance"/>
+<img src="figures/cours/figure_66_bruit_thermique_dans_une_resistance.svg" alt="Figure 66 : Bruit thermique dans une résistance"/>
 </p>
 
 <p align="center"><em>Figure 66 : Bruit thermique dans une résistance.</em></p>
@@ -835,7 +835,7 @@ $$SNR_{(dB)} = 10 \times \log_{10}\!\left(\dfrac{P_{signal}}{P_{bruit}}\right) =
 où S et B sont les valeurs efficaces du signal et du bruit. Plus le SNR est grand, plus le signal est de bonne qualité (moins dégradé par le bruit).
 
 <p align="center">
-<img src="figures/cours/figure_26_snr_signal_utile_et_niveau_de_bruit.png" alt="Figure 26 : SNR : signal utile et niveau de bruit"/>
+<img src="figures/cours/figure_26_snr_signal_utile_et_niveau_de_bruit.svg" alt="Figure 26 : SNR : signal utile et niveau de bruit"/>
 </p>
 
 <p align="center"><em>Figure 26 : SNR : signal utile et niveau de bruit.</em></p>
@@ -856,7 +856,7 @@ où S et B sont les valeurs efficaces du signal et du bruit. Plus le SNR est gra
 - On distingue les ondes **transversales** (la perturbation est perpendiculaire à la direction de propagation, ex. onde sur une corde) des ondes **longitudinales** (la perturbation est parallèle à la direction de propagation, ex. onde sonore).
 
 <p align="center">
-<img src="figures/cours/figure_27_onde_transversale_vs_onde_longitudinale.png" alt="Figure 27 : Onde transversale vs onde longitudinale"/>
+<img src="figures/cours/figure_27_onde_transversale_vs_onde_longitudinale.svg" alt="Figure 27 : Onde transversale vs onde longitudinale"/>
 </p>
 
 <p align="center"><em>Figure 27 : Onde transversale vs onde longitudinale.</em></p>
@@ -864,7 +864,7 @@ où S et B sont les valeurs efficaces du signal et du bruit. Plus le SNR est gra
 - Un **front d'onde** est une surface regroupant tous les points ayant le même temps de parcours depuis la source. On distingue les ondes **planes** (fronts d'onde plans, loin de la source) des ondes **sphériques** (fronts d'onde sphériques, près d'une source ponctuelle).
 
 <p align="center">
-<img src="figures/cours/figure_28_front_d_onde_plan_vs_front_d_onde_spherique.png" alt="Figure 28 : Front d'onde plan vs front d'onde sphérique"/>
+<img src="figures/cours/figure_28_front_d_onde_plan_vs_front_d_onde_spherique.svg" alt="Figure 28 : Front d'onde plan vs front d'onde sphérique"/>
 </p>
 
 <p align="center"><em>Figure 28 : Front d'onde plan vs front d'onde sphérique.</em></p>
@@ -884,7 +884,7 @@ Pour une onde sinusoïdale d'amplitude A et de période T se propageant vers les
 $$y(x,t) = A \sin\!\left[\dfrac{2\pi}{T}\left(t - \dfrac{x}{c}\right)\right] \tag{21}$$
 
 <p align="center">
-<img src="figures/cours/figure_29_onde_progressive_sinusoidale_y_x_t.png" alt="Figure 29 : Onde progressive sinusoïdale y(x,t)"/>
+<img src="figures/cours/figure_29_onde_progressive_sinusoidale_y_x_t.svg" alt="Figure 29 : Onde progressive sinusoïdale y(x,t)"/>
 </p>
 
 <p align="center"><em>Figure 29 : Onde progressive sinusoïdale y(x,t).</em></p>
@@ -896,7 +896,7 @@ $$y(x,t) = A \sin\!\left[\dfrac{2\pi}{T}\left(t - \dfrac{x}{c}\right)\right] \ta
 $$\lambda = c \cdot T = \dfrac{c}{f} \tag{22}$$
 
 <p align="center">
-<img src="figures/cours/figure_30_longueur_d_onde_sur_une_representation_spatiale.png" alt="Figure 30 : Longueur d'onde sur une représentation spatiale"/>
+<img src="figures/cours/figure_30_longueur_d_onde_sur_une_representation_spatiale.svg" alt="Figure 30 : Longueur d'onde sur une représentation spatiale"/>
 </p>
 
 <p align="center"><em>Figure 30 : Longueur d'onde sur une représentation spatiale.</em></p>
@@ -916,7 +916,7 @@ $$\lambda = c \cdot T = \dfrac{c}{f} \tag{22}$$
 - Amplitude : A = (nombre de divisions) × (sensibilité verticale en V/div)
 
 <p align="center">
-<img src="figures/cours/figure_31_lecture_d_une_periode_a_l_oscilloscope.png" alt="Figure 31 : Lecture d'une période à l'oscilloscope"/>
+<img src="figures/cours/figure_31_lecture_d_une_periode_a_l_oscilloscope.svg" alt="Figure 31 : Lecture d'une période à l'oscilloscope"/>
 </p>
 
 <p align="center"><em>Figure 31 : Lecture d'une période à l'oscilloscope.</em></p>
@@ -934,7 +934,7 @@ T = 4 × 0,5.10⁻³ = 2.10⁻³ s ⇒ f = 1/T = 500 Hz.
 φ = 360 × 0,5/2 = 90° (quadrature de phase).
 
 <p align="center">
-<img src="figures/cours/figure_32_dephasage_entre_deux_signaux.png" alt="Figure 32 : Déphasage entre deux signaux"/>
+<img src="figures/cours/figure_32_dephasage_entre_deux_signaux.svg" alt="Figure 32 : Déphasage entre deux signaux"/>
 </p>
 
 <p align="center"><em>Figure 32 : Déphasage entre deux signaux.</em></p>
@@ -958,7 +958,7 @@ $$\Delta f = f_R - f_S = f_S \times \dfrac{v_S}{c - v_S} \tag{23}$$
   (v_S compté positivement si la source se rapproche). Cet effet est exploité par les radars de mesure de vitesse.
 
 <p align="center">
-<img src="figures/cours/figure_33_effet_doppler.png" alt="Figure 33 : Effet Doppler"/>
+<img src="figures/cours/figure_33_effet_doppler.svg" alt="Figure 33 : Effet Doppler"/>
 </p>
 
 <p align="center"><em>Figure 33 : Effet Doppler.</em></p>
@@ -972,7 +972,7 @@ $$\Delta f = f_R - f_S = f_S \times \dfrac{v_S}{c - v_S} \tag{23}$$
 - Une onde électromagnétique (OEM) est la propagation couplée d'un champ électrique **E** et d'un champ magnétique **B**, perpendiculaires entre eux et à la direction de propagation (onde transversale). Elle ne nécessite **aucun milieu matériel** pour se propager (elle se propage dans le vide).
 
 <p align="center">
-<img src="figures/cours/figure_34_structure_d_une_onde_electromagnetique.png" alt="Figure 34 : Structure d'une onde électromagnétique"/>
+<img src="figures/cours/figure_34_structure_d_une_onde_electromagnetique.svg" alt="Figure 34 : Structure d'une onde électromagnétique"/>
 </p>
 
 <p align="center"><em>Figure 34 : Structure d'une onde électromagnétique.</em></p>
@@ -993,7 +993,7 @@ $$\dfrac{E}{B} = c \tag{24}$$
 ### 3.6 Classification du spectre électromagnétique
 
 <p align="center">
-<img src="figures/cours/figure_35_spectre_electromagnetique_complet.png" alt="Figure 35 : Spectre électromagnétique complet"/>
+<img src="figures/cours/figure_35_spectre_electromagnetique_complet.svg" alt="Figure 35 : Spectre électromagnétique complet"/>
 </p>
 
 <p align="center"><em>Figure 35 : Spectre électromagnétique complet.</em></p>
@@ -1015,7 +1015,7 @@ Le classement se fait uniquement selon la fréquence (ou la longueur d'onde), du
 - **Polarisation elliptique (ou circulaire) :** la direction du champ électrique tourne au cours de la propagation.
 
 <p align="center">
-<img src="figures/cours/figure_36_polarisation_lineaire_vs_elliptique.png" alt="Figure 36 : Polarisation linéaire vs elliptique"/>
+<img src="figures/cours/figure_36_polarisation_lineaire_vs_elliptique.svg" alt="Figure 36 : Polarisation linéaire vs elliptique"/>
 </p>
 
 <p align="center"><em>Figure 36 : Polarisation linéaire vs elliptique.</em></p>
@@ -1031,7 +1031,7 @@ Le classement se fait uniquement selon la fréquence (ou la longueur d'onde), du
 - Une **antenne** convertit un signal électrique en onde rayonnée (émission) ou inversement (réception). Plus une antenne est adaptée à la fréquence utilisée, plus le rayonnement (ou la réception) est efficace.
 
 <p align="center">
-<img src="figures/cours/figure_37_principe_d_une_antenne_emettrice_receptrice.png" alt="Figure 37 : Principe d'une antenne émettrice/réceptrice"/>
+<img src="figures/cours/figure_37_principe_d_une_antenne_emettrice_receptrice.svg" alt="Figure 37 : Principe d'une antenne émettrice/réceptrice"/>
 </p>
 
 <p align="center"><em>Figure 37 : Principe d'une antenne émettrice/réceptrice.</em></p>
@@ -1039,7 +1039,7 @@ Le classement se fait uniquement selon la fréquence (ou la longueur d'onde), du
 - Une onde qui rencontre un obstacle ou un changement de milieu peut être **réfléchie** (renvoyée) et/ou **réfractée** (déviée en changeant de milieu) : deux phénomènes qui expliquent par exemple les zones d'ombre Wi-Fi dans un bâtiment.
 
 <p align="center">
-<img src="figures/cours/figure_38_reflexion_et_refraction_d_une_onde_sur_un_obstacle.png" alt="Figure 38 : Réflexion et réfraction d'une onde sur un obstacle"/>
+<img src="figures/cours/figure_38_reflexion_et_refraction_d_une_onde_sur_un_obstacle.svg" alt="Figure 38 : Réflexion et réfraction d'une onde sur un obstacle"/>
 </p>
 
 <p align="center"><em>Figure 38 : Réflexion et réfraction d'une onde sur un obstacle.</em></p>
@@ -1061,7 +1061,7 @@ $$E = \dfrac{\alpha \sqrt{P_0}}{d} \tag{25}$$
 (α étant une constante liée à l'antenne). Ce résultat qualitatif rejoint le bilan de liaison en dB/dBm déjà établi au Chapitre 1, §1.3 : plus la distance augmente, plus le niveau reçu diminue : d'où la nécessité de calculer précisément l'atténuation en espace libre (formule de Friis, voir exercices).
 
 <p align="center">
-<img src="figures/cours/figure_39_bilan_de_liaison_hertzienne.png" alt="Figure 39 : Bilan de liaison hertzienne"/>
+<img src="figures/cours/figure_39_bilan_de_liaison_hertzienne.svg" alt="Figure 39 : Bilan de liaison hertzienne"/>
 </p>
 
 <p align="center"><em>Figure 39 : Bilan de liaison hertzienne.</em></p>
@@ -1076,7 +1076,7 @@ $$E = \dfrac{\alpha \sqrt{P_0}}{d} \tag{25}$$
 - Une ligne se modélise, par tronçon élémentaire, par quatre paramètres linéiques (résistance, inductance, capacité, conductance par unité de longueur). Aux fréquences habituelles, les effets résistifs sont souvent négligeables devant les effets capacitifs et inductifs : on parle alors de **ligne sans pertes**.
 
 <p align="center">
-<img src="figures/cours/figure_40_modele_electrique_d_un_troncon_de_ligne_de_transmission.png" alt="Figure 40 : Modèle électrique d'un tronçon de ligne de transmission"/>
+<img src="figures/cours/figure_40_modele_electrique_d_un_troncon_de_ligne_de_transmission.svg" alt="Figure 40 : Modèle électrique d'un tronçon de ligne de transmission"/>
 </p>
 
 <p align="center"><em>Figure 40 : Modèle électrique d'un tronçon de ligne de transmission.</em></p>
@@ -1092,7 +1092,7 @@ $$E = \dfrac{\alpha \sqrt{P_0}}{d} \tag{25}$$
 - Le long d'une ligne de longueur l, un signal met un temps $\Delta t = \dfrac{l}{c}$ pour atteindre l'autre extrémité (retard de propagation).
 
 <p align="center">
-<img src="figures/cours/figure_42_oscillogramme_d_un_regime_impulsionnel.png" alt="Figure 42 : Oscillogramme d'un régime impulsionnel"/>
+<img src="figures/cours/figure_42_oscillogramme_d_un_regime_impulsionnel.svg" alt="Figure 42 : Oscillogramme d'un régime impulsionnel"/>
 </p>
 
 <p align="center"><em>Figure 42 : Oscillogramme d'un régime impulsionnel.</em></p>
@@ -1100,7 +1100,7 @@ $$E = \dfrac{\alpha \sqrt{P_0}}{d} \tag{25}$$
 - Si la ligne est fermée sur une résistance de charge **égale** à son impédance caractéristique (R_CH = Z_C), toute la puissance envoyée par le générateur est transmise à la charge : on dit que la **ligne est adaptée**, et une seule onde progressive circule (du générateur vers la charge).
 
 <p align="center">
-<img src="figures/cours/figure_43_ligne_adaptee_vs_ligne_non_adaptee.png" alt="Figure 43 : Ligne adaptée vs ligne non adaptée"/>
+<img src="figures/cours/figure_43_ligne_adaptee_vs_ligne_non_adaptee.svg" alt="Figure 43 : Ligne adaptée vs ligne non adaptée"/>
 </p>
 
 <p align="center"><em>Figure 43 : Ligne adaptée vs ligne non adaptée.</em></p>
@@ -1108,7 +1108,7 @@ $$E = \dfrac{\alpha \sqrt{P_0}}{d} \tag{25}$$
 - Si la ligne n'est **pas adaptée** (R_CH ≠ Z_C), une partie de l'onde incidente est **réfléchie** vers la source. Le **coefficient de réflexion en tension** vaut :
 
 <p align="center">
-<img src="figures/cours/figure_41_onde_incidente_et_onde_reflechie_sur_une_ligne_non_adaptee.png" alt="Figure 41 : Onde incidente et onde réfléchie sur une ligne non adaptée"/>
+<img src="figures/cours/figure_41_onde_incidente_et_onde_reflechie_sur_une_ligne_non_adaptee.svg" alt="Figure 41 : Onde incidente et onde réfléchie sur une ligne non adaptée"/>
 </p>
 
 <p align="center"><em>Figure 41 : Onde incidente et onde réfléchie sur une ligne non adaptée.</em></p>
@@ -1128,7 +1128,7 @@ $$E = \dfrac{\alpha \sqrt{P_0}}{d} \tag{25}$$
 - En régime sinusoïdal, une ligne non adaptée présente un régime d'**ondes stationnaires** : l'amplitude de la tension varie le long de la ligne entre une valeur maximale U_MAX et une valeur minimale U_MIN. On caractérise la qualité de la transmission par le **taux d'ondes stationnaires** :
 
 <p align="center">
-<img src="figures/cours/figure_44_onde_stationnaire_sur_une_ligne_non_adaptee.png" alt="Figure 44 : Onde stationnaire sur une ligne non adaptée"/>
+<img src="figures/cours/figure_44_onde_stationnaire_sur_une_ligne_non_adaptee.svg" alt="Figure 44 : Onde stationnaire sur une ligne non adaptée"/>
 </p>
 
 <p align="center"><em>Figure 44 : Onde stationnaire sur une ligne non adaptée.</em></p>
@@ -1140,7 +1140,7 @@ $$TOS = \dfrac{U_{MAX}}{U_{MIN}} = \dfrac{1 + |\rho|}{1 - |\rho|} \tag{26}$$
   Plus le TOS est proche de 1 (ligne bien adaptée), meilleure est la qualité de transmission. Un TOS élevé indique une désadaptation importante, avec risque d'endommager le générateur (puissance réfléchie).
 
 <p align="center">
-<img src="figures/cours/figure_45_abaque_courbe_tos_en_fonction_de.png" alt="Figure 45 : Abaque / courbe TOS en fonction de ρ"/>
+<img src="figures/cours/figure_45_abaque_courbe_tos_en_fonction_de.svg" alt="Figure 45 : Abaque / courbe TOS en fonction de ρ"/>
 </p>
 
 <p align="center"><em>Figure 45 : Abaque / courbe TOS en fonction de ρ.</em></p>
