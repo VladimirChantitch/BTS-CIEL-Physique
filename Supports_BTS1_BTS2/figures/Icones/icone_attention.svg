@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Icône attention : triangle d'avertissement -->
+  <path d="M32 8 L58 54 H6 Z" fill="#d9480f" stroke="#d9480f" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="29.5" y="24" width="5" height="17" rx="2.5" fill="#f7f5ef"/>
+  <circle cx="32" cy="47" r="3" fill="#f7f5ef"/>
+</svg>

@@ -1,1 +1,9 @@
 Logiciels/Falstad/circuitjs1.exe
+
+Outils/pdf/node_modules/
+.~*.html
+
+Outils/slides/node_modules/
+
+# Notes des etudiants (donnees personnelles : jamais versionnees)
+Prof/Notes/

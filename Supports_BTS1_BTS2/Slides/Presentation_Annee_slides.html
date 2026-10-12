@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTS CIEL · Physique · Présentation de l'année</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400..700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;height:100%;background:#0b0f14;overflow:hidden;font-family:Inter,Helvetica,Arial,sans-serif}
+  #stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+  .slide{position:absolute;width:1920px;height:1080px;transform-origin:center center;display:none;box-shadow:0 0 60px rgba(0,0,0,.6)}
+  .slide.active{display:block}
+  .slide section{position:relative;width:1920px;height:1080px;box-sizing:border-box;overflow:hidden}
+  .slide section *{box-sizing:border-box;margin:0}
+  .slide h1,.slide h2,.slide h3,.slide p{margin:0}
+  .slide ul,.slide ol{margin:0;padding-left:1.2em}
+  .slide table{border-collapse:collapse}
+  .slide th,.slide td{padding:10px 16px;border-bottom:1px solid rgba(0,0,0,.15)}
+  .slide aside{display:none}
+  .slide img{display:block}
+  #hud{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:8px 16px;color:#9aa3ad;font-size:13px;pointer-events:none}
+  #hud button{pointer-events:auto;background:#1c2530;color:#e6e9ec;border:1px solid #33404d;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:13px;margin-left:6px}
+  #notes{position:fixed;left:16px;right:16px;bottom:44px;background:rgba(20,26,33,.95);color:#e6e9ec;padding:14px 18px;border-radius:10px;font-size:15px;line-height:1.5;display:none;max-height:30vh;overflow:auto}
+  #notes.show{display:block}
+</style>
+</head>
+<body>
+<script type="application/json" id="deck-config">{"footer":{"enabled":true,"template":"Présentation de l'année · {texte} · {n} / {total}","align":"left","size":24,"bottom":64,"side":128,"color":"auto"},"titles":{"title":{"family":"","size":0,"weight":0,"color":""},"subtitle":{"family":"","size":0,"weight":0,"color":""},"eyebrow":{"family":"","size":0,"weight":0,"color":""}}}</script>
+<div id="stage">
+<div class="slide" data-n="1"><section id="cover" data-transition="fade" data-niveau="bts1 bts2" style="background:#17212b; color:#f7f5ef; font-family:Inter, Helvetica, Arial, sans-serif; padding:128px; display:flex; flex-direction:column; justify-content:space-between" data-footer="off">
+  <div style="display:flex; align-items:center; gap:20px">
+    <div style="width:64px; height:12px; background:#d9480f"></div>
+    <p style="font-size:28px; font-weight:500; letter-spacing:4px; color:#b9b4a7">BTS CIEL · PHYSIQUE</p>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:32px">
+    <p style="font-size:40px; color:#d9480f; font-weight:500">Année 2026-2027</p>
+    <h1 style="font-family:Fraunces, Georgia, serif; font-size:120px; font-weight:400; line-height:1.02; width:1600px">La physique en BTS CIEL</h1>
+    <p style="font-size:34px; line-height:1.4; color:#b9b4a7; width:1300px">Ce qu'on va étudier, comment on va travailler, et comment vous serez évalués.</p>
+  </div>
+  <p style="font-size:26px; color:#b9b4a7">Option A : Informatique et réseaux</p>
+  <aside>Se présenter. Faire un tour de table rapide : bac d'origine, ce qu'ils attendent de la physique.</aside>
+</section></div>
+<div class="slide" data-n="2"><section id="pourquoi" data-transition="fade" data-niveau="bts1 bts2" style="background:#f7f5ef; color:#17212b; font-family:Inter, Helvetica, Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px" data-footer-text="Pourquoi la physique">
+  <p style="font-size:26px; font-weight:600; letter-spacing:3px; color:#d9480f">POURQUOI DE LA PHYSIQUE EN CIEL ?</p>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-size:64px; font-weight:500; line-height:1.1">Sous chaque réseau, il y a un signal physique</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; flex:1">
+    <div style="display:flex; flex-direction:column; gap:16px; justify-content:center; background:#fffdf9; padding:28px 40px; border:2px solid #dcd8cc; border-radius:16px">
+      <h3 style="font-size:42px; font-weight:600">Wi-Fi, 4G, Bluetooth</h3>
+      <p style="font-size:30px; line-height:1.4; color:#5a6170">Ondes électromagnétiques, antennes, portée, débit.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px; justify-content:center; background:#fffdf9; padding:28px 40px; border:2px solid #dcd8cc; border-radius:16px">
+      <h3 style="font-size:42px; font-weight:600">Câble et fibre optique</h3>
+      <p style="font-size:30px; line-height:1.4; color:#5a6170">Propagation guidée, atténuation, bande passante.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px; justify-content:center; background:#fffdf9; padding:28px 40px; border:2px solid #dcd8cc; border-radius:16px">
+      <h3 style="font-size:42px; font-weight:600">Capteurs et objets connectés</h3>
+      <p style="font-size:30px; line-height:1.4; color:#5a6170">Chaîne de mesure, conversion analogique-numérique.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px; justify-content:center; background:#fffdf9; padding:28px 40px; border:2px solid #dcd8cc; border-radius:16px">
+      <h3 style="font-size:42px; font-weight:600">Cybersécurité</h3>
+      <p style="font-size:30px; line-height:1.4; color:#5a6170">Fuites d'information par rayonnement, fiabilité d'une mesure.</p>
+    </div>
+  </div>
+  <p class="sd-footer" style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#5a6170">Présentation de l'année · Pourquoi la physique · 2 / 8</p><aside>Demander à la classe un exemple pour chaque case avant de dévoiler. Le message : la physique explique pourquoi un réseau marche ou tombe en panne.</aside>
+</section></div>
+<div class="slide" data-n="3"><section id="programme" data-transition="fade" data-niveau="bts1 bts2" style="background:#f7f5ef; color:#17212b; font-family:Inter, Helvetica, Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px" data-footer-text="Programme">
+  <p style="font-size:26px; font-weight:600; letter-spacing:3px; color:#d9480f">LE PROGRAMME</p>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-size:64px; font-weight:500; line-height:1.1">Les chapitres du cours</h2>
+  <div style="display:flex; gap:40px">
+    <div style="flex:1; display:flex; flex-direction:column">
+      <p style="font-size:30px; line-height:1.4; padding:18px 0px; border-bottom:2px solid #dcd8cc"><b>1</b> Électricité et optoélectronique</p>
+      <p style="font-size:30px; line-height:1.4; padding:18px 0px; border-bottom:2px solid #dcd8cc"><b>2</b> Mesures et incertitudes</p>
+      <p style="font-size:30px; line-height:1.4; padding:18px 0px; border-bottom:2px solid #dcd8cc"><b>3</b> Ondes et propagation</p>
+      <p style="font-size:30px; line-height:1.4; padding:18px 0px; border-bottom:2px solid #dcd8cc"><b>4</b> Systèmes bouclés et asservissement</p>
+      <p style="font-size:30px; line-height:1.4; padding:18px 0px"><b>5</b> Traitement du signal</p>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column">
+      <p style="font-size:30px; line-height:1.4; padding:18px 0px; border-bottom:2px solid #dcd8cc"><b>6</b> Optique et fibre optique</p>
+      <p style="font-size:30px; line-height:1.4; padding:18px 0px; border-bottom:2px solid #dcd8cc"><b>7</b> Chaîne de mesure et chaîne d'action</p>
+      <p style="font-size:30px; line-height:1.4; padding:18px 0px; border-bottom:2px solid #dcd8cc"><b>8</b> Modulation et transmission</p>
+      <p style="font-size:30px; line-height:1.4; padding:18px 0px"><b>9</b> Préparation à l'épreuve</p>
+    </div>
+  </div>
+  <p style="font-size:26px; line-height:1.4; color:#5a6170">Chaque partie du cours est marquée <b>BTS1</b>, <b>BTS2</b> ou <b>BTS1 · BTS2</b> : en première année on découvre, en deuxième année on approfondit.</p>
+  <p class="sd-footer" style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#5a6170">Présentation de l'année · Programme · 3 / 8</p><aside>Ne pas détailler chaque chapitre : montrer que tout s'enchaîne et que le même poly sert sur les deux ans.</aside>
+</section></div>
+<div class="slide" data-n="4"><section id="annee-bts1" data-transition="fade" data-niveau="bts1" style="background:#f7f5ef; color:#17212b; font-family:Inter, Helvetica, Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px" data-footer-text="Votre année">
+  <p style="font-size:26px; font-weight:600; letter-spacing:3px; color:#d9480f">VOTRE PREMIÈRE ANNÉE</p>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-size:64px; font-weight:500; line-height:1.1">Poser les bases de chaque thème</h2>
+  <div style="display:flex; gap:40px; flex:1">
+    <div style="flex:1; display:flex; flex-direction:column; gap:20px">
+      <div style="display:flex; flex-direction:column; gap:8px; padding:24px 32px; border-left:8px solid #d9480f">
+        <h3 style="font-size:32px; font-weight:600">Premier semestre</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Électricité, mesures et incertitudes, ondes, semi-conducteurs et optoélectronique, lignes de transmission.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px; padding:24px 32px; border-left:8px solid #1f6f8b">
+        <h3 style="font-size:32px; font-weight:600">Second semestre</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Antennes et modulation, systèmes bouclés, signaux et filtres, décibels, conversion analogique-numérique, fibre optique.</p>
+      </div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#17212b; color:#f7f5ef; padding:36px 40px; border-radius:16px">
+      <p style="font-size:24px; letter-spacing:3px; color:#b9b4a7">EN PLUS DU MODULE DE PHYSIQUE</p>
+      <p style="font-size:30px; line-height:1.4">Des séances en co-enseignement avec les professeurs de réseaux et de cybersécurité : la physique appliquée directement à vos systèmes.</p>
+    </div>
+  </div>
+  <p class="sd-footer" style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#5a6170">Présentation de l'année · Votre année · 4 / 8</p><aside>Le calendrier détaillé sera affiché et distribué. Insister : rien n'est hors de portée, on repart des bases du bac.</aside>
+</section></div>
+<div class="slide" data-n="5"><section id="annee-bts2" data-transition="fade" data-niveau="bts2" style="background:#f7f5ef; color:#17212b; font-family:Inter, Helvetica, Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px" data-footer-text="Votre année">
+  <p style="font-size:26px; font-weight:600; letter-spacing:3px; color:#d9480f">VOTRE DEUXIÈME ANNÉE</p>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-size:64px; font-weight:500; line-height:1.1">Approfondir et préparer l'épreuve</h2>
+  <div style="display:flex; gap:40px; flex:1">
+    <div style="flex:1; display:flex; flex-direction:column; gap:20px">
+      <div style="display:flex; flex-direction:column; gap:8px; padding:24px 32px; border-left:8px solid #d9480f">
+        <h3 style="font-size:32px; font-weight:600">On reprend et on va plus loin</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Régime sinusoïdal, asservissement, filtrage, propagation, fibre optique.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px; padding:24px 32px; border-left:8px solid #1f6f8b">
+        <h3 style="font-size:32px; font-weight:600">Entraînement sur annales</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Sujets des sessions précédentes et épreuve blanche en fin d'année.</p>
+      </div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:12px; background:#17212b; color:#f7f5ef; padding:36px 40px; border-radius:16px">
+      <p style="font-size:24px; letter-spacing:3px; color:#b9b4a7">ÉPREUVE E4 (UNITÉ U4, COEFFICIENT 4)</p>
+      <p style="font-size:30px; line-height:1.4">Écrit de 6 h. La partie physique compte pour <b>30 points sur 100</b>, à traiter en <b>1 h 30</b>.</p>
+      <p style="font-size:26px; line-height:1.4; color:#b9b4a7">Analyse de résultats de mesure ou de simulation, exploitation de documents techniques, parfois en anglais.</p>
+    </div>
+  </div>
+  <p class="sd-footer" style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#5a6170">Présentation de l'année · Votre année · 5 / 8</p><aside>Rappeler le poids de la physique dans l'épreuve E4 : 30 % de la note d'une épreuve coefficient 4.</aside>
+</section></div>
+<div class="slide" data-n="6"><section id="travail" data-transition="fade" data-niveau="bts1 bts2" style="background:#f7f5ef; color:#17212b; font-family:Inter, Helvetica, Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px" data-footer-text="Organisation">
+  <p style="font-size:26px; font-weight:600; letter-spacing:3px; color:#d9480f">ORGANISATION</p>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-size:64px; font-weight:500; line-height:1.1">Comment on travaille, comment vous êtes évalués</h2>
+  <div style="display:flex; gap:40px; flex:1">
+    <div style="flex:1; display:flex; flex-direction:column; gap:20px">
+      <div style="display:flex; flex-direction:column; gap:8px; background:#fffdf9; padding:28px 32px; border:2px solid #dcd8cc; border-radius:16px">
+        <h3 style="font-size:32px; font-weight:600">Cours</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Diaporama en séance, tout le détail dans le poly.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px; background:#fffdf9; padding:28px 32px; border:2px solid #dcd8cc; border-radius:16px">
+        <h3 style="font-size:32px; font-weight:600">TD</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Exercices d'application, corrigés dans le recueil.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px; background:#fffdf9; padding:28px 32px; border:2px solid #dcd8cc; border-radius:16px">
+        <h3 style="font-size:32px; font-weight:600">TP</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Sur matériel ou sur simulateur (Falstad), en binôme.</p>
+      </div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:20px">
+      <div style="display:flex; flex-direction:column; gap:8px; padding:24px 32px; border-left:8px solid #d9480f">
+        <h3 style="font-size:32px; font-weight:600">Un QCM à chaque séance</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Court, sur la séance précédente.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px; padding:24px 32px; border-left:8px solid #d9480f">
+        <h3 style="font-size:32px; font-weight:600">Par semestre</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">2 devoirs surveillés et 4 devoirs maison notés.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:12px; background:#17212b; color:#f7f5ef; padding:32px 40px; border-radius:16px">
+        <p style="font-size:24px; letter-spacing:3px; color:#b9b4a7">LA BONNE HABITUDE</p>
+        <p style="font-size:28px; line-height:1.4">Relire la section du poly avant chaque séance.</p>
+      </div>
+    </div>
+  </div>
+  <p class="sd-footer" style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#5a6170">Présentation de l'année · Organisation · 6 / 8</p><aside>Annoncer le premier DM et sa date de rendu.</aside>
+</section></div>
+<div class="slide" data-n="7"><section id="exposes" data-transition="fade" data-niveau="bts1 bts2" style="background:#f7f5ef; color:#17212b; font-family:Inter, Helvetica, Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:40px" data-footer-text="Exposés">
+  <p style="font-size:26px; font-weight:600; letter-spacing:3px; color:#d9480f">EXPOSÉS</p>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-size:64px; font-weight:500; line-height:1.1">Quand la physique fait tomber un réseau</h2>
+  <div style="display:flex; gap:40px; flex:1">
+    <div style="flex:1; display:flex; flex-direction:column; gap:20px">
+      <p style="font-size:28px; line-height:1.4">Un article scientifique ou de vulgarisation, présenté en binôme : <b>un phénomène physique</b> et <b>ses conséquences sur un réseau ou sur la sécurité</b>.</p>
+      <div style="display:flex; flex-direction:column; gap:8px; padding:20px 32px; border-left:8px solid #d9480f">
+        <h3 style="font-size:30px; font-weight:600">1. Présenter l'article</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Auteurs, question posée, phénomène physique avec un schéma et un ordre de grandeur.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:8px; padding:20px 32px; border-left:8px solid #1f6f8b">
+        <h3 style="font-size:30px; font-weight:600">2. Le critiquer</h3>
+        <p style="font-size:26px; line-height:1.4; color:#5a6170">Est-ce exploitable en vrai ? Quel impact ? Quelles contre-mesures ?</p>
+      </div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:20px">
+      <table style="font-size:28px; width:100%; background:#fffdf9; border:2px solid #dcd8cc; border-radius:16px">
+        <tr><th style="text-align:left"></th><th style="text-align:left">BTS1</th><th style="text-align:left">BTS2</th></tr>
+        <tr><td>Durée</td><td>10 min</td><td>15 min</td></tr>
+        <tr><td>Diapositives</td><td>5 minimum</td><td>7 minimum</td></tr>
+        <tr><td>Questions</td><td>5 min</td><td>10 min</td></tr>
+      </table>
+      <div style="display:flex; flex-direction:column; gap:12px; background:#17212b; color:#f7f5ef; padding:28px 36px; border-radius:16px">
+        <p style="font-size:24px; letter-spacing:3px; color:#b9b4a7">EXEMPLES DE SUJETS</p>
+        <p style="font-size:26px; line-height:1.5">Le Li-Fi · Pourquoi le Wi-Fi 5 GHz porte moins loin · Une carte NFC sans pile · Voler une voiture sans clé · Lire un écran à distance</p>
+      </div>
+      <p style="font-size:26px; line-height:1.4; color:#5a6170">44 sujets et la grille d'évaluation : dossier <b>SujetsExposer</b>.</p>
+    </div>
+  </div>
+  <p class="sd-footer" style="position:absolute; left:128px; bottom:64px; font-size:24px; color:#5a6170">Présentation de l'année · Exposés · 7 / 8</p><aside>Montrer la liste des sujets et faire choisir les binômes. Insister sur le schéma personnel et l'ordre de grandeur chiffré : c'est 6 points sur 20.</aside>
+</section></div>
+<div class="slide" data-n="8"><section id="supports" data-transition="fade" data-niveau="bts1 bts2" style="background:#17212b; color:#f7f5ef; font-family:Inter, Helvetica, Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:48px" data-footer-text="Supports">
+  <p style="font-size:26px; font-weight:600; letter-spacing:3px; color:#d9480f">RÉCUPÉRER LES SUPPORTS</p>
+  <h2 style="font-family:Fraunces, Georgia, serif; font-size:72px; font-weight:500; line-height:1.1">Tout est sur GitHub</h2>
+  <p style="font-size:40px; line-height:1.4; font-family:Consolas, monospace; color:#f7f5ef">github.com/VladimirChantitch/BTS-CIEL-Physique</p>
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <p style="font-size:30px; line-height:1.4; color:#b9b4a7">Dossier <b style="color:#f7f5ef">Supports_BTS1_BTS2</b> : cours, TD, TP et diaporamas. Les corrigés et les QCM arrivent dans <b style="color:#f7f5ef">Coffre</b> après correction.</p>
+    <p style="font-size:30px; line-height:1.4; color:#b9b4a7">Le fichier <b style="color:#f7f5ef">Notice</b> explique comment télécharger et mettre à jour.</p>
+  </div>
+  <p class="sd-footer" style="position:absolute; left:128px; bottom:64px; font-size:24px; color:rgba(255,255,255,0.72)">Présentation de l'année · Supports · 8 / 8</p><aside>Faire cloner le dépôt en direct si le temps le permet, ou au moins ouvrir le lien.</aside>
+</section></div>
+</div>
+<div id="notes"></div>
+<div id="hud">
+  <span>← → ou clic : navigation · 1 / 2 / 0 : BTS1 / BTS2 / tout · N : notes · F : plein écran · Présentation de l'année · BTS CIEL</span>
+  <span><button id="mode"></button><span id="counter"></span><button id="prev">◀</button><button id="next">▶</button><button id="fs">Plein écran</button></span>
+</div>
+<script>
+(function(){
+  // Niveaux : chaque <section> porte data-niveau="bts1", "bts2" ou "bts1 bts2" (absent = les deux).
+  // Touches 1 / 2 / 0 : n'afficher que les slides BTS1, que les slides BTS2, ou toutes.
+  var all=Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var notes=document.getElementById('notes'),counter=document.getElementById('counter'),modeLbl=document.getElementById('mode');
+  var mode='0';try{mode=localStorage.getItem('deck-niveau')||'0';}catch(e){}
+  var niveaux=function(el){var s=el.querySelector('section');return ((s&&s.getAttribute('data-niveau'))||'bts1 bts2').split(/\s+/);};
+  var COULEUR={bts1:'#d9480f',bts2:'#1f6f8b'};
+  all.forEach(function(el){
+    var s=el.querySelector('section');if(!s)return;
+    var b=document.createElement('div');b.className='niveau-badge';
+    b.style.cssText='position:absolute;top:48px;right:64px;display:flex;gap:10px;z-index:5';
+    niveaux(el).forEach(function(n){
+      var p=document.createElement('span');p.textContent=n.toUpperCase();
+      p.style.cssText='font:600 22px Inter,Arial,sans-serif;letter-spacing:2px;color:#fff;background:'+COULEUR[n]+';padding:6px 16px;border-radius:999px';
+      b.appendChild(p);
+    });
+    s.appendChild(b);
+  });
+  var slides=[],i=0;
+  function filtrer(){slides=all.filter(function(el){return mode==='0'||niveaux(el).indexOf('bts'+mode)>=0;});
+    modeLbl.textContent=mode==='0'?'Toutes les slides':'Mode BTS'+mode;
+    slides.forEach(function(el,k){var f=el.querySelector('.sd-footer');
+      if(f)f.textContent=f.textContent.replace(/\d+ \/ \d+\s*$/,(k+1)+' / '+slides.length);});}
+  function fit(){var s=Math.min(innerWidth/1920,(innerHeight-40)/1080);all.forEach(function(el){el.style.transform='scale('+s+')';});}
+  function show(n){i=(n+slides.length)%slides.length;
+    all.forEach(function(el){el.classList.toggle('active',el===slides[i]);});
+    counter.textContent=(i+1)+' / '+slides.length;location.hash=all.indexOf(slides[i])+1;
+    var a=slides[i].querySelector('aside');notes.textContent=a?a.textContent:'';}
+  function changerMode(m){var courante=slides[i];mode=m;try{localStorage.setItem('deck-niveau',m);}catch(e){}
+    filtrer();var k=slides.indexOf(courante);
+    if(k<0){var pos=all.indexOf(courante);k=slides.findIndex(function(el){return all.indexOf(el)>pos;});if(k<0)k=slides.length-1;}
+    show(k);}
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown')show(i+1);
+    else if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);
+    else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);
+    else if(e.key==='0'||e.key==='1'||e.key==='2')changerMode(e.key);
+    else if(e.key.toLowerCase()==='n')notes.classList.toggle('show');
+    else if(e.key.toLowerCase()==='f')toggleFs();
+  });
+  document.getElementById('stage').addEventListener('click',function(e){show(e.clientX>innerWidth/2?i+1:i-1);});
+  document.getElementById('prev').onclick=function(){show(i-1);};
+  document.getElementById('next').onclick=function(){show(i+1);};
+  modeLbl.onclick=function(){changerMode(mode==='0'?'1':mode==='1'?'2':'0');};
+  function toggleFs(){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}
+  document.getElementById('fs').onclick=toggleFs;
+  filtrer();
+  var depart=all[Math.max(0,Math.min(all.length-1,(parseInt(location.hash.slice(1))||1)-1))];
+  var k0=slides.indexOf(depart);
+  addEventListener('resize',fit);fit();show(k0<0?0:k0);
+})();
+</script>
+</body>
+</html>

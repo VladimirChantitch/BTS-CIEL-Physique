@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" width="720" height="580" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Caractéristiques U(I) d'une résistance, d'un générateur réel et d'une diode">
+  <rect id="fond-blanc" x="0" y="0" width="520" height="420" fill="#ffffff"/>
+  <line x1="60" y1="370" x2="500" y2="370" stroke="#17212b" stroke-width="3"/>
+  <line x1="60" y1="370" x2="60" y2="30" stroke="#17212b" stroke-width="3"/>
+  <polygon points="500,370 488,364 488,376" fill="#17212b"/>
+  <polygon points="60,30 54,42 66,42" fill="#17212b"/>
+  <text x="488" y="400" font-size="22" fill="#17212b">I</text>
+  <text x="28" y="44" font-size="22" fill="#17212b">U</text>
+  <line x1="60" y1="370" x2="440" y2="110" stroke="#d9480f" stroke-width="5"/>
+  <text x="425" y="96" font-size="20" fill="#d9480f" text-anchor="end">résistance</text>
+  <line x1="60" y1="90" x2="470" y2="230" stroke="#1f6f8b" stroke-width="5"/>
+  <text x="470" y="264" font-size="20" fill="#1f6f8b" text-anchor="end">générateur réel</text>
+  <path d="M60 370 C 70 320, 90 300, 140 296 L 470 288" fill="none" stroke="#45700f" stroke-width="5"/>
+  <text x="300" y="318" font-size="20" fill="#45700f">diode : U ≈ 0,6 V</text>
+</svg>

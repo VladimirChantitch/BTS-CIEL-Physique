@@ -1,4 +1,4 @@
-# Physique — BTS CIEL
+# Physique : BTS CIEL
 
 Tous les supports de cours, TD et annales sont regroupés dans ce dépôt.
 
@@ -8,7 +8,7 @@ Tous les supports de cours, TD et annales sont regroupés dans ce dépôt.
 
 ## 1. Récupérer les documents
 
-### Option A — Sans rien installer (le plus simple)
+### Option A : Sans rien installer (le plus simple)
 
 1. Ouvrez le lien ci-dessus dans votre navigateur.
 2. Cliquez sur le bouton vert **`Code`**, puis sur **`Download ZIP`**.
@@ -18,7 +18,7 @@ Aucun compte GitHub n'est nécessaire, le dépôt est public.
 
 > Inconvénient : pour avoir les mises à jour, il faut retélécharger l'archive complète à chaque fois.
 
-### Option B — Avec Git (recommandé)
+### Option B : Avec Git (recommandé)
 
 Installez Git une seule fois :
 
@@ -51,14 +51,20 @@ C'est tout. Seuls les fichiers modifiés ou ajoutés sont téléchargés, prenez
 
 ## 3. Organisation des dossiers
 
-Deux dossiers vous concernent :
+**Les BTS1 et les BTS2 utilisent les mêmes supports.** Tout se trouve dans le dossier `Supports_BTS1_BTS2/` :
 
-| Dossier | Contenu |
+| Élément | Contenu |
 |---|---|
-| `BTS1/` | Tous les supports de **première année** : cours, TD et documents de séance, classés par chapitre. |
-| `BTS2/` | Tous les supports de **deuxième année**, organisés de la même façon. |
+| `Recueil_Cours_BTS_CIEL_Physique` | Le cours complet, chapitre par chapitre |
+| `Recueil_TD_BTS_CIEL_Physique` | Les exercices, les annales et leurs corrigés |
+| `Recueil_TP_BTS_CIEL_Physique` | Les énoncés de TP |
+| `Slides/` | Les diaporamas projetés en séance |
 
-Allez directement dans celui qui correspond à votre année. Les autres fichiers présents à la racine du dépôt ne vous sont pas destinés.
+Chaque partie est marquée **BTS1**, **BTS2** ou **BTS1 · BTS2** selon l'année où elle est traitée. Les BTS2 retrouvent donc les notions de première année, qui sont rappelées puis approfondies.
+
+Les QCM sont projetés en séance sur vos téléphones. Après la correction, chaque QCM et chaque corrigé de devoir est déposé, chiffré, dans le dossier `Coffre/` : ouvrez `Coffre/index.html` et saisissez la clé donnée en cours.
+
+Le dossier `SujetsExposer/` contient les sujets d'exposés. Les autres dossiers ne vous sont pas destinés.
 
 ### À propos des fichiers `.md`
 
@@ -81,3 +87,26 @@ Une partie des documents est au format **Markdown** (`.md`). C'est du texte brut
 ## 5. Signaler une erreur
 
 Coquille, lien mort, exercice sans corrigé ? Signalez-le en cours, ou ouvrez un *ticket* dans l'onglet **Issues** du dépôt si vous avez un compte GitHub.
+
+---
+
+## 6. Utiliser le coffre des corrigés
+
+Les corrigés des devoirs et les QCM corrigés sont déposés dans le dossier `Coffre/`, **chiffrés**. Ils deviennent lisibles avec une **clé**, donnée en cours après la correction.
+
+**Ouvrir un corrigé**
+
+1. Faites un `git pull` (ou retéléchargez l'archive) pour avoir les derniers corrigés.
+2. Ouvrez le fichier `Coffre/index.html` dans votre navigateur (double-clic). Aucune connexion ni installation n'est nécessaire.
+3. Repérez le corrigé voulu. La liste déroulante en haut permet de n'afficher que votre niveau (BTS1 ou BTS2).
+4. Tapez la clé donnée par le professeur, de la forme `XXXX-XXXX-XXXX-XXXX`, puis cliquez sur **Déverrouiller**. Les majuscules, les tirets et les confusions entre O et 0, ou entre I, L et 1, n'ont pas d'importance.
+5. Cliquez sur **Ouvrir** pour l'afficher, ou sur **Télécharger** pour l'enregistrer.
+
+**Garder ses clés**
+
+- Une clé valide est retenue par votre navigateur : la prochaine fois, le corrigé s'ouvre directement.
+- Pour retrouver vos clés sur un autre ordinateur ou un autre navigateur, cliquez sur **Sauvegarder vos clés dans un fichier**, puis, sur l'autre poste, sur **Recharger un trousseau sauvegardé**.
+
+**Sécurité :** le déchiffrement se fait entièrement dans votre navigateur. Rien n'est envoyé sur Internet, et la clé n'est jamais transmise.
+
+> **Vous n'êtes pas étudiant de la formation actuellement ?** Les clés ne sont communiquées qu'aux étudiants en cours d'année. Si vous souhaitez accéder au contenu du coffre (ancien étudiant, enseignant, formateur), contactez l'auteur du dépôt, Vladimir Chantitch, via son profil GitHub ou en ouvrant un ticket dans l'onglet **Issues**.

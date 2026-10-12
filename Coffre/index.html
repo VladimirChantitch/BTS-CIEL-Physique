@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffre des corrigés</title>
+<style>
+  :root {
+    --fond: #f6f7f9; --carte: #ffffff; --texte: #1d2330; --doux: #5d6677; --bord: #dde1e8;
+    --accent: #2457c5; --accent-texte: #ffffff; --ok: #1b7f4b; --ok-fond: #e5f4ec; --err: #b42318; --err-fond: #fdecea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fond: #14171d; --carte: #1d2129; --texte: #e6e9ef; --doux: #9aa3b2; --bord: #2e3440;
+      --accent: #6b9bff; --accent-texte: #0e1320; --ok: #5fd39a; --ok-fond: #17301f; --err: #ff8a80; --err-fond: #3a1c1a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--fond); color: var(--texte); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  .sous-titre { color: var(--doux); margin: 0 0 24px; }
+  .barre { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 20px; }
+  .barre .espace { flex: 1; }
+  button, select, input { font: inherit; }
+  button { border: 1px solid var(--bord); background: var(--carte); color: var(--texte); border-radius: 8px; padding: 7px 14px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.principal { background: var(--accent); color: var(--accent-texte); border-color: var(--accent); }
+  button.lien { border: none; background: none; color: var(--doux); padding: 4px 6px; text-decoration: underline; font-size: .85rem; }
+  select { border: 1px solid var(--bord); background: var(--carte); color: var(--texte); border-radius: 8px; padding: 7px 10px; }
+  .carte { background: var(--carte); border: 1px solid var(--bord); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .entete { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .entete h2 { font-size: 1.05rem; margin: 0; flex: 1; min-width: 200px; }
+  .badge { font-size: .75rem; font-weight: 600; padding: 2px 8px; border-radius: 99px; border: 1px solid var(--bord); color: var(--doux); }
+  .etat { font-size: .85rem; color: var(--doux); margin: 2px 0 12px; }
+  .etat.ouvert { color: var(--ok); }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .actions input { flex: 1; min-width: 180px; border: 1px solid var(--bord); background: var(--fond); color: var(--texte); border-radius: 8px; padding: 7px 10px; font-family: ui-monospace, Consolas, monospace; letter-spacing: .05em; text-transform: uppercase; }
+  .message { margin-top: 10px; font-size: .9rem; padding: 6px 10px; border-radius: 6px; }
+  .message.err { color: var(--err); background: var(--err-fond); }
+  .message.ok { color: var(--ok); background: var(--ok-fond); }
+  .vide { color: var(--doux); text-align: center; padding: 40px 0; }
+  details { margin-top: 32px; color: var(--doux); font-size: .9rem; }
+  details summary { cursor: pointer; }
+  #bandeau:empty { display: none; }
+  #bandeau { margin-bottom: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Coffre des corrigés</h1>
+  <p class="sous-titre">Physique BTS CIEL. Les corrigés sont chiffrés ; la clé est donnée en classe après l'épreuve.</p>
+
+  <div class="barre">
+    <select id="filtre" aria-label="Filtrer par niveau"><option value="">Tous les niveaux</option></select>
+    <span class="espace"></span>
+    <button id="exporter" title="Sauvegarder vos clés dans un fichier">Exporter mon trousseau</button>
+    <button id="importer" title="Recharger un trousseau sauvegardé">Importer un trousseau</button>
+    <input id="fichier" type="file" accept=".json,application/json" hidden>
+  </div>
+  <div id="bandeau"></div>
+  <div id="liste"></div>
+
+  <details>
+    <summary>Comment ça marche ?</summary>
+    <p>Chaque corrigé est chiffré (AES-256). Tapez la clé donnée par le professeur : le déchiffrement se fait entièrement dans votre navigateur, rien n'est envoyé sur Internet.</p>
+    <p>Les clés valides sont retenues par ce navigateur. Pour les garder en changeant d'ordinateur ou de navigateur, utilisez « Exporter mon trousseau », puis « Importer un trousseau » sur l'autre poste.</p>
+  </details>
+</main>
+
+<script>window.COFFRE_CATALOGUE = null;</script>
+<script src="catalogue.js"></script>
+<script>
+"use strict";
+const STOCKAGE = "coffre-bts-ciel-physique-trousseau";
+const catalogue = Array.isArray(window.COFFRE_CATALOGUE) ? window.COFFRE_CATALOGUE : null;
+const ouverts = new Map();   // id -> Blob déchiffré (session)
+const messages = new Map();  // id -> { texte, type }
+const saisies = new Map();   // id -> clé en cours de saisie (survit au réaffichage)
+
+// ---------- Trousseau ----------
+function lireTrousseau() {
+  try { return JSON.parse(localStorage.getItem(STOCKAGE)) || {}; } catch { return {}; }
+}
+let trousseau = lireTrousseau();
+function sauverTrousseau() {
+  try { localStorage.setItem(STOCKAGE, JSON.stringify(trousseau)); } catch { /* navigation privée : clés gardées le temps de la session */ }
+}
+function cleDe(e) { return e.cle || trousseau[e.id] || ""; }
+
+// ---------- Chiffrement (même format que Outils/coffre/chiffrer.mjs) ----------
+function normaliser(cle) {
+  return cle.toUpperCase().replace(/[^0-9A-Z]/g, "").replace(/O/g, "0").replace(/[IL]/g, "1");
+}
+
+const blocsEnAttente = new Map();
+window.COFFRE_BLOC = (id, b64) => { const r = blocsEnAttente.get(id); if (r) r.resolve(b64); };
+function chargerBloc(id) {
+  return new Promise((resolve, reject) => {
+    blocsEnAttente.set(id, { resolve });
+    const s = document.createElement("script");
+    s.src = "blocs/" + encodeURIComponent(id) + ".js";
+    s.onerror = () => reject(new Error("Fichier chiffré introuvable."));
+    s.onload = () => s.remove();
+    document.head.appendChild(s);
+  });
+}
+
+async function dechiffrer(id, cle) {
+  if (!window.crypto || !crypto.subtle) throw new Error("Ce navigateur ne permet pas le déchiffrement (ouvrez la page dans Chrome, Firefox ou Edge récents).");
+  const b64 = await chargerBloc(id);
+  const octets = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  if (String.fromCharCode(...octets.slice(0, 4)) !== "CRG1") throw new Error("Format de fichier inconnu.");
+  const iterations = new DataView(octets.buffer).getUint32(4);
+  const sel = octets.slice(8, 24), iv = octets.slice(24, 36), corps = octets.slice(36);
+  const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(normaliser(cle)), "PBKDF2", false, ["deriveKey"]);
+  const k = await crypto.subtle.deriveKey({ name: "PBKDF2", salt: sel, iterations, hash: "SHA-256" }, base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+  try {
+    return await crypto.subtle.decrypt({ name: "AES-GCM", iv, additionalData: new TextEncoder().encode(id) }, k, corps);
+  } catch {
+    throw new Error("Clé incorrecte.");
+  }
+}
+
+// ---------- Actions ----------
+async function deverrouiller(e, cle, memoriser) {
+  messages.set(e.id, { texte: "Déchiffrement…", type: "" });
+  afficher();
+  try {
+    const clair = await dechiffrer(e.id, cle);
+    ouverts.set(e.id, new Blob([clair], { type: e.type }));
+    if (memoriser && !e.cle) { trousseau[e.id] = normaliser(cle).match(/.{1,4}/g).join("-"); sauverTrousseau(); }
+    saisies.delete(e.id);
+    messages.delete(e.id);
+    return true;
+  } catch (err) {
+    messages.set(e.id, { texte: err.message, type: "err" });
+    return false;
+  } finally {
+    afficher();
+  }
+}
+
+async function obtenir(e) {
+  if (!ouverts.has(e.id) && !(await deverrouiller(e, cleDe(e), false))) return null;
+  return ouverts.get(e.id);
+}
+
+function lancer(blob, nom, telecharger) {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  if (telecharger) a.download = nom; else a.target = "_blank";
+  a.rel = "noopener";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+}
+
+// ---------- Affichage ----------
+const liste = document.getElementById("liste");
+const filtre = document.getElementById("filtre");
+
+function el(tag, attrs = {}, ...enfants) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k.startsWith("on")) n.addEventListener(k.slice(2), v); else if (v !== false && v != null) n.setAttribute(k, v);
+  }
+  n.append(...enfants.filter(x => x != null));
+  return n;
+}
+
+function taille(o) { return o > 1e6 ? (o / 1e6).toFixed(1).replace(".", ",") + " Mo" : Math.max(1, Math.round(o / 1e3)) + " ko"; }
+
+function carte(e) {
+  const cle = cleDe(e);
+  const msg = messages.get(e.id);
+  const infos = [e.date, taille(e.taille)].filter(Boolean).join(" · ");
+  let etat, actions;
+  if (cle) {
+    etat = el("p", { class: "etat ouvert" }, (e.cle ? "Clé publiée par le professeur" : "Clé enregistrée dans votre trousseau") + " · " + infos);
+    actions = el("div", { class: "actions" },
+      el("button", { class: "principal", onclick: async () => { const b = await obtenir(e); if (b) lancer(b, e.nom, false); } }, "Ouvrir"),
+      el("button", { onclick: async () => { const b = await obtenir(e); if (b) lancer(b, e.nom, true); } }, "Télécharger"),
+      e.cle ? null : el("button", { class: "lien", onclick: () => {
+        if (!confirm("Retirer cette clé de votre trousseau ?")) return;
+        delete trousseau[e.id]; sauverTrousseau(); ouverts.delete(e.id); afficher();
+      } }, "oublier la clé"));
+  } else {
+    const champ = el("input", { type: "text", placeholder: "XXXX-XXXX-XXXX-XXXX", autocomplete: "off", spellcheck: "false", "aria-label": "Clé de " + e.titre });
+    champ.value = saisies.get(e.id) || "";
+    champ.addEventListener("input", () => saisies.set(e.id, champ.value));
+    const valider = async () => { if (champ.value.trim()) await deverrouiller(e, champ.value, true); };
+    champ.addEventListener("keydown", ev => { if (ev.key === "Enter") valider(); });
+    etat = el("p", { class: "etat" }, "Verrouillé · " + infos);
+    actions = el("div", { class: "actions" }, champ, el("button", { class: "principal", onclick: valider }, "Déverrouiller"));
+  }
+  return el("section", { class: "carte" },
+    el("div", { class: "entete" }, el("h2", {}, e.titre), e.niveau ? el("span", { class: "badge" }, e.niveau) : null),
+    etat, actions,
+    msg ? el("div", { class: "message " + msg.type }, msg.texte) : null);
+}
+
+function afficher() {
+  liste.replaceChildren();
+  if (!catalogue) {
+    liste.append(el("p", { class: "vide" }, "Catalogue introuvable : le fichier catalogue.js doit être à côté de cette page."));
+    return;
+  }
+  const visibles = catalogue.filter(e => !filtre.value || e.niveau === filtre.value);
+  if (!visibles.length) liste.append(el("p", { class: "vide" }, "Aucun corrigé pour le moment."));
+  for (const e of visibles) liste.append(carte(e));
+}
+
+function bandeau(texte, type) {
+  const b = document.getElementById("bandeau");
+  b.replaceChildren(el("div", { class: "message " + type }, texte));
+  setTimeout(() => b.replaceChildren(), 6000);
+}
+
+// ---------- Export / import ----------
+document.getElementById("exporter").addEventListener("click", () => {
+  const n = Object.keys(trousseau).length;
+  if (!n) { bandeau("Votre trousseau est vide : déverrouillez d'abord un corrigé.", "err"); return; }
+  const donnees = { format: "trousseau-coffre-bts-ciel", version: 1, exporte: new Date().toISOString(), cles: trousseau };
+  lancer(new Blob([JSON.stringify(donnees, null, 2)], { type: "application/json" }), "trousseau_corriges.json", true);
+});
+
+const fichier = document.getElementById("fichier");
+document.getElementById("importer").addEventListener("click", () => fichier.click());
+fichier.addEventListener("change", async () => {
+  const f = fichier.files[0];
+  fichier.value = "";
+  if (!f) return;
+  try {
+    const d = JSON.parse(await f.text());
+    if (d.format !== "trousseau-coffre-bts-ciel" || typeof d.cles !== "object") throw new Error();
+    let ajoutees = 0;
+    for (const [id, cle] of Object.entries(d.cles)) {
+      if (typeof cle === "string" && trousseau[id] !== cle) { trousseau[id] = cle; ajoutees++; }
+    }
+    sauverTrousseau();
+    afficher();
+    bandeau(ajoutees ? `${ajoutees} clé(s) importée(s).` : "Aucune nouvelle clé dans ce fichier.", "ok");
+  } catch {
+    bandeau("Ce fichier n'est pas un trousseau valide.", "err");
+  }
+});
+
+// ---------- Démarrage ----------
+if (catalogue) {
+  for (const n of [...new Set(catalogue.map(e => e.niveau).filter(Boolean))].sort()) filtre.append(el("option", { value: n }, n));
+}
+filtre.addEventListener("change", afficher);
+afficher();
+</script>
+</body>
+</html>

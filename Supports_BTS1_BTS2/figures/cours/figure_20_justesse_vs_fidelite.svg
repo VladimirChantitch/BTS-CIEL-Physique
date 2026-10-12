@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" width="640" height="230" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Justesse et fidélité : quatre cibles">
+  <circle cx="80.0" cy="100.0" r="62.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="80.0" cy="100.0" r="44.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="80.0" cy="100.0" r="26.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="80.0" cy="100.0" r="9.0" fill="#d9480f" stroke="#d9480f" stroke-width="1.6"/>
+  <circle cx="78.9" cy="98.1" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="80.3" cy="100.7" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="77.1" cy="100.8" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="80.4" cy="109.6" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="79.2" cy="100.5" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="69.9" cy="105.6" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="76.4" cy="99.1" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <text x="80.0" y="195.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Juste et fidèle</text>
+  <circle cx="240.0" cy="100.0" r="62.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="240.0" cy="100.0" r="44.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="240.0" cy="100.0" r="26.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="240.0" cy="100.0" r="9.0" fill="#d9480f" stroke="#d9480f" stroke-width="1.6"/>
+  <circle cx="259.8" cy="78.4" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="263.4" cy="81.8" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="264.6" cy="86.6" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="259.0" cy="88.8" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="255.2" cy="83.0" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="267.2" cy="84.3" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="256.9" cy="84.5" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <text x="240.0" y="195.0" font-size="15" text-anchor="middle" fill="#111">Fidèle, pas juste</text>
+  <circle cx="400.0" cy="100.0" r="62.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="400.0" cy="100.0" r="44.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="400.0" cy="100.0" r="26.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="400.0" cy="100.0" r="9.0" fill="#d9480f" stroke="#d9480f" stroke-width="1.6"/>
+  <circle cx="398" cy="124.8" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="419.5" cy="109.2" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="384.7" cy="86.1" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="408.6" cy="96.2" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="411.1" cy="83.3" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="399.9" cy="103.7" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="384.1" cy="104.3" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <text x="400.0" y="195.0" font-size="15" text-anchor="middle" fill="#111">Juste, pas fidèle</text>
+  <circle cx="560.0" cy="100.0" r="62.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="560.0" cy="100.0" r="44.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="560.0" cy="100.0" r="26.0" fill="#fffdf9" stroke="#111" stroke-width="1.6"/>
+  <circle cx="560.0" cy="100.0" r="9.0" fill="#d9480f" stroke="#d9480f" stroke-width="1.6"/>
+  <circle cx="572.3" cy="58.4" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="605.1" cy="121.2" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="549.2" cy="148.7" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="523.9" cy="138.3" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="575.3" cy="115.2" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="526.8" cy="82" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <circle cx="610.4" cy="95.1" r="4.0" fill="#1f6f8b" stroke="none"/>
+  <text x="560.0" y="195.0" font-size="15" text-anchor="middle" fill="#111">Ni juste ni fidèle</text>
+  <text x="320.0" y="222.0" font-size="13" text-anchor="middle" fill="#777">Centre : valeur vraie · points bleus : mesures répétées</text>
+</svg>
