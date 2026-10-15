@@ -61,5 +61,86 @@ window.COFFRE_CATALOGUE = [
     "nom": "QCM_BTS2_03_Decibels.txt",
     "type": "text/plain",
     "taille": 3631
+  },
+  {
+    "id": "tp-1-1",
+    "titre": "Corrigé TP 1.1 : Bases de l'électricité",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_1_1_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 130715
+  },
+  {
+    "id": "tp-1-2",
+    "titre": "Corrigé TP 1.2 : Caractéristique d'une diode",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_1_2_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 160748
+  },
+  {
+    "id": "tp-1-3",
+    "titre": "Corrigé TP 1.3 : Condensateur et bobine en régime sinusoïdal : impédance et déphasage",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_1_3_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 145712
+  },
+  {
+    "id": "tp-1-4",
+    "titre": "Corrigé TP 1.4 : Résonance d'un dipôle RLC série",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_1_4_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 134213
+  },
+  {
+    "id": "tp-1-5",
+    "titre": "Corrigé TP 1.5 : Théorème de superposition et modèle de Thévenin",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_1_5_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 121330
+  },
+  {
+    "id": "tp-1-6",
+    "titre": "Corrigé TP 1.6 : Décibels et chaîne d'atténuateurs",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_1_6_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 134294
+  },
+  {
+    "id": "tp-1-7",
+    "titre": "Corrigé TP 1.7 : LED : tension de seuil, couleur et longueur d'onde",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_1_7_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 138581
+  },
+  {
+    "id": "tp-1-8",
+    "titre": "Corrigé TP 1.8 : Photodiode : deux modes de fonctionnement",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_1_8_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 130538
+  },
+  {
+    "id": "tp-1-9",
+    "titre": "Corrigé TP 1.9 : Diviseur de tension à vide et en charge",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_1_9_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 117928
   }
 ];
