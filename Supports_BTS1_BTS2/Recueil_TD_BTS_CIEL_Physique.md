@@ -597,6 +597,12 @@ Une résistance marquée 4,7 kΩ (tolérance ±5 %) est mesurée à l'ohmmètre 
 
 Base de temps 0,2 ms/div, une période occupe 3,5 divisions.
 
+<p align="center">
+<img src="figures/TD/figure_td_16_oscillogramme_periode.svg" width="400" alt="Figure TD 6 : Oscillogramme du signal étudié"/>
+</p>
+
+<p align="center"><em>Figure TD 6 : Oscillogramme du signal étudié (base de temps 0,2 ms/div).</em></p>
+
 1) Calculer $T$.
 2) En déduire $f$.
 3) Ce signal est une onde sonore ($v = 340$ m/s) : calculer $\lambda$.

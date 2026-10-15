@@ -759,12 +759,12 @@ Toute mesure est entachée d'un doute : on ne connaît jamais la valeur vraie d'
 À partir d'une série de n mesures répétées x1, x2, …, xn :
 
 - Valeur moyenne : x̄ = (Σxᵢ) / n
-- Écart-type de la série : s = √[ Σ(xᵢ − x̄)² / (n−1) ]
+- Écart-type de la série : $\sigma = √[ Σ(xᵢ − x̄)² / (n−1) ]$
 - Incertitude-type de type A :
 
 <a id="eq-14"></a>
 
-$$u_A = \dfrac{s}{\sqrt{n}} \tag{14}$$
+$$u_A = \dfrac{\sigma}{\sqrt{n}} \tag{14}$$
 
 *Exemple résolu :* 5 mesures d'une résistance donnent 220, 218, 221, 219, 222 Ω.
 x̄ = 220 Ω. s ≈ 1,58 Ω. u_A = 1,58/√5 ≈ 0,71 Ω.
@@ -778,7 +778,17 @@ x̄ = 220 Ω. s ≈ 1,58 Ω. u_A = 1,58/√5 ≈ 0,71 Ω.
 **Incertitude-type de type B (non statistique)**
 
 - Pour un appareil numérique de résolution (dernier digit) δ : **u_B ≈ δ / √12** (on suppose une loi de probabilité uniforme sur l'intervalle de résolution).
-- Pour un appareil analogique de classe c et de calibre C : u_B ≈ (c × C) / (100 × √3).
+- Pour un appareil analogique (à aiguille) de classe c et de calibre C : $u_{B} ≈ (c × C) / (100 × √3)$. Les deux grandeurs se lisent sur l'appareil :
+  - le **calibre C** est la valeur de pleine échelle choisie avec le sélecteur : c'est la plus grande valeur que l'appareil peut afficher sur cette position (par exemple 10 V : l'aiguille en butée indique 10 V) ;
+  - la **classe c** est un nombre inscrit sur le cadran (1 ; 1,5 ; 2,5…). C'est la garantie du constructeur : l'erreur ne dépasse jamais **c % du calibre**, quelle que soit la position de l'aiguille.
+
+  L'erreur maximale vaut donc $\Delta = \dfrac{c \times C}{100}$. Comme on ne sait pas où se situe l'erreur dans l'intervalle $[-\Delta\ ;\ +\Delta]$, on suppose toutes les positions équiprobables (loi uniforme), ce qui donne l'incertitude-type en divisant par $\sqrt{3}$ :
+
+  $$u_B = \dfrac{\Delta}{\sqrt{3}} = \dfrac{c \times C}{100 \times \sqrt{3}}$$
+
+  *Exemple résolu :* un voltmètre de classe 1,5 sur le calibre 10 V lit 6,20 V. Erreur maximale : $\Delta = 1{,}5 \times 10 / 100 = 0{,}15$ V, donc $u_B = 0{,}15 / \sqrt{3} \approx 0{,}087$ V.
+
+  Conséquence pratique : l'incertitude dépend du **calibre**, pas de la valeur lue. La même tension de 6,20 V lue sur le calibre 30 V aurait une incertitude trois fois plus grande (0,26 V). On choisit donc toujours **le plus petit calibre qui contient la valeur à mesurer**, pour que l'aiguille dévie le plus possible.
 - Pour une valeur donnée avec une tolérance constructeur ±a (ex. résistance à 5 %) : u_B ≈ a / √3.
 
 *Exemple résolu :* multimètre numérique, résolution 0,01 V ⇒ u_B = 0,01/√12 ≈ 0,0029 V.
@@ -791,7 +801,7 @@ Deux sources d'incertitude indépendantes se composent quadratiquement (pas en l
 
 $$u = \sqrt{u_A^2 + u_B^2} \tag{15}$$
 
-*Exemple résolu (suite) :* u = √(0,71² + 0,0029²) ≈ 0,71 Ω (ici u_B est négligeable devant u_A).
+*Exemple résolu (suite) :* u = √(0,71² + 0,0029²) ≈ 0,71 Ω (ici $u_{B}$ est négligeable devant $u_{A}$).
 
 **Propagation des incertitudes sur une grandeur calculée**
 
@@ -911,6 +921,14 @@ $$SNR_{(dB)} = 10 \times \log_{10}\!\left(\dfrac{P_{signal}}{P_{bruit}}\right) =
 
 où S et B sont les valeurs efficaces du signal et du bruit. Plus le SNR est grand, plus le signal est de bonne qualité (moins dégradé par le bruit).
 
+**Lire un SNR**
+
+- **Pourquoi 10 ou 20 ?** On compare des puissances, d'où le facteur 10. Si l'on part des tensions efficaces, la puissance étant proportionnelle au carré de la tension, le facteur devient 20 (même règle qu'au §1.3).
+- **Ordres de grandeur** : un SNR de 0 dB signifie que le bruit est aussi puissant que le signal, et le signal est alors inexploitable. À 10 dB, le signal est 10 fois plus puissant que le bruit ; à 20 dB, 100 fois ; à 30 dB, 1 000 fois.
+- **Avec des niveaux en dBm**, le calcul devient une simple soustraction : $SNR_{(dB)} = P_{signal\,(dBm)} - P_{bruit\,(dBm)}$.
+
+*Exemple résolu :* une carte Wi-Fi reçoit le signal de la borne à −65 dBm, et le bruit ambiant est mesuré à −90 dBm. SNR = −65 − (−90) = **25 dB** : le signal est environ 300 fois plus puissant que le bruit, la liaison est de bonne qualité. Si l'on s'éloigne et que le signal tombe à −82 dBm, le SNR n'est plus que de 8 dB : la connexion devient instable et le débit s'effondre.
+
 <p align="center">
 <img src="figures/cours/figure_26_snr_signal_utile_et_niveau_de_bruit.svg" alt="Figure 26 : SNR : signal utile et niveau de bruit"/>
 </p>
@@ -1025,6 +1043,31 @@ T = 4 × 0,5.10⁻³ = 2.10⁻³ s ⇒ f = 1/T = 500 Hz.
 ### 3.4 Ondes sonores et effet Doppler
 
 - Une onde sonore est une onde mécanique longitudinale, correspondant à une variation locale de pression (surpression acoustique). La puissance moyenne transportée par unité de surface vaut $P = \dfrac{A^2}{2Z}$, avec A la surpression acoustique et Z l'impédance acoustique du milieu.
+
+**L'impédance acoustique Z**
+
+L'impédance acoustique d'un milieu mesure sa **résistance à être mis en vibration** par une onde sonore. Elle compare la surpression acoustique p à la vitesse v de vibration des particules du milieu, comme l'impédance électrique compare une tension à un courant :
+
+$$Z = \dfrac{p}{v} = \rho \times c$$
+
+avec ρ la masse volumique du milieu (kg/m³) et c la célérité du son dans ce milieu (m/s). Z s'exprime en kg·m⁻²·s⁻¹ (unité parfois appelée « rayl »).
+
+| Milieu | ρ (kg/m³) | c (m/s) | Z = ρ × c (kg·m⁻²·s⁻¹) |
+|---|---|---|---|
+| Air (20 °C) | 1,2 | 343 | ≈ 410 |
+| Eau | 1 000 | 1 480 | ≈ 1,5 × 10⁶ |
+| Tissus du corps humain | ≈ 1 060 | ≈ 1 540 | ≈ 1,6 × 10⁶ |
+| Acier | 7 800 | ≈ 5 900 | ≈ 4,6 × 10⁷ |
+
+Quand une onde sonore passe d'un milieu d'impédance Z₁ à un milieu d'impédance Z₂, une partie de l'énergie est **réfléchie** à l'interface. La fraction d'intensité réfléchie vaut :
+
+$$R = \left(\dfrac{Z_2 - Z_1}{Z_2 + Z_1}\right)^{2}$$
+
+Plus les impédances sont différentes, plus la réflexion est forte. C'est la même idée que l'adaptation d'impédance d'une ligne de transmission (§3.10 à 3.12) : pour transmettre, il faut des impédances proches ; pour réfléchir, il faut des impédances très différentes.
+
+*Exemple résolu :* passage de l'air (Z₁ ≈ 410) à l'eau (Z₂ ≈ 1,5 × 10⁶). R = ((1,5 × 10⁶ − 410) / (1,5 × 10⁶ + 410))² ≈ 0,999 : **99,9 % de l'énergie est réfléchie**. C'est pour cela qu'on entend très mal sous l'eau les bruits venant de l'air.
+
+> → **Application concrète :** **Capteurs à ultrasons et échographie.** Un capteur de distance à ultrasons (aide au stationnement, mesure de niveau dans une cuve) fonctionne justement parce que l'écart d'impédance entre l'air et un obstacle solide renvoie presque toute l'onde : l'écho est fort. À l'inverse, en échographie, on applique un gel entre la sonde et la peau pour supprimer la couche d'air : sans gel, l'onde serait presque entièrement réfléchie avant d'entrer dans le corps.
 - La hauteur d'un son (aigu/grave) dépend de sa fréquence ; son timbre dépend de sa composition spectrale (fondamental + harmoniques).
 - **Effet Doppler :** décalage entre la fréquence perçue par un récepteur et la fréquence réellement émise par la source, lorsque l'un des deux est en mouvement. Pour un récepteur immobile et une source en mouvement à la vitesse v_S :
 
