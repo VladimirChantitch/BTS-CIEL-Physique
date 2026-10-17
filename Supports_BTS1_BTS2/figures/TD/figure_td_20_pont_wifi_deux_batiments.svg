@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Pont Wi-Fi à 5,8 GHz entre deux bâtiments distants de 2,0 km, antennes paraboliques sur les toits">
+<rect id="fond-blanc" x="0" y="0" width="720" height="300" fill="#ffffff"/>
+<!-- Bâtiment A -->
+<rect x="40.0" y="130.0" width="110.0" height="140.0" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<rect x="54.0" y="150.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="54.0" y="186.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="84.0" y="150.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="84.0" y="186.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="114.0" y="150.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="114.0" y="186.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<text x="95.0" y="290.0" font-size="14" text-anchor="middle" fill="#111">bâtiment A</text>
+<!-- Bâtiment B -->
+<rect x="570.0" y="130.0" width="110.0" height="140.0" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<rect x="584.0" y="150.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="584.0" y="186.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="614.0" y="150.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="614.0" y="186.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="644.0" y="150.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<rect x="644.0" y="186.0" width="20.0" height="22.0" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+<text x="625.0" y="290.0" font-size="14" text-anchor="middle" fill="#111">bâtiment B</text>
+<line x1="0.0" y1="270.0" x2="720.0" y2="270.0" stroke="#777" stroke-width="1.5"/>
+<!-- Mât et parabole du bâtiment A (ouverture vers la droite) -->
+<line x1="110.0" y1="130.0" x2="110.0" y2="80.0" stroke="#111" stroke-width="3"/>
+<path d="M 116 56 Q 92 80 116 104" fill="#ffffff" stroke="#111" stroke-width="3"/>
+<line x1="104.0" y1="80.0" x2="132.0" y2="80.0" stroke="#111" stroke-width="1.5"/>
+<circle cx="134.0" cy="80.0" r="3.0" fill="#111" stroke="none"/>
+<!-- Mât et parabole du bâtiment B (ouverture vers la gauche) -->
+<line x1="610.0" y1="130.0" x2="610.0" y2="80.0" stroke="#111" stroke-width="3"/>
+<path d="M 604 56 Q 628 80 604 104" fill="#ffffff" stroke="#111" stroke-width="3"/>
+<line x1="588.0" y1="80.0" x2="616.0" y2="80.0" stroke="#111" stroke-width="1.5"/>
+<circle cx="586.0" cy="80.0" r="3.0" fill="#111" stroke="none"/>
+<!-- Émetteurs-récepteurs reliés aux paraboles par un câble -->
+<rect x="62.0" y="230.0" width="40.0" height="22.0" rx="3" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<text x="82.0" y="246.0" font-size="13" text-anchor="middle" fill="#111">E/R</text>
+<polyline points="102.0,241.0 142.0,241.0 142.0,100.0 118.0,100.0" fill="none" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<rect x="618.0" y="230.0" width="40.0" height="22.0" rx="3" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<text x="638.0" y="246.0" font-size="13" text-anchor="middle" fill="#111">E/R</text>
+<polyline points="618.0,241.0 578.0,241.0 578.0,100.0 602.0,100.0" fill="none" stroke="#555" stroke-width="2" stroke-linejoin="round"/>
+<!-- Liaison en visibilité directe -->
+<line x1="140.0" y1="80.0" x2="580.0" y2="80.0" stroke="#1f6f8b" stroke-width="2" stroke-dasharray="9 6"/>
+<text x="360.0" y="68.0" font-size="15" text-anchor="middle" fill="#1f6f8b" font-weight="bold">liaison à 5,8 GHz, d = 2,0 km</text>
+<!-- Caractéristiques de chaque extrémité -->
+<rect x="205.0" y="120.0" width="310.0" height="118.0" rx="8" fill="#ffffff" stroke="#d4d4d4" stroke-width="1.2"/>
+<text x="360.0" y="144.0" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">à chaque extrémité :</text>
+<text x="360.0" y="166.0" font-size="14" text-anchor="middle" fill="#111">émetteur-récepteur (E/R) : 20 dBm</text>
+<text x="360.0" y="186.0" font-size="14" text-anchor="middle" fill="#111">sensibilité : −80 dBm</text>
+<text x="360.0" y="206.0" font-size="14" text-anchor="middle" fill="#111">câble : 1 dB de pertes</text>
+<text x="360.0" y="226.0" font-size="14" text-anchor="middle" fill="#111">antenne parabolique : 23 dBi</text>
+</svg>

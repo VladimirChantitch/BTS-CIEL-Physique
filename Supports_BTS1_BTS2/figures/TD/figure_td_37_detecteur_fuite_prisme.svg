@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 330" width="620" height="330" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Détecteur de fuite optique : faisceau d'une LED guidé dans un prisme en verre, réfléchi sur la face en contact avec le milieu extérieur vers une photodiode">
+<rect id="fond-blanc" x="0" y="0" width="620" height="330" fill="#ffffff"/>
+<!-- Milieu extérieur sous la face de mesure -->
+<rect x="110.0" y="230.0" width="400.0" height="70.0" fill="#dfe9ee" stroke="none"/>
+<text x="310.0" y="272.0" font-size="14" text-anchor="middle" fill="#1f6f8b">milieu extérieur : air (pas de fuite) ou eau (fuite)</text>
+<!-- Prisme en verre (triangle rectangle isocèle, face de mesure en bas) -->
+<polygon points="160.0,230.0 460.0,230.0 310.0,80.0" fill="#f1f6f8" stroke="#111" stroke-width="2"/>
+<text x="310.0" y="135.0" font-size="14" text-anchor="middle" fill="#111">verre</text>
+<text x="310.0" y="153.0" font-size="14" text-anchor="middle" fill="#111">n = 1,50</text>
+<!-- Normale au point de réflexion -->
+<line x1="310.0" y1="165.0" x2="310.0" y2="300.0" stroke="#777" stroke-width="1.2" stroke-dasharray="6 4"/>
+<!-- LED et faisceau incident (entrée perpendiculaire à la face gauche) -->
+<circle cx="178.0" cy="98.0" r="13.0" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="160.0" y="80.0" font-size="14" text-anchor="end" fill="#111" font-weight="bold">LED</text>
+<line x1="188.0" y1="108.0" x2="310.0" y2="230.0" stroke="#d9480f" stroke-width="2.5"/>
+<line x1="256.0" y1="176.0" x2="261.5" y2="181.5" stroke="#d9480f" stroke-width="2.5"/>
+<polygon points="270.0,190.0 257.3,185.8 265.8,177.3" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<!-- Faisceau réfléchi vers la photodiode -->
+<line x1="310.0" y1="230.0" x2="432.0" y2="108.0" stroke="#d9480f" stroke-width="2.5"/>
+<line x1="364.0" y1="176.0" x2="369.5" y2="170.5" stroke="#d9480f" stroke-width="2.5"/>
+<polygon points="378.0,162.0 373.8,174.7 365.3,166.2" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<rect x="430.0" y="82.0" width="30.0" height="30.0" rx="3" fill="#eef4f6" stroke="#1f6f8b" stroke-width="2"/>
+<text x="470.0" y="80.0" font-size="14" fill="#111" font-weight="bold">photodiode</text>
+<!-- Angle d'incidence de 45° sur la face de mesure -->
+<path d="M 310 190 A 40 40 0 0 0 281.7 201.7" fill="none" stroke="#111" stroke-width="1.6"/>
+<text x="296.0" y="178.0" font-size="15" text-anchor="end" fill="#111" font-weight="bold">45°</text>
+</svg>

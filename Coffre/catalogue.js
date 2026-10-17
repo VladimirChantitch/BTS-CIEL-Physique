@@ -6,7 +6,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "DS1_Electricite_BTS2_corrige.pdf",
     "type": "application/pdf",
-    "taille": 129678
+    "taille": 129642
   },
   {
     "id": "qcm-bts1-02-ohm-kirchhoff",

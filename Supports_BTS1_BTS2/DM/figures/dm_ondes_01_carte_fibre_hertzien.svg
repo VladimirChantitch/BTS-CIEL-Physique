@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 430" width="700" height="430" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Carte schématique : tracé de la fibre optique et chaîne de pylônes hertziens entre Chicago et New York">
+<rect id="fond-blanc" x="0" y="0" width="700" height="430" fill="#ffffff"/>
+<!-- Cadre de la carte (les lacs et l'océan sont découpés par le cadre) -->
+<clipPath id="cadre-carte">
+<rect x="20.0" y="20.0" width="660.0" height="340.0"/>
+</clipPath>
+<rect x="20.0" y="20.0" width="660.0" height="340.0" fill="#fbfaf6" stroke="none" stroke-width="1.6"/>
+<g clip-path="url(#cadre-carte)">
+<!-- Lac Michigan -->
+<polygon points="104.1,220.0 100.4,210.0 96.2,199.0 92.5,186.5 94.4,169.0 90.6,152.0 91.7,133.9 97.4,116.4 101.1,98.9 104.9,78.9 110.5,61.4 121.8,38.9 131.2,8.8 168.9,-6.2 202.8,8.8 195.2,33.9 176.4,53.9 157.6,66.4 149.3,91.4 144.4,106.4 148.6,142.4 153.4,165.0 150.8,184.0 143.3,199.0 127.5,218.0 116.2,223.0" fill="#dcebf1" stroke="#1f6f8b" stroke-width="1.2" stroke-linejoin="round"/>
+<!-- Lac Huron (partie sud) -->
+<polygon points="296.1,154.5 293.1,141.4 289.3,121.4 287.4,111.9 275.4,102.9 259.2,111.4 242.3,121.4 238.5,107.9 255.5,90.4 263.0,68.9 258.1,51.4 244.2,33.9 229.1,-6.2 319.4,-6.2 325.1,41.4 335.6,78.9 325.8,94.9 322.5,116.9 318.3,138.9" fill="#dcebf1" stroke="#1f6f8b" stroke-width="1.2" stroke-linejoin="round"/>
+<!-- Lac Érié -->
+<polygon points="256.6,219.0 274.3,226.5 285.6,229.0 305.1,230.5 323.2,229.0 340.1,216.5 357.1,209.0 383.8,197.5 412.4,180.0 428.6,160.0 415.4,160.0 391.0,164.0 375.9,173.0 357.1,171.5 341.6,171.0 317.6,190.5 295.0,201.5 292.3,208.0 269.8,201.5 259.6,208.0" fill="#dcebf1" stroke="#1f6f8b" stroke-width="1.2" stroke-linejoin="round"/>
+<!-- Lac Ontario -->
+<polygon points="394.7,140.4 409.8,122.4 430.5,110.4 456.8,106.4 479.4,104.9 500.1,101.4 518.9,92.9 528.3,98.9 530.2,113.9 518.6,130.9 496.3,140.4 477.5,140.9 462.5,135.4 436.1,136.9 422.2,140.9" fill="#dcebf1" stroke="#1f6f8b" stroke-width="1.2" stroke-linejoin="round"/>
+<!-- Océan Atlantique -->
+<polygon points="613.0,275.6 622.4,275.1 635.6,274.1 650.7,270.0 665.7,264.0 688.3,259.0 688.3,379.1 577.3,379.1 578.4,357.6 596.8,336.6 609.3,316.6 611.9,299.1 613.4,281.6 603.2,280.1 609.3,276.6" fill="#dcebf1" stroke="#1f6f8b" stroke-width="1.2" stroke-linejoin="round"/>
+<!-- Appalaches : bande de relief orientée sud-ouest / nord-est (symboles), interrompue autour des tracés -->
+<polyline points="399.0,346.6 406.0,337.6 413.0,346.6" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="389.6,330.6 396.6,321.6 403.6,330.6" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="380.2,314.6 387.2,305.6 394.2,314.6" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="416.7,338.1 423.7,329.1 430.7,338.1" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="407.3,322.1 414.3,313.1 421.3,322.1" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="397.9,306.1 404.9,297.1 411.9,306.1" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="434.4,329.6 441.4,320.6 448.4,329.6" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="425.0,313.6 432.0,304.6 439.0,313.6" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="452.1,321.1 459.1,312.1 466.1,321.1" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="442.7,305.1 449.7,296.1 456.7,305.1" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="469.8,312.6 476.8,303.6 483.8,312.6" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="460.4,296.6 467.4,287.6 474.4,296.6" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="487.5,304.1 494.5,295.1 501.5,304.1" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="495.7,279.6 502.7,270.6 509.7,279.6" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="522.8,287.1 529.8,278.1 536.8,287.1" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="540.5,278.6 547.5,269.6 554.5,278.6" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="548.8,254.0 555.8,245.0 562.8,254.0" fill="none" stroke="#45700f" stroke-width="1.4" stroke-linejoin="round"/>
+</g>
+<rect x="20.0" y="20.0" width="660.0" height="340.0" fill="none" stroke="#777" stroke-width="1"/>
+<!-- Noms des étendues d'eau, du relief et des pays -->
+<text x="120.7" y="118.9" font-size="11" text-anchor="middle" fill="#1f6f8b" font-style="italic">lac</text>
+<text x="120.7" y="131.9" font-size="11" text-anchor="middle" fill="#1f6f8b" font-style="italic">Michigan</text>
+<text x="300.6" y="81.4" font-size="11" text-anchor="middle" fill="#1f6f8b" font-style="italic">lac Huron</text>
+<text x="342.0" y="189.0" font-size="11" text-anchor="middle" fill="#1f6f8b" font-style="italic">lac Érié</text>
+<text x="468.1" y="122.9" font-size="11" text-anchor="middle" fill="#1f6f8b" font-style="italic">lac Ontario</text>
+<text x="648.8" y="316.6" font-size="11" text-anchor="middle" fill="#1f6f8b" font-style="italic">océan</text>
+<text x="648.8" y="329.6" font-size="11" text-anchor="middle" fill="#1f6f8b" font-style="italic">Atlantique</text>
+<text x="477.5" y="339.1" font-size="12" text-anchor="middle" fill="#45700f" font-style="italic">Appalaches</text>
+<text x="402.2" y="76.4" font-size="11" text-anchor="middle" fill="#777">CANADA</text>
+<text x="199.0" y="336.6" font-size="11" text-anchor="middle" fill="#777">ÉTATS-UNIS</text>
+<!-- Tracé réel de la fibre optique (schématique), le long des routes et des voies ferrées -->
+<polyline points="100.0,210.0 112.4,226.5 146.3,236.5 193.7,250.0 232.9,267.0 270.5,256.5 296.9,271.5 335.3,264.0 362.7,251.5 387.6,282.1 427.8,289.1 458.7,264.0 485.1,279.1 504.6,290.6 526.1,302.1 569.0,306.6 584.4,293.1 612.7,268.5" fill="none" stroke="#d9480f" stroke-width="2.6" stroke-linejoin="round"/>
+<!-- Chaîne hertzienne : pylônes quasiment alignés sur la géodésique -->
+<line x1="100.0" y1="210.0" x2="612.7" y2="268.5" stroke="#1f6f8b" stroke-width="2.2"/>
+<polygon points="123.3,207.7 119.8,215.7 126.8,215.7" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="146.6,210.3 143.1,218.3 150.1,218.3" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="169.9,213.0 166.4,221.0 173.4,221.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="193.2,215.6 189.7,223.6 196.7,223.6" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="216.5,218.3 213.0,226.3 220.0,226.3" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="239.8,221.0 236.3,229.0 243.3,229.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="263.1,223.6 259.6,231.6 266.6,231.6" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="286.4,226.3 282.9,234.3 289.9,234.3" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="309.7,229.0 306.2,237.0 313.2,237.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="333.0,231.6 329.5,239.6 336.5,239.6" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="356.3,234.3 352.8,242.3 359.8,242.3" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="379.6,236.9 376.1,244.9 383.1,244.9" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="402.9,239.6 399.4,247.6 406.4,247.6" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="426.2,242.3 422.7,250.3 429.7,250.3" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="449.5,244.9 446.0,252.9 453.0,252.9" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="472.8,247.6 469.3,255.6 476.3,255.6" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="496.1,250.2 492.6,258.2 499.6,258.2" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="519.4,252.9 515.9,260.9 522.9,260.9" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="542.7,255.6 539.2,263.6 546.2,263.6" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="566.1,258.2 562.6,266.2 569.6,266.2" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="589.4,260.9 585.9,268.9 592.9,268.9" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<!-- Villes -->
+<circle cx="323.6" cy="229.0" r="3.0" fill="#555" stroke="none" stroke-width="1"/>
+<text x="323.6" y="220.0" font-size="11" text-anchor="middle" fill="#555">Cleveland</text>
+<circle cx="387.6" cy="282.1" r="3.0" fill="#555" stroke="none" stroke-width="1"/>
+<text x="380.6" y="286.1" font-size="11" text-anchor="end" fill="#555">Pittsburgh</text>
+<circle cx="569.0" cy="306.6" r="3.0" fill="#555" stroke="none" stroke-width="1"/>
+<text x="569.0" y="322.6" font-size="11" text-anchor="middle" fill="#555">Philadelphie</text>
+<circle cx="100.0" cy="210.0" r="6.0" fill="#111" stroke="none" stroke-width="1"/>
+<text x="90.0" y="215.0" font-size="15" text-anchor="end" fill="#111" font-weight="bold">Chicago</text>
+<circle cx="612.7" cy="268.5" r="6.0" fill="#111" stroke="none" stroke-width="1"/>
+<text x="608.7" y="254.5" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">New York</text>
+<!-- Longueurs indiquées sur la carte -->
+<text x="470.0" y="236.0" font-size="13" text-anchor="middle" fill="#1f6f8b" font-weight="bold">trajet hertzien : ≈ 1 150 km</text>
+<text x="215.0" y="300.0" font-size="13" text-anchor="middle" fill="#d9480f" font-weight="bold">tracé de la fibre : ≈ 1 330 km</text>
+<!-- Échelle et nord -->
+<line x1="40.0" y1="340.0" x2="130.0" y2="340.0" stroke="#111" stroke-width="2"/>
+<line x1="40.0" y1="335.0" x2="40.0" y2="345.0" stroke="#111" stroke-width="1.5"/>
+<line x1="85.0" y1="337.0" x2="85.0" y2="343.0" stroke="#111" stroke-width="1.2"/>
+<line x1="130.0" y1="335.0" x2="130.0" y2="345.0" stroke="#111" stroke-width="1.5"/>
+<text x="40.0" y="330.0" font-size="11" text-anchor="middle" fill="#111">0</text>
+<text x="130.0" y="330.0" font-size="11" text-anchor="middle" fill="#111">200 km</text>
+<line x1="655.0" y1="75.0" x2="655.0" y2="47.2" stroke="#111" stroke-width="1.6"/>
+<polygon points="655.0,40.0 659.1,49.0 651.0,49.0" fill="#111" stroke="#111" stroke-width="1" stroke-linejoin="round"/>
+<text x="655.0" y="90.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">N</text>
+<!-- Légende sous la carte -->
+<line x1="40.0" y1="385.0" x2="80.0" y2="385.0" stroke="#d9480f" stroke-width="2.6"/>
+<text x="90.0" y="389.5" font-size="13" text-anchor="start" fill="#111">fibre optique : tracé réel (schématique)</text>
+<line x1="380.0" y1="385.0" x2="420.0" y2="385.0" stroke="#1f6f8b" stroke-width="2.2"/>
+<polygon points="400.0,380.0 396.5,388.0 403.5,388.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1" stroke-linejoin="round"/>
+<text x="430.0" y="389.5" font-size="13" text-anchor="start" fill="#111">chaîne de pylônes hertziens</text>
+<text x="350.0" y="416.0" font-size="12" text-anchor="middle" fill="#555">Carte schématique, échelle approximative. Distance géodésique Chicago - New York : ≈ 1 140 km.</text>
+</svg>

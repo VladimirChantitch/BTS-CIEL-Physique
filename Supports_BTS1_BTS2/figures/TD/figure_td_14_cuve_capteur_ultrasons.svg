@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 350" width="480" height="350" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Cuve tampon : capteur à ultrasons fixé 1,20 m au-dessus du fond, mesure par écho sur la surface du liquide">
+<rect id="fond-blanc" x="0" y="0" width="480" height="350" fill="#ffffff"/>
+<!-- Liquide (hauteur h) puis parois de la cuve -->
+<rect x="150.0" y="204.9" width="220.0" height="107.1" fill="#d6e9f0" stroke="none"/>
+<line x1="150.0" y1="204.9" x2="370.0" y2="204.9" stroke="#1f6f8b" stroke-width="2"/>
+<polyline points="150.0,50.0 150.0,312.0 370.0,312.0 370.0,50.0" fill="none" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+<line x1="150.0" y1="50.0" x2="370.0" y2="50.0" stroke="#111" stroke-width="3"/>
+<text x="260.0" y="290.0" font-size="14" text-anchor="middle" fill="#1f6f8b">liquide de refroidissement</text>
+<!-- Capteur à ultrasons fixé sous le couvercle -->
+<rect x="238.0" y="50.0" width="44.0" height="12.0" fill="#555" stroke="#111" stroke-width="1.5"/>
+<text x="260.0" y="30.0" font-size="14" text-anchor="middle" fill="#111">capteur à ultrasons</text>
+<line x1="260.0" y1="34.0" x2="260.0" y2="50.0" stroke="#777" stroke-width="1.2"/>
+<!-- Onde émise vers le bas, écho vers le haut -->
+<line x1="250.0" y1="68.0" x2="250.0" y2="191.9" stroke="#d9480f" stroke-width="2.2"/>
+<polygon points="250.0,201.9 245.5,191.9 254.5,191.9" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<line x1="270.0" y1="201.9" x2="270.0" y2="78.0" stroke="#1f6f8b" stroke-width="2.2"/>
+<polygon points="270.0,68.0 274.5,78.0 265.5,78.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="243.0" y="135.0" font-size="14" text-anchor="end" fill="#d9480f">émission</text>
+<text x="277.0" y="135.0" font-size="14" fill="#1f6f8b">écho</text>
+<!-- Cotes : d (capteur-surface), h (hauteur de liquide), 1,20 m (capteur-fond) -->
+<line x1="110.0" y1="62.0" x2="238.0" y2="62.0" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="110.0" y1="204.9" x2="150.0" y2="204.9" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="110.0" y1="312.0" x2="150.0" y2="312.0" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="120.0" y1="71.0" x2="120.0" y2="195.9" stroke="#111" stroke-width="1.5"/>
+<polygon points="120.0,204.9 116.0,195.9 124.0,195.9" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="120.0,62.0 124.0,71.0 116.0,71.0" fill="#111" stroke="#111" stroke-width="1"/>
+<line x1="120.0" y1="213.9" x2="120.0" y2="303.0" stroke="#111" stroke-width="1.5"/>
+<polygon points="120.0,312.0 116.0,303.0 124.0,303.0" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="120.0,204.9 124.0,213.9 116.0,213.9" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="110.0" y="139.5" font-size="16" text-anchor="end" fill="#111" font-weight="bold" font-style="italic">d</text>
+<text x="110.0" y="264.5" font-size="16" text-anchor="end" fill="#111" font-weight="bold" font-style="italic">h</text>
+<line x1="282.0" y1="62.0" x2="410.0" y2="62.0" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="370.0" y1="312.0" x2="410.0" y2="312.0" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="400.0" y1="71.0" x2="400.0" y2="303.0" stroke="#111" stroke-width="1.5"/>
+<polygon points="400.0,312.0 396.0,303.0 404.0,303.0" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="400.0,62.0 404.0,71.0 396.0,71.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="410.0" y="192.0" font-size="15" fill="#111">1,20 m</text>
+</svg>

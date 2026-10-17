@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 290" width="700" height="290" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Supercondensateur de sauvegarde : (a) charge à travers R sous E, (b) décharge dans la RTC modélisée par R'">
+<rect id="fond-blanc" x="0" y="0" width="700" height="290" fill="#ffffff"/>
+<!-- (a) Circuit de charge : E, R et C en série -->
+<line x1="80.0" y1="144.0" x2="120.0" y2="144.0" stroke="#111" stroke-width="2"/>
+<line x1="90.0" y1="156.0" x2="110.0" y2="156.0" stroke="#111" stroke-width="4"/>
+<text x="126.0" y="142.0" font-size="14" fill="#111">+</text>
+<text x="118.0" y="168.0" font-size="14" fill="#111">−</text>
+<line x1="100.0" y1="60.0" x2="100.0" y2="144.0" stroke="#111" stroke-width="2"/>
+<line x1="100.0" y1="156.0" x2="100.0" y2="240.0" stroke="#111" stroke-width="2"/>
+<text x="72.0" y="155.0" font-size="15" text-anchor="end" fill="#111">E = 5,0 V</text>
+<line x1="100.0" y1="60.0" x2="180.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<rect x="180.0" y="50.0" width="60.0" height="20.0" fill="none" stroke="#111" stroke-width="2"/>
+<line x1="240.0" y1="60.0" x2="310.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<text x="210.0" y="42.0" font-size="15" text-anchor="middle" fill="#111">R = 100 Ω</text>
+<line x1="310.0" y1="60.0" x2="310.0" y2="145.0" stroke="#111" stroke-width="2"/>
+<line x1="292.0" y1="145.0" x2="328.0" y2="145.0" stroke="#111" stroke-width="3"/>
+<line x1="292.0" y1="155.0" x2="328.0" y2="155.0" stroke="#111" stroke-width="3"/>
+<line x1="310.0" y1="155.0" x2="310.0" y2="240.0" stroke="#111" stroke-width="2"/>
+<line x1="310.0" y1="240.0" x2="100.0" y2="240.0" stroke="#111" stroke-width="2"/>
+<text x="287.0" y="155.0" font-size="15" text-anchor="end" fill="#111">C = 0,47 F</text>
+<line x1="250.0" y1="48.0" x2="280.0" y2="48.0" stroke="#45700f" stroke-width="2"/>
+<polygon points="290.0,48.0 280.0,52.5 280.0,43.5" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<text x="270.0" y="40.0" font-size="15" text-anchor="middle" fill="#45700f" font-weight="bold" font-style="italic">i</text>
+<line x1="350.0" y1="225.0" x2="350.0" y2="85.0" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="350.0,75.0 354.5,85.0 345.5,85.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="360.0" y="155.0" font-size="15" fill="#1f6f8b">u<tspan baseline-shift="sub" font-size="11">C</tspan></text>
+<text x="220.0" y="278.0" font-size="14" text-anchor="middle" fill="#111">(a) charge du supercondensateur</text>
+<!-- Séparation -->
+<line x1="400.0" y1="30.0" x2="400.0" y2="255.0" stroke="#d4d4d4" stroke-width="1.5" stroke-dasharray="6 5"/>
+<!-- (b) Coupure d'alimentation : C se décharge dans la RTC (R') -->
+<line x1="480.0" y1="60.0" x2="480.0" y2="145.0" stroke="#111" stroke-width="2"/>
+<line x1="462.0" y1="145.0" x2="498.0" y2="145.0" stroke="#111" stroke-width="3"/>
+<line x1="462.0" y1="155.0" x2="498.0" y2="155.0" stroke="#111" stroke-width="3"/>
+<line x1="480.0" y1="155.0" x2="480.0" y2="240.0" stroke="#111" stroke-width="2"/>
+<text x="503.0" y="155.0" font-size="15" fill="#111">C</text>
+<line x1="480.0" y1="60.0" x2="610.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<line x1="610.0" y1="60.0" x2="610.0" y2="120.0" stroke="#111" stroke-width="2"/>
+<rect x="600.0" y="120.0" width="20.0" height="60.0" fill="none" stroke="#111" stroke-width="2"/>
+<line x1="610.0" y1="180.0" x2="610.0" y2="240.0" stroke="#111" stroke-width="2"/>
+<line x1="610.0" y1="240.0" x2="480.0" y2="240.0" stroke="#111" stroke-width="2"/>
+<text x="632.0" y="146.0" font-size="15" fill="#111">R'</text>
+<text x="632.0" y="166.0" font-size="14" fill="#111">(RTC)</text>
+<text x="545.0" y="42.0" font-size="15" text-anchor="middle" fill="#111">R' = 1,0 MΩ</text>
+<line x1="445.0" y1="225.0" x2="445.0" y2="85.0" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="445.0,75.0 449.5,85.0 440.5,85.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="437.0" y="155.0" font-size="15" text-anchor="end" fill="#1f6f8b">u<tspan baseline-shift="sub" font-size="11">C</tspan></text>
+<text x="550.0" y="278.0" font-size="14" text-anchor="middle" fill="#111">(b) coupure : décharge dans la RTC</text>
+</svg>

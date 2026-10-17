@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 300" width="660" height="300" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Courant consommé par le capteur LoRa sur un cycle de 600 s : mesure 2,0 s à 15 mA, émission 1,2 s à 45 mA, veille à 8 µA le reste du cycle (échelle non respectée)">
+<rect id="fond-blanc" x="0" y="0" width="660" height="300" fill="#ffffff"/>
+<!-- Axes -->
+<line x1="60.0" y1="230.0" x2="630.0" y2="230.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="640.0,230.0 630.0,225.5 630.0,234.5" fill="#111" stroke="#111" stroke-width="1"/>
+<line x1="60.0" y1="230.0" x2="60.0" y2="40.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="60.0,30.0 55.5,40.0 64.5,40.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="640.0" y="252.0" font-size="14" text-anchor="end" fill="#111" font-style="italic">t</text>
+<text x="68.0" y="40.0" font-size="14" fill="#111">i (mA)</text>
+<!-- Courant : mesure, émission, veille, puis cycle suivant -->
+<polyline points="60.0,226.0 60.0,173.0 140.0,173.0 140.0,59.0 210.0,59.0 210.0,226.0 380.0,226.0" fill="none" stroke="#1f6f8b" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="400.0,226.0 520.0,226.0 520.0,173.0 560.0,173.0" fill="none" stroke="#1f6f8b" stroke-width="2.5" stroke-linejoin="round"/>
+<!-- Coupure de l'axe des temps -->
+<line x1="376.0" y1="236.0" x2="386.0" y2="216.0" stroke="#111" stroke-width="1.5"/>
+<line x1="394.0" y1="236.0" x2="404.0" y2="216.0" stroke="#111" stroke-width="1.5"/>
+<!-- Niveaux et durées -->
+<text x="55.0" y="178.0" font-size="12" text-anchor="end" fill="#111">15</text>
+<text x="55.0" y="64.0" font-size="12" text-anchor="end" fill="#111">45</text>
+<line x1="56.0" y1="173.0" x2="64.0" y2="173.0" stroke="#111" stroke-width="1.4"/>
+<line x1="56.0" y1="59.0" x2="64.0" y2="59.0" stroke="#111" stroke-width="1.4"/>
+<text x="100.0" y="163.0" font-size="13" text-anchor="middle" fill="#d9480f">mesure</text>
+<text x="175.0" y="49.0" font-size="13" text-anchor="middle" fill="#d9480f">émission</text>
+<text x="295.0" y="214.0" font-size="13" text-anchor="middle" fill="#d9480f">veille : 8 µA</text>
+<line x1="69.0" y1="248.0" x2="131.0" y2="248.0" stroke="#111" stroke-width="1.5"/>
+<polygon points="140.0,248.0 131.0,244.0 131.0,252.0" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="60.0,248.0 69.0,244.0 69.0,252.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="100.0" y="266.0" font-size="13" text-anchor="middle" fill="#111">2,0 s</text>
+<line x1="149.0" y1="248.0" x2="201.0" y2="248.0" stroke="#111" stroke-width="1.5"/>
+<polygon points="210.0,248.0 201.0,244.0 201.0,252.0" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="140.0,248.0 149.0,244.0 149.0,252.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="175.0" y="266.0" font-size="13" text-anchor="middle" fill="#111">1,2 s</text>
+<line x1="69.0" y1="280.0" x2="511.0" y2="280.0" stroke="#111" stroke-width="1.5"/>
+<polygon points="520.0,280.0 511.0,276.0 511.0,284.0" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="60.0,280.0 69.0,276.0 69.0,284.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="290.0" y="296.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">cycle : 600 s</text>
+<text x="540.0" y="163.0" font-size="12" text-anchor="middle" fill="#777">cycle suivant</text>
+</svg>

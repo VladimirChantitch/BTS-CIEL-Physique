@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 345" width="610" height="345" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Vitesse de rotation du ventilateur après un échelon de commande de 0 à 10 V : relevé du tableau de l'exercice 4.14">
+<rect id="fond-blanc" x="0" y="0" width="610" height="345" fill="#ffffff"/>
+<!-- Grille : 1 s et 250 tr/min -->
+<line x1="80.0" y1="40.0" x2="80.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="109.4" y1="40.0" x2="109.4" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="138.8" y1="40.0" x2="138.8" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="168.1" y1="40.0" x2="168.1" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="197.5" y1="40.0" x2="197.5" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="226.9" y1="40.0" x2="226.9" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="256.3" y1="40.0" x2="256.3" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="285.6" y1="40.0" x2="285.6" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="315.0" y1="40.0" x2="315.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="344.4" y1="40.0" x2="344.4" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="373.8" y1="40.0" x2="373.8" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="403.1" y1="40.0" x2="403.1" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="432.5" y1="40.0" x2="432.5" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="461.9" y1="40.0" x2="461.9" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="491.3" y1="40.0" x2="491.3" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="520.6" y1="40.0" x2="520.6" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="550.0" y1="40.0" x2="550.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="300.0" x2="550.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="281.4" x2="550.0" y2="281.4" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="262.9" x2="550.0" y2="262.9" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="244.3" x2="550.0" y2="244.3" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="225.7" x2="550.0" y2="225.7" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="207.1" x2="550.0" y2="207.1" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="188.6" x2="550.0" y2="188.6" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="170.0" x2="550.0" y2="170.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="151.4" x2="550.0" y2="151.4" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="132.9" x2="550.0" y2="132.9" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="114.3" x2="550.0" y2="114.3" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="95.7" x2="550.0" y2="95.7" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="77.1" x2="550.0" y2="77.1" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="58.6" x2="550.0" y2="58.6" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="40.0" x2="550.0" y2="40.0" stroke="#d4d4d4" stroke-width="1"/>
+<!-- Axes et graduations -->
+<line x1="80.0" y1="300.0" x2="562.0" y2="300.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="572.0,300.0 562.0,304.5 562.0,295.5" fill="#111" stroke="#111" stroke-width="1"/>
+<line x1="80.0" y1="300.0" x2="80.0" y2="28.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="80.0,18.0 84.5,28.0 75.5,28.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="572.0" y="290.0" font-size="15" text-anchor="end" fill="#111">t (s)</text>
+<text x="88.0" y="30.0" font-size="15" fill="#111">Ω (tr/min)</text>
+<text x="80.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0</text>
+<text x="138.8" y="320.0" font-size="13" text-anchor="middle" fill="#111">2</text>
+<text x="197.5" y="320.0" font-size="13" text-anchor="middle" fill="#111">4</text>
+<text x="256.3" y="320.0" font-size="13" text-anchor="middle" fill="#111">6</text>
+<text x="315.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">8</text>
+<text x="373.8" y="320.0" font-size="13" text-anchor="middle" fill="#111">10</text>
+<text x="432.5" y="320.0" font-size="13" text-anchor="middle" fill="#111">12</text>
+<text x="491.3" y="320.0" font-size="13" text-anchor="middle" fill="#111">14</text>
+<text x="550.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">16</text>
+<text x="72.0" y="267.9" font-size="13" text-anchor="end" fill="#111">500</text>
+<text x="72.0" y="230.7" font-size="13" text-anchor="end" fill="#111">1000</text>
+<text x="72.0" y="193.6" font-size="13" text-anchor="end" fill="#111">1500</text>
+<text x="72.0" y="156.4" font-size="13" text-anchor="end" fill="#111">2000</text>
+<text x="72.0" y="119.3" font-size="13" text-anchor="end" fill="#111">2500</text>
+<text x="72.0" y="82.1" font-size="13" text-anchor="end" fill="#111">3000</text>
+<text x="72.0" y="45.0" font-size="13" text-anchor="end" fill="#111">3500</text>
+<text x="72.0" y="305.0" font-size="13" text-anchor="end" fill="#111">0</text>
+<!-- Allure entre les points (modèle du premier ordre passant par les relevés) -->
+<polyline points="80.0,300.0 82.4,291.3 84.7,282.9 87.1,274.8 89.4,267.0 91.8,259.6 94.1,252.4 96.5,245.6 98.8,239.0 101.2,232.6 103.5,226.5 105.9,220.7 108.2,215.0 110.6,209.6 112.9,204.4 115.3,199.4 117.6,194.7 120.0,190.0 122.3,185.6 124.7,181.4 127.0,177.3 129.4,173.4 131.7,169.6 134.1,166.0 136.4,162.5 138.8,159.1 141.1,155.9 143.5,152.8 145.8,149.9 148.1,147.0 150.5,144.3 152.9,141.6 155.2,139.1 157.6,136.7 159.9,134.3 162.3,132.1 164.6,129.9 167.0,127.9 169.3,125.9 171.7,124.0 174.0,122.1 176.4,120.4 178.7,118.7 181.1,117.0 183.4,115.5 185.8,114.0 188.1,112.5 190.5,111.1 192.8,109.8 195.1,108.5 197.5,107.3 199.9,106.1 202.2,105.0 204.6,103.9 206.9,102.8 209.3,101.8 211.6,100.9 214.0,99.9 216.3,99.0 218.7,98.2 221.0,97.4 223.4,96.6 225.7,95.8 228.1,95.1 230.4,94.4 232.8,93.7 235.1,93.0 237.5,92.4 239.8,91.8 242.2,91.2 244.5,90.7 246.9,90.2 249.2,89.7 251.6,89.2 253.9,88.7 256.3,88.2 258.6,87.8 261.0,87.4 263.3,87.0 265.7,86.6 268.0,86.2 270.4,85.9 272.7,85.5 275.0,85.2 277.4,84.9 279.8,84.6 282.1,84.3 284.5,84.0 286.8,83.7 289.2,83.5 291.5,83.2 293.9,83.0 296.2,82.8 298.6,82.5 300.9,82.3 303.3,82.1 305.6,81.9 308.0,81.7 310.3,81.6 312.7,81.4 315.0,81.2 317.4,81.1 319.7,80.9 322.1,80.8 324.4,80.6 326.8,80.5 329.1,80.4 331.5,80.2 333.8,80.1 336.2,80.0 338.5,79.9 340.9,79.8 343.2,79.7 345.5,79.6 347.9,79.5 350.3,79.4 352.6,79.3 355.0,79.2 357.3,79.1 359.7,79.1 362.0,79.0 364.3,78.9 366.7,78.8 369.1,78.8 371.4,78.7 373.8,78.6 376.1,78.6 378.5,78.5 380.8,78.5 383.2,78.4 385.5,78.4 387.9,78.3 390.2,78.3 392.6,78.2 394.9,78.2 397.3,78.1 399.6,78.1 402.0,78.1 404.3,78.0 406.7,78.0 409.0,78.0 411.4,77.9 413.7,77.9 416.1,77.9 418.4,77.8 420.8,77.8 423.1,77.8 425.5,77.8 427.8,77.7 430.2,77.7 432.5,77.7 434.9,77.7 437.2,77.7 439.6,77.6 441.9,77.6 444.3,77.6 446.6,77.6 449.0,77.6 451.3,77.5 453.7,77.5 456.0,77.5 458.4,77.5 460.7,77.5 463.1,77.5 465.4,77.5 467.8,77.4 470.1,77.4 472.5,77.4 474.8,77.4 477.2,77.4 479.5,77.4 481.9,77.4 484.2,77.4 486.6,77.4 488.9,77.4 491.3,77.3 493.6,77.3 496.0,77.3 498.3,77.3 500.7,77.3 503.0,77.3 505.4,77.3 507.7,77.3 510.1,77.3 512.4,77.3 514.8,77.3 517.1,77.3 519.5,77.3 521.8,77.3 524.2,77.3 526.5,77.3 528.8,77.3 531.2,77.2 533.6,77.2 535.9,77.2 538.3,77.2 540.6,77.2 543.0,77.2 545.3,77.2 547.7,77.2 550.0,77.2" fill="none" stroke="#1f6f8b" stroke-width="1.5" stroke-linejoin="round"/>
+<!-- Relevés du tableau -->
+<circle cx="80.0" cy="300.0" r="4.5" fill="#d9480f" stroke="none"/>
+<circle cx="109.4" cy="212.3" r="4.5" fill="#d9480f" stroke="none"/>
+<circle cx="138.8" cy="159.2" r="4.5" fill="#d9480f" stroke="none"/>
+<circle cx="168.1" cy="126.8" r="4.5" fill="#d9480f" stroke="none"/>
+<circle cx="197.5" cy="107.3" r="4.5" fill="#d9480f" stroke="none"/>
+<circle cx="256.3" cy="88.2" r="4.5" fill="#d9480f" stroke="none"/>
+<circle cx="315.0" cy="81.2" r="4.5" fill="#d9480f" stroke="none"/>
+<circle cx="373.8" cy="78.6" r="4.5" fill="#d9480f" stroke="none"/>
+<circle cx="520.6" cy="77.3" r="4.5" fill="#d9480f" stroke="none"/>
+<rect x="332.6" y="214.6" width="222.0" height="52.0" fill="#ffffff" stroke="#d4d4d4" stroke-width="1"/>
+<circle cx="346.6" cy="231.6" r="4.5" fill="#d9480f" stroke="none"/>
+<text x="358.6" y="236.6" font-size="14" fill="#111">relevés du tableau</text>
+<text x="344.6" y="257.6" font-size="13" fill="#777">commande : 0 → 10 V à t = 0</text>
+</svg>

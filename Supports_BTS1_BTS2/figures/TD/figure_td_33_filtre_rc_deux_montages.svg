@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="800" height="260" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Filtre RC : (a) sortie aux bornes du condensateur, (b) R et C permutés, sortie aux bornes de la résistance">
+<rect id="fond-blanc" x="0" y="0" width="800" height="260" fill="#ffffff"/>
+<!-- Montage (a) sortie aux bornes de C -->
+<circle cx="70.0" cy="60.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<circle cx="70.0" cy="190.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<line x1="50.0" y1="182.0" x2="50.0" y2="78.0" stroke="#d9480f" stroke-width="2.5"/>
+<polygon points="50.0,68.0 54.5,78.0 45.5,78.0" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="42.0" y="131.0" font-size="16" text-anchor="end" fill="#d9480f" font-weight="bold" font-style="italic">e</text>
+<line x1="74.5" y1="60.0" x2="120.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<rect x="120.0" y="50.0" width="60.0" height="20.0" fill="none" stroke="#111" stroke-width="2"/>
+<text x="150.0" y="42.0" font-size="15" text-anchor="middle" fill="#111">R = 3,3 kΩ</text>
+<line x1="180.0" y1="60.0" x2="325.5" y2="60.0" stroke="#111" stroke-width="2"/>
+<circle cx="230.0" cy="60.0" r="3.5" fill="#111" stroke="none"/>
+<line x1="230.0" y1="60.0" x2="230.0" y2="120.0" stroke="#111" stroke-width="2"/>
+<line x1="212.0" y1="120.0" x2="248.0" y2="120.0" stroke="#111" stroke-width="3"/>
+<line x1="212.0" y1="130.0" x2="248.0" y2="130.0" stroke="#111" stroke-width="3"/>
+<line x1="230.0" y1="130.0" x2="230.0" y2="190.0" stroke="#111" stroke-width="2"/>
+<text x="254.0" y="130.0" font-size="15" fill="#111">C = 10 nF</text>
+<circle cx="230.0" cy="190.0" r="3.5" fill="#111" stroke="none"/>
+<line x1="74.5" y1="190.0" x2="325.5" y2="190.0" stroke="#111" stroke-width="2"/>
+<circle cx="330.0" cy="60.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<circle cx="330.0" cy="190.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<line x1="352.0" y1="182.0" x2="352.0" y2="78.0" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="352.0,68.0 356.5,78.0 347.5,78.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="360.0" y="131.0" font-size="16" fill="#1f6f8b" font-weight="bold" font-style="italic">s</text>
+<text x="200.0" y="238.0" font-size="14" text-anchor="middle" fill="#111">(a) sortie aux bornes de C</text>
+<line x1="400.0" y1="20.0" x2="400.0" y2="215.0" stroke="#d4d4d4" stroke-width="1.5" stroke-dasharray="6 5"/>
+<!-- Montage (b) R et C permutés : sortie aux bornes de R -->
+<circle cx="470.0" cy="60.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<circle cx="470.0" cy="190.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<line x1="450.0" y1="182.0" x2="450.0" y2="78.0" stroke="#d9480f" stroke-width="2.5"/>
+<polygon points="450.0,68.0 454.5,78.0 445.5,78.0" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="442.0" y="131.0" font-size="16" text-anchor="end" fill="#d9480f" font-weight="bold" font-style="italic">e</text>
+<line x1="474.5" y1="60.0" x2="520.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<line x1="545.0" y1="42.0" x2="545.0" y2="78.0" stroke="#111" stroke-width="3"/>
+<line x1="555.0" y1="42.0" x2="555.0" y2="78.0" stroke="#111" stroke-width="3"/>
+<text x="550.0" y="34.0" font-size="15" text-anchor="middle" fill="#111">C = 10 nF</text>
+<line x1="555.0" y1="60.0" x2="725.5" y2="60.0" stroke="#111" stroke-width="2"/>
+<line x1="520.0" y1="60.0" x2="545.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<circle cx="630.0" cy="60.0" r="3.5" fill="#111" stroke="none"/>
+<line x1="630.0" y1="60.0" x2="630.0" y2="95.0" stroke="#111" stroke-width="2"/>
+<rect x="620.0" y="95.0" width="20.0" height="60.0" fill="none" stroke="#111" stroke-width="2"/>
+<line x1="630.0" y1="155.0" x2="630.0" y2="190.0" stroke="#111" stroke-width="2"/>
+<text x="650.0" y="130.0" font-size="15" fill="#111">R = 3,3 kΩ</text>
+<circle cx="630.0" cy="190.0" r="3.5" fill="#111" stroke="none"/>
+<line x1="474.5" y1="190.0" x2="725.5" y2="190.0" stroke="#111" stroke-width="2"/>
+<circle cx="730.0" cy="60.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<circle cx="730.0" cy="190.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<line x1="752.0" y1="182.0" x2="752.0" y2="78.0" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="752.0,68.0 756.5,78.0 747.5,78.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="760.0" y="131.0" font-size="16" fill="#1f6f8b" font-weight="bold" font-style="italic">s</text>
+<text x="600.0" y="238.0" font-size="14" text-anchor="middle" fill="#111">(b) R et C permutés : sortie aux bornes de R</text>
+</svg>

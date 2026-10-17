@@ -1,4 +1,6 @@
 # BTS CIEL : Physique
+
+
 ## Recueil de cours
 
 ## Table des matières
@@ -33,11 +35,23 @@
     - [3.5 Ondes électromagnétiques : propriétés](#35-ondes-électromagnétiques--propriétés)
     - [3.6 Classification du spectre électromagnétique](#36-classification-du-spectre-électromagnétique)
     - [3.7 Polarisation d'une onde électromagnétique](#37-polarisation-dune-onde-électromagnétique)
+      - [Mise en équation de la polarisation](#mise-en-équation-de-la-polarisation)
+      - [Recevoir une onde polarisée : loi de Malus et pertes de polarisation](#recevoir-une-onde-polarisée--loi-de-malus-et-pertes-de-polarisation)
+      - [Conséquences et applications de la polarisation](#conséquences-et-applications-de-la-polarisation)
     - [3.8 Antennes, réflexion et réfraction en espace libre](#38-antennes-réflexion-et-réfraction-en-espace-libre)
+      - [L'antenne quart d'onde : pourquoi la longueur d'une antenne dépend de λ](#lantenne-quart-donde--pourquoi-la-longueur-dune-antenne-dépend-de-λ)
     - [3.9 Liaison hertzienne](#39-liaison-hertzienne)
+      - [LoRa et LoRaWAN : un réseau radio longue portée pour l'IoT](#lora-et-lorawan--un-réseau-radio-longue-portée-pour-liot)
     - [3.10 Modélisation d'une ligne de transmission](#310-modélisation-dune-ligne-de-transmission)
     - [3.11 Propagation impulsionnelle et réflexions](#311-propagation-impulsionnelle-et-réflexions)
+      - [Coefficient de vélocité, célérité et retard dans un câble](#coefficient-de-vélocité-célérité-et-retard-dans-un-câble)
+      - [Le réflectomètre (TDR) : localiser un défaut par son écho](#le-réflectomètre-tdr--localiser-un-défaut-par-son-écho)
+      - [Lire un écho : signe et amplitude selon la charge](#lire-un-écho--signe-et-amplitude-selon-la-charge)
     - [3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique](#312-taux-dondes-stationnaires-tos-et-atténuation-linéique)
+      - [D'où vient le TOS : ondes incidente, réfléchie et stationnaire](#doù-vient-le-tos--ondes-incidente-réfléchie-et-stationnaire)
+      - [Interpréter un TOS : valeurs repères et puissance réfléchie](#interpréter-un-tos--valeurs-repères-et-puissance-réfléchie)
+      - [Atténuation linéique : mesurer, calculer, convertir](#atténuation-linéique--mesurer-calculer-convertir)
+      - [Exemple résolu complet : diagnostic du câble d'une antenne](#exemple-résolu-complet--diagnostic-du-câble-dune-antenne)
     - [Erreurs fréquentes des étudiants](#erreurs-fréquentes-des-étudiants-1)
   - [Chapitre 4 : Systèmes bouclés et asservissement](#chapitre-4--systèmes-bouclés-et-asservissement)
     - [4.1 Boucle ouverte, boucle fermée : vocabulaire et principes](#41-boucle-ouverte-boucle-fermée--vocabulaire-et-principes)
@@ -60,6 +74,7 @@
     - [6.1 Indice de réfraction et propagation de la lumière](#61-indice-de-réfraction-et-propagation-de-la-lumière)
     - [6.2 Réflexion, réfraction et réflexion totale](#62-réflexion-réfraction-et-réflexion-totale)
     - [6.3 La fibre optique : structure et principe](#63-la-fibre-optique--structure-et-principe)
+      - [Choisir une fibre : critères et conséquences](#choisir-une-fibre--critères-et-conséquences)
     - [6.4 Dispersion, bande passante et atténuation d'une fibre optique](#64-dispersion-bande-passante-et-atténuation-dune-fibre-optique)
     - [6.5 Le spectre optique : infrarouge, visible, ultraviolet](#65-le-spectre-optique--infrarouge-visible-ultraviolet)
     - [Erreurs fréquentes des étudiants](#erreurs-fréquentes-des-étudiants-4)
@@ -1142,6 +1157,105 @@ Le classement se fait uniquement selon la fréquence (ou la longueur d'onde), du
 
 > → **Application concrète :** **Les antennes à double polarisation des points d'accès Wi-Fi et de la 5G.** Pour doubler le débit sans élargir la bande de fréquence, les équipements MIMO émettent simultanément deux flux sur deux polarisations orthogonales (horizontale et verticale) : le récepteur les sépare grâce à leurs polarisations différentes. C'est aussi pour cette raison que l'orientation des antennes d'un point d'accès n'est pas anodine.
 
+#### Mise en équation de la polarisation
+
+- Considérons une onde qui se propage selon l'axe z. Ses champs $\vec{E}$ et $\vec{B}$ restent dans le plan (x, y), perpendiculaire à la direction de propagation (§3.5). **La polarisation est la direction du champ électrique $\vec{E}$ dans ce plan, et la façon dont cette direction évolue au cours du temps.** On suit toujours $\vec{E}$ : le champ $\vec{B}$ s'en déduit, puisqu'il lui est perpendiculaire et que B = E/c (équation (24)).
+- Le champ électrique se décompose sur les deux axes x et y du plan. Chaque composante est une onde sinusoïdale (§3.2) ; elles ont la même fréquence, mais peuvent avoir des amplitudes et des phases différentes :
+
+<a id="eq-24a"></a>
+
+$$\vec{E}(z,t) = E_x \cos(\omega t - kz)\,\vec{u}_x + E_y \cos(\omega t - kz + \varphi)\,\vec{u}_y \tag{24a}$$
+
+  avec ω = 2πf la pulsation (rad/s), k = 2π/λ le nombre d'onde (rad/m ; à ne pas confondre avec le coefficient de vélocité k d'un câble, §3.11), E_x et E_y les amplitudes des deux composantes (V/m), $\vec{u}_x$ et $\vec{u}_y$ les vecteurs unitaires des axes, et φ le **déphasage** entre les deux composantes (rad).
+
+- Pour « voir » la polarisation, on se place en un point fixe (par exemple z = 0) et on suit l'extrémité du vecteur $\vec{E}$ pendant une période. Tout dépend du déphasage φ (Figure 83).
+
+**Cas φ = 0 ou φ = π : polarisation rectiligne.** Les deux composantes passent par zéro en même temps et gardent un rapport constant : $\vec{E}$ oscille le long d'une droite fixe, qui fait avec l'axe x l'angle :
+
+<a id="eq-24b"></a>
+
+$$\theta = \arctan\!\left(\dfrac{E_y}{E_x}\right) \tag{24b}$$
+
+Pour φ = π, la droite est symétrique, d'angle −θ. Cas particuliers : E_y = 0 donne une polarisation selon x, E_x = 0 une polarisation selon y. Pour une antenne, on parle de polarisation **verticale** ou **horizontale** selon l'orientation de $\vec{E}$ par rapport au sol.
+
+**Cas φ = ±π/2 avec E_x = E_y = E₀ : polarisation circulaire.** Avec φ = −π/2, en z = 0 : E_x = E₀ cos(ωt) et E_y = E₀ cos(ωt − π/2) = E₀ sin(ωt). La norme $\sqrt{E_x^2 + E_y^2} = E_0$ reste constante et l'extrémité de $\vec{E}$ décrit un cercle, à raison d'un tour par période. Le signe de φ fixe le sens de rotation : avec φ = −π/2, $\vec{E}$ tourne de $\vec{u}_x$ vers $\vec{u}_y$ ; c'est la polarisation circulaire **droite** au sens des télécommunications (règle de la main droite : pouce dans le sens de propagation, les doigts indiquent le sens de rotation), notée RHCP (*Right Hand Circular Polarization*). Avec φ = +π/2, $\vec{E}$ tourne en sens inverse : polarisation circulaire **gauche** (LHCP). Certains ouvrages d'optique utilisent la convention inverse : on précise donc toujours la convention, ou l'on emploie les sigles RHCP et LHCP des fiches techniques.
+
+**Cas général : polarisation elliptique.** Pour toute autre valeur du déphasage (ou pour φ = ±π/2 avec E_x ≠ E_y), l'extrémité de $\vec{E}$ décrit une ellipse : $\vec{E}$ tourne et sa norme varie. Les polarisations rectiligne et circulaire sont des cas particuliers de la polarisation elliptique (ellipse aplatie en segment, ou ellipse devenue cercle).
+
+| Déphasage φ | Amplitudes | Trajectoire de l'extrémité de $\vec{E}$ | Polarisation |
+|---|---|---|---|
+| 0 ou π | quelconques | segment de droite d'angle θ | rectiligne |
+| ±π/2 | E_x = E_y | cercle | circulaire (droite ou gauche selon le signe de φ) |
+| autre valeur | quelconques | ellipse | elliptique |
+
+<p align="center">
+<img src="figures/cours/figure_83_polarisation_rectiligne_circulaire_elliptique.svg" alt="Figure 83 : Polarisation rectiligne, circulaire et elliptique"/>
+</p>
+
+<p align="center"><em>Figure 83 : Polarisation rectiligne, circulaire et elliptique : trajectoire de l'extrémité de E dans le plan perpendiculaire à la propagation.</em></p>
+
+- **Lumière naturelle.** Le Soleil, une lampe ou une LED émettent une multitude de trains d'ondes courts et indépendants : la direction de $\vec{E}$ change au hasard, extrêmement vite. Cette lumière est dite **non polarisée**. Un laser ou une antenne émettent au contraire une onde polarisée.
+
+*Exemple résolu :* une onde a pour composantes E_x = 4,0 V/m et E_y = 3,0 V/m, en phase (φ = 0).
+
+Sa polarisation est rectiligne, d'angle θ = arctan(3,0/4,0) ≈ 36,9° par rapport à l'axe x, et l'amplitude du champ vaut $\sqrt{4{,}0^2 + 3{,}0^2} = 5{,}0$ V/m. Si les deux composantes avaient la même amplitude et un déphasage de −π/2, la polarisation serait circulaire droite.
+
+> → **Sur le terrain :** un fouet, un dipôle ou un monopole rayonnent en polarisation rectiligne, parallèle à leur brin. Avant de fixer une antenne, le technicien lit sa polarisation sur la fiche technique (verticale, horizontale, ±45°, circulaire RHCP ou LHCP) et vérifie que l'antenne d'en face a la même.
+
+#### Recevoir une onde polarisée : loi de Malus et pertes de polarisation
+
+- **Polariseur et loi de Malus.** Un polariseur (filtre polarisant en optique, grille de fils métalliques parallèles pour les ondes radio) ne laisse passer que la composante de $\vec{E}$ parallèle à son axe. Si une onde polarisée rectilignement arrive avec un angle θ entre son champ et l'axe du polariseur, le champ transmis vaut E₀ cos θ. L'intensité (puissance par unité de surface) étant proportionnelle à E² (§3.5, p = E²/Z₀), elle est multipliée par cos²θ : c'est la **loi de Malus**.
+
+<a id="eq-24c"></a>
+
+$$I = I_0 \cos^2\theta \tag{24c}$$
+
+  avec I₀ l'intensité incidente et I l'intensité transmise (W/m²). Pour θ = 0, tout passe ; pour θ = 90°, rien ne passe (polariseurs croisés : extinction). Une lumière non polarisée qui traverse un polariseur perd la moitié de son intensité (la valeur moyenne de cos²θ vaut 1/2).
+
+- **Antenne de réception tournée.** Une antenne rectiligne (dipôle, monopole, fouet) se comporte comme un polariseur : elle ne capte que la composante du champ parallèle à son brin (Figure 84). Si elle est tournée d'un angle θ par rapport à la polarisation de l'onde, la tension induite est multipliée par cos θ et la puissance reçue par cos²θ. Exprimée en dB, cette **perte de désadaptation de polarisation** vaut :
+
+<a id="eq-24d"></a>
+
+$$L_{pol(dB)} = -20 \log_{10}\lvert\cos\theta\rvert = -10 \log_{10}(\cos^2\theta) \tag{24d}$$
+
+| Désalignement θ | 0° | 30° | 45° | 60° | 80° | 90° (polarisation croisée) |
+|---|---|---|---|---|---|---|
+| Puissance reçue (cos²θ) | 100 % | 75 % | 50 % | 25 % | 3 % | 0 % en théorie |
+| Pertes L_pol | 0 dB | 1,2 dB | 3 dB | 6 dB | 15 dB | infinies en théorie, 20 à 30 dB en pratique |
+
+  En polarisation croisée (θ = 90°), la théorie prédit une extinction totale. En pratique, les antennes ne sont pas parfaites et les réflexions sur les obstacles modifient la polarisation : on mesure plutôt 20 à 30 dB de pertes. Un écart de seulement 2° par rapport à 90° (θ = 88°) donne d'ailleurs déjà 29 dB : l'extinction parfaite n'existe pas.
+
+- **Onde circulaire reçue par une antenne rectiligne.** Le champ d'une onde circulaire tourne : une antenne rectiligne en capte toujours la projection sur son brin, quelle que soit son orientation, et reçoit en moyenne la moitié de la puissance : **3 dB de pertes, pour tout angle θ**. Inversement, une antenne circulaire qui reçoit une onde rectiligne perd aussi 3 dB. En revanche, une antenne circulaire droite (RHCP) qui reçoit une onde circulaire gauche (LHCP) est en polarisation croisée : les pertes sont très fortes.
+
+<p align="center">
+<img src="figures/cours/figure_84_antenne_tournee_et_pertes_de_polarisation.svg" alt="Figure 84 : Antenne de réception tournée d'un angle θ et pertes de polarisation"/>
+</p>
+
+<p align="center"><em>Figure 84 : Antenne de réception tournée d'un angle θ : seule la composante E cos θ est captée ; pertes de polarisation en dB en fonction de θ.</em></p>
+
+*Exemple résolu :* un point d'accès Wi-Fi émet en polarisation verticale. Un client dont l'antenne est verticale reçoit −60 dBm, et sa sensibilité pour le débit visé est de −75 dBm (marge de 15 dB).
+- Antenne du client inclinée de 45° : L_pol = −20 log(cos 45°) = −20 log(0,707) ≈ 3,0 dB, le client reçoit −63 dBm.
+- Antenne inclinée de 70° : L_pol = −20 log(cos 70°) = −20 log(0,342) ≈ 9,3 dB, le client reçoit −69,3 dBm : la marge tombe de 15 dB à 5,7 dB. Une simple antenne mal orientée consomme près des deux tiers de la marge.
+
+> → **Sur le terrain :** à l'installation d'un pont radio ou d'une antenne de passerelle, on aligne les polarisations des deux extrémités (même orientation, vérifiée au niveau à bulle). Un écart de 10° ne coûte que 0,13 dB, mais une antenne posée à plat au lieu d'être verticale peut faire perdre 20 dB et couper la liaison.
+
+#### Conséquences et applications de la polarisation
+
+- **Orientation des antennes Wi-Fi.** Les antennes des points d'accès sont le plus souvent des dipôles verticaux (polarisation verticale). Un ordinateur portable ou un téléphone a des antennes intégrées d'orientation quelconque, qui change selon la façon dont on le tient. C'est pourquoi, sur une box ou un point d'accès à deux antennes orientables, on conseille d'en placer une verticale et l'autre horizontale (ou les deux à 45°) : quelle que soit l'orientation du client, au moins une antenne reçoit correctement. En intérieur, les réflexions multiples mélangent les polarisations, ce qui atténue le problème ; en extérieur et en vue directe, l'alignement compte beaucoup plus.
+- **Double polarisation et MIMO.** Deux polarisations orthogonales (horizontale et verticale, ou +45° et −45°) se comportent comme deux canaux indépendants sur la **même fréquence**. Une antenne à double polarisation émet deux flux de données différents en même temps, et le récepteur les sépare grâce à l'isolation entre polarisations croisées (20 à 30 dB). Le débit double sans occuper de bande supplémentaire : c'est l'un des ressorts du MIMO 2×2 du Wi-Fi et des antennes « ±45° » des mâts 4G/5G.
+- **Réutilisation des fréquences en faisceaux hertziens.** Un opérateur qui relie deux pylônes peut transmettre deux liaisons sur la même fréquence, l'une en polarisation horizontale (H), l'autre en polarisation verticale (V), un circuit compensant les fuites d'une polarisation dans l'autre : la capacité du faisceau double. Sur des liaisons voisines, on alterne les polarisations pour limiter les interférences.
+- **Polarisation circulaire du GPS et des satellites.** Les satellites GPS et Galileo émettent en polarisation circulaire droite (RHCP), pour trois raisons :
+  1. un récepteur embarqué (voiture, téléphone, drone) change sans cesse d'orientation, et une onde circulaire est reçue de la même façon quelle que soit l'orientation de l'antenne ;
+  2. en traversant l'ionosphère, une onde rectiligne voit son plan de polarisation tourner de façon imprévisible (**rotation de Faraday**, due au champ magnétique terrestre) ; une onde circulaire n'y est pas sensible ;
+  3. une réflexion sur le sol ou sur un immeuble inverse le sens de rotation (RHCP devient LHCP) : une antenne RHCP rejette en grande partie ces échos parasites (trajets multiples), qui dégradent la précision de la position.
+
+  La petite antenne rectiligne d'un smartphone accepte, elle, de perdre 3 dB.
+- **La réflexion modifie la polarisation.** Lors d'une réflexion sur une surface (eau, route mouillée, vitre, sol), la composante de $\vec{E}$ parallèle à la surface est mieux réfléchie que la composante située dans le plan d'incidence. Pour un angle d'incidence particulier, l'**incidence de Brewster** (tan θ_B = n₂/n₁, soit environ 53° pour l'eau et 56° pour le verre), cette seconde composante n'est plus du tout réfléchie : le reflet est polarisé rectilignement, parallèlement à la surface (horizontalement pour un sol ou un plan d'eau). Les **lunettes de soleil polarisantes**, dont l'axe est vertical, éliminent ces reflets grâce à la loi de Malus ; les photographes utilisent des filtres polarisants pour la même raison. En radio, les réflexions sur les murs et le sol modifient de même la polarisation : c'est une des raisons pour lesquelles l'isolation entre polarisations croisées reste limitée en pratique.
+- **Écrans LCD.** Chaque pixel d'un écran à cristaux liquides est placé entre deux polariseurs croisés. Selon la tension appliquée, le cristal liquide fait tourner ou non de 90° la polarisation de la lumière, qui traverse alors le second polariseur ou est bloquée (loi de Malus). La lumière qui sort d'un écran LCD est donc polarisée : à travers des lunettes polarisantes, l'écran peut devenir noir quand on penche la tête de 90°.
+- **Fibres à maintien de polarisation (ouverture).** Dans une fibre optique ordinaire (Chapitre 6), la polarisation de la lumière change de façon aléatoire au gré des courbures et des contraintes mécaniques. Certains composants (modulateurs, capteurs et gyroscopes à fibre) exigent une polarisation fixe : on utilise alors des **fibres à maintien de polarisation**, dont le cœur est encadré de barreaux de contrainte. À l'inverse, les liaisons optiques cohérentes à 100 Gbit/s et plus transmettent deux flux sur deux polarisations orthogonales (multiplexage de polarisation), exactement comme le MIMO en radio.
+
+> → **Sur le terrain :** sur une box à deux antennes, placer une antenne verticale et l'autre horizontale (ou les deux à 45°) ; pour une antenne extérieure, respecter la polarisation de la fiche technique et celle de l'antenne d'en face ; pour le récepteur GPS qui horodate un serveur NTP ou une supervision, choisir une antenne RHCP placée en vue dégagée du ciel.
+
 <a id="sec-3-8-antennes-reflexion-et-refraction-en-espace-libre"></a>
 
 ### 3.8 Antennes, réflexion et réfraction en espace libre
@@ -1166,6 +1280,77 @@ Le classement se fait uniquement selon la fréquence (ou la longueur d'onde), du
 
 > → **Application concrète :** **Le déploiement Wi-Fi d'un bâtiment ("site survey").** Avant d'installer des bornes, un technicien réseau réalise une étude de couverture : il mesure le niveau reçu pièce par pièce, repère les zones d'ombre créées par les murs porteurs (réflexion) et les cloisons (réfraction/atténuation), et choisit l'emplacement et le type d'antenne (omnidirectionnelle ou directive) en conséquence, exactement comme dans la partie 6 de l'annale 2026.
 
+#### L'antenne quart d'onde : pourquoi la longueur d'une antenne dépend de λ
+
+**La résonance d'un brin d'antenne**
+
+- Une antenne filaire est un conducteur ouvert à son extrémité. L'onde de courant envoyée par l'émetteur parcourt le brin, se réfléchit au bout (extrémité ouverte : ρ = +1, voir §3.11) et revient. L'onde aller et l'onde retour se superposent et forment une **onde stationnaire** sur le brin, exactement comme sur une ligne non adaptée (§3.12) ou sur une corde de guitare.
+- Au bout du brin, aucun courant ne peut sortir : le courant y est **nul** (nœud de courant) et la tension **maximale**. Un quart de longueur d'onde plus loin, on trouve un **ventre de courant** : le courant y est maximal et la tension minimale.
+- L'antenne est **résonante** lorsque sa longueur place ce ventre de courant au point d'alimentation. L'émetteur « voit » alors une impédance purement résistive (la partie réactive s'annule, comme pour un circuit RLC à la résonance, §1.2) ; un fort courant circule dans le brin et l'antenne rayonne efficacement. Une antenne trop courte ou trop longue présente une impédance réactive : elle est désadaptée, et une grande partie de la puissance est renvoyée vers l'émetteur (TOS élevé, §3.12).
+- Comme la corde de guitare qui ne vibre bien qu'aux fréquences fixées par sa longueur, une antenne ne rayonne bien qu'autour de la fréquence fixée par la longueur de son brin.
+
+**Le dipôle demi-onde**
+
+- L'antenne de référence est le **dipôle demi-onde** : deux brins de λ/4 alimentés en leur milieu, soit une longueur totale de λ/2. Le courant est maximal au centre (point d'alimentation) et nul aux deux extrémités (Figure 85).
+- À la résonance, son impédance d'entrée est résistive et vaut environ **73 Ω**. Son gain est de 2,15 dBi (§3.9).
+
+<p align="center">
+<img src="figures/cours/figure_85_dipole_demi_onde_courant_et_tension.svg" alt="Figure 85 : Dipôle demi-onde : courant et tension sur les brins"/>
+</p>
+
+<p align="center"><em>Figure 85 : Dipôle demi-onde : le courant (maximal au centre) et la tension (maximale aux extrémités) forment une onde stationnaire sur les brins.</em></p>
+
+**Le monopole quart d'onde et son plan de masse**
+
+- On peut supprimer la moitié inférieure du dipôle et la remplacer par une surface métallique, le **plan de masse** : tôle, toit d'un véhicule, cuivre d'un circuit imprimé, ou trois ou quatre tiges appelées radians. Le plan de masse se comporte comme un **miroir** pour l'onde : les courants qu'il porte produisent, au-dessus du plan, le même champ qu'un brin « image » symétrique situé sous le plan. Monopole λ/4 + image = dipôle λ/2 : au-dessus du plan, on retrouve le rayonnement d'un dipôle avec une antenne deux fois plus courte (Figure 86).
+- Le monopole n'alimente que la moitié de la structure équivalente : pour un même courant, la tension d'alimentation est divisée par deux, et son impédance d'entrée vaut la moitié de celle du dipôle, soit **≈ 36 Ω**.
+- Le plan de masse doit s'étendre sur au moins λ/4 autour du pied de l'antenne ; un plan trop petit décale la résonance et dégrade le TOS.
+
+Les longueurs résonantes théoriques à retenir sont donc :
+
+<a id="eq-24e"></a>
+
+$$\ell_{\text{dipôle}} = \dfrac{\lambda}{2} \qquad \ell_{\text{monopôle}} = \dfrac{\lambda}{4} = \dfrac{c_0}{4f} \tag{24e}$$
+
+avec ℓ la longueur du brin (m), λ = c₀/f la longueur d'onde **dans l'air** (m), c₀ ≈ 3,0×10⁸ m/s et f la fréquence d'utilisation (Hz).
+
+<p align="center">
+<img src="figures/cours/figure_86_monopole_quart_d_onde_plan_de_masse_et_image.svg" alt="Figure 86 : Monopole quart d'onde sur plan de masse et son image électrique"/>
+</p>
+
+<p align="center"><em>Figure 86 : Monopole quart d'onde sur plan de masse et son image électrique : l'ensemble rayonne comme un dipôle demi-onde.</em></p>
+
+**Impédance d'entrée et adaptation au câble 50 Ω**
+
+- Les émetteurs et les câbles radio sont normalisés à 50 Ω (§3.10). Une antenne qui présente 50 Ω à sa fréquence de travail est dite **accordée** : elle ne renvoie presque rien vers l'émetteur (TOS proche de 1).
+- Un dipôle (73 Ω) branché sur un câble 50 Ω donne ρ = (73 − 50)/(73 + 50) ≈ +0,19 et un TOS ≈ 1,46 ; un monopole (36 Ω) donne ρ ≈ −0,16 et un TOS ≈ 1,39 (méthode de calcul au §3.11 et au §3.12). Ces valeurs restent sous la limite usuelle de 1,5 : c'est pourquoi ces deux antennes simples sont si répandues. Les fabricants les ajustent ensuite vers 50 Ω, par exemple en inclinant les radians d'un monopole d'environ 45° vers le bas, ce qui remonte son impédance vers 50 Ω, ou en ajoutant un petit circuit d'adaptation.
+
+**Longueur pratique : le raccourcissement**
+
+- La longueur λ/4 est une valeur théorique, valable pour un fil infiniment fin. Un conducteur réel a un diamètre, et son extrémité se comporte comme une petite capacité qui « allonge » électriquement le brin (effet de bout). Pour résonner à la bonne fréquence, on coupe donc le brin environ 5 % plus court :
+
+<a id="eq-24f"></a>
+
+$$\ell_{\text{pratique}} \approx 0{,}95 \times \dfrac{\lambda}{4} \tag{24f}$$
+
+- Le coefficient exact (de 0,93 à 0,98 environ) dépend du diamètre du conducteur : on l'ajuste à la mesure, en raccourcissant le brin jusqu'à obtenir le TOS minimal à la fréquence voulue. Une antenne gravée sur un circuit imprimé ou en céramique est encore plus courte, car l'onde y est ralentie par l'isolant, comme dans un câble (§3.11).
+- Dans les exercices, sauf indication contraire, on calcule la longueur théorique λ/4.
+
+| Usage | Fréquence | λ = c₀/f | Monopole λ/4 (théorique) | Longueur pratique ≈ 0,95 × λ/4 | Dipôle λ/2 |
+|---|---|---|---|---|---|
+| Radio FM (antenne fouet de voiture) | 100 MHz | 3,00 m | 75 cm | ≈ 71 cm | 1,50 m |
+| Télécommande, capteur radio 433 MHz | 433 MHz | 69,3 cm | 17,3 cm | ≈ 16,5 cm | 34,6 cm |
+| LoRa, Sigfox (Europe) | 868 MHz | 34,6 cm | 8,6 cm | ≈ 8,2 cm | 17,3 cm |
+| Wi-Fi, Bluetooth | 2,4 GHz | 12,5 cm | 3,1 cm | ≈ 3,0 cm | 6,25 cm |
+
+*Exemple résolu :* dimensionner l'antenne quart d'onde d'un module Wi-Fi à 2,4 GHz.
+
+λ = c₀/f = 3,0×10⁸ / 2,4×10⁹ = 0,125 m = 12,5 cm (équation (22)) ; ℓ = λ/4 = 3,125 cm ≈ 3,1 cm (24e) ; en pratique ℓ ≈ 0,95 × 3,125 ≈ 2,97 cm, soit environ 3,0 cm (24f). L'antenne est montée sur un plan de masse d'au moins λ/4 ≈ 3 cm de rayon, et présente environ 36 Ω.
+
+> → **Application concrète :** **Les antennes des objets connectés et des points d'accès.** Le fil d'environ 8 cm qui dépasse d'un module LoRa, l'antenne-tige d'un routeur Wi-Fi (un dipôle d'environ 6 cm sous son capuchon), la piste en zigzag gravée au bout d'un module ESP32 (un quart d'onde replié) : toutes ces antennes sont des λ/4 ou des λ/2, taillées pour leur bande. Conséquence : une antenne 868 MHz vissée sur un équipement 2,4 GHz, même si le connecteur SMA est identique, est complètement désadaptée : TOS élevé et portée effondrée.
+
+> → **Sur le terrain :** avant de monter une antenne, vérifier que sa bande (marquée sur l'antenne ou sa fiche technique) correspond à celle de l'équipement, qu'elle dispose de son plan de masse, puis contrôler le TOS à l'analyseur d'antenne : le minimum du TOS doit tomber sur la fréquence de travail. S'il tombe plus bas en fréquence, le brin est trop long ; plus haut, il est trop court.
+
 ---
 
 <a id="sec-3-9-liaison-hertzienne"></a>
@@ -1187,6 +1372,95 @@ $$E = \dfrac{\alpha \sqrt{P_0}}{d} \tag{25}$$
 <p align="center"><em>Figure 39 : Bilan de liaison hertzienne.</em></p>
 
 > → **Application concrète :** **La liaison radio entre deux bâtiments (pont Wi-Fi ou faisceau hertzien).** Pour relier deux sites distants de quelques kilomètres sans tirer de fibre, on installe un faisceau hertzien avec deux antennes directives en vis-à-vis. Le bilan de liaison (puissance émise, gains d'antennes, atténuation en espace libre selon la distance) détermine si la liaison sera fiable : c'est exactement le calcul de la partie 5 de l'annale 2025 sur les capteurs LoRa.
+
+#### LoRa et LoRaWAN : un réseau radio longue portée pour l'IoT
+
+**Le besoin : envoyer peu, loin, pendant des années**
+
+Un compteur d'eau, un capteur de place de parking ou une sonde de température n'envoie que quelques octets, quelques fois par heure. En revanche, il doit le faire à plusieurs kilomètres, sans fil, et fonctionner 5 à 10 ans sur une simple pile. Ni le Wi-Fi ou le Bluetooth (portée de quelques dizaines de mètres), ni la 4G (consommation et abonnement) ne conviennent. On utilise alors un **LPWAN** (*Low Power Wide Area Network*, réseau étendu à basse consommation) : LoRaWAN, Sigfox, ou les versions bas débit de la 4G et de la 5G (NB-IoT, LTE-M).
+
+**LoRa : la modulation radio**
+
+- **LoRa** (*Long Range*) désigne la couche physique, c'est-à-dire la façon dont les bits sont transformés en onde radio. LoRa utilise un **étalement de spectre par « chirp »** (*Chirp Spread Spectrum*) : chaque symbole est un « chirp », un signal dont la fréquence balaie à vitesse constante toute la largeur du canal (en général B = 125 kHz), comme un sifflement qui monte. L'information est codée par la fréquence à laquelle le balayage commence (Figure 87).
+- Le **facteur d'étalement** SF (*Spreading Factor*, de 7 à 12) fixe la durée d'un chirp : chaque symbole transporte SF bits et dure $T_s = 2^{SF}/B$. Augmenter SF de 1 double la durée du symbole : le débit est environ divisé par deux, mais le récepteur accumule deux fois plus d'énergie par symbole et gagne environ 2,5 dB de sensibilité.
+- Le récepteur compare le signal reçu à un chirp de référence : cette opération concentre toute l'énergie du symbole et permet de décoder un signal **plus faible que le bruit** (jusqu'à 20 dB sous le niveau du bruit en SF12, voir le SNR au §2.2). C'est ce qui donne à LoRa son excellente **sensibilité** : de l'ordre de −120 à −137 dBm, contre environ −80 à −90 dBm pour le Wi-Fi.
+
+<p align="center">
+<img src="figures/cours/figure_87_modulation_lora_chirps.svg" alt="Figure 87 : Modulation LoRa : chirps de préambule et symboles de données"/>
+</p>
+
+<p align="center"><em>Figure 87 : Modulation LoRa : chaque symbole est un balayage en fréquence (chirp) sur la largeur B du canal ; le point de départ du chirp porte l'information.</em></p>
+
+| Facteur d'étalement SF | Durée d'un symbole (B = 125 kHz) | Débit utile | Sensibilité typique | Durée d'un message d'une trentaine d'octets |
+|---|---|---|---|---|
+| 7 | ≈ 1 ms | ≈ 5,5 kbit/s | ≈ −123 dBm | ≈ 70 ms |
+| 9 | ≈ 4 ms | ≈ 1,8 kbit/s | ≈ −129 dBm | ≈ 250 ms |
+| 12 | ≈ 33 ms | ≈ 0,3 kbit/s | ≈ −137 dBm | ≈ 1,8 s |
+
+**Une bande libre, mais réglementée**
+
+- En Europe, LoRa utilise la bande **ISM 868 MHz** (863 à 870 MHz). Elle est libre d'accès (pas de licence à payer) mais soumise à des règles strictes : puissance rayonnée limitée à 25 mW, soit **+14 dBm**, et **duty cycle** (taux d'occupation du canal) limité à **1 %** : un objet ne peut émettre que 1 % du temps, soit 36 s par heure.
+- Conséquence : en SF12, un message dure près de 2 s, et un capteur ne peut donc envoyer qu'une vingtaine de messages par heure. LoRa est fait pour des mesures espacées, pas pour la voix ni la vidéo.
+- Le choix de 868 MHz plutôt que 2,4 GHz n'est pas anodin : à gains d'antennes égaux, l'atténuation en espace libre est plus faible à basse fréquence (environ 9 dB de moins qu'à 2,4 GHz, puisque 20 log(2400/868) ≈ 8,8 dB), et l'onde traverse mieux les murs et la végétation (§3.6). Les antennes restent courtes : 8,6 cm pour un quart d'onde (§3.8).
+
+**LoRaWAN : le protocole réseau**
+
+- **LoRaWAN** est le protocole réseau construit au-dessus de la modulation LoRa (normalisé par la LoRa Alliance). Son architecture comporte quatre maillons (Figure 88) :
+  1. les **objets** (*end devices*) : capteurs ou actionneurs sur pile, équipés d'un module LoRa et d'une petite antenne quart d'onde ;
+  2. les **passerelles** (*gateways*) : récepteurs radio placés en point haut (toit, pylône, château d'eau), qui écoutent en permanence plusieurs canaux et tous les facteurs d'étalement à la fois. Une passerelle ne lit pas les données : elle les relaie telles quelles vers Internet (Ethernet, 4G, fibre). Un même message peut être reçu par plusieurs passerelles ;
+  3. le **serveur réseau** (*network server*) : il élimine les doublons, vérifie l'authenticité des messages et choisit pour chaque objet le SF le plus rapide qui garde une marge suffisante (débit adaptatif, ou ADR) ;
+  4. le **serveur applicatif** (*application server*) : il déchiffre les données et les met à disposition de l'application (tableau de bord, alertes, base de données).
+- Les données sont chiffrées (AES-128) de l'objet jusqu'au serveur applicatif : une passerelle, même installée chez un tiers, ne peut pas les lire.
+- Pour économiser sa pile, un objet de classe A (le cas le plus courant) dort presque tout le temps : il se réveille, émet son message, écoute brièvement une éventuelle réponse, puis se rendort.
+
+<p align="center">
+<img src="figures/cours/figure_88_architecture_d_un_reseau_lorawan.svg" alt="Figure 88 : Architecture d'un réseau LoRaWAN"/>
+</p>
+
+<p align="center"><em>Figure 88 : Architecture d'un réseau LoRaWAN : objets, passerelles, serveur réseau et serveur applicatif.</em></p>
+
+**Portée, bilan de liaison et marge**
+
+- Une passerelle couvre typiquement **2 à 5 km en ville** et **10 à 15 km en zone dégagée**. Comme la puissance d'émission est plafonnée par la réglementation, la portée dépend entièrement du **bilan de liaison** (§1.3, équation (10)), qui s'écrit pour une liaison radio :
+
+<a id="eq-25a"></a>
+
+$$P_{r(dBm)} = P_{e(dBm)} + G_e + G_r - L_{\text{câbles}} - A \tag{25a}$$
+
+  avec P_e la puissance de l'émetteur (dBm), G_e et G_r les gains des antennes d'émission et de réception, L_câbles les pertes des câbles et connecteurs (dB) et A l'atténuation du trajet : espace libre, murs, végétation (dB). Le gain d'une antenne s'exprime en **dBi** : c'est sa capacité à concentrer la puissance dans une direction, comparée à une antenne **isotrope** idéale qui rayonnerait de la même façon dans toutes les directions (un dipôle λ/2 a un gain de 2,15 dBi). La puissance réellement rayonnée par l'émetteur, P_e + G_e − (pertes du câble d'émission), s'appelle la **PIRE** (puissance isotrope rayonnée équivalente).
+- La **sensibilité** S du récepteur (en dBm) est la plus petite puissance reçue qui permet encore de décoder les données. La **marge** de la liaison est l'écart entre la puissance reçue et cette sensibilité :
+
+<a id="eq-25b"></a>
+
+$$M_{(dB)} = P_{r(dBm)} - S_{(dBm)} \tag{25b}$$
+
+  La liaison fonctionne si M > 0 ; en pratique, on exige au moins 10 dB de marge pour absorber les imprévus (pluie, véhicule garé au-dessus du capteur, porte métallique, vieillissement, antenne mal orientée (§3.7)).
+- Ordre de grandeur : avec P_e = +14 dBm, deux antennes de 2 dBi, 1 dB de câble et S = −137 dBm, la liaison LoRa supporte jusqu'à 14 + 2 + 2 − 1 + 137 = **154 dB** d'atténuation. Une liaison Wi-Fi (P_e = +20 dBm, S ≈ −82 dBm, mêmes antennes) n'en supporte qu'environ 105 dB. En espace libre, ces 50 dB d'écart correspondent à une distance multipliée par environ 300 : c'est le passage de la centaine de mètres à plusieurs kilomètres.
+
+*Exemple résolu :* un capteur de place de parking émet à +14 dBm avec une antenne intégrée de 0 dBi. La passerelle, sur le toit, a une antenne de 5 dBi reliée par un câble qui perd 2 dB. L'atténuation du trajet (distance et bâtiments) est estimée à 135 dB.
+
+P_r = 14 + 0 + 5 − 2 − 135 = **−118 dBm** (25a).
+
+En SF7 (S = −123 dBm) : M = −118 − (−123) = 5 dB (25b) : la liaison passe, mais la marge est insuffisante (moins de 10 dB).
+
+En SF12 (S = −137 dBm) : M = 19 dB : liaison fiable, au prix d'un débit environ 18 fois plus faible et d'un temps d'émission plus long, qui use la pile plus vite.
+
+Le serveur réseau choisira un SF intermédiaire, par exemple SF9 (S ≈ −129 dBm, M = 11 dB).
+
+**Comparaison avec les autres réseaux sans fil**
+
+| Technologie | Bande de fréquence | Portée typique | Débit | Consommation |
+|---|---|---|---|---|
+| Bluetooth Low Energy | 2,4 GHz | 10 à 50 m | 1 à 2 Mbit/s | très faible (des mois à des années sur pile bouton) |
+| Wi-Fi | 2,4 et 5 GHz | 30 à 100 m | 100 Mbit/s à plusieurs Gbit/s | élevée (secteur ou recharge fréquente) |
+| 4G / 5G | 0,7 à 3,5 GHz | 1 à 10 km autour de l'antenne relais | 10 Mbit/s à plus de 1 Gbit/s | élevée, abonnement opérateur |
+| LoRaWAN | 868 MHz (Europe) | 2 à 5 km en ville, 10 à 15 km en zone dégagée | 0,3 à 5,5 kbit/s | très faible (5 à 10 ans sur pile) |
+
+À retenir : on échange du **débit** contre de la **portée** et de l'**autonomie**. LoRaWAN transporte quelques octets très loin avec très peu d'énergie ; le Wi-Fi transporte beaucoup de données près de la borne.
+
+> → **Application concrète :** **Parking intelligent, télérelève et supervision d'une salle serveurs.** Des capteurs magnétiques noyés dans le sol d'un parking signalent si la place est libre (annale 2025, partie 5) ; les compteurs d'eau d'une ville transmettent leur index une fois par jour ; dans un datacenter, des sondes LoRaWAN de température et d'humidité, sans câble et sans pile à changer pendant des années, alertent dès qu'une baie chauffe.
+
+> → **Sur le terrain :** pour déployer un réseau LoRaWAN, le technicien place la passerelle en point haut, avec une antenne verticale de quelques dBi et un câble court et à faibles pertes (§3.12) ; il calcule puis mesure la marge de chaque capteur (au moins 10 dB), en déplaçant la passerelle ou en ajoutant une seconde passerelle si un capteur est trop juste ; enfin, il protège les clés de chiffrement des objets, cible privilégiée des attaques.
 
 <a id="sec-3-10-modelisation-d-une-ligne-de-transmission"></a>
 
@@ -1241,6 +1515,102 @@ $$E = \dfrac{\alpha \sqrt{P_0}}{d} \tag{25}$$
 
 > → **Application concrète :** **Le réflectomètre (TDR) et la localisation d'un défaut de câble.** Un testeur de câble réseau professionnel envoie une impulsion sur le câble et mesure le temps de retour de la réflexion : connaissant la célérité dans le câble, il indique à quelle distance se trouve une coupure, un court-circuit ou une mauvaise connexion, sans avoir à ouvrir les gaines. C'est exactement la démarche de la partie 4 de l'annale 2025 sur le bus RS485 : un technicien réseau utilise ce principe pour certifier un câblage.
 
+#### Coefficient de vélocité, célérité et retard dans un câble
+
+- Dans un câble, le signal est une onde électromagnétique guidée entre les conducteurs. Elle se propage dans l'isolant (le **diélectrique**) qui sépare l'âme du blindage, ce qui la ralentit : sa célérité v est toujours inférieure à c₀. On la caractérise par le **coefficient de vélocité** k (en anglais NVP, *Nominal Velocity of Propagation*, souvent donné en %), nombre sans unité compris entre 0 et 1 :
+
+<a id="eq-25c"></a>
+
+$$v = k \cdot c_0 \tag{25c}$$
+
+  avec c₀ = 3,0×10⁸ m/s. C'est la célérité notée c au §3.10 ($c = 1/\sqrt{LC} = k \cdot c_0$) ; on la note ici v pour ne pas la confondre avec c₀. Le coefficient de vélocité dépend surtout de l'isolant : plus celui-ci contient d'air (isolant « mousse »), plus k se rapproche de 1.
+
+| Câble | Isolant | Coefficient de vélocité k | Célérité v |
+|---|---|---|---|
+| Coaxial RG58, RG213 | polyéthylène plein | 0,66 | 2,0×10⁸ m/s |
+| Coaxial TV (RG6), coaxial « faibles pertes » | polyéthylène mousse | 0,80 à 0,85 | 2,4 à 2,6×10⁸ m/s |
+| Câble Ethernet Cat 5e, Cat 6 | polyéthylène, polyoléfine | 0,65 à 0,72 | 2,0 à 2,2×10⁸ m/s |
+| Fibre optique (n ≈ 1,47) | verre de silice | ≈ 0,68 (k = 1/n) | ≈ 2,0×10⁸ m/s |
+| Ligne bifilaire dans l'air | air | 0,95 à 1 | ≈ 3,0×10⁸ m/s |
+
+- Le **retard** (temps de propagation) sur une longueur l s'en déduit :
+
+<a id="eq-25d"></a>
+
+$$t = \dfrac{l}{v} = \dfrac{l}{k \cdot c_0} \tag{25d}$$
+
+  Ordre de grandeur à retenir : dans un câble de coefficient 0,66, le signal parcourt environ **20 cm par nanoseconde**, soit 5 ns par mètre (dans le vide : 30 cm par nanoseconde).
+- Dans le câble, la longueur d'onde est raccourcie dans le même rapport : λ_câble = v/f = k × λ₀. C'est cette longueur d'onde qui fixe la distance entre deux maximums d'une onde stationnaire (λ/2, §3.12).
+
+*Exemple résolu :* un lien Ethernet Cat 6 mesure l = 90 m, et son coefficient de vélocité vaut k = 0,69.
+
+v = 0,69 × 3,0×10⁸ = 2,07×10⁸ m/s (25c) ; t = 90 / 2,07×10⁸ ≈ 4,35×10⁻⁷ s, soit **435 ns** (25d).
+
+> → **Sur le terrain :** un testeur de câble ou un réflectomètre ne connaît pas le câble qu'on lui présente : avant toute mesure de longueur, le technicien règle le coefficient de vélocité (NVP) indiqué sur la fiche technique ou imprimé sur la gaine. Une erreur de 5 % sur k donne 5 % d'erreur sur toutes les distances affichées.
+
+#### Le réflectomètre (TDR) : localiser un défaut par son écho
+
+- Un **réflectomètre temporel** (TDR, *Time Domain Reflectometer*) injecte une impulsion très brève (quelques nanosecondes) à l'entrée du câble et enregistre la tension à cette même entrée au cours du temps. Toute **discontinuité d'impédance** (extrémité du câble, coupure, court-circuit, connecteur mal serti, câble écrasé, infiltration d'eau) renvoie une partie de l'impulsion vers l'appareil : c'est l'**écho**. La courbe obtenue s'appelle un **réflectogramme**.
+- L'appareil mesure la durée Δt entre l'impulsion émise et l'écho. Pendant cette durée, le signal a parcouru **deux fois** la distance d du défaut (aller jusqu'au défaut, puis retour) : 2d = v × Δt, d'où :
+
+<a id="eq-25e"></a>
+
+$$d = \dfrac{v \cdot \Delta t}{2} \tag{25e}$$
+
+<p align="center">
+<img src="figures/cours/figure_89_principe_du_reflectometre_aller_retour.svg" alt="Figure 89 : Principe du réflectomètre : aller-retour de l'impulsion jusqu'au défaut"/>
+</p>
+
+<p align="center"><em>Figure 89 : Principe du réflectomètre : l'écho a parcouru deux fois la distance du défaut.</em></p>
+
+- L'écho revient affaibli par les pertes du câble, à l'aller et au retour : plus le défaut est loin, plus l'écho est petit.
+- C'est exactement le principe du capteur à ultrasons (§3.1, d = c × t/2) et du radar, appliqué à une onde guidée dans un câble.
+
+*Exemple résolu :* sur le lien Cat 6 précédent (v = 2,07×10⁸ m/s), un testeur reçoit un écho Δt = 320 ns après l'impulsion.
+
+d = 2,07×10⁸ × 320×10⁻⁹ / 2 ≈ **33 m** (25e). Sans le facteur 2, on trouverait 66 m : c'est l'erreur classique.
+
+> → **Sur le terrain :** face à une liaison coupée dans un faux plafond, le technicien mesure Δt au réflectomètre depuis la baie, calcule d avec le bon coefficient de vélocité, puis reporte cette distance sur le plan du cheminement des câbles : il sait où ouvrir, au lieu de tout démonter.
+
+#### Lire un écho : signe et amplitude selon la charge
+
+- Le **signe** et la **hauteur** de l'écho renseignent sur ce qui termine la ligne (charge, antenne ou défaut), caractérisé par son impédance Z_L. On généralise le coefficient de réflexion vu plus haut (R_CH devient Z_L) :
+
+<a id="eq-25f"></a>
+
+$$\rho = \dfrac{U_{\text{réfl}}}{U_{\text{inc}}} = \dfrac{Z_L - Z_C}{Z_L + Z_C} \tag{25f}$$
+
+  où U_inc est l'amplitude de l'impulsion qui arrive sur la discontinuité et U_réfl celle de l'écho qui en repart. L'écho vaut donc ρ fois l'impulsion incidente : il a le **même signe** qu'elle si ρ > 0, le **signe opposé** si ρ < 0.
+- **Sens physique.** Une onde qui se propage sur la ligne porte une tension et un courant dont le rapport vaut toujours Z_C. Au bout de la ligne, la charge impose sa propre loi, U = Z_L × I. Si Z_L = Z_C, l'onde incidente convient telle quelle : rien n'est renvoyé. Sinon, une onde réfléchie apparaît pour « corriger » la tension et le courant :
+  - **circuit ouvert** : aucun courant ne peut sortir ; l'onde réfléchie annule le courant et double la tension au bout de la ligne : U_réfl = +U_inc, ρ = +1 ;
+  - **court-circuit** : la tension au bout est forcément nulle ; l'onde réfléchie annule la tension : U_réfl = −U_inc, ρ = −1.
+
+| Ce qui termine la ligne | Impédance | ρ | Écho observé au réflectomètre |
+|---|---|---|---|
+| Charge adaptée (bouchon de terminaison, équipement de même impédance) | Z_L = Z_C | 0 | aucun écho |
+| Circuit ouvert (câble coupé, connecteur débranché) | Z_L → ∞ | +1 | écho de **même signe**, presque de même amplitude |
+| Court-circuit (âme et blindage en contact) | Z_L = 0 | −1 | écho de **signe opposé**, presque de même amplitude |
+| Impédance plus grande (charge de 100 Ω sur câble 50 Ω, contact oxydé) | Z_L > Z_C | entre 0 et +1 | petit écho de même signe |
+| Impédance plus faible (câble écrasé, eau dans le câble, charge de 25 Ω) | Z_L < Z_C | entre −1 et 0 | petit écho de signe opposé |
+
+<p align="center">
+<img src="figures/cours/figure_90_reflectogrammes_selon_la_charge.svg" alt="Figure 90 : Réflectogrammes selon la charge"/>
+</p>
+
+<p align="center"><em>Figure 90 : Réflectogrammes selon la charge : signe et amplitude de l'écho (un peu réduite par les pertes du câble).</em></p>
+
+- **Méthode de lecture d'un réflectogramme :**
+  1. repérer l'écho, mesurer Δt et calculer la distance avec (25e) ;
+  2. lire le signe : même signe que l'impulsion, Z_L > Z_C (vers le circuit ouvert) ; signe opposé, Z_L < Z_C (vers le court-circuit) ;
+  3. comparer les amplitudes : |ρ| ≈ U_réfl/U_inc. Un écho presque aussi grand que l'impulsion (|ρ| ≈ 1) signale un défaut franc (coupure ou court-circuit) ; un petit écho signale une simple désadaptation. À cause des pertes, l'écho d'un défaut franc éloigné est toujours un peu plus petit que l'impulsion : on conclut ρ ≈ +1 ou ρ ≈ −1.
+- On peut même retrouver l'impédance du défaut en inversant (25f) : Z_L = Z_C × (1 + ρ)/(1 − ρ).
+
+*Exemple résolu :* sur un câble 50 Ω, l'écho est de signe opposé à l'impulsion et son amplitude vaut le tiers de celle de l'impulsion : ρ = −1/3 ≈ −0,33.
+
+Z_L = 50 × (1 − 1/3)/(1 + 1/3) = 50 × 0,5 = **25 Ω** : l'impédance a chuté localement (câble écrasé ou humide), sans court-circuit franc.
+
+> → **Sur le terrain :** un écho de même signe et de pleine amplitude indique une coupure ou un connecteur débranché (on cherche un câble arraché) ; de signe opposé, un court-circuit (on cherche un câble écrasé ou un connecteur mal monté) ; un petit écho, une simple désadaptation (raccord d'une autre impédance, connecteur oxydé). Après réparation, on refait la mesure : l'écho du défaut doit avoir disparu ; seul peut subsister l'écho de l'extrémité du câble (aucun écho si elle est fermée sur une charge adaptée).
+
 <a id="sec-3-12-taux-d-ondes-stationnaires-tos-et-attenuation-lineique"></a>
 
 ### 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique
@@ -1277,11 +1647,139 @@ Ce TOS de 3 indique une désadaptation significative (une ligne bien adaptée vi
 
 > → **Application concrète :** **La certification d'un câblage réseau et le réglage d'une antenne.** Les testeurs de certification de câbles Ethernet mesurent notamment l'atténuation linéique de chaque liaison pour vérifier qu'elle respecte la norme (Cat 5e, 6, 6a). Côté radio, un installateur d'antenne mesure le TOS (ou ROS) pour vérifier l'adaptation entre l'émetteur et l'antenne : un TOS trop élevé signifie qu'une partie de la puissance est renvoyée vers l'émetteur, qui peut être endommagé.
 
+#### D'où vient le TOS : ondes incidente, réfléchie et stationnaire
+
+- En régime sinusoïdal, une ligne non adaptée transporte deux ondes en même temps : l'onde **incidente**, d'amplitude U_inc, qui va du générateur vers la charge, et l'onde **réfléchie**, d'amplitude |ρ| × U_inc, qui revient de la charge vers le générateur. En chaque point de la ligne, la tension observée est la somme des deux.
+- Comme les deux ondes se déplacent en sens contraires, leur décalage change d'un point à l'autre de la ligne :
+  - aux points où elles arrivent **en phase**, leurs amplitudes s'ajoutent : c'est un **ventre** de tension ;
+  - aux points où elles arrivent **en opposition de phase**, elles se retranchent : c'est un **nœud** de tension.
+
+<a id="eq-27a"></a>
+
+$$U_{MAX} = U_{\text{inc}}\,(1 + |\rho|) \qquad U_{MIN} = U_{\text{inc}}\,(1 - |\rho|) \tag{27a}$$
+
+- Ces ventres et ces nœuds restent **fixes** le long de la ligne : c'est une **onde stationnaire** (Figure 44). Deux ventres successifs sont séparés de λ/2, un ventre et le nœud voisin de λ/4, où λ = v/f est la longueur d'onde **dans le câble** (§3.11).
+- En faisant le rapport des deux expressions (27a), on retrouve l'équation (26) : TOS = U_MAX/U_MIN = (1 + |ρ|)/(1 − |ρ|).
+- Cas limites (Figure 91) :
+  - ligne adaptée (ρ = 0) : U_MAX = U_MIN = U_inc ; l'amplitude est la même partout, l'onde est purement progressive : **TOS = 1** ;
+  - circuit ouvert ou court-circuit (|ρ| = 1) : U_MIN = 0 ; la ligne présente de vrais nœuds, comme une corde de guitare : **TOS infini**.
+- Inversement, on retrouve |ρ| à partir d'un TOS mesuré :
+
+<a id="eq-27b"></a>
+
+$$|\rho| = \dfrac{TOS - 1}{TOS + 1} \tag{27b}$$
+
+- Vocabulaire : TOS (taux d'ondes stationnaires), ROS (rapport d'ondes stationnaires) et VSWR (*Voltage Standing Wave Ratio*) désignent la même grandeur, sans unité et toujours supérieure ou égale à 1 ; les fiches techniques l'écrivent souvent « 1,5:1 ». Attention : certains appareils anciens affichent un « TOS en % » qui correspond en réalité à |ρ| × 100. Dans ce cours, TOS = U_MAX/U_MIN.
+
+<p align="center">
+<img src="figures/cours/figure_91_enveloppe_de_la_tension_selon_le_tos.svg" alt="Figure 91 : Enveloppe de la tension le long d'une ligne pour plusieurs valeurs du TOS"/>
+</p>
+
+<p align="center"><em>Figure 91 : Amplitude de la tension le long d'une ligne pour plusieurs valeurs du TOS : plus |ρ| est grand, plus l'écart entre ventres et nœuds est marqué.</em></p>
+
+*Exemple résolu :* une ligne 50 Ω est fermée sur 150 Ω (|ρ| = 0,5, exemple ci-dessus) ; l'onde incidente a une amplitude U_inc = 10 V.
+
+U_MAX = 10 × (1 + 0,5) = 15 V et U_MIN = 10 × (1 − 0,5) = 5 V (27a), d'où TOS = 15/5 = 3 : on retrouve le résultat de l'équation (26). Une sonde déplacée le long du câble lirait donc entre 5 V et 15 V selon sa position : sur une ligne désadaptée, la tension dépend de l'endroit où l'on mesure.
+
+> → **Sur le terrain :** un TOS-mètre (ou ROS-mètre) inséré entre l'émetteur et le câble d'antenne mesure séparément l'onde incidente et l'onde réfléchie, puis affiche le TOS. On le laisse en place pendant le réglage de l'antenne et on vise le TOS le plus proche possible de 1.
+
+#### Interpréter un TOS : valeurs repères et puissance réfléchie
+
+- Le coefficient ρ porte sur les tensions. La puissance étant proportionnelle au carré de la tension (§1.3), la fraction de la puissance incidente renvoyée vers le générateur vaut :
+
+<a id="eq-27c"></a>
+
+$$\dfrac{P_{\text{réfl}}}{P_{\text{inc}}} = |\rho|^2 \tag{27c}$$
+
+  et, pour une ligne sans pertes, la fraction transmise à la charge vaut 1 − |ρ|².
+- Les analyseurs d'antenne et les testeurs de câblage expriment souvent cette réflexion en dB, sous forme de **pertes de retour** (*return loss*, RL) : un nombre positif, d'autant plus grand que la réflexion est faible.
+
+<a id="eq-27d"></a>
+
+$$RL_{(dB)} = -10 \log_{10}\!\left(\dfrac{P_{\text{réfl}}}{P_{\text{inc}}}\right) = -20 \log_{10}|\rho| \tag{27d}$$
+
+  Les analyseurs de réseau affichent souvent le paramètre S₁₁, qui vaut −RL. Le détail est donné dans les compléments BTS2 (fiche « Puissance réfléchie et pertes de retour »).
+
+| TOS | \|ρ\| | Puissance réfléchie | Puissance transmise | RL | Interprétation |
+|---|---|---|---|---|---|
+| 1 | 0 | 0 % | 100 % | infinies | adaptation parfaite |
+| 1,2 | 0,09 | 0,8 % | 99,2 % | 21 dB | très bonne adaptation |
+| 1,5 | 0,20 | 4 % | 96 % | 14 dB | bonne adaptation : limite usuelle d'acceptation |
+| 2 | 0,33 | 11 % | 89 % | 9,5 dB | désadaptation nette, à corriger |
+| 3 | 0,50 | 25 % | 75 % | 6 dB | mauvaise adaptation |
+| infini | 1 | 100 % | 0 % | 0 dB | circuit ouvert ou court-circuit : rien n'est transmis |
+
+**Valeurs repères à retenir**
+
+- **TOS = 1** : adaptation parfaite, aucune puissance réfléchie (cas idéal, jamais atteint exactement).
+- **TOS < 1,5** : bonne adaptation, moins de 4 % de puissance réfléchie. C'est la valeur garantie par la plupart des fiches techniques d'antennes.
+- **TOS entre 1,5 et 2** : adaptation encore acceptable, mais désadaptation modérée (4 à 11 % de puissance réfléchie) : on vérifie les connecteurs et les réglages. C'est typiquement ce que donne un mélange de matériels 50 Ω et 75 Ω (TOS = 1,5).
+- **TOS > 2** : problème à corriger : antenne mal accordée ou prévue pour une autre bande, connecteur oxydé ou mal vissé, eau dans le câble, câble abîmé.
+
+**Sens physique.** Même avec un TOS de 2, 89 % de la puissance arrive à la charge : la perte de puissance utile n'est que d'environ 0,5 dB (10 log(1/0,89)). Le vrai danger d'un TOS élevé est ailleurs :
+- l'onde réfléchie revient dans l'étage de sortie de l'émetteur, qui chauffe et peut être détruit ; beaucoup d'émetteurs réduisent d'ailleurs automatiquement leur puissance au-delà d'un TOS de 2 à 3 ;
+- sur un câble de données, les échos se superposent aux bits suivants et provoquent des erreurs de transmission.
+
+*Exemple résolu :* une antenne présente un TOS de 1,8 à sa fréquence de travail ; l'émetteur fournit 10 W.
+
+|ρ| = (1,8 − 1)/(1,8 + 1) = 0,8/2,8 ≈ 0,286 (27b) ; P_réfl/P_inc = 0,286² ≈ 0,082, soit 0,82 W renvoyés vers l'émetteur (27c) ; RL = −20 log(0,286) ≈ 10,9 dB (27d). Le TOS est entre 1,5 et 2 : la liaison fonctionne, mais l'antenne mérite d'être réglée.
+
+> → **Sur le terrain :** à la réception d'une installation radio, on relève le TOS sur toute la bande utilisée et on le compare à la fiche technique de l'antenne (en général TOS ≤ 1,5) ; au-delà de 2, on ne met pas l'émetteur en service avant d'avoir trouvé la cause (connecteur, câble, antenne).
+
+#### Atténuation linéique : mesurer, calculer, convertir
+
+- Une ligne réelle dissipe une partie de l'énergie en chaleur (résistance des conducteurs, pertes dans l'isolant) : l'amplitude diminue avec la distance parcourue. Pour mesurer cette perte, on ferme le câble sur sa **charge adaptée** (sinon les ondes stationnaires fausseraient la mesure, puisque la tension dépendrait de l'endroit où l'on mesure) et on relève les amplitudes maximales U_E en entrée et U_S en sortie (les U_E,MAX et U_S,MAX de l'équation (27)).
+- La démarche se fait en trois étapes :
+  1. **atténuation totale du câble**, en dB, avec la tension d'entrée (la plus grande) au numérateur, pour obtenir un nombre **positif** ;
+  2. **atténuation linéique** en dB/m : on divise par la longueur, A_l = A/l, ce qui redonne l'équation (27) ;
+  3. **conversion en dB/100 m**, l'unité des fiches techniques : on multiplie par 100 (exemple : 0,05 dB/m = 5 dB/100 m).
+
+<a id="eq-27e"></a>
+
+$$A_{(dB)} = 20 \log_{10}\!\left(\dfrac{U_E}{U_S}\right) = 10 \log_{10}\!\left(\dfrac{P_E}{P_S}\right) \tag{27e}$$
+
+- **Attention au signe.** Si l'on écrit 20 log(U_S/U_E), on obtient un nombre négatif : c'est un **gain** négatif (§1.3). Une atténuation s'énonce toujours positivement : « le câble atténue de 2 dB », ou « présente un gain de −2 dB », mais jamais « une atténuation de −2 dB ».
+- **Utilisation inverse.** Connaissant l'atténuation linéique (fiche technique), on calcule la perte d'un tronçon de longueur l :
+
+<a id="eq-27f"></a>
+
+$$A_{(dB)} = A_l \times l \tag{27f}$$
+
+  C'est le terme « câble » du bilan de liaison (§3.9). Exemple : 25 m de câble à 20 dB/100 m (soit 0,20 dB/m) perdent 0,20 × 25 = 5 dB, c'est-à-dire plus des deux tiers de la puissance.
+- L'atténuation linéique **augmente avec la fréquence** : un câble RG58 perd environ 15 dB/100 m à 100 MHz, mais plus de 50 dB/100 m vers 900 MHz. C'est pourquoi les fiches techniques donnent A_l pour plusieurs fréquences, et pourquoi on relie une passerelle LoRa ou une antenne Wi-Fi extérieure à son émetteur par un câble court et « à faibles pertes ».
+
+> → **Sur le terrain :** avant de tirer un câble d'antenne, on lit l'atténuation linéique sur la fiche technique **à la fréquence de travail**, on calcule la perte totale A = A_l × l et on l'intègre au bilan de liaison ; si elle mange trop de marge, on choisit un câble à plus faibles pertes ou on rapproche l'émetteur de l'antenne.
+
+#### Exemple résolu complet : diagnostic du câble d'une antenne
+
+*Énoncé.* Un câble coaxial 50 Ω à isolant mousse (k = 0,85), de longueur l = 30 m, relie une passerelle LoRa à son antenne quart d'onde installée sur le toit. La liaison ne fonctionne plus.
+
+1. *Célérité et retard.* v = 0,85 × 3,0×10⁸ = 2,55×10⁸ m/s (25c) ; t = 30 / 2,55×10⁸ ≈ 1,18×10⁻⁷ s, soit environ **118 ns** (25d).
+2. *Distance du défaut.* Le réflectomètre reçoit un écho Δt = 180 ns après l'impulsion : d = 2,55×10⁸ × 180×10⁻⁹ / 2 ≈ **23 m** (25e). Le défaut se trouve avant l'antenne : l'écho de l'extrémité, à 30 m, arriverait après 2 × 118 = 236 ns.
+3. *Nature du défaut.* L'écho est de signe opposé à l'impulsion et presque de même amplitude : ρ ≈ −1, c'est un **court-circuit** (par exemple un collier de fixation trop serré qui a écrasé le câble jusqu'à mettre l'âme en contact avec le blindage). Un écho de même signe aurait indiqué un circuit ouvert (câble coupé).
+4. *Adaptation de l'antenne.* Après réparation, le câble est refermé sur l'antenne quart d'onde, d'impédance Z_L ≈ 36 Ω (§3.8). ρ = (36 − 50)/(36 + 50) ≈ −0,163 (25f) ; TOS = (1 + 0,163)/(1 − 0,163) ≈ **1,39** (26) ; puissance réfléchie : 0,163² ≈ 2,7 % (27c). ρ est négatif (Z_L < Z_C), mais le TOS se calcule avec |ρ|. TOS < 1,5 : l'adaptation est correcte.
+5. *Atténuation linéique.* On ferme le câble sur une charge de 50 Ω et on mesure U_E = 5,0 V et U_S = 3,4 V (amplitudes maximales). A = 20 log(5,0/3,4) ≈ 3,35 dB (27e) ; A_l = 3,35/30 ≈ **0,112 dB/m**, soit **11,2 dB/100 m** (27). Sens physique : 3,35 dB représentent une puissance divisée par $10^{0{,}335} \approx 2{,}2$ ; plus de la moitié de la puissance est perdue dans le câble.
+
+*Conclusion.* Le défaut est un court-circuit à 23 m de la passerelle ; une fois réparé, l'antenne est correctement adaptée (TOS ≈ 1,4), mais les 30 m de câble coûtent 3,35 dB de marge.
+
+> → **Application concrète :** **Testeur de câble, antenne Wi-Fi mal adaptée et certification.** Branché sur une prise murale, un testeur de câblage Ethernet affiche par exemple « paire 3-6 : ouvert à 37 m » : il a mesuré l'écho, lu son signe (même signe : coupure) et appliqué d = v × Δt / 2 avec le NVP du câble. Sur un point d'accès Wi-Fi extérieur dont la portée a chuté, l'analyseur d'antenne mesure un TOS de 2,5 à 2,45 GHz : un connecteur mal vissé ou une infiltration d'eau a désadapté l'antenne ; après remplacement, le TOS redescend sous 1,5. Enfin, pour certifier un lien Cat 6 ou Cat 6a, le testeur mesure pour chaque paire la longueur (par réflectométrie), l'atténuation et les pertes de retour, puis les compare aux limites de la norme avant de déclarer le lien conforme.
+
+> → **Sur le terrain :** la démarche de diagnostic est toujours la même : (1) régler le coefficient de vélocité du câble ; (2) localiser le défaut au réflectomètre et identifier sa nature par le signe de l'écho ; (3) réparer, puis contrôler le TOS sur la charge réelle ; (4) mesurer l'atténuation et reporter la perte du câble dans le bilan de liaison, pour vérifier qu'il reste assez de marge.
+
 ### Erreurs fréquentes des étudiants
 
 - Confondre fréquence et longueur d'onde : la fréquence est fixée par la source, la longueur d'onde et la célérité dépendent du milieu.
 - Croire qu'une ligne "ouverte" (R_CH infinie) dissipe toute la puissance : au contraire, c'est le cas où **toute** la puissance est réfléchie (ρ = 1, aucune énergie n'est transmise à la charge).
 - Oublier que l'adaptation d'impédance doit se faire des **deux côtés** de la ligne (génération ET charge) pour éviter des réflexions multiples.
+- Confondre la polarisation (direction du champ $\vec{E}$) avec la direction de propagation : $\vec{E}$ est toujours perpendiculaire à la propagation.
+- Appliquer cos θ à une puissance ou cos²θ à une tension : le champ et la tension reçus varient en cos θ, la puissance (et l'intensité lumineuse) en cos²θ. En dB, les deux écritures donnent la même perte : −20 log|cos θ| = −10 log(cos²θ).
+- Croire qu'une antenne tournée de 45° ne reçoit plus que la moitié de la tension : c'est la **puissance** qui est divisée par 2 (−3 dB) ; la tension n'est multipliée que par 0,71.
+- Croire qu'une onde circulaire n'est pas reçue par une antenne rectiligne : elle est reçue avec 3 dB de pertes, quelle que soit l'orientation de l'antenne.
+- Calculer une antenne quart d'onde avec la longueur d'onde dans le câble : la longueur du brin se calcule avec λ dans l'air, λ = c₀/f ; le coefficient de vélocité ne concerne que le câble.
+- Confondre LoRa (la modulation radio) et LoRaWAN (le protocole réseau qui relie objets, passerelles et serveurs) ; ou additionner des dBm entre eux dans un bilan de liaison : on ajoute des gains et on retranche des pertes en dB à **une seule** puissance en dBm.
+- Oublier le facteur 2 au réflectomètre : l'écho a fait l'aller et le retour, d = v × Δt / 2.
+- Utiliser ρ avec son signe dans le TOS : l'équation (26) utilise |ρ| ; un TOS est toujours supérieur ou égal à 1.
+- Donner une atténuation négative : on place la tension d'entrée au numérateur, A = 20 log(U_E/U_S) > 0.
 
 ---
 
@@ -1710,7 +2208,7 @@ $$\underline{T} = T_0 \times \dfrac{\left(j\frac{\omega}{\omega_0}\right)^2}{1 +
 
 <p align="center"><em>Figure 60 : Diagrammes de Bode du second ordre selon m.</em></p>
 
-> → **Application concrète :** **La bande passante d'un câble et d'une carte son.** La catégorie d'un câble Ethernet (Cat 5e : 100 MHz, Cat 6 : 250 MHz, Cat 6a : 500 MHz) est justement sa bande passante à −3 dB : au-delà, le signal est trop atténué pour être exploité, ce qui limite le débit. De même, une carte son ou un convertisseur audio est spécifié par sa bande passante (typiquement 20 Hz – 20 kHz), directement lue sur son diagramme de Bode.
+> → **Application concrète :** **La bande passante d'un câble et d'une carte son.** La catégorie d'un câble Ethernet (Cat 5e : 100 MHz, Cat 6 : 250 MHz, Cat 6a : 500 MHz) est justement sa bande passante à −3 dB : au-delà, le signal est trop atténué pour être exploité, ce qui limite le débit. De même, une carte son ou un convertisseur audio est spécifié par sa bande passante (typiquement 20 Hz à 20 kHz), directement lue sur son diagramme de Bode.
 
 ---
 
@@ -1979,6 +2477,100 @@ $ON = \sin(\theta_0)$, où θ₀ est l'angle maximal d'incidence d'un rayon pour
 
 > → **Application concrète :** **Le câblage fibre d'un datacenter ou d'un réseau d'entreprise.** Les liaisons courtes à l'intérieur d'un datacenter (entre baies, entre switches) utilisent des fibres multimodes (OM3, OM4), moins chères et faciles à connecter ; les liaisons longues entre bâtiments ou entre villes utilisent des fibres monomodes (OS2). Le choix entre les deux, et la vérification du type de fibre avant de brancher un module SFP, est une décision quotidienne du technicien réseau.
 
+#### Choisir une fibre : critères et conséquences
+
+**Le tableau de choix**
+
+| Critère | Multimode à saut d'indice | Multimode à gradient d'indice | Monomode |
+|---|---|---|---|
+| Diamètre cœur / gaine | 200/230 µm (silice) à 980/1 000 µm (plastique) | 50/125 µm (OM2 à OM5) ; 62,5/125 µm (OM1, ancien) | 9/125 µm (OS1, OS2) |
+| Source associée | LED rouge (650 nm) ou LED 850 nm | VCSEL 850 nm (petit laser bon marché) ; LED pour les anciens OM1 et OM2 | laser 1 310 nm ou 1 550 nm |
+| Atténuation typique | 5 à 10 dB/km (silice) ; 150 à 200 dB/km (plastique) | 2,5 à 3,5 dB/km à 850 nm | 0,3 à 0,4 dB/km à 1 310 nm ; 0,2 dB/km à 1 550 nm |
+| Bande passante × distance | 10 à 50 MHz·km | 200 MHz·km (OM1) à 4 700 MHz·km (OM4, OM5) | pas de dispersion modale : seule la dispersion chromatique limite, très loin |
+| Portée et débit typiques | moins de 100 m, quelques dizaines de Mbit/s (bus industriels, audio, automobile) | 10 Gbit/s : 300 m (OM3), 400 m (OM4) ; 100 Gbit/s : 70 m (OM3), 100 m (OM4) | 10 Gbit/s : 10 km (module LR), 40 km (ER) ; 100 Gbit/s et plus sur 10 à 80 km |
+| Coût du câble | faible | moyen ; l'OM4 et l'OM5 coûtent plus cher que l'OS2 | le plus faible au mètre |
+| Coût des émetteurs et récepteurs | très faible | faible (VCSEL, injection facile dans un cœur de 50 µm) | plus élevé : laser aligné au micromètre près ; module 1,5 à 5 fois plus cher qu'en multimode selon le débit |
+| Raccordement, sensibilité à la poussière | très facile (coupe au cutter, connecteurs simples), peu sensible | facile ; un cœur de 50 µm tolère un léger défaut d'alignement | délicat : une poussière de quelques µm peut masquer le cœur de 9 µm ; inspection au microscope et nettoyage obligatoires ; soudure par fusion précise |
+| Catégories normalisées | pas de catégorie « OM » | OM1, OM2, OM3, OM4, OM5 | OS1 (intérieur), OS2 (extérieur, faible atténuation) |
+| Couleur usuelle de la gaine | noire ou variable | orange (OM1, OM2), turquoise (OM3, OM4), violet (OM4 en Europe), vert anis (OM5) | jaune |
+| Couleur usuelle des connecteurs | variable | beige (OM1, OM2), turquoise (OM3, OM4), violet (OM4), vert anis (OM5) | bleu (poli droit, UPC) ; vert (poli en angle, APC) |
+
+Ces couleurs sont des conventions, pas des garanties : on lit toujours le **marquage imprimé sur la gaine** (par exemple « OS2 9/125 G.652.D » ou « OM4 50/125 »).
+
+**Pourquoi de telles différences : le lien avec la physique**
+
+- **Un gros cœur accepte beaucoup de modes** : la dispersion modale (§6.4) étale les impulsions et limite le produit bande passante × distance. Le gradient d'indice compense en grande partie ce défaut (les rayons qui font le plus long chemin passent par des zones d'indice plus faible, où ils vont plus vite) : le produit BP × L est multiplié par cent environ. La fibre monomode, qui ne guide qu'un seul mode, supprime complètement la dispersion modale.
+- **Un gros cœur est facile à « remplir » de lumière** : une LED ou un VCSEL bon marché suffit, l'alignement des connecteurs est tolérant et une poussière masque une petite partie du cœur. Injecter la lumière dans 9 µm exige un laser focalisé au micromètre près : l'optique coûte plus cher et la propreté devient critique.
+- **La silice absorbe moins à 1 310 nm et à 1 550 nm** (fenêtres de transmission, §6.5) : les longues distances se font en monomode à ces longueurs d'onde. Le 850 nm, plus atténué, convient aux courtes distances, où ses sources bon marché font la différence.
+- **Le coût total d'un lien = câble + pose + deux modules.** Dans un datacenter qui compte des milliers de liens courts, ce sont les modules qui pèsent : on choisit le multimode. Sur un lien long, c'est la portée qui décide : le monomode s'impose. Pour une nouvelle dorsale de campus, on pose souvent du monomode même sur des distances moyennes, car il supportera les débits futurs sans changer de câble (pérennité).
+
+**La logique de décision du technicien**
+
+Le choix suit toujours le même ordre :
+1. **distance réelle du cheminement** (gaines, montées d'étage, réserves de câble ; pas la distance à vol d'oiseau) et **débit visé**, aujourd'hui et dans dix ans : le multimode atteint-il cette distance à ce débit ?
+2. **existant** : quelle fibre est déjà posée (marquage sur la gaine), quels modules équipent les commutateurs ? On raccorde ce qui est compatible, avec le même type de module aux deux extrémités ;
+3. **budget optique**, avec une marge d'au moins 3 dB (vieillissement, réparations futures, connecteurs encrassés) :
+
+<a id="eq-46a"></a>
+
+$$M = (P_{e,min} - S) - (\alpha \times L + n_c \times a_c + n_e \times a_e) \tag{46a}$$
+
+  avec P_e,min la puissance minimale émise par le module (dBm), S la sensibilité du récepteur (dBm), α l'atténuation linéique de la fibre (dB/km, §6.4), L la longueur (km), n_c le nombre de connexions et a_c la perte par connexion (environ 0,3 à 0,75 dB), n_e le nombre d'épissures (soudures) et a_e la perte par épissure (environ 0,1 dB). La différence P_e,min − S est le **budget optique** du module ;
+
+4. **coût** des modules multiplié par le nombre de liens ;
+5. **environnement** : câble extérieur armé et étanche entre bâtiments, fibre insensible aux courbures (G.657) dans les logements et les goulottes serrées.
+
+<p align="center">
+<img src="figures/cours/figure_92_choisir_une_fibre_arbre_de_decision.svg" alt="Figure 92 : Choisir une fibre : arbre de décision du technicien"/>
+</p>
+
+<p align="center"><em>Figure 92 : Choisir une fibre : la distance et le débit décident d'abord, puis les vérifications communes à tous les liens.</em></p>
+
+| Situation | Distance, débit | Choix habituel | Pourquoi |
+|---|---|---|---|
+| Jarretière dans une baie (commutateur vers serveur) | 1 à 5 m, 10 à 25 Gbit/s | multimode OM4 et modules SR (ou câble cuivre direct DAC sous 5 m) | modules les moins chers ; la distance ne pose aucun problème |
+| Liaison entre deux étages (rocade verticale) | 50 à 150 m, 10 Gbit/s | multimode OM4 (ou OM3) et modules SR 850 nm | dans la portée du 10GBASE-SR (300 à 400 m), avec des modules bon marché |
+| Dorsale (backbone) de campus entre bâtiments | 2 km, 10 Gbit/s et plus | monomode OS2 en câble extérieur armé, modules LR 1 310 nm | le multimode est limité à quelques centaines de mètres à 10 Gbit/s ; le monomode accepte les débits futurs |
+| Raccordement FTTH d'un abonné | jusqu'à 20 km du central optique | monomode G.657 (insensible aux courbures), connecteurs SC/APC verts | imposé par l'opérateur : longue distance, coupleurs passifs, réflexions à éviter |
+| Lien entre deux datacenters | 10 à 80 km, 100 Gbit/s et plus | monomode OS2, lasers 1 550 nm, souvent multiplexage en longueur d'onde (WDM) | atténuation minimale à 1 550 nm (0,2 dB/km) ; plusieurs longueurs d'onde par fibre |
+
+**Ce qui se passe si l'on se trompe**
+
+- **Mélange multimode et monomode.** Une jarretière multimode (cœur de 50 µm) branchée sur une liaison monomode (cœur de 9 µm) envoie la lumière d'un grand cœur vers un petit : le rapport des surfaces, (50/9)² ≈ 31, correspond à environ 15 dB de pertes. La liaison tombe, ou devient instable. Dans l'autre sens, les pertes sont plus faibles mais la partie multimode réintroduit la dispersion modale. On ne mélange jamais : jaune avec jaune, turquoise avec turquoise.
+- **Mauvais module SFP.** Un module SR (850 nm, multimode) et un module LR (1 310 nm, monomode) ne sont pas interchangeables, et les deux extrémités doivent porter le même type de module. Un mauvais choix peut sembler « fonctionner » sur quelques mètres au banc de test, puis provoquer des erreurs de transmission (trames corrompues) une fois en production. Certains commutateurs refusent en plus les modules d'autres marques.
+- **Connecteur APC sur UPC.** Un connecteur APC (vert, face polie à 8° pour renvoyer les réflexions hors du cœur) branché sur un UPC (bleu, face droite) laisse une lame d'air et un défaut d'alignement : plusieurs dB de pertes, de fortes réflexions, et un risque de rayer les deux faces. Vert avec vert, bleu avec bleu.
+- **Rayon de courbure trop faible.** Si la fibre est trop courbée, les rayons frappent la gaine sous un angle inférieur à l'angle limite de réflexion totale (§6.2) : la lumière s'échappe du cœur. Ces pertes par macrocourbure sont plus fortes à 1 550 nm qu'à 1 310 nm. Repères : environ 30 mm de rayon minimal pour une jarretière classique, 7,5 à 15 mm pour une fibre G.657, et 10 à 20 fois le diamètre pour un câble. Au réflectomètre optique (OTDR), une perte plus forte à 1 550 nm qu'à 1 310 nm signale une courbure ; un stylo laser rouge (localisateur visuel de défaut) la fait apparaître comme un point lumineux à travers la gaine.
+- **Émission et réception inversées.** Sur un lien duplex, l'émetteur de chaque extrémité doit aboutir au récepteur de l'autre : si les deux fibres sont croisées du mauvais côté, le lien reste éteint alors que chaque fibre est intacte.
+- **Connecteur sale.** Une seule poussière peut ajouter 1 dB ou plus, et rayer définitivement la face d'un connecteur au moment de l'embrochage : on **inspecte, on nettoie, puis on connecte**.
+- **Sécurité.** On ne regarde jamais dans une fibre ou un connecteur : la lumière infrarouge d'un laser est invisible et peut brûler la rétine. On utilise un photomètre ou un microscope d'inspection équipé d'un filtre.
+
+**Erreurs fréquentes sur le terrain**
+
+- Choisir la fibre sur la seule distance ou le seul débit d'aujourd'hui : recâbler coûte bien plus cher que la fibre elle-même.
+- Se fier à la couleur sans lire le marquage de la gaine.
+- Oublier les connecteurs et les épissures dans le budget optique : sur un lien court, ils pèsent souvent plus que la fibre.
+- Mesurer la distance sur un plan, à vol d'oiseau, au lieu de la longueur réelle du cheminement (prévoir 10 à 20 % de plus).
+- Brancher un connecteur sans l'avoir inspecté ni nettoyé.
+
+*Exemple résolu : vous devez choisir.* Il faut relier le local technique du bâtiment A à celui du bâtiment B à 10 Gbit/s. Longueur réelle du cheminement : 550 m. Le catalogue propose deux solutions (prix indicatifs) :
+- solution 1 : câble OM4 et modules SFP+ 10GBASE-SR (850 nm), portée normalisée de 400 m sur OM4, environ 30 € le module ;
+- solution 2 : câble OS2 et modules SFP+ 10GBASE-LR (1 310 nm), portée de 10 km, puissance émise minimale −8,2 dBm, sensibilité −14,4 dBm, environ 60 € le module.
+
+La liaison comporte 2 connexions (un tiroir optique dans chaque bâtiment) à 0,5 dB et 2 épissures à 0,1 dB ; l'OS2 atténue 0,4 dB/km à 1 310 nm.
+
+
+*Étape 1 : portée.* 550 m > 400 m : la solution 1 est exclue (dispersion modale, §6.4), même si elle est moins chère.
+
+*Étape 2 : budget optique de la solution 2.* P_e,min − S = −8,2 − (−14,4) = 6,2 dB.
+
+*Étape 3 : pertes.* Fibre : 0,4 × 0,55 = 0,22 dB ; connexions : 2 × 0,5 = 1,0 dB ; épissures : 2 × 0,1 = 0,2 dB ; total : 1,42 dB.
+
+*Étape 4 : marge (46a).* M = 6,2 − 1,42 ≈ 4,8 dB, supérieure aux 3 dB exigés : la liaison est validée.
+
+*Conclusion.* On choisit le monomode OS2 avec des modules LR. Le surcoût des modules (2 × 60 € au lieu de 2 × 30 €) est négligeable devant le coût du câble et de la pose, et la fibre OS2 acceptera plus tard un passage à 25 ou 100 Gbit/s sans recâblage. Après la pose, on vérifie au photomètre (ou à l'OTDR) que la perte mesurée est proche des 1,4 dB prévus.
+
+> → **Sur le terrain :** avant de commander, le technicien mesure la longueur réelle du cheminement, lit le marquage de la fibre existante, choisit le même type de module aux deux extrémités et calcule le budget optique avec au moins 3 dB de marge ; à la mise en service, il inspecte et nettoie chaque connecteur avant de le brancher, respecte les rayons de courbure et contrôle la perte au photomètre.
+
 <a id="sec-6-4-dispersion-bande-passante-et-attenuation-d-une-fibre-opt"></a>
 
 ### 6.4 Dispersion, bande passante et atténuation d'une fibre optique
@@ -2019,7 +2611,7 @@ $$A_0 = \dfrac{10}{l} \times \log_{10}\!\left(\dfrac{P_s}{P_e}\right) \tag{48}$$
 
 *Exemple résolu :* une fibre présente une dispersion modale Δt = 20 ns/km. Sa bande passante vaut BP = 0,35/(20×10⁻⁹) ≈ 17,5 MHz par km, soit un produit BP×L ≈ 17,5 MHz·km : une valeur typique d'une fibre multimode à saut d'indice (à comparer aux 500-1000 MHz·km d'une fibre à gradient d'indice, bien meilleure).
 
-> → **Application concrète :** **Le dimensionnement d'une liaison fibre (budget optique).** Avant de mettre en service une liaison fibre, on vérifie que le produit bande passante × longueur de la fibre choisie est compatible avec le débit visé sur la distance prévue, et que l'atténuation totale (fibre + connecteurs + épissures) reste inférieure au budget optique du module SFP. C'est exactement le raisonnement de la partie 2 de l'annale 2026 (choix de la liaison PGR–AP2) et un point clé de la certification d'un lien fibre au réflectomètre optique (OTDR).
+> → **Application concrète :** **Le dimensionnement d'une liaison fibre (budget optique).** Avant de mettre en service une liaison fibre, on vérifie que le produit bande passante × longueur de la fibre choisie est compatible avec le débit visé sur la distance prévue, et que l'atténuation totale (fibre + connecteurs + épissures) reste inférieure au budget optique du module SFP. C'est exactement le raisonnement de la partie 2 de l'annale 2026 (choix de la liaison PGR-AP2) et un point clé de la certification d'un lien fibre au réflectomètre optique (OTDR).
 
 ---
 
@@ -2186,9 +2778,27 @@ Toutes les formules numérotées du recueil, dans l'ordre d'apparition. Le numé
 | [(22)](#eq-22) | $\lambda = c \cdot T = \dfrac{c}{f}$ | 3.2 Ondes progressives sinusoïdales | 3.2 Ondes progressives sinusoïdales |
 | [(23)](#eq-23) | $\Delta f = f_R - f_S = f_S \times \dfrac{v_S}{c - v_S}$ | 3.4 Ondes sonores et effet Doppler | 3.4 Ondes sonores et effet Doppler |
 | [(24)](#eq-24) | $\dfrac{E}{B} = c$ | 3.5 Ondes électromagnétiques : propriétés | 3.5 Ondes électromagnétiques : propriétés |
+| [(24a)](#eq-24a) | $\vec{E}(z,t) = E_x \cos(\omega t - kz)\,\vec{u}_x + E_y \cos(\omega t - kz + \varphi)\,\vec{u}_y$ | Mise en équation de la polarisation | 3.7 Polarisation d'une onde électromagnétique |
+| [(24b)](#eq-24b) | $\theta = \arctan\!\left(\dfrac{E_y}{E_x}\right)$ | Angle d'une polarisation rectiligne | 3.7 Polarisation d'une onde électromagnétique |
+| [(24c)](#eq-24c) | $I = I_0 \cos^2\theta$ | Loi de Malus | 3.7 Polarisation d'une onde électromagnétique |
+| [(24d)](#eq-24d) | $L_{pol(dB)} = -20 \log_{10}\lvert\cos\theta\rvert = -10 \log_{10}(\cos^2\theta)$ | Pertes de désadaptation de polarisation | 3.7 Polarisation d'une onde électromagnétique |
+| [(24e)](#eq-24e) | $\ell_{\text{dipôle}} = \dfrac{\lambda}{2} \qquad \ell_{\text{monopôle}} = \dfrac{\lambda}{4} = \dfrac{c_0}{4f}$ | Longueurs résonantes d'une antenne | 3.8 Antennes, réflexion et réfraction en espace libre |
+| [(24f)](#eq-24f) | $\ell_{\text{pratique}} \approx 0{,}95 \times \dfrac{\lambda}{4}$ | Longueur pratique d'une antenne quart d'onde | 3.8 Antennes, réflexion et réfraction en espace libre |
 | [(25)](#eq-25) | $E = \dfrac{\alpha \sqrt{P_0}}{d}$ | 3.9 Liaison hertzienne | 3.9 Liaison hertzienne |
+| [(25a)](#eq-25a) | $P_{r(dBm)} = P_{e(dBm)} + G_e + G_r - L_{\text{câbles}} - A$ | Bilan d'une liaison radio | 3.9 Liaison hertzienne |
+| [(25b)](#eq-25b) | $M_{(dB)} = P_{r(dBm)} - S_{(dBm)}$ | Marge d'une liaison | 3.9 Liaison hertzienne |
+| [(25c)](#eq-25c) | $v = k \cdot c_0$ | Célérité dans un câble (coefficient de vélocité) | 3.11 Propagation impulsionnelle et réflexions |
+| [(25d)](#eq-25d) | $t = \dfrac{l}{v} = \dfrac{l}{k \cdot c_0}$ | Retard de propagation dans un câble | 3.11 Propagation impulsionnelle et réflexions |
+| [(25e)](#eq-25e) | $d = \dfrac{v \cdot \Delta t}{2}$ | Distance d'un défaut au réflectomètre | 3.11 Propagation impulsionnelle et réflexions |
+| [(25f)](#eq-25f) | $\rho = \dfrac{U_{\text{réfl}}}{U_{\text{inc}}} = \dfrac{Z_L - Z_C}{Z_L + Z_C}$ | Coefficient de réflexion : lecture d'un écho | 3.11 Propagation impulsionnelle et réflexions |
 | [(26)](#eq-26) | $TOS = \dfrac{U_{MAX}}{U_{MIN}} = \dfrac{1 + \vert \rho\vert }{1 - \vert \rho\vert }$ | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique |
 | [(27)](#eq-27) | $A_l = \dfrac{20}{l} \times \log_{10}\!\left(\dfrac{U_{E,MAX}}{U_{S,MAX}}\right)$ | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique |
+| [(27a)](#eq-27a) | $U_{MAX} = U_{\text{inc}}\,(1 + \vert\rho\vert) \qquad U_{MIN} = U_{\text{inc}}\,(1 - \vert\rho\vert)$ | Ventres et nœuds de l'onde stationnaire | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique |
+| [(27b)](#eq-27b) | $\vert\rho\vert = \dfrac{TOS - 1}{TOS + 1}$ | Coefficient de réflexion à partir du TOS | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique |
+| [(27c)](#eq-27c) | $\dfrac{P_{\text{réfl}}}{P_{\text{inc}}} = \vert\rho\vert^2$ | Puissance réfléchie | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique |
+| [(27d)](#eq-27d) | $RL_{(dB)} = -10 \log_{10}\!\left(\dfrac{P_{\text{réfl}}}{P_{\text{inc}}}\right) = -20 \log_{10}\vert\rho\vert$ | Pertes de retour | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique |
+| [(27e)](#eq-27e) | $A_{(dB)} = 20 \log_{10}\!\left(\dfrac{U_E}{U_S}\right) = 10 \log_{10}\!\left(\dfrac{P_E}{P_S}\right)$ | Atténuation totale d'un câble | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique |
+| [(27f)](#eq-27f) | $A_{(dB)} = A_l \times l$ | Perte d'un tronçon de câble | 3.12 Taux d'ondes stationnaires (TOS) et atténuation linéique |
 | [(28)](#eq-28) | $\tau \dfrac{ds}{dt} + s = T_0 \cdot e$ | 4.3 Les systèmes du premier ordre | 4.3 Les systèmes du premier ordre |
 | [(29)](#eq-29) | $\dfrac{1}{\omega_0^2} \dfrac{d^2 s}{dt^2} + \dfrac{2m}{\omega_0} \dfrac{ds}{dt} + s = T_0 \cdot e$ | 4.4 Les systèmes du second ordre | 4.4 Les systèmes du second ordre |
 | [(30)](#eq-30) | $s(t) = S_\infty + (S_0 - S_\infty) \, e^{-t/\tau}$ | Système du premier ordre | 4.6 Réponse temporelle : la réponse à un échelon |
@@ -2208,6 +2818,7 @@ Toutes les formules numérotées du recueil, dans l'ordre d'apparition. Le numé
 | [(44)](#eq-44) | $q = \dfrac{V_{réf}}{2^N - 1}$ | Conversion analogique-numérique (CAN) | 5.6 Numérisation des signaux analogiques et restitution |
 | [(45)](#eq-45) | $SNR_{(dB)} = 1{,}8 + 6 \times N$ | SNR de quantification | 5.6 Numérisation des signaux analogiques et restitution |
 | [(46)](#eq-46) | $n_1 \sin(\theta_1) = n_2 \sin(\theta_2)$ | 6.2 Réflexion, réfraction et réflexion totale | 6.2 Réflexion, réfraction et réflexion totale |
+| [(46a)](#eq-46a) | $M = (P_{e,min} - S) - (\alpha \times L + n_c \times a_c + n_e \times a_e)$ | Marge d'une liaison optique (budget optique) | 6.3 La fibre optique : structure et principe |
 | [(47)](#eq-47) | $\Delta t = t_{max} - t_{min}$ | Dispersion modale | 6.4 Dispersion, bande passante et atténuation d'une fibre optique |
 | [(48)](#eq-48) | $A_0 = \dfrac{10}{l} \times \log_{10}\!\left(\dfrac{P_s}{P_e}\right)$ | Atténuation linéique | 6.4 Dispersion, bande passante et atténuation d'une fibre optique |
 
@@ -2251,6 +2862,8 @@ Définitions courtes des termes techniques utilisés dans ce recueil, par ordre 
 
 **Coefficient de réflexion (ρ)** : rapport entre l'onde réfléchie et l'onde incidente à l'extrémité d'une ligne, compris entre −1 et +1 ; nul si la ligne est adaptée. (Ch. 3)
 
+**Coefficient de vélocité (k, NVP)** : rapport v/c₀ entre la célérité d'un signal dans un câble et celle de la lumière dans le vide (0,66 pour un coaxial à isolant plein) ; à régler sur tout réflectomètre. (Ch. 3)
+
 **Consigne** : valeur souhaitée pour la sortie d'un système asservi. (Ch. 4)
 
 **Constante de temps (τ)** : durée caractéristique d'un système du premier ordre ; le régime permanent est atteint à 5 % près après 3τ. (Ch. 4)
@@ -2268,6 +2881,8 @@ Définitions courtes des termes techniques utilisés dans ce recueil, par ordre 
 **Diode** : composant à jonction PN ne laissant passer le courant que dans un sens, au-delà d'une tension de seuil (≈ 0,6-0,7 V pour le silicium). (Ch. 1)
 
 **Diode laser** : diode à cavité résonnante produisant une lumière monochromatique et puissante par émission stimulée. (Ch. 1)
+
+**Dipôle demi-onde** : antenne de référence formée de deux brins de λ/4 alimentés au centre (longueur totale λ/2), d'impédance ≈ 73 Ω et de gain 2,15 dBi. (Ch. 3)
 
 **Dispersion** : dépendance de la célérité d'une onde vis-à-vis de sa fréquence dans un milieu. Dans une fibre, la dispersion modale étale les impulsions. (Ch. 3, 6)
 
@@ -2321,7 +2936,17 @@ Définitions courtes des termes techniques utilisés dans ce recueil, par ordre 
 
 **Longueur d'onde (λ)** : distance parcourue par une onde pendant une période, λ = c/f. (Ch. 3)
 
+**LoRa / LoRaWAN** : LoRa est une modulation radio à étalement de spectre (chirp) très sensible et à faible débit ; LoRaWAN est le protocole réseau qui relie objets, passerelles et serveurs. (Ch. 3)
+
+**LPWAN** : réseau étendu à basse consommation (LoRaWAN, Sigfox, NB-IoT), conçu pour des objets sur pile qui envoient peu de données à plusieurs kilomètres. (Ch. 3)
+
+**Malus (loi de)** : l'intensité transmise par un polariseur vaut I = I₀ cos²θ ; de même, une antenne tournée de θ par rapport à la polarisation de l'onde ne reçoit que cos²θ de la puissance. (Ch. 3)
+
+**Marge (d'une liaison)** : écart en dB entre la puissance reçue et la sensibilité du récepteur, M = P_r − S ; on vise au moins 10 dB en radio, 3 dB en optique. (Ch. 3, 6)
+
 **Mesurande** : grandeur physique que l'on cherche à mesurer. (Ch. 2)
+
+**Monopole quart d'onde** : brin de longueur λ/4 monté sur un plan de masse qui joue le rôle de miroir ; il rayonne comme un dipôle λ/2 et présente ≈ 36 Ω. (Ch. 3)
 
 **Onde électromagnétique** : propagation couplée d'un champ électrique et d'un champ magnétique, sans support matériel. (Ch. 3)
 
@@ -2329,15 +2954,21 @@ Définitions courtes des termes techniques utilisés dans ce recueil, par ordre 
 
 **Ouverture numérique (ON)** : sinus de l'angle maximal d'entrée d'un rayon pour qu'il soit guidé dans une fibre optique. (Ch. 6)
 
+**Passerelle (gateway)** : récepteur radio LoRaWAN placé en point haut, qui relaie vers Internet les messages des objets situés à plusieurs kilomètres, sans les déchiffrer. (Ch. 3)
+
 **Photodiode** : diode convertissant la lumière reçue en courant électrique (mode photoconducteur ou photovoltaïque). (Ch. 1)
 
 **Photon** : "grain" de lumière transportant une énergie E = hν. (Ch. 1)
+
+**Plan de masse** : surface métallique au pied d'une antenne monopole ; elle crée l'image électrique du brin et doit s'étendre sur au moins λ/4. (Ch. 3)
 
 **Polarisation** : orientation du champ électrique d'une onde électromagnétique (linéaire, elliptique, circulaire). (Ch. 3)
 
 **Pulsation (ω)** : vitesse angulaire d'un signal sinusoïdal, ω = 2πf, en rad/s. (Ch. 1, 5)
 
 **Quantum (q)** : plus petite variation de tension représentable par un CAN, q = V_réf/(2^N − 1). (Ch. 5)
+
+**Réflectomètre (TDR)** : appareil qui envoie une impulsion dans un câble et mesure le retard Δt et le signe de l'écho, pour localiser un défaut (d = v·Δt/2) et en déduire sa nature. (Ch. 3)
 
 **Réflexion totale** : phénomène où toute la lumière est réfléchie à l'interface de deux milieux, lorsque n₁ > n₂ et que l'angle d'incidence dépasse l'angle limite. (Ch. 6)
 
@@ -2346,6 +2977,8 @@ Définitions courtes des termes techniques utilisés dans ce recueil, par ordre 
 **Repliement de spectre (aliasing)** : chevauchement des répliques spectrales lorsque la condition de Shannon n'est pas respectée. (Ch. 5)
 
 **Résolution** : plus petite variation détectable par un instrument (analogique) ou représentable par un convertisseur (numérique, en bits). (Ch. 2, 5)
+
+**Sensibilité (d'un récepteur)** : plus petite puissance reçue, en dBm, qui permet encore de décoder les données (≈ −82 dBm en Wi-Fi, jusqu'à −137 dBm en LoRa). (Ch. 3)
 
 **Shannon (condition de)** : la fréquence d'échantillonnage doit être supérieure au double de la fréquence maximale du signal. (Ch. 5)
 

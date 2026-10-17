@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 150" width="880" height="150" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Bilan de liaison Wi-Fi : borne +18 dBm, câble −1,5 dB, antenne d'émission +6 dB, espace libre −70 dB, antenne de réception +3 dB, récepteur">
+<rect id="fond-blanc" x="0" y="0" width="880" height="150" fill="#ffffff"/>
+<!-- Bloc 1 : Borne Wi-Fi -->
+<rect x="14.0" y="20.0" width="122.0" height="96.0" rx="8" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="75.0" y="60.0" font-size="15" text-anchor="middle" fill="#111">Borne Wi-Fi</text>
+<text x="75.0" y="98.0" font-size="16" text-anchor="middle" fill="#111" font-weight="bold">+18 dBm</text>
+<line x1="136.0" y1="68.0" x2="150.0" y2="68.0" stroke="#111" stroke-width="2"/>
+<polygon points="160.0,68.0 150.0,72.5 150.0,63.5" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Bloc 2 : Câble -->
+<rect x="160.0" y="20.0" width="122.0" height="96.0" rx="8" fill="#ffffff" stroke="#1f6f8b" stroke-width="2"/>
+<text x="221.0" y="60.0" font-size="15" text-anchor="middle" fill="#111">Câble</text>
+<text x="221.0" y="98.0" font-size="16" text-anchor="middle" fill="#1f6f8b" font-weight="bold">−1,5 dB</text>
+<line x1="282.0" y1="68.0" x2="296.0" y2="68.0" stroke="#111" stroke-width="2"/>
+<polygon points="306.0,68.0 296.0,72.5 296.0,63.5" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Bloc 3 : Antenne d'émission -->
+<rect x="306.0" y="20.0" width="122.0" height="96.0" rx="8" fill="#ffffff" stroke="#d9480f" stroke-width="2"/>
+<text x="367.0" y="50.0" font-size="15" text-anchor="middle" fill="#111">Antenne</text>
+<text x="367.0" y="69.0" font-size="15" text-anchor="middle" fill="#111">d'émission</text>
+<text x="367.0" y="98.0" font-size="16" text-anchor="middle" fill="#d9480f" font-weight="bold">+6 dB</text>
+<line x1="428.0" y1="68.0" x2="442.0" y2="68.0" stroke="#111" stroke-width="2"/>
+<polygon points="452.0,68.0 442.0,72.5 442.0,63.5" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Bloc 4 : Espace libre -->
+<rect x="452.0" y="20.0" width="122.0" height="96.0" rx="8" fill="#ffffff" stroke="#1f6f8b" stroke-width="2"/>
+<text x="513.0" y="60.0" font-size="15" text-anchor="middle" fill="#111">Espace libre</text>
+<text x="513.0" y="98.0" font-size="16" text-anchor="middle" fill="#1f6f8b" font-weight="bold">−70 dB</text>
+<line x1="574.0" y1="68.0" x2="588.0" y2="68.0" stroke="#111" stroke-width="2"/>
+<polygon points="598.0,68.0 588.0,72.5 588.0,63.5" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Bloc 5 : Antenne de réception -->
+<rect x="598.0" y="20.0" width="122.0" height="96.0" rx="8" fill="#ffffff" stroke="#d9480f" stroke-width="2"/>
+<text x="659.0" y="50.0" font-size="15" text-anchor="middle" fill="#111">Antenne</text>
+<text x="659.0" y="69.0" font-size="15" text-anchor="middle" fill="#111">de réception</text>
+<text x="659.0" y="98.0" font-size="16" text-anchor="middle" fill="#d9480f" font-weight="bold">+3 dB</text>
+<line x1="720.0" y1="68.0" x2="734.0" y2="68.0" stroke="#111" stroke-width="2"/>
+<polygon points="744.0,68.0 734.0,72.5 734.0,63.5" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Bloc 6 : Récepteur -->
+<rect x="744.0" y="20.0" width="122.0" height="96.0" rx="8" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="805.0" y="60.0" font-size="15" text-anchor="middle" fill="#111">Récepteur</text>
+<text x="805.0" y="98.0" font-size="16" text-anchor="middle" fill="#111" font-weight="bold">P<tspan baseline-shift="sub" font-size="12">reçue</tspan> = ?</text>
+<text x="440.0" y="142.0" font-size="13" text-anchor="middle" fill="#777">gains en orange, pertes en bleu</text>
+</svg>

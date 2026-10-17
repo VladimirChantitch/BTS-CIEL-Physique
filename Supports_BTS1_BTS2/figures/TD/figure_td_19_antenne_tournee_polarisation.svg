@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 320" width="470" height="320" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Antenne de réception à polarisation linéaire tournée d'un angle θ par rapport au champ électrique de l'onde reçue">
+<rect id="fond-blanc" x="0" y="0" width="470" height="320" fill="#ffffff"/>
+<!-- Plan perpendiculaire à la direction de propagation -->
+<line x1="50.0" y1="165.0" x2="350.0" y2="165.0" stroke="#777" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="200.0" y1="25.0" x2="200.0" y2="305.0" stroke="#777" stroke-width="1" stroke-dasharray="4 4"/>
+<!-- Champ électrique de l'onde : polarisation verticale -->
+<line x1="200.0" y1="267.0" x2="200.0" y2="63.0" stroke="#d9480f" stroke-width="3"/>
+<polygon points="200.0,50.0 206.0,63.0 194.0,63.0" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<polygon points="200.0,280.0 194.0,267.0 206.0,267.0" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="188.0" y="67.0" font-size="17" text-anchor="end" fill="#d9480f" font-weight="bold">E</text>
+<!-- Antenne de réception (brin) tournée de theta -->
+<line x1="128.3" y1="267.4" x2="271.7" y2="62.6" stroke="#1f6f8b" stroke-width="6" stroke-linecap="round"/>
+<!-- Projection du champ sur l'antenne : E cos(theta) -->
+<line x1="200.0" y1="60.0" x2="249.3" y2="94.5" stroke="#777" stroke-width="1.5" stroke-dasharray="4 3"/>
+<circle cx="249.3" cy="94.5" r="3.5" fill="#1f6f8b" stroke="none"/>
+<text x="261.3" y="98.5" font-size="14" fill="#1f6f8b" font-weight="bold">E cos θ</text>
+<!-- Angle theta entre la polarisation et l'antenne -->
+<path d="M 200.0 105.0 A 60 60 0 0 1 234.4 115.9" fill="none" stroke="#111" stroke-width="1.6"/>
+<text x="222.0" y="99.0" font-size="17" fill="#111" font-weight="bold">θ</text>
+<!-- Sens de propagation : vers le lecteur -->
+<circle cx="200.0" cy="165.0" r="9.0" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<circle cx="200.0" cy="165.0" r="2.5" fill="#111" stroke="none"/>
+<text x="290.0" y="205.0" font-size="14" fill="#1f6f8b">antenne de réception</text>
+<text x="290.0" y="223.0" font-size="14" fill="#1f6f8b">(brin tourné de θ)</text>
+<text x="230.0" y="297.0" font-size="13" fill="#777">propagation vers le lecteur</text>
+<text x="40.0" y="26.0" font-size="14" fill="#d9480f">polarisation de l'onde reçue</text>
+</svg>

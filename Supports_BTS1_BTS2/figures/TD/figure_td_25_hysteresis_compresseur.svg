@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" width="560" height="300" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Cycle d'hystérésis du compresseur : démarrage au-dessus de 23,0 °C, arrêt au-dessous de 21,0 °C">
+<rect id="fond-blanc" x="0" y="0" width="560" height="300" fill="#ffffff"/>
+<!-- Axes : température mesurée et état du compresseur -->
+<line x1="110.0" y1="240.0" x2="520.0" y2="240.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="530.0,240.0 520.0,244.5 520.0,235.5" fill="#111" stroke="#111" stroke-width="1"/>
+<line x1="110.0" y1="240.0" x2="110.0" y2="50.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="110.0,40.0 114.5,50.0 105.5,50.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="530.0" y="228.0" font-size="14" text-anchor="end" fill="#111">θ mesurée (°C)</text>
+<text x="118.0" y="36.0" font-size="14" fill="#111">état du compresseur</text>
+<line x1="110.0" y1="236.0" x2="110.0" y2="244.0" stroke="#111" stroke-width="1.4"/>
+<text x="110.0" y="260.0" font-size="13" text-anchor="middle" fill="#111">20,0</text>
+<line x1="210.0" y1="236.0" x2="210.0" y2="244.0" stroke="#111" stroke-width="1.4"/>
+<text x="210.0" y="260.0" font-size="13" text-anchor="middle" fill="#111">21,0</text>
+<line x1="310.0" y1="236.0" x2="310.0" y2="244.0" stroke="#111" stroke-width="1.4"/>
+<text x="310.0" y="260.0" font-size="13" text-anchor="middle" fill="#111">22,0</text>
+<line x1="410.0" y1="236.0" x2="410.0" y2="244.0" stroke="#111" stroke-width="1.4"/>
+<text x="410.0" y="260.0" font-size="13" text-anchor="middle" fill="#111">23,0</text>
+<line x1="510.0" y1="236.0" x2="510.0" y2="244.0" stroke="#111" stroke-width="1.4"/>
+<text x="510.0" y="260.0" font-size="13" text-anchor="middle" fill="#111">24,0</text>
+<text x="102.0" y="205.0" font-size="14" text-anchor="end" fill="#111">arrêt</text>
+<text x="102.0" y="95.0" font-size="14" text-anchor="end" fill="#111">marche</text>
+<!-- Consigne 22,0 °C -->
+<line x1="310.0" y1="60.0" x2="310.0" y2="240.0" stroke="#777" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="310.0" y="56.0" font-size="13" text-anchor="middle" fill="#777">consigne</text>
+<!-- Cycle parcouru : arrêt jusqu'à 23,0 °C, marche jusqu'à 21,0 °C -->
+<line x1="110.0" y1="200.0" x2="410.0" y2="200.0" stroke="#1f6f8b" stroke-width="3"/>
+<line x1="200.0" y1="200.0" x2="258.0" y2="200.0" stroke="#1f6f8b" stroke-width="3"/>
+<polygon points="270.0,200.0 258.0,206.0 258.0,194.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="210.0" y1="90.0" x2="510.0" y2="90.0" stroke="#1f6f8b" stroke-width="3"/>
+<line x1="300.0" y1="90.0" x2="252.0" y2="90.0" stroke="#1f6f8b" stroke-width="3"/>
+<polygon points="240.0,90.0 252.0,84.0 252.0,96.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="410.0" y1="200.0" x2="410.0" y2="90.0" stroke="#1f6f8b" stroke-width="3"/>
+<line x1="410.0" y1="170.0" x2="410.0" y2="132.0" stroke="#1f6f8b" stroke-width="3"/>
+<polygon points="410.0,120.0 416.0,132.0 404.0,132.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="210.0" y1="90.0" x2="210.0" y2="200.0" stroke="#1f6f8b" stroke-width="3"/>
+<line x1="210.0" y1="120.0" x2="210.0" y2="158.0" stroke="#1f6f8b" stroke-width="3"/>
+<polygon points="210.0,170.0 204.0,158.0 216.0,158.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="420.0" y="150.0" font-size="14" fill="#d9480f">démarrage</text>
+<text x="420.0" y="168.0" font-size="14" fill="#d9480f">si θ &gt; 23,0 °C</text>
+<text x="200.0" y="150.0" font-size="14" text-anchor="end" fill="#d9480f">arrêt</text>
+<text x="200.0" y="168.0" font-size="14" text-anchor="end" fill="#d9480f">si θ &lt; 21,0 °C</text>
+</svg>

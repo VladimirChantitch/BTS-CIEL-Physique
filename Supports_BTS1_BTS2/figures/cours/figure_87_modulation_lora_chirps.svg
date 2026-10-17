@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="640" height="280" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Modulation LoRa : chirps de préambule et symboles de données">
+<rect id="fond-blanc" x="0" y="0" width="640" height="280" fill="#ffffff"/>
+<line x1="80.0" y1="214.0" x2="602.0" y2="214.0" stroke="#111" stroke-width="1.4"/>
+<polygon points="610.0,214.0 601.0,209.1 601.0,219.0" fill="#111" stroke="#111" stroke-width="1"/>
+<line x1="80.0" y1="214.0" x2="80.0" y2="38.0" stroke="#111" stroke-width="1.4"/>
+<polygon points="80.0,30.0 75.1,39.0 85.0,39.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="610.0" y="232.0" font-size="13" text-anchor="end" fill="#111">temps t</text>
+<text x="74.0" y="36.0" font-size="13" text-anchor="end" fill="#111">fréquence f</text>
+<line x1="80.0" y1="64.0" x2="560.0" y2="64.0" stroke="#777" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="80.0" y1="204.0" x2="560.0" y2="204.0" stroke="#777" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="80.0" y1="134.0" x2="560.0" y2="134.0" stroke="#777" stroke-width="0.8" stroke-dasharray="2 4"/>
+<text x="74.0" y="68.0" font-size="12" text-anchor="end" fill="#111">f<tspan baseline-shift="sub" font-size="72%">0</tspan> + B/2</text>
+<text x="74.0" y="138.0" font-size="12" text-anchor="end" fill="#111">f<tspan baseline-shift="sub" font-size="72%">0</tspan></text>
+<text x="74.0" y="208.0" font-size="12" text-anchor="end" fill="#111">f<tspan baseline-shift="sub" font-size="72%">0</tspan> − B/2</text>
+<line x1="574.0" y1="71.0" x2="574.0" y2="197.0" stroke="#777" stroke-width="1.4"/>
+<polygon points="574.0,204.0 578.4,196.0 569.6,196.0" fill="#777" stroke="#777" stroke-width="1"/>
+<polygon points="574.0,64.0 569.6,72.0 578.4,72.0" fill="#777" stroke="#777" stroke-width="1"/>
+<text x="582.0" y="130.0" font-size="13" text-anchor="start" fill="#777" font-weight="bold">B</text>
+<text x="582.0" y="146.0" font-size="11" text-anchor="start" fill="#777">125 kHz</text>
+<line x1="96.0" y1="204.0" x2="166.0" y2="64.0" stroke="#d9480f" stroke-width="2.6"/>
+<line x1="166.0" y1="64.0" x2="166.0" y2="204.0" stroke="#777" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="166.0" y1="204.0" x2="236.0" y2="64.0" stroke="#d9480f" stroke-width="2.6"/>
+<line x1="236.0" y1="64.0" x2="236.0" y2="204.0" stroke="#777" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="236.0" y1="204.0" x2="306.0" y2="64.0" stroke="#d9480f" stroke-width="2.6"/>
+<line x1="103.0" y1="50.0" x2="159.0" y2="50.0" stroke="#777" stroke-width="1.4"/>
+<polygon points="166.0,50.0 158.0,45.6 158.0,54.4" fill="#777" stroke="#777" stroke-width="1"/>
+<polygon points="96.0,50.0 104.0,54.4 104.0,45.6" fill="#777" stroke="#777" stroke-width="1"/>
+<text x="131.0" y="44.0" font-size="13" text-anchor="middle" fill="#777" font-weight="bold">T<tspan baseline-shift="sub" font-size="72%">s</tspan></text>
+<line x1="320.0" y1="60.0" x2="320.0" y2="214.0" stroke="#777" stroke-width="0.8"/>
+<line x1="320.0" y1="113.0" x2="344.5" y2="64.0" stroke="#1f6f8b" stroke-width="2.6"/>
+<line x1="344.5" y1="64.0" x2="344.5" y2="204.0" stroke="#777" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="344.5" y1="204.0" x2="390.0" y2="113.0" stroke="#1f6f8b" stroke-width="2.6"/>
+<circle cx="320.0" cy="113.0" r="3.5" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="390.0" y1="60.0" x2="390.0" y2="214.0" stroke="#777" stroke-width="0.8"/>
+<line x1="390.0" y1="169.0" x2="442.5" y2="64.0" stroke="#1f6f8b" stroke-width="2.6"/>
+<line x1="442.5" y1="64.0" x2="442.5" y2="204.0" stroke="#777" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="442.5" y1="204.0" x2="460.0" y2="169.0" stroke="#1f6f8b" stroke-width="2.6"/>
+<circle cx="390.0" cy="169.0" r="3.5" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="460.0" y1="60.0" x2="460.0" y2="214.0" stroke="#777" stroke-width="0.8"/>
+<line x1="460.0" y1="141.0" x2="498.5" y2="64.0" stroke="#1f6f8b" stroke-width="2.6"/>
+<line x1="498.5" y1="64.0" x2="498.5" y2="204.0" stroke="#777" stroke-width="0.8" stroke-dasharray="2 3"/>
+<line x1="498.5" y1="204.0" x2="530.0" y2="141.0" stroke="#1f6f8b" stroke-width="2.6"/>
+<circle cx="460.0" cy="141.0" r="3.5" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="530.0" y1="60.0" x2="530.0" y2="214.0" stroke="#777" stroke-width="0.8"/>
+<text x="201.0" y="236.0" font-size="12" text-anchor="middle" fill="#d9480f" font-weight="bold">préambule (synchronisation)</text>
+<text x="425.0" y="236.0" font-size="12" text-anchor="middle" fill="#1f6f8b" font-weight="bold">symboles de données</text>
+<text x="320.0" y="256.0" font-size="12" text-anchor="middle" fill="#777">Le point de départ de chaque chirp (point bleu) code SF bits. Durée d'un symbole : T<tspan baseline-shift="sub" font-size="72%">s</tspan> = 2<tspan baseline-shift="super" font-size="72%">SF</tspan> / B.</text>
+<text x="320.0" y="273.0" font-size="12" text-anchor="middle" fill="#777">SF + 1 : symbole deux fois plus long, débit divisé par deux, sensibilité améliorée d'environ 2,5 dB.</text>
+</svg>

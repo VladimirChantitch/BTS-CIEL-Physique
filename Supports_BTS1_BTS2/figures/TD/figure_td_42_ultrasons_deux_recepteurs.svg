@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 310" width="760" height="310" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Émetteur à ultrasons de 40 kHz face à deux récepteurs R1 (fixe) et R2 (mobile le long d'une règle), reliés aux voies 1 et 2 d'un oscilloscope">
+<rect id="fond-blanc" x="0" y="0" width="760" height="310" fill="#ffffff"/>
+<!-- GBF et émetteur -->
+<rect x="20.0" y="40.0" width="110.0" height="55.0" rx="6" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<text x="75.0" y="64.0" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">GBF</text>
+<text x="75.0" y="83.0" font-size="13" text-anchor="middle" fill="#111">40,0 kHz</text>
+<line x1="75.0" y1="95.0" x2="75.0" y2="140.0" stroke="#111" stroke-width="2"/>
+<line x1="75.0" y1="140.0" x2="110.0" y2="140.0" stroke="#111" stroke-width="2"/>
+<rect x="110.0" y="120.0" width="50.0" height="50.0" rx="4" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="135.0" y="151.0" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">E</text>
+<!-- Ondes émises -->
+<path d="M 185.0 125.0 Q 193.8 145 185.0 165.0" fill="none" stroke="#1f6f8b" stroke-width="1.5"/>
+<path d="M 205.0 109.0 Q 220.8 145 205.0 181.0" fill="none" stroke="#1f6f8b" stroke-width="1.5"/>
+<path d="M 225.0 93.0 Q 247.8 145 225.0 197.0" fill="none" stroke="#1f6f8b" stroke-width="1.5"/>
+<!-- Récepteurs R1 (fixe) et R2 (mobile) -->
+<rect x="300.0" y="120.0" width="40.0" height="50.0" rx="4" fill="#ffffff" stroke="#1f6f8b" stroke-width="2"/>
+<text x="320.0" y="151.0" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">R<tspan baseline-shift="sub" font-size="11">1</tspan></text>
+<rect x="440.0" y="120.0" width="40.0" height="50.0" rx="4" fill="#ffffff" stroke="#1f6f8b" stroke-width="2"/>
+<text x="460.0" y="151.0" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">R<tspan baseline-shift="sub" font-size="11">2</tspan></text>
+<line x1="429.0" y1="248.0" x2="511.0" y2="248.0" stroke="#45700f" stroke-width="1.5"/>
+<polygon points="520.0,248.0 511.0,244.0 511.0,252.0" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<polygon points="420.0,248.0 429.0,244.0 429.0,252.0" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<text x="470.0" y="266.0" font-size="12" text-anchor="middle" fill="#45700f">déplacement de R₂</text>
+<!-- Règle graduée -->
+<rect x="280.0" y="185.0" width="400.0" height="22.0" fill="#f4f4f4" stroke="#111" stroke-width="1.4"/>
+<line x1="280.0" y1="185.0" x2="280.0" y2="197.0" stroke="#111" stroke-width="1"/>
+<line x1="290.0" y1="185.0" x2="290.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="300.0" y1="185.0" x2="300.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="310.0" y1="185.0" x2="310.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="320.0" y1="185.0" x2="320.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="330.0" y1="185.0" x2="330.0" y2="197.0" stroke="#111" stroke-width="1"/>
+<line x1="340.0" y1="185.0" x2="340.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="350.0" y1="185.0" x2="350.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="360.0" y1="185.0" x2="360.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="370.0" y1="185.0" x2="370.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="380.0" y1="185.0" x2="380.0" y2="197.0" stroke="#111" stroke-width="1"/>
+<line x1="390.0" y1="185.0" x2="390.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="400.0" y1="185.0" x2="400.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="410.0" y1="185.0" x2="410.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="420.0" y1="185.0" x2="420.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="430.0" y1="185.0" x2="430.0" y2="197.0" stroke="#111" stroke-width="1"/>
+<line x1="440.0" y1="185.0" x2="440.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="450.0" y1="185.0" x2="450.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="460.0" y1="185.0" x2="460.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="470.0" y1="185.0" x2="470.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="480.0" y1="185.0" x2="480.0" y2="197.0" stroke="#111" stroke-width="1"/>
+<line x1="490.0" y1="185.0" x2="490.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="500.0" y1="185.0" x2="500.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="510.0" y1="185.0" x2="510.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="520.0" y1="185.0" x2="520.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="530.0" y1="185.0" x2="530.0" y2="197.0" stroke="#111" stroke-width="1"/>
+<line x1="540.0" y1="185.0" x2="540.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="550.0" y1="185.0" x2="550.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="560.0" y1="185.0" x2="560.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="570.0" y1="185.0" x2="570.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="580.0" y1="185.0" x2="580.0" y2="197.0" stroke="#111" stroke-width="1"/>
+<line x1="590.0" y1="185.0" x2="590.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="600.0" y1="185.0" x2="600.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="610.0" y1="185.0" x2="610.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="620.0" y1="185.0" x2="620.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="630.0" y1="185.0" x2="630.0" y2="197.0" stroke="#111" stroke-width="1"/>
+<line x1="640.0" y1="185.0" x2="640.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="650.0" y1="185.0" x2="650.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="660.0" y1="185.0" x2="660.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="670.0" y1="185.0" x2="670.0" y2="191.0" stroke="#111" stroke-width="1"/>
+<line x1="680.0" y1="185.0" x2="680.0" y2="197.0" stroke="#111" stroke-width="1"/>
+<text x="480.0" y="225.0" font-size="12" text-anchor="middle" fill="#777">règle graduée (mm)</text>
+<!-- Liaisons vers l'oscilloscope -->
+<line x1="320.0" y1="120.0" x2="320.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<line x1="320.0" y1="60.0" x2="600.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<line x1="460.0" y1="120.0" x2="460.0" y2="80.0" stroke="#111" stroke-width="2"/>
+<line x1="460.0" y1="80.0" x2="600.0" y2="80.0" stroke="#111" stroke-width="2"/>
+<rect x="600.0" y="35.0" width="140.0" height="90.0" rx="6" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<text x="670.0" y="62.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">oscilloscope</text>
+<text x="670.0" y="84.0" font-size="12" text-anchor="middle" fill="#111">voie 1 : R₁</text>
+<text x="670.0" y="102.0" font-size="12" text-anchor="middle" fill="#111">voie 2 : R₂</text>
+<text x="380.0" y="296.0" font-size="12" text-anchor="middle" fill="#777">émetteur et récepteurs alignés sur le même axe</text>
+</svg>

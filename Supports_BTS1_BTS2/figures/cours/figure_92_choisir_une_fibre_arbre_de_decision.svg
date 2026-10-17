@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" width="700" height="340" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Choisir une fibre optique : arbre de décision du technicien">
+<rect id="fond-blanc" x="0" y="0" width="700" height="340" fill="#ffffff"/>
+<rect x="180.0" y="10.0" width="340.0" height="48.0" rx="8" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="350.0" y="30.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">Distance réelle du cheminement et débit visé</text>
+<text x="350.0" y="48.0" font-size="12" text-anchor="middle" fill="#777">(aujourd'hui et dans dix ans)</text>
+<line x1="350.0" y1="58.0" x2="350.0" y2="74.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="350.0,82.0 355.0,73.0 345.1,73.0" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="150.0" y="82.0" width="400.0" height="50.0" rx="25" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="350.0" y="103.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">Moins de 400 m à 10 Gbit/s (100 m à 100 Gbit/s)</text>
+<text x="350.0" y="121.0" font-size="12" text-anchor="middle" fill="#111">et pas de raccordement d'abonné (FTTH) ?</text>
+<line x1="185.0" y1="132.0" x2="185.0" y2="160.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="185.0,168.0 190.0,159.0 180.1,159.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="172.0" y="155.0" font-size="13" text-anchor="end" fill="#1f6f8b" font-weight="bold">oui</text>
+<line x1="515.0" y1="132.0" x2="515.0" y2="160.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="515.0,168.0 520.0,159.0 510.1,159.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="528.0" y="155.0" font-size="13" text-anchor="start" fill="#8a6d00" font-weight="bold">non</text>
+<rect x="20.0" y="168.0" width="330.0" height="92.0" rx="8" fill="#e3f3f6" stroke="#1f6f8b" stroke-width="2.4"/>
+<text x="185.0" y="192.0" font-size="14" text-anchor="middle" fill="#1f6f8b" font-weight="bold">Multimode OM4 (gaine turquoise)</text>
+<text x="185.0" y="212.0" font-size="12" text-anchor="middle" fill="#111">modules SR 850 nm (VCSEL), les moins chers</text>
+<text x="185.0" y="230.0" font-size="12" text-anchor="middle" fill="#777">jarretière de baie, salle serveurs,</text>
+<text x="185.0" y="247.0" font-size="12" text-anchor="middle" fill="#777">liaison entre étages d'un bâtiment</text>
+<rect x="365.0" y="168.0" width="315.0" height="92.0" rx="8" fill="#fff6d5" stroke="#8a6d00" stroke-width="2.4"/>
+<text x="522.5" y="192.0" font-size="14" text-anchor="middle" fill="#8a6d00" font-weight="bold">Monomode OS2 (gaine jaune)</text>
+<text x="522.5" y="212.0" font-size="12" text-anchor="middle" fill="#111">modules LR 1 310 nm (10 km), 1 550 nm (40 à 80 km)</text>
+<text x="522.5" y="230.0" font-size="12" text-anchor="middle" fill="#777">campus, inter-sites, inter-datacenter ;</text>
+<text x="522.5" y="247.0" font-size="12" text-anchor="middle" fill="#777">FTTH : fibre G.657, connecteurs SC/APC verts</text>
+<line x1="185.0" y1="260.0" x2="185.0" y2="276.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="185.0,284.0 190.0,275.0 180.1,275.0" fill="#111" stroke="#111" stroke-width="1"/>
+<line x1="522.5" y1="260.0" x2="522.5" y2="276.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="522.5,284.0 527.5,275.0 517.6,275.0" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="20.0" y="284.0" width="660.0" height="50.0" rx="8" fill="#ffffff" stroke="#d9480f" stroke-width="2"/>
+<text x="350.0" y="304.0" font-size="12" text-anchor="middle" fill="#111" font-weight="bold">Dans tous les cas : même type de module aux deux extrémités, budget optique avec marge ≥ 3 dB,</text>
+<text x="350.0" y="322.0" font-size="12" text-anchor="middle" fill="#111" font-weight="bold">connecteurs inspectés et nettoyés, rayon de courbure respecté, jamais de mélange multimode / monomode</text>
+</svg>

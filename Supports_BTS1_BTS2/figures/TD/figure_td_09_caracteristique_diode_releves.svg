@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565 340" width="565" height="340" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Caractéristique courant-tension d'une diode silicium avec les trois relevés de l'exercice 1.12">
+<rect id="fond-blanc" x="0" y="0" width="565" height="340" fill="#ffffff"/>
+<!-- Grille : 0,05 V et 1 mA -->
+<line x1="80.0" y1="30.0" x2="80.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="105.0" y1="30.0" x2="105.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="130.0" y1="30.0" x2="130.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="155.0" y1="30.0" x2="155.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="180.0" y1="30.0" x2="180.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="205.0" y1="30.0" x2="205.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="230.0" y1="30.0" x2="230.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="255.0" y1="30.0" x2="255.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="280.0" y1="30.0" x2="280.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="305.0" y1="30.0" x2="305.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="330.0" y1="30.0" x2="330.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="355.0" y1="30.0" x2="355.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="380.0" y1="30.0" x2="380.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="405.0" y1="30.0" x2="405.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="430.0" y1="30.0" x2="430.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="455.0" y1="30.0" x2="455.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="480.0" y1="30.0" x2="480.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="300.0" x2="480.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="273.0" x2="480.0" y2="273.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="246.0" x2="480.0" y2="246.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="219.0" x2="480.0" y2="219.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="192.0" x2="480.0" y2="192.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="165.0" x2="480.0" y2="165.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="138.0" x2="480.0" y2="138.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="111.0" x2="480.0" y2="111.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="84.0" x2="480.0" y2="84.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="57.0" x2="480.0" y2="57.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="80.0" y1="30.0" x2="480.0" y2="30.0" stroke="#d4d4d4" stroke-width="1"/>
+<!-- Axes -->
+<line x1="80.0" y1="300.0" x2="495.0" y2="300.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="505.0,300.0 495.0,304.5 495.0,295.5" fill="#111" stroke="#111" stroke-width="1"/>
+<line x1="80.0" y1="300.0" x2="80.0" y2="18.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="80.0,8.0 84.5,18.0 75.5,18.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="511.0" y="305.0" font-size="15" fill="#111">V (V)</text>
+<text x="88.0" y="20.0" font-size="15" fill="#111">I (mA)</text>
+<!-- Graduations -->
+<text x="80.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0</text>
+<text x="130.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0,1</text>
+<text x="180.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0,2</text>
+<text x="230.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0,3</text>
+<text x="280.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0,4</text>
+<text x="330.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0,5</text>
+<text x="380.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0,6</text>
+<text x="430.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0,7</text>
+<text x="480.0" y="320.0" font-size="13" text-anchor="middle" fill="#111">0,8</text>
+<text x="72.0" y="251.0" font-size="13" text-anchor="end" fill="#111">2</text>
+<text x="72.0" y="197.0" font-size="13" text-anchor="end" fill="#111">4</text>
+<text x="72.0" y="143.0" font-size="13" text-anchor="end" fill="#111">6</text>
+<text x="72.0" y="89.0" font-size="13" text-anchor="end" fill="#111">8</text>
+<text x="72.0" y="35.0" font-size="13" text-anchor="end" fill="#111">10</text>
+<!-- Allure de la caractéristique (modèle exponentiel passant par les relevés) -->
+<polyline points="80.0,300.0 82.2,300.0 84.4,300.0 86.6,300.0 88.9,300.0 91.1,300.0 93.3,300.0 95.5,300.0 97.7,300.0 99.9,300.0 102.1,300.0 104.3,300.0 106.6,300.0 108.8,300.0 111.0,300.0 113.2,300.0 115.4,300.0 117.6,300.0 119.8,300.0 122.0,300.0 124.3,300.0 126.5,300.0 128.7,300.0 130.9,300.0 133.1,300.0 135.3,300.0 137.5,300.0 139.7,300.0 142.0,300.0 144.2,300.0 146.4,300.0 148.6,300.0 150.8,300.0 153.0,300.0 155.2,300.0 157.4,300.0 159.7,300.0 161.9,300.0 164.1,300.0 166.3,300.0 168.5,300.0 170.7,300.0 172.9,300.0 175.1,300.0 177.4,300.0 179.6,300.0 181.8,300.0 184.0,300.0 186.2,300.0 188.4,300.0 190.6,300.0 192.8,300.0 195.1,300.0 197.3,300.0 199.5,300.0 201.7,300.0 203.9,300.0 206.1,300.0 208.3,300.0 210.5,300.0 212.8,300.0 215.0,300.0 217.2,300.0 219.4,300.0 221.6,300.0 223.8,300.0 226.0,300.0 228.2,300.0 230.5,300.0 232.7,300.0 234.9,300.0 237.1,300.0 239.3,300.0 241.5,300.0 243.7,300.0 245.9,300.0 248.2,300.0 250.4,300.0 252.6,300.0 254.8,300.0 257.0,300.0 259.2,300.0 261.4,300.0 263.7,300.0 265.9,300.0 268.1,300.0 270.3,300.0 272.5,300.0 274.7,300.0 276.9,300.0 279.1,299.9 281.4,299.9 283.6,299.9 285.8,299.9 288.0,299.9 290.2,299.9 292.4,299.9 294.6,299.9 296.8,299.9 299.1,299.8 301.3,299.8 303.5,299.8 305.7,299.8 307.9,299.8 310.1,299.7 312.3,299.7 314.5,299.6 316.8,299.6 319.0,299.5 321.2,299.5 323.4,299.4 325.6,299.3 327.8,299.3 330.0,299.2 332.2,299.0 334.5,298.9 336.7,298.8 338.9,298.6 341.1,298.4 343.3,298.2 345.5,298.0 347.7,297.7 349.9,297.5 352.2,297.1 354.4,296.7 356.6,296.3 358.8,295.8 361.0,295.3 363.2,294.7 365.4,294.0 367.6,293.2 369.9,292.3 372.1,291.3 374.3,290.2 376.5,288.9 378.7,287.4 380.9,285.8 383.1,283.9 385.3,281.8 387.6,279.5 389.8,276.8 392.0,273.8 394.2,270.3 396.4,266.5 398.6,262.1 400.8,257.1 403.0,251.5 405.3,245.2 407.5,238.1 409.7,230.0 411.9,220.8 414.1,210.5 416.3,198.8 418.5,185.6 420.7,170.7 423.0,153.8 425.2,134.7 427.4,113.1 429.6,88.8 431.8,61.2 434.0,30.0" fill="none" stroke="#d9480f" stroke-width="2.5" stroke-linejoin="round"/>
+<!-- Relevés de l'énoncé : (0,5 V ; 0 mA), (0,65 V ; 2 mA), (0,7 V ; 8 mA) -->
+<circle cx="330.0" cy="300.0" r="5.0" fill="#1f6f8b" stroke="none"/>
+<circle cx="405.0" cy="246.0" r="5.0" fill="#1f6f8b" stroke="none"/>
+<circle cx="430.0" cy="84.0" r="5.0" fill="#1f6f8b" stroke="none"/>
+<!-- Légende -->
+<rect x="100.0" y="45.0" width="205.0" height="54.0" fill="#ffffff" stroke="#d4d4d4" stroke-width="1"/>
+<circle cx="118.0" cy="63.0" r="5.0" fill="#1f6f8b" stroke="none"/>
+<text x="132.0" y="68.0" font-size="14" fill="#111">relevés de l'énoncé</text>
+<line x1="108.0" y1="85.0" x2="128.0" y2="85.0" stroke="#d9480f" stroke-width="2.5"/>
+<text x="132.0" y="90.0" font-size="14" fill="#111">allure de I(V)</text>
+</svg>

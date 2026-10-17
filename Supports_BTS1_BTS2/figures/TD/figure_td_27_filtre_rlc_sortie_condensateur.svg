@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" width="600" height="250" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Filtre d'alimentation RLC série : entrée e, sortie s prise aux bornes du condensateur">
+<rect id="fond-blanc" x="0" y="0" width="600" height="250" fill="#ffffff"/>
+<!-- Bornes d'entrée et tension e -->
+<circle cx="70.0" cy="60.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<circle cx="70.0" cy="200.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<line x1="48.0" y1="192.0" x2="48.0" y2="78.0" stroke="#d9480f" stroke-width="2.5"/>
+<polygon points="48.0,68.0 52.5,78.0 43.5,78.0" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="40.0" y="136.0" font-size="16" text-anchor="end" fill="#d9480f" font-weight="bold" font-style="italic">e</text>
+<!-- R puis L en série sur le fil du haut -->
+<line x1="74.5" y1="60.0" x2="120.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<rect x="120.0" y="50.0" width="60.0" height="20.0" fill="none" stroke="#111" stroke-width="2"/>
+<text x="150.0" y="42.0" font-size="15" text-anchor="middle" fill="#111">R</text>
+<line x1="180.0" y1="60.0" x2="220.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<path d="M 220.0 60.0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0" fill="none" stroke="#111" stroke-width="2"/>
+<text x="256.0" y="40.0" font-size="15" text-anchor="middle" fill="#111">L = 10 mH</text>
+<line x1="292.0" y1="60.0" x2="470.0" y2="60.0" stroke="#111" stroke-width="2"/>
+<!-- C en dérivation, sortie à ses bornes -->
+<circle cx="360.0" cy="60.0" r="3.5" fill="#111" stroke="none"/>
+<line x1="360.0" y1="60.0" x2="360.0" y2="125.0" stroke="#111" stroke-width="2"/>
+<line x1="342.0" y1="125.0" x2="378.0" y2="125.0" stroke="#111" stroke-width="3"/>
+<line x1="342.0" y1="135.0" x2="378.0" y2="135.0" stroke="#111" stroke-width="3"/>
+<line x1="360.0" y1="135.0" x2="360.0" y2="200.0" stroke="#111" stroke-width="2"/>
+<circle cx="360.0" cy="200.0" r="3.5" fill="#111" stroke="none"/>
+<text x="384.0" y="135.0" font-size="15" fill="#111">C = 1,0 µF</text>
+<line x1="74.5" y1="200.0" x2="470.0" y2="200.0" stroke="#111" stroke-width="2"/>
+<circle cx="474.5" cy="60.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<circle cx="474.5" cy="200.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<line x1="500.0" y1="192.0" x2="500.0" y2="78.0" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="500.0,68.0 504.5,78.0 495.5,78.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="510.0" y="136.0" font-size="16" fill="#1f6f8b" font-weight="bold" font-style="italic">s</text>
+</svg>

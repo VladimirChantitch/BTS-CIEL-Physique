@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" width="560" height="360" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Antenne de réception tournée d'un angle delta : le champ du flux H se décompose en une composante E cos delta reçue sur l'accès H et une composante E sin delta reçue sur l'accès V">
+<rect id="fond-blanc" x="0" y="0" width="560" height="360" fill="#ffffff"/>
+<!-- Direction horizontale de l'onde reçue (flux H) -->
+<line x1="40.0" y1="220.0" x2="520.0" y2="220.0" stroke="#777" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="520.0" y="240.0" font-size="12" text-anchor="end" fill="#777">horizontale</text>
+<!-- Axes de l'antenne tournée (accès H et V) -->
+<line x1="79.0" y1="271.3" x2="492.5" y2="120.8" stroke="#111" stroke-width="1.6"/>
+<line x1="250.8" y1="304.6" x2="155.0" y2="41.5" stroke="#111" stroke-width="1.6"/>
+<text x="482.5" y="110.8" font-size="13" text-anchor="end" fill="#111">accès H de l'antenne</text>
+<text x="163.0" y="45.5" font-size="13" fill="#111">accès V de l'antenne</text>
+<!-- Champ E du flux H et ses projections -->
+<line x1="220.0" y1="220.0" x2="430.0" y2="220.0" stroke="#d9480f" stroke-width="3"/>
+<polygon points="440.0,220.0 430.0,215.5 430.0,224.5" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="446.0" y="225.0" font-size="16" fill="#d9480f" font-weight="bold">E</text>
+<line x1="220.0" y1="220.0" x2="404.9" y2="152.7" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="414.3,149.3 403.3,148.5 406.4,156.9" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="220.0" y1="220.0" x2="242.3" y2="281.3" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="245.7,290.7 246.5,279.8 238.1,282.8" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="440.0" y1="220.0" x2="414.3" y2="149.3" stroke="#1f6f8b" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="245.7" y1="290.7" x2="440.0" y2="220.0" stroke="#1f6f8b" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="307.1" y="172.6" font-size="14" text-anchor="middle" fill="#1f6f8b">E cos δ</text>
+<text x="237.7" y="310.7" font-size="14" text-anchor="end" fill="#1f6f8b">E sin δ</text>
+<!-- Angle delta -->
+<path d="M 290.0 220.0 A 70 70 0 0 0 285.8 196.1" fill="none" stroke="#45700f" stroke-width="1.8"/>
+<text x="298.0" y="212.0" font-size="16" fill="#45700f" font-weight="bold">δ</text>
+<text x="280.0" y="348.0" font-size="12" text-anchor="middle" fill="#777">(angle δ exagéré sur la figure)</text>
+</svg>

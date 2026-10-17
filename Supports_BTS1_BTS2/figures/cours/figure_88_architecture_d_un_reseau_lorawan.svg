@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" width="700" height="330" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Architecture d'un réseau LoRaWAN">
+<rect id="fond-blanc" x="0" y="0" width="700" height="330" fill="#ffffff"/>
+<line x1="70.0" y1="30.0" x2="592.0" y2="30.0" stroke="#45700f" stroke-width="1.6"/>
+<polygon points="600.0,30.0 591.0,25.1 591.0,35.0" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<line x1="70.0" y1="24.0" x2="70.0" y2="36.0" stroke="#45700f" stroke-width="1.6"/>
+<text x="335.0" y="22.0" font-size="12" text-anchor="middle" fill="#45700f" font-weight="bold">données chiffrées (AES-128) de l'objet jusqu'au serveur applicatif</text>
+<rect x="6.0" y="62.0" width="128.0" height="34.0" rx="6" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="70.0" y="84.0" font-size="12" text-anchor="middle" fill="#111">capteur de place</text>
+<line x1="124.0" y1="62.0" x2="124.0" y2="50.0" stroke="#111" stroke-width="2"/>
+<rect x="6.0" y="137.0" width="128.0" height="34.0" rx="6" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="70.0" y="159.0" font-size="12" text-anchor="middle" fill="#111">compteur d'eau</text>
+<line x1="124.0" y1="137.0" x2="124.0" y2="125.0" stroke="#111" stroke-width="2"/>
+<rect x="6.0" y="212.0" width="128.0" height="34.0" rx="6" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="70.0" y="234.0" font-size="12" text-anchor="middle" fill="#111">sonde de température</text>
+<line x1="124.0" y1="212.0" x2="124.0" y2="200.0" stroke="#111" stroke-width="2"/>
+<line x1="265.0" y1="92.0" x2="265.0" y2="64.0" stroke="#111" stroke-width="2.4"/>
+<line x1="257.0" y1="64.0" x2="273.0" y2="64.0" stroke="#111" stroke-width="2.4"/>
+<rect x="220.0" y="92.0" width="90.0" height="40.0" rx="6" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="265.0" y="117.0" font-size="12" text-anchor="middle" fill="#111" font-weight="bold">passerelle 1</text>
+<line x1="265.0" y1="192.0" x2="265.0" y2="164.0" stroke="#111" stroke-width="2.4"/>
+<line x1="257.0" y1="164.0" x2="273.0" y2="164.0" stroke="#111" stroke-width="2.4"/>
+<rect x="220.0" y="192.0" width="90.0" height="40.0" rx="6" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="265.0" y="217.0" font-size="12" text-anchor="middle" fill="#111" font-weight="bold">passerelle 2</text>
+<line x1="134.0" y1="79.0" x2="220.0" y2="112.0" stroke="#d9480f" stroke-width="1.6" stroke-dasharray="6 4"/>
+<line x1="134.0" y1="79.0" x2="220.0" y2="212.0" stroke="#d9480f" stroke-width="1.6" stroke-dasharray="6 4"/>
+<line x1="134.0" y1="154.0" x2="220.0" y2="112.0" stroke="#d9480f" stroke-width="1.6" stroke-dasharray="6 4"/>
+<line x1="134.0" y1="154.0" x2="220.0" y2="212.0" stroke="#d9480f" stroke-width="1.6" stroke-dasharray="6 4"/>
+<line x1="134.0" y1="229.0" x2="220.0" y2="112.0" stroke="#d9480f" stroke-width="1.6" stroke-dasharray="6 4"/>
+<line x1="134.0" y1="229.0" x2="220.0" y2="212.0" stroke="#d9480f" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="172.0" y="268.0" font-size="12" text-anchor="middle" fill="#d9480f" font-weight="bold">radio LoRa</text>
+<text x="172.0" y="283.0" font-size="12" text-anchor="middle" fill="#d9480f">868 MHz, km</text>
+<rect x="395.0" y="137.0" width="110.0" height="50.0" rx="6" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="450.0" y="158.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">serveur</text>
+<text x="450.0" y="175.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">réseau</text>
+<rect x="545.0" y="137.0" width="120.0" height="50.0" rx="6" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="605.0" y="158.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">serveur</text>
+<text x="605.0" y="175.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">applicatif</text>
+<line x1="310.0" y1="112.0" x2="387.1" y2="157.9" stroke="#1f6f8b" stroke-width="2"/>
+<polygon points="394.0,162.0 388.8,153.1 383.7,161.7" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="310.0" y1="212.0" x2="387.1" y2="166.1" stroke="#1f6f8b" stroke-width="2"/>
+<polygon points="394.0,162.0 383.7,162.3 388.8,170.9" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<line x1="505.0" y1="162.0" x2="536.0" y2="162.0" stroke="#1f6f8b" stroke-width="2"/>
+<polygon points="544.0,162.0 535.0,157.1 535.0,167.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="352.0" y="128.0" font-size="12" text-anchor="middle" fill="#1f6f8b" font-weight="bold">IP</text>
+<text x="352.0" y="268.0" font-size="12" text-anchor="middle" fill="#1f6f8b" font-weight="bold">Internet (IP) :</text>
+<text x="352.0" y="283.0" font-size="12" text-anchor="middle" fill="#1f6f8b">Ethernet, 4G, fibre</text>
+<text x="450.0" y="206.0" font-size="11" text-anchor="middle" fill="#777">élimine les doublons,</text>
+<text x="450.0" y="220.0" font-size="11" text-anchor="middle" fill="#777">choisit le SF (ADR)</text>
+<text x="605.0" y="206.0" font-size="11" text-anchor="middle" fill="#777">tableau de bord,</text>
+<text x="605.0" y="220.0" font-size="11" text-anchor="middle" fill="#777">alertes, stockage</text>
+<text x="70.0" y="308.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">objets</text>
+<text x="70.0" y="324.0" font-size="11" text-anchor="middle" fill="#777">(end devices)</text>
+<text x="265.0" y="308.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">passerelles</text>
+<text x="265.0" y="324.0" font-size="11" text-anchor="middle" fill="#777">(gateways)</text>
+<text x="450.0" y="308.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">serveur réseau</text>
+<text x="450.0" y="324.0" font-size="11" text-anchor="middle" fill="#777">(network server)</text>
+<text x="605.0" y="308.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">serveur applicatif</text>
+<text x="605.0" y="324.0" font-size="11" text-anchor="middle" fill="#777">(application server)</text>
+</svg>

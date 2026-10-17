@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 250" width="660" height="250" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Principe du réflectomètre : aller-retour de l'impulsion jusqu'au défaut">
+<rect id="fond-blanc" x="0" y="0" width="660" height="250" fill="#ffffff"/>
+<rect x="15.0" y="68.0" width="95.0" height="64.0" rx="6" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="62.5" y="96.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">réflecto-</text>
+<text x="62.5" y="113.0" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">mètre</text>
+<line x1="110.0" y1="86.0" x2="620.0" y2="86.0" stroke="#111" stroke-width="2"/>
+<line x1="110.0" y1="114.0" x2="620.0" y2="114.0" stroke="#111" stroke-width="2"/>
+<text x="126.0" y="104.0" font-size="12" text-anchor="start" fill="#777">câble : célérité v = k × c<tspan baseline-shift="sub" font-size="72%">0</tspan></text>
+<text x="620.0" y="132.0" font-size="12" text-anchor="end" fill="#777">extrémité du câble</text>
+<polyline points="432.0,74.0 444.0,94.0 434.0,106.0 448.0,126.0" fill="none" stroke="#d9480f" stroke-width="3" stroke-linejoin="round"/>
+<text x="456.0" y="66.0" font-size="13" text-anchor="start" fill="#111" font-weight="bold">défaut (Z<tspan baseline-shift="sub" font-size="72%">L</tspan> ≠ Z<tspan baseline-shift="sub" font-size="72%">C</tspan>)</text>
+<line x1="120.0" y1="44.0" x2="420.0" y2="44.0" stroke="#d9480f" stroke-width="2.4"/>
+<polygon points="428.0,44.0 419.0,39.1 419.0,49.0" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="280.0" y="36.0" font-size="12" text-anchor="middle" fill="#d9480f" font-weight="bold">impulsion émise (aller)</text>
+<line x1="428.0" y1="150.0" x2="128.0" y2="150.0" stroke="#1f6f8b" stroke-width="2.4"/>
+<polygon points="120.0,150.0 129.0,155.0 129.0,145.1" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="280.0" y="168.0" font-size="12" text-anchor="middle" fill="#1f6f8b" font-weight="bold">écho (retour)</text>
+<line x1="110.0" y1="180.0" x2="110.0" y2="200.0" stroke="#777" stroke-width="1.2"/>
+<line x1="440.0" y1="132.0" x2="440.0" y2="200.0" stroke="#777" stroke-width="1.2"/>
+<line x1="117.0" y1="192.0" x2="433.0" y2="192.0" stroke="#111" stroke-width="1.4"/>
+<polygon points="440.0,192.0 432.0,187.6 432.0,196.4" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="110.0,192.0 118.0,196.4 118.0,187.6" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="275.0" y="186.0" font-size="12" text-anchor="middle" fill="#111">distance d du défaut</text>
+<text x="330.0" y="232.0" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">Δt mesurée = aller + retour : 2d = v × Δt, donc d = v × Δt / 2</text>
+</svg>

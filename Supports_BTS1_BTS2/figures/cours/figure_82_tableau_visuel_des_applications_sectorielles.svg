@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Tableau visuel des applications sectorielles de l’optique">
+<rect id="fond-blanc" x="0" y="0" width="900" height="470" fill="#ffffff"/>
+<!-- carte 1 : Télécoms / réseaux -->
+<rect x="20.0" y="20.0" width="280.0" height="192.0" fill="#ffffff" stroke="#111" stroke-width="1.2" rx="6"/>
+<rect x="20.0" y="20.0" width="280.0" height="40.0" fill="#f7d6c8" stroke="none" stroke-width="1"/>
+<line x1="20.0" y1="60.0" x2="300.0" y2="60.0" stroke="#111" stroke-width="1"/>
+<text x="32.0" y="46.0" font-size="16" text-anchor="start" fill="#111" font-weight="bold">Télécoms / réseaux</text>
+<text x="32.0" y="88.0" font-size="12" text-anchor="start" fill="#777">Technique</text>
+<text x="32.0" y="106.0" font-size="14" text-anchor="start" fill="#111" font-weight="bold">Transmission guidée en IR</text>
+<text x="32.0" y="132.0" font-size="12" text-anchor="start" fill="#777">Exemple</text>
+<text x="32.0" y="150.0" font-size="14" text-anchor="start" fill="#111">Fibre optique</text>
+<text x="32.0" y="168.0" font-size="14" text-anchor="start" fill="#111">(850 / 1310 / 1550 nm)</text>
+<rect x="261.0" y="184.0" width="29.0" height="20.0" fill="#f7d6c8" stroke="#b4410c" stroke-width="1" rx="10"/>
+<text x="275.5" y="198.5" font-size="12" text-anchor="middle" fill="#b4410c" font-weight="bold">IR</text>
+<!-- carte 2 : Industrie -->
+<rect x="310.0" y="20.0" width="280.0" height="192.0" fill="#ffffff" stroke="#111" stroke-width="1.2" rx="6"/>
+<rect x="310.0" y="20.0" width="280.0" height="40.0" fill="#f7d6c8" stroke="none" stroke-width="1"/>
+<line x1="310.0" y1="60.0" x2="590.0" y2="60.0" stroke="#111" stroke-width="1"/>
+<text x="322.0" y="46.0" font-size="16" text-anchor="start" fill="#111" font-weight="bold">Industrie</text>
+<text x="322.0" y="88.0" font-size="12" text-anchor="start" fill="#777">Technique</text>
+<text x="322.0" y="106.0" font-size="14" text-anchor="start" fill="#111" font-weight="bold">Thermographie IR</text>
+<text x="322.0" y="132.0" font-size="12" text-anchor="start" fill="#777">Exemple</text>
+<text x="322.0" y="150.0" font-size="14" text-anchor="start" fill="#111">Maintenance prédictive,</text>
+<text x="322.0" y="168.0" font-size="14" text-anchor="start" fill="#111">détection de points chauds</text>
+<rect x="551.0" y="184.0" width="29.0" height="20.0" fill="#f7d6c8" stroke="#b4410c" stroke-width="1" rx="10"/>
+<text x="565.5" y="198.5" font-size="12" text-anchor="middle" fill="#b4410c" font-weight="bold">IR</text>
+<!-- carte 3 : Santé -->
+<rect x="600.0" y="20.0" width="280.0" height="192.0" fill="#ffffff" stroke="#111" stroke-width="1.2" rx="6"/>
+<rect x="600.0" y="20.0" width="140.0" height="40.0" fill="#f7d6c8" stroke="none" stroke-width="1"/>
+<rect x="740.0" y="20.0" width="140.0" height="40.0" fill="#e2d6f3" stroke="none" stroke-width="1"/>
+<line x1="600.0" y1="60.0" x2="880.0" y2="60.0" stroke="#111" stroke-width="1"/>
+<text x="612.0" y="46.0" font-size="16" text-anchor="start" fill="#111" font-weight="bold">Santé</text>
+<text x="612.0" y="88.0" font-size="12" text-anchor="start" fill="#777">Technique</text>
+<text x="612.0" y="106.0" font-size="14" text-anchor="start" fill="#111" font-weight="bold">Imagerie IR, stérilisation UV-C</text>
+<text x="612.0" y="132.0" font-size="12" text-anchor="start" fill="#777">Exemple</text>
+<text x="612.0" y="150.0" font-size="14" text-anchor="start" fill="#111">Thermographie médicale,</text>
+<text x="612.0" y="168.0" font-size="14" text-anchor="start" fill="#111">désinfection de matériel</text>
+<rect x="841.0" y="184.0" width="29.0" height="20.0" fill="#e2d6f3" stroke="#5b3f8c" stroke-width="1" rx="10"/>
+<text x="855.5" y="198.5" font-size="12" text-anchor="middle" fill="#5b3f8c" font-weight="bold">UV</text>
+<rect x="807.0" y="184.0" width="29.0" height="20.0" fill="#f7d6c8" stroke="#b4410c" stroke-width="1" rx="10"/>
+<text x="821.5" y="198.5" font-size="12" text-anchor="middle" fill="#b4410c" font-weight="bold">IR</text>
+<!-- carte 4 : Sécurité / authentification -->
+<rect x="20.0" y="227.0" width="280.0" height="192.0" fill="#ffffff" stroke="#111" stroke-width="1.2" rx="6"/>
+<rect x="20.0" y="227.0" width="280.0" height="40.0" fill="#e2d6f3" stroke="none" stroke-width="1"/>
+<line x1="20.0" y1="267.0" x2="300.0" y2="267.0" stroke="#111" stroke-width="1"/>
+<text x="32.0" y="253.0" font-size="16" text-anchor="start" fill="#111" font-weight="bold">Sécurité / authentification</text>
+<text x="32.0" y="295.0" font-size="12" text-anchor="start" fill="#777">Technique</text>
+<text x="32.0" y="313.0" font-size="14" text-anchor="start" fill="#111" font-weight="bold">Fluorescence UV</text>
+<text x="32.0" y="339.0" font-size="12" text-anchor="start" fill="#777">Exemple</text>
+<text x="32.0" y="357.0" font-size="14" text-anchor="start" fill="#111">Billets de banque,</text>
+<text x="32.0" y="375.0" font-size="14" text-anchor="start" fill="#111">documents officiels</text>
+<rect x="261.0" y="391.0" width="29.0" height="20.0" fill="#e2d6f3" stroke="#5b3f8c" stroke-width="1" rx="10"/>
+<text x="275.5" y="405.5" font-size="12" text-anchor="middle" fill="#5b3f8c" font-weight="bold">UV</text>
+<!-- carte 5 : Électronique -->
+<rect x="310.0" y="227.0" width="280.0" height="192.0" fill="#ffffff" stroke="#111" stroke-width="1.2" rx="6"/>
+<rect x="310.0" y="227.0" width="280.0" height="40.0" fill="#e2d6f3" stroke="none" stroke-width="1"/>
+<line x1="310.0" y1="267.0" x2="590.0" y2="267.0" stroke="#111" stroke-width="1"/>
+<text x="322.0" y="253.0" font-size="16" text-anchor="start" fill="#111" font-weight="bold">Électronique</text>
+<text x="322.0" y="295.0" font-size="12" text-anchor="start" fill="#777">Technique</text>
+<text x="322.0" y="313.0" font-size="14" text-anchor="start" fill="#111" font-weight="bold">Photolithographie UV</text>
+<text x="322.0" y="339.0" font-size="12" text-anchor="start" fill="#777">Exemple</text>
+<text x="322.0" y="357.0" font-size="14" text-anchor="start" fill="#111">Fabrication des circuits</text>
+<text x="322.0" y="375.0" font-size="14" text-anchor="start" fill="#111">intégrés</text>
+<rect x="551.0" y="391.0" width="29.0" height="20.0" fill="#e2d6f3" stroke="#5b3f8c" stroke-width="1" rx="10"/>
+<text x="565.5" y="405.5" font-size="12" text-anchor="middle" fill="#5b3f8c" font-weight="bold">UV</text>
+<!-- carte 6 : Agroalimentaire / chimie -->
+<rect x="600.0" y="227.0" width="280.0" height="192.0" fill="#ffffff" stroke="#111" stroke-width="1.2" rx="6"/>
+<rect x="600.0" y="227.0" width="93.3" height="40.0" fill="#e2d6f3" stroke="none" stroke-width="1"/>
+<rect x="693.3" y="227.0" width="93.3" height="40.0" fill="#fff2b3" stroke="none" stroke-width="1"/>
+<rect x="786.7" y="227.0" width="93.3" height="40.0" fill="#f7d6c8" stroke="none" stroke-width="1"/>
+<line x1="600.0" y1="267.0" x2="880.0" y2="267.0" stroke="#111" stroke-width="1"/>
+<text x="612.0" y="253.0" font-size="16" text-anchor="start" fill="#111" font-weight="bold">Agroalimentaire / chimie</text>
+<text x="612.0" y="295.0" font-size="12" text-anchor="start" fill="#777">Technique</text>
+<text x="612.0" y="313.0" font-size="14" text-anchor="start" fill="#111" font-weight="bold">Spectroscopie UV-Vis et IR</text>
+<text x="612.0" y="339.0" font-size="12" text-anchor="start" fill="#777">Exemple</text>
+<text x="612.0" y="357.0" font-size="14" text-anchor="start" fill="#111">Dosage, contrôle qualité,</text>
+<text x="612.0" y="375.0" font-size="14" text-anchor="start" fill="#111">identification de matériaux</text>
+<rect x="841.0" y="391.0" width="29.0" height="20.0" fill="#f7d6c8" stroke="#b4410c" stroke-width="1" rx="10"/>
+<text x="855.5" y="405.5" font-size="12" text-anchor="middle" fill="#b4410c" font-weight="bold">IR</text>
+<rect x="769.5" y="391.0" width="66.5" height="20.0" fill="#fff2b3" stroke="#7a6400" stroke-width="1" rx="10"/>
+<text x="802.8" y="405.5" font-size="12" text-anchor="middle" fill="#7a6400" font-weight="bold">visible</text>
+<rect x="735.5" y="391.0" width="29.0" height="20.0" fill="#e2d6f3" stroke="#5b3f8c" stroke-width="1" rx="10"/>
+<text x="750.0" y="405.5" font-size="12" text-anchor="middle" fill="#5b3f8c" font-weight="bold">UV</text>
+<!-- légende -->
+<text x="20.0" y="452.0" font-size="14" text-anchor="start" fill="#111" font-weight="bold">Domaine utilisé :</text>
+<rect x="150.0" y="438.0" width="22.0" height="18.0" fill="#f7d6c8" stroke="#b4410c" stroke-width="1" rx="4"/>
+<text x="180.0" y="452.0" font-size="14" text-anchor="start" fill="#111">infrarouge (780 nm à 1 mm)</text>
+<rect x="395.0" y="438.0" width="22.0" height="18.0" fill="#fff2b3" stroke="#7a6400" stroke-width="1" rx="4"/>
+<text x="425.0" y="452.0" font-size="14" text-anchor="start" fill="#111">visible (380 à 780 nm)</text>
+<rect x="640.0" y="438.0" width="22.0" height="18.0" fill="#e2d6f3" stroke="#5b3f8c" stroke-width="1" rx="4"/>
+<text x="670.0" y="452.0" font-size="14" text-anchor="start" fill="#111">ultraviolet (10 à 380 nm)</text>
+</svg>

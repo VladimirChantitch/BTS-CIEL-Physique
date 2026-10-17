@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460" width="700" height="460" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Bond P12 - P13 au-dessus d'un lac : trajet direct, trajet réfléchi sur l'eau et antenne image">
+<rect id="fond-blanc" x="0" y="0" width="700" height="460" fill="#ffffff"/>
+<!-- Sol (terre ferme) et lac entre 12 km et 21 km -->
+<rect x="30.0" y="250.0" width="266.0" height="12.0" fill="#f4efe4" stroke="none" stroke-width="1.6"/>
+<rect x="458.0" y="250.0" width="212.0" height="12.0" fill="#f4efe4" stroke="none" stroke-width="1.6"/>
+<rect x="296.0" y="250.0" width="162.0" height="12.0" fill="#cfe3ea" stroke="none" stroke-width="1.6"/>
+<line x1="30.0" y1="250.0" x2="296.0" y2="250.0" stroke="#111" stroke-width="1.8"/>
+<line x1="458.0" y1="250.0" x2="670.0" y2="250.0" stroke="#111" stroke-width="1.8"/>
+<line x1="296.0" y1="250.0" x2="458.0" y2="250.0" stroke="#1f6f8b" stroke-width="2.4"/>
+<text x="325.0" y="246.0" font-size="12" text-anchor="middle" fill="#1f6f8b" font-style="italic">lac</text>
+<line x1="296.0" y1="262.0" x2="296.0" y2="270.0" stroke="#1f6f8b" stroke-width="1.2"/>
+<line x1="458.0" y1="262.0" x2="458.0" y2="270.0" stroke="#1f6f8b" stroke-width="1.2"/>
+<text x="296.0" y="283.0" font-size="12" text-anchor="middle" fill="#1f6f8b">12 km</text>
+<text x="458.0" y="283.0" font-size="12" text-anchor="middle" fill="#1f6f8b">21 km</text>
+<!-- Pylônes en treillis -->
+<polyline points="70.0,250.0 77.0,106.0" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="90.0,250.0 83.0,106.0" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="70.0,250.0 88.6,221.2 72.8,192.4 85.8,163.6 75.6,134.8 83.0,106.0" fill="none" stroke="#111" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="610.0,250.0 617.0,156.0" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="630.0,250.0 623.0,156.0" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="610.0,250.0 628.6,231.2 612.8,212.4 625.8,193.6 615.6,174.8 623.0,156.0" fill="none" stroke="#111" stroke-width="1" stroke-linejoin="round"/>
+<text x="80.0" y="72.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">P12</text>
+<text x="620.0" y="122.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">P13</text>
+<!-- Antennes paraboliques (le point marque le centre de l'antenne) -->
+<path d="M 86.0 82.0 Q 66.0 100.0 86.0 118.0" fill="#ffffff" stroke="#111" stroke-width="2.6"/>
+<path d="M 614.0 132.0 Q 634.0 150.0 614.0 168.0" fill="#ffffff" stroke="#111" stroke-width="2.6"/>
+<!-- Trajet direct -->
+<line x1="80.0" y1="100.0" x2="620.0" y2="150.0" stroke="#1f6f8b" stroke-width="2.2"/>
+<text x="300.0" y="113.0" font-size="13" text-anchor="middle" fill="#1f6f8b" font-weight="bold" transform="rotate(5.3 300 113)">trajet direct</text>
+<!-- Trajet réfléchi : angle d'incidence égal à l'angle de réflexion -->
+<polyline points="80.0,100.0 404.0,250.0 620.0,150.0" fill="none" stroke="#d9480f" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="404.0" cy="250.0" r="4.0" fill="#d9480f" stroke="none" stroke-width="1"/>
+<line x1="404.0" y1="262.0" x2="404.0" y2="270.0" stroke="#d9480f" stroke-width="1.2"/>
+<text x="404.0" y="283.0" font-size="13" text-anchor="middle" fill="#d9480f" font-weight="bold">R</text>
+<text x="540.0" y="238.0" font-size="13" text-anchor="middle" fill="#d9480f" font-weight="bold">trajet réfléchi</text>
+<!-- Construction : antenne image de P12, symétrique par rapport à l'eau -->
+<line x1="80.0" y1="262.0" x2="80.0" y2="400.0" stroke="#777" stroke-width="1.2" stroke-dasharray="4 4"/>
+<line x1="404.0" y1="250.0" x2="80.0" y2="400.0" stroke="#d9480f" stroke-width="1.4" stroke-dasharray="6 4"/>
+<circle cx="80.0" cy="400.0" r="5.0" fill="#ffffff" stroke="#d9480f" stroke-width="2"/>
+<text x="92.0" y="418.0" font-size="12" text-anchor="start" fill="#555">image de l'antenne de P12</text>
+<text x="72.0" y="337.0" font-size="13" text-anchor="end" fill="#555">h₁</text>
+<!-- Cotes : h1, h2 et d -->
+<line x1="40.0" y1="245.2" x2="40.0" y2="104.8" stroke="#111" stroke-width="1.2"/>
+<polygon points="40.0,100.0 42.7,106.0 37.3,106.0" fill="#111" stroke="#111" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="40.0,250.0 37.3,244.0 42.7,244.0" fill="#111" stroke="#111" stroke-width="1" stroke-linejoin="round"/>
+<text x="30.0" y="175.0" font-size="13" text-anchor="middle" fill="#111" transform="rotate(-90 30 175.0)">h₁ = 60 m</text>
+<line x1="660.0" y1="245.2" x2="660.0" y2="154.8" stroke="#111" stroke-width="1.2"/>
+<polygon points="660.0,150.0 662.7,156.0 657.3,156.0" fill="#111" stroke="#111" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="660.0,250.0 657.3,244.0 662.7,244.0" fill="#111" stroke="#111" stroke-width="1" stroke-linejoin="round"/>
+<text x="678.0" y="200.0" font-size="13" text-anchor="middle" fill="#111" transform="rotate(-90 678 200.0)">h₂ = 40 m</text>
+<line x1="84.8" y1="312.0" x2="615.2" y2="312.0" stroke="#111" stroke-width="1.2"/>
+<polygon points="620.0,312.0 614.0,314.7 614.0,309.3" fill="#111" stroke="#111" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="80.0,312.0 86.0,309.3 86.0,314.7" fill="#111" stroke="#111" stroke-width="1" stroke-linejoin="round"/>
+<line x1="80.0" y1="264.0" x2="80.0" y2="320.0" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="620.0" y1="264.0" x2="620.0" y2="320.0" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="520.0" y="306.0" font-size="13" text-anchor="middle" fill="#111">d = 30 km</text>
+<text x="350.0" y="452.0" font-size="12" text-anchor="middle" fill="#555">Échelle verticale très dilatée : en réalité, les deux trajets sont presque confondus.</text>
+</svg>

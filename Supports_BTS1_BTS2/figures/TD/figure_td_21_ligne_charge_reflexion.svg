@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 215" width="660" height="215" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Impulsion de 2,0 V envoyée sur une ligne d'impédance caractéristique 50 Ω fermée sur une charge RCH">
+<rect id="fond-blanc" x="0" y="0" width="660" height="215" fill="#ffffff"/>
+<!-- Générateur d'impulsions -->
+<rect x="30.0" y="75.0" width="110.0" height="80.0" rx="6" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<polyline points="48.0,128.0 70.0,128.0 70.0,100.0 92.0,100.0 92.0,128.0 122.0,128.0" fill="none" stroke="#d9480f" stroke-width="2" stroke-linejoin="round"/>
+<text x="85.0" y="180.0" font-size="14" text-anchor="middle" fill="#111">générateur</text>
+<text x="85.0" y="198.0" font-size="14" text-anchor="middle" fill="#111">d'impulsions (2,0 V)</text>
+<!-- Ligne de transmission (deux conducteurs) -->
+<line x1="140.0" y1="85.0" x2="500.0" y2="85.0" stroke="#111" stroke-width="2.5"/>
+<line x1="140.0" y1="145.0" x2="500.0" y2="145.0" stroke="#111" stroke-width="2.5"/>
+<text x="320.0" y="120.0" font-size="15" text-anchor="middle" fill="#111">ligne : Z<tspan baseline-shift="sub" font-size="11">C</tspan> = 50 Ω</text>
+<!-- Charge RCH en bout de ligne -->
+<polyline points="500.0,85.0 560.0,85.0 560.0,90.0" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+<rect x="550.0" y="90.0" width="20.0" height="50.0" fill="none" stroke="#111" stroke-width="2"/>
+<polyline points="560.0,140.0 560.0,145.0 500.0,145.0" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+<text x="582.0" y="120.0" font-size="15" fill="#111">R<tspan baseline-shift="sub" font-size="11">CH</tspan></text>
+<!-- Onde incidente et onde réfléchie -->
+<line x1="200.0" y1="55.0" x2="430.0" y2="55.0" stroke="#d9480f" stroke-width="2.5"/>
+<polygon points="440.0,55.0 430.0,59.5 430.0,50.5" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="320.0" y="44.0" font-size="14" text-anchor="middle" fill="#d9480f">onde incidente</text>
+<line x1="440.0" y1="172.0" x2="210.0" y2="172.0" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="200.0,172.0 210.0,167.5 210.0,176.5" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="320.0" y="196.0" font-size="14" text-anchor="middle" fill="#1f6f8b">onde réfléchie</text>
+</svg>

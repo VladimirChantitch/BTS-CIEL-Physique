@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 390" width="480" height="390" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Réflectogramme du câble d'antenne : impulsion de 1,0 V, écho positif de 0,25 V trois divisions plus tard, écho négatif de 0,10 V sept divisions après l'impulsion, base de temps 20 ns/div, 0,2 V/div">
+<rect id="fond-blanc" x="0" y="0" width="480" height="390" fill="#ffffff"/>
+<!-- Écran : 10 x 8 divisions de 40 px -->
+<rect x="40.0" y="20.0" width="400.0" height="320.0" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<line x1="80.0" y1="20.0" x2="80.0" y2="340.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="120.0" y1="20.0" x2="120.0" y2="340.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="160.0" y1="20.0" x2="160.0" y2="340.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="200.0" y1="20.0" x2="200.0" y2="340.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="240.0" y1="20.0" x2="240.0" y2="340.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="280.0" y1="20.0" x2="280.0" y2="340.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="320.0" y1="20.0" x2="320.0" y2="340.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="360.0" y1="20.0" x2="360.0" y2="340.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="400.0" y1="20.0" x2="400.0" y2="340.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="40.0" y1="60.0" x2="440.0" y2="60.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="40.0" y1="100.0" x2="440.0" y2="100.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="40.0" y1="140.0" x2="440.0" y2="140.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="40.0" y1="180.0" x2="440.0" y2="180.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="40.0" y1="220.0" x2="440.0" y2="220.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="40.0" y1="260.0" x2="440.0" y2="260.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="40.0" y1="300.0" x2="440.0" y2="300.0" stroke="#d4d4d4" stroke-width="1"/>
+<!-- Graduations de 0,2 div sur l'axe vertical (x = 2 div) et sur la ligne de base -->
+<line x1="116.0" y1="28.0" x2="124.0" y2="28.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="36.0" x2="124.0" y2="36.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="44.0" x2="124.0" y2="44.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="52.0" x2="124.0" y2="52.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="68.0" x2="124.0" y2="68.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="76.0" x2="124.0" y2="76.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="84.0" x2="124.0" y2="84.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="92.0" x2="124.0" y2="92.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="108.0" x2="124.0" y2="108.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="116.0" x2="124.0" y2="116.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="124.0" x2="124.0" y2="124.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="132.0" x2="124.0" y2="132.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="148.0" x2="124.0" y2="148.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="156.0" x2="124.0" y2="156.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="164.0" x2="124.0" y2="164.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="172.0" x2="124.0" y2="172.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="188.0" x2="124.0" y2="188.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="196.0" x2="124.0" y2="196.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="204.0" x2="124.0" y2="204.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="212.0" x2="124.0" y2="212.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="228.0" x2="124.0" y2="228.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="236.0" x2="124.0" y2="236.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="244.0" x2="124.0" y2="244.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="252.0" x2="124.0" y2="252.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="268.0" x2="124.0" y2="268.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="276.0" x2="124.0" y2="276.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="284.0" x2="124.0" y2="284.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="292.0" x2="124.0" y2="292.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="308.0" x2="124.0" y2="308.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="316.0" x2="124.0" y2="316.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="324.0" x2="124.0" y2="324.0" stroke="#999" stroke-width="1"/>
+<line x1="116.0" y1="332.0" x2="124.0" y2="332.0" stroke="#999" stroke-width="1"/>
+<line x1="120.0" y1="20.0" x2="120.0" y2="340.0" stroke="#999" stroke-width="1.2"/>
+<line x1="48.0" y1="256.0" x2="48.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="56.0" y1="256.0" x2="56.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="64.0" y1="256.0" x2="64.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="72.0" y1="256.0" x2="72.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="88.0" y1="256.0" x2="88.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="96.0" y1="256.0" x2="96.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="104.0" y1="256.0" x2="104.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="112.0" y1="256.0" x2="112.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="128.0" y1="256.0" x2="128.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="136.0" y1="256.0" x2="136.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="144.0" y1="256.0" x2="144.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="152.0" y1="256.0" x2="152.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="168.0" y1="256.0" x2="168.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="176.0" y1="256.0" x2="176.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="184.0" y1="256.0" x2="184.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="192.0" y1="256.0" x2="192.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="208.0" y1="256.0" x2="208.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="216.0" y1="256.0" x2="216.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="224.0" y1="256.0" x2="224.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="232.0" y1="256.0" x2="232.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="248.0" y1="256.0" x2="248.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="256.0" y1="256.0" x2="256.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="264.0" y1="256.0" x2="264.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="272.0" y1="256.0" x2="272.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="288.0" y1="256.0" x2="288.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="296.0" y1="256.0" x2="296.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="304.0" y1="256.0" x2="304.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="312.0" y1="256.0" x2="312.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="328.0" y1="256.0" x2="328.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="336.0" y1="256.0" x2="336.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="344.0" y1="256.0" x2="344.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="352.0" y1="256.0" x2="352.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="368.0" y1="256.0" x2="368.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="376.0" y1="256.0" x2="376.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="384.0" y1="256.0" x2="384.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="392.0" y1="256.0" x2="392.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="408.0" y1="256.0" x2="408.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="416.0" y1="256.0" x2="416.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="424.0" y1="256.0" x2="424.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<line x1="432.0" y1="256.0" x2="432.0" y2="264.0" stroke="#999" stroke-width="1"/>
+<!-- Trace : ligne de base 0 V, impulsion (front à 1,0 div), écho 1 (front à 4,0 div, +1,25 div), écho 2 (front à 8,0 div, -0,5 div) -->
+<polyline points="40.0,260.0 80.0,260.0 83.0,60.0 93.0,60.0 96.0,260.0 200.0,260.0 203.0,210.0 213.0,210.0 216.0,260.0 360.0,260.0 363.0,280.0 373.0,280.0 376.0,260.0 440.0,260.0" fill="none" stroke="#1f6f8b" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="148.0" y="54.0" font-size="14" text-anchor="middle" fill="#1f6f8b">impulsion émise</text>
+<text x="208.0" y="200.0" font-size="14" text-anchor="middle" fill="#1f6f8b">écho 1</text>
+<text x="368.0" y="302.0" font-size="14" text-anchor="middle" fill="#1f6f8b">écho 2</text>
+<text x="34.0" y="265.0" font-size="12" text-anchor="end" fill="#111">0 V</text>
+<text x="240.0" y="362.0" font-size="14" text-anchor="middle" fill="#111">base de temps : 20 ns/div ; calibre : 0,2 V/div</text>
+<text x="240.0" y="382.0" font-size="12" text-anchor="middle" fill="#777">origine des temps : front de l'impulsion émise</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 245" width="880" height="245" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Chaîne d'acquisition : accéléromètre, amplificateur inverseur, décalage, filtre anti-repliement, CAN de l'ESP32, analyse locale et émission LoRaWAN">
+<rect id="fond-blanc" x="0" y="0" width="880" height="245" fill="#ffffff"/>
+<!-- Entrée : vibrations du ventilateur -->
+<line x1="86.0" y1="8.0" x2="86.0" y2="35.0" stroke="#45700f" stroke-width="2"/>
+<polygon points="86.0,45.0 81.5,35.0 90.5,35.0" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<text x="96.0" y="22.0" font-size="13" fill="#45700f">vibrations du ventilateur</text>
+<!-- Bloc 1 : Accéléromètre -->
+<rect x="15.0" y="45.0" width="150.0" height="100.0" rx="8" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="90.0" y="81.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Accéléromètre</text>
+<text x="90.0" y="100.0" font-size="14" text-anchor="middle" fill="#111">signal centré</text>
+<text x="90.0" y="119.0" font-size="14" text-anchor="middle" fill="#111">sur 0 V</text>
+<line x1="165.0" y1="95.0" x2="177.0" y2="95.0" stroke="#111" stroke-width="2"/>
+<polygon points="187.0,95.0 177.0,99.5 177.0,90.5" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Bloc 2 : Amplificateur -->
+<rect x="187.0" y="45.0" width="150.0" height="100.0" rx="8" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="262.0" y="71.5" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Amplificateur</text>
+<text x="262.0" y="90.5" font-size="14" text-anchor="middle" fill="#111">inverseur</text>
+<text x="262.0" y="109.5" font-size="14" text-anchor="middle" fill="#111">R<tspan baseline-shift="sub" font-size="11">1</tspan> = 10 kΩ</text>
+<text x="262.0" y="128.5" font-size="14" text-anchor="middle" fill="#111">R<tspan baseline-shift="sub" font-size="11">2</tspan> = 150 kΩ</text>
+<line x1="337.0" y1="95.0" x2="349.0" y2="95.0" stroke="#111" stroke-width="2"/>
+<polygon points="359.0,95.0 349.0,99.5 349.0,90.5" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Bloc 3 : Décalage -->
+<rect x="359.0" y="45.0" width="150.0" height="100.0" rx="8" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="434.0" y="81.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Décalage</text>
+<text x="434.0" y="100.0" font-size="14" text-anchor="middle" fill="#111">+1,65 V</text>
+<text x="434.0" y="119.0" font-size="14" text-anchor="middle" fill="#111">(gain 1)</text>
+<line x1="509.0" y1="95.0" x2="521.0" y2="95.0" stroke="#111" stroke-width="2"/>
+<polygon points="531.0,95.0 521.0,99.5 521.0,90.5" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Bloc 4 : Filtre -->
+<rect x="531.0" y="45.0" width="150.0" height="100.0" rx="8" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="606.0" y="71.5" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Filtre</text>
+<text x="606.0" y="90.5" font-size="14" text-anchor="middle" fill="#111">anti-repliement</text>
+<text x="606.0" y="109.5" font-size="14" text-anchor="middle" fill="#111">Butterworth ordre 2</text>
+<text x="606.0" y="128.5" font-size="14" text-anchor="middle" fill="#111">f<tspan baseline-shift="sub" font-size="11">c</tspan> = 2,0 kHz</text>
+<line x1="681.0" y1="95.0" x2="693.0" y2="95.0" stroke="#111" stroke-width="2"/>
+<polygon points="703.0,95.0 693.0,99.5 693.0,90.5" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Bloc 5 : CAN de l'ESP32 -->
+<rect x="703.0" y="45.0" width="150.0" height="100.0" rx="8" fill="#eef4f6" stroke="#1f6f8b" stroke-width="2"/>
+<text x="778.0" y="71.5" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">CAN de l'ESP32</text>
+<text x="778.0" y="90.5" font-size="14" text-anchor="middle" fill="#111">12 bits</text>
+<text x="778.0" y="109.5" font-size="14" text-anchor="middle" fill="#111">0 à 3,3 V</text>
+<text x="778.0" y="128.5" font-size="14" text-anchor="middle" fill="#111">f<tspan baseline-shift="sub" font-size="11">e</tspan> = 8,0 kHz</text>
+<!-- Traitement numérique et transmission -->
+<line x1="778.0" y1="145.0" x2="778.0" y2="170.0" stroke="#111" stroke-width="2"/>
+<polygon points="778.0,180.0 773.5,170.0 782.5,170.0" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="683.0" y="180.0" width="190.0" height="50.0" rx="8" fill="#eef4f6" stroke="#1f6f8b" stroke-width="2"/>
+<text x="778.0" y="201.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Analyse locale</text>
+<text x="778.0" y="220.0" font-size="14" text-anchor="middle" fill="#111">(spectre, ESP32)</text>
+<line x1="683.0" y1="205.0" x2="580.0" y2="205.0" stroke="#111" stroke-width="2"/>
+<polygon points="570.0,205.0 580.0,200.5 580.0,209.5" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="330.0" y="180.0" width="240.0" height="50.0" rx="8" fill="#eef4f6" stroke="#1f6f8b" stroke-width="2"/>
+<text x="450.0" y="201.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Émission LoRaWAN</text>
+<text x="450.0" y="220.0" font-size="14" text-anchor="middle" fill="#111">≈ 5 kbit/s ; 1 message / 10 min</text>
+<!-- Légende des couleurs -->
+<text x="15.0" y="200.0" font-size="14" fill="#d9480f">orange : traitement analogique</text>
+<text x="15.0" y="220.0" font-size="14" fill="#1f6f8b">bleu : traitement numérique</text>
+</svg>

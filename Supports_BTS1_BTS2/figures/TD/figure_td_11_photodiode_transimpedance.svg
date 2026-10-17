@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 320" width="590" height="320" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Récepteur optique : photodiode InGaAs suivie d'un amplificateur transimpédance de résistance Rf">
+<rect id="fond-blanc" x="0" y="0" width="590" height="320" fill="#ffffff"/>
+<!-- AOP -->
+<polygon points="300.0,110.0 300.0,230.0 402.0,170.0" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="308.0" y="146.0" font-size="18" fill="#111" font-weight="bold">−</text>
+<text x="308.0" y="206.0" font-size="18" fill="#111" font-weight="bold">+</text>
+<text x="345.6" y="176.0" font-size="18" fill="#111">∞</text>
+<!-- Noeud de l'entrée inverseuse -->
+<line x1="230.0" y1="140.0" x2="300.0" y2="140.0" stroke="#111" stroke-width="2"/>
+<circle cx="230.0" cy="140.0" r="3.5" fill="#111" stroke="none"/>
+<!-- Résistance de contre-réaction Rf -->
+<polyline points="230.0,140.0 230.0,60.0 300.0,60.0" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+<rect x="300.0" y="50.0" width="60.0" height="20.0" fill="none" stroke="#111" stroke-width="2"/>
+<polyline points="360.0,60.0 470.0,60.0 470.0,170.0" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+<text x="330.0" y="39.0" font-size="15" text-anchor="middle" fill="#111">R<tspan baseline-shift="sub" font-size="11">f</tspan> = 10 kΩ</text>
+<!-- Sortie -->
+<line x1="402.0" y1="170.0" x2="530.0" y2="170.0" stroke="#111" stroke-width="2"/>
+<circle cx="470.0" cy="170.0" r="3.5" fill="#111" stroke="none"/>
+<circle cx="530.0" cy="170.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<!-- Photodiode : cathode en haut (vers l'entrée inverseuse), anode à la masse -->
+<line x1="230.0" y1="140.0" x2="230.0" y2="187.0" stroke="#111" stroke-width="2"/>
+<polygon points="217.0,213.0 243.0,213.0 230.0,187.0" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<line x1="217.0" y1="187.0" x2="243.0" y2="187.0" stroke="#111" stroke-width="2.5"/>
+<line x1="230.0" y1="213.0" x2="230.0" y2="280.0" stroke="#111" stroke-width="2"/>
+<line x1="150.0" y1="170.0" x2="197.9" y2="191.8" stroke="#d9480f" stroke-width="2"/>
+<polygon points="207.0,196.0 196.0,195.9 199.8,187.8" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<line x1="150.0" y1="192.0" x2="197.9" y2="213.8" stroke="#d9480f" stroke-width="2"/>
+<polygon points="207.0,218.0 196.0,217.9 199.8,209.8" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="110.0" y="150.0" font-size="14" text-anchor="middle" fill="#d9480f">flux lumineux</text>
+<text x="110.0" y="168.0" font-size="14" text-anchor="middle" fill="#d9480f">(1310 nm)</text>
+<text x="215.0" y="247.0" font-size="14" text-anchor="end" fill="#111">photodiode InGaAs</text>
+<text x="215.0" y="265.0" font-size="14" text-anchor="end" fill="#111">S = 0,9 A/W</text>
+<!-- Courant I de la photodiode -->
+<line x1="246.0" y1="150.0" x2="246.0" y2="170.0" stroke="#45700f" stroke-width="2"/>
+<polygon points="246.0,180.0 241.5,170.0 250.5,170.0" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<text x="254.0" y="172.0" font-size="15" fill="#45700f" font-weight="bold" font-style="italic">I</text>
+<!-- Entrée non inverseuse et fil de masse -->
+<polyline points="300.0,200.0 270.0,200.0 270.0,280.0" fill="none" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+<line x1="230.0" y1="280.0" x2="530.0" y2="280.0" stroke="#111" stroke-width="2"/>
+<circle cx="270.0" cy="280.0" r="3.5" fill="#111" stroke="none"/>
+<circle cx="380.0" cy="280.0" r="3.5" fill="#111" stroke="none"/>
+<line x1="380.0" y1="280.0" x2="380.0" y2="292.0" stroke="#111" stroke-width="2"/>
+<line x1="366.0" y1="292.0" x2="394.0" y2="292.0" stroke="#111" stroke-width="2"/>
+<line x1="371.0" y1="297.0" x2="389.0" y2="297.0" stroke="#111" stroke-width="2"/>
+<line x1="376.0" y1="302.0" x2="384.0" y2="302.0" stroke="#111" stroke-width="2"/>
+<circle cx="530.0" cy="280.0" r="4.5" fill="#ffffff" stroke="#111" stroke-width="1.8"/>
+<!-- Tension de sortie U -->
+<line x1="552.0" y1="272.0" x2="552.0" y2="190.0" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="552.0,180.0 556.5,190.0 547.5,190.0" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1"/>
+<text x="562.0" y="232.0" font-size="15" fill="#1f6f8b" font-weight="bold">U</text>
+<text x="395.0" y="252.0" font-size="13" text-anchor="middle" fill="#777">amplificateur transimpédance</text>
+</svg>

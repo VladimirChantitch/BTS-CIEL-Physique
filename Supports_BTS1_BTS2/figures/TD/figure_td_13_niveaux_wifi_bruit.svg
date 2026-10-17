@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 370" width="620" height="370" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Puissance reçue en trois emplacements (−45, −65 et −85 dBm) comparée au bruit du récepteur (−95 dBm)">
+<rect id="fond-blanc" x="0" y="0" width="620" height="370" fill="#ffffff"/>
+<!-- Grille horizontale tous les 5 dB -->
+<line x1="90.0" y1="310.0" x2="570.0" y2="310.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="288.3" x2="570.0" y2="288.3" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="266.7" x2="570.0" y2="266.7" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="245.0" x2="570.0" y2="245.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="223.3" x2="570.0" y2="223.3" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="201.7" x2="570.0" y2="201.7" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="180.0" x2="570.0" y2="180.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="158.3" x2="570.0" y2="158.3" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="136.7" x2="570.0" y2="136.7" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="115.0" x2="570.0" y2="115.0" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="93.3" x2="570.0" y2="93.3" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="71.7" x2="570.0" y2="71.7" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="90.0" y1="50.0" x2="570.0" y2="50.0" stroke="#d4d4d4" stroke-width="1"/>
+<!-- Axe vertical gradué en dBm -->
+<line x1="90.0" y1="310.0" x2="90.0" y2="40.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="90.0,32.0 85.5,42.0 94.5,42.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="82.0" y="315.0" font-size="13" text-anchor="end" fill="#111">−100</text>
+<text x="82.0" y="271.7" font-size="13" text-anchor="end" fill="#111">−90</text>
+<text x="82.0" y="228.3" font-size="13" text-anchor="end" fill="#111">−80</text>
+<text x="82.0" y="185.0" font-size="13" text-anchor="end" fill="#111">−70</text>
+<text x="82.0" y="141.7" font-size="13" text-anchor="end" fill="#111">−60</text>
+<text x="82.0" y="98.3" font-size="13" text-anchor="end" fill="#111">−50</text>
+<text x="82.0" y="55.0" font-size="13" text-anchor="end" fill="#111">−40</text>
+<text x="82.0" y="28.0" font-size="14" fill="#111">P (dBm)</text>
+<line x1="90.0" y1="310.0" x2="570.0" y2="310.0" stroke="#111" stroke-width="1.6"/>
+<!-- Niveau de bruit du récepteur dans le canal de 20 MHz -->
+<line x1="90.0" y1="288.3" x2="570.0" y2="288.3" stroke="#777" stroke-width="2" stroke-dasharray="8 5"/>
+<!-- Légende du niveau de bruit -->
+<rect x="258.0" y="67.3" width="270.0" height="34.0" fill="#ffffff" stroke="#d4d4d4" stroke-width="1"/>
+<line x1="270.0" y1="84.3" x2="302.0" y2="84.3" stroke="#777" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="310.0" y="89.3" font-size="14" fill="#777">bruit du récepteur : −95 dBm</text>
+<!-- Puissances reçues (barres) -->
+<rect x="135.0" y="71.7" width="70.0" height="238.3" fill="#d6e6ec" stroke="#1f6f8b" stroke-width="2"/>
+<text x="170.0" y="63.7" font-size="15" text-anchor="middle" fill="#1f6f8b" font-weight="bold">−45 dBm</text>
+<text x="170.0" y="330.0" font-size="14" text-anchor="middle" fill="#111">près du</text>
+<text x="170.0" y="348.0" font-size="14" text-anchor="middle" fill="#111">point d'accès</text>
+<rect x="295.0" y="158.3" width="70.0" height="151.7" fill="#d6e6ec" stroke="#1f6f8b" stroke-width="2"/>
+<text x="330.0" y="150.3" font-size="15" text-anchor="middle" fill="#1f6f8b" font-weight="bold">−65 dBm</text>
+<text x="330.0" y="330.0" font-size="14" text-anchor="middle" fill="#111">bureau</text>
+<text x="330.0" y="348.0" font-size="14" text-anchor="middle" fill="#111">voisin</text>
+<rect x="455.0" y="245.0" width="70.0" height="65.0" fill="#d6e6ec" stroke="#1f6f8b" stroke-width="2"/>
+<text x="490.0" y="237.0" font-size="15" text-anchor="middle" fill="#1f6f8b" font-weight="bold">−85 dBm</text>
+<text x="490.0" y="330.0" font-size="14" text-anchor="middle" fill="#111">fond du</text>
+<text x="490.0" y="348.0" font-size="14" text-anchor="middle" fill="#111">couloir</text>
+<!-- Le SNR en dB est l'écart entre le signal et le bruit -->
+<line x1="542.0" y1="254.0" x2="542.0" y2="279.3" stroke="#d9480f" stroke-width="1.8"/>
+<polygon points="542.0,288.3 538.0,279.3 546.0,279.3" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<polygon points="542.0,245.0 546.0,254.0 538.0,254.0" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="550.0" y="271.7" font-size="14" fill="#d9480f" font-weight="bold">SNR</text>
+</svg>

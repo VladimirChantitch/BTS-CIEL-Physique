@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Profil de la liaison : capteur à 2,0 m de hauteur, gymnase de 12 m de haut à 1,5 km du capteur, passerelle à 40 m de hauteur sur le château d'eau à 4,0 km, ligne de visée et première zone de Fresnel">
+<rect id="fond-blanc" x="0" y="0" width="760" height="360" fill="#ffffff"/>
+<!-- Sol -->
+<line x1="30.0" y1="300.0" x2="740.0" y2="300.0" stroke="#111" stroke-width="2.5"/>
+<!-- Zone de Fresnel (schématique) -->
+<ellipse cx="370.0" cy="190.8" rx="315.9" ry="52.0" transform="rotate(-18.2 370.0 190.8)" fill="#1f6f8b" stroke="#1f6f8b" stroke-width="1.5" stroke-dasharray="6 4" fill-opacity="0.08"/>
+<!-- Ligne de visée -->
+<line x1="70.0" y1="289.6" x2="670.0" y2="92.0" stroke="#d9480f" stroke-width="2"/>
+<!-- Capteur -->
+<line x1="70.0" y1="300.0" x2="70.0" y2="289.6" stroke="#111" stroke-width="3"/>
+<rect x="48.0" y="292.0" width="44.0" height="8.0" fill="#f4f4f4" stroke="#111" stroke-width="1.5"/>
+<circle cx="70.0" cy="289.6" r="4.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="66.0" y="275.6" font-size="13" text-anchor="middle" fill="#111">capteur</text>
+<text x="80.0" y="322.0" font-size="12" text-anchor="middle" fill="#777">2,0 m</text>
+<!-- Gymnase -->
+<rect x="265.0" y="237.6" width="60.0" height="62.4" fill="#f4f4f4" stroke="#111" stroke-width="1.8"/>
+<text x="295.0" y="261.6" font-size="12" text-anchor="middle" fill="#111">gymnase</text>
+<line x1="340.0" y1="291.0" x2="340.0" y2="246.6" stroke="#45700f" stroke-width="1.5"/>
+<polygon points="340.0,237.6 336.0,246.6 344.0,246.6" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<polygon points="340.0,300.0 336.0,291.0 344.0,291.0" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<text x="347.0" y="273.8" font-size="13" fill="#45700f">12 m</text>
+<!-- Château d'eau et passerelle -->
+<rect x="660.0" y="112.8" width="20.0" height="187.2" fill="#f4f4f4" stroke="#111" stroke-width="1.8"/>
+<rect x="642.0" y="102.4" width="56.0" height="14.0" fill="#f4f4f4" stroke="#111" stroke-width="1.8"/>
+<line x1="670.0" y1="102.4" x2="670.0" y2="92.0" stroke="#111" stroke-width="3"/>
+<circle cx="670.0" cy="92.0" r="4.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="678.0" y="80.0" font-size="13" fill="#111">passerelle</text>
+<line x1="715.0" y1="291.0" x2="715.0" y2="101.0" stroke="#45700f" stroke-width="1.5"/>
+<polygon points="715.0,92.0 711.0,101.0 719.0,101.0" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<polygon points="715.0,300.0 711.0,291.0 719.0,291.0" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<text x="722.0" y="196.0" font-size="13" fill="#45700f">40 m</text>
+<!-- Cotes horizontales -->
+<line x1="79.0" y1="330.0" x2="286.0" y2="330.0" stroke="#111" stroke-width="1.5"/>
+<polygon points="295.0,330.0 286.0,326.0 286.0,334.0" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="70.0,330.0 79.0,326.0 79.0,334.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="182.5" y="324.0" font-size="13" text-anchor="middle" fill="#111">1,5 km</text>
+<line x1="304.0" y1="330.0" x2="661.0" y2="330.0" stroke="#111" stroke-width="1.5"/>
+<polygon points="670.0,330.0 661.0,326.0 661.0,334.0" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="295.0,330.0 304.0,326.0 304.0,334.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="482.5" y="324.0" font-size="13" text-anchor="middle" fill="#111">2,5 km</text>
+<line x1="295.0" y1="300.0" x2="295.0" y2="335.0" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<!-- Légende -->
+<text x="460.0" y="167.4" font-size="13" fill="#d9480f">ligne de visée</text>
+<text x="407.5" y="123.2" font-size="13" fill="#1f6f8b">première zone de Fresnel</text>
+<text x="380.0" y="18.0" font-size="12" text-anchor="middle" fill="#777">échelles non respectées (hauteurs très dilatées)</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 290" width="660" height="290" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Rayon entrant dans une fibre sous l'angle θ0, réfracté dans le cœur sous l'angle θr, puis incident sur la gaine sous l'angle i = 90° − θr">
+<rect id="fond-blanc" x="0" y="0" width="660" height="290" fill="#ffffff"/>
+<!-- Gaine (n2) et coeur (n1) -->
+<rect x="220.0" y="70.0" width="420.0" height="30.0" fill="#d6e6ec" stroke="#111" stroke-width="1.5"/>
+<rect x="220.0" y="100.0" width="420.0" height="100.0" fill="#fbe3d6" stroke="#111" stroke-width="1.5"/>
+<rect x="220.0" y="200.0" width="420.0" height="30.0" fill="#d6e6ec" stroke="#111" stroke-width="1.5"/>
+<text x="632.0" y="90.0" font-size="14" text-anchor="end" fill="#1f6f8b" font-weight="bold">gaine : n<tspan baseline-shift="sub" font-size="11">2</tspan></text>
+<text x="632.0" y="190.0" font-size="14" text-anchor="end" fill="#d9480f" font-weight="bold">cœur : n<tspan baseline-shift="sub" font-size="11">1</tspan></text>
+<text x="632.0" y="221.0" font-size="14" text-anchor="end" fill="#1f6f8b" font-weight="bold">gaine : n<tspan baseline-shift="sub" font-size="11">2</tspan></text>
+<text x="40.0" y="270.0" font-size="14" fill="#111">air : n = 1,00</text>
+<!-- Axe de la fibre -->
+<line x1="50.0" y1="150.0" x2="640.0" y2="150.0" stroke="#777" stroke-width="1" stroke-dasharray="8 4 2 4"/>
+<!-- Rayon incident dans l'air (angle theta0 avec l'axe) -->
+<line x1="90.1" y1="75.0" x2="220.0" y2="150.0" stroke="#111" stroke-width="2.5"/>
+<line x1="142.1" y1="105.0" x2="149.0" y2="109.0" stroke="#111" stroke-width="2.5"/>
+<polygon points="159.4,115.0 146.0,114.2 152.0,103.8" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Rayon réfracté dans le coeur (angle thetar), réflexion sur la gaine -->
+<line x1="220.0" y1="150.0" x2="359.3" y2="200.0" stroke="#111" stroke-width="2.5"/>
+<line x1="359.3" y1="200.0" x2="637.9" y2="100.0" stroke="#111" stroke-width="2.5"/>
+<line x1="267.1" y1="166.9" x2="274.6" y2="169.6" stroke="#111" stroke-width="2.5"/>
+<polygon points="285.9,173.6 272.6,175.2 276.6,163.9" fill="#111" stroke="#111" stroke-width="1"/>
+<!-- Angle theta0 (air) et angle thetar (coeur), mesurés par rapport à l'axe -->
+<path d="M 150.0 150.0 A 70 70 0 0 1 159.4 115.0" fill="none" stroke="#d9480f" stroke-width="1.8"/>
+<text x="142.0" y="138.0" font-size="16" text-anchor="end" fill="#d9480f" font-weight="bold">θ<tspan baseline-shift="sub" font-size="12">0</tspan></text>
+<path d="M 300.0 150.0 A 80 80 0 0 1 295.3 177.0" fill="none" stroke="#d9480f" stroke-width="1.8"/>
+<text x="306.0" y="172.0" font-size="16" fill="#d9480f" font-weight="bold">θ<tspan baseline-shift="sub" font-size="12">r</tspan></text>
+<!-- Normale à l'interface coeur/gaine et angle d'incidence i -->
+<line x1="359.3" y1="120.0" x2="359.3" y2="245.0" stroke="#777" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M 359.3 155.0 A 45 45 0 0 0 316.9 184.8" fill="none" stroke="#1f6f8b" stroke-width="1.8"/>
+<text x="341.3" y="150.0" font-size="17" text-anchor="end" fill="#1f6f8b" font-weight="bold" font-style="italic">i</text>
+<text x="220.0" y="62.0" font-size="13" text-anchor="middle" fill="#777">face d'entrée</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 270" width="620" height="270" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Signal PWM de période T valant 5,0 V pendant la durée αT puis 0 V">
+<rect id="fond-blanc" x="0" y="0" width="620" height="270" fill="#ffffff"/>
+<!-- Axes -->
+<line x1="70.0" y1="200.0" x2="585.0" y2="200.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="595.0,200.0 585.0,204.5 585.0,195.5" fill="#111" stroke="#111" stroke-width="1"/>
+<line x1="70.0" y1="200.0" x2="70.0" y2="32.0" stroke="#111" stroke-width="1.6"/>
+<polygon points="70.0,22.0 74.5,32.0 65.5,32.0" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="595.0" y="220.0" font-size="15" text-anchor="end" fill="#111" font-style="italic">t</text>
+<text x="78.0" y="32.0" font-size="15" fill="#111">u (V)</text>
+<text x="62.0" y="71.7" font-size="14" text-anchor="end" fill="#111">5,0</text>
+<text x="62.0" y="205.0" font-size="14" text-anchor="end" fill="#111">0</text>
+<line x1="66.0" y1="66.7" x2="74.0" y2="66.7" stroke="#111" stroke-width="1.4"/>
+<!-- Signal rectangulaire, rapport cyclique 30 % (états hauts de 0,2 à 0,5 T, 1,2 à 1,5 T...) -->
+<polyline points="70.0,200.0 99.4,200.0 99.4,66.7 143.5,66.7 143.5,200.0 246.5,200.0 246.5,66.7 290.6,66.7 290.6,200.0 393.5,200.0 393.5,66.7 437.6,66.7 437.6,200.0 540.6,200.0 540.6,66.7 570.0,66.7" fill="none" stroke="#1f6f8b" stroke-width="2.5" stroke-linejoin="round"/>
+<!-- Cotes : période T et durée de l'état haut alpha T -->
+<line x1="246.5" y1="66.7" x2="246.5" y2="45.3" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="393.5" y1="66.7" x2="393.5" y2="45.3" stroke="#777" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="255.5" y1="50.7" x2="384.5" y2="50.7" stroke="#111" stroke-width="1.5"/>
+<polygon points="393.5,50.7 384.5,54.7 384.5,46.7" fill="#111" stroke="#111" stroke-width="1"/>
+<polygon points="246.5,50.7 255.5,46.7 255.5,54.7" fill="#111" stroke="#111" stroke-width="1"/>
+<text x="320.0" y="43.7" font-size="16" text-anchor="middle" fill="#111" font-weight="bold" font-style="italic">T</text>
+<line x1="255.5" y1="133.3" x2="281.6" y2="133.3" stroke="#d9480f" stroke-width="1.5"/>
+<polygon points="290.6,133.3 281.6,137.3 281.6,129.3" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<polygon points="246.5,133.3 255.5,129.3 255.5,137.3" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="298.6" y="138.3" font-size="16" fill="#d9480f" font-weight="bold">αT</text>
+<text x="310.0" y="255.0" font-size="14" text-anchor="middle" fill="#777">fréquence 25 kHz ; rapport cyclique α = 30 %</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 270" width="880" height="270" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Chaîne audio de l'interphone IP : microphone, amplificateur inverseur avec décalage de 1,65 V, filtre anti-repliement passe-bas d'ordre 4, CAN 12 bits à 8 kHz, codage G.711 sur 8 bits, paquets RTP sur le réseau Ethernet">
+<rect id="fond-blanc" x="0" y="0" width="880" height="270" fill="#ffffff"/>
+<rect x="20.0" y="30.0" width="150.0" height="90.0" rx="8" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="95.0" y="62.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Microphone</text>
+<text x="95.0" y="80.0" font-size="14" text-anchor="middle" fill="#111">amplitude</text>
+<text x="95.0" y="98.0" font-size="14" text-anchor="middle" fill="#111">10 mV</text>
+<line x1="170.0" y1="75.0" x2="222.0" y2="75.0" stroke="#111" stroke-width="2"/>
+<polygon points="232.0,75.0 222.0,70.5 222.0,79.5" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="232.0" y="30.0" width="150.0" height="90.0" rx="8" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="307.0" y="53.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Amplificateur</text>
+<text x="307.0" y="71.0" font-size="14" text-anchor="middle" fill="#111">inverseur</text>
+<text x="307.0" y="89.0" font-size="14" text-anchor="middle" fill="#111">R₁ = 10 kΩ</text>
+<text x="307.0" y="107.0" font-size="14" text-anchor="middle" fill="#111">décalage 1,65 V</text>
+<line x1="382.0" y1="75.0" x2="434.0" y2="75.0" stroke="#111" stroke-width="2"/>
+<polygon points="444.0,75.0 434.0,70.5 434.0,79.5" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="444.0" y="30.0" width="150.0" height="90.0" rx="8" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="519.0" y="53.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Filtre</text>
+<text x="519.0" y="71.0" font-size="14" text-anchor="middle" fill="#111">anti-repliement</text>
+<text x="519.0" y="89.0" font-size="14" text-anchor="middle" fill="#111">Butterworth</text>
+<text x="519.0" y="107.0" font-size="14" text-anchor="middle" fill="#111">ordre 4, 3,4 kHz</text>
+<line x1="594.0" y1="75.0" x2="646.0" y2="75.0" stroke="#111" stroke-width="2"/>
+<polygon points="656.0,75.0 646.0,70.5 646.0,79.5" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="656.0" y="30.0" width="150.0" height="90.0" rx="8" fill="#fdf1ea" stroke="#d9480f" stroke-width="2"/>
+<text x="731.0" y="62.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">CAN 12 bits</text>
+<text x="731.0" y="80.0" font-size="14" text-anchor="middle" fill="#111">0 à 3,3 V</text>
+<text x="731.0" y="98.0" font-size="14" text-anchor="middle" fill="#111">fₑ = 8,0 kHz</text>
+<!-- Retour à la ligne vers la partie numérique -->
+<line x1="731.0" y1="120.0" x2="731.0" y2="150.0" stroke="#111" stroke-width="2"/>
+<line x1="731.0" y1="150.0" x2="95.0" y2="150.0" stroke="#111" stroke-width="2"/>
+<line x1="95.0" y1="150.0" x2="95.0" y2="155.0" stroke="#111" stroke-width="2"/>
+<polygon points="95.0,165.0 99.5,155.0 90.5,155.0" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="20.0" y="165.0" width="150.0" height="80.0" rx="8" fill="#eef5f8" stroke="#1f6f8b" stroke-width="2"/>
+<text x="95.0" y="192.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Codage G.711</text>
+<text x="95.0" y="210.0" font-size="14" text-anchor="middle" fill="#111">8 bits</text>
+<text x="95.0" y="228.0" font-size="14" text-anchor="middle" fill="#111">par échantillon</text>
+<line x1="170.0" y1="205.0" x2="222.0" y2="205.0" stroke="#111" stroke-width="2"/>
+<polygon points="232.0,205.0 222.0,200.5 222.0,209.5" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="232.0" y="165.0" width="150.0" height="80.0" rx="8" fill="#eef5f8" stroke="#1f6f8b" stroke-width="2"/>
+<text x="307.0" y="192.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Paquets RTP</text>
+<text x="307.0" y="210.0" font-size="14" text-anchor="middle" fill="#111">20 ms de voix</text>
+<text x="307.0" y="228.0" font-size="14" text-anchor="middle" fill="#111">+ 40 octets</text>
+<line x1="382.0" y1="205.0" x2="434.0" y2="205.0" stroke="#111" stroke-width="2"/>
+<polygon points="444.0,205.0 434.0,200.5 434.0,209.5" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="444.0" y="165.0" width="150.0" height="80.0" rx="8" fill="#eef5f8" stroke="#1f6f8b" stroke-width="2"/>
+<text x="519.0" y="201.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Trame Ethernet</text>
+<text x="519.0" y="219.0" font-size="14" text-anchor="middle" fill="#111">+ 38 octets</text>
+<line x1="594.0" y1="205.0" x2="646.0" y2="205.0" stroke="#111" stroke-width="2"/>
+<polygon points="656.0,205.0 646.0,200.5 646.0,209.5" fill="#111" stroke="#111" stroke-width="1"/>
+<rect x="656.0" y="165.0" width="150.0" height="80.0" rx="8" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<text x="731.0" y="201.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">Poste de</text>
+<text x="731.0" y="219.0" font-size="14" text-anchor="middle" fill="#111">sécurité</text>
+<text x="625.0" y="197.0" font-size="12" text-anchor="middle" fill="#777">réseau</text>
+</svg>

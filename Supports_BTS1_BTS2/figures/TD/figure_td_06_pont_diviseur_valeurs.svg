@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 290" width="420" height="290" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Pont diviseur de tension : R1 = 2,2 kΩ en haut, R2 = 1 kΩ en bas, alimenté sous E = 12 V">
+<rect id="fond-blanc" x="0" y="0" width="420" height="290" fill="#ffffff"/>
+<!-- Source continue E (pile verticale, borne + en haut) -->
+<line x1="100.0" y1="149.0" x2="140.0" y2="149.0" stroke="#111" stroke-width="2"/>
+<line x1="110.0" y1="161.0" x2="130.0" y2="161.0" stroke="#111" stroke-width="4"/>
+<text x="146.0" y="147.0" font-size="14" fill="#111">+</text>
+<text x="138.0" y="173.0" font-size="14" fill="#111">−</text>
+<line x1="120.0" y1="50.0" x2="120.0" y2="149.0" stroke="#111" stroke-width="2"/>
+<line x1="120.0" y1="161.0" x2="120.0" y2="260.0" stroke="#111" stroke-width="2"/>
+<text x="82.0" y="160.0" font-size="15" text-anchor="end" fill="#111">E = 12 V</text>
+<!-- Fil du haut puis R1 (rectangle IEC) -->
+<line x1="120.0" y1="50.0" x2="300.0" y2="50.0" stroke="#111" stroke-width="2"/>
+<line x1="300.0" y1="50.0" x2="300.0" y2="75.0" stroke="#111" stroke-width="2"/>
+<rect x="290.0" y="75.0" width="20.0" height="60.0" fill="none" stroke="#111" stroke-width="2"/>
+<line x1="300.0" y1="135.0" x2="300.0" y2="175.0" stroke="#111" stroke-width="2"/>
+<text x="280.0" y="110.0" font-size="15" text-anchor="end" fill="#111">R<tspan baseline-shift="sub" font-size="11">1</tspan> = 2,2 kΩ</text>
+<!-- R2 puis retour par le fil du bas -->
+<rect x="290.0" y="175.0" width="20.0" height="60.0" fill="none" stroke="#111" stroke-width="2"/>
+<line x1="300.0" y1="235.0" x2="300.0" y2="260.0" stroke="#111" stroke-width="2"/>
+<line x1="300.0" y1="260.0" x2="120.0" y2="260.0" stroke="#111" stroke-width="2"/>
+<text x="280.0" y="210.0" font-size="15" text-anchor="end" fill="#111">R<tspan baseline-shift="sub" font-size="11">2</tspan> = 1 kΩ</text>
+<!-- Courant I (vert) et tension U(R2) (orange, convention récepteur) -->
+<line x1="180.0" y1="38.0" x2="220.0" y2="38.0" stroke="#45700f" stroke-width="2"/>
+<polygon points="230.0,38.0 220.0,42.5 220.0,33.5" fill="#45700f" stroke="#45700f" stroke-width="1"/>
+<text x="205.0" y="30.0" font-size="15" text-anchor="middle" fill="#45700f" font-weight="bold" font-style="italic">I</text>
+<line x1="345.0" y1="232.0" x2="345.0" y2="188.0" stroke="#d9480f" stroke-width="2.5"/>
+<polygon points="345.0,178.0 349.5,188.0 340.5,188.0" fill="#d9480f" stroke="#d9480f" stroke-width="1"/>
+<text x="356.0" y="210.0" font-size="15" fill="#d9480f">U(R<tspan baseline-shift="sub" font-size="11">2</tspan>)</text>
+</svg>

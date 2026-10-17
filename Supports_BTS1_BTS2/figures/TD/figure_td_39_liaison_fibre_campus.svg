@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 240" width="880" height="240" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Liaison fibre entre deux bâtiments : switch, jarretière, tiroir optique, épissure, câble OS2 de 1,8 km en fourreau, puis le même montage côté B">
+<rect id="fond-blanc" x="0" y="0" width="880" height="240" fill="#ffffff"/>
+<!-- Bâtiment A -->
+<rect x="8.0" y="40.0" width="262.0" height="140.0" rx="6" fill="none" stroke="#777" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="139.0" y="32.0" font-size="14" text-anchor="middle" fill="#777">bâtiment A</text>
+<rect x="20.0" y="95.0" width="80.0" height="50.0" rx="4" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<text x="60.0" y="116.0" font-size="13" text-anchor="middle" fill="#111">switch</text>
+<text x="60.0" y="133.0" font-size="12" text-anchor="middle" fill="#111">(module LR)</text>
+<line x1="100.0" y1="120.0" x2="180.0" y2="120.0" stroke="#555" stroke-width="2.5"/>
+<rect x="100.0" y="114.0" width="12.0" height="12.0" fill="#d9480f" stroke="#111" stroke-width="1"/>
+<rect x="168.0" y="114.0" width="12.0" height="12.0" fill="#d9480f" stroke="#111" stroke-width="1"/>
+<text x="140.0" y="155.0" font-size="13" text-anchor="middle" fill="#111">jarretière</text>
+<rect x="180.0" y="90.0" width="60.0" height="60.0" rx="4" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<text x="210.0" y="116.0" font-size="13" text-anchor="middle" fill="#111">tiroir</text>
+<text x="210.0" y="132.0" font-size="13" text-anchor="middle" fill="#111">optique</text>
+<!-- Câble OS2 en fourreau entre les deux bâtiments -->
+<line x1="240.0" y1="120.0" x2="640.0" y2="120.0" stroke="#555" stroke-width="3"/>
+<circle cx="255.0" cy="120.0" r="6.0" fill="#1f6f8b" stroke="#111" stroke-width="1"/>
+<circle cx="625.0" cy="120.0" r="6.0" fill="#1f6f8b" stroke="#111" stroke-width="1"/>
+<text x="440.0" y="108.0" font-size="15" text-anchor="middle" fill="#111" font-weight="bold">câble fibre OS2 en fourreau : 1,8 km</text>
+<text x="440.0" y="142.0" font-size="13" text-anchor="middle" fill="#777">(échelle non respectée)</text>
+<!-- Bâtiment B -->
+<rect x="610.0" y="40.0" width="262.0" height="140.0" rx="6" fill="none" stroke="#777" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="741.0" y="32.0" font-size="14" text-anchor="middle" fill="#777">bâtiment B</text>
+<rect x="640.0" y="90.0" width="60.0" height="60.0" rx="4" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<text x="670.0" y="116.0" font-size="13" text-anchor="middle" fill="#111">tiroir</text>
+<text x="670.0" y="132.0" font-size="13" text-anchor="middle" fill="#111">optique</text>
+<line x1="700.0" y1="120.0" x2="780.0" y2="120.0" stroke="#555" stroke-width="2.5"/>
+<rect x="700.0" y="114.0" width="12.0" height="12.0" fill="#d9480f" stroke="#111" stroke-width="1"/>
+<rect x="768.0" y="114.0" width="12.0" height="12.0" fill="#d9480f" stroke="#111" stroke-width="1"/>
+<text x="740.0" y="155.0" font-size="13" text-anchor="middle" fill="#111">jarretière</text>
+<rect x="780.0" y="95.0" width="80.0" height="50.0" rx="4" fill="#f4f4f4" stroke="#111" stroke-width="2"/>
+<text x="820.0" y="116.0" font-size="13" text-anchor="middle" fill="#111">switch</text>
+<text x="820.0" y="133.0" font-size="12" text-anchor="middle" fill="#111">(module LR)</text>
+<!-- Légende -->
+<rect x="304.0" y="208.0" width="12.0" height="12.0" fill="#d9480f" stroke="#111" stroke-width="1"/>
+<text x="322.0" y="219.0" font-size="14" fill="#111">connecteur</text>
+<circle cx="466.0" cy="214.0" r="6.0" fill="#1f6f8b" stroke="#111" stroke-width="1"/>
+<text x="478.0" y="219.0" font-size="14" fill="#111">épissure</text>
+</svg>
