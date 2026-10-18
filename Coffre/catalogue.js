@@ -69,7 +69,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_1_reponses.pdf",
     "type": "application/pdf",
-    "taille": 130715
+    "taille": 145619
   },
   {
     "id": "tp-1-2",
