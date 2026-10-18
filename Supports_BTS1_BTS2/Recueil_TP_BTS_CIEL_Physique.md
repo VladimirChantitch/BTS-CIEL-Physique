@@ -1048,13 +1048,14 @@ plt.show()
 
 ### TP 2.3 : Recette d'un lot de cartes Arduino Uno `BTS1` `BTS2`
 
-> **Durée :** 2 h · **Mode :** TP informatisé, cartes Arduino Uno seules, sans aucun câblage (version de repli ci-dessous : relevés fournis) · **Cours :** Chapitre 2, §2.1 (justesse et fidélité, erreurs systématique et aléatoire, incertitudes de type A et B, incertitude composée et élargie, compatibilité) ; Chapitre 1, §1.1 (diviseur de tension) et §1.6 (LED) ; Chapitre 5, §5.6 (quantum d'un CAN) · **Prérequis :** TP 2.2 (IDE Arduino, moniteur série, Python et `pyserial`)
+> **Durée :** 2 h, plus 10 min de préparation du poste (étape 0) si elle n'a pas été faite avant la séance · **Mode :** TP informatisé, cartes Arduino Uno seules, sans aucun câblage (version de repli ci-dessous : relevés fournis) · **Cours :** Chapitre 2, §2.1 (justesse et fidélité, erreurs systématique et aléatoire, incertitudes de type A et B, incertitude composée et élargie, compatibilité) ; Chapitre 1, §1.1 (diviseur de tension) et §1.6 (LED) ; Chapitre 5, §5.6 (quantum d'un CAN) · **Prérequis :** TP 2.2 (IDE Arduino, moniteur série, Python et `pyserial`)
 > **Objectif :** faire la recette d'un lot de cartes comme un service maintenance, mesurer avec la carte elle-même sa tension d'alimentation et la dérive de son horloge avec leurs incertitudes, et conclure par un procès-verbal de recette.
 > **Livrable :** le **procès-verbal de recette** du binôme ([modèle à imprimer](Documents_TP/PV_Recette_Lot_Arduino_modele.md)), rempli au fil des étapes, et les réponses aux questions Q1 à Q12 (BTS2 : Q13 à Q16).
 
 **Problématique :** l'école possède une cinquantaine de cartes Arduino Uno, achetées en plusieurs fois et parfois malmenées. Avant de les confier aux prochains TP, le service maintenance (la classe) doit en faire la **recette**, c'est-à-dire le contrôle de réception, sans multimètre, sans fil ni composant. Une carte peut-elle se tester elle-même, et quelle confiance accorder à ses propres mesures ?
 
 - **Matériel par binôme (× 8) :** 1 PC avec l'IDE Arduino 2.x et Python 3 (bibliothèque `pyserial`) ; 1 câble USB A-B **de données**, repéré par une étiquette ; environ 6 cartes du lot dans leurs sachets ; un feutre et des étiquettes ; le procès-verbal de recette imprimé. Aucun fil, aucun composant, aucun appareil de mesure.
+- **Fichiers fournis :** les deux programmes du TP sont donnés en entier plus bas, et en fichiers prêts à l'emploi dans le dossier `Documents_TP/TP_2_3/` du dépôt de la classe : `autotest_uno/autotest_uno.ino` (programme de la carte) et `horloge_uno.py` (programme du PC). **Utiliser ces fichiers** plutôt que de copier le code depuis le PDF : la copie depuis un PDF casse l'indentation, et Python refuse alors de s'exécuter (`IndentationError`).
 - **Unité utile :** une **partie par million** vaut $1\ \text{ppm} = 10^{-6} = 0{,}0001\ \%$. Une horloge qui dérive de 1 ppm se décale de $86\,400 \times 10^{-6} \approx 0{,}086$ s par jour.
 
 > ⚠ **Sécurité et bonnes pratiques**
@@ -1073,6 +1074,59 @@ plt.show()
 | **HORS SERVICE** | LED ON éteinte, aucun port COM ou téléversement impossible, avec un câble et un port connus bons ; ou 4 broches HS ou plus ; ou erreur EEPROM ; ou CAN défaillant (voie de masse ou référence interne hors plage, confirmé sur un second port USB) | étiquette « HORS SERVICE » avec la panne constatée, rangée à part (réparation ou recyclage décidés par le responsable) |
 
 **Organisation :** la première carte est étudiée en détail (étapes 1 à 3), les suivantes passent à la chaîne (étape 4). Le procès-verbal se remplit au fur et à mesure et se conclut à l'étape 5.
+
+**Étape 0 (10 min) : préparer le poste**
+
+Cette préparation se fait **une seule fois** en début de séance. Le terminal et l'IDE ouverts ici servent ensuite pendant tout le TP.
+
+1. **Créer le dossier de travail.** Dans l'Explorateur de fichiers, ouvrir **Documents**, créer un dossier `TP_2_3`, et y copier `horloge_uno.py` (depuis le dossier fourni par le professeur ou le dépôt de la classe). Tous les fichiers produits par Python (relevés `horloge_carte_XX.csv`) seront enregistrés dans ce dossier.
+2. **Ouvrir un terminal dans ce dossier.** Ouvrir `Documents\TP_2_3` dans l'Explorateur, cliquer dans la **barre d'adresse** (en haut, là où s'affiche le chemin), taper `cmd` puis **Entrée**. Une fenêtre noire s'ouvre : la ligne d'invite doit se terminer par `\TP_2_3>`. (Sous Windows 11, on peut aussi faire un clic droit dans le dossier → **Ouvrir dans le Terminal**.)
+3. **Vérifier que Python est installé.** Taper la commande suivante puis **Entrée** :
+
+   ```text
+   py --version
+   ```
+
+   La réponse attendue ressemble à `Python 3.12.4`. Sous Windows, on utilise `py` et non `python` : sur beaucoup de postes, `python` ouvre le Microsoft Store au lieu de lancer Python. Si `py` n'est pas reconnu, prévenir le professeur.
+4. **Installer la bibliothèque `pyserial`** (elle permet à Python de dialoguer avec la carte par le port USB) :
+
+   ```text
+   py -m pip install --user pyserial
+   ```
+
+   La réponse se termine par `Successfully installed pyserial-3.5` (installation faite) ou par `Requirement already satisfied` (déjà installée) : les deux conviennent.
+5. **Vérifier l'installation :**
+
+   ```text
+   py -c "import serial; print(serial.__version__)"
+   ```
+
+   La réponse doit être un numéro de version, par exemple `3.5`.
+6. **Préparer l'IDE Arduino.** Ouvrir l'IDE, puis **Fichier → Ouvrir…** et choisir `autotest_uno.ino` (si l'IDE propose de le ranger dans un dossier `autotest_uno`, accepter). Choisir ensuite **Outils → Carte → Arduino AVR Boards → Arduino Uno**. Le port sera choisi à chaque nouvelle carte.
+
+> **Un port COM ne peut être ouvert que par un seul programme à la fois.** Le moniteur série de l'IDE et le programme Python ne peuvent donc pas utiliser la même carte en même temps : fermer le moniteur série avant de lancer Python, et inversement.
+
+**Si ça ne marche pas :**
+
+| Ce qui s'affiche | Cause | Que faire |
+|---|---|---|
+| Le Microsoft Store s'ouvre | `python` tapé au lieu de `py` | taper `py` |
+| `'py' n'est pas reconnu…` | Python absent ou mal installé | prévenir le professeur ; travailler avec le repli sans Python (étape 3) |
+| `No module named 'serial'` | `pyserial` non installé | refaire le point 4 |
+| `module 'serial' has no attribute 'Serial'` | un autre paquet nommé `serial` est installé à la place de `pyserial` | `py -m pip uninstall serial`, puis refaire le point 4 |
+| `could not open port 'COM5': PermissionError … Accès refusé` | le moniteur série (ou un autre programme) utilise déjà le port | fermer le moniteur série, puis relancer |
+| `could not open port 'COM3': FileNotFoundError` | le port écrit dans `horloge_uno.py` n'est pas celui de la carte | corriger la ligne `PORT = …` (voir étape 1) |
+| `IndentationError` | code Python copié depuis le PDF | utiliser le fichier `horloge_uno.py` fourni |
+| `pip` ne télécharge rien (pas de réseau, proxy) | accès à Internet bloqué | prévenir le professeur (installation depuis une clé) ou utiliser le repli sans Python |
+
+**Mémo des commandes** (toutes tapées dans le terminal ouvert dans `Documents\TP_2_3`) :
+
+| Pour… | Taper |
+|---|---|
+| vérifier Python | `py --version` |
+| installer `pyserial` (une fois par poste) | `py -m pip install --user pyserial` |
+| lister les ports et identifier les cartes | `py -m serial.tools.list_ports -v` |
+| mesurer la dérive d'horloge d'une carte | `py horloge_uno.py` |
 
 **Déroulé détaillé**
 
@@ -1108,7 +1162,13 @@ COM5
 
 2. **(20 min) Étape 2 : autotest sans aucun fil.**
    - **Principe.** Une broche peut être une **sortie** (elle impose LOW, 0 V, ou HIGH, Vcc) ou une **entrée**, éventuellement tirée vers Vcc par une **résistance de rappel** interne de 20 à 50 kΩ (mode `INPUT_PULLUP`). La fonction `digitalRead` lit le niveau **réel** de la broche (registre PINx), même quand c'est une sortie. Sur D2 à D13 et A0 à A5, le programme réalise donc : **test a**, toutes les broches en entrée avec rappel doivent lire HIGH ; **test b**, chaque broche, seule et pendant quelques microsecondes, doit imposer LOW puis HIGH ; **test c**, une seule broche à LOW, toutes les autres doivent rester à HIGH. Il vérifie aussi le **CAN** (A0 à A5 avec rappel : $N \approx 1023$ ; en sortie à LOW : $N \approx 0$ ; voies internes : masse et **référence de tension de 1,1 V**), l'**EEPROM** (1024 octets écrits avec 0x55 puis 0xAA, relus, puis restaurés) et la **LED L** (D13 en entrée avec rappel pendant 3 s).
-   - Coller le programme ci-dessous dans un nouveau croquis enregistré sous le nom `autotest_uno`, le téléverser, puis ouvrir le **Moniteur série** à **115200 bauds** : la carte redémarre et affiche son rapport en 15 s environ. Reporter les cas de test CT-04 à CT-07 dans le procès-verbal.
+   - **Téléverser l'autotest** (programme complet donné ci-dessous, ouvert à l'étape 0) :
+     1. dans l'IDE, revenir sur l'onglet `autotest_uno` et vérifier **Outils → Port** : le port COM de la carte branchée (celui relevé à l'étape 1) doit être coché ;
+     2. cliquer sur **Téléverser** (bouton flèche vers la droite, en haut à gauche) et attendre le message « Téléversement terminé » en bas de la fenêtre ;
+     3. ouvrir le **Moniteur série** (bouton loupe, en haut à droite) ; dans la barre du moniteur, choisir **115200 bauds** (le réglage de fin de ligne n'a pas d'importance) ;
+     4. la carte redémarre et affiche son rapport en 15 s environ, puis le menu des commandes et la ligne `PRET` ; si rien ne s'affiche, appuyer une fois sur le bouton **RESET** de la carte ;
+     5. pour envoyer une commande (`a`, `v`, `h` ou `t`), taper la lettre dans le champ de saisie du moniteur puis **Entrée**.
+   - Reporter les cas de test CT-04 à CT-07 dans le procès-verbal. La ligne qui commence par l'identifiant de la carte (format CSV) se copie avec la souris et se colle dans le tableur commun (étape 4).
 
 ```cpp
 // autotest_uno.ino : recette d'une carte Arduino Uno, sans aucun câblage
@@ -1737,7 +1797,17 @@ void loop() {
    - ❓ *Q9. (a) Montrez que $\dfrac{V_{cc2}}{V_{cc1}} = \dfrac{N_1}{N_2}$ : la valeur exacte de la référence interne n'intervient plus. (b) Calculez l'écart relatif $\dfrac{V_{cc2} - V_{cc1}}{V_{cc1}}$ et son incertitude élargie, en ne gardant que le type A et la résolution des deux mesures (composition quadratique des incertitudes relatives). (c) L'écart est-il significatif ? Quel port choisir pour un banc de test, et pourquoi un port en façade ou un concentrateur non alimenté peut-il fournir moins ? (d) Quel type d'erreur une telle mesure relative élimine-t-elle ?*
    - Reporter le résultat de la Q7 (valeur, incertitude élargie, unité, k = 2) dans le cas de test CT-08 du procès-verbal.
 
-   **b) Horloge de la carte.** Le programme de la carte compte le temps avec `millis()`, à partir de son oscillateur de 16 MHz. En mode horloge (commande `h`), il envoie une ligne `H;millis` chaque seconde ; le programme Python ci-dessous horodate chaque ligne avec l'horloge du PC et calcule, par régression linéaire, l'écart relatif de fréquence de la carte, sa **dérive**. **Fermer le moniteur série**, créer le fichier `horloge_uno.py`, adapter `PORT` et `CARTE`, puis l'exécuter (environ 3 min 15 s).
+   **b) Horloge de la carte.** Le programme de la carte compte le temps avec `millis()`, à partir de son oscillateur de 16 MHz. En mode horloge (commande `h`), il envoie une ligne `H;millis` chaque seconde ; le programme Python ci-dessous horodate chaque ligne avec l'horloge du PC et calcule, par régression linéaire, l'écart relatif de fréquence de la carte, sa **dérive**. Pour lancer la mesure :
+
+   1. **Fermer le moniteur série** de l'IDE (sinon Python reçoit le message « Accès refusé »).
+   2. Ouvrir `horloge_uno.py` (dossier `Documents\TP_2_3`) avec le Bloc-notes, VS Code ou Thonny (clic droit → **Ouvrir avec**). Modifier les deux lignes `PORT = "COM3"` (remplacer `COM3` par le port de la carte, relevé à l'étape 1) et `CARTE = "07"` (identifiant de la carte sur le procès-verbal), puis **enregistrer**.
+   3. Dans le terminal ouvert à l'étape 0, taper `py horloge_uno.py` puis **Entrée**.
+   4. Le programme affiche « Attente de la fin de l'autotest… » (environ 15 s, la carte redémarre), puis mesure pendant 3 min : **ne pas débrancher la carte** et ne pas fermer le terminal. Pendant ce temps, on peut téléverser l'autotest sur la carte suivante, branchée sur un **autre** port USB.
+   5. À la fin, le programme affiche la dérive (en ppm), son incertitude élargie et l'avance ou le retard par jour, et enregistre les points dans `horloge_carte_XX.csv`, dans le dossier `Documents\TP_2_3`.
+
+   *Avec Thonny (sans terminal) : ouvrir `horloge_uno.py`, installer `pyserial` par **Outils → Gérer les paquets…** (rechercher `pyserial`, **Installer**), modifier `PORT` et `CARTE`, puis lancer avec **F5** : le fichier CSV s'enregistre à côté du programme.*
+
+   Le programme complet :
 
 ```python
 # TP 2.3 : dérive de l'horloge d'une carte Arduino Uno, comparée au PC
@@ -1832,13 +1902,30 @@ print(f"Points enregistrés dans {nom_fichier}")
 
 4. **(30 min) Étape 4 : recette à la chaîne et bilan du lot.**
 
-   **a) Recette à la chaîne des autres cartes**, deux par deux sur deux ports USB du PC. Le téléversement de l'autotest prouve le port et la programmation, et la LED L clignote en mode horloge : Blink devient inutile.
+   **a) Recette à la chaîne des autres cartes.** Le binôme travaille avec **deux ports USB** du PC, repérés **P1** et **P2** par une étiquette, et **deux terminaux** ouverts dans `Documents\TP_2_3` (un par port : refaire le point 2 de l'étape 0 pour ouvrir le second). Pendant qu'une carte mesure son horloge sur un port (3 min, Python occupe ce port et son terminal), on fait l'autotest de la carte suivante sur l'autre port. Le téléversement de l'autotest prouve le port et la programmation, et la LED L clignote en mode horloge : Blink devient inutile.
 
-   1. Observer la carte, noter son identifiant et son état visuel (CT-01).
-   2. La brancher : LED ON, port COM, VID:PID et numéro de série (CT-02).
-   3. Téléverser `autotest_uno.ino`, lire le rapport, regarder la LED L pendant la phase 5 (CT-03 à CT-08).
-   4. Fermer le moniteur série et lancer `horloge_uno.py` sur ce port (3 min) ; pendant ce temps, commencer la carte suivante sur l'autre port (CT-09).
-   5. Remplir la ligne de la carte dans le tableau des résultats du procès-verbal, une fiche d'anomalie si un cas de test est KO, la ligne du tableur commun, puis poser l'étiquette et ranger la carte.
+   **La routine, pour chaque carte :**
+
+   1. **Préparer.** Sortir la carte, écrire son identifiant au feutre sur le sachet, l'observer (CT-01).
+   2. **Brancher** la carte sur le port **libre** (P1 ou P2) : la LED ON s'allume (CT-02).
+   3. **Trouver son port COM.** Dans l'IDE, ouvrir **Outils → Port** : le port de la nouvelle carte est celui qui vient d'apparaître (l'autre est celui de la carte en cours de mesure, écrit dans `horloge_uno.py`). En cas de doute, taper `py -m serial.tools.list_ports -v` dans le terminal **libre**. Attention : une Uno d'origine reçoit de Windows un numéro COM **qui lui est propre** (il change d'une carte à l'autre : COM5, COM6, COM7…), alors qu'un clone CH340 garde le numéro du port USB physique. **Vérifier le port à chaque nouvelle carte.**
+   4. **Téléverser l'autotest.** Cocher ce port dans **Outils → Port**, puis cliquer sur **Téléverser** ; attendre « Téléversement terminé » (CT-03). **Ne jamais choisir le port de la carte en cours de mesure** : le téléversement échouerait (« Accès refusé ») ou interromprait la mesure.
+   5. **Lire le rapport.** Ouvrir le **Moniteur série** (115200 bauds), lire le rapport et regarder la LED L pendant la phase 5 (CT-04 à CT-08). Copier la ligne CSV de la carte dans le tableur commun.
+   6. **Fermer le moniteur série.**
+   7. **Lancer la mesure d'horloge.** Dans `horloge_uno.py`, remplacer `PORT` par le port de cette carte et `CARTE` par son identifiant, **enregistrer**, puis taper `py horloge_uno.py` dans le terminal attribué à ce port. Modifier le fichier pendant qu'une autre mesure tourne ne la perturbe pas : Python a lu le fichier au lancement.
+   8. **Pendant les 3 min de mesure,** passer à la carte suivante sur l'**autre** port : reprendre au point 1.
+   9. **À la fin de la mesure** (le terminal affiche la dérive et « Points enregistrés dans … »), relever la dérive (CT-09), remplir la ligne de la carte dans le tableau des résultats du procès-verbal (et une fiche d'anomalie si un cas de test est KO), compléter sa ligne du tableur commun, poser l'étiquette, **débrancher** la carte et la ranger dans son sachet. Le port est libre pour la carte suivante.
+
+   **Exemple de déroulement** (environ 5 min par carte une fois la routine prise) :
+
+   | Temps | Port P1 (terminal 1) | Port P2 (terminal 2) |
+   |---|---|---|
+   | 0 à 4 min | carte A : points 1 à 6 (autotest) | libre |
+   | 4 à 7 min | carte A : mesure d'horloge (point 7) | carte B : points 1 à 6 |
+   | 7 à 10 min | carte A : point 9, puis débranchée ; carte C branchée : points 1 à 6 | carte B : mesure d'horloge |
+   | 10 à 13 min | carte C : mesure d'horloge | carte B : point 9, puis carte D : points 1 à 6 |
+
+   **Si une carte bloque** (pas de port COM, téléversement impossible, « not in sync », rapport illisible) : suivre l'arbre de diagnostic de l'étape 1, remplir une fiche d'anomalie, étiqueter la carte et passer à la suivante sans y passer plus de 5 min.
 
    **Tableur commun de la classe** (une ligne par carte, séparateur `;`, virgule décimale), dont la première ligne est préparée par le professeur :
 
