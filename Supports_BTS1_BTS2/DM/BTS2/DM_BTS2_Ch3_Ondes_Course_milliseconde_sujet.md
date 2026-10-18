@@ -6,18 +6,16 @@ BTS CIEL 2 · Physique · Chapitre 3 : ondes et propagation
 >
 > Les quatre parties notées (A à D) sont **indépendantes** : chacune rappelle les données dont elle a besoin, et les résultats utiles des parties précédentes sont redonnés. À l'intérieur de chaque partie, les questions vont du plus simple au plus approfondi. La partie E, **facultative**, propose des questions d'ingénieur, guidées par des coups de pouce : elle rapporte des points de bonus (note plafonnée à 20).
 >
-> **Étudiants de BTS1** : la partie A, la partie B et les questions C1, C2, D1, D2 et D3 sont accessibles avec le cours de première année ; le reste est facultatif pour vous.
->
 > Les distances, les coûts et les caractéristiques des matériels sont des **ordres de grandeur réalistes**, arrondis pour les besoins du sujet. La société Kairos Links est fictive.
 
-| Partie | Contenu | Points | Temps conseillé | BTS1 |
-|---|---|---|---|---|
-| A | Fibre ou ondes radio : qui arrive le premier ? (document en anglais) | 4 | 30 min | oui |
-| B | Bilan de liaison d'un bond hertzien (document en anglais) | 5 | 40 min | oui |
-| C | Dégager le faisceau : zone de Fresnel et courbure de la Terre | 6 | 45 min | C1, C2 |
-| D | Propagation réelle : pluie, débit et trajets multiples | 5 | 40 min | D1 à D3 |
-| | **Total** | **20** | **2 h 35** | |
-| E | Pour aller plus loin : questions d'ingénieur (facultatif) | +4 (bonus) | 45 min | non |
+| Partie | Contenu | Points | Temps conseillé |
+|---|---|---|---|
+| A | Fibre ou ondes radio : qui arrive le premier ? (document en anglais) | 4 | 30 min |
+| B | Bilan de liaison d'un bond hertzien (document en anglais) | 5 | 40 min |
+| C | Dégager le faisceau : zone de Fresnel et courbure de la Terre | 6 | 45 min |
+| D | Propagation réelle : pluie, débit et trajets multiples | 5 | 40 min |
+| | **Total** | **20** | **2 h 35** |
+| E | Pour aller plus loin : questions d'ingénieur (facultatif) | +4 (bonus) | 45 min |
 
 ## Rappel de formules
 
@@ -52,7 +50,7 @@ Vous êtes recruté(e) chez **Kairos Links**, une société qui construit sa pro
 
 **Document 1 : deux chemins entre Chicago et New York**
 
-<p align="center"><img src="figures/dm_ondes_01_carte_fibre_hertzien.svg" width="620" alt="Figure 1 : Carte schématique du tracé de la fibre optique et de la chaîne de pylônes hertziens entre Chicago et New York"/></p>
+<p align="center"><img src="figures/dm_bts2_ch3_01_carte_fibre_hertzien.svg" width="620" alt="Figure 1 : Carte schématique du tracé de la fibre optique et de la chaîne de pylônes hertziens entre Chicago et New York"/></p>
 
 <p align="center"><em>Figure 1 : Carte schématique du tracé de la fibre optique et de la chaîne de pylônes hertziens entre Chicago et New York.</em></p>
 
@@ -100,7 +98,7 @@ b) Le document 3 annonce des allers-retours hertziens « just under 9 ms », alo
 
 **Document 4 : le bond hertzien et ses antennes**
 
-<p align="center"><img src="figures/dm_ondes_02_bond_hertzien_fresnel.svg" width="620" alt="Figure 2 : Bond hertzien entre deux pylônes, antennes paraboliques, ligne de visée, première zone de Fresnel et flèche de la Terre"/></p>
+<p align="center"><img src="figures/dm_bts2_ch3_02_bond_hertzien_fresnel.svg" width="620" alt="Figure 2 : Bond hertzien entre deux pylônes, antennes paraboliques, ligne de visée, première zone de Fresnel et flèche de la Terre"/></p>
 
 <p align="center"><em>Figure 2 : Un bond hertzien : antennes paraboliques en vis-à-vis, ligne de visée, première zone de Fresnel et flèche due à la courbure de la Terre (échelle verticale très dilatée).</em></p>
 
@@ -160,7 +158,7 @@ $$h = \dfrac{d_1\, d_2}{2\, k\, R} \qquad \text{soit, au milieu du bond :} \qqua
 
 **Document 7 : profil du bond P7 - P8**
 
-<p align="center"><img src="figures/dm_ondes_03_coupe_terrain_p7_p8.svg" width="620" alt="Figure 3 : Profil du terrain entre les pylônes P7 et P8, avec une crête boisée à 20 km de P7"/></p>
+<p align="center"><img src="figures/dm_bts2_ch3_03_coupe_terrain_p7_p8.svg" width="620" alt="Figure 3 : Profil du terrain entre les pylônes P7 et P8, avec une crête boisée à 20 km de P7"/></p>
 
 <p align="center"><em>Figure 3 : Profil du terrain entre P7 et P8 (altitudes lues sur la carte, sans correction de la courbure de la Terre).</em></p>
 
@@ -206,7 +204,7 @@ Les gouttes de pluie absorbent et diffusent les micro-ondes, d'autant plus que l
 |---|---|---|---|---|---|
 | $\gamma$ (dB/km) | 0,35 | 2,0 | 4,9 | 7,0 | 12,6 |
 
-<p align="center"><img src="figures/dm_ondes_04_attenuation_pluie.svg" width="600" alt="Figure 4 : Atténuation linéique due à une pluie de 50 mm/h en fonction de la fréquence"/></p>
+<p align="center"><img src="figures/dm_bts2_ch3_04_attenuation_pluie.svg" width="600" alt="Figure 4 : Atténuation linéique due à une pluie de 50 mm/h en fonction de la fréquence"/></p>
 
 <p align="center"><em>Figure 4 : Atténuation linéique due à une pluie de 50 mm/h en fonction de la fréquence.</em></p>
 
@@ -226,7 +224,7 @@ c) En vous appuyant sur les parties B et D, expliquer pourquoi les réseaux de t
 
 **Document 10 : réflexion sur un lac (bond P12 - P13)**
 
-<p align="center"><img src="figures/dm_ondes_05_trajets_direct_reflechi.svg" width="600" alt="Figure 5 : Trajet direct et trajet réfléchi sur un lac entre P12 et P13, avec l'antenne image de P12"/></p>
+<p align="center"><img src="figures/dm_bts2_ch3_05_trajets_direct_reflechi.svg" width="600" alt="Figure 5 : Trajet direct et trajet réfléchi sur un lac entre P12 et P13, avec l'antenne image de P12"/></p>
 
 <p align="center"><em>Figure 5 : Trajet direct et trajet réfléchi sur le lac. L'antenne image est le symétrique de l'antenne de P12 par rapport à la surface de l'eau.</em></p>
 
@@ -267,7 +265,7 @@ Un ingénieur ne se demande plus seulement « la liaison fonctionne-t-elle ? »,
 - Coût d'un pylône équipé de hauteur $H$ : $C_s + a \times H$, avec $C_s = 150$ k€ (terrain, abri, énergie, radios) et $a = 4$ k€ par mètre de pylône. On compte un pylône par bond, le premier site existant déjà. Les montants sont convertis en euros.
 - La société estime qu'une microseconde gagnée sur l'aller simple vaut $V = 25$ k€ (gains de trading cumulés sur la durée de vie du réseau).
 
-<p align="center"><img src="figures/dm_ondes_06_retard_hauteur_nombre_bonds.svg" width="600" alt="Figure 6 : Retard total et hauteur des pylônes en fonction du nombre de bonds"/></p>
+<p align="center"><img src="figures/dm_bts2_ch3_06_retard_hauteur_nombre_bonds.svg" width="600" alt="Figure 6 : Retard total et hauteur des pylônes en fonction du nombre de bonds"/></p>
 
 <p align="center"><em>Figure 6 : Retard total d'un aller simple (en haut) et hauteur des pylônes (en bas) en fonction du nombre de bonds N, d'après le modèle du document 11.</em></p>
 
@@ -306,3 +304,16 @@ c) La société veut maintenant tenir compte de la valeur du temps : elle cherch
 b) Sur Terre, des liaisons laser en espace libre (infrarouge, $\lambda \approx 1{,}55$ µm) sont aussi étudiées. Citer deux avantages d'une onde de fréquence aussi élevée. Sachant qu'un brouillard dense atténue un faisceau infrarouge de plusieurs dizaines à plusieurs centaines de dB/km, alors qu'il est sans effet notable à 6 GHz, expliquer pourquoi ces liaisons laser ne remplacent pas les faisceaux hertziens, mais les complètent.
 
 > **Coup de pouce.** Calculez la fréquence d'une onde de longueur d'onde 1,55 µm et comparez-la à 6 GHz : que devient le débit possible ? Et l'ouverture du faisceau, $\theta \approx 70 \times \dfrac{\lambda}{D}$, pour une optique de quelques centimètres ?
+
+## Sources
+
+- C. Steiner, « Wall Street's Speed War », Forbes, 9 septembre 2010. <https://www.forbes.com/forbes/2010/0927/outfront-netscape-jim-barksdale-daniel-spivey-wall-street-speed-war.html>
+- D. Schneider, « Wall Street Tries Shortwave Radio to Make High-Frequency Trades Across the Atlantic », IEEE Spectrum, 1er juin 2018. <https://spectrum.ieee.org/wall-street-tries-shortwave-radio-to-make-highfrequency-trades-across-the-atlantic>
+- G. Laughlin, A. Aguirre et J. Grundfest, « Information Transmission Between Financial Markets in Chicago and New York », arXiv:1302.5966, février 2013 (publié dans The Financial Review en 2014). <https://arxiv.org/pdf/1302.5966>
+- D. Olds, « Microwaves thrash fibre on speed... if you like two-nines uptime », The Register, 27 février 2013. <https://www.theregister.com/2013/02/27/microwave_versus_fibre/>
+- D. Bhattacherjee et al., « cISP: A Speed-of-Light Internet Service Provider », USENIX NSDI '22, avril 2022. <https://www.usenix.org/conference/nsdi22/presentation/bhattacherjee>
+- UIT-R, « Recommandation P.838-3 : Specific attenuation model for rain for use in prediction methods », mars 2005 (valeurs du document 9 calculées avec ce modèle, polarisation horizontale). <https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.838-3-200503-I!!PDF-E.pdf>
+- A. U. Chaudhry et H. Yanikomeroglu, « Optical Wireless Satellite Networks versus Optical Fiber Terrestrial Networks: The Latency Perspective », 30th Biennial Symposium on Communications, 2021, arXiv:2106.07737. <https://arxiv.org/abs/2106.07737>
+- UIT-R, « Recommandation P.1814-1 : Prediction methods required for the design of terrestrial free-space optical links », septembre 2025. <https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.1814-1-202509-I!!PDF-E.pdf>
+
+Document 3 : texte rédigé pour le sujet d'après Steiner (Forbes, 2010), Schneider (IEEE Spectrum, 2018) et Laughlin, Aguirre et Grundfest (2013).
