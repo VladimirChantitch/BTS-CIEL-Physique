@@ -22,15 +22,41 @@
 - [Chapitre 2 : Mesures et incertitudes](#sec-chapitre-2-mesures-et-incertitudes)
     - [TP 2.1 : Mesures et incertitudes](#sec-tp-2-1-mesures-et-incertitudes)
         - [Version simulée du TP 2.1 (tableur)](#sec-version-simulee-du-tp-2-1-tableur)
+    - [TP 2.2 : Incertitude de type A sur 100 mesures automatiques (Arduino et Python)](#sec-tp-2-2-incertitude-de-type-a-sur-100-mesures-automatiques)
+        - [Version simulée du TP 2.2 (Python)](#sec-version-simulee-du-tp-2-2-python)
+    - [TP 2.3 : Recette d'un lot de cartes Arduino Uno](#sec-tp-2-3-recette-d-un-lot-de-cartes-arduino-uno)
+        - [Version de repli du TP 2.3 (relevés fournis)](#sec-version-de-repli-du-tp-2-3-releves-fournis)
 - [Chapitre 3 : Ondes et propagation](#sec-chapitre-3-ondes-et-propagation)
+    - [TP 3.0 : Prise en main du GBF et de l'oscilloscope](#sec-tp-3-0-prise-en-main-du-gbf-et-de-l-oscilloscope)
+        - [Version simulée du TP 3.0 (Falstad)](#sec-version-simulee-du-tp-3-0-falstad)
     - [TP 3.1 : Ondes : GBF et oscilloscope](#sec-tp-3-1-ondes-gbf-et-oscilloscope)
         - [Version simulée du TP 3.1 (Falstad, GBF et oscilloscope intégrés)](#sec-version-simulee-du-tp-3-1-falstad-gbf-et-oscilloscope-integres)
+    - [TP 3.2 : Célérité des ultrasons](#sec-tp-3-2-celerite-des-ultrasons)
+        - [Version simulée du TP 3.2 (exploitation de relevés, tableur ou Python)](#sec-version-simulee-du-tp-3-2-exploitation-de-releves)
+    - [TP 3.3 : Réflexions sur une ligne coaxiale](#sec-tp-3-3-reflexions-sur-une-ligne-coaxiale)
+        - [Version simulée du TP 3.3 (Falstad)](#sec-version-simulee-du-tp-3-3-falstad)
+    - [TP 3.4 : Mesurer la célérité du son avec un Arduino](#sec-tp-3-4-mesurer-la-celerite-du-son-avec-un-arduino)
+        - [Version simulée du TP 3.4 (Wokwi et relevés fournis)](#sec-version-simulee-du-tp-3-4-wokwi-et-releves-fournis)
 - [Chapitre 4 : Systèmes bouclés et asservissement](#sec-chapitre-4-systemes-boucles-et-asservissement)
     - [TP 4.1 : Boucle ouverte / boucle fermée](#sec-tp-4-1-boucle-ouverte-boucle-fermee)
         - [Version Falstad du TP 4.1 (version de référence) : boucle ouverte contre boucle fermée](#sec-version-falstad-du-tp-4-1-version-de-reference-boucle-ouverte-contre-b)
+    - [TP 4.2 : Réponse indicielle d'un circuit RC](#sec-tp-4-2-reponse-indicielle-d-un-circuit-rc)
+        - [Version simulée du TP 4.2 (Falstad)](#sec-version-simulee-du-tp-4-2-falstad)
+    - [TP 4.3 : Régulation de luminosité avec Arduino](#sec-tp-4-3-regulation-de-luminosite-avec-arduino)
+        - [Version simulée du TP 4.3 (Python)](#sec-version-simulee-du-tp-4-3-python)
 - [Chapitre 5 : Traitement du signal](#sec-chapitre-5-traitement-du-signal)
     - [TP 5.1 : Mesure de gain et d'atténuation d'un quadripôle](#sec-tp-5-1-mesure-de-gain-et-d-attenuation-d-un-quadripole)
+    - [TP 5.2 : Filtre RC et diagramme de Bode](#sec-tp-5-2-filtre-rc-et-diagramme-de-bode)
+        - [Version simulée du TP 5.2 (Falstad)](#sec-version-simulee-du-tp-5-2-falstad)
+    - [TP 5.3 : Échantillonnage, repliement de spectre et filtre numérique](#sec-tp-5-3-echantillonnage-repliement-de-spectre-et-filtre-numerique)
+        - [Démonstration au banc du TP 5.3 (oscilloscope Rigol, poste tournant)](#sec-demonstration-au-banc-du-tp-5-3-oscilloscope-rigol)
+    - [TP 5.4 : Spectre d'un signal à la FFT de l'oscilloscope](#sec-tp-5-4-spectre-d-un-signal-a-la-fft-de-l-oscilloscope)
+        - [Version simulée du TP 5.4 (Python)](#sec-version-simulee-du-tp-5-4-python)
 - [Chapitre 6 : Optique](#sec-chapitre-6-optique)
+    - [TP 6.1 : Réfraction et réflexion totale](#sec-tp-6-1-refraction-et-reflexion-totale)
+        - [Version simulée du TP 6.1 (PhET « Courber la lumière »)](#sec-version-simulee-du-tp-6-1-phet-courber-la-lumiere)
+    - [TP 6.2 : Liaison par fibre optique](#sec-tp-6-2-liaison-par-fibre-optique)
+        - [Version simulée du TP 6.2 (Python)](#sec-version-simulee-du-tp-6-2-python)
 - [Chapitre 7 : Préparation à l'épreuve](#sec-chapitre-7-preparation-a-l-epreuve)
 - [Projet : Mémoire de 64 bits](#sec-projet-memoire-64-bits)
     - [Projet de TP : Construire une mémoire de 64 bits](#sec-mem-projet-de-tp-construire-une-memoire-de-64-bits)
@@ -117,9 +143,22 @@ Chaque TP porte un numéro **chapitre.rang** (TP 1.3 = troisième TP du chapitre
 | TP 1.8 | Photodiode : deux modes de fonctionnement (pour aller plus loin) | 1 | 45 min | Falstad | Chapitre 1 |
 | TP 1.9 | Diviseur de tension à vide et en charge | 1 | 1 h 30 | Matériel, ou Falstad | Chapitre 1 |
 | TP 2.1 | Mesures et incertitudes | 2 | 55 min | Matériel, ou tableur | Rentrée (rotation) |
+| TP 2.2 | Incertitude de type A sur 100 mesures automatiques (Arduino et Python) | 2 | 2 h | TP informatisé (Arduino + Python), ou Python seul | Chapitre 2 |
+| TP 2.3 | Recette d'un lot de cartes Arduino Uno (autotest, incertitudes, procès-verbal de recette) | 2 | 2 h | TP informatisé (cartes Arduino seules, sans câblage), ou relevés fournis | Chapitre 2 |
+| TP 3.0 | Prise en main du GBF et de l'oscilloscope | 3 | 2 h | Matériel (poste tournant), ou Falstad + relevés fournis | Chapitre 3 |
 | TP 3.1 | Ondes : GBF et oscilloscope | 3 | 55 min | Matériel, ou Falstad | Rentrée (rotation) |
+| TP 3.2 | Célérité des ultrasons | 3 | 1 h 30 | Matériel (poste tournant), ou relevés + tableur | Chapitre 3 |
+| TP 3.3 | Réflexions sur une ligne coaxiale (BTS2) | 3 | 1 h 30 | Matériel (poste tournant), ou Falstad | Chapitre 3 |
+| TP 3.4 | Mesurer la célérité du son avec un Arduino | 3 | 2 h | TP informatisé (Arduino + HC-SR04), ou Wokwi + relevés fournis | Chapitre 3 |
 | TP 4.1 | Boucle ouverte / boucle fermée | 4 | 55 min | **Falstad** (matériel indisponible) | Rentrée (bonus) |
+| TP 4.2 | Réponse indicielle d'un circuit RC | 4 | 1 h 30 | Matériel (poste tournant), ou Falstad | Chapitre 4 |
+| TP 4.3 | Régulation de luminosité avec Arduino (BTS2) | 4 | 2 h | Matériel (Arduino), ou Python | Chapitre 4 |
 | TP 5.1 | Mesure de gain et d'atténuation d'un quadripôle | 5 | 2 h | Matériel, ou Falstad | Chapitre 5 |
+| TP 5.2 | Filtre RC et diagramme de Bode | 5 | 2 h | Matériel (poste tournant), ou Falstad | Chapitre 5 |
+| TP 5.3 | Échantillonnage, repliement de spectre et filtre numérique (BTS2) | 5 | 2 h | TP informatisé (Python) + démonstration au banc | Chapitre 5 |
+| TP 5.4 | Spectre d'un signal à la FFT de l'oscilloscope | 5 | 1 h 30 | Matériel (poste tournant), ou Python | Chapitre 5 |
+| TP 6.1 | Réfraction et réflexion totale | 6 | 1 h 30 | Matériel (4 postes optiques), ou simulateur PhET | Chapitre 6 |
+| TP 6.2 | Liaison par fibre optique | 6 | 2 h | Matériel (poste tournant), ou Python | Chapitre 6 |
 | Projet | Mémoire de 64 bits (3 séances) | Transversal | ≈ 10 h | Matériel (+ Logisim/Falstad) | Fin de document |
 
 ---
@@ -309,6 +348,10 @@ Le circuit à reproduire est celui du TP 1.2 (version matériel ci-dessus) : une
 3. **Placer la résistance** : **Ajouter une résistance** (*Draw → Passive Components → Add Resistor*). La tracer **horizontalement**, à partir de la borne du haut de la source.
 4. **Régler la résistance** : clic droit → **Éditer…** → **1000 Ω** (1 kΩ).
 5. **Placer la diode** : **Ajouter une diode**. La tracer horizontalement, dans le prolongement de la résistance. Vérifier le sens : la barre du symbole (la cathode) doit être **à droite**, côté masse. Si le sens est inversé, clic droit → **Inverser les bornes** , ou refaire le tracé dans l'autre sens.
+
+   **Choisir le modèle de la diode** : clic droit sur la diode → **Éditer…** → dans la liste **Modèle** (*Model*), choisir **1N4148**, puis valider. Ne modifier aucun autre paramètre.
+
+   > **Pourquoi ce réglage ?** Le modèle proposé par défaut (*default*) est une diode générique, beaucoup moins raide qu'une vraie diode au silicium : il donne environ 0,45 V à 1 mA et fait apparaître un « seuil » vers 0,4 V. Le modèle **1N4148** reprend les paramètres de la diode réelle du TP matériel : environ 0,6 V à 1 mA, comme annoncé en cours.
 6. **Placer la masse** : **Ajouter une masse** . La placer sous la borne du bas de la source, et la relier.
 7. **Fermer le circuit** : **Ajouter un fil**w pour relier la sortie de la diode jusqu'à la masse.
 8. **Vérifier avant de lancer** : le circuit doit former une boucle fermée unique : source → résistance → diode → masse → source. Aucun fil ne doit rester en l'air.
@@ -818,6 +861,1113 @@ Falstad ne propose pas de composant « photodiode » avec une commande d'éclair
 
 ---
 
+<a id="sec-tp-2-2-incertitude-de-type-a-sur-100-mesures-automatiques"></a>
+
+### TP 2.2 : Incertitude de type A sur 100 mesures automatiques (Arduino et Python) `BTS1` `BTS2`
+
+> **Durée :** 2 h · **Mode :** TP informatisé, carte Arduino + Python (version simulée ci-dessous, Python seul) · **Cours :** Chapitre 2, §2.1 (incertitude de type A, type B, facteur d'élargissement k) · **Prérequis :** TP 2.1
+> **Objectif :** faire acquérir 100 mesures par une carte Arduino, les traiter en Python (histogramme, moyenne, écart-type, $u_A$) et comprendre ce que signifie l'incertitude élargie $U = k \times u$.
+
+**Problématique :** au TP 2.1, relever 10 mesures à la main prenait un quart d'heure. Une carte à microcontrôleur en fait 100 en deux secondes. Plus de mesures, est-ce forcément un résultat plus précis ? Et que dit vraiment le « ± » d'un résultat ?
+
+- **Matériel par binôme (× 8) :** 1 carte Arduino Uno (ou compatible) et son câble USB, 1 plaque d'essai, fils de câblage mâle-mâle, 1 ordinateur avec l'IDE Arduino et Python 3 (bibliothèques `pyserial`, `numpy`, `matplotlib` ; Thonny ou Anaconda conviennent).
+- **Composants par binôme (à prévoir) :** 2 résistances 10 kΩ (1/4 W, 5 %), 1 photorésistance (LDR type GL5528), 1 résistance 10 kΩ supplémentaire pour le pont de la LDR.
+- **Sécurité :** la carte est alimentée par le port USB (5 V) : aucun risque électrique. Ne jamais relier directement la broche 5V à la broche GND (court-circuit du port USB).
+
+<p align="center">
+<img src="figures/cours/figure_23_distribution_des_mesures_repetees_histogramme.svg" width="420" alt="Distribution des mesures répétées (histogramme)"/>
+</p>
+
+<p align="center"><em>Histogramme de mesures répétées : la largeur de la « cloche » est mesurée par l'écart-type s.</em></p>
+
+**Rappels utiles :** le convertisseur analogique-numérique (CAN) de l'Arduino Uno code une tension de 0 à 5 V sur 10 bits, soit un nombre $N$ entre 0 et 1023. La tension vaut $u = N \times \dfrac{5}{1023}$. Le pas $q = \dfrac{5}{1023}$ V est la **résolution** du CAN.
+
+**Déroulé détaillé**
+
+1. **(15 min) Préparation.**
+   - ❓ *Q1. Calculez la résolution $q$ du CAN en millivolts. En déduire l'incertitude-type de type B due à la résolution, $u_B = q/\sqrt{12}$.*
+   - ❓ *Q2. On réalise un pont diviseur avec deux résistances de 10 kΩ alimenté par le 5 V de la carte. Quelle tension attend-on au point milieu ? Quelle valeur de $N$ la carte devrait-elle afficher ?*
+
+2. **(20 min) Montage et programme Arduino.**
+   - **Série A (signal stable) :** pont de deux résistances 10 kΩ entre la broche **5V** et la broche **GND**, point milieu relié à l'entrée **A0**.
+   - **Série B (signal bruité) :** remplacer la résistance du haut par la photorésistance (LDR entre 5V et A0, 10 kΩ entre A0 et GND). Poser le montage à plat, sous l'éclairage de la salle.
+   - Téléverser le programme suivant (IDE Arduino, menu **Croquis → Téléverser**) :
+
+```cpp
+// TP 2.2 : envoi de mesures de tension sur le port série
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  int N = analogRead(A0);          // nombre entre 0 et 1023
+  float u = N * 5.0 / 1023.0;      // conversion en volts
+  Serial.println(u, 4);            // envoi avec 4 décimales
+  delay(20);                       // une mesure toutes les 20 ms
+}
+```
+
+   - Ouvrir le **Moniteur série** (loupe en haut à droite, 9600 bauds) : les tensions défilent. **Fermer le moniteur série** avant de lancer Python (un seul programme peut utiliser le port à la fois).
+   - Noter le nom du port (menu **Outils → Port** : COM3, COM4… sous Windows).
+
+3. **(25 min) Acquisition et traitement en Python.** Dans Thonny (ou un autre éditeur), créer le fichier `tp22.py`, remplacer `COM3` par votre port, puis exécuter :
+
+```python
+# TP 2.2 : acquisition de 100 mesures et traitement statistique
+import time
+import serial
+import numpy as np
+import matplotlib.pyplot as plt
+
+PORT = "COM3"        # à adapter
+n = 100
+
+liaison = serial.Serial(PORT, 9600, timeout=2)
+time.sleep(2)                         # la carte redémarre à l'ouverture du port
+liaison.reset_input_buffer()
+liaison.readline()                    # on jette une ligne éventuellement incomplète
+mesures = []
+while len(mesures) < n:
+    ligne = liaison.readline().decode(errors="ignore").strip()
+    if ligne:
+        mesures.append(float(ligne))
+liaison.close()
+
+u = np.array(mesures)
+moyenne = np.mean(u)
+s = np.std(u, ddof=1)                 # écart-type de l'échantillon (n - 1)
+uA = s / np.sqrt(n)
+print(f"moyenne = {moyenne:.4f} V   s = {s*1000:.2f} mV   uA = {uA*1000:.3f} mV")
+
+for k in (1, 2, 3):
+    dedans = np.sum(np.abs(u - moyenne) <= k * s)
+    print(f"k = {k} : {dedans} mesures sur {n} dans [moyenne - {k}s ; moyenne + {k}s]")
+
+np.savetxt("serie.csv", u, fmt="%.4f")
+plt.hist(u, bins=15, edgecolor="black")
+plt.axvline(moyenne, color="red", label="moyenne")
+plt.xlabel("Tension mesurée (V)")
+plt.ylabel("Nombre de mesures")
+plt.legend()
+plt.show()
+```
+
+   Faire l'acquisition pour la **série A**, puis pour la **série B**. Conserver les deux histogrammes (capture d'écran) et les fichiers `serie.csv` (les renommer `serieA.csv` et `serieB.csv`).
+
+   | Série | Moyenne $\bar{u}$ (V) | $s$ (mV) | $u_A = s/\sqrt{n}$ (mV) | $u_B$ (mV) | $u = \sqrt{u_A^2 + u_B^2}$ (mV) |
+   |---|---|---|---|---|---|
+   | A : pont 10 kΩ / 10 kΩ | | | | | |
+   | B : LDR / 10 kΩ | | | | | |
+
+   - ❓ *Q3. Comparez l'allure des deux histogrammes. Pourquoi l'histogramme de la série A ne comporte-t-il que deux ou trois barres ?*
+   - ❓ *Q4. Pour chaque série, quelle est la contribution dominante dans $u$ : le type A (dispersion) ou le type B (résolution) ?*
+   - ❓ *Q5. Pour la série B, proposez au moins deux causes physiques de la dispersion (éclairage, bruit électrique…).*
+
+4. **(20 min) Le facteur d'élargissement k.** Le programme compte combien de mesures tombent dans les intervalles $\bar{u} \pm s$, $\bar{u} \pm 2s$ et $\bar{u} \pm 3s$.
+
+   | Intervalle | $\bar{u} \pm s$ | $\bar{u} \pm 2s$ | $\bar{u} \pm 3s$ |
+   |---|---|---|---|
+   | Nombre de mesures (série B) sur 100 | | | |
+   | Proportion attendue (loi normale) | ≈ 68 % | ≈ 95 % | ≈ 99,7 % |
+
+   - ❓ *Q6. Vos proportions sont-elles proches des proportions attendues ? Que signifie alors « k = 2, niveau de confiance 95 % » ?*
+   - ❓ *Q7. Écrivez le résultat de la série B sous la forme $\bar{u} \pm U$ avec $U = 2u$, en respectant les règles d'arrondi (incertitude à 1 ou 2 chiffres significatifs).*
+   - ❓ *Q8. Attention à ne pas confondre : l'intervalle $\bar{u} \pm 2s$ contient 95 % des **mesures individuelles** ; l'intervalle $\bar{u} \pm 2u_A$ encadre la **valeur moyenne**. Lequel est le plus étroit ? Pourquoi ?*
+
+5. **(20 min) Effet du nombre de mesures.** Modifier `n = 100` en `n = 10`, puis `n = 400`, et relancer l'acquisition sur la série B.
+
+   | n | 10 | 100 | 400 |
+   |---|---|---|---|
+   | $s$ (mV) | | | |
+   | $u_A$ (mV) | | | |
+
+   - ❓ *Q9. L'écart-type $s$ dépend-il beaucoup de n ? Et $u_A$ ? Vérifiez que passer de 100 à 400 mesures divise $u_A$ par environ 2.*
+   - ❓ *Q10. Pour la série A, est-il utile de faire 400 mesures ? Justifiez avec la Q4.*
+
+6. **(20 min) Bilan.**
+   - ❓ *Q11. Répondez à la problématique en trois phrases : que gagne-t-on à multiplier les mesures, et quelle limite ne peut-on pas dépasser ?*
+
+- **Livrable :** les deux histogrammes, les trois tableaux complétés, le résultat final de la série B, réponses Q1 à Q11.
+- **⚙ Si les cartes Arduino manquent :** basculer sur la version simulée ci-dessous.
+
+<a id="sec-version-simulee-du-tp-2-2-python"></a>
+
+#### Version simulée du TP 2.2 (Python)
+
+- **Principe :** les 100 mesures sont générées par Python, avec une dispersion réaliste et la même résolution que le CAN de l'Arduino. Les questions Q1 à Q11 et les tableaux sont les mêmes.
+
+**Étape 1 (15 min) : préparation.** Répondre aux questions Q1 et Q2.
+
+**Étape 2 (25 min) : générer et traiter les mesures.** Créer le fichier `tp22_simule.py` et l'exécuter :
+
+```python
+# TP 2.2, version simulée : mesures générées puis traitées
+import numpy as np
+import matplotlib.pyplot as plt
+
+n = 100
+q = 5 / 1023                 # résolution du CAN Arduino (V)
+VRAIE = 2.50                 # tension « vraie » (V)
+BRUIT = 0.0005               # écart-type du bruit (V) : série A
+
+alea = np.random.default_rng()
+u = VRAIE + alea.normal(0, BRUIT, n)    # mesures bruitées
+u = np.round(u / q) * q                 # arrondi au pas du CAN
+
+moyenne = np.mean(u)
+s = np.std(u, ddof=1)
+uA = s / np.sqrt(n)
+print(f"moyenne = {moyenne:.4f} V   s = {s*1000:.2f} mV   uA = {uA*1000:.3f} mV")
+for k in (1, 2, 3):
+    dedans = np.sum(np.abs(u - moyenne) <= k * s)
+    print(f"k = {k} : {dedans} mesures sur {n} dans l'intervalle moyenne ± {k}s")
+
+plt.hist(u, bins=15, edgecolor="black")
+plt.axvline(moyenne, color="red", label="moyenne")
+plt.xlabel("Tension mesurée (V)")
+plt.ylabel("Nombre de mesures")
+plt.legend()
+plt.show()
+```
+
+1. Exécuter le programme avec `BRUIT = 0.0005` : c'est la **série A** (signal stable, bruit plus petit que la résolution).
+2. Remplacer par `BRUIT = 0.025` : c'est la **série B** (signal bruité). Exécuter à nouveau.
+3. Remplir le premier tableau et répondre aux questions Q3 à Q5 (pour la Q5, imaginer ce qui fait fluctuer la tension d'une photorésistance éclairée par les lampes de la salle).
+
+**Étape 3 (20 min) : facteur k.** Avec la série B, remplir le tableau des intervalles et répondre aux questions Q6 à Q8.
+
+**Étape 4 (20 min) : effet de n.** Toujours avec `BRUIT = 0.025`, exécuter le programme avec `n = 10`, `n = 100` et `n = 400`. Relancer deux ou trois fois chaque cas : les résultats changent légèrement à chaque exécution, comme une vraie série de mesures. Remplir le tableau et répondre aux questions Q9 et Q10.
+
+**Étape 5 (20 min) : bilan.** Répondre à la Q11. Pour aller plus loin : supprimer la ligne d'arrondi au pas du CAN avec `BRUIT = 0.0005` et observer l'histogramme. Que montre-t-il que l'Arduino ne pouvait pas voir ?
+
+- **Livrable :** histogrammes des séries A et B, les trois tableaux complétés, résultat final de la série B, réponses Q1 à Q11.
+
+---
+
+<a id="sec-tp-2-3-recette-d-un-lot-de-cartes-arduino-uno"></a>
+
+### TP 2.3 : Recette d'un lot de cartes Arduino Uno `BTS1` `BTS2`
+
+> **Durée :** 2 h · **Mode :** TP informatisé, cartes Arduino Uno seules, sans aucun câblage (version de repli ci-dessous : relevés fournis) · **Cours :** Chapitre 2, §2.1 (justesse et fidélité, erreurs systématique et aléatoire, incertitudes de type A et B, incertitude composée et élargie, compatibilité) ; Chapitre 1, §1.1 (diviseur de tension) et §1.6 (LED) ; Chapitre 5, §5.6 (quantum d'un CAN) · **Prérequis :** TP 2.2 (IDE Arduino, moniteur série, Python et `pyserial`)
+> **Objectif :** faire la recette d'un lot de cartes comme un service maintenance, mesurer avec la carte elle-même sa tension d'alimentation et la dérive de son horloge avec leurs incertitudes, et conclure par un procès-verbal de recette.
+> **Livrable :** le **procès-verbal de recette** du binôme ([modèle à imprimer](Documents_TP/PV_Recette_Lot_Arduino_modele.md)), rempli au fil des étapes, et les réponses aux questions Q1 à Q12 (BTS2 : Q13 à Q16).
+
+**Problématique :** l'école possède une cinquantaine de cartes Arduino Uno, achetées en plusieurs fois et parfois malmenées. Avant de les confier aux prochains TP, le service maintenance (la classe) doit en faire la **recette**, c'est-à-dire le contrôle de réception, sans multimètre, sans fil ni composant. Une carte peut-elle se tester elle-même, et quelle confiance accorder à ses propres mesures ?
+
+- **Matériel par binôme (× 8) :** 1 PC avec l'IDE Arduino 2.x et Python 3 (bibliothèque `pyserial`) ; 1 câble USB A-B **de données**, repéré par une étiquette ; environ 6 cartes du lot dans leurs sachets ; un feutre et des étiquettes ; le procès-verbal de recette imprimé. Aucun fil, aucun composant, aucun appareil de mesure.
+- **Unité utile :** une **partie par million** vaut $1\ \text{ppm} = 10^{-6} = 0{,}0001\ \%$. Une horloge qui dérive de 1 ppm se décale de $86\,400 \times 10^{-6} \approx 0{,}086$ s par jour.
+
+> ⚠ **Sécurité et bonnes pratiques**
+> - Poser la carte sur son sachet ou sur un support isolant : **jamais** sur une table métallique, une vis, un trombone ou une agrafe. Les soudures dépassent sous la carte : un objet métallique les met en court-circuit, cause classique de panne.
+> - Tenir la carte par les bords, sans toucher les composants ni les broches (décharges électrostatiques) ; toucher d'abord le boîtier métallique du PC pour se décharger.
+> - Ne rien insérer dans les connecteurs : tous les tests se font sans câblage.
+> - Brancher et débrancher le câble USB en tenant le connecteur, pas le câble.
+> - Une carte qui chauffe, sent le brûlé ou fait disparaître les périphériques USB du PC : la débrancher immédiatement, la mettre de côté avec l'étiquette « HORS SERVICE : échauffement », ne pas la rebrancher.
+
+**Critères de verdict** (repris dans le référentiel du procès-verbal) :
+
+| Verdict | Critères | Décision |
+|---|---|---|
+| **BONNE** | port COM détecté, téléversement réussi, LED L fonctionnelle ; autotest : toutes les broches OK (D13 « non concluant » accepté, voir Q5), CAN OK, EEPROM sans erreur | étiquette « BONNE », rangée dans le stock des cartes vérifiées |
+| **BONNE AVEC RÉSERVE** | 1 à 3 broches HS ou reliées par un pont de soudure, ou LED L hors service ; tout le reste OK | étiquette « RÉSERVE » portant la liste des broches à éviter ; utilisable pour les TP qui n'en ont pas besoin |
+| **HORS SERVICE** | LED ON éteinte, aucun port COM ou téléversement impossible, avec un câble et un port connus bons ; ou 4 broches HS ou plus ; ou erreur EEPROM ; ou CAN défaillant (voie de masse ou référence interne hors plage, confirmé sur un second port USB) | étiquette « HORS SERVICE » avec la panne constatée, rangée à part (réparation ou recyclage décidés par le responsable) |
+
+**Organisation :** la première carte est étudiée en détail (étapes 1 à 3), les suivantes passent à la chaîne (étape 4). Le procès-verbal se remplit au fur et à mesure et se conclut à l'étape 5.
+
+**Déroulé détaillé**
+
+1. **(15 min) Étape 1 : identification et traçabilité.** Remplir d'abord le cartouche, le périmètre et les moyens d'essai du procès-verbal.
+   - Sortir la première carte en la tenant par les bords et la comparer à la figure ci-dessous.
+
+<p align="center">
+<img src="figures/TP/tp_2_3_identification_uno.svg" width="680" alt="Repérage des éléments d'une Uno R3 d'origine et d'un clone à puce CH340"/>
+</p>
+
+<p align="center"><em>Une Uno R3 d'origine et un clone à puce CH340 : la puce USB et l'oscillateur de l'ATmega328P permettent de les distinguer.</em></p>
+
+   - ❓ *Q1. Repérez sur votre carte les éléments 1 à 8 de la figure. S'agit-il d'une Uno d'origine ou d'un clone, et quel élément permet de trancher à coup sûr ? Pourquoi le boîtier métallique ovale situé près du connecteur USB d'une Uno d'origine n'est-il pas l'oscillateur de l'ATmega328P ?* Une carte **Uno R4** (connecteur USB-C) n'entre pas dans cette recette : la noter dans les exclusions du procès-verbal.
+   - **Branchement et identifiant.** Carte posée sur son sachet, câble de données branché : la LED **ON** s'allume et un nouveau port apparaît dans le **Gestionnaire de périphériques**, rubrique **Ports (COM et LPT)** (« Arduino Uno », « Périphérique série USB » ou « USB-SERIAL CH340 »). Dans un terminal, la commande `python -m serial.tools.list_ports -v` décrit chaque port, par exemple :
+
+```text
+COM5
+    desc: Arduino Uno (COM5)
+    hwid: USB VID:PID=2341:0043 SER=XXXXXXXXXXXXXXXXXXXX LOCATION=1-4:x.0
+```
+
+   Le couple **VID:PID** identifie le fabricant de la puce USB (2341 : Arduino ; 1A86 : WCH, fabricant du CH340). Sur une Uno d'origine, l'ATmega16U2 transmet un **numéro de série unique** (champ `SER`) : ses 6 derniers caractères servent d'identifiant. Un CH340 n'en a pas : numéroter la carte au feutre, sur une étiquette collée sur le connecteur USB et sur son sachet.
+   - ❓ *Q2. Pourquoi un identifiant unique est-il indispensable à un service maintenance, et pourquoi le numéro du port COM ne convient-il pas ?*
+   - **Premier téléversement.** Ouvrir **Fichier → Exemples → 01.Basics → Blink**, remplacer le premier `delay(1000);` par `delay(100);` et le second par `delay(900);` (un éclair bref par seconde), choisir **Outils → Carte → Arduino AVR Boards → Arduino Uno** et le port, puis **Croquis → Téléverser**.
+   - ❓ *Q3. Les cartes neuves sont souvent livrées avec le Blink d'origine déjà chargé (1 s allumée, 1 s éteinte) : pourquoi faut-il modifier le rythme avant de téléverser ? En cas d'échec à une étape, suivez l'arbre de diagnostic ci-dessous et décrivez la panne dans une fiche d'anomalie du procès-verbal.*
+   - Reporter dans le procès-verbal les cas de test CT-01 (identification), CT-02 (alimentation et port COM) et CT-03 (téléversement).
+
+<p align="center">
+<img src="figures/TP/tp_2_3_arbre_diagnostic.svg" width="640" alt="Arbre de diagnostic : LED ON, port COM, téléversement, LED L, puis autotest"/>
+</p>
+
+<p align="center"><em>Arbre de diagnostic d'une carte : chaque question élimine une cause avant de conclure ; une carte n'est déclarée hors service qu'avec un câble et un port connus bons.</em></p>
+
+2. **(20 min) Étape 2 : autotest sans aucun fil.**
+   - **Principe.** Une broche peut être une **sortie** (elle impose LOW, 0 V, ou HIGH, Vcc) ou une **entrée**, éventuellement tirée vers Vcc par une **résistance de rappel** interne de 20 à 50 kΩ (mode `INPUT_PULLUP`). La fonction `digitalRead` lit le niveau **réel** de la broche (registre PINx), même quand c'est une sortie. Sur D2 à D13 et A0 à A5, le programme réalise donc : **test a**, toutes les broches en entrée avec rappel doivent lire HIGH ; **test b**, chaque broche, seule et pendant quelques microsecondes, doit imposer LOW puis HIGH ; **test c**, une seule broche à LOW, toutes les autres doivent rester à HIGH. Il vérifie aussi le **CAN** (A0 à A5 avec rappel : $N \approx 1023$ ; en sortie à LOW : $N \approx 0$ ; voies internes : masse et **référence de tension de 1,1 V**), l'**EEPROM** (1024 octets écrits avec 0x55 puis 0xAA, relus, puis restaurés) et la **LED L** (D13 en entrée avec rappel pendant 3 s).
+   - Coller le programme ci-dessous dans un nouveau croquis enregistré sous le nom `autotest_uno`, le téléverser, puis ouvrir le **Moniteur série** à **115200 bauds** : la carte redémarre et affiche son rapport en 15 s environ. Reporter les cas de test CT-04 à CT-07 dans le procès-verbal.
+
+```cpp
+// autotest_uno.ino : recette d'une carte Arduino Uno, sans aucun câblage
+// TP 2.3 de physique, BTS CIEL
+// Carte à choisir dans l'IDE : « Arduino Uno » (ATmega328P, 16 MHz)
+// Moniteur série : 115200 bauds. Ne rien brancher sur la carte.
+//
+// Au démarrage : autotest complet (environ 15 s), puis attente d'une commande
+//   a : relancer l'autotest
+//   v : 100 mesures de la référence interne de 1,1 V (tension d'alimentation)
+//   h : mode horloge, millis() chaque seconde (une lettre pour arrêter)
+//   t : capteur de température interne, 10 mesures (prolongement BTS2)
+
+#include <EEPROM.h>
+
+// ---------- Broches testées ----------
+// D2 à D13, puis A0 à A5 (aussi appelées D14 à D19).
+// D0 et D1 ne sont pas testées : elles portent la liaison série avec le PC.
+const uint8_t NB_BROCHES = 18;
+const uint8_t BROCHES[NB_BROCHES] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+                                     A0, A1, A2, A3, A4, A5};
+const uint8_t INDICE_D13 = 11;   // place de D13 dans le tableau
+const uint8_t INDICE_A0 = 12;    // place de A0 dans le tableau
+
+// État final d'une broche
+const uint8_t BROCHE_OK = 0;
+const uint8_t BROCHE_HS = 1;
+const uint8_t NON_CONCLUANT = 2; // seulement pour D13
+
+// Réglages du registre ADMUX (fiche technique, tableaux 24-3 et 24-4)
+// REFS1 REFS0 = 0 1 : référence AVcc (la tension d'alimentation Vcc)
+// REFS1 REFS0 = 1 1 : référence interne de 1,1 V
+// MUX3 à MUX0 = 1111 : masse interne (0 V) ; 1110 : référence 1,1 V
+// (bandgap) ; 1000 : capteur de température
+const uint8_t REGLAGE_MASSE = _BV(REFS0) | 0x0F;
+const uint8_t REGLAGE_BANDGAP = _BV(REFS0) | 0x0E;
+const uint8_t REGLAGE_TEMPERATURE = _BV(REFS1) | _BV(REFS0) | 0x08;
+
+// ---------- Résultats ----------
+bool okRappel[NB_BROCHES];     // test a : lit HIGH avec la résistance de rappel
+bool okSortie[NB_BROCHES];     // test b : la sortie impose LOW puis HIGH
+bool enPont[NB_BROCHES];       // test c : broche reliée à une autre broche
+bool okAnalogique[NB_BROCHES]; // A0 à A5 : CAN à environ 1023 puis 0
+uint8_t etat[NB_BROCHES];      // BROCHE_OK, BROCHE_HS ou NON_CONCLUANT
+int nHaut[6];                  // CAN avec rappel (attendu : environ 1023)
+int nBas[6];                   // CAN en sortie à LOW (attendu : environ 0)
+
+const uint8_t MAX_PONTS = 8;
+uint8_t pontA[MAX_PONTS];      // paires de broches reliées (indices)
+uint8_t pontB[MAX_PONTS];
+uint8_t nbPonts = 0;
+
+uint8_t nbHS = 0;              // nombre de broches hors service
+float nMasse = 0;              // voie interne 0 V (attendu : 0)
+float nRef = 0;                // voie interne 1,1 V (environ 225 sous 5 V)
+float vccEstimee = 0;          // tension d'alimentation estimée (V)
+bool canOk = false;
+unsigned int erreursEeprom = 0;
+float nTemperature = 0;        // voie interne 8 : capteur de température
+uint8_t verdict = 0;           // 0 : BONNE ; 1 : RÉSERVE ; 2 : HORS SERVICE
+
+unsigned int mesures[100];     // 100 conversions de la commande v
+
+bool modeHorloge = false;
+unsigned long prochainEnvoi = 0;
+bool ledAllumee = false;
+
+// ---------- Affichage ----------
+
+// Affiche le nom d'une broche (D2 à D13, A0 à A5) sur 3 caractères
+void ecrireNom(uint8_t broche) {
+  if (broche >= A0) {
+    Serial.print('A');
+    Serial.print(broche - A0);
+    Serial.print(' ');
+  } else {
+    Serial.print('D');
+    Serial.print(broche);
+    if (broche < 10) Serial.print(' ');
+  }
+}
+
+// Affiche un nombre avec une virgule décimale (tableur réglé en français)
+void ecrireDecimal(float x, uint8_t decimales) {
+  if (x < 0) {
+    Serial.print('-');
+    x = -x;
+  }
+  unsigned long facteur = 1;
+  for (uint8_t k = 0; k < decimales; k++) facteur *= 10;
+  // arrondi au plus proche
+  unsigned long entier = (unsigned long)(x * facteur + 0.5);
+  Serial.print(entier / facteur);
+  if (decimales > 0) {
+    Serial.print(',');
+    unsigned long reste = entier % facteur;
+    // zéros après la virgule (par exemple 5,05 et non 5,5)
+    for (unsigned long p = facteur / 10; p > 1 && reste < p; p /= 10) {
+      Serial.print('0');
+    }
+    Serial.print(reste);
+  }
+}
+
+void ligne() {
+  Serial.println(F("------------------------------------------------------------"));
+}
+
+// Liste des broches HS séparées par des espaces, ou « - » s'il n'y en a pas
+void ecrireListeHS() {
+  if (nbHS == 0) {
+    Serial.print('-');
+    return;
+  }
+  bool premier = true;
+  for (uint8_t i = 0; i < NB_BROCHES; i++) {
+    if (etat[i] == BROCHE_HS) {
+      if (!premier) Serial.print(' ');
+      if (BROCHES[i] >= A0) {
+        Serial.print('A');
+        Serial.print(BROCHES[i] - A0);
+      } else {
+        Serial.print('D');
+        Serial.print(BROCHES[i]);
+      }
+      premier = false;
+    }
+  }
+}
+
+// ---------- Convertisseur analogique numérique (CAN), par registres ----------
+
+// Lance une conversion sur la voie choisie dans ADMUX, renvoie 0 à 1023
+unsigned int convertir() {
+  ADCSRA |= _BV(ADSC);                   // ADSC = 1 : départ de la conversion
+  while (bit_is_set(ADCSRA, ADSC)) { }   // ADSC repasse à 0 à la fin
+  return ADC;                            // registre de 16 bits (ADCL, ADCH)
+}
+
+// Choisit la référence et la voie, attend la stabilisation,
+// jette deux conversions, puis renvoie la moyenne de n conversions
+float lireVoieInterne(uint8_t reglage, unsigned int attenteMs, uint8_t n) {
+  ADMUX = reglage;
+  delay(attenteMs);
+  // la fiche technique conseille de jeter les premières conversions
+  convertir();
+  convertir();
+  unsigned long somme = 0;
+  for (uint8_t k = 0; k < n; k++) somme += convertir();
+  return (float)somme / n;
+}
+
+// Remet le CAN dans l'état attendu par analogRead() : référence AVcc
+void restaurerCan() {
+  ADMUX = _BV(REFS0);      // référence AVcc, voie A0
+  delay(5);                // le condensateur de la broche AREF remonte à Vcc
+  convertir();             // conversion jetée
+}
+
+// ---------- Tests des broches ----------
+
+// Mémorise un pont entre les broches d'indices i et j (une fois par paire)
+void noterPont(uint8_t i, uint8_t j) {
+  uint8_t petit = (i < j) ? i : j;
+  uint8_t grand = (i < j) ? j : i;
+  for (uint8_t k = 0; k < nbPonts; k++) {
+    if (pontA[k] == petit && pontB[k] == grand) return;   // déjà notée
+  }
+  if (nbPonts < MAX_PONTS) {
+    pontA[nbPonts] = petit;
+    pontB[nbPonts] = grand;
+    nbPonts++;
+  }
+}
+
+void testerBroches() {
+  // a) toutes les broches en entrée avec la résistance de rappel interne
+  //    (20 à 50 kΩ vers Vcc) : chacune doit lire HIGH
+  for (uint8_t i = 0; i < NB_BROCHES; i++) {
+    pinMode(BROCHES[i], INPUT_PULLUP);
+    enPont[i] = false;
+    okAnalogique[i] = true;              // modifié plus loin pour A0 à A5
+  }
+  delay(10);
+  for (uint8_t i = 0; i < NB_BROCHES; i++) {
+    // LOW malgré le rappel : broche reliée à la masse ?
+    okRappel[i] = (digitalRead(BROCHES[i]) == HIGH);
+  }
+
+  // b) chaque broche, seule, devient une sortie : elle doit imposer LOW,
+  //    puis HIGH. digitalRead lit le niveau réel de la broche (registre
+  //    PINx), et non l'ordre donné.
+  for (uint8_t i = 0; i < NB_BROCHES; i++) {
+    uint8_t b = BROCHES[i];
+    digitalWrite(b, LOW);                // coupe la résistance de rappel
+    pinMode(b, OUTPUT);                  // sortie au niveau bas
+    delayMicroseconds(10);
+    bool bas = (digitalRead(b) == LOW);
+    digitalWrite(b, HIGH);               // sortie au niveau haut
+    delayMicroseconds(10);
+    bool haut = (digitalRead(b) == HIGH);
+    pinMode(b, INPUT_PULLUP);            // retour en entrée après 30 µs
+    okSortie[i] = bas && haut;
+  }
+
+  // c) ponts de soudure : une seule broche à LOW,
+  //    toutes les autres doivent rester à HIGH
+  nbPonts = 0;
+  for (uint8_t i = 0; i < NB_BROCHES; i++) {
+    uint8_t b = BROCHES[i];
+    digitalWrite(b, LOW);
+    pinMode(b, OUTPUT);
+    delayMicroseconds(20);
+    for (uint8_t j = 0; j < NB_BROCHES; j++) {
+      // une broche déjà à LOW au test a ne prouve rien
+      if (j == i || !okRappel[j]) continue;
+      // j suit i : les deux broches sont reliées
+      if (digitalRead(BROCHES[j]) == LOW) {
+        enPont[i] = true;
+        enPont[j] = true;
+        noterPont(i, j);
+      }
+    }
+    pinMode(b, INPUT_PULLUP);
+  }
+  delay(2);
+}
+
+// A0 à A5 : le CAN doit lire environ 1023 avec la résistance de rappel,
+// puis environ 0 quand la broche est une sortie à LOW
+void testerAnalogiques() {
+  for (uint8_t k = 0; k < 6; k++) {
+    uint8_t i = INDICE_A0 + k;
+    uint8_t b = BROCHES[i];
+    pinMode(b, INPUT_PULLUP);
+    delay(2);
+    analogRead(b);                       // conversion jetée (changement de voie)
+    nHaut[k] = analogRead(b);
+    digitalWrite(b, LOW);
+    pinMode(b, OUTPUT);
+    delayMicroseconds(10);
+    nBas[k] = analogRead(b);
+    pinMode(b, INPUT_PULLUP);
+    okAnalogique[i] = (nHaut[k] >= 1000) && (nBas[k] <= 20);
+  }
+}
+
+void evaluerBroches() {
+  nbHS = 0;
+  for (uint8_t i = 0; i < NB_BROCHES; i++) {
+    if (okRappel[i] && okSortie[i] && !enPont[i] && okAnalogique[i]) {
+      etat[i] = BROCHE_OK;
+    } else if (i == INDICE_D13 && !okRappel[i] && okSortie[i] && !enPont[i]) {
+      etat[i] = NON_CONCLUANT;           // LED L reliée directement à D13 (Q5)
+    } else {
+      etat[i] = BROCHE_HS;
+      nbHS++;
+    }
+  }
+}
+
+void afficherBroches() {
+  Serial.println(F("1) Broches D2 à D13 et A0 à A5"));
+  Serial.print(F("   a : entrée avec rappel (attendu HIGH) ; "));
+  Serial.println(F("b : sortie LOW puis HIGH ; c : pont"));
+  for (uint8_t i = 0; i < NB_BROCHES; i++) {
+    Serial.print(F("   "));
+    ecrireNom(BROCHES[i]);
+    Serial.print(F(" : a "));
+    Serial.print(okRappel[i] ? F("ok ") : F("NON"));
+    Serial.print(F("  b "));
+    Serial.print(okSortie[i] ? F("ok ") : F("NON"));
+    Serial.print(F("  c "));
+    Serial.print(enPont[i] ? F("PONT") : F("ok  "));
+    if (i >= INDICE_A0) {
+      Serial.print(F("  CAN "));
+      Serial.print(nHaut[i - INDICE_A0]);
+      Serial.print(F(" / "));
+      Serial.print(nBas[i - INDICE_A0]);
+    }
+    Serial.print(F("  -> "));
+    if (etat[i] == BROCHE_OK) {
+      Serial.println(F("OK"));
+    } else if (etat[i] == NON_CONCLUANT) {
+      Serial.println(F("NON CONCLUANT (LED L reliée directement à D13 ?)"));
+    } else {
+      Serial.println(F("HS"));
+    }
+  }
+  for (uint8_t k = 0; k < nbPonts; k++) {
+    Serial.print(F("   Pont détecté entre "));
+    ecrireNom(BROCHES[pontA[k]]);
+    Serial.print(F("et "));
+    ecrireNom(BROCHES[pontB[k]]);
+    Serial.println();
+  }
+}
+
+// ---------- CAN : voies internes ----------
+
+void testerCanInterne() {
+  nMasse = lireVoieInterne(REGLAGE_MASSE, 2, 10);
+  nRef = lireVoieInterne(REGLAGE_BANDGAP, 2, 50);
+  // le « voltmètre caché » : Vcc = 1,1 x 1023 / N
+  vccEstimee = (nRef > 1.0) ? 1.1 * 1023.0 / nRef : 0.0;
+  canOk = (nMasse <= 5.0) && (nRef >= 170.0) && (nRef <= 310.0);
+}
+
+// ---------- EEPROM : 1024 octets, au moins 100 000 écritures par octet ----------
+
+unsigned int testerEeprom() {
+  unsigned int erreurs = 0;
+  unsigned int taille = EEPROM.length();   // 1024 sur l'ATmega328P
+  for (unsigned int i = 0; i < taille; i++) {
+    uint8_t sauvegarde = EEPROM.read(i);   // contenu d'origine de l'octet
+    // update n'écrit que si la valeur change (moins d'usure)
+    EEPROM.update(i, 0x55);                // 0101 0101
+    if (EEPROM.read(i) != 0x55) erreurs++;
+    EEPROM.update(i, 0xAA);                // 1010 1010
+    if (EEPROM.read(i) != 0xAA) erreurs++;
+    EEPROM.update(i, sauvegarde);          // restauration du contenu d'origine
+    if (EEPROM.read(i) != sauvegarde) erreurs++;
+    if (i % 64 == 63) Serial.print('.');   // un point tous les 64 octets
+  }
+  return erreurs;
+}
+
+// ---------- Capteur de température interne (prolongement BTS2) ----------
+
+void testerTemperature() {
+  // changement de référence (AVcc vers 1,1 V) : 100 ms pour que
+  // le condensateur de la broche AREF se décharge
+  nTemperature = lireVoieInterne(REGLAGE_TEMPERATURE, 100, 20);
+  restaurerCan();
+}
+
+// Formule empirique répandue pour l'ATmega328P : capteur NON étalonné,
+// erreur possible de 10 °C ou plus sur la valeur absolue
+float estimerTemperature(float n) {
+  return (n - 324.31) / 1.22;
+}
+
+// ---------- LED L ----------
+
+void observerLedL() {
+  Serial.print(F("5) LED L : D13 en entrée avec rappel pendant 3 s, "));
+  Serial.println(F("regardez la LED L"));
+  Serial.print(F("   (vive : commandée par un AOP ; "));
+  Serial.println(F("faible lueur : reliée directement à D13)"));
+  pinMode(13, INPUT_PULLUP);
+  delay(3000);
+  digitalWrite(13, LOW);
+  pinMode(13, OUTPUT);                   // LED L éteinte
+  ledAllumee = false;
+}
+
+// ---------- Autotest complet et verdict ----------
+
+void calculerVerdict() {
+  if (!canOk || erreursEeprom > 0 || nbHS >= 4) {
+    verdict = 2;                         // HORS SERVICE
+  } else if (nbHS >= 1) {
+    verdict = 1;                         // BONNE AVEC RÉSERVE
+  } else {
+    verdict = 0;                         // BONNE
+  }
+}
+
+void autotest() {
+  modeHorloge = false;
+  ligne();
+  Serial.print(F("AUTOTEST ARDUINO UNO (TP 2.3) : "));
+  Serial.println(F("ne rien brancher sur la carte"));
+  ligne();
+
+  testerBroches();
+  testerAnalogiques();
+  evaluerBroches();
+  afficherBroches();
+
+  Serial.println(F("2) Convertisseur analogique numérique : voies internes"));
+  testerCanInterne();
+  Serial.print(F("   Masse interne (attendu 0) : N = "));
+  ecrireDecimal(nMasse, 1);
+  Serial.println(nMasse <= 5.0 ? F("  -> OK") : F("  -> ANORMAL"));
+  Serial.print(F("   Référence interne 1,1 V : N moyen = "));
+  ecrireDecimal(nRef, 2);
+  bool refOk = (nRef >= 170.0) && (nRef <= 310.0);
+  Serial.println(refOk ? F("  -> OK") : F("  -> HORS PLAGE"));
+  Serial.print(F("   Tension d'alimentation estimée : "));
+  Serial.print(F("Vcc = 1,1 x 1023 / N = "));
+  ecrireDecimal(vccEstimee, 2);
+  Serial.println(F(" V"));
+  Serial.print(F("   (non étalonnée : la référence vaut "));
+  Serial.println(F("entre 1,0 et 1,2 V selon les puces)"));
+  if (!canOk) {
+    Serial.print(F("   Refaire le test sur un autre port USB ; "));
+    Serial.println(F("si le défaut persiste : CAN HS"));
+  }
+  if (canOk && vccEstimee < 4.3) {
+    Serial.print(F("   Vcc estimée basse : "));
+    Serial.println(F("refaire la mesure sur un autre port USB"));
+  }
+
+  Serial.println(F("3) EEPROM : 1024 octets, motifs 0x55 et 0xAA (environ 10 s)"));
+  Serial.print(F("   "));
+  erreursEeprom = testerEeprom();
+  Serial.print(' ');
+  Serial.print(erreursEeprom);
+  Serial.println(erreursEeprom == 0 ? F(" erreur -> OK") : F(" erreur(s) -> HS"));
+
+  Serial.print(F("4) Capteur de température interne "));
+  Serial.println(F("(non étalonné : ±10 °C au mieux)"));
+  testerTemperature();
+  Serial.print(F("   N brut = "));
+  ecrireDecimal(nTemperature, 1);
+  Serial.print(F(" ; estimation très approximative : "));
+  ecrireDecimal(estimerTemperature(nTemperature), 0);
+  Serial.println(F(" °C"));
+
+  observerLedL();
+
+  calculerVerdict();
+  ligne();
+  Serial.print(F("VERDICT : "));
+  if (verdict == 0) Serial.println(F("BONNE"));
+  else if (verdict == 1) Serial.println(F("BONNE AVEC RÉSERVE"));
+  else Serial.println(F("HORS SERVICE"));
+  if (nbHS > 0) {
+    Serial.print(F("Broches HS, à éviter : "));
+    ecrireListeHS();
+    Serial.println();
+  }
+  if (etat[INDICE_D13] == NON_CONCLUANT) {
+    Serial.print(F("D13 non concluant : normal si la LED L "));
+    Serial.println(F("est reliée directement à D13 (Q5)"));
+  }
+  ligne();
+  Serial.println(F("Ligne à copier dans le tableur de la classe :"));
+  Serial.print(F("nb_hs;broches_hs;d13;can;n_bg;"));
+  Serial.println(F("vcc_est_v;eeprom_err;temp_brut;verdict"));
+  Serial.print(nbHS);
+  Serial.print(';');
+  ecrireListeHS();
+  Serial.print(';');
+  if (etat[INDICE_D13] == BROCHE_OK) Serial.print(F("OK"));
+  else if (etat[INDICE_D13] == NON_CONCLUANT) Serial.print(F("NC"));
+  else Serial.print(F("HS"));
+  Serial.print(';');
+  Serial.print(canOk ? F("OK") : F("HS"));
+  Serial.print(';');
+  ecrireDecimal(nRef, 2);
+  Serial.print(';');
+  ecrireDecimal(vccEstimee, 2);
+  Serial.print(';');
+  Serial.print(erreursEeprom);
+  Serial.print(';');
+  ecrireDecimal(nTemperature, 0);
+  Serial.print(';');
+  if (verdict == 0) Serial.println(F("BONNE"));
+  else if (verdict == 1) Serial.println(F("RESERVE"));
+  else Serial.println(F("HS"));
+  ligne();
+}
+
+// ---------- Commande v : 100 mesures de la référence interne ----------
+
+void mesurerReference() {
+  Serial.print(F("100 conversions de la référence interne 1,1 V "));
+  Serial.println(F("(référence du CAN : Vcc)"));
+  ADMUX = REGLAGE_BANDGAP;
+  delay(2);
+  convertir();                           // conversions jetées
+  convertir();
+  for (uint8_t k = 0; k < 100; k++) {
+    mesures[k] = convertir();
+    Serial.print(mesures[k]);
+    Serial.print((k % 10 == 9) ? '\n' : ' ');   // 10 valeurs par ligne
+    delay(10);                           // une conversion toutes les 10 ms
+  }
+  restaurerCan();
+
+  unsigned long somme = 0;
+  unsigned int nMin = 1023;
+  unsigned int nMax = 0;
+  for (uint8_t k = 0; k < 100; k++) {
+    somme += mesures[k];
+    if (mesures[k] < nMin) nMin = mesures[k];
+    if (mesures[k] > nMax) nMax = mesures[k];
+  }
+  float moyenne = somme / 100.0;
+  float sommeCarres = 0;
+  for (uint8_t k = 0; k < 100; k++) {
+    float e = mesures[k] - moyenne;
+    sommeCarres += e * e;
+  }
+  // écart-type de l'échantillon (division par n - 1 = 99)
+  float s = sqrt(sommeCarres / 99.0);
+
+  Serial.print(F("N moyen = "));
+  ecrireDecimal(moyenne, 2);
+  Serial.print(F(" ; s = "));
+  ecrireDecimal(s, 2);
+  Serial.print(F(" ; N min = "));
+  Serial.print(nMin);
+  Serial.print(F(" ; N max = "));
+  Serial.println(nMax);
+  if (moyenne > 1.0) {
+    Serial.print(F("Vcc estimée = 1,1 x 1023 / N moyen = "));
+    ecrireDecimal(1.1 * 1023.0 / moyenne, 3);
+    Serial.println(F(" V"));
+  }
+}
+
+// ---------- Commande t : capteur de température (prolongement BTS2) ----------
+
+void mesurerTemperature() {
+  Serial.print(F("Capteur de température interne : "));
+  Serial.println(F("10 mesures, une par seconde"));
+  for (uint8_t k = 0; k < 10; k++) {
+    unsigned int attente = (k == 0) ? 100 : 2;  // 100 ms au changement de référence
+    float n = lireVoieInterne(REGLAGE_TEMPERATURE, attente, 20);
+    Serial.print(F("N brut = "));
+    ecrireDecimal(n, 1);
+    Serial.print(F(" ; estimation très approximative : "));
+    ecrireDecimal(estimerTemperature(n), 0);
+    Serial.println(F(" °C"));
+    delay(1000);
+  }
+  restaurerCan();
+}
+
+// ---------- Commande h : mode horloge ----------
+
+void demarrerHorloge() {
+  Serial.print(F("Mode horloge : une ligne H;millis par seconde "));
+  Serial.println(F("(une lettre pour arrêter)"));
+  modeHorloge = true;
+  prochainEnvoi = millis();
+}
+
+void envoyerHorloge() {
+  if ((long)(millis() - prochainEnvoi) >= 0) {
+    // temps de la carte en ms, compté par son propre oscillateur
+    unsigned long t = millis();
+    Serial.print(F("H;"));
+    Serial.println(t);
+    // grille fixe : les retards d'envoi ne s'accumulent pas
+    prochainEnvoi += 1000;
+    // la LED L change d'état à chaque envoi
+    ledAllumee = !ledAllumee;
+    digitalWrite(13, ledAllumee ? HIGH : LOW);
+  }
+}
+
+void afficherMenu() {
+  Serial.println(F("Commandes (taper la lettre puis Entrée) :"));
+  Serial.println(F("  a : relancer l'autotest"));
+  Serial.print(F("  v : 100 mesures de la référence interne "));
+  Serial.println(F("(tension d'alimentation)"));
+  Serial.print(F("  h : mode horloge, millis() toutes les secondes "));
+  Serial.println(F("(une lettre pour arrêter)"));
+  Serial.println(F("  t : capteur de température interne, 10 mesures (BTS2)"));
+  Serial.println(F("PRET"));
+}
+
+// ---------- Programme principal ----------
+
+void setup() {
+  Serial.begin(115200);
+  delay(100);
+  autotest();
+  afficherMenu();
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char c = Serial.read();
+    if (c != '\n' && c != '\r' && c != ' ') {   // fins de ligne ignorées
+      modeHorloge = false;                      // une lettre arrête l'horloge
+      if (c == 'a' || c == 'A') {
+        autotest();
+        afficherMenu();
+      } else if (c == 'v' || c == 'V') {
+        mesurerReference();
+        afficherMenu();
+      } else if (c == 'h' || c == 'H') {
+        demarrerHorloge();
+      } else if (c == 't' || c == 'T') {
+        mesurerTemperature();
+        afficherMenu();
+      } else {
+        afficherMenu();
+      }
+    }
+  }
+  if (modeHorloge) envoyerHorloge();
+}
+```
+
+   - ❓ *Q4. Pour chacun des tests a, b et c, quelle panne détecte-t-il (broche reliée à la masse, étage de sortie détruit, pont de soudure entre deux broches) ? Pourquoi suffit-il de lire la broche avec `digitalRead` pendant qu'elle est en sortie pour vérifier son étage de sortie ? Pourquoi D0 et D1 ne sont-elles pas testées ?*
+   - ❓ *Q5. Le piège de D13. Sur beaucoup de clones, la LED L et sa résistance de 1 kΩ sont reliées directement à D13 (figure ci-dessous). Le test a peut alors lire LOW sans que la broche soit en panne : le programme affiche « NON CONCLUANT » au lieu de « HS ». À très faible courant (0,1 mA environ), la tension aux bornes de la LED L vaut environ 1,7 V. (a) Calculez le courant dans la branche D13, résistance, LED pour une résistance de rappel de 20 kΩ, puis de 50 kΩ (loi des mailles et loi d'Ohm, comme pour un diviseur de tension). (b) Calculez la tension U(D13) dans les deux cas. (c) La fiche technique de l'ATmega328P garantit la lecture LOW si U < 0,3 Vcc et HIGH si U > 0,6 Vcc : calculez ces deux seuils pour Vcc = 5 V et concluez. (d) Pourquoi le test passe-t-il sur une Uno R3 d'origine, où la LED est commandée par un AOP suiveur ? (e) Qu'avez-vous observé sur la LED L pendant les 3 s de la phase 5 ? Est-ce cohérent avec la Q1 ?*
+
+<p align="center">
+<img src="figures/TP/tp_2_3_d13_led_l.svg" width="680" alt="Broche D13 en entrée avec rappel : LED L reliée directement sur un clone, commandée par un AOP suiveur sur l'Uno R3 d'origine"/>
+</p>
+
+<p align="center"><em>D13 en entrée avec rappel : sur un clone, la résistance de rappel interne, la résistance de 1 kΩ et la LED L forment une seule branche parcourue par un courant ; sur l'Uno R3 d'origine, l'AOP suiveur ne consomme presque rien.</em></p>
+
+   - ❓ *Q6. Le « voltmètre caché ». Pour la voie interne de 1,1 V (fonction `testerCanInterne()` du programme), le CAN compare la tension $V_{BG}$ de la référence interne à sa propre référence, qui est la tension d'alimentation Vcc : $N = V_{BG} \times \dfrac{1023}{V_{cc}}$. (a) Montrez que $V_{cc} = \dfrac{1{,}1 \times 1023}{N}$ si l'on suppose $V_{BG} = 1{,}1$ V. (b) Calculez Vcc pour N = 224, 225 et 226 : de combien Vcc varie-t-elle pour un pas du CAN ? (c) Expliquez pourquoi on parle de voltmètre caché.*
+
+3. **(35 min) Étape 3 : mesures et incertitudes.**
+
+   **a) Tension d'alimentation mesurée par la référence interne.** Dans le moniteur série, taper `v` puis Entrée : la carte fait 100 conversions de la voie 1,1 V, les affiche, puis donne la moyenne, l'écart-type $s$, les valeurs extrêmes et Vcc estimée. Faire la mesure sur un port USB à l'arrière du PC (port P1), puis débrancher la carte, la rebrancher sur un port en façade ou sur un concentrateur USB (port P2), rouvrir le moniteur série et recommencer.
+
+   | Port | N moyen | $s$ | N min | N max | $u_A(N) = s/\sqrt{100}$ | Vcc estimée (V) |
+   |---|---|---|---|---|---|---|
+   | P1 : arrière du PC | | | | | | |
+   | P2 : façade ou concentrateur | | | | | | |
+
+   - ❓ *Q7. Port P1. (a) Calculez $u_A(N)$. (b) Le CAN ne rend que des entiers : sa résolution est d'un pas, d'où une incertitude-type $u_{res}(N) = 1/\sqrt{12}$. Quelle contribution domine ? (c) Vcc est inversement proportionnelle à N ; pour un quotient, les incertitudes relatives sont égales : $\dfrac{u(V_{cc})}{V_{cc}} = \dfrac{u(N)}{N}$. Calculez l'écart relatif sur Vcc dû à un seul pas du CAN (environ 0,4 % pour N ≈ 225), puis $u(V_{cc})$ en millivolts due au type A et à la résolution. (d) La fiche technique de l'ATmega328P indique que la référence interne vaut entre 1,0 et 1,2 V selon les puces (1,1 V typique). Calculez l'incertitude-type de type B correspondante (tolérance ± a : $u = a/\sqrt{3}$), en valeur relative. (e) Composez les trois incertitudes relatives (type A, résolution, référence), calculez $u(V_{cc})$, puis $U = 2u$, et écrivez le résultat $V_{cc} = (\ldots \pm \ldots)$ V avec un arrondi correct. (f) Quelle source domine, et de combien ? Concluez avec le vocabulaire du cours (figure 20) : la carte, utilisée comme voltmètre, est-elle fidèle ? est-elle juste ?*
+   - ❓ *Q8. La norme USB 2.0 impose 5 V ± 5 % sur le connecteur du PC. Entre ce connecteur et la broche 5V de la carte, le câble, le polyfusible et le transistor de commutation de la carte font perdre quelques dizaines de millivolts, parfois plus d'une centaine selon le câble. (a) Donnez l'intervalle de tension attendu sur la carte. (b) Votre résultat de la Q7 est-il compatible avec cet intervalle ? (c) Cette mesure permet-elle de déclarer un port USB « hors norme » ? Que faudrait-il faire une fois pour toutes, avec un appareil de référence, pour rendre la carte juste ?*
+
+   > **Si un multimètre est disponible (facultatif) : étalonner la référence d'une carte.** Pendant la commande `v`, mesurer Vcc au multimètre (calibre 20 V continu) en posant les pointes de touche, sans rien insérer, sur les broches 2 (5V) et 6 (GND) du connecteur ICSP voisin de l'ATmega328P (la broche 1 est repérée par un point ou un chiffre). La référence de **cette** carte vaut alors $V_{BG} = V_{cc,\,mes} \times \dfrac{N}{1023}$. Ensuite, la carte mesure sa tension d'alimentation par $V_{cc} = V_{BG} \times \dfrac{1023}{N}$ : l'incertitude ne vient plus de la fiche technique (± 0,1 V sur la référence) mais du multimètre, environ dix fois plus juste. C'est le principe de l'**étalonnage** : comparer une fois l'instrument à une référence plus juste, puis corriger toutes ses mesures.
+
+   - ❓ *Q9. (a) Montrez que $\dfrac{V_{cc2}}{V_{cc1}} = \dfrac{N_1}{N_2}$ : la valeur exacte de la référence interne n'intervient plus. (b) Calculez l'écart relatif $\dfrac{V_{cc2} - V_{cc1}}{V_{cc1}}$ et son incertitude élargie, en ne gardant que le type A et la résolution des deux mesures (composition quadratique des incertitudes relatives). (c) L'écart est-il significatif ? Quel port choisir pour un banc de test, et pourquoi un port en façade ou un concentrateur non alimenté peut-il fournir moins ? (d) Quel type d'erreur une telle mesure relative élimine-t-elle ?*
+   - Reporter le résultat de la Q7 (valeur, incertitude élargie, unité, k = 2) dans le cas de test CT-08 du procès-verbal.
+
+   **b) Horloge de la carte.** Le programme de la carte compte le temps avec `millis()`, à partir de son oscillateur de 16 MHz. En mode horloge (commande `h`), il envoie une ligne `H;millis` chaque seconde ; le programme Python ci-dessous horodate chaque ligne avec l'horloge du PC et calcule, par régression linéaire, l'écart relatif de fréquence de la carte, sa **dérive**. **Fermer le moniteur série**, créer le fichier `horloge_uno.py`, adapter `PORT` et `CARTE`, puis l'exécuter (environ 3 min 15 s).
+
+```python
+# TP 2.3 : dérive de l'horloge d'une carte Arduino Uno, comparée au PC
+# La carte doit contenir autotest_uno.ino (commande h : mode horloge).
+# Fermer le moniteur série de l'IDE avant de lancer ce programme.
+import csv
+import statistics
+import time
+
+import serial
+
+PORT = "COM3"        # à adapter : Outils → Port dans l'IDE Arduino
+CARTE = "07"         # identifiant de la carte (fiche de recette)
+DUREE = 180          # durée de la mesure en secondes (180 s = 3 min)
+
+liaison = serial.Serial(PORT, 115200, timeout=2)
+
+# 1. L'ouverture du port redémarre la carte :
+#    on attend la fin de son autotest (ligne PRET)
+print("Attente de la fin de l'autotest de la carte (environ 15 s)...")
+pret = False
+debut = time.perf_counter()
+while not pret and time.perf_counter() - debut < 40:
+    ligne = liaison.readline().decode(errors="ignore").strip()
+    pret = (ligne == "PRET")
+if not pret:
+    print("Ligne PRET non reçue : le mode horloge est demandé quand même.")
+liaison.write(b"h\n")                      # passage en mode horloge
+
+# 2. Acquisition : chaque ligne H;millis est horodatée dès sa réception
+t_pc = []         # instants de réception mesurés par l'horloge du PC (s)
+t_carte = []      # temps de la carte : millis() / 1000 (s)
+t0 = time.perf_counter()
+print(f"Mesure pendant {DUREE} s : ne pas débrancher la carte...")
+while time.perf_counter() - t0 < DUREE:
+    ligne = liaison.readline().decode(errors="ignore").strip()
+    instant = time.perf_counter()          # horodatage immédiat
+    if ligne.startswith("H;"):
+        try:
+            valeur = int(ligne[2:]) / 1000
+        except ValueError:
+            continue                       # ligne abîmée : ignorée
+        t_carte.append(valeur)
+        t_pc.append(instant - t0)
+liaison.write(b"x\n")                      # fin du mode horloge
+liaison.close()
+
+# 3. Régression linéaire t_pc = a × t_carte + b (moindres carrés)
+n = len(t_pc)
+if n < 10:
+    raise SystemExit("Trop peu de lignes reçues : vérifier le port "
+                     "et le programme de la carte.")
+xm = statistics.mean(t_carte)
+ym = statistics.mean(t_pc)
+sxx = sum((x - xm) ** 2 for x in t_carte)
+sxy = sum((x - xm) * (y - ym) for x, y in zip(t_carte, t_pc))
+a = sxy / sxx
+b = ym - a * xm
+residus = [y - (a * x + b) for x, y in zip(t_carte, t_pc)]
+# gigue de la liaison USB : écart-type des résidus (s)
+s_res = (sum(r ** 2 for r in residus) / (n - 2)) ** 0.5
+u_a = s_res / sxx ** 0.5                   # incertitude-type sur la pente
+
+# 4. Dérive de l'horloge de la carte, positive si la carte avance
+derive = (1 / a - 1) * 1e6                 # en ppm (parties par million)
+u_derive = u_a / a ** 2 * 1e6
+duree = t_pc[-1] - t_pc[0]
+print(f"{n} lignes sur {duree:.0f} s ; "
+      f"gigue (écart-type des résidus) : {s_res * 1000:.1f} ms")
+print(f"pente a = {a:.7f} ; u(a) = {u_a:.7f}")
+print(f"dérive = {derive:.0f} ppm ; "
+      f"incertitude élargie U (k = 2) = {2 * u_derive:.0f} ppm")
+print(f"soit {derive * 86400e-6:+.1f} s par jour "
+      "(+ : la carte avance ; - : elle retarde)")
+
+# 5. Sauvegarde des points (séparateur ; et virgule décimale, pour le tableur)
+nom_fichier = f"horloge_carte_{CARTE}.csv"
+with open(nom_fichier, "w", newline="") as fichier:
+    ecrivain = csv.writer(fichier, delimiter=";")
+    ecrivain.writerow(["t_carte_s", "t_pc_s", "residu_ms"])
+    for x, y, r in zip(t_carte, t_pc, residus):
+        ecrivain.writerow([f"{x:.3f}".replace(".", ","),
+                           f"{y:.4f}".replace(".", ","),
+                           f"{r * 1000:.2f}".replace(".", ",")])
+print(f"Points enregistrés dans {nom_fichier}")
+```
+
+   - ❓ *Q10. (a) Relevez la dérive, son incertitude élargie et l'avance ou le retard par jour. Le résonateur céramique d'une Uno d'origine est donné pour une tolérance de ± 0,5 % (5 000 ppm), un quartz courant pour quelques dizaines de ppm. D'après votre mesure, l'ATmega328P de votre carte est-il cadencé par un résonateur ou par un quartz ? Est-ce cohérent avec l'observation de la Q1 ? (b) Le programme affiche la gigue (écart-type des résidus de la régression), de l'ordre de quelques millisecondes : d'où vient-elle (transfert USB par paquets, puce USB, système d'exploitation) ? (c) Avec seulement la première et la dernière ligne, séparées de 180 s, quelle incertitude une gigue de 5 ms donnerait-elle sur la dérive, en ppm ? Pourquoi la régression sur 180 points fait-elle beaucoup mieux ? (d) La référence est l'horloge du PC, elle-même juste à quelques dizaines de ppm près au plus. Peut-on affirmer qu'une carte à quartz dérive de 20 ppm ? Quelle règle en tirer sur le choix d'un instrument de référence ?*
+   - ❓ *Q11. (a) Une carte doit horodater les relevés d'un capteur de salle serveurs pendant une semaine, sans jamais être remise à l'heure. Calculez l'erreur sur l'heure au bout d'une semaine pour votre carte, puis pour une carte à quartz qui dérive de +21 ppm. Est-ce acceptable pour corréler des journaux d'événements ? (b) Votre carte peut-elle chronométrer une épreuve d'environ 12 s au centième de seconde ? (c) Quelle solution un technicien propose-t-il pour des journaux horodatés fiables ?*
+   - **Repli sans Python :** dans le moniteur série, activer l'horodatage (bouton en forme d'horloge, « Afficher l'horodatage » dans l'IDE 1.8), taper `h`, noter l'heure du PC et la valeur de `millis` de la première ligne, attendre 10 min et noter la dernière ligne. La dérive vaut $\left(\dfrac{\Delta t_{carte}}{\Delta t_{PC}} - 1\right) \times 10^6$ ppm. L'horodatage du moniteur n'est précis qu'à quelques dizaines de millisecondes : sur 600 s, l'incertitude est de l'ordre de 50 à 100 ppm, assez pour reconnaître un résonateur, pas pour mesurer un quartz.
+   - Reporter la dérive (valeur, incertitude élargie, k = 2) et la décision de la Q11 dans le cas de test CT-09 du procès-verbal.
+
+4. **(30 min) Étape 4 : recette à la chaîne et bilan du lot.**
+
+   **a) Recette à la chaîne des autres cartes**, deux par deux sur deux ports USB du PC. Le téléversement de l'autotest prouve le port et la programmation, et la LED L clignote en mode horloge : Blink devient inutile.
+
+   1. Observer la carte, noter son identifiant et son état visuel (CT-01).
+   2. La brancher : LED ON, port COM, VID:PID et numéro de série (CT-02).
+   3. Téléverser `autotest_uno.ino`, lire le rapport, regarder la LED L pendant la phase 5 (CT-03 à CT-08).
+   4. Fermer le moniteur série et lancer `horloge_uno.py` sur ce port (3 min) ; pendant ce temps, commencer la carte suivante sur l'autre port (CT-09).
+   5. Remplir la ligne de la carte dans le tableau des résultats du procès-verbal, une fiche d'anomalie si un cas de test est KO, la ligne du tableur commun, puis poser l'étiquette et ranger la carte.
+
+   **Tableur commun de la classe** (une ligne par carte, séparateur `;`, virgule décimale), dont la première ligne est préparée par le professeur :
+
+   | Colonne | Contenu | Exemple |
+   |---|---|---|
+   | `id`, `binome` | identifiant de la carte, numéro du binôme | 07 ; B3 |
+   | `puce_usb`, `oscillateur` | 16U2 ou CH340 ; R (résonateur) ou Q (quartz), d'après l'observation | 16U2 ; R |
+   | `port`, `led_l` | OK ou HS | OK ; OK |
+   | `nb_hs` à `verdict` | les neuf champs de la ligne affichée à la fin de l'autotest, dans l'ordre | 0;-;OK;OK;223,90;5,03;0;352;BONNE |
+   | `derive_ppm`, `U_derive_ppm` | dérive d'horloge et son incertitude élargie (vides si non mesurées) | -1182 ; 8 |
+
+   **b) Bilan du lot**, au tableur, sur les lignes de toute la classe : compter les verdicts (`NB.SI`), calculer moyennes et écarts-types (`MOYENNE`, `ECARTYPE.STANDARD`), tracer les histogrammes de `vcc_est_v` et de `derive_ppm` (**Insertion → Graphique → Histogramme**). Les résultats vont dans la synthèse chiffrée du procès-verbal.
+
+   - ❓ *Q12. (a) Donnez la proportion de cartes de chaque verdict. (b) Commentez l'histogramme des Vcc estimées : moyenne, écart-type ; quelles cartes s'écartent de la moyenne de plus de deux écarts-types ? (c) Combien de familles l'histogramme des dérives fait-il apparaître ? Reliez-les au type d'oscillateur ; quelles cartes sont hors tolérance (plus de 5 000 ppm en valeur absolue pour un résonateur, plus de 100 ppm pour un quartz) ? (d) L'écart-type des Vcc estimées du lot est bien plus grand que l'écart entre deux ports mesuré à la Q9 sur une même carte : d'où vient l'essentiel de cette dispersion, et que montre le lot qu'une seule carte ne pouvait pas montrer ?*
+
+5. **(20 min) Étape 5 : procès-verbal de recette.** Compléter la synthèse chiffrée (chaque résultat écrit selon les règles du chapitre 2 : valeur, incertitude élargie, unité, facteur k, conformité au critère), cocher la décision de recette, rédiger la liste des réserves, viser le document et le remettre au professeur, qui joue le responsable du parc matériel.
+
+**Prolongements BTS2**
+
+- ❓ *Q13. EEPROM. Écrivez 0x55 et 0xAA en binaire. Pourquoi ces deux motifs mettent-ils chaque bit de chaque octet à 0 puis à 1, avec des bits voisins toujours opposés ? Pourquoi le programme sauvegarde-t-il puis restaure-t-il chaque octet, et utilise-t-il `EEPROM.update` (qui n'écrit que si la valeur change) ? La fiche technique garantit au moins 100 000 cycles d'écriture par octet : un autotest consommant au plus 3 cycles par octet, combien d'autotests une carte peut-elle subir ?*
+- ❓ *Q14. Capteur de température interne. Brancher une carte restée débranchée depuis longtemps, taper `t` dans le moniteur série, puis recommencer au bout de 10 min. (a) Relevez la valeur brute N au début et à la fin et calculez ΔN. (b) La fiche technique donne une sensibilité d'environ 1 mV/°C ; le pas du CAN vaut ici $1{,}1/1023$ V. Convertissez ΔN en élévation de température de la puce. (c) La fiche technique annonce ± 10 °C sur la valeur absolue, d'où l'affichage « estimation très approximative » : pourquoi la variation est-elle beaucoup plus fiable que la valeur absolue ? Quelle erreur s'élimine dans une mesure relative ?*
+- ❓ *Q15. Débit de la liaison série. L'ATmega328P tire le débit de sa liaison série de son horloge f = 16 MHz par un diviseur entier UBRR. En mode double vitesse (bit U2X, choisi par la bibliothèque Arduino à 115 200 bauds), le débit vaut $D = \dfrac{f}{8\,(UBRR + 1)}$. (a) Calculez la valeur de UBRR qui donnerait exactement 115 200 bauds, puis le débit réel avec l'entier retenu, UBRR = 16. Quel est l'écart relatif ? (b) Sur une Uno d'origine, l'ATmega16U2 utilise le même diviseur avec un quartz de 16 MHz ; un CH340 produit 115 200 bauds presque exactement. Dans chaque cas, estimez l'écart de débit entre les deux puces, en tenant compte de la dérive mesurée à la Q10. (c) D'après la fiche technique, en double vitesse et pour des trames de 8 bits, le récepteur tolère au total un écart d'environ 4 %, et il est recommandé de rester sous 1,5 %. La liaison à 115 200 bauds est-elle sûre avec un clone ? Pourquoi 9 600 bauds (UBRR = 207) ne pose-t-il aucun problème ?*
+- ❓ *Q16. Sur l'ensemble du lot, k cartes sont HORS SERVICE sur n testées. (a) Calculez la proportion $p = k/n$, son incertitude-type $u(p) = \sqrt{\dfrac{p\,(1-p)}{n}}$, puis $U = 2u$. (b) L'école envisage de commander 200 cartes au même fournisseur : combien de cartes hors service peut-on prévoir, avec quelle incertitude ? (c) Un lot de 50 cartes suffit-il pour estimer finement cette proportion ? Combien de cartes faudrait-il tester pour diviser U par 2 ?*
+
+- **Livrable :** le procès-verbal de recette complété et visé (cas de test, résultats par carte, fiches d'anomalie, synthèse chiffrée, décision et réserves), les étiquettes posées, les lignes du lot dans le tableur commun, réponses Q1 à Q12 (BTS2 : Q13 à Q16).
+- **⚙ Si l'IDE ou Python ne sont pas utilisables sur les postes :** basculer sur la version de repli ci-dessous.
+
+<a id="sec-version-de-repli-du-tp-2-3-releves-fournis"></a>
+
+#### Version de repli du TP 2.3 (relevés fournis)
+
+- **Principe :** les relevés ci-dessous proviennent de la recette d'un lot de 16 cartes avec les programmes du TP. Les questions sont les mêmes ; le procès-verbal porte sur les cartes 01 à 06 du lot, comme si le binôme les avait testées.
+
+**Étape 1 (15 min) : identification.** Répondre à la Q1 à l'aide de la figure d'identification (comparer les deux cartes dessinées), puis aux questions Q2 et Q3 avec les sorties suivantes :
+
+```text
+COM5
+    desc: Arduino Uno (COM5)
+    hwid: USB VID:PID=2341:0043 SER=75830333239351F0E1A1 LOCATION=1-4:x.0
+COM7
+    desc: USB-SERIAL CH340 (COM7)
+    hwid: USB VID:PID=1A86:7523 LOCATION=1-3
+```
+
+**Étape 2 (20 min) : autotest.** Extraits des rapports de deux cartes du lot. Carte 07 (Uno d'origine) :
+
+```text
+   D7  : a ok   b ok   c ok    -> OK
+   D13 : a ok   b ok   c ok    -> OK
+   A0  : a ok   b ok   c ok    CAN 1023 / 0  -> OK
+   Masse interne (attendu 0) : N = 0,0  -> OK
+   Référence interne 1,1 V : N moyen = 223,90  -> OK
+   ................ 0 erreur -> OK
+VERDICT : BONNE
+0;-;OK;OK;223,90;5,03;0;352;BONNE
+```
+
+Carte 03 (clone CH340) :
+
+```text
+   D7  : a ok   b NON  c ok    -> HS
+   D13 : a NON  b ok   c ok    -> NON CONCLUANT (LED L reliée directement à D13 ?)
+   A0  : a ok   b ok   c ok    CAN 1022 / 0  -> OK
+   Masse interne (attendu 0) : N = 0,0  -> OK
+   Référence interne 1,1 V : N moyen = 218,90  -> OK
+   ................ 0 erreur -> OK
+VERDICT : BONNE AVEC RÉSERVE
+Broches HS, à éviter : D7
+1;D7;NC;OK;218,90;5,14;0;341;RESERVE
+```
+
+Pendant la phase 5, la LED L de la carte 07 s'allume franchement ; celle de la carte 03 luit faiblement. Répondre aux questions Q4 à Q6.
+
+**Étape 3 (35 min) : mesures et incertitudes.** Carte 07, commande `v` (100 conversions), effectif de chaque valeur de N :
+
+| Port | N = 223 | N = 224 | N = 225 | N = 228 | N = 229 | N = 230 |
+|---|---|---|---|---|---|---|
+| P1 : arrière du PC | 18 | 74 | 8 | 0 | 0 | 0 |
+| P2 : façade du PC | 0 | 0 | 0 | 40 | 58 | 2 |
+
+Calculer pour chaque port la moyenne, l'écart-type $s$ (mode statistique de la calculatrice ou tableur) et Vcc estimée, puis répondre aux questions Q7 à Q9.
+
+Mode horloge, une ligne retenue par minute pendant 10 min (temps de la carte $t_{carte}$ = `millis()`/1000 ; instant de réception $t_{PC}$ mesuré par le PC) :
+
+| Ligne | Carte 07 : $t_{carte}$ (s) | Carte 07 : $t_{PC}$ (s) | Carte 11 : $t_{carte}$ (s) | Carte 11 : $t_{PC}$ (s) |
+|---|---|---|---|---|
+| 0 | 14,731 | 0,421 | 14,229 | 0,403 |
+| 1 | 74,731 | 60,488 | 74,229 | 60,407 |
+| 2 | 134,731 | 120,562 | 134,229 | 120,399 |
+| 3 | 194,731 | 180,637 | 194,229 | 180,402 |
+| 4 | 254,731 | 240,704 | 254,229 | 240,397 |
+| 5 | 314,731 | 300,775 | 314,229 | 300,395 |
+| 6 | 374,731 | 360,841 | 374,229 | 360,400 |
+| 7 | 434,731 | 420,919 | 434,229 | 420,399 |
+| 8 | 494,731 | 480,988 | 494,229 | 480,397 |
+| 9 | 554,731 | 541,060 | 554,229 | 540,389 |
+| 10 | 614,731 | 601,130 | 614,229 | 600,391 |
+
+Au tableur, pour chaque carte, `=DROITEREG(plage_des_tPC;plage_des_tcarte;VRAI;VRAI)` validé par **Ctrl+Maj+Entrée** sur une zone de 2 lignes × 2 colonnes donne la pente $a$ (droite $t_{PC} = a \times t_{carte} + b$) et son incertitude-type $u(a)$. La dérive vaut $\left(\dfrac{1}{a} - 1\right) \times 10^6$ ppm et son incertitude-type $\dfrac{u(a)}{a^2} \times 10^6$ ppm. Répondre aux questions Q10 et Q11 (pour la Q10, la gigue vaut environ 3 ms).
+
+**Étapes 4 et 5 (50 min) : bilan du lot et procès-verbal.** Lignes du tableur de la classe, réduites aux colonnes utiles. Toutes les Vcc ont été estimées sur des ports à l'arrière des PC ; les clones CH340 du lot ont tous la LED L reliée directement à D13 (D13 « NON CONCLUANT ») et une LED L qui clignote normalement en mode horloge.
+
+| id | Puce USB | Oscillateur | Verdict | Broches HS | Vcc estimée (V) | Dérive (ppm) |
+|---|---|---|---|---|---|---|
+| 01 | 16U2 | R | BONNE | - | 4,90 | -640 |
+| 02 | CH340 | Q | BONNE | - | 5,25 | 18 |
+| 03 | CH340 | Q | RESERVE | D7 | 5,14 | -12 |
+| 04 | 16U2 | R | BONNE | - | 4,76 | -2050 |
+| 05 | CH340 | Q | BONNE | - | 4,96 | 35 |
+| 06 | CH340 | R | BONNE | - | 5,10 | 870 |
+| 07 | 16U2 | R | BONNE | - | 5,03 | -1182 |
+| 08 | CH340 | Q | HS | pas de port COM | | |
+| 09 | CH340 | Q | RESERVE | A4 A5 (pont) | 4,87 | 6 |
+| 10 | 16U2 | R | BONNE | - | 5,29 | -310 |
+| 11 | CH340 | Q | BONNE | - | 5,01 | 21 |
+| 12 | CH340 | Q | HS | EEPROM : 37 erreurs | 5,12 | -21 |
+| 13 | 16U2 | R | RESERVE | D3 | 4,95 | -1530 |
+| 14 | CH340 | Q | BONNE | - | 4,82 | -8 |
+| 15 | CH340 | Q | BONNE | - | 4,93 | 41 |
+| 16 | 16U2 | R | BONNE | - | 5,00 | -960 |
+
+Répondre à la Q12, puis remplir le procès-verbal de recette pour les cartes 01 à 06 (cas de test, résultats par carte, fiche d'anomalie de la carte 03, synthèse chiffrée sur ces 6 cartes et sur le lot entier, les mesures détaillées de Vcc, de l'écart entre ports et de la dérive portant sur la carte 07, décision).
+
+**Prolongements BTS2.** Q13 : sans changement. Q14 : sur la carte 07, la commande `t` donne N = 349 juste après le branchement et N = 354 au bout de 10 min. Q15 : sans changement. Q16 : utiliser le lot ci-dessus (2 cartes HS sur 16), puis le cas d'un lot de 50 cartes avec 4 cartes HS.
+
+- **Livrable :** le procès-verbal de recette des cartes 01 à 06, les calculs d'incertitude, le résultat $V_{cc} = (\ldots \pm \ldots)$ V de la carte 07, les dérives des cartes 07 et 11 avec leur incertitude, les histogrammes du lot, réponses Q1 à Q12 (BTS2 : Q13 à Q16).
+
+---
+
 <div style="page-break-after: always;"></div>
 
 &nbsp;
@@ -827,6 +1977,211 @@ Falstad ne propose pas de composant « photodiode » avec une commande d'éclair
 <a id="sec-chapitre-3-ondes-et-propagation"></a>
 
 ## Chapitre 3 : Ondes et propagation
+
+<a id="sec-tp-3-0-prise-en-main-du-gbf-et-de-l-oscilloscope"></a>
+
+### TP 3.0 : Prise en main du GBF et de l'oscilloscope `BTS1` `BTS2`
+
+> **Durée :** 2 h · **Mode :** matériel en poste tournant (version Falstad ci-dessous) · **Cours :** Chapitre 3, §3.3 (lecture d'une onde à l'oscilloscope, déphasage) ; Chapitre 5, §5.1 (valeur moyenne, valeur efficace) ; Chapitre 2, §2.1 (incertitudes) · **Prérequis :** aucun
+> **Objectif :** régler un GBF (forme, fréquence, amplitude, décalage), lire un signal à l'oscilloscope aux divisions puis avec les mesures automatiques, savoir ce que mesure un voltmètre en position AC et en position DC (et jusqu'à quelle fréquence), mesurer un déphasage et l'observer en mode XY.
+
+**Problématique :** face à une carte qui fonctionne mal (horloge, liaison série, alimentation), le premier réflexe d'un technicien CIEL est de « regarder le signal ». Mais un oscilloscope mal réglé peut afficher une tension dix fois trop grande, un signal recentré à tort ou une image qui défile, et un multimètre en position AC peut annoncer une valeur fausse sans prévenir. Quels réglages faut-il maîtriser, et quelle confiance accorder à chaque appareil ?
+
+- **Organisation (poste tournant) :** la classe dispose d'un seul banc GBF + oscilloscope, câblé une fois pour toutes. Chaque binôme y passe environ 12 min pour les étapes marquées **(au banc)**, avec son multimètre. Le reste du temps, il avance la préparation, la version Falstad (qui reprend les mêmes étapes, voir plus bas) et l'exploitation. Les tableaux et les questions servent aux deux versions : on les remplit avec les mesures du banc pour les étapes faites au banc, avec Falstad et les relevés fournis sinon.
+- **Matériel du banc (1 par classe) :** GBF Feeltech FY6900 (2 voies), oscilloscope Rigol DS1054Z (4 voies), 2 câbles BNC-pinces crocodiles.
+- **Matériel par binôme :** 1 multimètre (utilisé en voltmètre) avec ses cordons, munis si possible de pinces crocodiles.
+- **Matériel par étudiant :** 1 sonde et 1 câble BNC. Aucun composant n'est nécessaire.
+- **Sécurité :** aucun risque électrique (toutes les tensions restent inférieures à 10 V). Ne jamais relier entre elles les deux pinces d'une même sortie du GBF (court-circuit de la sortie). Les masses des voies de l'oscilloscope sont reliées entre elles et à la terre : la pince de masse d'une sonde se branche toujours sur une masse.
+
+<p align="center">
+<img src="figures/cours/figure_31_lecture_d_une_periode_a_l_oscilloscope.svg" width="420" alt="Lecture d'une période à l'oscilloscope"/>
+</p>
+
+<p align="center"><em>Lecture à l'oscilloscope : une durée vaut (nombre de divisions) × (base de temps), une tension vaut (nombre de divisions) × (calibre vertical).</em></p>
+
+<p align="center">
+<img src="figures/cours/figure_32_dephasage_entre_deux_signaux.svg" width="420" alt="Déphasage entre deux signaux"/>
+</p>
+
+<p align="center"><em>Décalage temporel Δt entre deux signaux de même période : ici Δt = T/4, soit un déphasage de 90°.</em></p>
+
+**Montage du banc (décrit en texte) :** la sortie CH1 du GBF est prolongée par un câble BNC-pinces crocodiles : la pince rouge porte le signal, la pince noire la masse. Sur ces deux pinces s'accrochent la sonde de la voie 1 de l'oscilloscope (crochet sur la pince rouge, pince de masse sur la pince noire) et, à partir de l'étape 3, les cordons du voltmètre (borne COM sur la pince noire). La sortie CH2 du GBF est reliée de la même façon à la sonde de la voie 2. Les sondes sont réglées sur **×10** et le menu de chaque voie (touche **CH1** ou **CH2** → **Probe**) sur **10X** : le commutateur de la sonde et le menu doivent toujours correspondre.
+
+**Rappels :**
+
+- L'écran du DS1054Z compte 12 divisions horizontales et 8 verticales ; les axes centraux sont gradués tous les 0,2 division. Une durée vaut (nombre de divisions) × (base de temps en s/div), une tension vaut (nombre de divisions) × (calibre en V/div).
+- Le FY6900 règle l'amplitude **crête à crête** $U_{pp}$ (du creux au sommet). Pour un signal centré sur 0, l'amplitude vaut $U_{max} = U_{pp}/2$.
+- Le **décalage** (*offset*) ajoute une tension continue au signal : la valeur moyenne $\langle u \rangle$ d'un sinus décalé est égale au décalage.
+- Valeur efficace d'un signal centré d'amplitude $U_{max}$ : sinus $U_{eff} = \dfrac{U_{max}}{\sqrt{2}}$ ; triangle $U_{eff} = \dfrac{U_{max}}{\sqrt{3}}$ ; carré : à établir en Q2.
+- Déphasage entre deux signaux de même période : $\varphi = 360 \times \dfrac{\Delta t}{T}$ (en degrés).
+
+**Déroulé détaillé**
+
+1. **(15 min) Préparation (à la place).** Le signal de référence du TP est un sinus de fréquence $f$ = 1 kHz et d'amplitude crête à crête $U_{pp}$ = 4 V, sans décalage.
+   - ❓ *Q1. Calculez la période T, l'amplitude $U_{max}$ et la valeur moyenne de ce signal. Avec une base de temps de 200 µs/div et un calibre de 1 V/div, combien de divisions occupent une période ? Et la hauteur crête à crête ? Combien de périodes sont visibles sur les 12 divisions de l'écran ?*
+   - ❓ *Q2. Pour un carré centré, $u(t)$ vaut $+U_{max}$ ou $-U_{max}$ : que vaut $u^2(t)$ à chaque instant ? Déduisez-en $U_{eff}$. Calculez la valeur efficace d'un sinus, d'un carré et d'un triangle de $U_{max}$ = 2 V et reportez-les dans la colonne « théorique » du tableau de l'étape 4.*
+   - ❓ *Q3. On ajoute au sinus un décalage de 1 V. Entre quelles valeurs la tension varie-t-elle ? Que vaut sa valeur moyenne ? Qu'indiquera un voltmètre en position DC (notée « V= » ou « DC ») ?*
+   - ❓ *Q4. Deux sinus de 1 kHz sont déphasés de 0°, 45°, 90° puis 180°. Calculez le décalage temporel Δt attendu dans chaque cas et reportez-le dans le tableau de l'étape 5.*
+
+2. **(au banc, 4 min) Régler le GBF et lire un sinus.**
+   - **GBF, voie CH1 :** touche **CH1**, puis forme (**WAVE**) : sinus ; fréquence (**FREQ**) : 1 kHz ; amplitude (**AMPL**) : 4 V ; décalage (**OFFS**) : 0 V. Les flèches choisissent le chiffre à modifier, la molette le change. Vérifier que la sortie CH1 est activée.
+   - **Oscilloscope :** appuyer sur **AUTO**, puis régler à la main : voie 1 en couplage **DC** (touche **CH1** → **Coupling**) ; calibre vertical **1 V/div** (bouton **SCALE** de la zone verticale) ; base de temps **200 µs/div** (bouton **SCALE** de la zone horizontale) ; déclenchement (zone **TRIGGER**, touche **MENU**) : type **Edge**, source **CH1**, front montant, mode **Auto**, niveau 0 V (bouton **LEVEL**). Placer le repère de 0 V de la voie 1 sur la ligne centrale (bouton **POSITION** de la zone verticale).
+   - **Lecture aux divisions :** compter les divisions occupées par **deux périodes**, puis par la hauteur crête à crête.
+   - **Mesures automatiques :** touche **Measure**, source **CH1**, puis choisir dans la colonne de mesures à gauche de l'écran : **Period**, **Freq**, **Vpp**, **Vavg** et **Vrms** (l'écran en affiche cinq au plus).
+   - **Déclenchement :** tourner le bouton **LEVEL** pour placer le niveau au-dessus du sommet du signal et observer l'image ; le ramener ensuite à 0 V.
+
+   | Grandeur | Lecture aux divisions | Valeur lue | Mesure automatique | Valeur attendue |
+   |---|---|---|---|---|
+   | Période $T$ | $2T$ = ______ div × 200 µs/div | $T$ = | Period = | |
+   | Fréquence $f$ | $f = 1/T$ | $f$ = | Freq = | 1 kHz |
+   | Crête à crête $U_{pp}$ | ______ div × 1 V/div | | Vpp = | 4 V |
+   | Amplitude $U_{max}$ | $U_{pp}/2$ | | Vpp/2 = | |
+   | Valeur moyenne | milieu de la courbe : ______ div × 1 V/div | | Vavg = | |
+   | Valeur efficace | $U_{max}/\sqrt{2}$, avec $U_{max}$ lue | | Vrms = | |
+
+3. **(au banc, 2 min) Décalage, couplage et voltmètre DC.**
+   - GBF : décalage (**OFFS**) : 1 V. Remplacer les mesures automatiques par **Vmax**, **Vmin**, **Vavg** et **Vrms** (touche **Measure** → **Clear** pour effacer les précédentes). Relever les mesures en couplage **DC**.
+   - Accrocher les cordons du voltmètre aux pinces de la sortie CH1 (COM sur la pince noire). Relever son indication en position **DC**, puis en position **AC** (notée « V~ » ou « AC »).
+   - Passer la voie 1 en couplage **AC** (touche **CH1** → **Coupling**) : observer la courbe et relever les mesures. Revenir en couplage **DC** et remettre le décalage à 0 V.
+
+   | Couplage de la voie 1 | Vmax (V) | Vmin (V) | Vavg (V) | Vrms (V) |
+   |---|---|---|---|---|
+   | DC | | | | |
+   | AC | | | | |
+
+   Voltmètre sur la sortie CH1 (sinus de 1 kHz, 4 V crête à crête, décalage 1 V) : position DC : ________ V ; position AC : ________ V.
+
+4. **(au banc, 3 min) Valeur efficace : ce que mesure vraiment le voltmètre.** Noter le modèle du multimètre et s'il porte la mention **TRMS** (ou *True RMS*) : ________________.
+   - GBF : fréquence 100 Hz, décalage 0 V ; oscilloscope : base de temps 2 ms/div. Voltmètre en position AC.
+   - Choisir successivement les formes sinus, carré et triangle (même amplitude de 4 V crête à crête). Pour chacune, relever l'indication du voltmètre et la mesure **Vrms** de l'oscilloscope.
+
+   | Forme (4 V crête à crête, 100 Hz) | $U_{eff}$ théorique (Q2) | Vrms de l'oscilloscope | Voltmètre AC | Écart voltmètre / théorique (%) |
+   |---|---|---|---|---|
+   | Sinus | | | | |
+   | Carré | | | | |
+   | Triangle | | | | |
+
+   - Revenir au sinus. Sans toucher à l'amplitude, modifier la fréquence du GBF et relever l'indication du voltmètre (l'oscilloscope n'est pas utile ici).
+
+   | $f$ | 20 Hz | 50 Hz | 100 Hz | 500 Hz | 1 kHz | 2 kHz | 5 kHz | 10 kHz | 20 kHz | 50 kHz | 100 kHz |
+   |---|---|---|---|---|---|---|---|---|---|---|---|
+   | Voltmètre AC (V) | | | | | | | | | | | |
+   | Écart à la valeur à 100 Hz (%) | | | | | | | | | | | |
+
+5. **(au banc, 3 min) Deux voies déphasées, mode XY.**
+   - GBF : voie CH1 sur sinus, 1 kHz, 4 V, décalage 0 V. Touche **CH2** : mêmes réglages (sinus, 1 kHz, 4 V, 0 V), puis phase (**PHAS**) : 90°. Activer la sortie CH2.
+   - Oscilloscope : afficher la voie 2 (touche **CH2**), calibre 1 V/div, repère de 0 V sur la ligne centrale comme la voie 1 ; base de temps 100 µs/div.
+   - Mesurer Δt entre deux passages par zéro **montants** correspondants des deux courbes : aux divisions, puis avec les curseurs (touche **Cursor** → mode **Manual**, type **X** ; placer les curseurs A et B avec la molette et lire ΔX). Ajouter la mesure automatique **Phase** (touche **Measure**, sources A = CH1 et B = CH2 dans le sous-menu de réglage des mesures).
+   - Régler la phase de CH2 à 45°, puis à 180°, et relever chaque fois Δt et la mesure automatique.
+   - **Mode XY :** zone horizontale, touche **MENU** → **Time Base** : **XY**. La voie 1 pilote l'axe horizontal, la voie 2 l'axe vertical. Régler la phase de CH2 à 0°, 45°, 90° puis 180° et dessiner chaque figure. Revenir en mode **YT**.
+
+   | Phase réglée sur CH2 | 0° | 45° | 90° | 180° |
+   |---|---|---|---|---|
+   | Δt attendu (Q4) | | | | |
+   | Δt mesuré | | | | |
+   | $\varphi = 360 \times \Delta t / T$ (°) | | | | |
+   | Mesure automatique de phase (°) | | | | |
+   | Figure en mode XY (croquis) | | | | |
+
+6. **(au banc, 1 min, facultatif) Spectre d'un carré.** GBF, voie CH1 : carré, 1 kHz, 4 V crête à crête. Oscilloscope : base de temps 1 ms/div, touche **Math** → **FFT**, source **CH1**, unité **Vrms**. Relever la fréquence et la valeur efficace des raies visibles entre 0 et 8 kHz (curseurs, source Math).
+
+   | Raie (kHz) | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+   |---|---|---|---|---|---|---|---|
+   | Valeur efficace de la raie (V) | | | | | | | |
+
+   **Avant de quitter le banc :** remettre les deux voies du GBF sur sinus, 1 kHz, 4 V, décalage 0 V, phase de CH2 à 0° ; oscilloscope en mode YT, FFT désactivée, couplage DC sur les deux voies.
+
+7. **(25 min) Exploitation (à la place).**
+   - ❓ *Q5. À partir de vos lectures aux divisions, calculez T et f. Calculez l'écart relatif entre la fréquence lue et la fréquence réglée au GBF, puis entre la mesure automatique et la fréquence réglée.*
+   - ❓ *Q6. On estime qu'une longueur lue entre deux points de l'écran est connue à $\pm a$ près, avec $a$ = 0,2 division. Avec la formule du cours pour un intervalle $\pm a$, $u = a/\sqrt{3}$, puis $U = 2u$, calculez l'incertitude élargie sur T (attention : vous avez lu deux périodes) et sur $U_{pp}$. Écrivez les deux résultats sous la forme valeur ± incertitude. Les valeurs réglées au GBF sont-elles compatibles avec vos mesures ?*
+   - ❓ *Q7. Pourquoi a-t-on lu la durée de deux périodes plutôt que d'une seule ? Que vaudrait l'incertitude sur T avec une seule période ?*
+   - ❓ *Q8. La mesure automatique Vpp affiche trois chiffres, souvent un peu plus que 4 V : le bruit superposé au signal « gonfle » les crêtes. La fiche technique de l'oscilloscope annonce une justesse verticale de ± 3 % de la pleine échelle (8 divisions). Calculez l'incertitude élargie correspondante sur Vpp au calibre 1 V/div. La mesure automatique de Vpp est-elle plus précise que votre lecture ? Et la mesure automatique de fréquence ? Quel choix de calibre améliorerait la mesure de tension ?*
+   - ❓ *Q9. Décalage et couplage. a) Quel est l'effet du couplage AC sur la courbe et sur Vavg ? b) Un signal logique varie entre 0 et 3,3 V : comment apparaît-il en couplage AC ? Pourquoi est-ce un piège lors d'un dépannage ? c) Que mesure le voltmètre en position DC ? En position AC, a-t-il « vu » le décalage ? d) Vérifiez qu'en couplage DC, $\text{Vrms}^2 \approx \text{Vavg}^2 + U_{eff,AC}^2$, où $U_{eff,AC}$ est la valeur Vrms mesurée en couplage AC.*
+   - ❓ *Q10. Un voltmètre non TRMS mesure en réalité la valeur moyenne de $|u(t)|$ et la multiplie par 1,11, coefficient qui ne donne la valeur efficace exacte que pour un sinus. Pour un carré, $\langle |u| \rangle = U_{max}$ ; pour un triangle, $\langle |u| \rangle = U_{max}/2$. Calculez ce qu'afficherait un voltmètre non TRMS pour le carré et le triangle de l'étape 4. Votre voltmètre est-il TRMS ? Est-ce cohérent avec l'inscription relevée ? Quel appareil du banc donne la vraie valeur efficace quelle que soit la forme du signal ?*
+   - ❓ *Q11. Jusqu'à quelle fréquence l'indication de votre voltmètre reste-t-elle à moins de 5 % de sa valeur à 100 Hz ? Comparez à la plage de fréquence annoncée dans la notice du multimètre (souvent quelques centaines de hertz seulement). Que se passe-t-il à 20 Hz ? Pour mesurer la valeur efficace d'un signal de 20 kHz, quel appareil faut-il utiliser ?*
+   - ❓ *Q12. Calculez φ pour chaque phase réglée, puis comparez à la phase réglée sur le GBF et à la mesure automatique. Sur l'écran, la voie 2 est-elle en avance ou en retard sur la voie 1 ? (Un signal en avance passe par zéro plus tôt : il est décalé vers la gauche.)*
+   - ❓ *Q13. Décrivez les figures obtenues en mode XY pour 0°, 90° et 180°. Justifiez-les avec $x = U_{max}\sin(\omega t)$ et $y = U_{max}\sin(\omega t + \varphi)$ : que vaut $y$ en fonction de $x$ pour φ = 0° et pour φ = 180° ? Pour φ = 90°, montrez que $x^2 + y^2 = U_{max}^2$.*
+   - ❓ *Q14 (si l'étape 6 a été faite). Quelles raies sont présentes dans le spectre du carré ? Calculez le rapport entre la valeur de la raie à 3 kHz et celle de la raie à 1 kHz, et comparez-le à 1/3. (Le spectre des signaux est étudié en détail au TP 5.4.)*
+
+8. **(10 min) Bilan.**
+   - ❓ *Q15. Complétez le tableau de dépannage suivant : pour chaque symptôme, indiquez le réglage en cause et la correction.*
+
+   | Symptôme | Réglage en cause | Correction |
+   |---|---|---|
+   | L'image défile ou se dédouble | | |
+   | Toutes les tensions sont 10 fois trop grandes (ou trop petites) | | |
+   | Un signal qui varie de 0 à 5 V apparaît centré sur 0 V | | |
+   | La courbe sort de l'écran par le haut et par le bas | | |
+   | On ne voit qu'une bande épaisse au lieu d'une sinusoïde | | |
+   | Le voltmètre AC indique 2,22 V pour un carré de 4 V crête à crête | | |
+   | Le voltmètre AC indique une tension trop faible pour un sinus de 20 kHz | | |
+
+- **Livrable :** les tableaux complétés, les croquis XY annotés (calibres des deux voies), le tableau de dépannage, réponses Q1 à Q15.
+- **⚙ Si le banc n'est pas disponible :** remplir les tableaux avec la version Falstad et les relevés fournis ci-dessous.
+
+<a id="sec-version-simulee-du-tp-3-0-falstad"></a>
+
+#### Version simulée du TP 3.0 (Falstad)
+
+- **Principe :** Falstad contient un générateur de signaux et un oscilloscope virtuels : on y refait les étapes du banc. Les questions Q1 à Q15 et les tableaux sont les mêmes. Un vrai multimètre ne se simule pas (il n'est jamais parfait) : pour les mesures au voltmètre, on utilise les relevés fournis à la fin de cette version, obtenus avec un multimètre d'entrée de gamme. Falstad est utilisé en français (voir la fiche outil en début de recueil) ; la touche **/** permet de chercher un composant par son nom.
+
+**Étape 0 (15 min) : préparation.** Répondre aux questions Q1 à Q4.
+
+**Étape 1 (10 min) : construire le « banc » virtuel.**
+
+1. **Fichier → Nouveau circuit vide**.
+2. Placer le GBF : **Dessiner → Entrées et Générateurs → Ajouter Générateur de Tension A/C (2 sorties)**, tracé verticalement (cliquer-glisser vers le bas).
+3. Placer une masse : **Dessiner → Sorties et Etiquettes → Ajouter Masse**, reliée à la borne basse du générateur.
+4. Placer un voltmètre : **Dessiner → Sorties et Etiquettes → Ajouter Voltmètre/Sonde Oscilloscope**, à droite du générateur, et relier ses bornes à celles du générateur avec **Dessiner → Ajouter Fils** (raccourci **w**). Double-clic sur la sonde : cocher l'affichage de la valeur.
+5. Double-clic sur le générateur : forme d'onde **A/C** (sinus), **Fréquence** 1000 Hz, **Tension maximale** 2 V, **Décalage continu** 0 V. ⚠ Falstad demande l'amplitude $U_{max}$, alors que le GBF du banc demande la valeur crête à crête : 4 V crête à crête correspondent à 2 V de tension maximale.
+6. Clic droit sur le générateur → **Voir dans un nouvel oscilloscope** (selon la version : « Voir dans l'oscilloscope »). Clic droit sur l'oscilloscope → **Propriétés…** : cocher l'affichage de l'échelle (*Scale*), de la valeur crête (*Peak*), de la valeur crête négative (*Negative Peak*), de la fréquence (*Frequency*), de la valeur efficace (*RMS*) et, si la case existe, de la moyenne (*Average*). Les intitulés exacts varient selon la version.
+
+**Étape 2 (10 min) : lire le sinus (étape 2 du banc).**
+
+1. Dans les propriétés de l'oscilloscope, régler la vitesse de défilement pour voir deux à trois périodes. L'échelle affichée indique la durée d'une division (H = … s/div) et la tension d'une division (V = … V/div).
+2. L'oscilloscope de Falstad n'a pas de déclenchement : il défile en continu, comme un oscilloscope réel dont le déclenchement est mal réglé. Cliquer sur **Arrêter** (panneau de droite) pour figer l'image.
+3. **Lecture aux divisions :** compter les divisions occupées par deux périodes et par la hauteur crête à crête. Survoler ensuite la courbe : Falstad affiche le temps et la tension du point survolé, comme les curseurs d'un oscilloscope.
+4. **Mesures automatiques :** relever les valeurs affichées par l'oscilloscope (fréquence, crête, crête négative, RMS, moyenne) ; Vpp = crête − crête négative. Remplir le premier tableau, puis relancer la simulation.
+
+**Étape 3 (5 min) : décalage et couplage (étape 3 du banc).**
+
+1. Double-clic sur le générateur : **Décalage continu** 1 V. Observer et relever les mesures (ligne « DC » du tableau).
+2. Dans les propriétés de l'oscilloscope, cocher **Couplage AC** (*AC Coupled*) si votre version le propose ; relever les mesures (ligne « AC »). Décocher, puis remettre le décalage à 0 V.
+3. Pour les indications du voltmètre, prendre les relevés fournis.
+
+**Étape 4 (10 min) : valeur efficace (étape 4 du banc).**
+
+1. Double-clic sur le générateur : **Fréquence** 100 Hz ; forme d'onde successivement **A/C** (sinus), **Carré** et **Triangle**, toujours avec une tension maximale de 2 V. Relever chaque fois la valeur efficace (RMS) affichée par l'oscilloscope. Le carré peut aussi être obtenu avec **Dessiner → Entrées et Générateurs → Ajouter Générateur Signal Carre**.
+2. Si la sonde propose, dans sa fenêtre de réglage (double-clic), d'afficher la **tension efficace** (*RMS*), la choisir : elle se comporte alors comme un voltmètre TRMS parfait.
+3. Remplir le tableau de l'étape 4 : colonne « Vrms de l'oscilloscope » avec Falstad, colonne « Voltmètre AC » avec les relevés fournis.
+4. Revenir au sinus et monter la fréquence jusqu'à 100 kHz : la valeur efficace calculée par Falstad ne change pas. Au-delà de 5 kHz, réduire le pas de temps (**Options → Autres options…**, champ **Pas de temps**, saisir **0.1u**), sinon la sinusoïde est dessinée avec trop peu de points. Le tableau en fréquence se remplit avec les relevés fournis.
+
+**Étape 5 (15 min) : deux voies déphasées, mode XY (étape 5 du banc).**
+
+1. Remettre le générateur sur sinus, 1000 Hz, 2 V, décalage 0 V. Sélectionner le générateur, sa masse et sa sonde (cadre tracé à la souris), puis **Édition → Copier** et **Édition → Coller** : on obtient une deuxième « voie ».
+2. Double-clic sur le second générateur : **Décalage de phase** 90° (champ *Phase Offset*, en degrés).
+3. Clic droit sur le second générateur → **Voir dans un nouvel oscilloscope**. Faire glisser ce second oscilloscope sur le premier (ou clic droit → **Combiner**, selon la version) : les deux courbes sont superposées.
+4. Arrêter la simulation et survoler deux passages par zéro montants correspondants : la différence des temps affichés donne Δt. Recommencer avec 0°, 45° et 180°. Falstad ne propose pas de mesure automatique de phase : laisser cette ligne du tableau vide.
+5. **Mode XY :** dans les propriétés de l'oscilloscope combiné, cocher **Tracer X/Y** (*Plot X/Y*) : la première courbe donne l'axe horizontal, la seconde l'axe vertical. Relancer et dessiner les figures pour 0°, 45°, 90° et 180°.
+
+**Étape 6 (5 min, facultatif) : spectre d'un carré.** Régler le premier générateur en carré, 1000 Hz, et cocher l'affichage du spectre (*Show Spectrum* ou *FFT*) dans les propriétés de son oscilloscope. Repérer les fréquences des raies et comparer leurs hauteurs.
+
+**Étape 7 (30 min) : exploitation et bilan.** Répondre aux questions Q5 à Q15 avec vos relevés Falstad et les relevés fournis. Pour la Q8, raisonner sur le relevé fourni (Vpp = 4,08 V) : dans Falstad, il n'y a pas de bruit et Vpp vaut exactement 4 V.
+
+**Relevés fournis (banc FY6900 + DS1054Z, multimètre d'entrée de gamme non TRMS)**
+
+- Mesures automatiques de l'oscilloscope, sinus de 1 kHz et 4 V crête à crête : Period = 1,000 ms ; Freq = 1,000 kHz ; Vpp = 4,08 V ; Vavg = 0,01 V ; Vrms = 1,42 V.
+- Voltmètre sur la sortie, sinus de 1 kHz et 4 V crête à crête, décalage 1 V : position DC : 1,00 V ; position AC : 1,41 V.
+- Voltmètre en position AC, signaux de 4 V crête à crête à 100 Hz : sinus 1,41 V ; carré 2,22 V ; triangle 1,11 V.
+- Voltmètre en position AC, sinus de 4 V crête à crête, fréquence variable :
+
+| $f$ | 20 Hz | 50 Hz | 100 Hz | 500 Hz | 1 kHz | 2 kHz | 5 kHz | 10 kHz | 20 kHz | 50 kHz | 100 kHz |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Voltmètre AC (V) | 1,37 à 1,45 (instable) | 1,41 | 1,41 | 1,41 | 1,41 | 1,38 | 1,24 | 0,95 | 0,58 | 0,25 | 0,13 |
+
+- **Livrable :** captures d'écran annotées (sinus lu aux divisions, décalage en couplage DC et AC, les trois formes, les figures XY), tableaux complétés, tableau de dépannage, réponses Q1 à Q15.
+
+---
 
 <a id="sec-tp-3-1-ondes-gbf-et-oscilloscope"></a>
 
@@ -882,6 +2237,419 @@ Falstad ne propose pas de composant « photodiode » avec une commande d'éclair
 
 ---
 
+<a id="sec-tp-3-2-celerite-des-ultrasons"></a>
+
+### TP 3.2 : Célérité des ultrasons `BTS1` `BTS2`
+
+> **Durée :** 1 h 30 · **Mode :** matériel en poste tournant (version simulée ci-dessous) · **Cours :** Chapitre 3, §3.1, §3.2 et §3.4 (célérité, longueur d'onde, ondes sonores) · **Prérequis :** TP 3.1
+> **Objectif :** mesurer la célérité des ultrasons dans l'air par deux méthodes (longueur d'onde et retard de propagation) et comprendre le principe d'un télémètre à ultrasons.
+
+**Problématique :** un capteur de stationnement ou un module HC-SR04 mesure une distance en chronométrant l'écho d'une salve d'ultrasons. Pour transformer un temps en distance, il faut connaître la célérité du son dans l'air. Peut-on la mesurer précisément avec un GBF et un oscilloscope ?
+
+- **Organisation (poste tournant) :** la classe dispose d'un seul banc GBF + oscilloscope. Le banc est câblé une fois pour toutes ; chaque binôme y passe environ 10 min pour les mesures marquées **(au banc)**, pendant que les autres binômes avancent la version simulée. La préparation et l'exploitation se font à la place.
+- **Matériel du banc (1 par classe) :** GBF Feeltech FY6900, oscilloscope Rigol DS1054Z, 1 règle graduée de 50 cm (ou mètre ruban) fixée sur la table, 2 supports (pinces ou pâte adhésive) pour tenir les transducteurs face à face, à la même hauteur.
+- **Matériel par étudiant :** 1 sonde et 1 câble BNC.
+- **Composants à prévoir :** 1 paire de transducteurs ultrasonores 40 kHz (émetteur T40 et récepteur R40, diamètre 16 mm), 1 câble BNC-pinces crocodiles, 1 adaptateur BNC en T, 1 thermomètre d'ambiance.
+- **Sécurité :** aucun risque électrique (amplitude ≤ 10 V crête à crête). Les ultrasons à 40 kHz sont inaudibles et sans danger à ce niveau.
+
+<p align="center">
+<img src="figures/cours/figure_30_longueur_d_onde_sur_une_representation_spatiale.svg" width="420" alt="Longueur d'onde sur une représentation spatiale"/>
+</p>
+
+<p align="center"><em>La longueur d'onde λ est la distance parcourue par l'onde pendant une période : λ = c × T = c / f.</em></p>
+
+**Montage du banc (décrit en texte) :** la sortie CH1 du GBF alimente l'émetteur ultrasonore ; un T BNC renvoie aussi ce signal sur la voie 1 de l'oscilloscope. Le récepteur, placé face à l'émetteur le long de la règle, est relié à la voie 2 par une sonde. La distance $d$ est mesurée entre les faces avant des deux transducteurs.
+
+**Déroulé détaillé**
+
+1. **(10 min) Préparation.** On prend $c \approx 343$ m/s (air à 20 °C).
+   - ❓ *Q1. Calculez la longueur d'onde λ d'une onde ultrasonore de fréquence 40 kHz. Est-elle de l'ordre du millimètre, du centimètre ou du mètre ?*
+   - ❓ *Q2. Calculez la durée mise par l'onde pour parcourir 30 cm.*
+   - ❓ *Q3. La célérité du son dans l'air dépend de la température : $c \approx 331{,}3 + 0{,}606 \times \theta$ (θ en °C). Relevez la température de la salle et calculez la célérité attendue.*
+
+2. **(au banc, 5 min) Méthode 1 : mesure de la longueur d'onde.** Régler le GBF : sinus, 40 kHz, 10 V crête à crête, sans décalage. Placer le récepteur à environ 10 cm de l'émetteur.
+   - Ajuster finement la fréquence entre 39 et 41 kHz pour obtenir l'amplitude maximale sur la voie 2 (fréquence de résonance des transducteurs). Noter cette fréquence $f_0$.
+   - Déplacer le récepteur jusqu'à ce que les deux sinusoïdes soient **en phase** (sommets alignés). Noter sa position $x_0$.
+   - Éloigner lentement le récepteur en comptant les coïncidences : à chaque fois que les courbes se retrouvent en phase, le récepteur a reculé d'une longueur d'onde. Après **10** coïncidences, noter la position $x_{10}$.
+
+   | $f_0$ (kHz) | $x_0$ (cm) | $x_{10}$ (cm) | $D = x_{10} - x_0$ (cm) | $\lambda = D/10$ (mm) | $c = \lambda \times f_0$ (m/s) |
+   |---|---|---|---|---|---|
+   | | | | | | |
+
+   - ❓ *Q4. Pourquoi mesure-t-on 10 longueurs d'onde plutôt qu'une seule ?*
+
+3. **(au banc, 5 min) Méthode 2 : mesure du retard d'une salve.** Passer le GBF en **modulation ASK** (touche de modulation, type ASK, source interne, fréquence de modulation 50 Hz) : l'émetteur envoie alors des salves de sinusoïde séparées par des silences. Régler l'oscilloscope : déclenchement sur la voie 1, front montant, base de temps 200 µs/div.
+   - Pour chaque distance $d$, mesurer le retard $\Delta t$ entre le début de la salve émise (voie 1) et le début de la salve reçue (voie 2), avec les curseurs de l'oscilloscope (touche **Cursor**, mode manuel, curseurs verticaux).
+
+   | $d$ (cm) | 10 | 20 | 30 | 40 |
+   |---|---|---|---|---|
+   | $\Delta t$ (µs) | | | | |
+   | $d / \Delta t$ (m/s) | | | | |
+
+4. **(25 min) Exploitation (à la place).**
+   - ❓ *Q5. Calculez $c = d / \Delta t$ pour chaque distance. Les valeurs sont-elles constantes ? Sont-elles plutôt trop grandes ou trop petites par rapport à la Q3 ?*
+   - ❓ *Q6. Tracez $\Delta t$ en fonction de $d$ (tableur ou papier millimétré). Les points sont-ils alignés ? La droite passe-t-elle par l'origine ?*
+   - ❓ *Q7. Le récepteur met quelques périodes à « démarrer » (il vibre progressivement) : cela ajoute un retard constant $t_0$ à toutes les mesures. Montrez que la pente de la droite $\Delta t = d/c + t_0$ donne $1/c$ sans être faussée par $t_0$. Calculez $c$ à partir de la pente.*
+   - ❓ *Q8. Comparez les deux méthodes et la valeur attendue de la Q3 : calculez les écarts relatifs. Quelle méthode vous paraît la plus fiable ?*
+
+5. **(15 min) Application : le télémètre.**
+   - ❓ *Q9. Un module HC-SR04 envoie une salve vers un mur et mesure un écho au bout de 5,83 ms. À quelle distance est le mur ? Attention : l'onde fait un aller-retour.*
+   - ❓ *Q10. Si la température passe de 20 °C à 35 °C et que le programme utilise toujours $c = 343$ m/s, quelle erreur commet-on sur une distance de 1 m ?*
+
+- **Livrable :** les deux tableaux de mesures, le graphe $\Delta t = f(d)$ avec la droite et sa pente, réponses Q1 à Q10.
+- **⚙ Si le banc n'est pas disponible :** basculer sur la version simulée ci-dessous.
+
+<a id="sec-version-simulee-du-tp-3-2-exploitation-de-releves"></a>
+
+#### Version simulée du TP 3.2 (exploitation de relevés, tableur ou Python)
+
+- **Principe :** les mesures ci-dessous ont été relevées sur le banc du lycée (température de la salle : 20 °C). On les exploite comme si on les avait prises soi-même. Les questions sont les mêmes.
+
+**Étape 1 (10 min) : préparation.** Répondre aux questions Q1 à Q3 (avec θ = 20 °C).
+
+**Étape 2 (15 min) : méthode 1.** Relevé : $f_0$ = 40,0 kHz, $x_0$ = 12,0 cm, $x_{10}$ = 20,6 cm. Compléter le premier tableau et répondre à la Q4.
+
+**Étape 3 (35 min) : méthode 2.** Relevé des retards de salves :
+
+| $d$ (cm) | 10 | 15 | 20 | 25 | 30 | 35 | 40 |
+|---|---|---|---|---|---|---|---|
+| $\Delta t$ (µs) | 408 | 560 | 700 | 852 | 990 | 1143 | 1284 |
+
+1. Saisir les deux lignes dans un tableur (en mètres et en secondes), calculer $d/\Delta t$ pour chaque colonne, puis tracer le nuage de points $\Delta t$ en fonction de $d$ (**Insertion → Graphique → Nuage de points**).
+2. Ajouter une **courbe de tendance linéaire** (clic droit sur les points → **Ajouter une courbe de tendance**, cocher **Afficher l'équation**). Ou, en Python :
+
+```python
+import numpy as np
+d = np.array([10, 15, 20, 25, 30, 35, 40]) / 100          # en m
+dt = np.array([408, 560, 700, 852, 990, 1143, 1284]) * 1e-6  # en s
+pente, origine = np.polyfit(d, dt, 1)
+print(f"pente = {pente*1e3:.3f} ms/m   c = {1/pente:.0f} m/s   t0 = {origine*1e6:.0f} µs")
+```
+
+3. Répondre aux questions Q5 à Q8.
+
+**Étape 4 (15 min) : le télémètre.** Répondre aux questions Q9 et Q10.
+
+**Étape 5 (15 min, pour aller plus loin) : visualiser l'onde.** Ouvrir le simulateur en ligne PhET **« Interférences d'ondes »** (onglet **Son**, en français). Mesurer avec le mètre la distance entre deux fronts d'onde successifs pour une fréquence donnée, puis vérifier que $\lambda \times f$ reste constant quand on change la fréquence.
+
+- **Livrable :** fichier tableur (ou programme Python) avec le graphe et l'équation de la droite, réponses Q1 à Q10.
+
+---
+
+<a id="sec-tp-3-3-reflexions-sur-une-ligne-coaxiale"></a>
+
+### TP 3.3 : Réflexions sur une ligne coaxiale `BTS2`
+
+> **Durée :** 1 h 30 · **Mode :** matériel en poste tournant (version Falstad ci-dessous) · **Cours :** Chapitre 3, §3.10 et §3.11 (ligne de transmission, impédance caractéristique, coefficient de réflexion) · **Prérequis :** TP 3.1
+> **Objectif :** observer l'aller-retour d'un front de tension sur un câble coaxial, mesurer la célérité dans le câble et vérifier le coefficient de réflexion pour une ligne ouverte, en court-circuit et adaptée.
+
+**Problématique :** un testeur de câble réseau indique « coupure à 37 m » sans qu'on ouvre les goulottes. Comment un simple signal électrique peut-il localiser un défaut ? Et pourquoi met-on des bouchons de 50 Ω au bout des câbles coaxiaux ?
+
+- **Organisation (poste tournant) :** un seul banc GBF + oscilloscope ; chaque binôme y passe environ 10 min pour les mesures marquées **(au banc)**, les autres avancent la version Falstad.
+- **Matériel du banc (1 par classe) :** GBF Feeltech FY6900, oscilloscope Rigol DS1054Z.
+- **Matériel par étudiant :** 1 sonde et 1 câble BNC (le câble BNC court sert à relier le GBF au T).
+- **Composants à prévoir :** 1 câble coaxial 50 Ω (RG58) de **20 m** muni de fiches BNC (ou deux câbles de 10 m et un raccord BNC femelle-femelle), 1 câble coaxial « mystère » de longueur inconnue des étudiants (par exemple 10 m), 1 adaptateur BNC en T, 1 bouchon BNC 50 Ω, 1 bouchon de court-circuit BNC (ou une fiche BNC dont l'âme est soudée à la masse), 1 adaptateur BNC femelle vers bornier à vis, résistances 22 Ω et 100 Ω (1/4 W).
+- **Sécurité :** aucun risque (tensions ≤ 4 V).
+
+<p align="center">
+<img src="figures/cours/figure_43_ligne_adaptee_vs_ligne_non_adaptee.svg" width="460" alt="Ligne adaptée et ligne non adaptée"/>
+</p>
+
+<p align="center"><em>Ligne adaptée (une seule onde, vers la charge) et ligne non adaptée (une onde réfléchie revient vers la source).</em></p>
+
+**Montage du banc (décrit en texte) :** GBF (voie CH1) → câble BNC court → T BNC branché directement sur l'entrée CH1 de l'oscilloscope → câble coaxial de 20 m → extrémité de la ligne (laissée ouverte, court-circuitée, ou fermée sur une résistance). On observe la tension **à l'entrée de la ligne**.
+
+**Principe :** le GBF a une résistance interne de 50 Ω. Au moment du front montant, la ligne se comporte comme une résistance égale à son impédance caractéristique $Z_C = 50$ Ω : l'entrée monte d'abord à la **moitié** de la tension à vide $E$ du GBF. Ce front parcourt la ligne, se réfléchit au bout avec le coefficient $\rho$, et revient à l'entrée après un aller-retour, où il s'ajoute : le palier final vaut $\dfrac{E}{2}(1 + \rho)$.
+
+**Déroulé détaillé**
+
+1. **(15 min) Préparation.** Câble RG58 : coefficient de vélocité $k \approx 0{,}66$.
+   - ❓ *Q1. Calculez la célérité attendue $v = k \times c_0$ dans le câble, puis la durée d'un aller-retour sur 20 m.*
+   - ❓ *Q2. Calculez $\rho = \dfrac{R_{CH} - Z_C}{R_{CH} + Z_C}$ pour une ligne ouverte, en court-circuit, fermée sur 50 Ω, sur 100 Ω et sur 22 Ω.*
+   - ❓ *Q3. Avec $E = 4$ V, calculez dans chaque cas le palier initial $E/2$ et le palier final $\dfrac{E}{2}(1 + \rho)$. Reportez vos prévisions dans la ligne « calculé » du tableau.*
+
+2. **(au banc, 10 min) Observations.** Régler le GBF : signal carré, 500 kHz, amplitude 4 V crête à crête, décalage 2 V (le signal va de 0 à 4 V à vide). Oscilloscope : voie 1, 1 V/div, base de temps 100 ns/div, déclenchement sur front montant.
+   - Ligne **ouverte** : observer le palier à 2 V puis la marche jusqu'à 4 V. Mesurer aux curseurs la durée $\Delta t$ du premier palier.
+   - Visser successivement au bout de la ligne : le **court-circuit**, le **bouchon 50 Ω**, puis la résistance **100 Ω** et la résistance **22 Ω** sur l'adaptateur à bornier. Relever les deux paliers.
+
+   | Terminaison | Ouverte | Court-circuit | 50 Ω | 100 Ω | 22 Ω |
+   |---|---|---|---|---|---|
+   | Palier initial (V) | | | | | |
+   | Palier final calculé (V) | | | | | |
+   | Palier final mesuré (V) | | | | | |
+   | $\rho$ mesuré | | | | | |
+
+   - Remplacer le câble de 20 m par le câble **mystère**, ligne ouverte, et mesurer la durée $\Delta t'$ du premier palier : $\Delta t'$ = ________ ns.
+
+3. **(30 min) Exploitation (à la place).**
+   - ❓ *Q4. À partir de $\Delta t$ (ligne ouverte, 20 m), calculez la célérité $v$ dans le câble et le coefficient de vélocité $k = v/c_0$. Comparez à la Q1.*
+   - ❓ *Q5. Calculez $\rho$ mesuré pour chaque terminaison avec $\rho = \dfrac{V_{final} - V_{initial}}{V_{initial}}$. Comparez aux valeurs de la Q2.*
+   - ❓ *Q6. Avec le bouchon 50 Ω, la tension reste-t-elle à 2 V ? Que signifie « ligne adaptée » sur l'oscillogramme ?*
+   - ❓ *Q7. Avec le câble mystère, calculez sa longueur. C'est exactement le principe du réflectomètre (TDR) : expliquez comment il localise une coupure et la distingue d'un court-circuit.*
+
+4. **(15 min) Bilan.**
+   - ❓ *Q8. Pourquoi les réseaux en câble coaxial (anciens réseaux Ethernet 10BASE2, antennes, instruments de mesure) imposent-ils une terminaison de 50 Ω au bout de la ligne ? Que se passerait-il pour des données numériques sans ce bouchon ?*
+   - ❓ *Q9. Pour un câble de 1 m, la durée d'un aller-retour serait d'environ 10 ns. Pourquoi ne voit-on pas de réflexion dans les montages habituels de TP, à 1 kHz, avec des câbles de 1 m ?*
+
+- **Livrable :** croquis des oscillogrammes (ouverte, court-circuit, adaptée), tableau complété, longueur du câble mystère, réponses Q1 à Q9.
+- **⚙ Si le banc n'est pas disponible :** basculer sur la version Falstad ci-dessous.
+
+<a id="sec-version-simulee-du-tp-3-3-falstad"></a>
+
+#### Version simulée du TP 3.3 (Falstad)
+
+- **Principe :** Falstad possède un composant « ligne de transmission » dont on règle le retard et l'impédance caractéristique. Les questions Q1 à Q9 restent valables ; seule l'échelle de temps change (voir l'étape 1).
+
+**Étape 0 (5 min) : préparation.** Répondre aux questions Q1 à Q3.
+
+**Étape 1 (20 min) : construire la ligne.**
+
+1. **Fichier → Nouveau circuit vide**.
+2. Placer la source : **Dessiner → Entrées et Générateurs → Ajouter Générateur Signal Carre** (source à une seule borne, référencée à la masse). Double-clic : **Fréquence** 20 Hz, **Amplitude** 2 V, **Décalage continu** 2 V : le signal va de 0 à 4 V.
+3. Placer la résistance interne du générateur : **Dessiner → Ajouter Résistance**, réglée à **50 Ω**, à la suite de la source.
+4. Placer la ligne : **Dessiner → Composants Passifs → Ajouter Ligne de transmission** (ou touche **/** puis taper « ligne »). Elle se dessine comme deux conducteurs parallèles, avec deux bornes à chaque extrémité. Relier la borne haute de gauche à la résistance de 50 Ω.
+5. Placer une masse : **Dessiner → Sorties et Etiquettes → Ajouter Masse**, et y relier la borne basse de gauche de la ligne (le blindage du câble).
+6. Double-clic sur la ligne : régler **Impédance caractéristique** à **50 Ω** et **Retard** à **5 ms** (attention à l'unité indiquée dans la fenêtre : si elle est en nanosecondes, saisir 5000000). Remarque : Falstad calcule par pas de quelques microsecondes ; on « allonge » donc artificiellement la ligne (5 ms au lieu de 100 ns). Le comportement est identique, seule l'échelle de temps change.
+7. Placer **Dessiner → Sorties et Etiquettes → Ajouter Voltmètre/Sonde Oscilloscope** entre l'entrée de la ligne (borne haute de gauche) et la masse, puis clic droit sur la sonde → **Voir dans un nouvel oscilloscope**.
+
+**Étape 2 (25 min) : les terminaisons.**
+
+1. **Ligne ouverte :** ne rien brancher au bout. Observer l'oscillogramme : palier à 2 V, puis 4 V. Mesurer la durée du premier palier en survolant la courbe (le temps et la tension s'affichent). Vérifier qu'elle vaut deux fois le retard réglé.
+2. **Court-circuit :** relier les deux bornes de droite par un fil (**Dessiner → Ajouter Fils**). Relever les paliers.
+3. **Ligne adaptée :** remplacer le fil par une résistance de **50 Ω**. Puis essayer **100 Ω** et **22 Ω**.
+4. Remplir le tableau (en remplaçant 100 ns par 5 ms dans le raisonnement) et répondre aux questions Q5 et Q6.
+
+**Étape 3 (20 min) : localiser un défaut.**
+
+1. Un camarade règle en secret le retard de la ligne (entre 1 ms et 10 ms) et laisse la ligne ouverte. Mesurer la durée du premier palier et en déduire le retard réglé.
+2. Sachant qu'en réalité le câble a une célérité de $2{,}0 \times 10^8$ m/s et que 5 ms de Falstad représentent 100 ns réelles, convertir ce retard en une longueur de câble réelle. Répondre à la Q7.
+
+**Étape 4 (15 min) : bilan.** Répondre aux questions Q4 (avec la durée de l'étape 2 convertie en temps réel), Q8 et Q9.
+
+- **Livrable :** captures d'écran annotées (ouverte, court-circuit, adaptée), tableau complété, réponses Q1 à Q9.
+
+---
+
+<a id="sec-tp-3-4-mesurer-la-celerite-du-son-avec-un-arduino"></a>
+
+### TP 3.4 : Mesurer la célérité du son avec un Arduino `BTS1` `BTS2`
+
+> **Durée :** 2 h · **Mode :** TP informatisé, carte Arduino et capteur HC-SR04 (version simulée ci-dessous : Wokwi et relevés fournis) · **Cours :** Chapitre 3, §3.1, §3.2 et §3.4 (célérité, ondes sonores) ; Chapitre 2, §2.1 (incertitudes de type A et B, compatibilité) · **Prérequis :** TP 2.2 (Arduino, moniteur série) ; TP 3.2 conseillé
+> **Objectif :** mesurer avec un capteur HC-SR04 la durée de l'aller-retour d'une salve d'ultrasons à plusieurs distances, en déduire la célérité du son par régression linéaire avec son incertitude, et connaître les limites d'un télémètre à ultrasons.
+
+**Problématique :** un radar de recul, ou un détecteur de présence fixé au-dessus de la porte d'une salle serveurs, ne mesure pas directement une distance : il chronomètre l'écho d'une salve d'ultrasons et utilise une valeur supposée de la célérité du son. Un module HC-SR04 coûte quelques euros : peut-on s'en servir pour mesurer cette célérité, avec quelle incertitude, et dans quelles situations se trompe-t-il ?
+
+- **Matériel (à confirmer), par binôme (× 8) :** 1 carte Arduino Uno (ou compatible) et son câble USB, 1 capteur à ultrasons HC-SR04, 4 câbles Dupont mâle-femelle, 1 règle de 1 m ou un mètre ruban, 1 obstacle plan et rigide (livre, carton d'au moins 20 cm × 30 cm), 1 ordinateur avec l'IDE Arduino (et, si possible, Python 3 avec `numpy` et `matplotlib`, ou un tableur). En option : 1 capteur de température (DS18B20 ou DHT11) ; à défaut, un thermomètre d'ambiance pour la salle.
+- **Sécurité :** la carte est alimentée par le port USB (5 V) : aucun risque électrique. Débrancher le câble USB avant toute modification du câblage ; ne jamais relier la broche 5V à la broche GND. Les ultrasons à 40 kHz du module sont inaudibles et sans danger.
+
+**Principe du HC-SR04 :**
+
+1. La carte envoie une impulsion d'au moins 10 µs sur la broche **Trig** du module.
+2. Le module émet alors une salve de 8 périodes d'ultrasons à 40 kHz par sa capsule émettrice (marquée T).
+3. La broche **Echo** passe à l'état haut et y reste jusqu'à ce que la capsule réceptrice (marquée R) détecte l'écho renvoyé par l'obstacle.
+4. La durée $t$ de l'état haut d'Echo est donc la durée de l'aller-retour de l'onde, qui a parcouru $2d$ :
+
+$2d = v \times t \qquad \text{soit} \qquad d = \dfrac{v \times t}{2}$
+
+La fonction Arduino `pulseIn(ECHO, HIGH)` renvoie cette durée en microsecondes.
+
+**Déroulé détaillé**
+
+1. **(15 min) Préparation.**
+   - ❓ *Q1. Pourquoi la distance vaut-elle $d = v\,t/2$ et non $v\,t$ ? Avec $v$ = 343 m/s (air à 20 °C), calculez la durée $t$ attendue pour un obstacle à 50 cm.*
+   - ❓ *Q2. Relevez la température θ de la salle et calculez la célérité attendue $v = 331{,}3 + 0{,}606\,\theta$ (θ en °C, $v$ en m/s).*
+   - ❓ *Q3. La salve dure 8 périodes à 40 kHz : calculez sa durée. Tant que l'émetteur « chante », le récepteur ne peut pas distinguer l'écho : quelle distance minimale peut-on espérer mesurer ? La notice annonce une portée de 2 cm à 4 m : calculez la durée de l'écho pour un obstacle à 4 m et justifiez la pause de 200 ms entre deux mesures dans le programme ci-dessous.*
+
+2. **(20 min) Câblage et programme.** Câbler **câble USB débranché**, avec les câbles Dupont :
+
+   | Broche du HC-SR04 | Broche de l'Arduino | Rôle |
+   |---|---|---|
+   | VCC | 5V | alimentation du module (5 V obligatoire) |
+   | Trig | 9 | ordre de mesure (sortie de la carte) |
+   | Echo | 10 | durée de l'écho (entrée de la carte) |
+   | GND | GND | masse commune |
+
+   Surélever le capteur d'une dizaine de centimètres (boîte, pile de livres) au bord de la table, capsules dirigées vers l'obstacle, pour que la table ne renvoie pas d'écho. Le zéro des distances est la face avant des capsules ; poser la règle le long de l'axe du capteur.
+
+   Brancher le câble USB, ouvrir l'IDE Arduino, choisir la carte et le port (menu **Outils**), puis téléverser le programme suivant (**Croquis → Téléverser**) :
+
+```cpp
+// TP 3.4 : mesure de la durée d'écho d'un capteur HC-SR04
+const int TRIG = 9;          // broche reliée à Trig
+const int ECHO = 10;         // broche reliée à Echo
+const float V_SON = 343.0;   // célérité supposée (m/s), utilisée pour afficher la distance
+
+void setup() {
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+  digitalWrite(TRIG, LOW);
+  Serial.begin(9600);
+  Serial.println("duree_us;distance_cm");
+}
+
+void loop() {
+  // 1. impulsion de 10 µs sur Trig : le module émet une salve à 40 kHz
+  digitalWrite(TRIG, LOW);
+  delayMicroseconds(2);
+  digitalWrite(TRIG, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(TRIG, LOW);
+
+  // 2. durée de l'état haut d'Echo = durée de l'aller-retour (en µs)
+  //    30 000 µs au maximum : au-delà, pulseIn renvoie 0 (pas d'écho)
+  unsigned long t = pulseIn(ECHO, HIGH, 30000UL);
+
+  // 3. affichage dans le moniteur série : durée, puis distance
+  if (t == 0) {
+    Serial.println("pas d'echo");
+  } else {
+    float d = V_SON * t * 1e-6 / 2 * 100;   // distance en cm
+    Serial.print(t);
+    Serial.print(";");
+    Serial.println(d, 1);
+  }
+  delay(200);   // pause : laisse s'éteindre les échos de la salve précédente
+}
+```
+
+   Ouvrir le **Moniteur série** (loupe en haut à droite, 9600 bauds) : une ligne « durée;distance » s'affiche toutes les 200 ms. Placer l'obstacle à 30 cm et vérifier que la distance affichée est voisine de 30 cm.
+   - ❓ *Q4. Dans la ligne qui calcule `d`, expliquez le rôle de chaque facteur : 343, `1e-6`, la division par 2 et la multiplication par 100.*
+
+3. **(15 min) Mesures répétées : incertitude de type A.** Placer l'obstacle à $d$ = 50,0 cm, bien perpendiculaire à l'axe du capteur. Relever 10 durées successives dans le moniteur série.
+
+   | Mesure n° | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+   |---|---|---|---|---|---|---|---|---|---|---|
+   | $t$ (µs) | | | | | | | | | | |
+
+   - ❓ *Q5. Calculez la moyenne $\bar{t}$, l'écart-type $s$ et l'incertitude-type de type A $u_A = s/\sqrt{10}$. La résolution de `pulseIn` est de 1 µs : calculez $u_B = 1/\sqrt{12}$ µs. Quelle contribution domine ? Écrivez le résultat $t = \bar{t} \pm U$ avec $u = \sqrt{u_A^2 + u_B^2}$ et $U = 2u$.*
+   - ❓ *Q6. Calculez la célérité $v = 2d/\bar{t}$ à partir de cette seule distance et comparez-la à la valeur attendue de la Q2. L'écart s'explique-t-il par l'incertitude sur $\bar{t}$ ?*
+
+4. **(25 min) Série de distances : la pente donne la célérité.** Pour chaque distance, relever cinq durées successives et noter leur moyenne.
+
+   | $d$ (cm) | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 |
+   |---|---|---|---|---|---|---|---|---|---|---|
+   | $2d$ (m) | | | | | | | | | | |
+   | $t$ moyenne (µs) | | | | | | | | | | |
+
+   **Au tableur :** saisir $2d$ (en m) et $t$ (en s), tracer le nuage de points $t$ en fonction de $2d$ (**Insertion → Graphique → Nuage de points**), puis ajouter une **courbe de tendance linéaire** avec son équation. Pour les incertitudes, sélectionner une zone vide de 2 lignes × 2 colonnes, taper `=DROITEREG(plage_des_t;plage_des_2d;VRAI;VRAI)` et valider avec **Ctrl+Maj+Entrée** : la première ligne donne la pente $a$ et l'ordonnée à l'origine $b$, la deuxième ligne leurs incertitudes-types $u(a)$ et $u(b)$. **Ou en Python :**
+
+```python
+# TP 3.4 : régression t = a × (2d) + b et incertitude sur la pente
+import numpy as np
+import matplotlib.pyplot as plt
+
+d = np.array([10, 20, 30, 40, 50, 60, 70, 80, 90, 100]) / 100   # distances (m)
+t = np.array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]) * 1e-6            # remplacer les 0 par vos durées moyennes (µs)
+
+x = 2 * d
+(a, b), cov = np.polyfit(x, t, 1, cov=True)
+ua = np.sqrt(cov[0, 0])              # incertitude-type sur la pente
+v = 1 / a
+uv = v * ua / a                      # quotient : incertitudes relatives égales
+print(f"a = {a*1e6:.1f} µs/m   b = {b*1e6:.1f} µs   u(a) = {ua*1e6:.2f} µs/m")
+print(f"v = {v:.1f} m/s   u(v) = {uv:.2f} m/s   U(v) = {2*uv:.2f} m/s")
+
+plt.plot(x, t * 1e6, "o", label="mesures")
+plt.plot(x, (a * x + b) * 1e6, label="droite de régression")
+plt.xlabel("2d (m)")
+plt.ylabel("t (µs)")
+plt.legend()
+plt.show()
+```
+
+   - ❓ *Q7. Les points sont-ils alignés ? La droite passe-t-elle par l'origine ? Donnez la pente $a$ et l'ordonnée à l'origine $b$ avec leurs unités.*
+   - ❓ *Q8. Le récepteur ne réagit qu'après une ou deux périodes de l'écho, ce qui ajoute un retard constant $t_0$ : $t = \dfrac{2d}{v} + t_0$. Montrez que la pente vaut $1/v$ quelle que soit la valeur de $t_0$. Calculez $v$. Que représente $b$ ?*
+   - ❓ *Q9. Pour un quotient, les incertitudes relatives se composent (cours, §2.1) : ici $\dfrac{u(v)}{v} = \dfrac{u(a)}{a}$. Calculez $u(v)$, puis $U(v) = 2u(v)$, et écrivez le résultat $v = \ldots \pm \ldots$ m/s. Est-il compatible avec la valeur attendue de la Q2 ? Calculez l'écart relatif.*
+   - ❓ *Q10. Donnez deux raisons pour lesquelles la célérité tirée de la pente est plus fiable que celle de la Q6.*
+
+5. **(15 min) Limites du capteur.** Réaliser les essais du tableau en observant le moniteur série.
+
+   | Essai | Ce qu'affiche le moniteur série (stable, instable, « pas d'echo », valeur fausse) |
+   |---|---|
+   | Obstacle perpendiculaire à l'axe, à 50 cm (référence) | |
+   | Obstacle incliné d'environ 45°, à 50 cm | |
+   | Obstacle à 1 cm, puis à 3 cm du capteur | |
+   | Surface absorbante à 50 cm (pull en laine, mousse, rideau) | |
+   | Petit objet (stylo vertical) à 50 cm dans l'axe, puis décalé de 15 cm sur le côté | |
+   | Une personne debout à 1 m | |
+
+   - ❓ *Q11. Expliquez chaque observation du tableau en vous aidant de la figure ci-dessous : réflexion sur une surface inclinée, durée de la salve (Q3), absorption, ouverture du faisceau (la notice annonce un cône d'environ 15°).*
+   - ❓ *Q12. Le programme utilise toujours $v$ = 343 m/s. Dans l'allée chaude d'une salle serveurs, l'air est à 40 °C. Quelle distance le capteur affiche-t-il pour un obstacle situé réellement à 2,00 m ? Quelle est l'erreur ? Proposez une correction. (Option : si vous disposez d'un capteur de température, modifiez le programme pour calculer la célérité à partir de θ, voir l'extrait ci-dessous, et refaites la mesure à 50 cm.)*
+
+<p align="center">
+<img src="figures/cours/figure_38_reflexion_et_refraction_d_une_onde_sur_un_obstacle.svg" width="420" alt="Réflexion d'une onde sur un obstacle"/>
+</p>
+
+<p align="center"><em>Réflexion d'une onde sur un obstacle : l'onde réfléchie repart avec un angle égal à l'angle d'incidence. Si l'obstacle est incliné, l'écho ne revient pas vers le capteur.</em></p>
+
+```cpp
+// Option : célérité corrigée par la température (capteur DHT11, bibliothèque « DHT sensor library » d'Adafruit)
+// câblage du DHT11 : VCC sur 5V, GND sur GND, DATA sur la broche 2
+#include <DHT.h>
+DHT dht(2, DHT11);
+// dans setup(), ajouter : dht.begin();
+// dans loop(), avant le calcul de la distance :
+float theta = dht.readTemperature();        // température de l'air (°C)
+float v = 331.3 + 0.606 * theta;            // célérité corrigée (m/s)
+// puis remplacer V_SON par v dans le calcul de d, et afficher aussi theta
+```
+
+6. **(15 min) Application CIEL et bilan.**
+   - ❓ *Q13. Détection de présence : un HC-SR04 est fixé au plafond, au-dessus de la porte d'une salle serveurs, à 2,20 m du sol. Calculez la durée de l'écho quand le passage est libre, puis quand une personne de 1,80 m passe dessous. Proposez un seuil de durée pour enregistrer un « passage » dans le journal d'accès. La notice conseille au moins 60 ms entre deux mesures : combien de mesures par seconde peut-on faire, et est-ce suffisant pour voir passer quelqu'un ?*
+   - ❓ *Q14. Radar de recul : le bip s'accélère quand l'obstacle se rapproche. Décrivez en deux ou trois phrases la logique du programme. Pourquoi un tel radar détecte-t-il mal un poteau fin ou un grillage ?*
+
+- **Livrable :** schéma ou photo du câblage, programme utilisé, les trois tableaux complétés, le graphique $t = f(2d)$ avec la droite de régression, le résultat $v = \ldots \pm \ldots$ m/s, réponses Q1 à Q14.
+- **⚙ Si les cartes ou les capteurs manquent :** basculer sur la version simulée ci-dessous.
+
+<a id="sec-version-simulee-du-tp-3-4-wokwi-et-releves-fournis"></a>
+
+#### Version simulée du TP 3.4 (Wokwi et relevés fournis)
+
+- **Principe :** Wokwi (**wokwi.com**) est un simulateur d'Arduino gratuit, en ligne et sans installation, qui contient le capteur HC-SR04 : on y câble le même montage et on y exécute le même programme. Le simulateur calcule la durée de l'écho à partir de la distance choisie, sans aucune dispersion : il valide le câblage et le programme, mais ne remplace pas une vraie mesure. Pour les incertitudes et les limites du capteur, on exploite les relevés fournis plus bas (capteur réel, salle à 21 °C). Les questions Q1 à Q14 sont les mêmes.
+
+**Étape 0 (15 min) : préparation.** Répondre aux questions Q1 à Q3 (avec θ = 21 °C).
+
+**Étape 1 (20 min) : câblage et programme dans Wokwi.**
+
+1. Ouvrir **wokwi.com** et choisir **Arduino Uno** pour démarrer un nouveau projet (l'interface est en anglais ; un compte n'est utile que pour sauvegarder son projet).
+2. Ajouter le capteur : bouton **+** (*Add a new part*) au-dessus du schéma, puis rechercher **HC-SR04** (*Ultrasonic Distance Sensor*).
+3. Câbler comme dans le tableau de l'étape 2 : cliquer sur une broche du capteur, puis sur la broche de l'Arduino, pour tirer un fil (VCC → 5V, TRIG → 9, ECHO → 10, GND → GND).
+4. Remplacer tout le contenu de l'onglet `sketch.ino` par le programme du TP, puis lancer la simulation (bouton ▶ vert). Le moniteur série s'affiche sous le schéma.
+5. Pendant la simulation, cliquer sur le capteur : un curseur permet de régler la distance de l'obstacle. La régler à 30 cm et vérifier la distance affichée. Répondre à la Q4.
+
+**Étape 2 (15 min) : série de distances dans Wokwi.** Régler successivement la distance de 10 à 100 cm et relever la durée affichée. Tracer $t$ en fonction de $2d$ et déterminer la pente (tableur ou Python, voir l'étape 4 du TP). Les durées changent-elles d'une mesure à l'autre ? La droite passe-t-elle par l'origine ? La célérité obtenue est celle que le simulateur utilise dans ses calculs : un simulateur ne « mesure » rien.
+
+**Étape 3 (30 min) : exploitation de relevés réels.** Relevés typiques obtenus avec un HC-SR04 et une carte Arduino Uno, dans une salle à 21 °C, avec le programme du TP :
+
+- dix durées successives, obstacle à 50,0 cm (en µs) : 2943 ; 2927 ; 2941 ; 2936 ; 2944 ; 2937 ; 2940 ; 2938 ; 2939 ; 2939 ;
+- moyennes de cinq durées pour chaque distance :
+
+| $d$ (cm) | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| $t$ (µs) | 628 | 1200 | 1774 | 2361 | 2938 | 3520 | 4105 | 4684 | 5272 | 5843 |
+
+1. Répondre aux questions Q5 et Q6 avec la première série.
+2. Saisir le tableau dans un tableur, ou dans le programme Python de l'étape 4 avec la ligne `t = np.array([628, 1200, 1774, 2361, 2938, 3520, 4105, 4684, 5272, 5843]) * 1e-6`. Tracer $t$ en fonction de $2d$, déterminer $a$, $b$ et $u(a)$, puis répondre aux questions Q7 à Q10.
+
+**Étape 4 (20 min) : limites et application.** Observations typiques avec le même capteur :
+
+| Essai | Ce qu'affiche le moniteur série |
+|---|---|
+| Obstacle perpendiculaire à 50 cm (référence) | 2935 à 2945 µs, stable |
+| Obstacle incliné d'environ 45° | « pas d'echo », ou des durées de 6000 à 20 000 µs qui changent à chaque mesure |
+| Obstacle à 1 cm | valeurs instables, sans rapport avec la distance réelle |
+| Obstacle à 3 cm | 205 à 230 µs, à peu près stable |
+| Pull en laine à 50 cm | durées dispersées (2930 à 3010 µs) et quelques « pas d'echo » |
+| Stylo vertical à 50 cm dans l'axe | environ 2940 µs, avec des sauts |
+| Stylo décalé de 15 cm sur le côté | environ 11 000 µs : écho du mur de la salle, situé à 1,9 m |
+| Personne debout à 1 m | 5800 à 5900 µs, un peu instable |
+
+Répondre aux questions Q11 à Q14 (pour la Q12, sans l'option du capteur de température).
+
+- **Livrable :** captures d'écran de Wokwi (câblage, moniteur série), tableaux complétés, graphique $t = f(2d)$ avec la droite de régression (relevés réels), résultat $v = \ldots \pm \ldots$ m/s, réponses Q1 à Q14.
+
+---
+
 <div style="page-break-after: always;"></div>
 
 &nbsp;
@@ -928,6 +2696,10 @@ Le circuit à reproduire est celui de l'atelier 4 option A : une source de tensi
 3. **Placer la résistance** : **Ajouter une résistance** (*Draw → Passive Components → Add Resistor*). La tracer **horizontalement**, à partir de la borne du haut de la source.
 4. **Régler la résistance** : clic droit → **Éditer…** → **1000 Ω** (1 kΩ).
 5. **Placer la diode** : **Ajouter une diode**. La tracer horizontalement, dans le prolongement de la résistance. Vérifier le sens : la barre du symbole (la cathode) doit être **à droite**, côté masse. Si le sens est inversé, clic droit → **Inverser les bornes** , ou refaire le tracé dans l'autre sens.
+
+   **Choisir le modèle de la diode** : clic droit sur la diode → **Éditer…** → dans la liste **Modèle** (*Model*), choisir **1N4148**, puis valider. Ne modifier aucun autre paramètre.
+
+   > **Pourquoi ce réglage ?** Le modèle proposé par défaut (*default*) est une diode générique, beaucoup moins raide qu'une vraie diode au silicium : il donne environ 0,45 V à 1 mA et fait apparaître un « seuil » vers 0,4 V. Le modèle **1N4148** reprend les paramètres de la diode réelle du TP matériel : environ 0,6 V à 1 mA, comme annoncé en cours.
 6. **Placer la masse** : **Ajouter une masse** . La placer sous la borne du bas de la source, et la relier.
 7. **Fermer le circuit** : **Ajouter un fil**w pour relier la sortie de la diode jusqu'à la masse.
 8. **Vérifier avant de lancer** : le circuit doit former une boucle fermée unique : source → résistance → diode → masse → source. Aucun fil ne doit rester en l'air.
@@ -1041,6 +2813,274 @@ On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et
 
 ---
 
+<a id="sec-tp-4-2-reponse-indicielle-d-un-circuit-rc"></a>
+
+### TP 4.2 : Réponse indicielle d'un circuit RC `BTS1` `BTS2`
+
+> **Durée :** 1 h 30 · **Mode :** matériel en poste tournant (version Falstad ci-dessous) · **Cours :** Chapitre 4, §4.3 et §4.6 (système du premier ordre, constante de temps, temps de réponse à 5 %) · **Prérequis :** TP 3.1
+> **Objectif :** relever la réponse d'un circuit RC à un échelon de tension, mesurer sa constante de temps par deux méthodes et vérifier que le temps de réponse à 5 % vaut $3\tau$.
+
+**Problématique :** quand on appuie sur le bouton reset d'une carte, quand on allume un serveur ou qu'on chauffe un local, la grandeur de sortie n'atteint pas sa valeur finale instantanément. Comment caractériser cette « lenteur » par un seul nombre, et à partir de quand peut-on considérer que le régime permanent est atteint ?
+
+- **Organisation (poste tournant) :** un seul banc GBF + oscilloscope ; le circuit RC est câblé sur une plaque d'essai à côté du banc. Chaque binôme y passe environ 10 min pour les mesures marquées **(au banc)**, les autres avancent la version Falstad.
+- **Matériel du banc (1 par classe) :** GBF Feeltech FY6900, oscilloscope Rigol DS1054Z, 1 plaque d'essai.
+- **Matériel par étudiant :** 1 sonde et 1 câble BNC.
+- **Composants à prévoir :** résistance 10 kΩ (1/4 W, 5 %), condensateurs film 100 nF et 47 nF (non polarisés, tolérance 5 ou 10 %), 1 câble BNC-pinces crocodiles, fils de câblage.
+- **Sécurité :** aucun risque (tension ≤ 5 V).
+
+<p align="center">
+<img src="figures/TP/schema_circuit_rc_gbf_oscillo.svg" width="320" alt="Circuit RC alimenté par le GBF, entrée sur CH1 et tension du condensateur sur CH2"/>
+</p>
+
+<p align="center"><em>Circuit RC série : tension d'entrée sur la voie 1, tension aux bornes du condensateur sur la voie 2.</em></p>
+
+**Rappels :** pour un échelon de 0 à $E$, la tension du condensateur vaut $u_C(t) = E\left(1 - e^{-t/\tau}\right)$ avec $\tau = RC$. À $t = \tau$, $u_C$ atteint 63 % de $E$ ; à $t = 3\tau$, elle atteint 95 % de $E$.
+
+**Déroulé détaillé**
+
+1. **(15 min) Préparation.** R = 10 kΩ, C = 100 nF, échelon de 0 à $E = 5$ V.
+   - ❓ *Q1. Calculez la constante de temps $\tau = RC$. Calculez la valeur de $u_C$ à $t = \tau$ et à $t = 3\tau$.*
+   - ❓ *Q2. Un signal carré est une suite d'échelons montants et descendants. Pour que le condensateur ait le temps de se charger complètement (au moins $5\tau$) pendant chaque demi-période, quelle fréquence maximale faut-il choisir ? Vérifiez que 50 Hz convient.*
+   - ❓ *Q3. Complétez la ligne « calculé » du tableau de l'étape 3 avec $u_C(t) = 5\left(1 - e^{-t/\tau}\right)$.*
+
+2. **(au banc, 4 min) Réglages.** GBF : signal carré, 50 Hz, amplitude 5 V crête à crête, décalage 2,5 V (le signal va de 0 à 5 V). Oscilloscope : voie 1 sur l'entrée du circuit, voie 2 aux bornes du condensateur, 1 V/div pour les deux voies, base de temps 1 ms/div, déclenchement sur la voie 1, front montant. Décaler le déclenchement pour placer le front montant sur le bord gauche de l'écran.
+
+3. **(au banc, 6 min) Relevé de la charge.** Avec les curseurs (touche **Cursor**, mode manuel), relever $u_C$ aux instants indiqués après le front montant, puis mesurer directement :
+   - l'instant où $u_C$ atteint 63 % de 5 V, soit 3,16 V : c'est $\tau$ ;
+   - l'instant où $u_C$ atteint 95 % de 5 V, soit 4,75 V : c'est $t_{R5\%}$.
+
+   | $t$ (ms) | 0 | 0,5 | 1 | 2 | 3 | 4 | 5 |
+   |---|---|---|---|---|---|---|---|
+   | $u_C$ calculée (V) | | | | | | | |
+   | $u_C$ mesurée (V) | | | | | | | |
+
+   | Grandeur | $\tau$ (à 63 %) | $t_{R5\%}$ (à 95 %) | $t_{R5\%} / \tau$ |
+   |---|---|---|---|
+   | Valeur mesurée | | | |
+
+   - Remplacer le condensateur de 100 nF par celui de **47 nF** et mesurer à nouveau $\tau$ : $\tau'$ = ________ ms.
+
+4. **(30 min) Exploitation (à la place).**
+   - ❓ *Q4. Tracez $u_C(t)$ à partir du tableau (papier millimétré ou tableur). Tracez la tangente à l'origine : elle coupe l'asymptote $u_C = 5$ V à l'instant $t = \tau$. Comparez cette deuxième mesure de $\tau$ à celle des 63 %.*
+   - ❓ *Q5. Comparez $\tau$ mesurée à $RC$ calculée (écart relatif). L'écart est-il compatible avec la tolérance du condensateur (± 10 %) ?*
+   - ❓ *Q6. Le rapport $t_{R5\%}/\tau$ vaut-il bien environ 3 ?*
+   - ❓ *Q7. Avec 47 nF, la constante de temps a-t-elle été divisée par environ 2 ? Que doit-on changer pour rendre un système du premier ordre plus rapide ?*
+   - ❓ *Q8. Observez la décharge (front descendant du carré) : à quelle tension $u_C$ est-elle arrivée au bout de $\tau$ ? Justifiez par le calcul (37 % de 5 V).*
+
+5. **(15 min) Bilan et lien avec l'asservissement.**
+   - ❓ *Q9. Le circuit RC présente-t-il un dépassement ? Quel type de système (cours §4.7) reconnaît-on à une réponse sans dépassement avec une tangente à l'origine non nulle ?*
+   - ❓ *Q10. Un circuit de reset de microcontrôleur utilise R = 10 kΩ et C = 1 µF. Combien de temps faut-il pour que la tension atteigne 95 % de sa valeur finale ?*
+
+- **Livrable :** tableaux complétés, courbe $u_C(t)$ avec la tangente à l'origine et les points à 63 % et 95 % repérés, réponses Q1 à Q10.
+- **⚙ Si le banc n'est pas disponible :** basculer sur la version Falstad ci-dessous.
+
+<a id="sec-version-simulee-du-tp-4-2-falstad"></a>
+
+#### Version simulée du TP 4.2 (Falstad)
+
+- **Principe :** construire le même circuit RC dans Falstad avec un générateur de signal carré et l'oscilloscope intégré. Les questions Q1 à Q10 et les tableaux sont les mêmes.
+
+**Étape 0 (15 min) : préparation.** Répondre aux questions Q1 à Q3.
+
+**Étape 1 (15 min) : construire le circuit.**
+
+1. **Fichier → Nouveau circuit vide**.
+2. Placer la source : **Dessiner → Entrées et Générateurs → Ajouter Générateur de Tension (2 terminaux)**, tracée verticalement à gauche. Double-clic : choisir la forme d'onde **Carré**, **Fréquence** 50 Hz, **Tension maximale** 2,5 V, **Décalage continu** 2,5 V : le signal va de 0 à 5 V.
+3. Placer R : **Dessiner → Ajouter Résistance** (raccourci **r**), horizontalement depuis la borne + de la source. Double-clic : **10k**.
+4. Placer C : **Dessiner → Composants Passifs → Ajouter Condensateur** (raccourci **c**), verticalement entre la fin de R et la borne − de la source. Double-clic : **100n** (100 nF).
+5. Fermer le circuit avec **Dessiner → Ajouter Fils** (raccourci **w**).
+6. Clic droit sur le condensateur → **Voir dans un nouvel oscilloscope**. Faire de même sur la source : sa tension s'affiche dans un deuxième oscilloscope sous le premier. On peut aussi regrouper les deux courbes sur un même écran (clic droit sur un oscilloscope → **Combiner**, si votre version le propose).
+
+**Étape 2 (25 min) : relevé de la charge.**
+
+1. Ralentir la simulation avec le curseur **Vitesse de simulation** du panneau de droite, puis cliquer sur **Arrêter** juste après un front montant pour figer l'écran.
+2. Survoler la courbe de $u_C$ : Falstad affiche le temps et la tension au point survolé. Relever $u_C$ aux instants 0,5 ms, 1 ms, 2 ms… après le front montant, puis repérer les instants où $u_C$ vaut 3,16 V et 4,75 V.
+3. Remplir les tableaux. Changer le condensateur en **47n** et mesurer $\tau'$.
+
+**Étape 3 (20 min) : exploitation.** Répondre aux questions Q4 à Q8. Pour la Q8, regarder le front descendant.
+
+**Étape 4 (15 min) : bilan.** Répondre aux questions Q9 et Q10. Pour vérifier la Q10, régler C à **1u** (1 µF) et la fréquence du carré à **5 Hz**, puis mesurer $t_{R5\%}$.
+
+- **Livrable :** captures d'écran annotées (charge avec 100 nF, charge avec 47 nF), tableaux complétés, courbe $u_C(t)$, réponses Q1 à Q10.
+
+---
+
+<a id="sec-tp-4-3-regulation-de-luminosite-avec-arduino"></a>
+
+### TP 4.3 : Régulation de luminosité avec Arduino `BTS2`
+
+> **Durée :** 2 h · **Mode :** matériel, carte Arduino par binôme (version simulée ci-dessous, Python) · **Cours :** Chapitre 4, §4.1 (boucle ouverte, boucle fermée, consigne, perturbation, erreur statique) · **Prérequis :** TP 4.1
+> **Objectif :** réaliser une boucle de régulation réelle (capteur, correcteur programmé, actionneur), comparer boucle ouverte et boucle fermée face à une perturbation, et observer l'effet du gain du correcteur.
+
+**Problématique :** l'écran d'un smartphone ou l'éclairage d'un open-space ajuste sa luminosité selon la lumière ambiante. Une LED commandée « à l'aveugle » peut-elle garder un éclairement constant quand on allume une lampe à côté ? Que faut-il ajouter ?
+
+- **Matériel par binôme (× 8) :** 1 carte Arduino Uno et son câble USB, 1 plaque d'essai, fils de câblage, 1 ordinateur avec l'IDE Arduino (le **Traceur série** de l'IDE affiche les courbes).
+- **Composants par binôme (à prévoir) :** 1 LED blanche ou rouge haute luminosité 5 mm (LED « commandée »), 1 LED identique pour la perturbation, 2 résistances 220 Ω, 1 photorésistance GL5528, 1 résistance 10 kΩ, 1 interrupteur à glissière (ou un bouton-poussoir), 1 morceau de gaine thermorétractable noire ou un petit tube de carton noir (environ 3 cm) pour coiffer ensemble la LED et la photorésistance.
+- **Sécurité :** alimentation par USB (5 V), aucun risque électrique. Ne pas fixer longtemps une LED haute luminosité de près.
+
+**Montage (décrit en texte) :**
+
+| Élément | Branchement |
+|---|---|
+| LED commandée (actionneur) | broche 9 (sortie MLI, « PWM ») → résistance 220 Ω → anode de la LED ; cathode → GND |
+| Photorésistance (capteur) | 5V → photorésistance → point A0 → résistance 10 kΩ → GND |
+| LED de perturbation | 5V → interrupteur → résistance 220 Ω → LED → GND |
+
+La LED commandée est placée **face à la photorésistance**, à environ 1 cm, et les deux sont coiffées par le tube noir pour les isoler de l'éclairage de la salle. La LED de perturbation éclaire l'intérieur du tube par une ouverture latérale. Plus la photorésistance reçoit de lumière, plus la tension sur A0 est élevée.
+
+**Déroulé détaillé**
+
+1. **(15 min) Préparation : identifier la chaîne.**
+   - ❓ *Q1. Dans ce montage, identifiez : la grandeur réglée, le capteur, l'actionneur, la perturbation, la consigne.*
+   - ❓ *Q2. La sortie MLI de l'Arduino reçoit un nombre de 0 à 255 (`analogWrite`). Quelle tension moyenne obtient-on pour la valeur 128 ?*
+
+2. **(25 min) Caractéristique statique en boucle ouverte.** Câbler le montage, perturbation éteinte. Téléverser le programme suivant :
+
+```cpp
+// TP 4.3 : boucle ouverte et boucle fermée
+const int MODE = 0;        // 0 : boucle ouverte ; 1 : correcteur P ; 2 : correcteur I
+const int CONSIGNE = 600;  // mesure visée (0 à 1023)
+const int PWM_BO = 200;    // commande fixe en boucle ouverte
+const float KP = 1.0;      // gain proportionnel
+const float KI = 0.2;      // gain intégral
+
+float integrale = PWM_BO;
+
+void setup() {
+  Serial.begin(115200);
+}
+
+void loop() {
+  int mesure = analogRead(A0);
+  int erreur = CONSIGNE - mesure;
+  float commande;
+  if (MODE == 0) {
+    commande = PWM_BO;
+  } else if (MODE == 1) {
+    commande = PWM_BO + KP * erreur;
+  } else {
+    integrale = integrale + KI * erreur;
+    integrale = constrain(integrale, 0, 255);
+    commande = integrale;
+  }
+  commande = constrain(commande, 0, 255);
+  analogWrite(9, (int)commande);
+  Serial.print("consigne:"); Serial.print(CONSIGNE);
+  Serial.print(" mesure:");  Serial.print(mesure);
+  Serial.print(" commande:"); Serial.println((int)commande);
+  delay(10);
+}
+```
+
+   - Avec `MODE = 0`, modifier `PWM_BO` (0, 50, 100, 150, 200, 255), téléverser à chaque fois et relever la mesure dans le **Moniteur série** (vitesse réglée à 115200 bauds, en bas de la fenêtre).
+
+   | PWM_BO | 0 | 50 | 100 | 150 | 200 | 255 |
+   |---|---|---|---|---|---|---|
+   | Mesure (0 à 1023) | | | | | | |
+
+   - ❓ *Q3. Tracez la mesure en fonction de PWM_BO. Estimez la pente $G$ (en points de mesure par unité de commande) autour du point de fonctionnement.*
+   - Choisir la valeur de `PWM_BO` qui donne une mesure proche de 600 (on l'appelle $PWM_0$) et l'écrire dans le programme. Mettre `CONSIGNE` égale à la mesure obtenue.
+
+3. **(15 min) Boucle ouverte face à une perturbation.** Fermer le moniteur série et ouvrir le **Traceur série** (**Outils → Traceur série**, 115200 bauds). Allumer la LED de perturbation, attendre 3 s, l'éteindre.
+
+   | Mode | Mesure sans perturbation | Mesure avec perturbation | Erreur avec perturbation (consigne − mesure) |
+   |---|---|---|---|
+   | Boucle ouverte | | | |
+   | Correcteur P, KP = 1 | | | |
+   | Correcteur P, KP = 2 | | | |
+   | Correcteur I, KI = 0,2 | | | |
+
+   - ❓ *Q4. En boucle ouverte, la commande change-t-elle quand la perturbation apparaît ? Et la mesure ?*
+
+4. **(25 min) Boucle fermée : correcteur proportionnel.** Passer `MODE = 1`, `KP = 1`, téléverser. Refaire l'essai de perturbation, puis avec `KP = 2`, puis `KP = 5`.
+   - ❓ *Q5. Que fait la commande quand la perturbation apparaît ? Expliquez le signe de cette réaction à partir de l'erreur.*
+   - ❓ *Q6. L'erreur avec perturbation est-elle nulle ? Comment varie-t-elle quand KP augmente ?*
+   - ❓ *Q7. Que se passe-t-il avec KP = 5 (observez le Traceur série) ? Quel est le défaut d'un gain trop élevé ?*
+
+5. **(20 min) Boucle fermée : correcteur intégral.** Passer `MODE = 2`, `KI = 0.2`, téléverser. Refaire l'essai.
+   - ❓ *Q8. L'erreur finale avec perturbation est-elle nulle ? Expliquez pourquoi : tant que l'erreur n'est pas nulle, que fait la variable `integrale` ?*
+   - ❓ *Q9. Allumez la perturbation, puis approchez une lampe de téléphone de l'ouverture. Que vaut la commande ? Pourquoi la régulation finit-elle par décrocher ?*
+
+6. **(20 min) Bilan.**
+   - ❓ *Q10. Dessinez le schéma-bloc de la boucle (consigne, comparateur, correcteur, actionneur, système, capteur, perturbation) en nommant les éléments réels du montage.*
+   - ❓ *Q11. Rédigez la conclusion : comparez boucle ouverte, correcteur P et correcteur I sur deux critères (erreur avec perturbation, stabilité).*
+
+- **Livrable :** schéma du montage, tableaux complétés, captures du Traceur série (boucle ouverte, P avec KP = 1 et KP = 5, I), schéma-bloc, réponses Q1 à Q11.
+- **⚙ Si les cartes Arduino manquent :** basculer sur la version simulée ci-dessous.
+
+<a id="sec-version-simulee-du-tp-4-3-python"></a>
+
+#### Version simulée du TP 4.3 (Python)
+
+- **Principe :** le programme simule le montage : une LED qui éclaire une photorésistance, une perturbation lumineuse qui apparaît à $t = 5$ s, et le même correcteur que la carte Arduino. Les questions sont les mêmes.
+
+**Étape 1 (15 min) : préparation.** Répondre aux questions Q1 et Q2.
+
+**Étape 2 (20 min) : le programme.** Créer le fichier `tp43_simule.py` :
+
+```python
+# TP 4.3, version simulée : régulation de luminosité
+import random
+import matplotlib.pyplot as plt
+
+MODE = 0          # 0 : boucle ouverte ; 1 : correcteur P ; 2 : correcteur I
+CONSIGNE = 600
+PWM_BO = 205
+KP = 1.0
+KI = 0.2
+PERTURBATION = 180          # lumière ajoutée à t = 5 s (en points de mesure)
+
+DT = 0.01                   # période de la boucle : 10 ms
+TAU = 0.05                  # temps de réaction de la photorésistance (s)
+
+def eclairement(commande, perturbation):
+    """Mesure en régime permanent : lumière ambiante + LED + perturbation."""
+    return 150 + 2.2 * commande + perturbation
+
+mesure_reelle = eclairement(PWM_BO, 0)
+commande = PWM_BO
+integrale = PWM_BO
+temps, mesures, commandes = [], [], []
+
+for i in range(1000):                       # 1000 pas de 10 ms = 10 s
+    t = i * DT
+    p = PERTURBATION if t >= 5 else 0
+    cible = eclairement(commande, p)
+    mesure_reelle += (cible - mesure_reelle) * DT / TAU     # le capteur suit avec retard
+    mesure = round(min(1023, max(0, mesure_reelle + random.gauss(0, 2))))
+    erreur = CONSIGNE - mesure
+    if MODE == 0:
+        commande = PWM_BO
+    elif MODE == 1:
+        commande = PWM_BO + KP * erreur
+    else:
+        integrale = min(255, max(0, integrale + KI * erreur))
+        commande = integrale
+    commande = round(min(255, max(0, commande)))
+    temps.append(t); mesures.append(mesure); commandes.append(commande)
+
+print("mesure à t = 4,9 s :", mesures[490], "  mesure à t = 9,9 s :", mesures[990])
+print("commande à t = 4,9 s :", commandes[490], "  commande à t = 9,9 s :", commandes[990])
+plt.plot(temps, mesures, label="mesure")
+plt.plot(temps, commandes, label="commande")
+plt.axhline(CONSIGNE, color="gray", linestyle="--", label="consigne")
+plt.xlabel("t (s)")
+plt.legend()
+plt.show()
+```
+
+**Étape 3 (15 min) : caractéristique statique.** Dans la fonction `eclairement`, la mesure vaut $150 + 2{,}2 \times$ commande. Remplir le tableau de l'étape 2 par le calcul et répondre à la Q3 (la pente $G$ se lit directement dans la formule). Vérifier que PWM_BO = 205 donne une mesure proche de 600.
+
+**Étape 4 (40 min) : les essais.** Exécuter le programme avec `MODE = 0`, puis `MODE = 1` (KP = 1, 2 et 5), puis `MODE = 2` (KI = 0.2). Pour chaque essai, relever la mesure à 4,9 s (sans perturbation) et à 9,9 s (avec perturbation), remplir le tableau de l'étape 3 et répondre aux questions Q4 à Q8.
+
+**Étape 5 (10 min) : décrochage.** Avec `MODE = 2`, porter `PERTURBATION` à 600 et répondre à la Q9.
+
+**Étape 6 (20 min) : bilan.** Répondre aux questions Q10 et Q11.
+
+- **Livrable :** captures des courbes (boucle ouverte, P avec KP = 1 et KP = 5, I), tableaux complétés, schéma-bloc, réponses Q1 à Q11.
+
+---
+
 <div style="page-break-after: always;"></div>
 
 &nbsp;
@@ -1105,6 +3145,344 @@ On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et
 
 ---
 
+<a id="sec-tp-5-2-filtre-rc-et-diagramme-de-bode"></a>
+
+### TP 5.2 : Filtre RC et diagramme de Bode `BTS1` `BTS2`
+
+> **Durée :** 2 h · **Mode :** matériel en poste tournant (version Falstad ci-dessous) · **Cours :** Chapitre 5, §5.3 et §5.5 (transmittance, gain en dB, diagramme de Bode, fréquence de coupure) · **Prérequis :** TP 3.1, TP 5.1
+> **Objectif :** tracer le diagramme de Bode complet (gain et phase) d'un filtre RC passe-bas, en déduire sa fréquence de coupure et la pente de son asymptote, et observer la courbe de gain d'un seul coup grâce au balayage en fréquence du GBF.
+
+**Problématique :** un capteur fournit un signal utile lent, pollué par un parasite à quelques dizaines de kilohertz (alimentation à découpage, moteur). Un simple filtre RC suffit-il à l'éliminer ? Comment prévoir, et vérifier, l'atténuation qu'il apporte à chaque fréquence ?
+
+- **Organisation (poste tournant) :** un seul banc GBF + oscilloscope ; le filtre est câblé sur une plaque d'essai à côté du banc. Chaque binôme y passe environ 12 min pour les mesures marquées **(au banc)**, les autres avancent la version Falstad.
+- **Matériel du banc (1 par classe) :** GBF Feeltech FY6900, oscilloscope Rigol DS1054Z, 1 plaque d'essai.
+- **Matériel par étudiant :** 1 sonde et 1 câble BNC.
+- **Composants à prévoir :** résistance 1 kΩ (1/4 W, 5 %), condensateur film 100 nF (5 ou 10 %), 1 câble BNC-pinces crocodiles, fils de câblage.
+- **Sécurité :** aucun risque (amplitude ≤ 4 V crête à crête).
+
+<p align="center">
+<img src="figures/TP/schema_circuit_rc_gbf_oscillo.svg" width="320" alt="Filtre RC : entrée sur CH1, sortie aux bornes de C sur CH2"/>
+</p>
+
+<p align="center"><em>Filtre RC passe-bas : tension d'entrée u<sub>E</sub> sur la voie 1, tension de sortie u<sub>S</sub> (aux bornes de C) sur la voie 2.</em></p>
+
+**Rappels :** pour ce filtre, $T = \dfrac{U_S}{U_E} = \dfrac{1}{\sqrt{1 + (f/f_c)^2}}$, $G = 20\log_{10}(T)$, déphasage $\varphi = -\arctan(f/f_c)$, avec $f_c = \dfrac{1}{2\pi RC}$.
+
+**Déroulé détaillé**
+
+1. **(15 min) Préparation.** R = 1 kΩ, C = 100 nF.
+   - ❓ *Q1. Calculez la fréquence de coupure $f_c$.*
+   - ❓ *Q2. Que valent $T$, $G$ et $\varphi$ à $f = f_c$ ? Et pour $f = 10\,f_c$ ?*
+   - ❓ *Q3. Complétez la ligne « G calculé » du tableau de l'étape 3.*
+
+2. **(au banc, 2 min) Réglages.** GBF : sinus, amplitude 4 V crête à crête, sans décalage. Oscilloscope : voie 1 sur l'entrée du filtre, voie 2 sur la sortie, mesures automatiques **Vpp** sur les deux voies (touche **Measure**) et mesure de **délai** (ou de phase) entre les voies 1 et 2. Déclenchement sur la voie 1.
+
+3. **(au banc, 8 min) Relevé point par point.** Pour chaque fréquence, adapter la base de temps pour voir 2 à 3 périodes, puis relever $U_E$, $U_S$ (crête à crête) et le décalage $\Delta t$ entre les deux courbes.
+
+   | f (Hz) | 100 | 200 | 500 | 1 000 | 1 600 | 2 000 | 5 000 | 10 000 | 20 000 | 50 000 |
+   |---|---|---|---|---|---|---|---|---|---|---|
+   | $U_E$ (V) | | | | | | | | | | |
+   | $U_S$ (V) | | | | | | | | | | |
+   | $T = U_S/U_E$ | | | | | | | | | | |
+   | G mesuré (dB) | | | | | | | | | | |
+   | G calculé (dB) | | | | | | | | | | |
+   | $\Delta t$ | | | | | | | | | | |
+   | $\varphi = -360 \times f \times \Delta t$ (°) | | | | | | | | | | |
+
+4. **(au banc, 2 min) Balayage en fréquence.** Sur le GBF, activer le **balayage** (*sweep*) : de 100 Hz à 50 kHz, mode **logarithmique**, durée 1 s. Oscilloscope : voie 2 seule, base de temps 100 ms/div. On voit l'enveloppe de la tension de sortie : c'est l'allure de la courbe de gain, obtenue d'un seul coup. Faire une photo de l'écran.
+
+5. **(40 min) Exploitation (à la place).**
+   - Tracer G (dB) en fonction de f sur papier semi-logarithmique (ou tableur, axe des abscisses en échelle logarithmique), puis $\varphi$ en fonction de f.
+   - ❓ *Q4. À quelle fréquence le gain vaut-il −3 dB ? À quelle fréquence le déphasage vaut-il −45° ? Comparez ces deux valeurs à $f_c$ calculée.*
+   - ❓ *Q5. Tracez les deux asymptotes du gain : horizontale à 0 dB en basse fréquence, et droite passant par vos points à 10 kHz et 50 kHz en haute fréquence. Mesurez la pente de cette dernière en dB par décade. Où se croisent les deux asymptotes ?*
+   - ❓ *Q6. Vers quelle valeur tend le déphasage à très haute fréquence ?*
+   - ❓ *Q7. Comparez la photo du balayage à votre courbe de gain. Pourquoi l'enveloppe ressemble-t-elle à une courbe tracée en échelle logarithmique ?*
+
+6. **(20 min) Application et bilan.**
+   - ❓ *Q8. Le signal utile du capteur a une fréquence de 100 Hz et le parasite une fréquence de 50 kHz, avec la même amplitude à l'entrée. Avec ce filtre, de combien de dB le parasite est-il atténué ? Combien de fois plus petit est-il en sortie ? Le signal utile est-il déformé ?*
+   - ❓ *Q9. On veut une coupure à 160 Hz en gardant C = 100 nF. Quelle résistance faut-il ?*
+   - ❓ *Q10 (pour aller plus loin). On permute R et C (la sortie est prise aux bornes de R). Prévoyez la nature du filtre obtenu et vérifiez par une mesure à 100 Hz et à 20 kHz.*
+
+- **Livrable :** tableau complété, diagramme de Bode (gain avec asymptotes, phase), photo du balayage, réponses Q1 à Q10.
+- **⚙ Si le banc n'est pas disponible :** basculer sur la version Falstad ci-dessous.
+
+<a id="sec-version-simulee-du-tp-5-2-falstad"></a>
+
+#### Version simulée du TP 5.2 (Falstad)
+
+- **Principe :** construire le même filtre dans Falstad avec un générateur sinusoïdal et l'oscilloscope intégré. Les questions Q1 à Q10 et le tableau sont les mêmes (sauf l'étape de balayage, remplacée par l'étape 3 ci-dessous).
+
+**Étape 0 (15 min) : préparation.** Répondre aux questions Q1 à Q3.
+
+**Étape 1 (15 min) : construire le filtre.**
+
+1. **Fichier → Nouveau circuit vide**.
+2. Placer la source : **Dessiner → Entrées et Générateurs → Ajouter Générateur de Tension A/C (2 sorties)**, tracée verticalement à gauche. Double-clic : **Tension maximale** 2 V (soit 4 V crête à crête), **Fréquence** 100 Hz.
+3. Placer R : **Dessiner → Ajouter Résistance**, horizontalement depuis la borne haute de la source, réglée à **1k**.
+4. Placer C : **Dessiner → Composants Passifs → Ajouter Condensateur**, verticalement entre la fin de R et la borne basse de la source, réglé à **100n**.
+5. Fermer le circuit avec **Dessiner → Ajouter Fils**.
+6. Clic droit sur la source → **Voir dans un nouvel oscilloscope** ; clic droit sur le condensateur → **Voir dans un nouvel oscilloscope**. Dans chaque oscilloscope, clic droit → **Propriétés…** et cocher l'affichage de la **valeur crête** (ou crête à crête) : la valeur s'inscrit à côté de la courbe.
+
+**Étape 2 (40 min) : relevé point par point.**
+
+1. Pour chaque fréquence du tableau, double-clic sur la source et changer la **Fréquence**. Attendre que l'affichage se stabilise (quelques périodes) et relever $U_E$ et $U_S$.
+2. Pour les fréquences supérieures à 5 kHz, réduire le pas de temps de la simulation (**Options → Autres options…**, champ **Pas de temps**, saisir **1u**), sinon la sinusoïde est dessinée avec trop peu de points.
+3. Pour le déphasage, arrêter la simulation (bouton **Arrêter**) et survoler les deux courbes pour lire l'instant d'un même passage par zéro (montant) : la différence donne $\Delta t$.
+4. Remplir le tableau.
+
+**Étape 3 (10 min) : vérification à la fréquence de coupure.** Régler la source exactement à la valeur de $f_c$ calculée en Q1. Vérifier que $U_S/U_E \approx 0{,}71$ et que le décalage vaut un huitième de période (−45°). Cette étape remplace la Q7.
+
+**Étape 4 (40 min) : exploitation et bilan.** Tracer le diagramme de Bode (tableur, abscisses en échelle logarithmique) et répondre aux questions Q4 à Q6, puis Q8 à Q10. Pour la Q10, permuter R et C dans Falstad et observer la tension aux bornes de R.
+
+- **Livrable :** captures d'écran à 100 Hz, à $f_c$ et à 10 kHz, tableau complété, diagramme de Bode, réponses Q1 à Q10.
+
+---
+
+<a id="sec-tp-5-3-echantillonnage-repliement-de-spectre-et-filtre-numerique"></a>
+
+### TP 5.3 : Échantillonnage, repliement de spectre et filtre numérique `BTS2`
+
+> **Durée :** 2 h · **Mode :** TP informatisé, Python (démonstration au banc ci-dessous, oscilloscope Rigol) · **Cours :** Chapitre 5, §5.6 (échantillonnage, condition de Shannon, repliement) et §5.5 (filtrage) · **Prérequis :** TP 5.2 (filtre RC)
+> **Objectif :** voir ce que devient un sinus quand on l'échantillonne trop lentement, vérifier la condition de Shannon, puis programmer deux filtres numériques (moyenne glissante et « RC numérique ») et les comparer.
+
+**Problématique :** une carte d'acquisition ne connaît du signal que des échantillons pris à intervalles réguliers. Peut-elle se tromper sur la fréquence d'un signal ? Et, une fois les nombres en mémoire, peut-on les filtrer par un simple calcul, sans résistance ni condensateur ?
+
+- **Matériel par binôme (× 8) :** 1 ordinateur avec Python 3 (`numpy`, `matplotlib` ; Thonny, Anaconda ou une plateforme en ligne comme Capytale).
+- **Démonstration au banc (poste tournant, environ 8 min par binôme) :** GBF Feeltech FY6900 et oscilloscope Rigol DS1054Z, 1 câble BNC. Aucun composant à acheter.
+- **Sécurité :** aucun risque particulier.
+
+**Déroulé détaillé**
+
+1. **(10 min) Préparation.**
+   - ❓ *Q1. Rappelez la condition de Shannon. Un sinus de 1 kHz est échantillonné : quelle fréquence d'échantillonnage minimale faut-il ?*
+   - ❓ *Q2. Un CD audio est échantillonné à 44,1 kHz. Jusqu'à quelle fréquence peut-il restituer le son ? Pourquoi ce choix, sachant que l'oreille entend jusqu'à environ 20 kHz ?*
+
+2. **(30 min) Échantillonner un sinus.** Créer le fichier `tp53_echantillonnage.py` :
+
+```python
+# TP 5.3, partie 1 : échantillonnage d'un sinus de 1 kHz
+import numpy as np
+import matplotlib.pyplot as plt
+
+F0 = 1000          # fréquence du signal (Hz)
+FE = 5000          # fréquence d'échantillonnage (Hz) : à modifier
+DUREE = 0.01       # on observe 10 ms
+
+t_fin = np.arange(0, DUREE, 1e-6)          # signal « analogique » : un point par µs
+t_ech = np.arange(0, DUREE, 1 / FE)        # instants d'échantillonnage
+x_fin = np.cos(2 * np.pi * F0 * t_fin)
+x_ech = np.cos(2 * np.pi * F0 * t_ech)
+
+# fréquence apparente : raie la plus haute du spectre des échantillons
+N = 4096
+spectre = np.abs(np.fft.rfft(np.cos(2 * np.pi * F0 * np.arange(N) / FE)))
+freqs = np.fft.rfftfreq(N, 1 / FE)
+print(f"fe = {FE} Hz : fréquence apparente ≈ {freqs[np.argmax(spectre)]:.0f} Hz")
+
+plt.plot(t_fin * 1000, x_fin, label="signal analogique (1 kHz)")
+plt.plot(t_ech * 1000, x_ech, "o-", label=f"échantillons reliés (fe = {FE} Hz)")
+plt.xlabel("t (ms)")
+plt.legend()
+plt.show()
+```
+
+   Exécuter le programme pour chaque valeur de `FE` du tableau.
+
+   | $f_e$ (Hz) | 20 000 | 5 000 | 2 500 | 1 500 | 1 200 | 1 000 | 900 |
+   |---|---|---|---|---|---|---|---|
+   | Shannon respecté ? (oui / non) | | | | | | | |
+   | Fréquence apparente (Hz) | | | | | | | |
+   | Calcul de $\lvert f_0 - k\,f_e \rvert$ (k entier le mieux choisi) | | | | | | | |
+
+   - ❓ *Q3. Pour quelles fréquences d'échantillonnage les échantillons reliés « ressemblent-ils » au sinus de 1 kHz ? Pour lesquelles voit-on un sinus plus lent ?*
+   - ❓ *Q4. Vérifiez que la fréquence apparente vaut $\lvert f_0 - k\,f_e \rvert$ pour un entier k bien choisi : c'est le **repliement de spectre**. Que voit-on pour $f_e = 1\,000$ Hz ? Pourquoi ?*
+   - ❓ *Q5. Pourquoi place-t-on un filtre passe-bas analogique (anti-repliement) **avant** le convertisseur, et pas après ?*
+
+3. **(40 min) Filtrer numériquement.** Le signal utile (sinus de 50 Hz, amplitude 1) est pollué par un parasite à 2 kHz (amplitude 0,5). Il est échantillonné à $f_e$ = 10 kHz. Créer le fichier `tp53_filtre.py` :
+
+```python
+# TP 5.3, partie 2 : moyenne glissante et filtre RC numérique
+import numpy as np
+import matplotlib.pyplot as plt
+
+FE = 10000
+F_PARASITE = 2000
+t = np.arange(0, 0.1, 1 / FE)                     # 0,1 s : 1000 échantillons
+x = np.sin(2 * np.pi * 50 * t) + 0.5 * np.sin(2 * np.pi * F_PARASITE * t)
+
+# filtre 1 : moyenne glissante sur N échantillons
+N = 5
+moy = np.convolve(x, np.ones(N) / N, mode="same")
+
+# filtre 2 : « RC numérique » de fréquence de coupure FC
+FC = 200
+tau = 1 / (2 * np.pi * FC)
+a = (1 / FE) / (tau + 1 / FE)
+rc = np.zeros_like(x)
+for n in range(1, len(x)):
+    rc[n] = rc[n - 1] + a * (x[n] - rc[n - 1])
+
+def amplitude(signal, f):
+    """Amplitude de la composante de fréquence f, calculée par FFT."""
+    X = np.fft.rfft(signal)
+    freqs = np.fft.rfftfreq(len(signal), 1 / FE)
+    return 2 * np.abs(X[np.argmin(np.abs(freqs - f))]) / len(signal)
+
+for nom, s in (("entrée", x), ("moyenne glissante", moy), ("RC numérique", rc)):
+    print(f"{nom:18s} : 50 Hz -> {amplitude(s, 50):.3f}   {F_PARASITE} Hz -> {amplitude(s, F_PARASITE):.3f}")
+
+plt.plot(t * 1000, x, label="entrée")
+plt.plot(t * 1000, moy, label=f"moyenne glissante N = {N}")
+plt.plot(t * 1000, rc, label=f"RC numérique fc = {FC} Hz")
+plt.xlabel("t (ms)")
+plt.legend()
+plt.show()
+```
+
+   | Filtre | Amplitude à 50 Hz | Amplitude à 2 kHz | Atténuation du parasite (dB) |
+   |---|---|---|---|
+   | Entrée (sans filtre) | | | 0 |
+   | Moyenne glissante, N = 5 | | | |
+   | Moyenne glissante, N = 10 | | | |
+   | RC numérique, $f_c$ = 200 Hz | | | |
+
+   - ❓ *Q6. Expliquez en une phrase ce que calcule la moyenne glissante. Pourquoi élimine-t-elle presque parfaitement le parasite à 2 kHz avec N = 5 ? (Indice : combien de périodes du parasite contiennent 5 échantillons à 10 kHz ?)*
+   - ❓ *Q7. Le « RC numérique » applique la relation $y_n = y_{n-1} + a\,(x_n - y_{n-1})$. Comparez l'amplitude du parasite en sortie à celle que donnerait un vrai filtre RC de coupure 200 Hz (calculez $T$ à 2 kHz avec la formule du TP 5.2).*
+   - ❓ *Q8. Remplacez `F_PARASITE = 2000` par `2500`. Quel filtre se dégrade le plus ? Pourquoi la moyenne glissante est-elle moins « universelle » ?*
+
+4. **(20 min) Bilan.**
+   - ❓ *Q9. Citez deux avantages d'un filtre numérique sur un filtre RC câblé (réglage, dérive, encombrement…) et une limite (penser à la Q5).*
+   - ❓ *Q10. Un capteur de température est lu 10 fois par seconde par un microcontrôleur. Proposez un filtre numérique simple pour lisser la mesure, et dites ce qu'il coûte (retard de la mesure filtrée).*
+
+- **Livrable :** captures des courbes pour $f_e$ = 5 000 Hz et $f_e$ = 1 200 Hz, captures du filtrage, les deux tableaux complétés, réponses Q1 à Q10.
+
+<a id="sec-demonstration-au-banc-du-tp-5-3-oscilloscope-rigol"></a>
+
+#### Démonstration au banc du TP 5.3 (oscilloscope Rigol, poste tournant)
+
+- **Principe :** un oscilloscope numérique est lui-même un échantillonneur. Si l'on choisit une base de temps trop lente, il échantillonne trop lentement et peut afficher un signal faux. Durée : environ 8 min par binôme.
+
+1. Relier la sortie CH1 du GBF à la voie 1 de l'oscilloscope par un câble BNC. Oscilloscope : touche **Acquire**, profondeur mémoire (**Mem Depth**) réglée à **12k**, base de temps **20 ms/div**. Lire la fréquence d'échantillonnage affichée en haut de l'écran (en Sa/s, par exemple 50 kSa/s) et la noter : $f_e$ = ________.
+2. GBF : sinus, 2 V crête à crête, fréquence réglée à $f_e + 10$ Hz (par exemple 50,010 kHz). Observer l'écran à 20 ms/div.
+3. Passer la base de temps à **20 µs/div** : l'oscilloscope échantillonne alors beaucoup plus vite. Observer le vrai signal.
+4. ❓ *Q11. À 20 ms/div, quelle fréquence semble avoir le signal à l'écran ? Vérifiez avec $\lvert f_0 - k\,f_e \rvert$. Qu'affiche l'oscilloscope à 20 µs/div ?*
+5. Revenir à 20 ms/div et activer la FFT (touche **Math** → **FFT**, source CH1). Faire varier la fréquence du GBF de 10 kHz à 40 kHz : la raie avance jusqu'à $f_e/2$, puis « repart en arrière ».
+6. ❓ *Q12. Pourquoi un technicien doit-il toujours se méfier d'un affichage d'oscilloscope numérique à base de temps lente ? Quel réflexe adopter ?*
+
+---
+
+<a id="sec-tp-5-4-spectre-d-un-signal-a-la-fft-de-l-oscilloscope"></a>
+
+### TP 5.4 : Spectre d'un signal à la FFT de l'oscilloscope `BTS1` `BTS2`
+
+> **Durée :** 1 h 30 · **Mode :** matériel en poste tournant (version simulée ci-dessous, Python) · **Cours :** Chapitre 5, §5.2 (théorème de Fourier, spectre de raies, valeur efficace, taux de distorsion) · **Prérequis :** TP 3.1
+> **Objectif :** observer le spectre de signaux sinusoïdal, carré, triangulaire et rectangulaire à la FFT de l'oscilloscope, relever les amplitudes des harmoniques et les comparer aux valeurs théoriques.
+
+**Problématique :** un signal d'horloge carré à 1 MHz rayonne des parasites bien au-delà de 1 MHz et perturbe le Wi-Fi d'à côté. Pourquoi un signal de fréquence donnée contient-il d'autres fréquences ? Lesquelles, et avec quelle amplitude ?
+
+- **Organisation (poste tournant) :** un seul banc GBF + oscilloscope ; chaque binôme y passe environ 10 min pour les relevés marqués **(au banc)**, les autres avancent la version simulée.
+- **Matériel du banc (1 par classe) :** GBF Feeltech FY6900, oscilloscope Rigol DS1054Z, 1 câble BNC-BNC.
+- **Matériel par étudiant :** 1 sonde et 1 câble BNC. Aucun composant à acheter.
+- **Sécurité :** aucun risque.
+
+**Rappels :** un signal carré d'amplitude $A$ (de $-A$ à $+A$) ne contient que des harmoniques de rang impair, d'amplitude $\dfrac{4A}{n\pi}$. Un signal triangulaire d'amplitude $A$ ne contient aussi que des harmoniques impairs, d'amplitude $\dfrac{8A}{\pi^2 n^2}$. L'oscilloscope affiche les raies en **dBV** : niveau $= 20\log_{10}\left(\dfrac{U_{eff}}{1\ \text{V}}\right)$, avec $U_{eff} = \dfrac{\text{amplitude}}{\sqrt{2}}$.
+
+**Déroulé détaillé**
+
+1. **(15 min) Préparation.** Signaux de fréquence $f_0$ = 1 kHz et d'amplitude $A$ = 1 V (2 V crête à crête).
+   - ❓ *Q1. Calculez l'amplitude des harmoniques de rang 1, 3, 5 et 7 du signal carré, puis leur niveau en dBV. Faites de même pour le triangle.*
+   - ❓ *Q2. Quel est le niveau en dBV d'un sinus d'amplitude 1 V ?*
+
+2. **(au banc, 3 min) Réglages.** Relier la sortie CH1 du GBF à la voie 1 par un câble BNC. GBF : sinus, 1 kHz, 2 V crête à crête, sans décalage. Oscilloscope : base de temps 1 ms/div, puis touche **Math** → **FFT**, source CH1, fenêtre **Hanning**, unité **dB** (dBV efficace). Régler le centre du spectre à 5 kHz et l'échelle horizontale à 1 kHz/div pour voir de 0 à 10 kHz environ. Utiliser les curseurs (touche **Cursor**, source Math) pour lire la fréquence et le niveau de chaque raie.
+
+3. **(au banc, 7 min) Relevés.** Pour chaque forme de signal (même fréquence, même amplitude), relever le niveau des raies. Pour le rectangle, choisir le signal carré et régler son **rapport cyclique** à 25 %.
+
+   | Raie (kHz) | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+   |---|---|---|---|---|---|---|---|
+   | Sinus (dBV) | | | | | | | |
+   | Carré (dBV) | | | | | | | |
+   | Carré, théorique (dBV) | | | | | | | |
+   | Triangle (dBV) | | | | | | | |
+   | Triangle, théorique (dBV) | | | | | | | |
+   | Rectangle 25 % (dBV) | | | | | | | |
+
+   - Revenir au carré et passer la fréquence à 2 kHz : noter où se placent les raies.
+
+4. **(35 min) Exploitation (à la place).**
+   - ❓ *Q3. Le sinus du GBF présente-t-il des harmoniques ? À quel niveau, comparé au fondamental ? Que peut-on dire de la pureté du GBF ?*
+   - ❓ *Q4. Pour le carré, les raies paires sont-elles présentes ? Comparez les niveaux mesurés aux niveaux théoriques de la Q1.*
+   - ❓ *Q5. Calculez, pour le carré puis pour le triangle, l'écart en dB entre l'harmonique 3 et le fondamental. Lequel des deux signaux a les harmoniques qui décroissent le plus vite ? Reliez ce résultat à l'allure du signal (fronts raides ou pentes douces).*
+   - ❓ *Q6. Pour le rectangle à 25 %, quelle raie a disparu ? Ce signal contient-il des harmoniques pairs ?*
+   - ❓ *Q7. Quand la fréquence du carré passe à 2 kHz, comment se déplacent les raies ? Énoncez la règle.*
+   - ❓ *Q8. La valeur efficace du carré vaut 1 V. Calculez la valeur efficace reconstituée avec les seuls harmoniques 1, 3, 5 et 7 (cours, équation 37). Quel pourcentage de la valeur efficace porte-t-elle ?*
+
+5. **(15 min) Bilan.**
+   - ❓ *Q9. Revenez à la problématique : pourquoi une horloge carrée à 1 MHz peut-elle perturber une liaison à 2,4 GHz ? Quelle solution limite ce problème (penser aux TP 5.2 et 5.3) ?*
+
+- **Livrable :** captures ou photos des spectres (sinus, carré, triangle, rectangle), tableau complété, réponses Q1 à Q9.
+- **⚙ Si le banc n'est pas disponible :** basculer sur la version simulée ci-dessous.
+
+<a id="sec-version-simulee-du-tp-5-4-python"></a>
+
+#### Version simulée du TP 5.4 (Python)
+
+- **Principe :** Python fabrique les quatre signaux et calcule leur spectre par FFT, exactement comme le fait l'oscilloscope. Les questions Q1 à Q9 et le tableau sont les mêmes.
+
+**Étape 0 (15 min) : préparation.** Répondre aux questions Q1 et Q2.
+
+**Étape 1 (15 min) : le programme.** Créer le fichier `tp54_spectre.py` :
+
+```python
+# TP 5.4, version simulée : spectre d'un signal par FFT
+import numpy as np
+import matplotlib.pyplot as plt
+
+FORME = "carre"        # "sinus", "carre", "triangle" ou "rectangle25"
+F0 = 1000              # fréquence du signal (Hz)
+FE = 100 * F0          # 100 échantillons par période
+N = 10000              # 100 périodes analysées
+
+pos = (np.arange(N) % 100) / 100          # position dans la période (0 à 1)
+if FORME == "sinus":
+    x = np.sin(2 * np.pi * pos)
+elif FORME == "carre":
+    x = np.where(pos < 0.5, 1.0, -1.0)
+elif FORME == "triangle":
+    x = 2 / np.pi * np.arcsin(np.sin(2 * np.pi * pos))
+else:
+    x = np.where(pos < 0.25, 1.0, -1.0)
+
+X = np.fft.rfft(x)
+freqs = np.fft.rfftfreq(N, 1 / FE)
+amplitude = 2 * np.abs(X) / N
+amplitude[0] = amplitude[0] / 2           # la composante continue n'est pas doublée
+niveau = 20 * np.log10(amplitude / np.sqrt(2) + 1e-9)     # en dBV efficace
+
+for n in range(1, 8):
+    k = np.argmin(np.abs(freqs - n * F0))
+    print(f"raie {n} ({n*F0/1000:.0f} kHz) : amplitude {amplitude[k]:.3f} V   niveau {niveau[k]:6.1f} dBV")
+
+plt.subplot(2, 1, 1)
+plt.plot(np.arange(300) / FE * 1000, x[:300])
+plt.xlabel("t (ms)")
+plt.subplot(2, 1, 2)
+plt.plot(freqs, niveau)
+plt.xlim(0, 10 * F0)
+plt.ylim(-80, 5)
+plt.xlabel("f (Hz)")
+plt.ylabel("niveau (dBV)")
+plt.tight_layout()
+plt.show()
+```
+
+**Étape 2 (35 min) : relevés.** Exécuter le programme avec `FORME = "sinus"`, puis `"carre"`, `"triangle"` et `"rectangle25"`. Remplir le tableau avec les niveaux affichés. Puis, avec le carré, passer `F0 = 2000` et observer où se placent les raies.
+
+**Étape 3 (25 min) : exploitation et bilan.** Répondre aux questions Q3 à Q9. Pour la Q3, noter que le sinus calculé par Python est parfait : le spectre ne montre que du « bruit de calcul » vers −180 dBV (limité ici à −80 dBV par l'axe).
+
+- **Livrable :** captures des quatre spectres, tableau complété, réponses Q1 à Q9.
+
+---
+
 <div style="page-break-after: always;"></div>
 
 &nbsp;
@@ -1115,7 +3493,226 @@ On remplace le réglage manuel par un montage qui **mesure sa propre sortie** et
 
 ## Chapitre 6 : Optique
 
-*(À compléter au fil de l'année : mesure d'atténuation sur une liaison à fibre optique, relevé de l'ouverture numérique. Voir aussi TP 1.7 et TP 1.8 pour la LED et la photodiode.)*
+*(Voir aussi TP 1.7 et TP 1.8 pour la LED et la photodiode.)*
+
+<a id="sec-tp-6-1-refraction-et-reflexion-totale"></a>
+
+### TP 6.1 : Réfraction et réflexion totale `BTS1` `BTS2`
+
+> **Durée :** 1 h 30 · **Mode :** matériel en rotation (version simulée ci-dessous, simulateur PhET) · **Cours :** Chapitre 6, §6.1 et §6.2 (indice de réfraction, loi de Snell-Descartes, réflexion totale) · **Prérequis :** aucun
+> **Objectif :** vérifier la loi de Snell-Descartes, mesurer l'indice de réfraction du plexiglas et mesurer l'angle limite de réflexion totale, principe du guidage de la lumière dans une fibre optique.
+
+**Problématique :** une fibre optique transporte la lumière sur des kilomètres, même quand elle est courbée. Pourquoi la lumière ne s'échappe-t-elle pas par les côtés ? Une simple expérience avec un demi-cylindre de plexiglas permet de le comprendre.
+
+- **Organisation (rotation) :** 4 postes optiques ; la moitié des binômes travaille sur les postes pendant 40 min pendant que l'autre moitié fait la version simulée, puis on échange.
+- **Matériel par poste (4 postes) :** 1 pointeur laser rouge de **classe 2** (puissance < 1 mW, 650 nm), 1 demi-cylindre en plexiglas (diamètre 60 à 90 mm, épaisseur 15 à 20 mm), 1 disque gradué en degrés (rapporteur de 360° imprimé sur papier, diamètre au moins 20 cm), 1 support ou pâte adhésive pour tenir le laser à plat.
+- **Matériel à prévoir :** les 4 pointeurs laser classe 2, les 4 demi-cylindres en plexiglas, l'impression des disques gradués.
+- **Sécurité :** **ne jamais diriger le faisceau laser vers un œil**, ni le sien ni celui d'un camarade, même par réflexion. Travailler à plat sur la table, faisceau horizontal, pas d'objets brillants sur la table. Éteindre le laser dès qu'on ne mesure pas.
+
+**Montage (décrit en texte) :** le demi-cylindre est posé à plat sur le disque gradué, la face plane exactement sur le diamètre 90°/270° et le centre de la face plane au centre du disque. La **normale** à la face plane est donc la ligne 0°/180°. Le laser, posé à plat, envoie son faisceau en rasant le papier : on voit la trace du rayon sur le disque et on lit les angles par rapport à la normale.
+
+**Déroulé détaillé**
+
+1. **(10 min) Préparation.**
+   - ❓ *Q1. Écrivez la loi de Snell-Descartes. Un rayon passe de l'air (n = 1,00) dans le plexiglas (n ≈ 1,49) avec un angle d'incidence de 30°. Calculez l'angle de réfraction.*
+   - ❓ *Q2. Pourquoi un rayon qui arrive sur la face **courbe** du demi-cylindre en visant son centre n'est-il pas dévié ?*
+
+2. **(25 min) Partie A : de l'air vers le plexiglas.** Le laser éclaire la **face plane**, au centre du disque. Le rayon réfracté traverse le plexiglas et sort par la face courbe sans être dévié. Pour chaque angle d'incidence $\theta_1$ (dans l'air), lire l'angle de réfraction $\theta_2$ (dans le plexiglas).
+
+   | $\theta_1$ (°) | 0 | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 |
+   |---|---|---|---|---|---|---|---|---|---|
+   | $\theta_2$ mesuré (°) | | | | | | | | | |
+   | $\sin\theta_1$ | | | | | | | | | |
+   | $\sin\theta_2$ | | | | | | | | | |
+
+   - ❓ *Q3. Le rayon se rapproche-t-il ou s'éloigne-t-il de la normale en entrant dans le plexiglas ? Observez aussi le rayon réfléchi : que vaut l'angle de réflexion ?*
+   - ❓ *Q4. Tracez $\sin\theta_1$ en fonction de $\sin\theta_2$. Les points sont-ils alignés sur une droite passant par l'origine ? Déduisez de la pente l'indice $n$ du plexiglas.*
+
+3. **(25 min) Partie B : du plexiglas vers l'air, réflexion totale.** Faire tourner le demi-cylindre de 180° : le laser éclaire maintenant la **face courbe** en visant le centre. Le rayon arrive sans déviation sur la face plane, depuis l'intérieur du plexiglas, avec l'angle $\theta_1$ ; il ressort dans l'air avec l'angle $\theta_2$.
+
+   | $\theta_1$ (°) dans le plexiglas | 0 | 10 | 20 | 30 | 35 | 40 | 45 | 50 |
+   |---|---|---|---|---|---|---|---|---|
+   | $\theta_2$ mesuré (°) dans l'air | | | | | | | | |
+   | $\theta_2$ calculé (°) | | | | | | | | |
+   | Rayon réfracté présent ? (oui / non) | | | | | | | | |
+
+   - Augmenter très lentement $\theta_1$ à partir de 35° et noter l'angle pour lequel le rayon réfracté rase la face plane et disparaît : $\theta_{lim}$ mesuré = ________°.
+   - ❓ *Q5. Que devient la luminosité du rayon réfléchi quand le rayon réfracté disparaît ?*
+   - ❓ *Q6. Calculez l'angle limite théorique $\theta_{lim}$ tel que $\sin\theta_{lim} = \dfrac{1}{n}$ avec l'indice trouvé à la Q4. Comparez à la mesure.*
+   - ❓ *Q7. Pourquoi la réflexion totale est-elle impossible quand la lumière passe de l'air vers le plexiglas (partie A) ?*
+
+4. **(20 min) Lien avec la fibre optique.**
+   - ❓ *Q8. Dans une fibre en plastique, le cœur a un indice $n_1 = 1{,}49$ et la gaine un indice $n_2 = 1{,}40$. Calculez l'angle limite à l'interface cœur/gaine. Un rayon qui frappe la gaine sous 80° par rapport à la normale reste-t-il guidé ?*
+   - ❓ *Q9. On montre que l'ouverture numérique vaut $ON = \sqrt{n_1^2 - n_2^2}$. Calculez-la, puis l'angle d'acceptance $\theta_0$ tel que $ON = \sin\theta_0$. Que se passe-t-il pour un rayon qui entre dans la fibre avec un angle plus grand ?*
+
+5. **(10 min) Bilan.**
+   - ❓ *Q10. En deux phrases, répondez à la problématique : à quelles conditions la lumière reste-t-elle piégée dans le cœur d'une fibre ?*
+
+- **Livrable :** les deux tableaux, le graphe $\sin\theta_1 = f(\sin\theta_2)$ avec la valeur de $n$, l'angle limite mesuré et calculé, réponses Q1 à Q10.
+- **⚙ Si les postes optiques ne sont pas disponibles :** basculer sur la version simulée ci-dessous.
+
+<a id="sec-version-simulee-du-tp-6-1-phet-courber-la-lumiere"></a>
+
+#### Version simulée du TP 6.1 (PhET « Courber la lumière »)
+
+- **Principe :** le simulateur gratuit PhET **« Courber la lumière »** (*Bending Light*, Université du Colorado, en français) reproduit le laser, deux milieux et un rapporteur virtuel. Les questions Q1 à Q10 et les tableaux sont les mêmes.
+
+**Étape 0 (5 min) : ouverture.** Rechercher « PhET Courber la lumière » dans un navigateur, ouvrir la simulation en français et choisir l'écran **Intro**. Le laser est en haut à gauche, l'interface entre les deux milieux est horizontale, la normale est en pointillés.
+
+**Étape 1 (10 min) : préparation.** Répondre aux questions Q1 et Q2 (pour la Q2, raisonner sur le schéma du montage matériel).
+
+**Étape 2 (25 min) : de l'air vers un milieu plus réfringent.**
+
+1. Milieu du haut : **Air**. Milieu du bas : choisir **Personnalisé** (ou « Autre ») et régler le curseur d'indice à **1,49** (plexiglas).
+2. Allumer le laser (bouton rouge). Sortir le **rapporteur** de la boîte à outils et le centrer sur le point d'impact.
+3. Faire pivoter le laser en le saisissant par l'arrière pour régler $\theta_1$ (0°, 10°, 20°… 80°), et lire $\theta_2$ sur le rapporteur. Remplir le tableau de la partie A.
+4. Répondre aux questions Q3 et Q4.
+5. Choisir ensuite **Mystère A** comme milieu du bas. Mesurer $\theta_2$ pour $\theta_1$ = 30° et 60° et en déduire son indice. Vérifier : repasser en **Personnalisé** et chercher l'indice qui donne le même rayon réfracté.
+
+**Étape 3 (25 min) : réflexion totale.**
+
+1. Inverser les milieux : milieu du haut **Personnalisé** à 1,49, milieu du bas **Air**. La lumière passe maintenant du plexiglas vers l'air.
+2. Remplir le tableau de la partie B. Pour $\theta_1$ proche de 42°, avancer degré par degré : repérer l'angle où le rayon réfracté disparaît.
+3. Observer l'épaisseur (l'intensité) du rayon réfléchi avant et après cet angle. Répondre aux questions Q5 à Q7.
+4. Remplacer le plexiglas par **Eau** (n = 1,33) : l'angle limite augmente-t-il ou diminue-t-il ? Vérifier par le calcul.
+
+**Étape 4 (25 min) : fibre optique et bilan.** Répondre aux questions Q8 à Q10. Pour visualiser la Q8, régler le milieu du haut à 1,49 et celui du bas à 1,40 (deux milieux **Personnalisé** si la version le permet) et vérifier l'angle limite.
+
+- **Livrable :** captures d'écran (réfraction à 30°, angle limite, réflexion totale), les deux tableaux, indice du matériau Mystère A, réponses Q1 à Q10.
+
+---
+
+<a id="sec-tp-6-2-liaison-par-fibre-optique"></a>
+
+### TP 6.2 : Liaison par fibre optique `BTS1` `BTS2`
+
+> **Durée :** 2 h · **Mode :** matériel en poste tournant (version simulée ci-dessous, Python) · **Cours :** Chapitre 6, §6.3 et §6.4 (fibre optique, atténuation, bande passante) ; Chapitre 1, §1.6 et §1.8 (LED, photodiode) · **Prérequis :** TP 1.7, TP 6.1
+> **Objectif :** transmettre un signal numérique par fibre optique plastique, mesurer l'atténuation linéique de la fibre et estimer le débit maximal de la liaison.
+
+**Problématique :** les liaisons entre baies d'un datacenter ou d'un véhicule (réseau multimédia embarqué) utilisent souvent de la fibre plastique. Quelle distance peut-on couvrir, et à quel débit, avec une LED rouge, une fibre plastique et une photodiode ?
+
+- **Organisation (poste tournant) :** un seul banc GBF + oscilloscope ; chaque binôme y passe environ 12 min pour les mesures marquées **(au banc)**, les autres avancent la version simulée.
+- **Matériel du banc (1 par classe) :** GBF Feeltech FY6900, oscilloscope Rigol DS1054Z, 1 plaque d'essai.
+- **Matériel par étudiant :** 1 sonde (utilisée en position ×10 sur la voie 2) et 1 câble BNC.
+- **Composants à prévoir :** 1 LED rouge 650 nm à connexion directe pour fibre plastique (type IF-E96E), 1 photodiode PIN à connexion directe pour fibre plastique (type IF-D91), fibre optique plastique (POF) 1 mm gainée 2,2 mm : 1 tronçon de **1 m** et 1 tronçon de **5 m**, coupés proprement au cutter, 1 résistance 100 Ω, 1 résistance 10 kΩ, 1 pile 9 V avec son coupleur à fils, 1 câble BNC-pinces crocodiles, fils de câblage. *(Variante économique : LED rouge 5 mm et photodiode BPW34, la fibre étant maintenue contre les composants par de la gaine thermorétractable.)*
+- **Sécurité :** la LED rouge est sans danger, mais ne pas regarder de près l'extrémité éclairée de la fibre. Respecter la polarité de la pile.
+
+<p align="center">
+<img src="figures/TD/figure_td_04_liaison_fibre_emetteur_recepteur.svg" width="460" alt="Liaison par fibre optique : émetteur, fibre, récepteur"/>
+</p>
+
+<p align="center"><em>Chaîne de transmission optique : émetteur (LED), fibre, récepteur (photodiode).</em></p>
+
+**Montage (décrit en texte) :**
+
+| Partie | Branchement |
+|---|---|
+| Émetteur | sortie CH1 du GBF → résistance 100 Ω → anode de la LED ; cathode → masse du GBF. Voie 1 de l'oscilloscope sur la sortie du GBF. |
+| Fibre | extrémités engagées à fond dans la LED et dans la photodiode, écrous serrés à la main. |
+| Récepteur | + de la pile 9 V → cathode de la photodiode ; anode → résistance 10 kΩ → − de la pile. La photodiode est donc polarisée en inverse. Voie 2 (sonde ×10) aux bornes de la résistance de 10 kΩ, masse de la sonde côté − de la pile. |
+
+La tension aux bornes de la résistance de 10 kΩ vaut $U_R = R \times I_{ph}$ : elle est proportionnelle au photocourant, donc à la **puissance lumineuse reçue**.
+
+**Déroulé détaillé**
+
+1. **(15 min) Préparation.**
+   - ❓ *Q1. Le GBF délivre un signal carré de 0 à 5 V. La LED a une tension de seuil d'environ 2,0 V et le GBF une résistance interne de 50 Ω. Calculez le courant dans la LED quand le signal est à 5 V.*
+   - ❓ *Q2. Pourquoi la photodiode est-elle polarisée en inverse ? (Revoir le TP 1.8.)*
+   - ❓ *Q3. Attention aux décibels : $U_R$ est proportionnelle à la puissance optique. Pour calculer une atténuation optique à partir de deux tensions $U_1$ et $U_2$ mesurées sur cette résistance, faut-il utiliser $10\log_{10}(U_1/U_2)$ ou $20\log_{10}(U_1/U_2)$ ? Justifiez.*
+
+2. **(au banc, 3 min) Transmission d'un signal.** GBF : signal carré, 1 kHz, amplitude 5 V crête à crête, décalage 2,5 V. Oscilloscope : voie 1 à 2 V/div, voie 2 à 200 mV/div, base de temps 200 µs/div. Fibre de 1 m.
+   - Vérifier que le signal reçu (voie 2) reproduit le signal émis. Mesurer l'amplitude $U_1$ du signal reçu.
+   - Masquer l'extrémité de la fibre ou éclairer la photodiode avec la lampe d'un téléphone : le signal est-il perturbé ?
+
+3. **(au banc, 4 min) Atténuation.** Remplacer la fibre de 1 m par la fibre de 5 m (mêmes connexions, écrous serrés de la même façon). Mesurer $U_5$. Puis enrouler la fibre de 5 m en cinq spires serrées autour d'un stylo et mesurer $U_{courbée}$.
+
+   | Situation | Fibre 1 m | Fibre 5 m | Fibre 5 m enroulée sur un stylo |
+   |---|---|---|---|
+   | Amplitude reçue (V) | | | |
+
+4. **(au banc, 5 min) Débit maximal.** Revenir à la fibre de 1 m. Base de temps 1 µs/div. À 10 kHz, mesurer le **temps de montée** $t_r$ du signal reçu (de 10 % à 90 % de l'amplitude ; mesure automatique **Rise Time** de l'oscilloscope). Puis augmenter la fréquence (50 kHz, 100 kHz, 200 kHz, 500 kHz, 1 MHz) et noter la fréquence $f_{max}$ au-delà de laquelle le signal reçu n'atteint plus son palier (il devient triangulaire).
+
+   | Fréquence | 10 kHz | 50 kHz | 100 kHz | 200 kHz | 500 kHz | 1 MHz |
+   |---|---|---|---|---|---|---|
+   | Le signal reçu atteint-il son palier ? | | | | | | |
+
+   $t_r$ = ________ µs ; $f_{max}$ = ________ kHz.
+
+5. **(35 min) Exploitation (à la place).**
+   - ❓ *Q4. Calculez l'atténuation linéique de la fibre, en dB/m, à partir de $U_1$ et $U_5$ (méthode dite « de la fibre coupée » : la différence porte sur 4 m de fibre, les pertes de connexion sont les mêmes dans les deux cas). Comparez à la valeur typique d'une fibre plastique à 650 nm (environ 0,15 à 0,2 dB/m).*
+   - ❓ *Q5. Pourquoi ne peut-on pas calculer l'atténuation linéique avec la seule fibre de 1 m, en comparant le signal reçu à la tension du GBF ?*
+   - ❓ *Q6. Calculez la perte due aux courbures, en dB. Expliquez-la avec la réflexion totale (TP 6.1).*
+   - ❓ *Q7. Avec l'atténuation trouvée, quelle longueur de fibre diviserait la puissance reçue par 10 (perte de 10 dB) ? La fibre plastique convient-elle pour relier deux bâtiments distants de 500 m ?*
+   - ❓ *Q8. Calculez la bande passante de la liaison $BP = \dfrac{0{,}35}{t_r}$. Avec un codage où chaque demi-période du carré porte un bit, estimez le débit maximal $D \approx 2 f_{max}$ en bit/s.*
+   - ❓ *Q9. Sur 1 m de fibre, la dispersion modale est négligeable. Quel élément limite alors le débit ? (Indice : la photodiode a une capacité de quelques dizaines de picofarads, en série avec quoi ?) Proposez une modification du récepteur pour augmenter le débit, et dites ce qu'on y perd.*
+
+6. **(20 min) Bilan.**
+   - ❓ *Q10. Pourquoi utilise-t-on une LED **rouge** avec une fibre plastique, alors que les fibres en silice des réseaux longue distance travaillent dans l'infrarouge (850 nm, 1 310 nm, 1 550 nm) ?*
+   - ❓ *Q11. Citez deux avantages de la fibre optique sur un câble en cuivre, dont un que vous avez observé à l'étape 2.*
+
+- **Livrable :** schéma de la liaison, oscillogrammes émis/reçu (1 kHz et $f_{max}$), tableaux complétés, réponses Q1 à Q11.
+- **⚙ Si le banc n'est pas disponible :** basculer sur la version simulée ci-dessous.
+
+<a id="sec-version-simulee-du-tp-6-2-python"></a>
+
+#### Version simulée du TP 6.2 (Python)
+
+- **Principe :** on exploite des mesures relevées sur le banc du lycée, puis un programme Python simule le signal reçu pour trouver le débit maximal. Les questions Q1 à Q11 sont les mêmes.
+
+**Étape 1 (15 min) : préparation.** Répondre aux questions Q1 à Q3.
+
+**Étape 2 (20 min) : atténuation.** Relevés du banc (signal carré 1 kHz, mêmes connexions) :
+
+| Situation | Fibre 1 m | Fibre 5 m | Fibre 5 m enroulée sur un stylo |
+|---|---|---|---|
+| Amplitude reçue (V) | 1,20 | 1,02 | 0,78 |
+
+Répondre aux questions Q4 à Q7.
+
+**Étape 3 (35 min) : débit.** Le récepteur se comporte comme un filtre RC : résistance de 10 kΩ et capacité totale d'environ 40 pF (photodiode + sonde). Créer le fichier `tp62_debit.py` :
+
+```python
+# TP 6.2, version simulée : signal reçu en sortie de la photodiode
+import numpy as np
+import matplotlib.pyplot as plt
+
+R = 10e3            # résistance de charge (ohms)
+C = 40e-12          # capacité photodiode + sonde (F)
+U_MAX = 1.2         # amplitude reçue en régime établi (V)
+F = 100e3           # fréquence du carré émis (Hz) : à modifier
+
+tau = R * C
+FE = 1e9                             # pas de calcul : 1 ns
+t = np.arange(0, 3 / F, 1 / FE)      # 3 périodes
+emis = np.where((t * F) % 1 < 0.5, 1.0, 0.0)
+a = (1 / FE) / (tau + 1 / FE)
+recu = np.zeros_like(t)
+for n in range(1, len(t)):
+    recu[n] = recu[n - 1] + a * (U_MAX * emis[n] - recu[n - 1])
+
+# temps de montée de 10 % à 90 % sur le premier front montant
+t10 = t[np.argmax(recu >= 0.1 * U_MAX)]
+t90 = t[np.argmax(recu >= 0.9 * U_MAX)] if recu.max() >= 0.9 * U_MAX else None
+if t90 is None:
+    print("Le signal reçu n'atteint jamais 90 % de U_MAX : fréquence trop élevée")
+else:
+    print(f"temps de montée tr = {(t90 - t10)*1e6:.2f} µs")
+
+plt.plot(t * 1e6, U_MAX * emis, label="émis (image de la puissance de la LED)")
+plt.plot(t * 1e6, recu, label="reçu (tension sur 10 kΩ)")
+plt.xlabel("t (µs)")
+plt.ylabel("U (V)")
+plt.legend()
+plt.show()
+```
+
+1. Exécuter avec `F = 10e3` : relever le temps de montée $t_r$ (zoomer sur un front avec la loupe de la fenêtre graphique).
+2. Recommencer avec `F = 50e3`, `100e3`, `200e3`, `500e3`, `1e6`, et remplir le tableau de l'étape 4 de la version matériel. Noter $f_{max}$.
+3. Répondre aux questions Q8 et Q9. Pour vérifier la proposition de la Q9, diviser `R` par 10 (et `U_MAX` par 10, puisque $U = R \times I_{ph}$) et relancer : que deviennent $t_r$ et $f_{max}$ ? Quel est l'inconvénient ?
+
+**Étape 4 (20 min) : bilan.** Répondre aux questions Q10 et Q11.
+
+- **Livrable :** captures des signaux reçus à 10 kHz et à $f_{max}$, tableaux complétés, réponses Q1 à Q11.
 
 ---
 

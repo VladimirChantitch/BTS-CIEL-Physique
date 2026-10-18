@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" width="860" height="380" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Broche D13 en entrée avec résistance de rappel interne : sur un clone, la LED L et sa résistance de 1 kilo-ohm sont reliées directement à D13 ; sur l'Uno R3 d'origine, la LED L est commandée par un AOP suiveur">
+<rect id="fond-blanc" x="0" y="0" width="860" height="380" fill="#ffffff"/>
+
+<!-- ===================== Panneau gauche : clone ===================== -->
+<text x="210" y="24" font-size="14" text-anchor="middle" fill="#8a6d00" font-weight="bold">Clone : LED L reliée directement à D13</text>
+<rect x="20" y="40" width="210" height="292" rx="8" fill="#f4f4f4" stroke="#777777" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="30" y="322" font-size="12" fill="#777777">dans l'ATmega328P</text>
+<!-- Vcc et résistance de rappel -->
+<text x="150" y="62" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">Vcc = 5 V</text>
+<line x1="150" y1="68" x2="150" y2="90" stroke="#111" stroke-width="2"/>
+<rect x="140" y="90" width="20" height="60" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="132" y="115" font-size="15" text-anchor="end" fill="#111">R<tspan baseline-shift="sub" font-size="11">p</tspan></text>
+<text x="132" y="133" font-size="12" text-anchor="end" fill="#111">20 à 50 kΩ</text>
+<text x="132" y="148" font-size="11" text-anchor="end" fill="#777777">(rappel interne)</text>
+<line x1="150" y1="150" x2="150" y2="190" stroke="#111" stroke-width="2"/>
+<circle cx="150" cy="190" r="3.5" fill="#111"/>
+<!-- tampon d'entrée -->
+<line x1="150" y1="190" x2="112" y2="190" stroke="#111" stroke-width="2"/>
+<polygon points="112,176 112,204 84,190" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<line x1="84" y1="190" x2="60" y2="190" stroke="#111" stroke-width="2"/>
+<text x="32" y="228" font-size="11" fill="#111">lecture : HIGH si U &gt; 0,6 Vcc</text>
+<text x="32" y="244" font-size="11" fill="#111">LOW si U &lt; 0,3 Vcc</text>
+<!-- broche D13 -->
+<line x1="150" y1="190" x2="225" y2="190" stroke="#111" stroke-width="2"/>
+<rect x="225" y="184" width="11" height="12" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="231" y="176" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">D13</text>
+<!-- résistance et LED L sur la carte -->
+<line x1="236" y1="190" x2="330" y2="190" stroke="#111" stroke-width="2"/>
+<line x1="330" y1="190" x2="330" y2="212" stroke="#111" stroke-width="2"/>
+<rect x="320" y="212" width="20" height="48" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="348" y="241" font-size="13" fill="#111">1 kΩ</text>
+<line x1="330" y1="260" x2="330" y2="280" stroke="#111" stroke-width="2"/>
+<polygon points="318,280 342,280 330,300" fill="#ffffff" stroke="#d9480f" stroke-width="2"/>
+<line x1="318" y1="300" x2="342" y2="300" stroke="#d9480f" stroke-width="2"/>
+<line x1="346" y1="284" x2="358" y2="276" stroke="#d9480f" stroke-width="1.5"/>
+<polygon points="361,274 353,275 356,280" fill="#d9480f"/>
+<line x1="346" y1="294" x2="358" y2="286" stroke="#d9480f" stroke-width="1.5"/>
+<polygon points="361,284 353,285 356,290" fill="#d9480f"/>
+<text x="366" y="298" font-size="13" fill="#d9480f" font-weight="bold">LED L</text>
+<line x1="330" y1="300" x2="330" y2="336" stroke="#111" stroke-width="2"/>
+<line x1="316" y1="336" x2="344" y2="336" stroke="#111" stroke-width="2"/>
+<line x1="321" y1="341" x2="339" y2="341" stroke="#111" stroke-width="2"/>
+<line x1="326" y1="346" x2="334" y2="346" stroke="#111" stroke-width="2"/>
+<!-- tension de la broche -->
+<line x1="280" y1="330" x2="280" y2="204" stroke="#1f6f8b" stroke-width="2.5"/>
+<polygon points="280,196 284.5,206 275.5,206" fill="#1f6f8b"/>
+<text x="274" y="266" font-size="14" text-anchor="end" fill="#1f6f8b" font-weight="bold">U</text>
+<text x="274" y="282" font-size="11" text-anchor="end" fill="#1f6f8b">(D13)</text>
+<text x="210" y="370" font-size="12" text-anchor="middle" fill="#111">le courant de rappel traverse la résistance de 1 kΩ et la LED</text>
+
+<!-- ===================== Panneau droit : Uno R3 d'origine ===================== -->
+<text x="650" y="24" font-size="14" text-anchor="middle" fill="#1f6f8b" font-weight="bold">Uno R3 d'origine : LED L commandée par un AOP</text>
+<rect x="440" y="40" width="190" height="292" rx="8" fill="#f4f4f4" stroke="#777777" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="450" y="322" font-size="12" fill="#777777">dans l'ATmega328P</text>
+<text x="560" y="62" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">Vcc = 5 V</text>
+<line x1="560" y1="68" x2="560" y2="90" stroke="#111" stroke-width="2"/>
+<rect x="550" y="90" width="20" height="60" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="542" y="115" font-size="15" text-anchor="end" fill="#111">R<tspan baseline-shift="sub" font-size="11">p</tspan></text>
+<text x="542" y="133" font-size="12" text-anchor="end" fill="#111">20 à 50 kΩ</text>
+<line x1="560" y1="150" x2="560" y2="190" stroke="#111" stroke-width="2"/>
+<circle cx="560" cy="190" r="3.5" fill="#111"/>
+<line x1="560" y1="190" x2="522" y2="190" stroke="#111" stroke-width="2"/>
+<polygon points="522,176 522,204 494,190" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<line x1="494" y1="190" x2="470" y2="190" stroke="#111" stroke-width="2"/>
+<line x1="560" y1="190" x2="625" y2="190" stroke="#111" stroke-width="2"/>
+<rect x="625" y="184" width="11" height="12" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="631" y="176" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">D13</text>
+<!-- AOP suiveur -->
+<polyline points="636,190 660,190 660,176 676,176" fill="none" stroke="#111" stroke-width="2"/>
+<polygon points="676,156 676,236 740,196" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="681" y="181" font-size="14" fill="#111">+</text>
+<text x="681" y="221" font-size="16" fill="#111">−</text>
+<text x="708" y="150" font-size="12" text-anchor="middle" fill="#111">AOP suiveur</text>
+<polyline points="740,196 790,196" fill="none" stroke="#111" stroke-width="2"/>
+<circle cx="756" cy="196" r="3.5" fill="#111"/>
+<polyline points="756,196 756,252 664,252 664,216 676,216" fill="none" stroke="#111" stroke-width="2"/>
+<text x="700" y="272" font-size="11" text-anchor="middle" fill="#1f6f8b">courant d'entrée quasi nul :</text>
+<text x="700" y="286" font-size="11" text-anchor="middle" fill="#1f6f8b">D13 n'est pas chargée</text>
+<!-- résistance et LED L -->
+<line x1="790" y1="196" x2="790" y2="212" stroke="#111" stroke-width="2"/>
+<rect x="780" y="212" width="20" height="48" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="806" y="241" font-size="13" fill="#111">1 kΩ</text>
+<line x1="790" y1="260" x2="790" y2="280" stroke="#111" stroke-width="2"/>
+<polygon points="778,280 802,280 790,300" fill="#ffffff" stroke="#d9480f" stroke-width="2"/>
+<line x1="778" y1="300" x2="802" y2="300" stroke="#d9480f" stroke-width="2"/>
+<text x="808" y="298" font-size="13" fill="#d9480f" font-weight="bold">LED L</text>
+<line x1="790" y1="300" x2="790" y2="336" stroke="#111" stroke-width="2"/>
+<line x1="776" y1="336" x2="804" y2="336" stroke="#111" stroke-width="2"/>
+<line x1="781" y1="341" x2="799" y2="341" stroke="#111" stroke-width="2"/>
+<line x1="786" y1="346" x2="794" y2="346" stroke="#111" stroke-width="2"/>
+<text x="650" y="370" font-size="12" text-anchor="middle" fill="#111">l'AOP fournit le courant de la LED</text>
+</svg>

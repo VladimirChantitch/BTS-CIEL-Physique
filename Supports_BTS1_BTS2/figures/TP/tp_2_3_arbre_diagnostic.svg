@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 604" width="800" height="604" font-family="Arial, Helvetica, sans-serif" role="img" aria-label="Arbre de diagnostic d'une carte Arduino Uno : LED ON, port COM, téléversement de Blink modifié, LED L, puis autotest et verdict">
+<rect id="fond-blanc" x="0" y="0" width="800" height="604" fill="#ffffff"/>
+
+<!-- Départ -->
+<rect x="40" y="12" width="340" height="48" rx="8" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<text x="210" y="32" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">Carte posée sur un support isolant,</text>
+<text x="210" y="50" font-size="13" text-anchor="middle" fill="#111" font-weight="bold">câble USB de données branché sur le PC</text>
+<line x1="210" y1="60" x2="210" y2="74" stroke="#111" stroke-width="1.6"/>
+<polygon points="210,82 215,73 205,73" fill="#111"/>
+
+<!-- Question 1 : LED ON -->
+<rect x="40" y="82" width="340" height="44" rx="22" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="210" y="109" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">La LED ON s'allume ?</text>
+<line x1="380" y1="104" x2="422" y2="104" stroke="#111" stroke-width="1.6"/>
+<polygon points="430,104 421,99 421,109" fill="#111"/>
+<text x="403" y="96" font-size="13" text-anchor="middle" fill="#8a6d00" font-weight="bold">non</text>
+<rect x="430" y="66" width="350" height="104" rx="8" fill="#ffffff" stroke="#777777" stroke-width="1.5"/>
+<text x="442" y="86" font-size="12" fill="#111">Autre câble de données, autre port USB ;</text>
+<text x="442" y="103" font-size="12" fill="#111">débrancher, chercher un objet métallique ou un</text>
+<text x="442" y="120" font-size="12" fill="#111">court-circuit sous la carte, attendre 1 min</text>
+<text x="442" y="137" font-size="12" fill="#777777">(le polyfusible se réarme en refroidissant)</text>
+<text x="442" y="159" font-size="12" fill="#d9480f" font-weight="bold">Toujours éteinte : HORS SERVICE (alimentation)</text>
+<line x1="210" y1="126" x2="210" y2="182" stroke="#111" stroke-width="1.6"/>
+<polygon points="210,190 215,181 205,181" fill="#111"/>
+<text x="222" y="160" font-size="13" fill="#1f6f8b" font-weight="bold">oui</text>
+
+<!-- Question 2 : port COM -->
+<rect x="40" y="190" width="340" height="52" rx="24" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="210" y="212" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">Un nouveau port COM apparaît ?</text>
+<text x="210" y="231" font-size="11" text-anchor="middle" fill="#777777">(Gestionnaire de périphériques, ou Outils → Port)</text>
+<line x1="380" y1="216" x2="422" y2="216" stroke="#111" stroke-width="1.6"/>
+<polygon points="430,216 421,211 421,221" fill="#111"/>
+<text x="403" y="208" font-size="13" text-anchor="middle" fill="#8a6d00" font-weight="bold">non</text>
+<rect x="430" y="184" width="350" height="126" rx="8" fill="#ffffff" stroke="#777777" stroke-width="1.5"/>
+<text x="442" y="204" font-size="12" fill="#111">Rien ne change : câble « charge seule » ?</text>
+<text x="442" y="221" font-size="12" fill="#111">Essayer le câble de données repéré.</text>
+<text x="442" y="242" font-size="12" fill="#111">« USB2.0-Serial » avec un triangle jaune :</text>
+<text x="442" y="259" font-size="12" fill="#111">pilote CH340 absent, prévenir le professeur.</text>
+<text x="442" y="282" font-size="12" fill="#d9480f" font-weight="bold">Rien avec un câble connu bon :</text>
+<text x="442" y="299" font-size="12" fill="#d9480f" font-weight="bold">HORS SERVICE (puce USB)</text>
+<line x1="210" y1="242" x2="210" y2="326" stroke="#111" stroke-width="1.6"/>
+<polygon points="210,334 215,325 205,325" fill="#111"/>
+<text x="222" y="290" font-size="13" fill="#1f6f8b" font-weight="bold">oui</text>
+
+<!-- Question 3 : téléversement -->
+<rect x="40" y="334" width="340" height="52" rx="24" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="210" y="356" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">Le téléversement de Blink modifié</text>
+<text x="210" y="375" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">réussit ?</text>
+<line x1="380" y1="360" x2="422" y2="360" stroke="#111" stroke-width="1.6"/>
+<polygon points="430,360 421,355 421,365" fill="#111"/>
+<text x="403" y="352" font-size="13" text-anchor="middle" fill="#8a6d00" font-weight="bold">non</text>
+<rect x="430" y="324" width="350" height="112" rx="8" fill="#ffffff" stroke="#777777" stroke-width="1.5"/>
+<text x="442" y="344" font-size="12" fill="#111">Vérifier Outils → Carte « Arduino Uno » et</text>
+<text x="442" y="361" font-size="12" fill="#111">Outils → Port ; fermer le moniteur série et</text>
+<text x="442" y="378" font-size="12" fill="#111">Python ; réessayer après un appui sur RESET.</text>
+<text x="442" y="405" font-size="12" fill="#d9480f" font-weight="bold">Toujours en échec :</text>
+<text x="442" y="422" font-size="12" fill="#d9480f" font-weight="bold">HORS SERVICE (programmation)</text>
+<line x1="210" y1="386" x2="210" y2="452" stroke="#111" stroke-width="1.6"/>
+<polygon points="210,460 215,451 205,451" fill="#111"/>
+<text x="222" y="428" font-size="13" fill="#1f6f8b" font-weight="bold">oui</text>
+
+<!-- Question 4 : LED L -->
+<rect x="40" y="460" width="340" height="44" rx="22" fill="#fffdf9" stroke="#111" stroke-width="2"/>
+<text x="210" y="487" font-size="14" text-anchor="middle" fill="#111" font-weight="bold">La LED L suit le nouveau rythme ?</text>
+<line x1="380" y1="482" x2="422" y2="482" stroke="#111" stroke-width="1.6"/>
+<polygon points="430,482 421,477 421,487" fill="#111"/>
+<text x="403" y="474" font-size="13" text-anchor="middle" fill="#8a6d00" font-weight="bold">non</text>
+<rect x="430" y="456" width="350" height="52" rx="8" fill="#fff6d5" stroke="#8a6d00" stroke-width="2"/>
+<text x="442" y="477" font-size="12" fill="#8a6d00" font-weight="bold">Au mieux BONNE AVEC RÉSERVE (LED L) :</text>
+<text x="442" y="496" font-size="12" fill="#111">noter la panne, puis continuer la recette</text>
+<line x1="210" y1="504" x2="210" y2="532" stroke="#111" stroke-width="1.6"/>
+<polygon points="210,540 215,531 205,531" fill="#111"/>
+<text x="222" y="525" font-size="13" fill="#1f6f8b" font-weight="bold">oui</text>
+<polyline points="605,508 605,566 390,566" fill="none" stroke="#111" stroke-width="1.6"/>
+<polygon points="382,566 391,561 391,571" fill="#111"/>
+
+<!-- Fin : autotest -->
+<rect x="40" y="540" width="340" height="52" rx="8" fill="#e3f3f6" stroke="#1f6f8b" stroke-width="2.4"/>
+<text x="210" y="561" font-size="13" text-anchor="middle" fill="#1f6f8b" font-weight="bold">Autotest (étape 2), puis verdict :</text>
+<text x="210" y="580" font-size="12" text-anchor="middle" fill="#111" font-weight="bold">BONNE, BONNE AVEC RÉSERVE ou HORS SERVICE</text>
+</svg>

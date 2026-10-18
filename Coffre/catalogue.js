@@ -78,7 +78,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_2_reponses.pdf",
     "type": "application/pdf",
-    "taille": 160748
+    "taille": 175180
   },
   {
     "id": "tp-1-3",
@@ -133,6 +133,15 @@ window.COFFRE_CATALOGUE = [
     "nom": "TP_1_8_reponses.pdf",
     "type": "application/pdf",
     "taille": 130538
+  },
+  {
+    "id": "tp-4-1",
+    "titre": "Corrigé TP 4.1 : Boucle ouverte / boucle fermée",
+    "niveau": "BTS2",
+    "date": "",
+    "nom": "TP_4_1_reponses.pdf",
+    "type": "application/pdf",
+    "taille": 208408
   },
   {
     "id": "tp-1-9",
