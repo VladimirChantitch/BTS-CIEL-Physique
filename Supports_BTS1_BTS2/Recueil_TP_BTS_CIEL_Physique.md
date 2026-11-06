@@ -36,6 +36,8 @@
         - [Version simulée du TP 3.3 (Falstad)](#sec-version-simulee-du-tp-3-3-falstad)
     - [TP 3.4 : Mesurer la célérité du son avec un Arduino](#sec-tp-3-4-mesurer-la-celerite-du-son-avec-un-arduino)
         - [Version simulée du TP 3.4 (Wokwi et relevés fournis)](#sec-version-simulee-du-tp-3-4-wokwi-et-releves-fournis)
+    - [TP 3.5 : Ondes stationnaires, réflexions et antennes en simulation](#sec-tp-3-5-ondes-stationnaires-reflexions-et-antennes-en-simulation)
+    - [TP 3.6 : Jusqu'où porte une passerelle LoRa ?](#sec-tp-3-6-jusqu-ou-porte-une-passerelle-lora)
 - [Chapitre 4 : Systèmes bouclés et asservissement](#sec-chapitre-4-systemes-boucles-et-asservissement)
     - [TP 4.1 : Boucle ouverte / boucle fermée](#sec-tp-4-1-boucle-ouverte-boucle-fermee)
         - [Version Falstad du TP 4.1 (version de référence) : boucle ouverte contre boucle fermée](#sec-version-falstad-du-tp-4-1-version-de-reference-boucle-ouverte-contre-b)
@@ -149,6 +151,8 @@ Chaque TP porte un numéro **chapitre.rang** (TP 1.3 = troisième TP du chapitre
 | TP 3.2 | Célérité des ultrasons | 3 | 1 h 30 | Matériel (poste tournant), ou relevés + tableur | Chapitre 3 |
 | TP 3.3 | Réflexions sur une ligne coaxiale (BTS2) | 3 | 1 h 30 | Matériel (poste tournant), ou Falstad | Chapitre 3 |
 | TP 3.4 | Mesurer la célérité du son avec un Arduino | 3 | 2 h | TP informatisé (Arduino + HC-SR04), ou Wokwi + relevés fournis | Chapitre 3 |
+| TP 3.5 | Ondes stationnaires, réflexions et antennes en simulation (BTS2) | 3 | 1 h | Simulateurs en ligne (PhET et Falstad) | Chapitre 3 |
+| TP 3.6 | Jusqu'où porte une passerelle LoRa ? Bilan de liaison en Python (BTS2) | 3 | 1 h 30 | TP informatisé (Python) | Chapitre 3 |
 | TP 4.1 | Boucle ouverte / boucle fermée | 4 | 55 min | **Falstad** (matériel indisponible) | Rentrée (bonus) |
 | TP 4.2 | Réponse indicielle d'un circuit RC | 4 | 1 h 30 | Matériel (poste tournant), ou Falstad | Chapitre 4 |
 | TP 4.3 | Régulation de luminosité avec Arduino (BTS2) | 4 | 2 h | Matériel (Arduino), ou Python | Chapitre 4 |
@@ -1951,6 +1955,256 @@ float v = 331.3 + 0.606 * theta;            // célérité corrigée (m/s)
 Répondre aux questions Q11 à Q14 (pour la Q12, sans l'option du capteur de température).
 
 - **Livrable :** captures d'écran de Wokwi (câblage, moniteur série), tableaux complétés, graphique $t = f(2d)$ avec la droite de régression (relevés réels), résultat $v = \ldots \pm \ldots$ m/s, réponses Q1 à Q14.
+
+---
+
+<a id="sec-tp-3-5-ondes-stationnaires-reflexions-et-antennes-en-simulation"></a>
+
+### TP 3.5 : Ondes stationnaires, réflexions et antennes en simulation `BTS2`
+
+> **Durée :** 1 h · **Mode :** simulateurs en ligne gratuits et sans compte (PhET et Falstad), aucun matériel · **Cours :** Chapitre 3, §3.8 (antennes), §3.12 (ondes stationnaires, TOS) et §3.11 (coefficient de réflexion, bonus) · **Prérequis :** TP 3.1 (période, fréquence, longueur d'onde), fiche outil Falstad
+> **Objectif :** voir de ses yeux ce que décrivent les formules du cours : ce que devient une onde au bout de son support, comment naît une onde stationnaire et ce que mesure un TOS, puis dans quelles directions rayonne une antenne.
+
+**Problématique :** sur le parking d'une entreprise, l'analyseur d'antenne d'un installateur affiche « TOS = 2,5 » sur l'antenne Wi-Fi extérieure, et la couverture s'est effondrée. Que mesure ce nombre ? Pourquoi une antenne doit-elle avoir une longueur bien précise ? Avant de faire les calculs du cours, on va observer ces phénomènes sur une corde, sur un câble simulé, puis autour d'une antenne.
+
+- **Matériel par étudiant :** un poste avec un navigateur récent et l'accès à Internet (ou les versions hors ligne des simulateurs, à télécharger sur les sites de PhET et de Falstad).
+- **Sécurité :** aucun risque.
+
+**Ce qu'il faut savoir avant de commencer**
+
+Une onde transporte de l'énergie le long d'un **support** sans transporter de matière : une corde, un câble, l'air. Elle avance à la célérité $v$, et sa longueur d'onde vaut (§3.2) :
+
+$$\lambda = \frac{v}{f}$$
+
+Quand l'onde arrive **au bout de son support**, elle peut être absorbée, ou renvoyée vers son point de départ : c'est la **réflexion**. Tout dépend de ce qui termine le support. Une corde et un câble électrique se comportent de la même façon ; seule la grandeur observée change :
+
+| | Corde (étapes 1 et 2) | Câble, ligne de transmission (étape 3) |
+|---|---|---|
+| Ce qui se propage | le déplacement de la corde | la tension (et le courant) |
+| Ce qui termine le support | une extrémité fixée, libre, ou absente | une charge : court-circuit, circuit ouvert, résistance |
+| La célérité dépend de | la tension et de la masse de la corde | l'isolant du câble ($v = k \times c_0$) |
+
+**Vocabulaire :** l'**onde incidente** va vers le bout du support ; l'**onde réfléchie** en revient. Le **coefficient de réflexion** $\rho$ est le rapport de leurs amplitudes, compté avec un signe : $\rho > 0$ si l'onde revient du même côté, $\rho < 0$ si elle revient retournée. Il est toujours compris entre −1 et +1.
+
+**Étape 0 (5 min) : ouvrir les simulateurs**
+
+1. Ouvrir dans trois onglets du navigateur :
+   - le simulateur PhET **« Onde sur une corde »**, en français : [phet.colorado.edu, Onde sur une corde](https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_fr.html) ;
+   - le circuit **« Onde stationnaire »** du simulateur Falstad : [falstad.com/circuit, Onde stationnaire](https://www.falstad.com/circuit/circuitjs.html?startCircuit=tlstand.txt) ;
+   - le simulateur d'antennes de Falstad : [falstad.com/antenna](https://www.falstad.com/antenna/).
+2. Dans « Onde sur une corde », repérer : en haut à gauche, le mode (**Manuel**, **Osciller**, **Pulsation**) ; en haut à droite, le bout de la corde (**Extrémité fixée**, **Extrémité libre**, **Pas d'extrémité**) ; en bas, les réglages (amplitude, fréquence, amortissement, tension) et les outils (**Règles**, **Chrono**) ; au centre, le bouton de pause.
+
+**Étape 1 (10 min) : ce que devient une onde au bout de la corde**
+
+3. Choisir le mode **Pulsation**, régler l'**amortissement au minimum** et la **tension au maximum**. Choisir **Extrémité fixée**, puis cliquer sur le bouton vert rond, à gauche, pour envoyer une impulsion. Observer son retour.
+4. Recommencer avec **Extrémité libre**, puis avec **Pas d'extrémité**.
+
+- ❓ *Q1. Pour chacun des trois bouts, décrivez l'impulsion qui revient : du même côté de la corde, retournée, ou pas d'impulsion du tout ? Avec quelle amplitude, comparée à l'impulsion envoyée ?*
+- ❓ *Q2. Pour chaque cas, donnez la valeur de $\rho$ (+1, −1 ou 0).*
+- ❓ *Q3. Pourquoi l'impulsion revient-elle retournée quand le bout est fixé ? (Indice : le point fixé peut-il bouger ? Que doit faire l'onde réfléchie pour respecter cette contrainte ?)*
+
+**Ce qu'il faut retenir.** L'onde réfléchie dépend uniquement de ce qui termine le support. Sur un câble, c'est la charge branchée au bout qui joue ce rôle (§3.11) :
+
+| Bout de la corde | Bout du câble | $\rho$ | Onde réfléchie |
+|---|---|---|---|
+| fixé (il ne peut pas bouger) | court-circuit (la tension y est forcément nulle) | −1 | retournée, même amplitude |
+| libre | circuit ouvert (aucun courant ne peut sortir) | +1 | du même côté, même amplitude |
+| pas d'extrémité (l'onde est absorbée) | charge adaptée, égale à $Z_C$ | 0 | aucune |
+
+Pour une charge quelconque d'impédance $Z_L$ au bout d'un câble d'impédance caractéristique $Z_C$ :
+
+$$\rho = \frac{Z_L - Z_C}{Z_L + Z_C}$$
+
+**Étape 2 (15 min) : l'onde stationnaire**
+
+**Ce qu'il faut savoir.** Avec un bout fixé, l'onde incidente et l'onde réfléchie existent en même temps sur la corde et se superposent. Aux endroits où elles arrivent toujours en opposition, elles s'annulent : ce sont les **nœuds**, immobiles. Là où elles arrivent en phase, elles s'additionnent : ce sont les **ventres**. Le motif ne se déplace plus : c'est une **onde stationnaire** (§3.12). C'est aussi ce qui se passe sur une corde de guitare, ou sur un câble mal adapté.
+
+<p align="center">
+<img src="figures/cours/figure_44_onde_stationnaire_sur_une_ligne_non_adaptee.svg" width="520" alt="Onde stationnaire sur une ligne non adaptée"/>
+</p>
+
+<p align="center"><em>Onde stationnaire sur une ligne non adaptée : l'amplitude varie le long de la ligne entre des maximums (ventres) et des minimums (nœuds).</em></p>
+
+5. Passer en mode **Osciller**, garder l'**extrémité fixée** et l'amortissement au minimum. Laisser l'onde faire plusieurs allers-retours. Si le motif reste confus, modifier un peu la fréquence.
+6. Afficher les **Règles**. Mesurer la distance entre deux points voisins qui ne bougent pas.
+7. Choisir **Pas d'extrémité**, mettre en pause et mesurer la distance entre deux crêtes voisines : c'est la longueur d'onde $\lambda$.
+
+- ❓ *Q4. Décrivez le mouvement de la corde en régime établi. Combien de nœuds et de ventres voyez-vous ? Faites une capture d'écran.*
+- ❓ *Q5. Comparez la distance entre deux nœuds voisins (point 6) et la longueur d'onde (point 7). Quelle relation trouvez-vous ?*
+- ❓ *Q6. On définit le **taux d'ondes stationnaires** par $TOS = U_{MAX}/U_{MIN}$, le rapport entre l'amplitude aux ventres et l'amplitude aux nœuds. Que vaut-il avec l'extrémité fixée ? Sans extrémité ? Augmentez l'amortissement : que deviennent les nœuds, et donc le TOS ?*
+
+**Ce qu'il faut retenir.** Deux nœuds (ou deux ventres) voisins sont séparés de $\lambda/2$. Le TOS mesure l'importance de l'onde réfléchie (§3.12) :
+
+$$TOS = \frac{U_{MAX}}{U_{MIN}} = \frac{1 + \lvert\rho\rvert}{1 - \lvert\rho\rvert}$$
+
+Sans réflexion ($\rho = 0$), l'amplitude est la même partout et $TOS = 1$ : c'est l'objectif d'un installateur. Avec une réflexion totale ($\lvert\rho\rvert = 1$), les nœuds sont immobiles et le TOS est infini. Entre les deux, la réflexion est partielle et le TOS est fini ; en pratique, on accepte jusqu'à 1,5.
+
+**Étape 3 (15 min) : une onde stationnaire sur une ligne de transmission**
+
+**Ce qu'il faut savoir.** Un câble dont la longueur n'est pas négligeable devant $\lambda$ est une **ligne de transmission** (§3.10). Il est caractérisé par son **impédance caractéristique** $Z_C$, le rapport entre la tension et le courant d'une onde qui avance seule, et par le **retard** $\tau$ que met le signal pour le parcourir. Le circuit « Onde stationnaire » de Falstad contient une source sinusoïdale de **1,5 GHz** avec sa résistance interne de 300 Ω, une ligne d'impédance caractéristique **$Z_C$ = 300 Ω** et de retard **$\tau$ = 2 ns**, et, à droite, un fil vertical qui relie les deux conducteurs au bout de la ligne : un **court-circuit**. Les couleurs indiquent la tension en chaque point de la ligne : vert pour une tension positive, rouge pour une tension négative, gris pour une tension nulle.
+
+8. Lancer la simulation (bouton **RUN / Stop**) ; si tout va trop vite, réduire la **Vitesse de simulation**. Attendre que le motif se stabilise.
+9. Cliquer sur le fil vertical qui court-circuite le bout de la ligne et le supprimer (touche **Suppr**). Le remplacer par une résistance reliant les deux conducteurs (**Dessiner → Composants passifs → Ajouter une résistance**, ou touche **r**), puis la régler à **300 Ω** (clic droit → **Éditer…**).
+10. Régler ensuite la résistance à **600 Ω**, puis à **100 Ω**, en observant la ligne à chaque fois.
+
+- ❓ *Q7. Avec le court-circuit, décrivez ce que vous voyez sur la ligne. Comptez les nœuds (zones toujours grises) et les ventres.*
+- ❓ *Q8. Calculez la période $T = 1/f$ du signal, puis le nombre de longueurs d'onde contenues dans la ligne, $\tau / T$. Est-ce cohérent avec le nombre de nœuds de la Q7 (deux nœuds voisins sont séparés de $\lambda/2$) ?*
+- ❓ *Q9. Avec la résistance de 300 Ω, qu'observez-vous ? Calculez $\rho$ et le TOS.*
+- ❓ *Q10. Calculez $\rho$, le TOS et la fraction de la puissance réfléchie, $\rho^2$, pour 600 Ω et pour 100 Ω. Le motif observé est-il plus ou moins marqué qu'avec le court-circuit ?*
+
+**Ce qu'il faut retenir.** Une ligne fermée sur une charge égale à son impédance caractéristique est **adaptée** : pas d'onde réfléchie, $TOS = 1$, toute la puissance arrive à la charge. Plus la charge s'éloigne de $Z_C$, plus le TOS augmente. La fraction de la puissance réfléchie vaut $\rho^2$ : 4 % pour un TOS de 1,5, 11 % pour 2, 25 % pour 3. C'est ce que mesure l'analyseur de l'installateur de la problématique.
+
+**Étape 4 (15 min) : comment rayonne une antenne**
+
+**Ce qu'il faut savoir.** Une **antenne** transforme le signal électrique d'un câble en onde qui se propage dans l'air (§3.8). Le courant fait des allers-retours sur le brin et s'y réfléchit au bout, comme sur la corde : l'antenne fonctionne bien (elle est **résonante**) quand sa longueur est accordée à la longueur d'onde. L'antenne de référence est le **dipôle demi-onde** : deux brins de $\lambda/4$ alimentés en leur milieu, soit une longueur totale de $\lambda/2$. Le **diagramme de rayonnement** indique la puissance rayonnée dans chaque direction.
+
+<p align="center">
+<img src="figures/cours/figure_85_dipole_demi_onde_courant_et_tension.svg" width="460" alt="Dipôle demi-onde : courant et tension sur les brins"/>
+</p>
+
+<p align="center"><em>Dipôle demi-onde : le courant est maximal au centre et nul aux extrémités, comme sur une corde fixée à ses deux bouts.</em></p>
+
+Le simulateur d'antennes est en anglais : *Setup* = montage, *Length* = longueur, *Show Graph* = afficher le diagramme de rayonnement ; le rapport longueur / longueur d'onde (*Length/wavelength*) s'affiche en bas de la zone noire.
+
+11. Dans *Setup*, choisir **Linear Antenna (Center-Fed)** : un brin alimenté en son milieu, c'est-à-dire un dipôle. Régler *Length* pour lire **0,5** (une demi-longueur d'onde) et cocher **Show Graph**.
+12. Augmenter la longueur jusqu'à 1, puis 1,5 longueur d'onde.
+13. Choisir **Broadside Array**, puis **End-Fire Array** : plusieurs antennes alignées et alimentées ensemble.
+
+- ❓ *Q11. Pour le dipôle demi-onde, dans quelles directions l'antenne rayonne-t-elle le plus ? Le moins ? Faites une capture d'écran.*
+- ❓ *Q12. Comment le diagramme évolue-t-il quand la longueur augmente ? Pourquoi taille-t-on une antenne pour sa fréquence de travail ?*
+- ❓ *Q13. Comparez la largeur du faisceau des réseaux d'antennes à celle du dipôle seul. Une antenne directive crée-t-elle de l'énergie ? Où va la puissance qu'elle ne rayonne plus sur les côtés ?*
+
+**Ce qu'il faut retenir.** Le dipôle $\lambda/2$ rayonne au maximum perpendiculairement à son brin et presque rien dans l'axe du brin. Une antenne de mauvaise longueur rayonne mal là où on l'attend, et elle est désadaptée : son TOS est élevé. Pour une antenne fouet (monopole), la longueur à retenir est $\lambda/4$, posée sur un plan de masse (§3.8) :
+
+$$\ell = \frac{\lambda}{4} = \frac{c_0}{4f}$$
+
+Une antenne directive ne crée pas d'énergie : elle concentre la puissance dans une direction et la retire aux autres. Ce gain se mesure en **dBi**, par comparaison avec une antenne idéale qui rayonnerait pareil dans toutes les directions (§3.9).
+
+**Étape 5 (5 min) : bilan**
+
+- ❓ *Q14. Reprenez la problématique. En cinq lignes au plus, expliquez à l'installateur ce que signifie son « TOS = 2,5 » (calculez la fraction de la puissance réfléchie) et citez deux causes possibles sur son installation.*
+
+- **Livrable :** réponses Q1 à Q14, et deux captures d'écran (onde stationnaire de la Q4, diagramme de rayonnement de la Q11).
+- **⚙ Sans connexion Internet :** les simulateurs PhET et Falstad existent en version hors ligne, à télécharger depuis leur site et à ouvrir dans le navigateur.
+
+---
+
+<a id="sec-tp-3-6-jusqu-ou-porte-une-passerelle-lora"></a>
+
+### TP 3.6 : Jusqu'où porte une passerelle LoRa ? `BTS2`
+
+> **Durée :** 1 h 30 · **Mode :** TP informatisé (Python ; IDLE suffit), aucun matériel · **Cours :** Chapitre 3, §3.8 (antenne quart d'onde) et §3.9 (bilan de liaison, LoRa), compléments BTS2 : fiches 3.C (formule de Friis) et 3.D (zone de Fresnel) ; §3.12 en bonus · **Prérequis :** décibels et dBm (§1.3), bases de Python (variables, fonctions, boucle `for`)
+> **Objectif :** écrire un petit outil de bilan de liaison radio, s'en servir pour prévoir la portée d'une passerelle LoRaWAN et choisir le facteur d'étalement, puis confronter le modèle à la réalité du terrain.
+
+**Problématique :** la mairie installe une passerelle LoRaWAN sur le toit du lycée, pour relever des capteurs de qualité de l'air placés dans les salles de classe des écoles voisines. Jusqu'à quelle distance une école peut-elle être reliée ? Faut-il prévoir une seconde passerelle ? Un bureau d'études répond à ces questions par un bilan de liaison ; vous allez écrire le vôtre en Python.
+
+- **Fichier fourni :** [`portee_lora.py`](Documents_TP/TP_3_6/portee_lora.py), code de départ à compléter, dans le dossier `Documents_TP/TP_3_6/` du dépôt de la classe.
+- **Matériel par étudiant :** un poste avec Python 3 (IDLE suffit).
+
+**Ce qu'il faut savoir avant de commencer**
+
+Une liaison radio est une chaîne : émetteur → câble → antenne d'émission → trajet dans l'air → antenne de réception → câble → récepteur. Chaque maillon ajoute un gain ou une perte. En décibels, tout s'additionne : on part de la puissance de l'émetteur en dBm, on **ajoute** les gains des antennes (en dBi) et on **retranche** les pertes (en dB) (§1.3 et §3.9) :
+
+$$P_r = P_e + G_e + G_r - L_{\text{câbles}} - A$$
+
+<p align="center">
+<img src="figures/cours/figure_39_bilan_de_liaison_hertzienne.svg" width="600" alt="Bilan de liaison hertzienne"/>
+</p>
+
+<p align="center"><em>Le long de la chaîne, les gains et les pertes s'additionnent en dB.</em></p>
+
+La liaison fonctionne si la puissance reçue $P_r$ dépasse la **sensibilité** $S$ du récepteur, la plus petite puissance qu'il sait encore décoder. L'écart entre les deux s'appelle la **marge** ; on exige une réserve d'au moins 10 dB pour absorber les imprévus (pluie, porte métallique, véhicule garé) :
+
+$$M = P_r - S$$
+
+Le plus gros terme est l'**atténuation du trajet** $A$. En espace libre, sans aucun obstacle, elle se calcule avec la **formule de Friis** (fiche 3.C), où la fréquence est en **MHz** et la distance en **km** :
+
+$$FSL = 32{,}45 + 20\log_{10} f_{(\text{MHz})} + 20\log_{10} d_{(\text{km})}$$
+
+Cette perte ne vient pas d'une absorption par l'air : la puissance se répartit sur une sphère de plus en plus grande, comme l'eau d'un arrosage en pluie fine.
+
+**LoRa** est la modulation radio des réseaux LoRaWAN (§3.9) : très peu de débit, mais une sensibilité exceptionnelle, réglée par le **facteur d'étalement** SF (de 7 à 12). Plus SF est grand, plus chaque message est long à émettre, mais plus le récepteur est sensible :
+
+| SF | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|
+| Sensibilité $S$ (dBm) | −123 | −126 | −129 | −132 | −134,5 | −137 |
+
+**Données de l'installation**
+
+| Élément | Valeur |
+|---|---|
+| Fréquence | 868 MHz |
+| Capteur | puissance d'émission 14 dBm ; antenne quart d'onde de 2 dBi ; placé dans une salle de classe : 20 dB de pertes de bâtiment |
+| Passerelle | antenne de 5 dBi ; 10 m de câble coaxial LMR400, qui atténue de 13 dB/100 m à 868 MHz |
+| Cahier des charges | marge d'au moins 10 dB |
+
+**Étape 0 (10 min) : préparer le poste**
+
+1. Copier le fichier `portee_lora.py` du dossier `Documents_TP/TP_3_6/` dans un dossier personnel, puis l'ouvrir avec **IDLE** (clic droit → **Edit with IDLE**) ou un autre éditeur Python.
+2. Le lancer tel quel (**Run → Run Module**, touche F5). Il affiche « lambda = Ellipsis » : c'est normal. Chaque `...` du fichier est une valeur ou un calcul à compléter au fil des étapes ; les lignes d'essai, en bas, sont à décommenter au fur et à mesure.
+
+**Étape 1 (10 min) : l'antenne du capteur**
+
+**Ce qu'il faut savoir.** Une antenne fouet (monopole) est résonante quand sa longueur vaut le quart de la longueur d'onde **dans l'air** (§3.8). En pratique, on la coupe environ 5 % plus court, car le bout du fil l'allonge électriquement. Elle doit reposer sur un **plan de masse**, une surface métallique d'au moins $\lambda/4$ de rayon qui joue le rôle de miroir.
+
+$$\lambda = \frac{c_0}{f} \qquad \ell = \frac{\lambda}{4} \qquad \ell_{\text{pratique}} \approx 0{,}95 \times \frac{\lambda}{4}$$
+
+3. Compléter le calcul de `lam`, puis afficher $\lambda$, $\lambda/4$ et la longueur à couper, en centimètres.
+
+- ❓ *Q1. Donnez $\lambda$, la longueur théorique de l'antenne quart d'onde et la longueur à couper.*
+- ❓ *Q2. Une antenne prévue pour 433 MHz a le même connecteur. Quelle est sa longueur ? Pourquoi ne faut-il pas la monter sur ce capteur ?*
+
+**Étape 2 (15 min) : l'atténuation en espace libre**
+
+4. Compléter la fonction `fsl(f_mhz, d_km)` avec la formule de Friis, en utilisant `math.log10`.
+5. Vérifier : `print(round(fsl(868, 1), 1))` doit afficher environ 91,2.
+
+- ❓ *Q3. Calculez avec votre fonction la FSL à 1, 2, 4 et 8 km. De combien augmente-t-elle à chaque doublement de distance ? Retrouvez ce nombre par le calcul, à partir de la formule.*
+
+**Étape 3 (15 min) : le bilan de liaison**
+
+6. Compléter `L_CABLE` (pertes de 10 m de câble à 13 dB/100 m), puis la fonction `bilan(d_km, sf)`, qui renvoie la puissance reçue par la passerelle et la marge.
+7. Décommenter la boucle d'essai et afficher, pour 1, 2, 5 et 10 km, la puissance reçue et les marges en SF7 et en SF12.
+
+- ❓ *Q4. Recopiez votre tableau. Jusqu'à quelle distance le SF7 suffit-il, d'après ce modèle ?*
+- ❓ *Q5. Le serveur du réseau choisit pour chaque capteur le SF le plus petit qui garde assez de marge, plutôt que SF12 pour tout le monde. Pourquoi ? (Pensez à la durée des messages, à la pile du capteur et aux autres capteurs qui partagent le canal.)*
+
+**Étape 4 (15 min) : la portée maximale**
+
+**Ce qu'il faut savoir.** Pour trouver la portée, on retourne le problème : quelle atténuation $A_{max}$ la liaison peut-elle supporter en gardant 10 dB de marge ? Puis quelle distance donne cette atténuation ? On part de $A_{max} = 32{,}45 + 20\log_{10} f + 20\log_{10} d_{max}$ et on isole $d_{max}$ :
+
+$$
+\begin{aligned}
+20\log_{10} d_{max} &= A_{max} - 32{,}45 - 20\log_{10} f \qquad \text{(on retranche les deux premiers termes)} \\
+\log_{10} d_{max} &= \frac{A_{max} - 32{,}45 - 20\log_{10} f}{20} \qquad \text{(on divise les deux membres par 20)} \\
+d_{max} &= 10^{\,(A_{max} - 32{,}45 - 20\log_{10} f)/20} \qquad \text{(on applique } 10^{x}\text{, réciproque de } \log_{10}\text{)}
+\end{aligned}
+$$
+
+Comme $32{,}45 + 20\log_{10} f$ est la FSL à 1 km, on peut aussi écrire $d_{max} = 10^{\,(A_{max} - FSL_{1\,\text{km}})/20}$, en km. L'atténuation admissible vaut $A_{max} = P_e + G_e - L_{\text{bât}} + G_r - L_{\text{câble}} - S - M_{min}$.
+
+8. Compléter la fonction `portee(sf)` ; afficher la portée pour SF7 à SF12.
+
+- ❓ *Q6. Recopiez les portées obtenues. Le cours annonce 2 à 5 km en ville pour une passerelle LoRaWAN : comparez.*
+- ❓ *Q7. Citez au moins trois raisons pour lesquelles la formule de Friis est trop optimiste ici. (Pensez à la zone de Fresnel, aux bâtiments, à la courbure de la Terre.)*
+
+**Étape 5 (15 min) : un modèle plus réaliste**
+
+**Ce qu'il faut savoir.** En espace libre, l'atténuation augmente de 20 dB quand la distance est multipliée par 10. En ville, les obstacles, les réflexions et la zone de Fresnel obstruée la font augmenter plus vite : on mesure plutôt 30 à 40 dB par décade. On le traduit par un **exposant de propagation** $n$, qui vaut 2 en espace libre et environ 3,5 en ville :
+
+$$A(d) = FSL_{1\,\text{km}} + 10\,n\,\log_{10} d_{(\text{km})}$$
+
+9. Ajouter un paramètre `n` (valeur par défaut 2) à la fonction `portee`, en remplaçant le 20 de l'étape 4 par `10 * n`. Afficher les portées pour $n = 3{,}5$.
+
+- ❓ *Q8. Recopiez les nouvelles portées. Une école se trouve à 6 km : quel SF le serveur choisira-t-il ? Avec quelle marge ?*
+- ❓ *Q9. Une autre école se trouve à 12 km. Faut-il une seconde passerelle ? Justifiez avec votre modèle, et proposez une autre solution.*
+
+**Pour aller plus loin (bonus, §3.12)**
+
+- ❓ *Q10. Un technicien a monté par erreur l'antenne 433 MHz de la Q2 : l'analyseur d'antenne mesure un TOS de 4. Calculez $\lvert\rho\rvert = \dfrac{TOS - 1}{TOS + 1}$, la perte de désadaptation $L = -10\log_{10}(1 - \rho^2)$, puis la nouvelle portée en SF7 avec $n = 3{,}5$ (la portée est multipliée par $10^{-L/(10n)}$).*
+
+- **Livrable :** le script `portee_lora.py` complété et commenté, les tableaux recopiés, les réponses Q1 à Q9 (Q10 en bonus).
+- **⚙ Sans Python sur le poste :** utiliser un interpréteur Python en ligne (Basthon ou Capytale, si l'établissement y a accès), ou faire les mêmes calculs au tableur.
 
 ---
 

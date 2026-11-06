@@ -6,7 +6,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "DS1_Electricite_BTS2_corrige.pdf",
     "type": "application/pdf",
-    "taille": 129642
+    "taille": 165419
   },
   {
     "id": "qcm-bts1-02-ohm-kirchhoff",
@@ -78,7 +78,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_2_reponses.pdf",
     "type": "application/pdf",
-    "taille": 175180
+    "taille": 214033
   },
   {
     "id": "tp-1-3",
@@ -87,7 +87,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_3_reponses.pdf",
     "type": "application/pdf",
-    "taille": 145712
+    "taille": 168517
   },
   {
     "id": "tp-1-4",
@@ -96,7 +96,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_4_reponses.pdf",
     "type": "application/pdf",
-    "taille": 134213
+    "taille": 167005
   },
   {
     "id": "tp-1-5",
@@ -105,7 +105,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_5_reponses.pdf",
     "type": "application/pdf",
-    "taille": 121330
+    "taille": 152162
   },
   {
     "id": "tp-1-6",
@@ -114,7 +114,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_6_reponses.pdf",
     "type": "application/pdf",
-    "taille": 134294
+    "taille": 161970
   },
   {
     "id": "tp-1-7",
@@ -123,7 +123,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_7_reponses.pdf",
     "type": "application/pdf",
-    "taille": 138581
+    "taille": 148811
   },
   {
     "id": "tp-1-8",
@@ -132,7 +132,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_8_reponses.pdf",
     "type": "application/pdf",
-    "taille": 130538
+    "taille": 150309
   },
   {
     "id": "tp-4-1",
@@ -141,7 +141,7 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_4_1_reponses.pdf",
     "type": "application/pdf",
-    "taille": 208408
+    "taille": 224872
   },
   {
     "id": "tp-1-9",
@@ -150,6 +150,6 @@ window.COFFRE_CATALOGUE = [
     "date": "",
     "nom": "TP_1_9_reponses.pdf",
     "type": "application/pdf",
-    "taille": 117928
+    "taille": 136823
   }
 ];
